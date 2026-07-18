@@ -30,4 +30,4 @@ platform_key: {
 
 ## License
 
-Data: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to use with attribution to shortcut-tools.com.
+Data: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — you may share and adapt this data for **non-commercial** purposes, with attribution to **shortcut-tools.com**, and derivatives must carry the same license. For commercial licensing, contact us via https://shortcut-tools.com/en/contact
