@@ -5027,58 +5027,276 @@ const shortcutData = {
     ]
   },
   xcode: {
-    name: 'Xcode',
-    icon: 'fas fa-hammer',
+    name: "Xcode",
+    icon: "fas fa-hammer",
+    source: "https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/xcode_help-command_shortcuts/MenuCommands/MenuCommands014.html",
     categories: [
       {
-        name: 'Editor',
+        name: "Build & Run",
         shortcuts: [
-          { keys: 'Cmd + B', desc: 'Build', usage: 'Build the project.' },
-          { keys: 'Cmd + R', desc: 'Run', usage: 'Build and run the app.' },
-          { keys: 'Cmd + .', desc: 'Stop', usage: 'Stop the running app.' },
-          { keys: 'Cmd + Shift + K', desc: 'Clean build', usage: 'Clean the build folder.' },
-          { keys: 'Cmd + Shift + O', desc: 'Quick open', usage: 'Quickly search and open a file.' },
-          { keys: 'Cmd + /', desc: 'Toggle comment', usage: 'Toggle comment on selected lines.' },
-          { keys: 'Cmd + 0', desc: 'Toggle navigator', usage: 'Toggle left navigator panel.' },
-          { keys: 'Cmd + Option + 0', desc: 'Toggle inspector', usage: 'Toggle right inspector panel.' },
+          { keys: "Cmd + B", desc: "Build", usage: "Build the current scheme without running it." },
+          { keys: "Cmd + R", desc: "Run", usage: "Build and run the app in the simulator or on a device." },
+          { keys: "Ctrl + Cmd + R", desc: "Run Without Building", usage: "Launch the last build again without rebuilding." },
+          { keys: "Cmd + .", desc: "Stop", usage: "Stop the running app or the current build." },
+          { keys: "Cmd + U", desc: "Test", usage: "Build and run the test suite for the current scheme." },
+          { keys: "Ctrl + Cmd + U", desc: "Test Without Building", usage: "Re-run tests using the existing build products." },
+          { keys: "Cmd + I", desc: "Profile", usage: "Build and launch the app in Instruments for profiling." },
+          { keys: "Shift + Cmd + B", desc: "Analyze", usage: "Run the static analyzer to find potential bugs." },
+          { keys: "Shift + Cmd + K", desc: "Clean", usage: "Clean the build products for the current scheme." },
+          { keys: "Option + Shift + Cmd + K", desc: "Clean Build Folder", usage: "Delete the entire build folder, including derived data for the scheme." },
+          { keys: "Cmd + <", desc: "Edit Scheme", usage: "Open the scheme editor to change run, test, and build settings." },
+        ]
+      },
+      {
+        name: "Navigation",
+        shortcuts: [
+          { keys: "Shift + Cmd + O", desc: "Open Quickly", usage: "Fuzzy-search files and symbols and jump straight to them." },
+          { keys: "Cmd + L", desc: "Go to Line", usage: "Jump to a specific line number in the current file." },
+          { keys: "Ctrl + Cmd + J", desc: "Jump to Definition", usage: "Go to the definition of the symbol under the cursor." },
+          { keys: "Ctrl + Cmd + Left", desc: "Go Back", usage: "Go back to the previous location in your navigation history." },
+          { keys: "Ctrl + Cmd + Right", desc: "Go Forward", usage: "Go forward again in your navigation history." },
+          { keys: "Ctrl + Cmd + Up", desc: "Jump to Counterpart", usage: "Switch between a source file and its header or generated interface." },
+          { keys: "Shift + Cmd + J", desc: "Reveal in Project Navigator", usage: "Highlight the current file in the project navigator." },
+          { keys: "Cmd + '", desc: "Jump to Next Issue", usage: "Move to the next warning or error in the file." },
+          { keys: "Cmd + \"", desc: "Jump to Previous Issue", usage: "Move to the previous warning or error in the file." },
+          { keys: "Ctrl + 6", desc: "Show Document Items", usage: "Open the jump bar symbol list; type to filter methods in the file." },
+        ]
+      },
+      {
+        name: "Editor & Panels",
+        shortcuts: [
+          { keys: "Cmd + 0", desc: "Show/Hide Navigator", usage: "Toggle the left navigator panel." },
+          { keys: "Cmd + 1", desc: "Project Navigator", usage: "Show the project navigator; Cmd + 1 through Cmd + 9 switch navigator tabs." },
+          { keys: "Option + Cmd + 0", desc: "Show/Hide Inspectors", usage: "Toggle the right inspector panel." },
+          { keys: "Shift + Cmd + Y", desc: "Show/Hide Debug Area", usage: "Toggle the debug area with console and variables view." },
+          { keys: "Shift + Cmd + L", desc: "Show Library", usage: "Open the library of UI elements, snippets, and assets." },
+          { keys: "Shift + Cmd + C", desc: "Activate Console", usage: "Move focus to the debug console." },
+          { keys: "Shift + Cmd + 0", desc: "Developer Documentation", usage: "Open the developer documentation window." },
+          { keys: "Cmd + Return", desc: "Editor Only", usage: "Close assistant and split panes and show a single editor." },
+          { keys: "Ctrl + Option + Cmd + Return", desc: "Assistant Editor", usage: "Open the assistant editor pane beside the current file." },
+          { keys: "Option + Cmd + Return", desc: "Show Canvas", usage: "Toggle the SwiftUI preview canvas." },
+          { keys: "Option + Cmd + P", desc: "Resume Preview", usage: "Refresh and resume the SwiftUI canvas preview." },
+        ]
+      },
+      {
+        name: "Editing",
+        shortcuts: [
+          { keys: "Cmd + /", desc: "Comment Selection", usage: "Toggle line comments on the selected lines." },
+          { keys: "Ctrl + I", desc: "Re-Indent", usage: "Re-indent the selected lines to match the surrounding structure." },
+          { keys: "Cmd + ]", desc: "Shift Right", usage: "Indent the selected lines one level." },
+          { keys: "Cmd + [", desc: "Shift Left", usage: "Outdent the selected lines one level." },
+          { keys: "Option + Cmd + ]", desc: "Move Line Down", usage: "Move the current line or selection down." },
+          { keys: "Option + Cmd + [", desc: "Move Line Up", usage: "Move the current line or selection up." },
+          { keys: "Ctrl + Space", desc: "Show Completions", usage: "Trigger code completion at the cursor." },
+          { keys: "Ctrl + Cmd + E", desc: "Edit All in Scope", usage: "Rename every occurrence of the symbol within the current scope." },
+          { keys: "Option + Cmd + /", desc: "Add Documentation", usage: "Insert a documentation comment template above the declaration." },
+          { keys: "Cmd + F", desc: "Find", usage: "Find text in the current file." },
+          { keys: "Option + Cmd + F", desc: "Find and Replace", usage: "Find and replace text in the current file." },
+          { keys: "Shift + Cmd + F", desc: "Find in Workspace", usage: "Search across the entire workspace." },
+          { keys: "Cmd + G", desc: "Find Next", usage: "Jump to the next match; add Shift for the previous match." },
+          { keys: "Cmd + E", desc: "Use Selection for Find", usage: "Put the current selection into the find field." },
+        ]
+      },
+      {
+        name: "Code Folding",
+        shortcuts: [
+          { keys: "Option + Cmd + Left", desc: "Fold", usage: "Fold the code block at the cursor." },
+          { keys: "Option + Cmd + Right", desc: "Unfold", usage: "Unfold the code block at the cursor." },
+          { keys: "Option + Shift + Cmd + Left", desc: "Fold Methods & Functions", usage: "Fold every method and function in the file." },
+          { keys: "Option + Shift + Cmd + Right", desc: "Unfold Methods & Functions", usage: "Unfold every method and function in the file." },
+        ]
+      },
+      {
+        name: "Debugging",
+        shortcuts: [
+          { keys: "Cmd + \\", desc: "Toggle Breakpoint", usage: "Add or remove a breakpoint on the current line." },
+          { keys: "Cmd + Y", desc: "Activate/Deactivate Breakpoints", usage: "Enable or disable all breakpoints at once." },
+          { keys: "Ctrl + Cmd + Y", desc: "Pause/Continue", usage: "Pause the running process, or continue when stopped at a breakpoint." },
+          { keys: "F6", desc: "Step Over", usage: "Execute the current line and stop at the next one." },
+          { keys: "F7", desc: "Step Into", usage: "Step into the function call on the current line." },
+          { keys: "F8", desc: "Step Out", usage: "Run until the current function returns." },
+          { keys: "Cmd + K", desc: "Clear Console", usage: "Clear the debug console output." },
+        ]
+      },
+      {
+        name: "Files & Project",
+        shortcuts: [
+          { keys: "Cmd + N", desc: "New File", usage: "Create a new file from a template." },
+          { keys: "Shift + Cmd + N", desc: "New Project", usage: "Create a new Xcode project." },
+          { keys: "Option + Cmd + N", desc: "New Group", usage: "Create a new group in the project navigator." },
+          { keys: "Option + Cmd + A", desc: "Add Files", usage: "Add existing files to the project." },
+          { keys: "Cmd + S", desc: "Save", usage: "Save the current file." },
+          { keys: "Option + Cmd + S", desc: "Save All", usage: "Save every modified file." },
+          { keys: "Cmd + ,", desc: "Settings", usage: "Open Xcode settings, including key bindings." },
+          { keys: "Cmd + T", desc: "New Tab", usage: "Open a new editor tab in the current window." },
+          { keys: "Shift + Cmd + 2", desc: "Devices and Simulators", usage: "Open the window for managing devices and simulators." },
         ]
       },
     ]
   },
   android_studio: {
-    name: 'Android Studio',
-    icon: 'fab fa-android',
+    name: "Android Studio",
+    icon: "fab fa-android",
+    source: "https://developer.android.com/studio/intro/keyboard-shortcuts",
     categories: [
       {
-        name: 'Editor',
+        name: "Search & Navigation",
         shortcuts: [
-          { keys: 'Shift + Shift', desc: 'Search everywhere', usage: 'Search files, classes, actions, and more.' },
-          { keys: 'Ctrl + Shift + A', desc: 'Find action', usage: 'Search for IDE actions.' },
-          { keys: 'Ctrl + N', desc: 'Find class', usage: 'Search for a class by name.' },
-          { keys: 'Ctrl + Shift + N', desc: 'Find file', usage: 'Search for a file by name.' },
-          { keys: 'Alt + Enter', desc: 'Quick fix', usage: 'Show context-aware quick fixes.' },
-          { keys: 'Ctrl + Space', desc: 'Code completion', usage: 'Show basic code completion.' },
-          { keys: 'Shift + F10', desc: 'Run app', usage: 'Build and run the app.' },
-          { keys: 'Shift + F9', desc: 'Debug', usage: 'Run app in debug mode.' },
+          { keys: "Shift + Shift", desc: "Search Everywhere", usage: "Press Shift twice to search code, files, actions, and settings." },
+          { keys: "Ctrl + Shift + A", desc: "Find Action", usage: "Search and run any IDE action by name. macOS: Cmd + Shift + A." },
+          { keys: "Ctrl + N", desc: "Find Class", usage: "Navigate to a class by name; supports camel-hump matching. macOS: Cmd + O." },
+          { keys: "Ctrl + Shift + N", desc: "Find File", usage: "Navigate to a file or folder by name. macOS: Cmd + Shift + O." },
+          { keys: "Ctrl + Alt + Shift + N", desc: "Find Symbol", usage: "Navigate to a method or field by name. macOS: Cmd + Option + O." },
+          { keys: "Ctrl + F", desc: "Find", usage: "Find text in the current file. macOS: Cmd + F." },
+          { keys: "F3", desc: "Find Next", usage: "Jump to the next match; Shift + F3 for the previous one. macOS: Cmd + G." },
+          { keys: "Ctrl + R", desc: "Replace", usage: "Find and replace text in the current file. macOS: Cmd + R." },
+          { keys: "Ctrl + Shift + F", desc: "Find in Path", usage: "Search text across the whole project. macOS: Cmd + Shift + F." },
+          { keys: "Ctrl + G", desc: "Go to Line", usage: "Jump to a specific line and column. macOS: Cmd + L." },
+          { keys: "Ctrl + E", desc: "Recent Files", usage: "Open the recently accessed files dialog. macOS: Cmd + E." },
+          { keys: "Ctrl + Shift + Backspace", desc: "Last Edit Location", usage: "Jump back to the place you last edited. macOS: Cmd + Shift + Delete." },
+        ]
+      },
+      {
+        name: "Code Completion & Generation",
+        shortcuts: [
+          { keys: "Ctrl + Space", desc: "Basic Completion", usage: "Show completion suggestions; press twice for deeper results." },
+          { keys: "Ctrl + Shift + Space", desc: "Smart Completion", usage: "Show completions filtered by the expected type." },
+          { keys: "Ctrl + Shift + Enter", desc: "Complete Statement", usage: "Finish the statement, adding braces, parentheses, and formatting. macOS: Cmd + Shift + Enter." },
+          { keys: "Alt + Enter", desc: "Quick Fix", usage: "Show intention actions and quick fixes for the code at the caret. macOS: Option + Enter." },
+          { keys: "Alt + Insert", desc: "Generate Code", usage: "Generate getters, setters, constructors, overrides, and more. macOS: Cmd + N." },
+          { keys: "Ctrl + O", desc: "Override Methods", usage: "Choose parent methods to override." },
+          { keys: "Ctrl + I", desc: "Implement Methods", usage: "Implement methods required by an interface." },
+          { keys: "Ctrl + Alt + T", desc: "Surround With", usage: "Wrap the selection in if, try/catch, loops, and similar templates. macOS: Cmd + Option + T." },
+        ]
+      },
+      {
+        name: "Editing",
+        shortcuts: [
+          { keys: "Ctrl + /", desc: "Line Comment", usage: "Comment or uncomment the current line. macOS: Cmd + /." },
+          { keys: "Ctrl + Shift + /", desc: "Block Comment", usage: "Wrap the selection in a block comment. macOS: Cmd + Shift + /." },
+          { keys: "Ctrl + D", desc: "Duplicate Line", usage: "Duplicate the current line or selection. macOS: Cmd + D." },
+          { keys: "Ctrl + Y", desc: "Delete Line", usage: "Delete the line at the caret. macOS: Cmd + Delete." },
+          { keys: "Ctrl + W", desc: "Extend Selection", usage: "Select successively larger code blocks. macOS: Option + Up." },
+          { keys: "Ctrl + Shift + W", desc: "Shrink Selection", usage: "Shrink the selection back to the previous block. macOS: Option + Down." },
+          { keys: "Ctrl + Alt + L", desc: "Reformat Code", usage: "Reformat the file or selection, including XML layouts. macOS: Cmd + Option + L." },
+          { keys: "Ctrl + Alt + I", desc: "Auto-Indent Lines", usage: "Fix the indentation of the current lines. macOS: Ctrl + Option + I." },
+          { keys: "Ctrl + Alt + O", desc: "Optimize Imports", usage: "Remove unused imports and reorder the rest. macOS: Ctrl + Option + O." },
+          { keys: "Ctrl + Shift + J", desc: "Smart Line Join", usage: "Join the next line into the current one intelligently." },
+          { keys: "Shift + Enter", desc: "Start New Line", usage: "Start a new line below without breaking the current one." },
+          { keys: "F2", desc: "Next Highlighted Error", usage: "Jump to the next error; Shift + F2 goes to the previous one." },
+        ]
+      },
+      {
+        name: "Navigate Code",
+        shortcuts: [
+          { keys: "Ctrl + B", desc: "Go to Declaration", usage: "Jump to where the symbol is declared; Ctrl-click works too. macOS: Cmd + B." },
+          { keys: "Ctrl + Alt + B", desc: "Go to Implementations", usage: "List and jump to implementations of the symbol. macOS: Cmd + Option + B." },
+          { keys: "Ctrl + U", desc: "Go to Super Method", usage: "Jump to the supermethod or superclass. macOS: Cmd + U." },
+          { keys: "Ctrl + F12", desc: "File Structure", usage: "Show the structure popup for the current file. macOS: Cmd + F12." },
+          { keys: "Ctrl + H", desc: "Type Hierarchy", usage: "Open the type hierarchy for the class at the caret." },
+          { keys: "Ctrl + Q", desc: "Quick Documentation", usage: "Show documentation for the symbol at the caret. macOS: Ctrl + J." },
+          { keys: "Ctrl + P", desc: "Parameter Info", usage: "Show the parameters of the method being called. macOS: Cmd + P." },
+          { keys: "Alt + F7", desc: "Find Usages", usage: "Find all code that references the symbol at the caret. macOS: Option + F7." },
+        ]
+      },
+      {
+        name: "Refactoring",
+        shortcuts: [
+          { keys: "Shift + F6", desc: "Rename", usage: "Rename the symbol and update every reference." },
+          { keys: "Ctrl + Alt + M", desc: "Extract Method", usage: "Turn the selected code into a new method. macOS: Cmd + Option + M." },
+          { keys: "Ctrl + Alt + V", desc: "Extract Variable", usage: "Turn the selected expression into a local variable. macOS: Cmd + Option + V." },
+          { keys: "Ctrl + Alt + F", desc: "Extract Field", usage: "Turn the selected expression into a class field. macOS: Cmd + Option + F." },
+          { keys: "Ctrl + Alt + C", desc: "Extract Constant", usage: "Turn the selected expression into a constant. macOS: Cmd + Option + C." },
+          { keys: "Ctrl + Alt + P", desc: "Extract Parameter", usage: "Turn the selected expression into a method parameter. macOS: Cmd + Option + P." },
+          { keys: "Ctrl + Alt + N", desc: "Inline", usage: "Inline the variable or method at the caret. macOS: Cmd + Option + N." },
+          { keys: "F6", desc: "Move", usage: "Move a class, method, or file to another location; F5 copies it." },
+        ]
+      },
+      {
+        name: "Build, Run & Debug",
+        shortcuts: [
+          { keys: "Ctrl + F9", desc: "Build", usage: "Build the project. macOS: Cmd + F9." },
+          { keys: "Shift + F10", desc: "Run", usage: "Build and run the app. macOS: Ctrl + R." },
+          { keys: "Shift + F9", desc: "Debug", usage: "Run the app with the debugger attached. macOS: Ctrl + D." },
+          { keys: "Ctrl + F10", desc: "Apply Changes", usage: "Apply changes and restart the activity without reinstalling. macOS: Ctrl + Cmd + R." },
+          { keys: "F8", desc: "Step Over", usage: "Execute the current line and stop at the next one." },
+          { keys: "F7", desc: "Step Into", usage: "Step into the method call on the current line." },
+          { keys: "Shift + F8", desc: "Step Out", usage: "Run until the current method returns." },
+          { keys: "Alt + F9", desc: "Run to Cursor", usage: "Continue execution until the line at the caret. macOS: Option + F9." },
+          { keys: "F9", desc: "Resume Program", usage: "Continue running after a breakpoint. macOS: Cmd + Option + R." },
+          { keys: "Ctrl + F8", desc: "Toggle Breakpoint", usage: "Add or remove a breakpoint on the current line. macOS: Cmd + F8." },
+          { keys: "Alt + F8", desc: "Evaluate Expression", usage: "Evaluate an expression while paused at a breakpoint. macOS: Option + F8." },
+          { keys: "Ctrl + Shift + F8", desc: "View Breakpoints", usage: "Open the breakpoints dialog to review conditions. macOS: Cmd + Shift + F8." },
+        ]
+      },
+      {
+        name: "Tool Windows",
+        shortcuts: [
+          { keys: "Alt + 1", desc: "Project Window", usage: "Toggle the Project tool window. macOS: Cmd + 1." },
+          { keys: "Alt + 6", desc: "Logcat", usage: "Open the Logcat tool window. macOS: Cmd + 6." },
+          { keys: "Alt + 9", desc: "Version Control", usage: "Open the Version Control tool window. macOS: Cmd + 9." },
+          { keys: "Ctrl + Shift + F12", desc: "Hide All Tool Windows", usage: "Maximize the editor by hiding every tool window. macOS: Ctrl + Cmd + F12." },
+          { keys: "Esc", desc: "Return to Editor", usage: "Move focus from a tool window back to the editor." },
+          { keys: "Ctrl + Tab", desc: "Switcher", usage: "Switch between open tabs and tool windows." },
         ]
       },
     ]
   },
   postman: {
-    name: 'Postman',
-    icon: 'fas fa-paper-plane',
+    name: "Postman",
+    icon: "fas fa-paper-plane",
+    source: "https://learning.postman.com/docs/getting-started/basics/navigating-postman",
     categories: [
       {
-        name: 'Editor',
+        name: "Requests & Tabs",
         shortcuts: [
-          { keys: 'Ctrl + Enter', desc: 'Send request', usage: 'Send the current API request.' },
-          { keys: 'Ctrl + S', desc: 'Save', usage: 'Save the current request.' },
-          { keys: 'Ctrl + N', desc: 'New request', usage: 'Create a new request in a new tab.' },
-          { keys: 'Ctrl + T', desc: 'New tab', usage: 'Open a new tab.' },
-          { keys: 'Ctrl + Shift + P', desc: 'Command palette', usage: 'Open command palette.' },
-          { keys: 'Ctrl + /', desc: 'Toggle sidebar', usage: 'Show or hide the sidebar.' },
-          { keys: 'Ctrl + Alt + C', desc: 'Open console', usage: 'Open Postman console.' },
-          { keys: 'Ctrl + \\', desc: 'Toggle layout', usage: 'Switch request/response layout.' },
+          { keys: "Ctrl + Enter", desc: "Send Request", usage: "Send the current request; works from anywhere in the app. macOS: Cmd + Enter." },
+          { keys: "Ctrl + S", desc: "Save", usage: "Save the current request or tab. macOS: Cmd + S." },
+          { keys: "Ctrl + Shift + S", desc: "Save As", usage: "Save a copy of the current request. macOS: Cmd + Shift + S." },
+          { keys: "Ctrl + T", desc: "New Tab", usage: "Open a new tab. macOS: Cmd + T." },
+          { keys: "Ctrl + N", desc: "Create New", usage: "Open the dialog for creating requests, collections, and environments. macOS: Cmd + N." },
+          { keys: "Ctrl + L", desc: "Jump to URL", usage: "Move focus to the request URL field. macOS: Cmd + L." },
+          { keys: "Ctrl + 1", desc: "Focus First Tab", usage: "Focus the first tab; Ctrl + 1 through Ctrl + 9 focus the nth tab. macOS: Cmd + 1." },
+        ]
+      },
+      {
+        name: "Search & Command Palette",
+        shortcuts: [
+          { keys: "Ctrl + K", desc: "Search Postman", usage: "Search workspaces, collections, requests, and APIs. macOS: Cmd + K." },
+          { keys: "Ctrl + Shift + P", desc: "Command Palette", usage: "Navigate features with keystrokes and natural language. macOS: Cmd + Shift + P." },
+          { keys: "Ctrl + Shift + F", desc: "Find and Replace", usage: "Search the current workspace on the desktop app. macOS: Cmd + Shift + F." },
+          { keys: "Ctrl + F", desc: "Search Sidebar", usage: "Filter items in the sidebar. macOS: Cmd + F." },
+        ]
+      },
+      {
+        name: "Sidebar Navigation",
+        shortcuts: [
+          { keys: "Ctrl + Alt + 1", desc: "Focus Sidebar", usage: "Move focus to the sidebar from anywhere. macOS: Cmd + Alt + 1." },
+          { keys: "Ctrl + Alt + 2", desc: "Focus Builder", usage: "Move focus to the request builder. macOS: Cmd + Alt + 2." },
+          { keys: "Down", desc: "Next Item", usage: "Move to the next item in the sidebar." },
+          { keys: "Up", desc: "Previous Item", usage: "Move to the previous item in the sidebar." },
+          { keys: "Right", desc: "Expand", usage: "Expand the selected collection or folder." },
+          { keys: "Left", desc: "Collapse", usage: "Collapse the selected collection or folder." },
+          { keys: "Shift + Down", desc: "Select Next Too", usage: "Select the current and next item." },
+          { keys: "Shift + Up", desc: "Select Previous Too", usage: "Select the current and previous item." },
+          { keys: "Enter", desc: "Open Request", usage: "Open the selected request in a tab, or rename the selected element." },
+        ]
+      },
+      {
+        name: "Manipulation",
+        shortcuts: [
+          { keys: "Ctrl + C", desc: "Copy", usage: "Copy the selected sidebar item. macOS: Cmd + C." },
+          { keys: "Ctrl + V", desc: "Paste", usage: "Paste the copied item. macOS: Cmd + V." },
+          { keys: "Ctrl + D", desc: "Duplicate", usage: "Duplicate the selected request or collection. macOS: Cmd + D." },
+          { keys: "Ctrl + E", desc: "Edit / Rename", usage: "Rename the selected item. macOS: Cmd + E." },
+          { keys: "Delete", desc: "Delete", usage: "Delete the selected item." },
+        ]
+      },
+      {
+        name: "Interface",
+        shortcuts: [
+          { keys: "Ctrl + \\", desc: "Toggle Sidebar", usage: "Show or hide the sidebar. macOS: Cmd + \\." },
+          { keys: "Ctrl + Alt + C", desc: "Open Console", usage: "Open the Postman Console to inspect and debug requests. macOS: Cmd + Alt + C." },
         ]
       },
     ]
@@ -6072,20 +6290,112 @@ const shortcutData = {
     ]
   },
   visual_studio: {
-    name: 'Visual Studio',
-    icon: 'fas fa-code',
+    name: "Visual Studio",
+    icon: "fas fa-code",
+    source: "https://learn.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio",
     categories: [
       {
-        name: 'Editing',
+        name: "Search & Navigation",
         shortcuts: [
-          { keys: 'Ctrl + Q', desc: 'Quick Launch', usage: 'Open Quick Launch.' },
-          { keys: 'Ctrl + ,', desc: 'Search', usage: 'Search for files.' },
-          { keys: 'F5', desc: 'Start debug', usage: 'Start debugging.' },
-          { keys: 'Ctrl + F5', desc: 'Run without debug', usage: 'Run without debugging.' },
-          { keys: 'F9', desc: 'Breakpoint', usage: 'Toggle breakpoint.' },
-          { keys: 'F12', desc: 'Go to definition', usage: 'Navigate to symbol definition.' },
-          { keys: 'Ctrl + Shift + B', desc: 'Build', usage: 'Build the solution.' },
-          { keys: 'Ctrl + K, Ctrl + C', desc: 'Comment', usage: 'Comment selected lines.' },
+          { keys: "Ctrl + T", desc: "Go To All", usage: "Search and jump to any file, type, member, or symbol; Ctrl + , also works." },
+          { keys: "Ctrl + Q", desc: "Quick Launch", usage: "Search commands, settings, and documentation from one box." },
+          { keys: "Ctrl + F", desc: "Find", usage: "Find text in the current file." },
+          { keys: "Ctrl + H", desc: "Replace", usage: "Find and replace text in the current file." },
+          { keys: "Ctrl + Shift + F", desc: "Find in Files", usage: "Search text across the entire solution." },
+          { keys: "Ctrl + Shift + H", desc: "Replace in Files", usage: "Replace text across the entire solution." },
+          { keys: "F3", desc: "Find Next", usage: "Jump to the next match; Shift + F3 goes to the previous one." },
+          { keys: "Ctrl + F3", desc: "Find Next Selected", usage: "Search for the word or selection at the caret." },
+          { keys: "Ctrl + G", desc: "Go To Line", usage: "Jump to a specific line number." },
+          { keys: "Ctrl + -", desc: "Navigate Backward", usage: "Go back to the previous cursor location; Ctrl + Shift + - goes forward." },
+        ]
+      },
+      {
+        name: "Code Navigation",
+        shortcuts: [
+          { keys: "F12", desc: "Go To Definition", usage: "Jump to the definition of the symbol at the caret." },
+          { keys: "Ctrl + F12", desc: "Go To Declaration", usage: "Jump to the declaration of the symbol." },
+          { keys: "Alt + F12", desc: "Peek Definition", usage: "Show the definition inline without leaving the file." },
+          { keys: "Shift + F12", desc: "Find All References", usage: "List everywhere the symbol is used." },
+          { keys: "Shift + Alt + F12", desc: "Quick Find Symbol", usage: "Run a fast symbol search for the identifier at the caret." },
+          { keys: "F8", desc: "Next Location", usage: "Go to the next item in the Error List or Output window." },
+          { keys: "Shift + F8", desc: "Previous Location", usage: "Go to the previous item in the Error List or Output window." },
+        ]
+      },
+      {
+        name: "Editing",
+        shortcuts: [
+          { keys: "Ctrl + K, Ctrl + C", desc: "Comment Selection", usage: "Comment out the selected lines." },
+          { keys: "Ctrl + K, Ctrl + U", desc: "Uncomment Selection", usage: "Uncomment the selected lines." },
+          { keys: "Ctrl + /", desc: "Toggle Line Comment", usage: "Toggle line comments (Visual Studio 2022 17.11 and later)." },
+          { keys: "Ctrl + K, Ctrl + D", desc: "Format Document", usage: "Reformat the whole document to the code style rules." },
+          { keys: "Ctrl + K, Ctrl + F", desc: "Format Selection", usage: "Reformat only the selected code." },
+          { keys: "Ctrl + D", desc: "Duplicate", usage: "Duplicate the current line or selection." },
+          { keys: "Ctrl + L", desc: "Line Cut", usage: "Cut the entire current line." },
+          { keys: "Ctrl + Enter", desc: "Line Open Above", usage: "Insert a blank line above the current one." },
+          { keys: "Ctrl + Space", desc: "Complete Word", usage: "Trigger IntelliSense completion at the caret." },
+          { keys: "Ctrl + Shift + Space", desc: "Parameter Info", usage: "Show the parameters of the method being called." },
+          { keys: "Ctrl + K, Ctrl + X", desc: "Insert Snippet", usage: "Open the code snippet picker." },
+          { keys: "Ctrl + M, Ctrl + O", desc: "Collapse to Definitions", usage: "Collapse all members to their signatures." },
+          { keys: "Ctrl + M, Ctrl + M", desc: "Toggle Outlining", usage: "Expand or collapse the region at the caret." },
+          { keys: "Ctrl + K, Ctrl + K", desc: "Toggle Bookmark", usage: "Add or remove a bookmark on the current line." },
+          { keys: "Ctrl + R, Ctrl + G", desc: "Remove and Sort Usings", usage: "Remove unused using directives and sort the rest." },
+        ]
+      },
+      {
+        name: "Build",
+        shortcuts: [
+          { keys: "Ctrl + Shift + B", desc: "Build Solution", usage: "Build the entire solution." },
+          { keys: "Ctrl + F7", desc: "Compile", usage: "Compile only the current file." },
+          { keys: "Ctrl + Break", desc: "Cancel Build", usage: "Cancel the build in progress." },
+          { keys: "Alt + F11", desc: "Run Code Analysis", usage: "Run code analysis on the solution." },
+        ]
+      },
+      {
+        name: "Debugging",
+        shortcuts: [
+          { keys: "F5", desc: "Start Debugging", usage: "Run the app with the debugger attached." },
+          { keys: "Ctrl + F5", desc: "Start Without Debugging", usage: "Run the app without the debugger." },
+          { keys: "Shift + F5", desc: "Stop Debugging", usage: "End the debugging session." },
+          { keys: "Ctrl + Shift + F5", desc: "Restart", usage: "Restart the debugging session." },
+          { keys: "F9", desc: "Toggle Breakpoint", usage: "Add or remove a breakpoint on the current line." },
+          { keys: "Ctrl + Shift + F9", desc: "Delete All Breakpoints", usage: "Remove every breakpoint in the solution." },
+          { keys: "F10", desc: "Step Over", usage: "Execute the current line and stop at the next one." },
+          { keys: "F11", desc: "Step Into", usage: "Step into the method call on the current line." },
+          { keys: "Shift + F11", desc: "Step Out", usage: "Run until the current method returns." },
+          { keys: "Ctrl + F10", desc: "Run to Cursor", usage: "Continue execution until the line at the caret." },
+          { keys: "Ctrl + Shift + F10", desc: "Set Next Statement", usage: "Move the execution point to the current line." },
+          { keys: "Shift + F9", desc: "Quick Watch", usage: "Inspect the value of the expression at the caret; Ctrl + Alt + Q also works." },
+          { keys: "Ctrl + Alt + B", desc: "Breakpoints Window", usage: "Open the window listing all breakpoints." },
+          { keys: "Ctrl + Alt + I", desc: "Immediate Window", usage: "Open the Immediate window to evaluate expressions." },
+        ]
+      },
+      {
+        name: "Refactoring",
+        shortcuts: [
+          { keys: "Ctrl + R, Ctrl + R", desc: "Rename", usage: "Rename the symbol and update every reference." },
+          { keys: "Ctrl + R, Ctrl + M", desc: "Extract Method", usage: "Turn the selected code into a new method." },
+          { keys: "Ctrl + R, Ctrl + I", desc: "Extract Interface", usage: "Create an interface from the members of a class." },
+          { keys: "Ctrl + R, Ctrl + E", desc: "Encapsulate Field", usage: "Wrap a field in a property." },
+          { keys: "Ctrl + .", desc: "Quick Actions", usage: "Show refactorings and code fixes for the caret position." },
+          { keys: "Ctrl + R, Ctrl + O", desc: "Reorder Parameters", usage: "Change the order of a method's parameters everywhere." },
+        ]
+      },
+      {
+        name: "Windows & Files",
+        shortcuts: [
+          { keys: "Ctrl + Alt + L", desc: "Solution Explorer", usage: "Open the Solution Explorer window." },
+          { keys: "F4", desc: "Properties Window", usage: "Open the Properties window for the selection." },
+          { keys: "Ctrl + Alt + O", desc: "Output Window", usage: "Open the Output window." },
+          { keys: "Ctrl + \\, E", desc: "Error List", usage: "Open the Error List window." },
+          { keys: "Ctrl + Alt + X", desc: "Toolbox", usage: "Open the Toolbox window." },
+          { keys: "Ctrl + E, T", desc: "Test Explorer", usage: "Open the Test Explorer window." },
+          { keys: "Ctrl + W", desc: "Close Document", usage: "Close the current document (General profile; Ctrl + F4 also works)." },
+          { keys: "Ctrl + Tab", desc: "Switch Documents", usage: "Cycle through open document windows." },
+          { keys: "Ctrl + N", desc: "New File", usage: "Create a new file." },
+          { keys: "Ctrl + Shift + N", desc: "New Project", usage: "Create a new project." },
+          { keys: "Ctrl + S", desc: "Save", usage: "Save the current file." },
+          { keys: "Ctrl + Shift + S", desc: "Save All", usage: "Save every modified file." },
+          { keys: "Shift + Alt + Enter", desc: "Full Screen", usage: "Toggle full-screen mode." },
         ]
       },
     ]
