@@ -5581,22 +5581,118 @@ const shortcutData = {
     ]
   },
   tmux: {
-    name: 'tmux',
-    icon: 'fas fa-terminal',
+    name: "tmux",
+    icon: "fas fa-terminal",
+    source: "https://man7.org/linux/man-pages/man1/tmux.1.html",
     categories: [
       {
-        name: 'Sessions & Windows',
+        name: "Sessions",
         shortcuts: [
-          { keys: 'Ctrl + B, C', desc: 'New window', usage: 'Create a new window.' },
-          { keys: 'Ctrl + B, N', desc: 'Next window', usage: 'Go to next window.' },
-          { keys: 'Ctrl + B, P', desc: 'Previous window', usage: 'Go to previous window.' },
-          { keys: 'Ctrl + B, %', desc: 'Vertical split', usage: 'Split pane vertically.' },
-          { keys: 'Ctrl + B, "', desc: 'Horizontal split', usage: 'Split pane horizontally.' },
-          { keys: 'Ctrl + B, D', desc: 'Detach session', usage: 'Detach from session.' },
-          { keys: 'Ctrl + B, [', desc: 'Scroll mode', usage: 'Enter scroll mode.' },
-          { keys: 'Ctrl + B, ?', desc: 'Shortcuts list', usage: 'Show keyboard shortcuts.' },
+          { keys: "Ctrl + B, D", desc: "Detach client", usage: "Detach the current client, leaving the session running in the background." },
+          { keys: "Ctrl + B, $", desc: "Rename session", usage: "Rename the current session." },
+          { keys: "Ctrl + B, S", desc: "Choose session", usage: "Select a new session for the attached client interactively." },
+          { keys: "Ctrl + B, (", desc: "Previous session", usage: "Switch the attached client to the previous session." },
+          { keys: "Ctrl + B, )", desc: "Next session", usage: "Switch the attached client to the next session." },
+          { keys: "Ctrl + B, Shift + L", desc: "Last session", usage: "Switch the attached client back to the last session (uppercase L)." },
+          { keys: "Ctrl + B, Shift + D", desc: "Choose client to detach", usage: "Choose a client to detach (uppercase D)." },
+          { keys: "Ctrl + B, Ctrl + Z", desc: "Suspend client", usage: "Suspend the tmux client." }
         ]
       },
+      {
+        name: "Windows",
+        shortcuts: [
+          { keys: "Ctrl + B, C", desc: "New window", usage: "Create a new window." },
+          { keys: "Ctrl + B, &", desc: "Kill window", usage: "Kill the current window." },
+          { keys: "Ctrl + B, ,", desc: "Rename window", usage: "Rename the current window." },
+          { keys: "Ctrl + B, N", desc: "Next window", usage: "Change to the next window." },
+          { keys: "Ctrl + B, P", desc: "Previous window", usage: "Change to the previous window." },
+          { keys: "Ctrl + B, L", desc: "Last window", usage: "Move to the previously selected window (lowercase l)." },
+          { keys: "Ctrl + B, 0-9", desc: "Select window by number", usage: "Select windows 0 to 9 directly." },
+          { keys: "Ctrl + B, '", desc: "Select window by index", usage: "Prompt for a window index to select." },
+          { keys: "Ctrl + B, W", desc: "Choose window", usage: "Choose the current window interactively from a list." },
+          { keys: "Ctrl + B, .", desc: "Move window", usage: "Prompt for an index to move the current window to." },
+          { keys: "Ctrl + B, F", desc: "Find window", usage: "Prompt to search for text in open windows." },
+          { keys: "Ctrl + B, I", desc: "Window info", usage: "Display some information about the current window." },
+          { keys: "Ctrl + B, Alt + N", desc: "Next window with activity", usage: "Move to the next window with a bell or activity marker." },
+          { keys: "Ctrl + B, Alt + P", desc: "Previous window with activity", usage: "Move to the previous window with a bell or activity marker." }
+        ]
+      },
+      {
+        name: "Panes",
+        shortcuts: [
+          { keys: "Ctrl + B, %", desc: "Split left and right", usage: "Split the current pane into two, left and right." },
+          { keys: "Ctrl + B, \"", desc: "Split top and bottom", usage: "Split the current pane into two, top and bottom." },
+          { keys: "Ctrl + B, X", desc: "Kill pane", usage: "Kill the current pane." },
+          { keys: "Ctrl + B, O", desc: "Next pane", usage: "Select the next pane in the current window." },
+          { keys: "Ctrl + B, ;", desc: "Last pane", usage: "Move to the previously active pane." },
+          { keys: "Ctrl + B, \u2191/\u2193/\u2190/\u2192", desc: "Select pane by direction", usage: "Change to the pane above, below, to the left, or to the right of the current pane." },
+          { keys: "Ctrl + B, Q", desc: "Show pane numbers", usage: "Briefly display pane indexes; press a number to jump to that pane." },
+          { keys: "Ctrl + B, Z", desc: "Zoom pane", usage: "Toggle zoom state of the current pane (fullscreen within the window)." },
+          { keys: "Ctrl + B, {", desc: "Swap with previous pane", usage: "Swap the current pane with the previous pane." },
+          { keys: "Ctrl + B, }", desc: "Swap with next pane", usage: "Swap the current pane with the next pane." },
+          { keys: "Ctrl + B, Ctrl + O", desc: "Rotate panes forwards", usage: "Rotate the panes in the current window forwards." },
+          { keys: "Ctrl + B, Alt + O", desc: "Rotate panes backwards", usage: "Rotate the panes in the current window backwards." },
+          { keys: "Ctrl + B, !", desc: "Break pane to window", usage: "Break the current pane out of the window into its own window." },
+          { keys: "Ctrl + B, M", desc: "Mark pane", usage: "Mark the current pane, used as the default source for join and swap." },
+          { keys: "Ctrl + B, Shift + M", desc: "Clear marked pane", usage: "Clear the marked pane (uppercase M)." },
+          { keys: "Ctrl + B, Space", desc: "Next layout", usage: "Arrange the current window in the next preset layout." },
+          { keys: "Ctrl + B, Alt + 1-7", desc: "Preset layouts", usage: "Arrange panes in one of the seven preset layouts: even-horizontal, even-vertical, main-horizontal, main-horizontal-mirrored, main-vertical, main-vertical-mirrored, or tiled." }
+        ]
+      },
+      {
+        name: "Resizing Panes",
+        shortcuts: [
+          { keys: "Ctrl + B, Ctrl + \u2191/\u2193/\u2190/\u2192", desc: "Resize pane by one cell", usage: "Resize the current pane in steps of one cell." },
+          { keys: "Ctrl + B, Alt + \u2191/\u2193/\u2190/\u2192", desc: "Resize pane by five cells", usage: "Resize the current pane in steps of five cells." }
+        ]
+      },
+      {
+        name: "Copy Mode & Buffers",
+        shortcuts: [
+          { keys: "Ctrl + B, [", desc: "Enter copy mode", usage: "Enter copy mode to copy text or view the scrollback history." },
+          { keys: "Ctrl + B, ]", desc: "Paste buffer", usage: "Paste the most recently copied buffer of text." },
+          { keys: "Ctrl + B, Page Up", desc: "Copy mode and scroll up", usage: "Enter copy mode and scroll one page up." },
+          { keys: "Ctrl + B, #", desc: "List paste buffers", usage: "List all paste buffers." },
+          { keys: "Ctrl + B, =", desc: "Choose buffer to paste", usage: "Choose which buffer to paste interactively from a list." },
+          { keys: "Ctrl + B, -", desc: "Delete buffer", usage: "Delete the most recently copied buffer of text." }
+        ]
+      },
+      {
+        name: "Copy Mode Navigation (vi keys)",
+        shortcuts: [
+          { keys: "Q", desc: "Exit copy mode", usage: "Cancel and leave copy mode." },
+          { keys: "Space", desc: "Begin selection", usage: "Start selecting text from the cursor position." },
+          { keys: "Enter", desc: "Copy selection and exit", usage: "Copy the current selection and exit copy mode." },
+          { keys: "V", desc: "Rectangle selection", usage: "Toggle rectangle (block) selection mode." },
+          { keys: "Shift + V", desc: "Select line", usage: "Select the current line (uppercase V)." },
+          { keys: "/", desc: "Search forward", usage: "Search forward for the specified text." },
+          { keys: "?", desc: "Search backward", usage: "Search backwards for the specified text." },
+          { keys: "N", desc: "Repeat search", usage: "Repeat the last search in the same direction." },
+          { keys: "Shift + N", desc: "Repeat search reversed", usage: "Repeat the last search in the reverse direction (uppercase N)." },
+          { keys: "G", desc: "Top of history", usage: "Scroll to the top of the history." },
+          { keys: "Shift + G", desc: "Bottom of history", usage: "Scroll to the bottom of the history (uppercase G)." },
+          { keys: "Ctrl + U", desc: "Half page up", usage: "Scroll up by half a page." },
+          { keys: "Ctrl + D", desc: "Half page down", usage: "Scroll down by half a page." },
+          { keys: "Ctrl + B", desc: "Page up", usage: "Scroll up by one page." },
+          { keys: "Ctrl + F", desc: "Page down", usage: "Scroll down by one page." },
+          { keys: "0", desc: "Start of line", usage: "Move the cursor to the start of the line." },
+          { keys: "$", desc: "End of line", usage: "Move the cursor to the end of the line." },
+          { keys: "W", desc: "Next word", usage: "Move to the next word." },
+          { keys: "B", desc: "Previous word", usage: "Move to the start of the previous word." },
+          { keys: "%", desc: "Matching bracket", usage: "Move to the next matching bracket." }
+        ]
+      },
+      {
+        name: "Prompt & Help",
+        shortcuts: [
+          { keys: "Ctrl + B, :", desc: "Command prompt", usage: "Enter the tmux command prompt to type commands directly." },
+          { keys: "Ctrl + B, ?", desc: "List key bindings", usage: "List all key bindings." },
+          { keys: "Ctrl + B, T", desc: "Show clock", usage: "Show the time in the current pane." },
+          { keys: "Ctrl + B, R", desc: "Redraw client", usage: "Force redraw of the attached client." },
+          { keys: "Ctrl + B, ~", desc: "Show messages", usage: "Show previous messages from tmux, if any." },
+          { keys: "Ctrl + B, Ctrl + B", desc: "Send prefix", usage: "Send the prefix key through to the application running in the pane." }
+        ]
+      }
     ]
   },
   screen: {
