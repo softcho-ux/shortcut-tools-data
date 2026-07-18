@@ -5344,20 +5344,66 @@ const shortcutData = {
     ]
   },
   powershell: {
-    name: 'PowerShell',
-    icon: 'fas fa-terminal',
+    name: "PowerShell",
+    icon: "fas fa-terminal",
+    source: "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_line_editing",
     categories: [
       {
-        name: 'Key Commands',
+        name: "Line Editing",
         shortcuts: [
-          { keys: 'Get-Help [cmd]', desc: 'Help', usage: 'Show help for a command.' },
-          { keys: 'Get-Command', desc: 'List commands', usage: 'List all available commands.' },
-          { keys: 'Get-Process', desc: 'List processes', usage: 'Show running processes.' },
-          { keys: 'Get-Service', desc: 'List services', usage: 'Show system services.' },
-          { keys: 'Set-ExecutionPolicy RemoteSigned', desc: 'Execution policy', usage: 'Set script execution policy.' },
-          { keys: '| Select-Object [prop]', desc: 'Select properties', usage: 'Select specific properties from pipeline.' },
-          { keys: '| Where-Object {$_.condition}', desc: 'Filter', usage: 'Filter items matching a condition.' },
-          { keys: '| Export-Csv [file]', desc: 'Export CSV', usage: 'Export results to CSV file.' },
+          { keys: "Shift + Enter", desc: "Add Line", usage: "Start a new line without running the command; each new line shows the >> continuation prompt." },
+          { keys: "Ctrl + Left", desc: "Word Left", usage: "Move the cursor one word to the left." },
+          { keys: "Ctrl + Right", desc: "Word Right", usage: "Move the cursor one word to the right." },
+          { keys: "Home", desc: "Line Start", usage: "Move to the beginning of the line; press twice in multi-line input to reach the first line." },
+          { keys: "End", desc: "Line End", usage: "Move to the end of the line; press twice in multi-line input to reach the last line." },
+          { keys: "Ctrl + Home", desc: "Delete to Start", usage: "Delete everything from the cursor to the beginning of the line." },
+          { keys: "Ctrl + End", desc: "Delete to End", usage: "Delete everything from the cursor to the end of the line." },
+          { keys: "Ctrl + Backspace", desc: "Delete Word Back", usage: "Delete the word before the cursor." },
+          { keys: "Ctrl + Delete", desc: "Delete Word Forward", usage: "Delete the word after the cursor." },
+          { keys: "Insert", desc: "Overstrike Mode", usage: "Toggle between insert and overwrite mode." },
+        ]
+      },
+      {
+        name: "Completion",
+        shortcuts: [
+          { keys: "Tab", desc: "Complete", usage: "Complete a cmdlet name, parameter, or path; press again to cycle through matches." },
+          { keys: "Shift + Tab", desc: "Complete Backward", usage: "Cycle backward through the completion candidates." },
+          { keys: "Ctrl + Space", desc: "Menu Complete", usage: "Show a menu of possible completions and pick with the arrow keys." },
+        ]
+      },
+      {
+        name: "History",
+        shortcuts: [
+          { keys: "Up", desc: "Previous Command", usage: "Recall the previous command from history." },
+          { keys: "Down", desc: "Next Command", usage: "Recall the next command from history." },
+          { keys: "Ctrl + R", desc: "Reverse History Search", usage: "Interactively search backward through your command history." },
+          { keys: "Ctrl + S", desc: "Forward History Search", usage: "Interactively search forward through your command history." },
+          { keys: "F8", desc: "History Search Backward", usage: "Recall the previous command that starts with what you've typed." },
+          { keys: "Shift + F8", desc: "History Search Forward", usage: "Recall the next command that starts with what you've typed." },
+          { keys: "Alt + .", desc: "Yank Last Argument", usage: "Insert the last argument of the previous command; press again to walk further back." },
+        ]
+      },
+      {
+        name: "Editing & Clipboard",
+        shortcuts: [
+          { keys: "Ctrl + C", desc: "Copy or Cancel", usage: "Copy the selection, or cancel the current input when nothing is selected." },
+          { keys: "Ctrl + X", desc: "Cut", usage: "Cut the selected text." },
+          { keys: "Ctrl + V", desc: "Paste", usage: "Paste from the clipboard." },
+          { keys: "Ctrl + Z", desc: "Undo", usage: "Undo the last edit on the command line." },
+          { keys: "Ctrl + Y", desc: "Redo", usage: "Redo the last undone edit." },
+          { keys: "Ctrl + A", desc: "Select All", usage: "Select the entire command line." },
+          { keys: "Esc", desc: "Revert Line", usage: "Clear the current input." },
+          { keys: "Ctrl + L", desc: "Clear Screen", usage: "Clear the screen, like the cls or clear commands." },
+        ]
+      },
+      {
+        name: "Advanced",
+        shortcuts: [
+          { keys: "Alt + A", desc: "Select Command Argument", usage: "Cycle through the arguments on the line so you can replace each value quickly." },
+          { keys: "Ctrl + ]", desc: "Go to Brace", usage: "Jump to the bracket, brace, or parenthesis matching the one at the cursor." },
+          { keys: "Alt + 0", desc: "Digit Argument", usage: "Alt + 0 through Alt + 9 repeat the next keystroke that many times (e.g. Alt + 4 then # types ####)." },
+          { keys: "F2", desc: "Switch Prediction View", usage: "Toggle the predictive IntelliSense display between inline and list view." },
+          { keys: "Alt + ?", desc: "What Is Key", usage: "Show which function is bound to the next key you press." },
         ]
       },
     ]
@@ -5439,20 +5485,57 @@ const shortcutData = {
     ]
   },
   trello: {
-    name: 'Trello',
-    icon: 'fab fa-trello',
+    name: "Trello",
+    icon: "fab fa-trello",
+    source: "https://support.atlassian.com/trello/docs/keyboard-shortcuts-in-trello/",
     categories: [
       {
-        name: 'Board Shortcuts',
+        name: "Navigation",
         shortcuts: [
-          { keys: 'N', desc: 'Add card', usage: 'Add a new card to the selected list.' },
-          { keys: 'E', desc: 'Quick edit', usage: 'Quick edit a card.' },
-          { keys: 'D', desc: 'Set due date', usage: 'Set a due date on the card.' },
-          { keys: 'L', desc: 'Edit labels', usage: 'Edit card labels.' },
-          { keys: 'M', desc: 'Add member', usage: 'Add a member to the card.' },
-          { keys: 'Space', desc: 'Assign self', usage: 'Assign yourself to the card.' },
-          { keys: '/', desc: 'Search', usage: 'Search within the board.' },
-          { keys: '?', desc: 'Shortcuts list', usage: 'Show keyboard shortcuts list.' },
+          { keys: "J", desc: "Next Card", usage: "Select the card below the current one; the Down arrow does the same." },
+          { keys: "K", desc: "Previous Card", usage: "Select the card above the current one; the Up arrow does the same." },
+          { keys: "B", desc: "Open Boards Menu", usage: "Search your boards by typing the first letters, then press Enter to open one." },
+          { keys: "/", desc: "Search", usage: "Put the cursor in the Trello search box." },
+          { keys: "Enter", desc: "Open Card", usage: "Open the currently selected card." },
+          { keys: "Esc", desc: "Cancel", usage: "Close a dialog or cancel the current edit." },
+          { keys: "W", desc: "Toggle Board Menu", usage: "Show or hide the board sidebar menu." },
+          { keys: "Shift + ?", desc: "Show Shortcuts", usage: "Open the keyboard shortcuts reference." },
+        ]
+      },
+      {
+        name: "Cards",
+        shortcuts: [
+          { keys: "N", desc: "New Card", usage: "Open the card composer; hover over a card to insert the new card right below it." },
+          { keys: "E", desc: "Quick Edit", usage: "Open quick edit for the card under the cursor." },
+          { keys: "T", desc: "Edit Title", usage: "Edit the title of the hovered or open card." },
+          { keys: "C", desc: "Archive Card", usage: "Archive the card under the cursor." },
+          { keys: "D", desc: "Due Date", usage: "Open the due date picker for the card." },
+          { keys: "L", desc: "Labels", usage: "Open the label menu for the card." },
+          { keys: "M", desc: "Members", usage: "Open the member menu to add or remove people." },
+          { keys: "Space", desc: "Assign Yourself", usage: "Add yourself to the card; press again to remove yourself." },
+          { keys: "S", desc: "Watch Card", usage: "Watch or unwatch the card to get notified of changes." },
+          { keys: ",", desc: "Move to Left List", usage: "Send the card to the adjacent list on the left." },
+          { keys: ".", desc: "Move to Right List", usage: "Send the card to the adjacent list on the right." },
+        ]
+      },
+      {
+        name: "Actions",
+        shortcuts: [
+          { keys: "Z", desc: "Undo", usage: "Undo your last action (deletions can't be undone)." },
+          { keys: "Shift + Z", desc: "Redo", usage: "Redo something you've undone." },
+          { keys: "R", desc: "Repeat Action", usage: "Repeat your last action on the current selection." },
+          { keys: "Ctrl + C", desc: "Copy Card", usage: "Copy the hovered card. macOS: Cmd + C." },
+          { keys: "Ctrl + V", desc: "Paste Card", usage: "Paste the copied card where the cursor is. macOS: Cmd + V." },
+          { keys: "Ctrl + Enter", desc: "Save Text", usage: "Submit a comment or save the text you're writing. macOS: Cmd + Enter." },
+          { keys: "@", desc: "Mention", usage: "Mention a board member in a comment with autocomplete." },
+        ]
+      },
+      {
+        name: "Filtering",
+        shortcuts: [
+          { keys: "F", desc: "Filter Cards", usage: "Open the card filter for the board." },
+          { keys: "X", desc: "Clear Filters", usage: "Remove all active filters." },
+          { keys: "Q", desc: "My Cards Filter", usage: "Toggle showing only the cards assigned to you." },
         ]
       },
     ]
@@ -5544,20 +5627,49 @@ const shortcutData = {
     ]
   },
   google_calendar: {
-    name: 'Google Calendar',
-    icon: 'fas fa-calendar',
+    name: "Google Calendar",
+    icon: "fas fa-calendar",
+    source: "https://support.google.com/calendar/answer/37034",
     categories: [
       {
-        name: 'Events',
+        name: "Navigation",
         shortcuts: [
-          { keys: 'C', desc: 'Create event', usage: 'Create a new event.' },
-          { keys: 'E', desc: 'Edit event', usage: 'Edit selected event.' },
-          { keys: 'Delete', desc: 'Delete event', usage: 'Delete selected event.' },
-          { keys: 'D', desc: 'Day view', usage: 'Switch to day view.' },
-          { keys: 'W', desc: 'Week view', usage: 'Switch to week view.' },
-          { keys: 'M', desc: 'Month view', usage: 'Switch to month view.' },
-          { keys: '/', desc: 'Search', usage: 'Search events.' },
-          { keys: 'T', desc: 'Today', usage: 'Jump to today.' },
+          { keys: "N", desc: "Next Date Range", usage: "Move to the next day, week, or month depending on your view; J does the same." },
+          { keys: "P", desc: "Previous Date Range", usage: "Move to the previous day, week, or month; K does the same." },
+          { keys: "T", desc: "Today", usage: "Jump back to the current day." },
+          { keys: "G", desc: "Go to Date", usage: "Type a date and jump straight to it." },
+          { keys: "R", desc: "Refresh", usage: "Refresh the calendar to show the latest synced events." },
+          { keys: "/", desc: "Search", usage: "Put the cursor in the search box." },
+          { keys: "+", desc: "Add Calendar", usage: "Move to the add-a-calendar section." },
+          { keys: "S", desc: "Settings", usage: "Open the Settings page." },
+        ]
+      },
+      {
+        name: "Views",
+        shortcuts: [
+          { keys: "D", desc: "Day View", usage: "Switch to day view; pressing 1 does the same." },
+          { keys: "W", desc: "Week View", usage: "Switch to week view; pressing 2 does the same." },
+          { keys: "M", desc: "Month View", usage: "Switch to month view; pressing 3 does the same." },
+          { keys: "X", desc: "Custom View", usage: "Switch to your custom view (set in settings); pressing 4 does the same." },
+          { keys: "A", desc: "Agenda View", usage: "Switch to the agenda (schedule) view; pressing 5 does the same." },
+        ]
+      },
+      {
+        name: "Events",
+        shortcuts: [
+          { keys: "C", desc: "Create Event", usage: "Create a new event." },
+          { keys: "E", desc: "Event Details", usage: "Open the details of the selected event." },
+          { keys: "Backspace", desc: "Delete Event", usage: "Delete the selected event; Delete does the same." },
+          { keys: "Z", desc: "Undo", usage: "Undo the last action, such as a deletion." },
+          { keys: "Ctrl + S", desc: "Save Event", usage: "Save from the event details page. macOS: Cmd + S." },
+          { keys: "Esc", desc: "Back to Calendar", usage: "Return to the calendar grid from an event details page." },
+        ]
+      },
+      {
+        name: "Side Panel",
+        shortcuts: [
+          { keys: "Ctrl + Alt + .", desc: "Next Side Panel App", usage: "Move to the Keep/Tasks side panel. macOS: Cmd + Option + . — Chromebook: Alt + Shift + ." },
+          { keys: "Ctrl + Alt + ,", desc: "Previous Side Panel App", usage: "Cycle the side panel in the other direction. macOS: Cmd + Option + , — Chromebook: Alt + Shift + ,." },
         ]
       },
     ]
@@ -6051,18 +6163,107 @@ const shortcutData = {
     ]
   },
   evernote: {
-    name: 'Evernote',
-    icon: 'fas fa-sticky-note',
+    name: "Evernote",
+    icon: "fas fa-sticky-note",
+    source: "https://help.evernote.com/hc/en-us/articles/34296687388307-Keyboard-shortcuts",
     categories: [
       {
-        name: 'Editing',
+        name: "Global (System-Wide)",
         shortcuts: [
-          { keys: 'Ctrl + N', desc: 'New note', usage: 'Create a new note.' },
-          { keys: 'Ctrl + Shift + N', desc: 'New notebook', usage: 'Create a new notebook.' },
-          { keys: 'Ctrl + F', desc: 'Search', usage: 'Search within notes.' },
-          { keys: 'Ctrl + Shift + J', desc: 'Add task', usage: 'Add a task.' },
-          { keys: 'Ctrl + B', desc: 'Bold', usage: 'Bold text.' },
-          { keys: 'Ctrl + K', desc: 'Insert link', usage: 'Insert a hyperlink.' },
+          { keys: "Ctrl + Alt + N", desc: "New Note Window", usage: "Open a new note window from any application while Evernote runs." },
+          { keys: "Ctrl + Alt + V", desc: "Paste to Evernote", usage: "Turn the clipboard contents into a new note from any app." },
+          { keys: "Win + Shift + F", desc: "Search in Evernote", usage: "Search Evernote from anywhere in Windows." },
+          { keys: "Ctrl + Alt + H", desc: "Open Evernote Helper", usage: "Open the quick-note helper." },
+          { keys: "Ctrl + Alt + S", desc: "Capture Screen", usage: "Take a screenshot straight into Evernote." },
+        ]
+      },
+      {
+        name: "Create & App",
+        shortcuts: [
+          { keys: "Ctrl + N", desc: "New Note", usage: "Create a new note." },
+          { keys: "Alt + Shift + N", desc: "New Notebook", usage: "Create a new notebook." },
+          { keys: "Alt + T", desc: "New Task", usage: "Create a new task." },
+          { keys: "Ctrl + Shift + T", desc: "New Tag", usage: "Create a new tag." },
+          { keys: "Ctrl + E", desc: "New Event", usage: "Create a new calendar event." },
+          { keys: "Ctrl + Shift + N", desc: "Scratch Pad to Note", usage: "Convert the home-screen Scratch Pad into a note." },
+          { keys: "Ctrl + Shift + F", desc: "AI-Powered Search", usage: "Run Evernote's AI-powered search (Alt + Shift + Ctrl + F in some versions)." },
+          { keys: "Ctrl + /", desc: "Keyboard Shortcuts", usage: "Open the shortcut drawer to view, edit, or disable shortcuts." },
+          { keys: "Ctrl + ,", desc: "Settings", usage: "Open Evernote settings." },
+          { keys: "Ctrl + W", desc: "Close Window", usage: "Close the current Evernote window." },
+        ]
+      },
+      {
+        name: "Navigation",
+        shortcuts: [
+          { keys: "Ctrl + Q", desc: "Quick Switch", usage: "Open the switcher to jump to any note, notebook, or tag." },
+          { keys: "Ctrl + 1", desc: "Open Shortcut 1", usage: "Open your first saved shortcut; Ctrl + 1 through Ctrl + 9 open shortcuts 1–9." },
+          { keys: "Ctrl + Alt + 1", desc: "Open Home", usage: "Jump to the Home screen." },
+          { keys: "Ctrl + Alt + 2", desc: "Open Notes", usage: "Jump to the Notes list." },
+          { keys: "Ctrl + Alt + 3", desc: "Open Tasks", usage: "Jump to Tasks." },
+          { keys: "Ctrl + Alt + 6", desc: "Open Notebooks", usage: "Jump to the Notebooks list." },
+          { keys: "Ctrl + Alt + 7", desc: "Open Tags", usage: "Jump to the Tags list." },
+          { keys: "Alt + Left", desc: "Move Back", usage: "Go back to the previous view." },
+          { keys: "Alt + Right", desc: "Move Forward", usage: "Go forward again." },
+          { keys: "F5", desc: "Switch Note List View", usage: "Cycle the note list layout; Ctrl + F5–F8 pick snippet, card, top, or side list views." },
+        ]
+      },
+      {
+        name: "View",
+        shortcuts: [
+          { keys: "Ctrl + =", desc: "Zoom In", usage: "Make the note text larger." },
+          { keys: "Ctrl + -", desc: "Zoom Out", usage: "Make the note text smaller." },
+          { keys: "Ctrl + 0", desc: "Zoom to 100%", usage: "Reset the zoom level." },
+          { keys: "F10", desc: "Toggle Sidebar", usage: "Expand or collapse the sidebar." },
+          { keys: "F11", desc: "Full Screen", usage: "Toggle full-screen mode." },
+        ]
+      },
+      {
+        name: "Note Actions",
+        shortcuts: [
+          { keys: "Alt + O", desc: "Open in New Window", usage: "Open the current note in its own window." },
+          { keys: "Alt + S", desc: "Share", usage: "Open the sharing options for the note." },
+          { keys: "Shift + Alt + E", desc: "Email a Copy", usage: "Email a copy of the note." },
+          { keys: "Alt + Shift + M", desc: "Move Note", usage: "Move the note to another notebook." },
+          { keys: "F3", desc: "Add Tag", usage: "Add a tag to the current note." },
+          { keys: "Ctrl + Alt + T", desc: "Edit Tags", usage: "Open the tag editor for the note." },
+          { keys: "Ctrl + Alt + L", desc: "Copy Note Link", usage: "Copy a shareable link to the note." },
+          { keys: "Ctrl + Shift + I", desc: "Note Info", usage: "Show the note's details and history." },
+          { keys: "Ctrl + P", desc: "Print", usage: "Print the current note." },
+          { keys: "F2", desc: "Rename", usage: "Rename the selected note or notebook." },
+        ]
+      },
+      {
+        name: "Editing",
+        shortcuts: [
+          { keys: "Ctrl + Z", desc: "Undo", usage: "Undo the last edit." },
+          { keys: "Ctrl + Y", desc: "Redo", usage: "Redo the last undone edit." },
+          { keys: "Ctrl + Shift + V", desc: "Paste and Match Style", usage: "Paste text using the note's formatting." },
+          { keys: "Ctrl + F", desc: "Find Within Note", usage: "Search inside the current note." },
+          { keys: "Ctrl + H", desc: "Find and Replace", usage: "Find and replace text inside the note." },
+          { keys: "Ctrl + K", desc: "Add / Edit Link", usage: "Turn the selection into a hyperlink." },
+          { keys: "Ctrl + Alt + K", desc: "Add Note Link", usage: "Link the selection to another note." },
+          { keys: "Ctrl + Shift + -", desc: "Insert Divider", usage: "Insert a horizontal divider line." },
+          { keys: "Ctrl + Shift + L", desc: "Insert Code Block", usage: "Insert a code block." },
+          { keys: "Alt + Shift + D", desc: "Insert Date", usage: "Insert today's date; Ctrl + Shift + D inserts the time." },
+        ]
+      },
+      {
+        name: "Formatting",
+        shortcuts: [
+          { keys: "Ctrl + B", desc: "Bold", usage: "Make the selected text bold." },
+          { keys: "Ctrl + I", desc: "Italic", usage: "Make the selected text italic." },
+          { keys: "Ctrl + U", desc: "Underline", usage: "Underline the selected text." },
+          { keys: "Ctrl + T", desc: "Strikethrough", usage: "Strike through the selected text." },
+          { keys: "Ctrl + Shift + H", desc: "Highlight", usage: "Highlight the selected text." },
+          { keys: "Ctrl + Shift + B", desc: "Bulleted List", usage: "Turn the selection into a bulleted list." },
+          { keys: "Ctrl + Shift + O", desc: "Numbered List", usage: "Turn the selection into a numbered list." },
+          { keys: "Ctrl + Shift + C", desc: "Checklist", usage: "Turn the selection into a checklist." },
+          { keys: "Ctrl + M", desc: "Indent", usage: "Indent the current line or list item; Tab also works." },
+          { keys: "Ctrl + Shift + M", desc: "Outdent", usage: "Outdent the current line; Shift + Tab also works." },
+          { keys: "Ctrl + Shift + >", desc: "Increase Font Size", usage: "Make the selected text one size larger." },
+          { keys: "Ctrl + Shift + <", desc: "Decrease Font Size", usage: "Make the selected text one size smaller." },
+          { keys: "Ctrl + Space", desc: "Simplify Formatting", usage: "Strip complex formatting from the selection." },
+          { keys: "Ctrl + Shift + X", desc: "Encrypt Text", usage: "Encrypt the selected text with a passphrase." },
         ]
       },
     ]
