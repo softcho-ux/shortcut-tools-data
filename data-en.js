@@ -6432,19 +6432,97 @@ const shortcutData = {
     ]
   },
   screen: {
-    name: 'GNU Screen',
-    icon: 'fas fa-terminal',
+    name: "GNU Screen",
+    icon: "fas fa-terminal",
+    source: "https://www.gnu.org/software/screen/manual/html_node/Default-Key-Bindings.html",
     categories: [
       {
-        name: 'Session Management',
+        name: "Sessions",
         shortcuts: [
-          { keys: 'Ctrl + A, C', desc: 'New window', usage: 'Create a new window.' },
-          { keys: 'Ctrl + A, N', desc: 'Next window', usage: 'Go to next window.' },
-          { keys: 'Ctrl + A, P', desc: 'Previous window', usage: 'Go to previous window.' },
-          { keys: 'Ctrl + A, D', desc: 'Detach session', usage: 'Detach from session.' },
-          { keys: 'Ctrl + A, K', desc: 'Kill window', usage: 'Kill the current window.' },
-          { keys: 'Ctrl + A, |', desc: 'Vertical split', usage: 'Split vertically.' },
-          { keys: 'Ctrl + A, S', desc: 'Horizontal split', usage: 'Split horizontally.' },
+          { keys: "Ctrl + A, d", desc: "Detach", usage: "Detach screen from this terminal, leaving the programs running." },
+          { keys: "Ctrl + A, D, D", desc: "Detach and Logout", usage: "Detach the session and log out of the terminal." },
+          { keys: "Ctrl + A, z", desc: "Suspend", usage: "Suspend screen and return to the shell that started it." },
+          { keys: "Ctrl + A, x", desc: "Lock Terminal", usage: "Lock the terminal until you enter your password." },
+          { keys: "Ctrl + A, Ctrl + \\", desc: "Quit Screen", usage: "Kill every window and terminate screen." },
+          { keys: "Ctrl + A, :", desc: "Command Line", usage: "Enter a screen command line to run any command by name." },
+          { keys: "Ctrl + A, ?", desc: "Show Key Bindings", usage: "Display the help screen listing every binding." },
+        ]
+      },
+      {
+        name: "Windows",
+        shortcuts: [
+          { keys: "Ctrl + A, c", desc: "New Window", usage: "Create a new window running a shell and switch to it." },
+          { keys: "Ctrl + A, n", desc: "Next Window", usage: "Switch to the next window; Space does the same." },
+          { keys: "Ctrl + A, p", desc: "Previous Window", usage: "Switch to the previous window; Backspace does the same." },
+          { keys: "Ctrl + A, Ctrl + A", desc: "Toggle Previous Window", usage: "Switch back to the window you were on before this one." },
+          { keys: "Ctrl + A, 0", desc: "Select Window by Number", usage: "Ctrl + A followed by 0 through 9 switches to that window; - selects the blank window." },
+          { keys: "Ctrl + A, '", desc: "Select Window by Name", usage: "Prompt for a window name or number and switch to it." },
+          { keys: "Ctrl + A, \"", desc: "Window List", usage: "Show a list of all windows and pick one." },
+          { keys: "Ctrl + A, w", desc: "Show Window List", usage: "Print the list of active windows in the message line." },
+          { keys: "Ctrl + A, A", desc: "Rename Window", usage: "Enter a title for the current window." },
+          { keys: "Ctrl + A, k", desc: "Kill Window", usage: "Destroy the current window." },
+          { keys: "Ctrl + A, N", desc: "Show Window Number", usage: "Show the number and title of the current window." },
+          { keys: "Ctrl + A, M", desc: "Toggle Monitoring", usage: "Watch the window for activity and notify you." },
+          { keys: "Ctrl + A, _", desc: "Monitor for Silence", usage: "Start or stop watching the window for inactivity." },
+        ]
+      },
+      {
+        name: "Split Regions",
+        shortcuts: [
+          { keys: "Ctrl + A, S", desc: "Split Horizontally", usage: "Split the current region into two." },
+          { keys: "Ctrl + A, Tab", desc: "Next Region", usage: "Move the input focus to the next region." },
+          { keys: "Ctrl + A, Q", desc: "Only This Region", usage: "Remove every region except the current one." },
+          { keys: "Ctrl + A, X", desc: "Kill Region", usage: "Close the current region." },
+          { keys: "Ctrl + A, F", desc: "Fit Window to Region", usage: "Resize the window to the current region size." },
+        ]
+      },
+      {
+        name: "Copy & Paste",
+        shortcuts: [
+          { keys: "Ctrl + A, [", desc: "Copy Mode", usage: "Enter copy and scrollback mode; Escape does the same." },
+          { keys: "Ctrl + A, ]", desc: "Paste", usage: "Write the paste buffer into the current window." },
+          { keys: "Ctrl + A, {", desc: "Copy Previous Line", usage: "Copy and paste a previous command line from the history." },
+          { keys: "Ctrl + A, >", desc: "Write Exchange File", usage: "Write the paste buffer out to the screen-exchange file." },
+          { keys: "Ctrl + A, <", desc: "Read Exchange File", usage: "Read the screen-exchange file into the paste buffer." },
+          { keys: "Ctrl + A, =", desc: "Delete Exchange File", usage: "Remove the screen-exchange file." },
+        ]
+      },
+      {
+        name: "Display",
+        shortcuts: [
+          { keys: "Ctrl + A, C", desc: "Clear Screen", usage: "Clear the current window's screen." },
+          { keys: "Ctrl + A, l", desc: "Refresh", usage: "Fully redraw the current window." },
+          { keys: "Ctrl + A, Z", desc: "Reset Terminal", usage: "Reset the virtual terminal to its power-on values." },
+          { keys: "Ctrl + A, W", desc: "Toggle Column Width", usage: "Switch the window between 80 and 132 columns." },
+          { keys: "Ctrl + A, r", desc: "Toggle Line Wrap", usage: "Turn the window's automatic margins on or off." },
+          { keys: "Ctrl + A, Ctrl + G", desc: "Toggle Visual Bell", usage: "Switch between an audible and a visual bell." },
+          { keys: "Ctrl + A, *", desc: "Show Attached Displays", usage: "List the displays currently attached to the session." },
+        ]
+      },
+      {
+        name: "Info & Logging",
+        shortcuts: [
+          { keys: "Ctrl + A, i", desc: "Window Info", usage: "Show information about the current window." },
+          { keys: "Ctrl + A, t", desc: "Show Time and Load", usage: "Display the time, load average, and window title." },
+          { keys: "Ctrl + A, m", desc: "Repeat Last Message", usage: "Show the last message again." },
+          { keys: "Ctrl + A, v", desc: "Show Version", usage: "Display the screen version and compilation date." },
+          { keys: "Ctrl + A, ,", desc: "Show Copyright", usage: "Display the copyright page." },
+          { keys: "Ctrl + A, h", desc: "Write Hardcopy", usage: "Dump the current window's contents to a hardcopy file." },
+          { keys: "Ctrl + A, H", desc: "Toggle Logging", usage: "Start or stop logging the window to a screenlog file." },
+          { keys: "Ctrl + A, .", desc: "Dump Termcap", usage: "Write a .termcap file for the current terminal." },
+        ]
+      },
+      {
+        name: "Terminal Control",
+        shortcuts: [
+          { keys: "Ctrl + A, a", desc: "Send Command Character", usage: "Send a literal Ctrl + A to the program in the window." },
+          { keys: "Ctrl + A, b", desc: "Send Break", usage: "Send a break signal to the tty." },
+          { keys: "Ctrl + A, B", desc: "Reopen TTY", usage: "Close and reopen the tty line." },
+          { keys: "Ctrl + A, f", desc: "Cycle Flow Control", usage: "Cycle flow control between on, off, and auto." },
+          { keys: "Ctrl + A, q", desc: "Send XON", usage: "Send a Ctrl + Q (XON) to the current window." },
+          { keys: "Ctrl + A, s", desc: "Send XOFF", usage: "Send a Ctrl + S (XOFF) to the current window." },
+          { keys: "Ctrl + A, L", desc: "Toggle Login State", usage: "Turn the window's utmp login entry on or off." },
+          { keys: "Ctrl + A, Ctrl + V", desc: "Enter Digraph", usage: "Insert a character by typing its digraph." },
         ]
       },
     ]
