@@ -7663,7 +7663,7 @@ const shortcutData = {
         { keys: 'Ctrl + F3', desc: 'Opens the Define Names dialog', usage: 'Opens the Define Names dialog.' },
         { keys: 'Ctrl + F2', desc: 'Opens the Function Wizard', usage: 'Opens the Function Wizard.' },
         { keys: 'Ctrl + Shift + F4', desc: 'Shows or Hides the Database explorer', usage: 'Shows or Hides the Database explorer.' },
-        { keys: 'F5', desc: 'Shows or hides the Navigator ', usage: 'Shows or hides the Navigator .' },
+        { keys: 'F5', desc: 'Shows or hides the Navigator', usage: 'Shows or hides the Navigator.' },
         { keys: 'Shift + F5', desc: 'Traces dependents', usage: 'Traces dependents.' },
         { keys: 'Shift + F9', desc: 'Traces precedents', usage: 'Traces precedents.' },
         { keys: 'F11', desc: 'Open Styles Window', usage: 'Opens the Styles window where you can apply a formatting style to the contents of the cell or to the current sheet.' },
