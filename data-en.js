@@ -3325,21 +3325,71 @@ const shortcutData = {
     ]
   },
   telegram: {
-    name: 'Telegram',
-    icon: 'fab fa-telegram',
+    name: "Telegram",
+    icon: "fab fa-telegram",
+    source: "https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts",
     categories: [
       {
-        name: 'Messages & Navigation',
+        name: "Chats",
         shortcuts: [
-          { keys: 'Ctrl + N', desc: 'New Message', usage: 'Compose a new message.' },
-          { keys: 'Ctrl + F', desc: 'Search in Chat', usage: 'Search messages in current chat.' },
-          { keys: 'Ctrl + K', desc: 'Quick Search', usage: 'Quickly search chats and contacts.' },
-          { keys: 'Enter', desc: 'Send Message', usage: 'Send the composed message.' },
-          { keys: 'Shift + Enter', desc: 'New Line', usage: 'Add new line without sending.' },
-          { keys: 'Up', desc: 'Edit Message', usage: 'Edit your last sent message.' },
-          { keys: 'Alt + Up/Down', desc: 'Switch Chat', usage: 'Move to previous/next chat.' },
-          { keys: 'Ctrl + Tab', desc: 'Next Folder', usage: 'Switch to next chat folder.' },
-          { keys: 'Esc', desc: 'Close', usage: 'Close current chat or popup.' },
+          { keys: "Ctrl + Tab", desc: "Next Chat", usage: "Move to the chat below in the list; Ctrl + PageDown and Alt + Down do the same." },
+          { keys: "Ctrl + Shift + Tab", desc: "Previous Chat", usage: "Move to the chat above; Ctrl + PageUp and Alt + Up do the same." },
+          { keys: "PageUp", desc: "Scroll Chat", usage: "Scroll up inside the open chat; PageDown and the arrow keys scroll too." },
+          { keys: "Ctrl + O", desc: "Send File", usage: "Open the file picker to send a file to the current chat." },
+          { keys: "Esc", desc: "Go Back / Cancel", usage: "Exit the chat or search, or cancel the current action." },
+        ]
+      },
+      {
+        name: "Folders & Jumping",
+        shortcuts: [
+          { keys: "Ctrl + Shift + Down", desc: "Next Folder", usage: "Move to the chat folder below." },
+          { keys: "Ctrl + Shift + Up", desc: "Previous Folder", usage: "Move to the chat folder above." },
+          { keys: "Ctrl + 1", desc: "Jump to Folder", usage: "Ctrl + 1 through Ctrl + 7 jump straight to that folder; with no folders they open pinned chats 1–5." },
+          { keys: "Ctrl + 8", desc: "Last Folder", usage: "Jump to the last chat folder." },
+          { keys: "Ctrl + 0", desc: "Saved Messages", usage: "Open your Saved Messages chat." },
+          { keys: "Ctrl + 9", desc: "Archived Chats", usage: "Open the archived chats list." },
+          { keys: "Alt + Enter", desc: "Jump to Bottom", usage: "Jump to the bottom of the chat, or scroll the chat list back to the top." },
+        ]
+      },
+      {
+        name: "Messages",
+        shortcuts: [
+          { keys: "Ctrl + Up", desc: "Reply to Message", usage: "Pick the message above to reply to; press again to move higher." },
+          { keys: "Ctrl + Down", desc: "Reply Below / Cancel", usage: "Move the reply selection down; at the bottom it cancels the reply (Esc also cancels)." },
+          { keys: "Up", desc: "Edit Last Message", usage: "Edit the last message you sent." },
+          { keys: "Delete", desc: "Delete Message", usage: "Delete the currently selected message." },
+          { keys: "Ctrl + +", desc: "Zoom Media In", usage: "Zoom into the opened image or video (numpad plus)." },
+          { keys: "Ctrl + -", desc: "Zoom Media Out", usage: "Zoom out of the opened image or video (numpad minus)." },
+        ]
+      },
+      {
+        name: "Search",
+        shortcuts: [
+          { keys: "Ctrl + F", desc: "Search in Chat", usage: "Search the currently selected chat." },
+          { keys: "Ctrl + J", desc: "Search Contact", usage: "Search your contacts." },
+        ]
+      },
+      {
+        name: "Window",
+        shortcuts: [
+          { keys: "Ctrl + W", desc: "Minimize to Tray", usage: "Hide Telegram to the system tray; Alt + F4 does the same." },
+          { keys: "Ctrl + M", desc: "Minimize Window", usage: "Minimize the Telegram window." },
+          { keys: "Ctrl + L", desc: "Lock Telegram", usage: "Lock the app with your local passcode." },
+          { keys: "Ctrl + Q", desc: "Quit Telegram", usage: "Quit the application." },
+        ]
+      },
+      {
+        name: "Text Formatting",
+        shortcuts: [
+          { keys: "Ctrl + B", desc: "Bold", usage: "Make the selected text bold. macOS: Cmd + B." },
+          { keys: "Ctrl + I", desc: "Italic", usage: "Make the selected text italic. macOS: Cmd + I." },
+          { keys: "Ctrl + U", desc: "Underline", usage: "Underline the selected text." },
+          { keys: "Ctrl + Shift + X", desc: "Strikethrough", usage: "Strike through the selected text." },
+          { keys: "Ctrl + K", desc: "Create Link", usage: "Turn the selected text into a link." },
+          { keys: "Ctrl + Shift + M", desc: "Monospace", usage: "Format the selection as monospace code." },
+          { keys: "Ctrl + Shift + P", desc: "Spoiler", usage: "Hide the selection behind a spoiler." },
+          { keys: "Ctrl + Shift + .", desc: "Quote", usage: "Format the selection as a quote block." },
+          { keys: "Ctrl + Shift + N", desc: "Plain Text", usage: "Remove all formatting from the selection." },
         ]
       },
     ]
