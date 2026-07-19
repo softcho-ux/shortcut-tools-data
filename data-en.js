@@ -4613,25 +4613,76 @@ runway: {
       },
     ]
   },
-  retool: {
-    name: 'Retool',
-    icon: 'fas fa-th-large',
-    categories: [
-      {
-        name: 'Editor',
-        shortcuts: [
-          { keys: 'Ctrl + S', desc: 'Save', usage: 'Save the current app.' },
-          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo the last action.' },
-          { keys: 'Ctrl + D', desc: 'Duplicate', usage: 'Duplicate the selected component.' },
-          { keys: 'Ctrl + E', desc: 'Preview', usage: 'Switch to app preview mode.' },
-          { keys: 'Ctrl + B', desc: 'Edit mode', usage: 'Return to edit mode.' },
-          { keys: 'Ctrl + K', desc: 'Search', usage: 'Search components and queries.' },
-          { keys: 'Delete', desc: 'Delete', usage: 'Delete the selected component.' },
-          { keys: 'Ctrl + Enter', desc: 'Run query', usage: 'Execute the current query.' },
-        ]
-      },
-    ]
-  },
+retool: {
+      name: 'Retool',
+      icon: 'fas fa-th-large',
+      source: 'https://docs.retool.com/apps/reference/keyboard-shortcuts',
+      kind: 'shortcuts',
+      categories: [
+        {
+          name: 'Global',
+          shortcuts: [
+            { keys: 'Ctrl + K', desc: 'Command Palette', usage: 'Command Palette.' },
+          ]
+        },
+        {
+          name: 'Components',
+          shortcuts: [
+            { keys: 'Escape', desc: 'Cancel Drag Or Resize', usage: 'Cancel Drag Or Resize.' },
+            { keys: 'Ctrl + C', desc: 'Copy', usage: 'Copy.' },
+            { keys: 'Ctrl + X', desc: 'Cut', usage: 'Cut.' },
+            { keys: 'Delete', desc: 'Delete', usage: 'Delete.' },
+            { keys: 'Ctrl + D', desc: 'Duplicate', usage: 'Duplicate.' },
+            { keys: 'Cursor keys', desc: 'Move', usage: 'Move.' },
+            { keys: 'Ctrl + V', desc: 'Paste', usage: 'Paste.' },
+            { keys: 'Ctrl + Cursor key', desc: 'Resize', usage: 'Resize.' },
+            { keys: 'Alt + Shift + Ctrl + R', desc: 'Resize Fixed Containers To Fit', usage: 'Resize Fixed Containers To Fit.' },
+            { keys: 'Ctrl + A', desc: 'Select All', usage: 'Select All.' },
+            { keys: 'Ctrl + Click', desc: 'Select Multiple', usage: 'Select Multiple.' },
+            { keys: 'Ctrl + /', desc: 'Toggle Hidden Components', usage: 'Toggle Hidden Components.' },
+          ]
+        },
+        {
+          name: 'General',
+          shortcuts: [
+            { keys: 'Shift + Ctrl + K', desc: 'Inspector Search', usage: 'Inspector Search.' },
+            { keys: 'Shift + /', desc: 'Keyboard Shortcuts', usage: 'Keyboard Shortcuts.' },
+            { keys: 'Ctrl + P', desc: 'Pin Sidebar', usage: 'Pin Sidebar.' },
+            { keys: 'Shift + Ctrl + Z', desc: 'Redo', usage: 'Redo.' },
+            { keys: 'Ctrl + S', desc: 'Save', usage: 'Save.' },
+            { keys: 'Shift + Ctrl + A', desc: 'Toggle Add Components', usage: 'Toggle Add Components.' },
+            { keys: 'Ctrl + .', desc: 'Toggle All Panels', usage: 'Toggle All Panels.' },
+            { keys: 'Shift + Ctrl + E', desc: 'Toggle Code', usage: 'Toggle Code.' },
+            { keys: 'Shift + Ctrl + F', desc: 'Toggle Code Search', usage: 'Toggle Code Search.' },
+            { keys: 'Shift + Ctrl + D', desc: 'Toggle Component Tree', usage: 'Toggle Component Tree.' },
+            { keys: 'Ctrl + U', desc: 'Toggle Inspector', usage: 'Toggle Inspector.' },
+            { keys: 'Alt + Ctrl + Enter', desc: 'Toggle Preview Mode', usage: 'Toggle Preview Mode.' },
+            { keys: 'Ctrl + B', desc: 'Toggle Sidebar', usage: 'Toggle Sidebar.' },
+            { keys: 'Shift + Ctrl + P', desc: 'Toggle User Mode', usage: 'Toggle User Mode.' },
+            { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo.' },
+            { keys: 'Ctrl + I', desc: 'Toggle Assist', usage: 'Toggle Assist.' },
+            { keys: 'Ctrl + Shift + I', desc: 'Ask Mode', usage: 'Ask Mode.' },
+            { keys: 'Ctrl + Shift + B', desc: 'Build Mode', usage: 'Build Mode.' },
+          ]
+        },
+        {
+          name: 'Canvas',
+          shortcuts: [
+            { keys: 'Space + Drag', desc: 'Pan Canvas', usage: 'Pan Canvas.' },
+            { keys: 'Shift + Ctrl + G', desc: 'Toggle Grid', usage: 'Toggle Grid.' },
+            { keys: 'Ctrl + +', desc: 'Zoom', usage: 'Zoom In.' },
+            { keys: 'Ctrl + -', desc: 'Zoom Out', usage: 'Zoom Out.' },
+          ]
+        },
+        {
+          name: 'Additional Shortcuts',
+          shortcuts: [
+            { keys: 'Ctrl + E', desc: 'Preview', usage: 'Switch to app preview mode.' },
+            { keys: 'Ctrl + Enter', desc: 'Run query', usage: 'Execute the current query.' },
+          ]
+        },
+      ]
+    },
   airtable: {
     name: 'Airtable',
     icon: 'fas fa-table',
@@ -12098,25 +12149,51 @@ azure_cli: {
       ] }
     ]
   },
-  cron: {
-    name: 'Cron / Crontab',
-    icon: 'fas fa-clock',
-    categories: [
-      {
-        name: 'Syntax',
-        shortcuts: [
-          { keys: '* * * * *', desc: 'min hr day mon dow', usage: 'Cron expression format.' },
-          { keys: '0 9 * * *', desc: 'Daily 9AM', usage: 'Run daily at 9 AM.' },
-          { keys: '*/5 * * * *', desc: 'Every 5 min', usage: 'Run every 5 minutes.' },
-          { keys: '0 0 * * 0', desc: 'Every Sunday', usage: 'Run every Sunday at midnight.' },
-          { keys: '0 0 1 * *', desc: 'Monthly 1st', usage: 'Run 1st of every month.' },
-          { keys: 'crontab -e', desc: 'Edit', usage: 'Edit the crontab.' },
-          { keys: 'crontab -l', desc: 'List', usage: 'List current cron jobs.' },
-          { keys: 'crontab -r', desc: 'Remove', usage: 'Remove the crontab.' },
-        ]
-      },
-    ]
-  },
+cron: {
+      name: 'Cron / Crontab',
+      icon: 'fas fa-clock',
+      source: 'https://man7.org/linux/man-pages/man1/crontab.1.html',
+      kind: 'commands',
+      categories: [
+        {
+          name: 'Command Options',
+          shortcuts: [
+            { keys: 'crontab -u', desc: 'Specifies the name of the user whose crontab is to be modified. If this option is not used', usage: 'Specifies the name of the user whose crontab is to be modified. If this option is not used.' },
+            { keys: 'crontab -T', desc: 'Test the crontab file syntax without installing it. Once an issue is found, the validation', usage: 'Test the crontab file syntax without installing it. Once an issue is found, the validation.' },
+            { keys: 'crontab -l', desc: 'Displays the current crontab on standard output', usage: 'Displays the current crontab on standard output.' },
+            { keys: 'crontab -r', desc: 'Removes the current crontab', usage: 'Removes the current crontab.' },
+            { keys: 'crontab -e', desc: 'Edits the current crontab using the editor specified by the VISUAL or EDITOR environment', usage: 'Edits the current crontab using the editor specified by the VISUAL or EDITOR environment.' },
+            { keys: 'crontab -i', desc: 'This option modifies the -r option to prompt the user for a \'y/Y\' response before actually', usage: 'This option modifies the -r option to prompt the user for a \'y/Y\' response before actually.' },
+            { keys: 'crontab -s', desc: 'Appends the current SELinux security context string as an MLS_LEVEL setting to the crontab file', usage: 'Appends the current SELinux security context string as an MLS_LEVEL setting to the crontab file.' },
+            { keys: 'crontab -n', desc: 'This option is relevant only if cron(8) was started with the -c option, to enable clustering', usage: 'This option is relevant only if cron(8) was started with the -c option, to enable clustering.' },
+            { keys: 'crontab -c', desc: 'This option is only relevant if cron(8) was started with the -c option, to enable clustering', usage: 'This option is only relevant if cron(8) was started with the -c option, to enable clustering.' },
+            { keys: 'crontab -V', desc: 'Print version and exit', usage: 'Print version and exit.' },
+          ]
+        },
+        {
+          name: 'Special Strings',
+          shortcuts: [
+            { keys: '@reboot', desc: 'Run once after reboot', usage: 'Run once after reboot.' },
+            { keys: '@yearly', desc: 'Run once a year, ie. "0 0 1 1 *"', usage: 'Run once a year, ie. "0 0 1 1 *".' },
+            { keys: '@annually', desc: 'Run once a year, ie. "0 0 1 1 *"', usage: 'Run once a year, ie. "0 0 1 1 *".' },
+            { keys: '@monthly', desc: 'Run once a month, ie. "0 0 1 * *"', usage: 'Run once a month, ie. "0 0 1 * *".' },
+            { keys: '@weekly', desc: 'Run once a week, ie. "0 0 * * 0"', usage: 'Run once a week, ie. "0 0 * * 0".' },
+            { keys: '@daily', desc: 'Run once a day, ie. "0 0 * * *"', usage: 'Run once a day, ie. "0 0 * * *".' },
+            { keys: '@hourly', desc: 'Run once an hour, ie. "0 * * * *"', usage: 'Run once an hour, ie. "0 * * * *".' },
+          ]
+        },
+        {
+          name: 'Additional Shortcuts',
+          shortcuts: [
+            { keys: '* * * * *', desc: 'min hr day mon dow', usage: 'Cron expression format.' },
+            { keys: '0 9 * * *', desc: 'Daily 9AM', usage: 'Run daily at 9 AM.' },
+            { keys: '*/5 * * * *', desc: 'Every 5 min', usage: 'Run every 5 minutes.' },
+            { keys: '0 0 * * 0', desc: 'Every Sunday', usage: 'Run every Sunday at midnight.' },
+            { keys: '0 0 1 * *', desc: 'Monthly 1st', usage: 'Run 1st of every month.' },
+          ]
+        },
+      ]
+    },
   wget: {
     name: 'wget',
     icon: 'fas fa-download',
