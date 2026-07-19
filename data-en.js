@@ -7860,24 +7860,97 @@ monday: {
       ] }
     ]
   },
-  procreate: {
-    name: 'Procreate',
-    icon: 'fas fa-paint-brush',
-    categories: [
-      {
-        name: 'Tools & Gestures',
-        shortcuts: [
-          { keys: 'E', desc: 'Eraser', usage: 'Activate eraser tool.' },
-          { keys: 'B', desc: 'Brush', usage: 'Activate brush tool.' },
-          { keys: 'S', desc: 'Smudge', usage: 'Activate smudge tool.' },
-          { keys: 'Two-finger tap', desc: 'Undo', usage: 'Two-finger tap to undo.' },
-          { keys: 'Three-finger tap', desc: 'Redo', usage: 'Three-finger tap to redo.' },
-          { keys: 'Four-finger tap', desc: 'Fullscreen', usage: 'Four-finger tap to toggle fullscreen.' },
-          { keys: 'Two-finger pinch', desc: 'Zoom', usage: 'Pinch to zoom canvas.' },
-        ]
-      },
-    ]
-  },
+procreate: {
+      name: 'Procreate',
+      icon: 'fas fa-paint-brush',
+      source: 'https://help.procreate.com/procreate/handbook/interface-gestures/keyboard',
+      kind: 'shortcuts',
+      categories: [
+        {
+          name: 'Procreate Tab',
+          shortcuts: [
+            { keys: 'Cmd + ,', desc: 'Open Procreate Settings', usage: 'Open Procreate Settings.' },
+            { keys: 'Cmd + H', desc: 'Hide Procreate', usage: 'Hide Procreate.' },
+            { keys: 'Alt + Cmd + H', desc: 'Hide other apps', usage: 'Hide other apps.' },
+            { keys: 'Cmd + K', desc: 'Open the Actions Menu', usage: 'Open the Actions Menu.' },
+          ]
+        },
+        {
+          name: 'File Tab',
+          shortcuts: [
+            { keys: 'Cmd + O', desc: 'Open', usage: 'Open.' },
+          ]
+        },
+        {
+          name: 'Edit Tab',
+          shortcuts: [
+            { keys: 'Cmd + Z', desc: 'Undo your previous action', usage: 'Undo your previous action.' },
+            { keys: 'Cmd + Shift + Z', desc: 'Redo your previously undone action', usage: 'Redo your previously undone action.' },
+            { keys: 'Cmd + X', desc: 'Cut the layer or selection to the clipboard', usage: 'Cut the layer or selection to the clipboard.' },
+            { keys: 'Cmd + C', desc: 'Copy the layer or selection to the clipboard', usage: 'Copy the layer or selection to the clipboard.' },
+            { keys: 'Cmd + V', desc: 'Paste the clipboard content into your canvas', usage: 'Paste the clipboard content into your canvas.' },
+            { keys: 'Cmd + A', desc: 'Copy all visible selected content to the clipboard', usage: 'Copy all visible selected content to the clipboard.' },
+            { keys: 'Cmd + J', desc: 'Duplicate the layer or selection to a layer above', usage: 'Duplicate the layer or selection to a layer above.' },
+            { keys: 'Cmd + D', desc: 'Clear the selection', usage: 'Clear the selection.' },
+            { keys: 'Cmd + Backspace', desc: 'Erase all content from the layer or selected area', usage: 'Erase all content from the layer or selected area.' },
+            { keys: 'X', desc: 'Switch between your current and previous color', usage: 'Switch between your current and previous color.' },
+          ]
+        },
+        {
+          name: 'Tools Tab',
+          shortcuts: [
+            { keys: 'B', desc: 'Switch to the paint tool, or open Brushes if already active', usage: 'Switch to the paint tool, or open Brushes if already active.' },
+            { keys: 'E', desc: 'Switch to the erase tool, or open Brushes if already active', usage: 'Switch to the erase tool, or open Brushes if already active.' },
+            { keys: '[', desc: 'Decrease brush size by 5 percent', usage: 'Decrease brush size by 5 percent.' },
+            { keys: ']', desc: 'Increase brush size by 5 percent', usage: 'Increase brush size by 5 percent.' },
+            { keys: 'Cmd + [', desc: 'Decrease brush size by 1 percent', usage: 'Decrease brush size by 1 percent.' },
+            { keys: 'Cmd + ]', desc: 'Increase brush size by 1 percent', usage: 'Increase brush size by 1 percent.' },
+            { keys: 'Shift + [', desc: 'Decrease brush size by 10 percent', usage: 'Decrease brush size by 10 percent.' },
+            { keys: 'Shift + ]', desc: 'Increase brush size by 10 percent', usage: 'Increase brush size by 10 percent.' },
+            { keys: 'Cmd + U', desc: 'Open the Hue, Saturation and Brightness adjustment', usage: 'Open the Hue, Saturation and Brightness adjustment.' },
+            { keys: 'Cmd + B', desc: 'Open the Color Balance adjustment', usage: 'Open the Color Balance adjustment.' },
+            { keys: 'S', desc: 'Enter the Selections tool', usage: 'Enter the Selections tool.' },
+            { keys: 'V', desc: 'Enter the Transform tool', usage: 'Enter the Transform tool.' },
+          ]
+        },
+        {
+          name: 'Transform',
+          shortcuts: [
+            { keys: 'Up', desc: 'Nudge content upwards by one pixel', usage: 'Nudge content upwards by one pixel.' },
+            { keys: 'Down', desc: 'Nudge content downwards by one pixel', usage: 'Nudge content downwards by one pixel.' },
+            { keys: 'Left', desc: 'Nudge content leftwards by one pixel', usage: 'Nudge content leftwards by one pixel.' },
+            { keys: 'Right', desc: 'Nudge content rightwards by one pixel', usage: 'Nudge content rightwards by one pixel.' },
+            { keys: 'L', desc: 'Open Layers', usage: 'Open Layers.' },
+            { keys: 'C', desc: 'Open Colors', usage: 'Open Colors.' },
+            { keys: 'M', desc: 'Activate the Modify button on iPadOS 17 and below', usage: 'Activate the Modify button on iPadOS 17 and below.' },
+            { keys: 'Space', desc: 'Invoke the QuickMenu', usage: 'Invoke the QuickMenu.' },
+          ]
+        },
+        {
+          name: 'View Tab',
+          shortcuts: [
+            { keys: 'Cmd + 0', desc: 'Toggle fullscreen within the Procreate interface', usage: 'Toggle fullscreen within the Procreate interface.' },
+            { keys: 'Cmd + ;', desc: 'Toggle Perspective Guide visibility', usage: 'Toggle Perspective Guide visibility.' },
+          ]
+        },
+        {
+          name: 'Window Tab',
+          shortcuts: [
+            { keys: 'Cmd + W', desc: 'Close Procreate fully', usage: 'Close Procreate fully.' },
+            { keys: 'Cmd + M', desc: 'Minimise Procreate', usage: 'Minimise Procreate.' },
+          ]
+        },
+        {
+          name: 'Additional Shortcuts',
+          shortcuts: [
+            { keys: 'Two-finger tap', desc: 'Undo', usage: 'Two-finger tap to undo.' },
+            { keys: 'Three-finger tap', desc: 'Redo', usage: 'Three-finger tap to redo.' },
+            { keys: 'Four-finger tap', desc: 'Fullscreen', usage: 'Four-finger tap to toggle fullscreen.' },
+            { keys: 'Two-finger pinch', desc: 'Zoom', usage: 'Pinch to zoom canvas.' },
+          ]
+        },
+      ]
+    },
   neovim: {
     name: 'Neovim / Vim',
     icon: 'fas fa-code',
@@ -12745,23 +12818,48 @@ wireshark: {
       },
     ]
   },
-  vagrant: {
-    name: 'Vagrant',
-    icon: 'fas fa-cube',
-    categories: [
-      {
-        name: 'VM Management',
-        shortcuts: [
-          { keys: 'vagrant init', desc: 'Initialize', usage: 'Create a Vagrantfile.' },
-          { keys: 'vagrant up', desc: 'Start', usage: 'Start the VM.' },
-          { keys: 'vagrant ssh', desc: 'Connect', usage: 'SSH into the VM.' },
-          { keys: 'vagrant halt', desc: 'Stop', usage: 'Stop the VM.' },
-          { keys: 'vagrant destroy', desc: 'Destroy', usage: 'Delete the VM.' },
-          { keys: 'vagrant reload', desc: 'Reload', usage: 'Restart the VM.' },
-        ]
-      },
-    ]
-  },
+vagrant: {
+      name: 'Vagrant',
+      icon: 'fas fa-cube',
+      source: 'https://developer.hashicorp.com/vagrant/docs/cli',
+      kind: 'commands',
+      categories: [
+        {
+          name: 'CLI Commands',
+          shortcuts: [
+            { keys: 'vagrant box', desc: 'Manage "vagrant box add", "vagrant box remove", and other box-related commands such as', usage: 'The "vagrant box" command is used to manage "vagrant box add", "vagrant box remove", and other box-related commands such as "outdated", "list", and "update".' },
+            { keys: 'vagrant cloud', desc: 'Taking actions against Vagrant Cloud like searching or uploading a Vagrant Box', usage: 'The "vagrant cloud" command can be used for taking actions against Vagrant Cloud like searching or uploading a Vagrant Box' },
+            { keys: 'vagrant connect', desc: 'Compliments the "vagrant share" command to allow a user to remotely connect to your Vagrant', usage: 'The "vagrant connect" command compliments the "vagrant share" command to allow a user to remotely connect to your Vagrant environment.' },
+            { keys: 'vagrant destroy', desc: 'Stop the running virtual machine and terminate use of all resources that were in use', usage: 'The "vagrant destroy" command is used to stop the running virtual machine and terminate use of all resources that were in use by that machine.' },
+            { keys: 'vagrant global-status', desc: 'Determine the state of all active Vagrant environments on the system for the currently logged', usage: 'The "vagrant global-status" command is used to determine the state of all active Vagrant environments on the system for the currently logged in user.' },
+            { keys: 'vagrant halt', desc: 'Shut down the virtual machine that Vagrant is currently managing', usage: 'The "vagrant halt" command is used to shut down the virtual machine that Vagrant is currently managing.' },
+            { keys: 'vagrant init', desc: 'Initialize the current directory to be a Vagrant environment by creating an initial Vagrantfile', usage: 'The "vagrant init" command is used to initialize the current directory to be a Vagrant environment by creating an initial Vagrantfile.' },
+            { keys: 'vagrant login', desc: 'Authenticate Vagrant with HashiCorp\'s Vagrant Cloud service to use features like private boxes', usage: 'The "vagrant login" command is used to authenticate Vagrant with HashiCorp\'s Vagrant Cloud service to use features like private boxes and "vagrant push".' },
+            { keys: 'vagrant machine-readable', desc: 'Almost all commands in Vagrant accept a --machine-readable flag to enable machine-readable', usage: 'Almost all commands in Vagrant accept a --machine-readable flag to enable machine-readable output mode.' },
+            { keys: 'vagrant non-primary', desc: 'In addition to the commands listed in the sidebar and shown in "vagrant -h", Vagrant comes', usage: 'In addition to the commands listed in the sidebar and shown in "vagrant -h", Vagrant comes with some more commands that are hidden from basic help output. These commands are hidden because they\'re not useful to beginners or they\'re not commonly used. We call these commands "non-primary subcommands".' },
+            { keys: 'vagrant package', desc: 'Package a currently-running VirtualBox or Hyper-V vagrant environment into a reusable Vagrant', usage: 'The "vagrant package" command is used to package a currently-running VirtualBox or Hyper-V vagrant environment into a reusable Vagrant box.' },
+            { keys: 'vagrant plugin', desc: 'Manage Vagrant plugins including installing, uninstalling, and license management', usage: 'The "vagrant plugin" command is used to manage Vagrant plugins including installing, uninstalling, and license management.' },
+            { keys: 'vagrant port', desc: 'Display the full list of guest ports mapped to the host machine ports', usage: 'The "vagrant port" command is used to display the full list of guest ports mapped to the host machine ports.' },
+            { keys: 'vagrant powershell', desc: 'Open a PowerShell prompt running inside the guest machine', usage: 'The "vagrant powershell" command is used to open a PowerShell prompt running inside the guest machine.' },
+            { keys: 'vagrant provision', desc: 'Run any provisioners configured for the guest machine, such as Puppet, Chef, Ansible, Salt', usage: 'The "vagrant provision" command is used to run any provisioners configured for the guest machine, such as Puppet, Chef, Ansible, Salt, or Shell.' },
+            { keys: 'vagrant rdp', desc: 'Start an RDP client for a remote desktop session with the guest machine', usage: 'The "vagrant rdp" command is used to start an RDP client for a remote desktop session with the guest machine.' },
+            { keys: 'vagrant reload', desc: 'Is the equivalent of running "vagrant halt" followed by "vagrant up"', usage: 'The "vagrant reload" command is the equivalent of running "vagrant halt" followed by "vagrant up".' },
+            { keys: 'vagrant resume', desc: 'Bring a machine back into the "up" state, perhaps if it was previously suspended via "vagrant', usage: 'The "vagrant resume" command is used to bring a machine back into the "up" state, perhaps if it was previously suspended via "vagrant halt" or "vagrant suspend".' },
+            { keys: 'vagrant share', desc: 'Initializes a new Vagrant share session, which allows you to share your virtual machine', usage: 'The "vagrant share" command initializes a new Vagrant share session, which allows you to share your virtual machine with the public Internet.' },
+            { keys: 'vagrant snapshot', desc: 'Manage snapshots of the guest machine', usage: 'The "vagrant snapshot" command is used to manage snapshots of the guest machine.' },
+            { keys: 'vagrant ssh', desc: 'Establish an SSH session into a running virtual machine to give you shell access', usage: 'The "vagrant ssh" command is used to establish an SSH session into a running virtual machine to give you shell access.' },
+            { keys: 'vagrant ssh-config', desc: 'Output a valid SSH configuration file capable of SSHing into the guest machine directly', usage: 'The "vagrant ssh-config" command is used to output a valid SSH configuration file capable of SSHing into the guest machine directly.' },
+            { keys: 'vagrant status', desc: 'Tell you the status of the virtual machines in the current Vagrant environment', usage: 'The "vagrant status" command is used to tell you the status of the virtual machines in the current Vagrant environment.' },
+            { keys: 'vagrant suspend', desc: 'Suspend the guest machine Vagrant is currently managing', usage: 'The "vagrant suspend" command is used to suspend the guest machine Vagrant is currently managing.' },
+            { keys: 'vagrant up', desc: 'Create, configuration, and provision a guest machine according to your Vagrantfile', usage: 'The "vagrant up" command is used to create, configuration, and provision a guest machine according to your Vagrantfile.' },
+            { keys: 'vagrant upload', desc: 'Upload files from the host to a guest machine', usage: 'The "vagrant upload" command is used to upload files from the host to a guest machine.' },
+            { keys: 'vagrant validate', desc: 'Validate your Vagrantfile', usage: 'The "vagrant validate" command is used to validate your Vagrantfile.' },
+            { keys: 'vagrant version', desc: 'Output the version of Vagrant currently installed on the system', usage: 'The "vagrant version" command is used to output the version of Vagrant currently installed on the system.' },
+            { keys: 'vagrant winrm', desc: 'Execute commands on the remote machine via WinRM', usage: 'The "vagrant winrm" command is used execute commands on the remote machine via WinRM' },
+          ]
+        },
+      ]
+    },
 htop_cmd: {
       name: 'htop',
       icon: 'fas fa-chart-bar',
