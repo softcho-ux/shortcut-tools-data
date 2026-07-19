@@ -82,6 +82,7 @@ const shortcutData = {
   mac: {
     name: 'Mac',
     icon: 'fab fa-apple',
+    source: 'https://support.apple.com/en-us/102650',
     categories: [
       {
         name: 'Basic Editing',
@@ -226,6 +227,157 @@ const shortcutData = {
           { keys: 'Cmd + Ctrl + D', desc: 'Dictionary', usage: 'Look up selected word in Dictionary.' },
           { keys: 'Cmd + Shift + 5', desc: 'Screenshot Toolbar', usage: 'Open screenshot and screen recording toolbar.' },
           { keys: 'Cmd + Option + Power', desc: 'Sleep', usage: 'Put Mac to sleep.' },
+        ]
+      },
+      {
+        name: 'Cut, copy, paste, and other common shortcuts',
+        shortcuts: [
+          { keys: 'Cmd + O', desc: 'Open the selected item, or open a dialog to select a file to open', usage: 'Open the selected item, or open a dialog to select a file to open.' },
+          { keys: 'Alt + Cmd + Esc', desc: 'Force quit an app', usage: 'Force quit an app.' },
+          { keys: 'Cmd + Space bar', desc: 'Show or hide the Spotlight search field. To perform a Spotlight search from a Finder window', usage: 'Show or hide the Spotlight search field. To perform a Spotlight search from a Finder window.' },
+          { keys: 'Ctrl + Cmd + Space bar', desc: 'Show the Character Viewer, from which you can choose emoji and other symbols', usage: 'Show the Character Viewer, from which you can choose emoji and other symbols.' },
+          { keys: 'Space bar', desc: 'Use Quick Look to preview the selected item', usage: 'Use Quick Look to preview the selected item.' },
+          { keys: 'Shift + Cmd + 5', desc: 'In macOS Mojave or later, take a screenshot or make a screen recording. Or use Shift-Command-3', usage: 'In macOS Mojave or later, take a screenshot or make a screen recording. Or use Shift-Command-3.' },
+          { keys: 'Shift + Cmd + N', desc: 'Create a new empty folder in the Finder', usage: 'Create a new empty folder in the Finder.' },
+          { keys: 'Ctrl + Cmd + N', desc: 'Create a new folder that contains the currently selected items', usage: 'Create a new folder that contains the currently selected items.' },
+          { keys: 'Cmd + Comma (,)', desc: 'Open settings (preferences) for the front app', usage: 'Open settings (preferences) for the front app.' },
+          { keys: 'Fn + Q', desc: 'Create a Quick Note', usage: 'Create a Quick Note.' },
+        ]
+      },
+      {
+        name: 'Sleep, log out, and shut down shortcuts',
+        shortcuts: [
+          { keys: 'Power button', desc: 'Press to turn on your Mac or wake it from sleep', usage: 'Press to turn on your Mac or wake it from sleep.' },
+          { keys: 'Ctrl + Shift + Power button', desc: 'On built-in keyboards without Touch ID, put your displays to sleep', usage: 'On built-in keyboards without Touch ID, put your displays to sleep.' },
+          { keys: 'Ctrl + Power button', desc: 'On built-in keyboards without Touch ID, show a dialog asking whether you want to restart', usage: 'On built-in keyboards without Touch ID, show a dialog asking whether you want to restart.' },
+          { keys: 'Ctrl + Cmd + Power button', desc: 'On built-in keyboards without Touch ID, force your Mac to restart, without prompting to save', usage: 'On built-in keyboards without Touch ID, force your Mac to restart, without prompting to save.' },
+          { keys: 'Ctrl + Alt + Cmd + Power button', desc: 'On built-in keyboards without Touch ID, quit all apps, then shut down your Mac. If any open', usage: 'On built-in keyboards without Touch ID, quit all apps, then shut down your Mac. If any open.' },
+          { keys: 'Shift + Cmd + Q', desc: 'Log out of your macOS user account. You will be asked to confirm. To log out immediately', usage: 'Log out of your macOS user account. You will be asked to confirm. To log out immediately.' },
+        ]
+      },
+      {
+        name: 'Finder and system shortcuts',
+        shortcuts: [
+          { keys: 'Shift + Cmd + C', desc: 'Open the Computer window', usage: 'Open the Computer window.' },
+          { keys: 'Shift + Cmd + D', desc: 'Open the desktop folder', usage: 'Open the desktop folder.' },
+          { keys: 'Shift + Cmd + F', desc: 'Open the Recents window, showing all of the files you viewed or changed recently', usage: 'Open the Recents window, showing all of the files you viewed or changed recently.' },
+          { keys: 'Shift + Cmd + G', desc: 'Open a Go to Folder window', usage: 'Open a Go to Folder window.' },
+          { keys: 'Shift + Cmd + H', desc: 'Open the Home folder of the current macOS user account', usage: 'Open the Home folder of the current macOS user account.' },
+          { keys: 'Shift + Cmd + I', desc: 'Open iCloud Drive', usage: 'Open iCloud Drive.' },
+          { keys: 'Shift + Cmd + K', desc: 'Open the Network window', usage: 'Open the Network window.' },
+          { keys: 'Alt + Cmd + L', desc: 'Open the Downloads folder', usage: 'Open the Downloads folder.' },
+          { keys: 'Shift + Cmd + O', desc: 'Open the Documents folder', usage: 'Open the Documents folder.' },
+          { keys: 'Shift + Cmd + P', desc: 'Show or hide the Preview pane in Finder windows', usage: 'Show or hide the Preview pane in Finder windows.' },
+          { keys: 'Shift + Cmd + R', desc: 'Open the AirDrop window', usage: 'Open the AirDrop window.' },
+          { keys: 'Shift + Cmd + T', desc: 'Show or hide the tab bar in Finder windows', usage: 'Show or hide the tab bar in Finder windows.' },
+          { keys: 'Ctrl + Shift + Cmd + T', desc: 'Add selected Finder item to the Dock (OS X Mavericks or later)', usage: 'Add selected Finder item to the Dock (OS X Mavericks or later).' },
+          { keys: 'Ctrl + Shift', desc: 'Press and hold while accessing the Dock to use or stop using Dock magnification', usage: 'Press and hold while accessing the Dock to use or stop using Dock magnification.' },
+          { keys: 'Shift + Cmd + U', desc: 'Open the Utilities folder', usage: 'Open the Utilities folder.' },
+          { keys: 'Alt + Cmd + D', desc: 'Show or hide the Dock', usage: 'Show or hide the Dock.' },
+          { keys: 'Ctrl + Cmd + T', desc: 'Add the selected item to the sidebar (OS X Mavericks or later)', usage: 'Add the selected item to the sidebar (OS X Mavericks or later).' },
+          { keys: 'Alt + Cmd + P', desc: 'Hide or show the path bar in Finder windows', usage: 'Hide or show the path bar in Finder windows.' },
+          { keys: 'Alt + Cmd + S', desc: 'Hide or show the Sidebar in Finder windows', usage: 'Hide or show the Sidebar in Finder windows.' },
+          { keys: 'Cmd + Slash', desc: 'Hide or show the status bar in Finder windows', usage: 'Hide or show the status bar in Finder windows.' },
+          { keys: 'Cmd + J', desc: 'Show View Options', usage: 'Show View Options.' },
+          { keys: 'Ctrl + Cmd + A', desc: 'Make an alias of the selected item', usage: 'Make an alias of the selected item.' },
+          { keys: 'Alt + Cmd + N', desc: 'Create a new Smart Folder', usage: 'Create a new Smart Folder.' },
+          { keys: 'Alt + Cmd + T', desc: 'Show or hide the toolbar when a single tab is open in the current Finder window', usage: 'Show or hide the toolbar when a single tab is open in the current Finder window.' },
+          { keys: 'Alt + Cmd + V', desc: 'Move the files in the Clipboard from their original location to the current location', usage: 'Move the files in the Clipboard from their original location to the current location.' },
+          { keys: 'Cmd + Y', desc: 'Use Quick Look to preview the selected files', usage: 'Use Quick Look to preview the selected files.' },
+          { keys: 'Alt + Cmd + Y', desc: 'View a Quick Look slideshow of the selected files', usage: 'View a Quick Look slideshow of the selected files.' },
+          { keys: 'Cmd + 1', desc: 'View the items in the Finder window as icons', usage: 'View the items in the Finder window as icons.' },
+          { keys: 'Cmd + 2', desc: 'View the items in a Finder window as a list', usage: 'View the items in a Finder window as a list.' },
+          { keys: 'Cmd + 3', desc: 'View the items in a Finder window in columns', usage: 'View the items in a Finder window in columns.' },
+          { keys: 'Cmd + 4', desc: 'View the items in a Finder window in a gallery', usage: 'View the items in a Finder window in a gallery.' },
+          { keys: 'Cmd + Up Arrow', desc: 'Open the folder that contains the current folder', usage: 'Open the folder that contains the current folder.' },
+          { keys: 'Ctrl + Cmd + Up Arrow', desc: 'Open the folder that contains the current folder in a new window', usage: 'Open the folder that contains the current folder in a new window.' },
+          { keys: 'Cmd + Down Arrow', desc: 'Open the selected item', usage: 'Open the selected item.' },
+          { keys: 'Right Arrow', desc: 'Open the selected folder. This works only when in list view', usage: 'Open the selected folder. This works only when in list view.' },
+          { keys: 'Left Arrow', desc: 'Close the selected folder. This works only when in list view', usage: 'Close the selected folder. This works only when in list view.' },
+          { keys: 'Shift + Cmd + Delete', desc: 'Empty the Trash', usage: 'Empty the Trash.' },
+          { keys: 'Alt + Shift + Cmd + Delete', desc: 'Empty the Trash without confirmation dialog', usage: 'Empty the Trash without confirmation dialog.' },
+          { keys: 'Alt + Brightness Up', desc: 'Open Displays settings. This works with either Brightness key', usage: 'Open Displays settings. This works with either Brightness key.' },
+          { keys: 'Ctrl + Brightness Up', desc: 'Change the brightness of your external display, if supported by your display', usage: 'Change the brightness of your external display, if supported by your display.' },
+          { keys: 'Alt + Shift + Brightness Up', desc: 'Adjust the display brightness in smaller steps. Add the Control key to this shortcut to make', usage: 'Adjust the display brightness in smaller steps. Add the Control key to this shortcut to make.' },
+          { keys: 'Ctrl + Up Arrow', desc: 'Open Mission Control', usage: 'Open Mission Control.' },
+          { keys: 'Ctrl + Down Arrow', desc: 'Show all windows of the front app', usage: 'Show all windows of the front app.' },
+          { keys: 'Alt + Volume Up', desc: 'Open Sound settings. This works with any of the volume keys', usage: 'Open Sound settings. This works with any of the volume keys.' },
+          { keys: 'Alt + Shift + Volume Up', desc: 'Adjust the sound volume in smaller steps', usage: 'Adjust the sound volume in smaller steps.' },
+          { keys: 'Cmd', desc: 'Select multiple items in the Finder', usage: 'Select multiple items in the Finder.' },
+          { keys: 'Fn + A', desc: 'Show or hide the Dock', usage: 'Show or hide the Dock.' },
+          { keys: 'Fn + C', desc: 'Show or hide Control Center', usage: 'Show or hide Control Center.' },
+          { keys: 'Fn + D', desc: 'Start or stop dictation. You may be able to set a different dictation shortcut in Keyboard', usage: 'Start or stop dictation. You may be able to set a different dictation shortcut in Keyboard.' },
+          { keys: 'Fn + N', desc: 'Show or hide Notification Center', usage: 'Show or hide Notification Center.' },
+          { keys: 'Fn + Shift + A', desc: 'Show or hide Apps (macOS Tahoe 26 or later) or Launchpad (earlier versions of macOS)', usage: 'Show or hide Apps (macOS Tahoe 26 or later) or Launchpad (earlier versions of macOS).' },
+          { keys: 'Fn', desc: 'Open the Character Viewer', usage: 'Open the Character Viewer.' },
+        ]
+      },
+      {
+        name: 'Text-editing shortcuts',
+        shortcuts: [
+          { keys: 'Ctrl + Cmd + D', desc: 'Show or hide the definition of the selected word', usage: 'Show or hide the definition of the selected word.' },
+          { keys: 'Shift + Cmd + Colon', desc: 'Show the Spelling and Grammar window', usage: 'Show the Spelling and Grammar window.' },
+          { keys: 'Cmd + Semicolon (;)', desc: 'Find misspelled words in the document', usage: 'Find misspelled words in the document.' },
+          { keys: 'Alt + Delete', desc: 'Delete the word to the left of the insertion point', usage: 'Delete the word to the left of the insertion point.' },
+          { keys: 'Ctrl + H', desc: 'Delete the character to the left of the insertion point. Or use Delete', usage: 'Delete the character to the left of the insertion point. Or use Delete.' },
+          { keys: 'Ctrl + D', desc: 'Delete the character to the right of the insertion point. Or use Fn-Delete', usage: 'Delete the character to the right of the insertion point. Or use Fn-Delete.' },
+          { keys: 'Fn + Delete', desc: 'Forward delete on keyboards that don\'t have a Forward Delete key. Or use Control-D', usage: 'Forward delete on keyboards that don\'t have a Forward Delete key. Or use Control-D.' },
+          { keys: 'Fn + Up Arrow', desc: 'Page Up: Scroll up one page', usage: 'Page Up: Scroll up one page.' },
+          { keys: 'Fn + Down Arrow', desc: 'Page Down: Scroll down one page', usage: 'Page Down: Scroll down one page.' },
+          { keys: 'Fn + Left Arrow', desc: 'Home: Scroll to the beginning of a document', usage: 'Home: Scroll to the beginning of a document.' },
+          { keys: 'Fn + Right Arrow', desc: 'End: Scroll to the end of a document', usage: 'End: Scroll to the end of a document.' },
+          { keys: 'Cmd + Left Arrow', desc: 'Move the insertion point to the beginning of the current line', usage: 'Move the insertion point to the beginning of the current line.' },
+          { keys: 'Cmd + Right Arrow', desc: 'Move the insertion point to the end of the current line', usage: 'Move the insertion point to the end of the current line.' },
+          { keys: 'Alt + Left Arrow', desc: 'Move the insertion point to the beginning of the previous word', usage: 'Move the insertion point to the beginning of the previous word.' },
+          { keys: 'Alt + Right Arrow', desc: 'Move the insertion point to the end of the next word', usage: 'Move the insertion point to the end of the next word.' },
+          { keys: 'Shift + Cmd + Up Arrow', desc: 'Select the text between the insertion point and the beginning of the document', usage: 'Select the text between the insertion point and the beginning of the document.' },
+          { keys: 'Shift + Cmd + Down Arrow', desc: 'Select the text between the insertion point and the end of the document', usage: 'Select the text between the insertion point and the end of the document.' },
+          { keys: 'Shift + Cmd + Left Arrow', desc: 'Select the text between the insertion point and the beginning of the current line', usage: 'Select the text between the insertion point and the beginning of the current line.' },
+          { keys: 'Shift + Cmd + Right Arrow', desc: 'Select the text between the insertion point and the end of the current line', usage: 'Select the text between the insertion point and the end of the current line.' },
+          { keys: 'Shift + Up Arrow', desc: 'Extend text selection to the nearest character at the same horizontal location on the line', usage: 'Extend text selection to the nearest character at the same horizontal location on the line.' },
+          { keys: 'Shift + Down Arrow', desc: 'Extend text selection to the nearest character at the same horizontal location on the line', usage: 'Extend text selection to the nearest character at the same horizontal location on the line.' },
+          { keys: 'Shift + Left Arrow', desc: 'Extend text selection one character to the left', usage: 'Extend text selection one character to the left.' },
+          { keys: 'Shift + Right Arrow', desc: 'Extend text selection one character to the right', usage: 'Extend text selection one character to the right.' },
+          { keys: 'Alt + Shift + Up Arrow', desc: 'Extend text selection to the beginning of the current paragraph, then to the beginning', usage: 'Extend text selection to the beginning of the current paragraph, then to the beginning.' },
+          { keys: 'Alt + Shift + Down Arrow', desc: 'Extend text selection to the end of the current paragraph, then to the end of the following', usage: 'Extend text selection to the end of the current paragraph, then to the end of the following.' },
+          { keys: 'Alt + Shift + Left Arrow', desc: 'Extend text selection to the beginning of the current word, then to the beginning', usage: 'Extend text selection to the beginning of the current word, then to the beginning.' },
+          { keys: 'Alt + Shift + Right Arrow', desc: 'Extend text selection to the end of the current word, then to the end of the following word if', usage: 'Extend text selection to the end of the current word, then to the end of the following word if.' },
+          { keys: 'Ctrl + A', desc: 'Move to the beginning of the line or paragraph', usage: 'Move to the beginning of the line or paragraph.' },
+          { keys: 'Ctrl + E', desc: 'Move to the end of a line or paragraph', usage: 'Move to the end of a line or paragraph.' },
+          { keys: 'Ctrl + F', desc: 'Move one character forward', usage: 'Move one character forward.' },
+          { keys: 'Ctrl + B', desc: 'Move one character backward', usage: 'Move one character backward.' },
+          { keys: 'Ctrl + L', desc: 'Center the cursor or selection in the visible area', usage: 'Center the cursor or selection in the visible area.' },
+          { keys: 'Ctrl + P', desc: 'Move up one line', usage: 'Move up one line.' },
+          { keys: 'Ctrl + N', desc: 'Move down one line', usage: 'Move down one line.' },
+          { keys: 'Ctrl + O', desc: 'Insert a new line after the insertion point', usage: 'Insert a new line after the insertion point.' },
+          { keys: 'Ctrl + T', desc: 'Swap the character behind the insertion point with the character in front of the insertion', usage: 'Swap the character behind the insertion point with the character in front of the insertion.' },
+          { keys: 'Alt + Cmd + F', desc: 'Go to the search field', usage: 'Go to the search field.' },
+          { keys: 'Alt + Cmd + C', desc: 'Copy Style: Copy the formatting settings of the selected item to the Clipboard', usage: 'Copy Style: Copy the formatting settings of the selected item to the Clipboard.' },
+          { keys: 'Alt + Shift + Cmd + V', desc: 'Paste and Match Style: Apply the style of the surrounding content to the item pasted within', usage: 'Paste and Match Style: Apply the style of the surrounding content to the item pasted within.' },
+          { keys: 'Alt + Cmd + I', desc: 'Show or hide the inspector window', usage: 'Show or hide the inspector window.' },
+          { keys: 'Shift + Cmd + S', desc: 'Show the Save As dialog, or duplicate the current document', usage: 'Show the Save As dialog, or duplicate the current document.' },
+          { keys: 'Shift + Cmd + Minus sign ( + )', desc: 'Decrease the size of the selected item', usage: 'Decrease the size of the selected item.' },
+          { keys: 'Shift + Cmd + Plus sign ( + )', desc: 'Increase the size of the selected item. Command-Equal sign (=) performs the same function', usage: 'Increase the size of the selected item. Command-Equal sign (=) performs the same function.' },
+        ]
+      },
+      {
+        name: 'Accessibility shortcuts',
+        shortcuts: [
+          { keys: 'Ctrl + Alt + Cmd + 8', desc: 'Invert colors', usage: 'Invert colors.' },
+          { keys: 'Ctrl + F2', desc: 'Move focus to the menu bar. You can then use the arrow keys to navigate the menu, press Return', usage: 'Move focus to the menu bar. You can then use the arrow keys to navigate the menu, press Return.' },
+          { keys: 'Ctrl + F3', desc: 'Move focus to the Dock', usage: 'Move focus to the Dock.' },
+          { keys: 'Ctrl + F4', desc: 'Move focus to the active window or next window', usage: 'Move focus to the active window or next window.' },
+          { keys: 'Ctrl + F5', desc: 'Move focus to the window toolbar', usage: 'Move focus to the window toolbar.' },
+          { keys: 'Ctrl + F6', desc: 'Move focus to the floating window', usage: 'Move focus to the floating window.' },
+          { keys: 'Ctrl + Shift + F6', desc: 'Move focus to the previous panel', usage: 'Move focus to the previous panel.' },
+          { keys: 'Ctrl + F7', desc: 'Change the way Tab moves focus-between navigation of all controls on the screen, or only text', usage: 'Change the way Tab moves focus-between navigation of all controls on the screen, or only text.' },
+          { keys: 'Ctrl + F8', desc: 'Move focus to the status menu in the menu bar', usage: 'Move focus to the status menu in the menu bar.' },
+          { keys: 'Tab and Shift + Tab', desc: 'Move to next control, move to previous control', usage: 'Move to next control, move to previous control.' },
+          { keys: 'Ctrl + Tab', desc: 'Move to the next control when a text field is selected', usage: 'Move to the next control when a text field is selected.' },
+          { keys: 'Ctrl + Shift + Tab', desc: 'Move to the previous grouping of controls', usage: 'Move to the previous grouping of controls.' },
+          { keys: 'Arrow keys', desc: 'Move to the adjacent item in a list, tab group, or menu, or move sliders and adjusters', usage: 'Move to the adjacent item in a list, tab group, or menu, or move sliders and adjusters.' },
+          { keys: 'Ctrl + Arrow keys', desc: 'Move to a control adjacent to the text field', usage: 'Move to a control adjacent to the text field.' },
+          { keys: 'Alt + Cmd + F5', desc: 'Show the Accessibility Shortcuts panel', usage: 'Show the Accessibility Shortcuts panel.' },
         ]
       },
     ]
@@ -3394,7 +3546,7 @@ const shortcutData = {
       },
     ]
   },
-todoist: {
+  todoist: {
       name: 'Todoist',
       icon: 'fas fa-check-circle',
       source: 'https://www.todoist.com/help/articles/use-keyboard-shortcuts-in-todoist-Wyovn2',
@@ -3678,7 +3830,7 @@ todoist: {
       },
     ]
   },
-arc: {
+  arc: {
       name: 'Arc Browser',
       icon: 'fas fa-compass',
       source: 'https://resources.arc.net/hc/en-us/articles/20595231349911-Keyboard-Shortcuts',
@@ -3739,7 +3891,7 @@ arc: {
         },
       ]
     },
-warp: {
+  warp: {
       name: 'Warp Terminal',
       icon: 'fas fa-terminal',
       source: 'https://docs.warp.dev/getting-started/keyboard-shortcuts',
@@ -3953,7 +4105,7 @@ warp: {
       },
     ]
   },
-openai_codex: {
+  openai_codex: {
       name: 'OpenAI Codex CLI',
       icon: 'fas fa-terminal',
       source: 'https://developers.openai.com/codex/cli/reference/',
@@ -4588,7 +4740,7 @@ openai_codex: {
       },
     ]
   },
-aider: {
+  aider: {
       name: 'Aider',
       icon: 'fas fa-terminal',
       source: 'https://aider.chat/docs/usage/commands.html',
@@ -4650,7 +4802,7 @@ aider: {
         },
       ]
     },
-runway: {
+  runway: {
       name: 'Runway ML',
       icon: 'fas fa-film',
       source: 'https://help.runwayml.com/hc/en-us/articles/4405907853203-Video-editor-shortcuts',
@@ -4704,7 +4856,7 @@ runway: {
         },
       ]
     },
-stable_diffusion: {
+  stable_diffusion: {
       name: 'Stable Diffusion',
       icon: 'fas fa-image',
       source: 'https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Command-Line-Arguments-and-Settings',
@@ -5004,7 +5156,7 @@ stable_diffusion: {
       },
     ]
   },
-retool: {
+  retool: {
       name: 'Retool',
       icon: 'fas fa-th-large',
       source: 'https://docs.retool.com/apps/reference/keyboard-shortcuts',
@@ -5309,7 +5461,7 @@ retool: {
       },
     ]
   },
-python_cli: {
+  python_cli: {
       name: 'Python',
       icon: 'fab fa-python',
       source: 'https://docs.python.org/3/using/cmdline.html',
@@ -6004,7 +6156,7 @@ python_cli: {
       }
     ]
   },
-proxmox: {
+  proxmox: {
       name: 'Proxmox VE',
       icon: 'fas fa-server',
       source: 'https://pve.proxmox.com/pve-docs/',
@@ -7343,7 +7495,7 @@ proxmox: {
       },
     ]
   },
-fl_studio: {
+  fl_studio: {
       name: 'FL Studio',
       icon: 'fas fa-music',
       source: 'https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/basics_shortcuts.htm',
@@ -7962,7 +8114,7 @@ fl_studio: {
       },
     ]
   },
-clickup: {
+  clickup: {
       name: 'ClickUp',
       icon: 'fas fa-check-double',
       source: 'https://help.clickup.com/hc/en-us/articles/6309030550167-Use-keyboard-shortcuts',
@@ -8100,7 +8252,7 @@ clickup: {
         },
       ]
     },
-monday: {
+  monday: {
       name: 'Monday.com',
       icon: 'fas fa-calendar-check',
       source: 'https://support.monday.com/hc/en-us/articles/115005339905-monday-com-Shortcuts',
@@ -8302,7 +8454,7 @@ monday: {
       ] }
     ]
   },
-procreate: {
+  procreate: {
       name: 'Procreate',
       icon: 'fas fa-paint-brush',
       source: 'https://help.procreate.com/procreate/handbook/interface-gestures/keyboard',
@@ -9117,7 +9269,7 @@ procreate: {
       },
     ]
   },
-camtasia: {
+  camtasia: {
       name: 'Camtasia',
       icon: 'fas fa-video',
       source: 'https://www.techsmith.com/learn/tutorials/camtasia/camtasia-shortcuts/',
@@ -9325,7 +9477,7 @@ camtasia: {
       },
     ]
   },
-brave: {
+  brave: {
       name: 'Brave Browser',
       icon: 'fab fa-brave',
       source: 'https://support.brave.app/hc/en-us/articles/360032272171-What-keyboard-shortcuts-can-I-use-in-Brave',
@@ -9714,7 +9866,7 @@ brave: {
       },
     ]
   },
-vim_advanced: {
+  vim_advanced: {
       name: 'Vim (Advanced)',
       icon: 'fas fa-code',
       source: 'https://vimhelp.org/quickref.txt.html',
@@ -10302,7 +10454,7 @@ vim_advanced: {
       },
     ]
   },
-sketchup: {
+  sketchup: {
       name: 'SketchUp',
       icon: 'fas fa-cube',
       source: 'https://help.sketchup.com/en/default-keyboard-shortcuts',
@@ -10654,201 +10806,23 @@ sketchup: {
       ] }
     ]
   },
-keynote: {
-      name: 'Apple Keynote',
-      icon: 'fas fa-tv',
-      source: 'https://support.apple.com/en-us/102650',
-      kind: 'shortcuts',
-      categories: [
-        {
-          name: 'Cut, copy, paste, and other common shortcuts',
-          shortcuts: [
-            { keys: 'Cmd + X', desc: 'Cut the selected item and copy it to the Clipboard', usage: 'Cut the selected item and copy it to the Clipboard.' },
-            { keys: 'Cmd + C', desc: 'Copy the selected item to the Clipboard. This also works for files in the Finder', usage: 'Copy the selected item to the Clipboard. This also works for files in the Finder.' },
-            { keys: 'Cmd + V', desc: 'Paste the contents of the Clipboard into the current document or app. This also works for files', usage: 'Paste the contents of the Clipboard into the current document or app. This also works for files.' },
-            { keys: 'Cmd + Z', desc: 'Undo the previous command. You can then press Shift-Command-Z to Redo, reversing the undo', usage: 'Undo the previous command. You can then press Shift-Command-Z to Redo, reversing the undo.' },
-            { keys: 'Cmd + A', desc: 'Select All items', usage: 'Select All items.' },
-            { keys: 'Cmd + F', desc: 'Find items in a document or open a Find window', usage: 'Find items in a document or open a Find window.' },
-            { keys: 'Cmd + G', desc: 'Find Again: Find the next occurrence of the item previously found. To find the previous', usage: 'Find Again: Find the next occurrence of the item previously found. To find the previous.' },
-            { keys: 'Cmd + H', desc: 'Hide the windows of the front app. To view the front app but hide all other apps, press', usage: 'Hide the windows of the front app. To view the front app but hide all other apps, press.' },
-            { keys: 'Cmd + M', desc: 'Minimize the front window to the Dock. To minimize all windows of the front app, press', usage: 'Minimize the front window to the Dock. To minimize all windows of the front app, press.' },
-            { keys: 'Cmd + O', desc: 'Open the selected item, or open a dialog to select a file to open', usage: 'Open the selected item, or open a dialog to select a file to open.' },
-            { keys: 'Cmd + P', desc: 'Open a print dialog so that you can print the current document', usage: 'Open a print dialog so that you can print the current document.' },
-            { keys: 'Cmd + Q', desc: 'Quit the current app', usage: 'Quit the current app.' },
-            { keys: 'Cmd + S', desc: 'Save the current document', usage: 'Save the current document.' },
-            { keys: 'Cmd + T', desc: 'Open a new tab', usage: 'Open a new tab.' },
-            { keys: 'Cmd + W', desc: 'Close the front window. To close all windows of the app, press Option-Command-W', usage: 'Close the front window. To close all windows of the app, press Option-Command-W.' },
-            { keys: 'Alt + Cmd + Esc', desc: 'Force quit an app', usage: 'Force quit an app.' },
-            { keys: 'Cmd + Space bar', desc: 'Show or hide the Spotlight search field. To perform a Spotlight search from a Finder window', usage: 'Show or hide the Spotlight search field. To perform a Spotlight search from a Finder window.' },
-            { keys: 'Ctrl + Cmd + Space bar', desc: 'Show the Character Viewer, from which you can choose emoji and other symbols', usage: 'Show the Character Viewer, from which you can choose emoji and other symbols.' },
-            { keys: 'Ctrl + Cmd + F', desc: 'Use or stop using the app in full screen, if supported by the app', usage: 'Use or stop using the app in full screen, if supported by the app.' },
-            { keys: 'Space bar', desc: 'Use Quick Look to preview the selected item', usage: 'Use Quick Look to preview the selected item.' },
-            { keys: 'Cmd + Tab', desc: 'Switch to the next most recently used app among your open apps', usage: 'Switch to the next most recently used app among your open apps.' },
-            { keys: 'Shift + Cmd + 5', desc: 'In macOS Mojave or later, take a screenshot or make a screen recording. Or use Shift-Command-3', usage: 'In macOS Mojave or later, take a screenshot or make a screen recording. Or use Shift-Command-3.' },
-            { keys: 'Shift + Cmd + N', desc: 'Create a new empty folder in the Finder', usage: 'Create a new empty folder in the Finder.' },
-            { keys: 'Ctrl + Cmd + N', desc: 'Create a new folder that contains the currently selected items', usage: 'Create a new folder that contains the currently selected items.' },
-            { keys: 'Cmd + Comma (,)', desc: 'Open settings (preferences) for the front app', usage: 'Open settings (preferences) for the front app.' },
-            { keys: 'Fn + Q', desc: 'Create a Quick Note', usage: 'Create a Quick Note.' },
-          ]
-        },
-        {
-          name: 'Sleep, log out, and shut down shortcuts',
-          shortcuts: [
-            { keys: 'Power button', desc: 'Press to turn on your Mac or wake it from sleep', usage: 'Press to turn on your Mac or wake it from sleep.' },
-            { keys: 'Ctrl + Shift + Power button', desc: 'On built-in keyboards without Touch ID, put your displays to sleep', usage: 'On built-in keyboards without Touch ID, put your displays to sleep.' },
-            { keys: 'Ctrl + Power button', desc: 'On built-in keyboards without Touch ID, show a dialog asking whether you want to restart', usage: 'On built-in keyboards without Touch ID, show a dialog asking whether you want to restart.' },
-            { keys: 'Ctrl + Cmd + Power button', desc: 'On built-in keyboards without Touch ID, force your Mac to restart, without prompting to save', usage: 'On built-in keyboards without Touch ID, force your Mac to restart, without prompting to save.' },
-            { keys: 'Ctrl + Alt + Cmd + Power button', desc: 'On built-in keyboards without Touch ID, quit all apps, then shut down your Mac. If any open', usage: 'On built-in keyboards without Touch ID, quit all apps, then shut down your Mac. If any open.' },
-            { keys: 'Ctrl + Cmd + Q', desc: 'Lock your screen', usage: 'Lock your screen.' },
-            { keys: 'Shift + Cmd + Q', desc: 'Log out of your macOS user account. You will be asked to confirm. To log out immediately', usage: 'Log out of your macOS user account. You will be asked to confirm. To log out immediately.' },
-          ]
-        },
-        {
-          name: 'Finder and system shortcuts',
-          shortcuts: [
-            { keys: 'Cmd + D', desc: 'Duplicate the selected files', usage: 'Duplicate the selected files.' },
-            { keys: 'Cmd + E', desc: 'Eject the selected disk or volume', usage: 'Eject the selected disk or volume.' },
-            { keys: 'Cmd + I', desc: 'Show the Get Info window for a selected file', usage: 'Show the Get Info window for a selected file.' },
-            { keys: 'Cmd + R', desc: '1) When an alias is selected in the Finder: show the original file for the selected alias. (2)', usage: '1) When an alias is selected in the Finder: show the original file for the selected alias. (2).' },
-            { keys: 'Shift + Cmd + C', desc: 'Open the Computer window', usage: 'Open the Computer window.' },
-            { keys: 'Shift + Cmd + D', desc: 'Open the desktop folder', usage: 'Open the desktop folder.' },
-            { keys: 'Shift + Cmd + F', desc: 'Open the Recents window, showing all of the files you viewed or changed recently', usage: 'Open the Recents window, showing all of the files you viewed or changed recently.' },
-            { keys: 'Shift + Cmd + G', desc: 'Open a Go to Folder window', usage: 'Open a Go to Folder window.' },
-            { keys: 'Shift + Cmd + H', desc: 'Open the Home folder of the current macOS user account', usage: 'Open the Home folder of the current macOS user account.' },
-            { keys: 'Shift + Cmd + I', desc: 'Open iCloud Drive', usage: 'Open iCloud Drive.' },
-            { keys: 'Shift + Cmd + K', desc: 'Open the Network window', usage: 'Open the Network window.' },
-            { keys: 'Alt + Cmd + L', desc: 'Open the Downloads folder', usage: 'Open the Downloads folder.' },
-            { keys: 'Shift + Cmd + O', desc: 'Open the Documents folder', usage: 'Open the Documents folder.' },
-            { keys: 'Shift + Cmd + P', desc: 'Show or hide the Preview pane in Finder windows', usage: 'Show or hide the Preview pane in Finder windows.' },
-            { keys: 'Shift + Cmd + R', desc: 'Open the AirDrop window', usage: 'Open the AirDrop window.' },
-            { keys: 'Shift + Cmd + T', desc: 'Show or hide the tab bar in Finder windows', usage: 'Show or hide the tab bar in Finder windows.' },
-            { keys: 'Ctrl + Shift + Cmd + T', desc: 'Add selected Finder item to the Dock (OS X Mavericks or later)', usage: 'Add selected Finder item to the Dock (OS X Mavericks or later).' },
-            { keys: 'Ctrl + Shift', desc: 'Press and hold while accessing the Dock to use or stop using Dock magnification', usage: 'Press and hold while accessing the Dock to use or stop using Dock magnification.' },
-            { keys: 'Shift + Cmd + U', desc: 'Open the Utilities folder', usage: 'Open the Utilities folder.' },
-            { keys: 'Alt + Cmd + D', desc: 'Show or hide the Dock', usage: 'Show or hide the Dock.' },
-            { keys: 'Ctrl + Cmd + T', desc: 'Add the selected item to the sidebar (OS X Mavericks or later)', usage: 'Add the selected item to the sidebar (OS X Mavericks or later).' },
-            { keys: 'Alt + Cmd + P', desc: 'Hide or show the path bar in Finder windows', usage: 'Hide or show the path bar in Finder windows.' },
-            { keys: 'Alt + Cmd + S', desc: 'Hide or show the Sidebar in Finder windows', usage: 'Hide or show the Sidebar in Finder windows.' },
-            { keys: 'Cmd + Slash', desc: 'Hide or show the status bar in Finder windows', usage: 'Hide or show the status bar in Finder windows.' },
-            { keys: 'Cmd + J', desc: 'Show View Options', usage: 'Show View Options.' },
-            { keys: 'Cmd + K', desc: 'Open the Connect to Server window', usage: 'Open the Connect to Server window.' },
-            { keys: 'Ctrl + Cmd + A', desc: 'Make an alias of the selected item', usage: 'Make an alias of the selected item.' },
-            { keys: 'Cmd + N', desc: 'Open a new Finder window', usage: 'Open a new Finder window.' },
-            { keys: 'Alt + Cmd + N', desc: 'Create a new Smart Folder', usage: 'Create a new Smart Folder.' },
-            { keys: 'Alt + Cmd + T', desc: 'Show or hide the toolbar when a single tab is open in the current Finder window', usage: 'Show or hide the toolbar when a single tab is open in the current Finder window.' },
-            { keys: 'Alt + Cmd + V', desc: 'Move the files in the Clipboard from their original location to the current location', usage: 'Move the files in the Clipboard from their original location to the current location.' },
-            { keys: 'Cmd + Y', desc: 'Use Quick Look to preview the selected files', usage: 'Use Quick Look to preview the selected files.' },
-            { keys: 'Alt + Cmd + Y', desc: 'View a Quick Look slideshow of the selected files', usage: 'View a Quick Look slideshow of the selected files.' },
-            { keys: 'Cmd + 1', desc: 'View the items in the Finder window as icons', usage: 'View the items in the Finder window as icons.' },
-            { keys: 'Cmd + 2', desc: 'View the items in a Finder window as a list', usage: 'View the items in a Finder window as a list.' },
-            { keys: 'Cmd + 3', desc: 'View the items in a Finder window in columns', usage: 'View the items in a Finder window in columns.' },
-            { keys: 'Cmd + 4', desc: 'View the items in a Finder window in a gallery', usage: 'View the items in a Finder window in a gallery.' },
-            { keys: 'Cmd + Up Arrow', desc: 'Open the folder that contains the current folder', usage: 'Open the folder that contains the current folder.' },
-            { keys: 'Ctrl + Cmd + Up Arrow', desc: 'Open the folder that contains the current folder in a new window', usage: 'Open the folder that contains the current folder in a new window.' },
-            { keys: 'Cmd + Down Arrow', desc: 'Open the selected item', usage: 'Open the selected item.' },
-            { keys: 'Right Arrow', desc: 'Open the selected folder. This works only when in list view', usage: 'Open the selected folder. This works only when in list view.' },
-            { keys: 'Left Arrow', desc: 'Close the selected folder. This works only when in list view', usage: 'Close the selected folder. This works only when in list view.' },
-            { keys: 'Cmd + Delete', desc: 'Move the selected item to the Trash', usage: 'Move the selected item to the Trash.' },
-            { keys: 'Shift + Cmd + Delete', desc: 'Empty the Trash', usage: 'Empty the Trash.' },
-            { keys: 'Alt + Shift + Cmd + Delete', desc: 'Empty the Trash without confirmation dialog', usage: 'Empty the Trash without confirmation dialog.' },
-            { keys: 'Alt + Brightness Up', desc: 'Open Displays settings. This works with either Brightness key', usage: 'Open Displays settings. This works with either Brightness key.' },
-            { keys: 'Ctrl + Brightness Up', desc: 'Change the brightness of your external display, if supported by your display', usage: 'Change the brightness of your external display, if supported by your display.' },
-            { keys: 'Alt + Shift + Brightness Up', desc: 'Adjust the display brightness in smaller steps. Add the Control key to this shortcut to make', usage: 'Adjust the display brightness in smaller steps. Add the Control key to this shortcut to make.' },
-            { keys: 'Ctrl + Up Arrow', desc: 'Open Mission Control', usage: 'Open Mission Control.' },
-            { keys: 'Ctrl + Down Arrow', desc: 'Show all windows of the front app', usage: 'Show all windows of the front app.' },
-            { keys: 'Alt + Volume Up', desc: 'Open Sound settings. This works with any of the volume keys', usage: 'Open Sound settings. This works with any of the volume keys.' },
-            { keys: 'Alt + Shift + Volume Up', desc: 'Adjust the sound volume in smaller steps', usage: 'Adjust the sound volume in smaller steps.' },
-            { keys: 'Cmd', desc: 'Select multiple items in the Finder', usage: 'Select multiple items in the Finder.' },
-            { keys: 'Fn + A', desc: 'Show or hide the Dock', usage: 'Show or hide the Dock.' },
-            { keys: 'Fn + C', desc: 'Show or hide Control Center', usage: 'Show or hide Control Center.' },
-            { keys: 'Fn + D', desc: 'Start or stop dictation. You may be able to set a different dictation shortcut in Keyboard', usage: 'Start or stop dictation. You may be able to set a different dictation shortcut in Keyboard.' },
-            { keys: 'Fn + N', desc: 'Show or hide Notification Center', usage: 'Show or hide Notification Center.' },
-            { keys: 'Fn + Shift + A', desc: 'Show or hide Apps (macOS Tahoe 26 or later) or Launchpad (earlier versions of macOS)', usage: 'Show or hide Apps (macOS Tahoe 26 or later) or Launchpad (earlier versions of macOS).' },
-            { keys: 'Fn', desc: 'Open the Character Viewer', usage: 'Open the Character Viewer.' },
-          ]
-        },
-        {
-          name: 'Text-editing shortcuts',
-          shortcuts: [
-            { keys: 'Cmd + B', desc: 'Boldface the selected text, or turn boldfacing on or off', usage: 'Boldface the selected text, or turn boldfacing on or off.' },
-            { keys: 'Cmd + U', desc: 'Underline the selected text, or turn underlining on or off', usage: 'Underline the selected text, or turn underlining on or off.' },
-            { keys: 'Ctrl + Cmd + D', desc: 'Show or hide the definition of the selected word', usage: 'Show or hide the definition of the selected word.' },
-            { keys: 'Shift + Cmd + Colon', desc: 'Show the Spelling and Grammar window', usage: 'Show the Spelling and Grammar window.' },
-            { keys: 'Cmd + Semicolon (;)', desc: 'Find misspelled words in the document', usage: 'Find misspelled words in the document.' },
-            { keys: 'Alt + Delete', desc: 'Delete the word to the left of the insertion point', usage: 'Delete the word to the left of the insertion point.' },
-            { keys: 'Ctrl + H', desc: 'Delete the character to the left of the insertion point. Or use Delete', usage: 'Delete the character to the left of the insertion point. Or use Delete.' },
-            { keys: 'Ctrl + D', desc: 'Delete the character to the right of the insertion point. Or use Fn-Delete', usage: 'Delete the character to the right of the insertion point. Or use Fn-Delete.' },
-            { keys: 'Fn + Delete', desc: 'Forward delete on keyboards that don\'t have a Forward Delete key. Or use Control-D', usage: 'Forward delete on keyboards that don\'t have a Forward Delete key. Or use Control-D.' },
-            { keys: 'Ctrl + K', desc: 'Cut the selected text, or the text between the insertion point and the end of the paragraph', usage: 'Cut the selected text, or the text between the insertion point and the end of the paragraph.' },
-            { keys: 'Fn + Up Arrow', desc: 'Page Up: Scroll up one page', usage: 'Page Up: Scroll up one page.' },
-            { keys: 'Fn + Down Arrow', desc: 'Page Down: Scroll down one page', usage: 'Page Down: Scroll down one page.' },
-            { keys: 'Fn + Left Arrow', desc: 'Home: Scroll to the beginning of a document', usage: 'Home: Scroll to the beginning of a document.' },
-            { keys: 'Fn + Right Arrow', desc: 'End: Scroll to the end of a document', usage: 'End: Scroll to the end of a document.' },
-            { keys: 'Cmd + Left Arrow', desc: 'Move the insertion point to the beginning of the current line', usage: 'Move the insertion point to the beginning of the current line.' },
-            { keys: 'Cmd + Right Arrow', desc: 'Move the insertion point to the end of the current line', usage: 'Move the insertion point to the end of the current line.' },
-            { keys: 'Alt + Left Arrow', desc: 'Move the insertion point to the beginning of the previous word', usage: 'Move the insertion point to the beginning of the previous word.' },
-            { keys: 'Alt + Right Arrow', desc: 'Move the insertion point to the end of the next word', usage: 'Move the insertion point to the end of the next word.' },
-            { keys: 'Shift + Cmd + Up Arrow', desc: 'Select the text between the insertion point and the beginning of the document', usage: 'Select the text between the insertion point and the beginning of the document.' },
-            { keys: 'Shift + Cmd + Down Arrow', desc: 'Select the text between the insertion point and the end of the document', usage: 'Select the text between the insertion point and the end of the document.' },
-            { keys: 'Shift + Cmd + Left Arrow', desc: 'Select the text between the insertion point and the beginning of the current line', usage: 'Select the text between the insertion point and the beginning of the current line.' },
-            { keys: 'Shift + Cmd + Right Arrow', desc: 'Select the text between the insertion point and the end of the current line', usage: 'Select the text between the insertion point and the end of the current line.' },
-            { keys: 'Shift + Up Arrow', desc: 'Extend text selection to the nearest character at the same horizontal location on the line', usage: 'Extend text selection to the nearest character at the same horizontal location on the line.' },
-            { keys: 'Shift + Down Arrow', desc: 'Extend text selection to the nearest character at the same horizontal location on the line', usage: 'Extend text selection to the nearest character at the same horizontal location on the line.' },
-            { keys: 'Shift + Left Arrow', desc: 'Extend text selection one character to the left', usage: 'Extend text selection one character to the left.' },
-            { keys: 'Shift + Right Arrow', desc: 'Extend text selection one character to the right', usage: 'Extend text selection one character to the right.' },
-            { keys: 'Alt + Shift + Up Arrow', desc: 'Extend text selection to the beginning of the current paragraph, then to the beginning', usage: 'Extend text selection to the beginning of the current paragraph, then to the beginning.' },
-            { keys: 'Alt + Shift + Down Arrow', desc: 'Extend text selection to the end of the current paragraph, then to the end of the following', usage: 'Extend text selection to the end of the current paragraph, then to the end of the following.' },
-            { keys: 'Alt + Shift + Left Arrow', desc: 'Extend text selection to the beginning of the current word, then to the beginning', usage: 'Extend text selection to the beginning of the current word, then to the beginning.' },
-            { keys: 'Alt + Shift + Right Arrow', desc: 'Extend text selection to the end of the current word, then to the end of the following word if', usage: 'Extend text selection to the end of the current word, then to the end of the following word if.' },
-            { keys: 'Ctrl + A', desc: 'Move to the beginning of the line or paragraph', usage: 'Move to the beginning of the line or paragraph.' },
-            { keys: 'Ctrl + E', desc: 'Move to the end of a line or paragraph', usage: 'Move to the end of a line or paragraph.' },
-            { keys: 'Ctrl + F', desc: 'Move one character forward', usage: 'Move one character forward.' },
-            { keys: 'Ctrl + B', desc: 'Move one character backward', usage: 'Move one character backward.' },
-            { keys: 'Ctrl + L', desc: 'Center the cursor or selection in the visible area', usage: 'Center the cursor or selection in the visible area.' },
-            { keys: 'Ctrl + P', desc: 'Move up one line', usage: 'Move up one line.' },
-            { keys: 'Ctrl + N', desc: 'Move down one line', usage: 'Move down one line.' },
-            { keys: 'Ctrl + O', desc: 'Insert a new line after the insertion point', usage: 'Insert a new line after the insertion point.' },
-            { keys: 'Ctrl + T', desc: 'Swap the character behind the insertion point with the character in front of the insertion', usage: 'Swap the character behind the insertion point with the character in front of the insertion.' },
-            { keys: 'Alt + Cmd + F', desc: 'Go to the search field', usage: 'Go to the search field.' },
-            { keys: 'Alt + Cmd + C', desc: 'Copy Style: Copy the formatting settings of the selected item to the Clipboard', usage: 'Copy Style: Copy the formatting settings of the selected item to the Clipboard.' },
-            { keys: 'Alt + Shift + Cmd + V', desc: 'Paste and Match Style: Apply the style of the surrounding content to the item pasted within', usage: 'Paste and Match Style: Apply the style of the surrounding content to the item pasted within.' },
-            { keys: 'Alt + Cmd + I', desc: 'Show or hide the inspector window', usage: 'Show or hide the inspector window.' },
-            { keys: 'Shift + Cmd + S', desc: 'Show the Save As dialog, or duplicate the current document', usage: 'Show the Save As dialog, or duplicate the current document.' },
-            { keys: 'Shift + Cmd + Minus sign ( + )', desc: 'Decrease the size of the selected item', usage: 'Decrease the size of the selected item.' },
-            { keys: 'Shift + Cmd + Plus sign ( + )', desc: 'Increase the size of the selected item. Command-Equal sign (=) performs the same function', usage: 'Increase the size of the selected item. Command-Equal sign (=) performs the same function.' },
-          ]
-        },
-        {
-          name: 'Accessibility shortcuts',
-          shortcuts: [
-            { keys: 'Ctrl + Alt + Cmd + 8', desc: 'Invert colors', usage: 'Invert colors.' },
-            { keys: 'Ctrl + F2', desc: 'Move focus to the menu bar. You can then use the arrow keys to navigate the menu, press Return', usage: 'Move focus to the menu bar. You can then use the arrow keys to navigate the menu, press Return.' },
-            { keys: 'Ctrl + F3', desc: 'Move focus to the Dock', usage: 'Move focus to the Dock.' },
-            { keys: 'Ctrl + F4', desc: 'Move focus to the active window or next window', usage: 'Move focus to the active window or next window.' },
-            { keys: 'Ctrl + F5', desc: 'Move focus to the window toolbar', usage: 'Move focus to the window toolbar.' },
-            { keys: 'Ctrl + F6', desc: 'Move focus to the floating window', usage: 'Move focus to the floating window.' },
-            { keys: 'Ctrl + Shift + F6', desc: 'Move focus to the previous panel', usage: 'Move focus to the previous panel.' },
-            { keys: 'Ctrl + F7', desc: 'Change the way Tab moves focus-between navigation of all controls on the screen, or only text', usage: 'Change the way Tab moves focus-between navigation of all controls on the screen, or only text.' },
-            { keys: 'Ctrl + F8', desc: 'Move focus to the status menu in the menu bar', usage: 'Move focus to the status menu in the menu bar.' },
-            { keys: 'Tab and Shift + Tab', desc: 'Move to next control, move to previous control', usage: 'Move to next control, move to previous control.' },
-            { keys: 'Ctrl + Tab', desc: 'Move to the next control when a text field is selected', usage: 'Move to the next control when a text field is selected.' },
-            { keys: 'Ctrl + Shift + Tab', desc: 'Move to the previous grouping of controls', usage: 'Move to the previous grouping of controls.' },
-            { keys: 'Arrow keys', desc: 'Move to the adjacent item in a list, tab group, or menu, or move sliders and adjusters', usage: 'Move to the adjacent item in a list, tab group, or menu, or move sliders and adjusters.' },
-            { keys: 'Ctrl + Arrow keys', desc: 'Move to a control adjacent to the text field', usage: 'Move to a control adjacent to the text field.' },
-            { keys: 'Alt + Cmd + F5', desc: 'Show the Accessibility Shortcuts panel', usage: 'Show the Accessibility Shortcuts panel.' },
-          ]
-        },
-        {
-          name: 'Additional Shortcuts',
-          shortcuts: [
-            { keys: 'Cmd + Shift + N', desc: 'New slide', usage: 'Add a new slide.' },
-            { keys: 'Option + Cmd + P', desc: 'Start presentation', usage: 'Start the slideshow.' },
-            { keys: 'Esc', desc: 'End presentation', usage: 'End the slideshow.' },
-            { keys: 'Cmd + Shift + K', desc: 'Hyperlink', usage: 'Add a hyperlink.' },
-          ]
-        },
-      ]
-    },
+  keynote: {
+    name: 'Apple Keynote',
+    icon: 'fas fa-tv',
+    categories: [
+      {
+        name: 'Presentation',
+        shortcuts: [
+          { keys: 'Cmd + N', desc: 'New presentation', usage: 'Create a new presentation.' },
+          { keys: 'Cmd + Shift + N', desc: 'New slide', usage: 'Add a new slide.' },
+          { keys: 'Cmd + D', desc: 'Duplicate slide', usage: 'Duplicate the slide.' },
+          { keys: 'Option + Cmd + P', desc: 'Start presentation', usage: 'Start the slideshow.' },
+          { keys: 'Esc', desc: 'End presentation', usage: 'End the slideshow.' },
+          { keys: 'Cmd + Shift + K', desc: 'Hyperlink', usage: 'Add a hyperlink.' },
+        ]
+      },
+    ]
+  },
   basecamp: {
     name: 'Basecamp',
     icon: 'fas fa-campground',
@@ -11907,7 +11881,7 @@ keynote: {
       },
     ]
   },
-dbeaver: {
+  dbeaver: {
       name: 'DBeaver',
       icon: 'fas fa-database',
       source: 'https://github.com/dbeaver/dbeaver/wiki/Shortcuts',
@@ -12208,7 +12182,7 @@ dbeaver: {
       },
     ]
   },
-github_desktop: {
+  github_desktop: {
       name: 'GitHub Desktop',
       icon: 'fab fa-github',
       source: 'https://docs.github.com/en/desktop/overview/github-desktop-keyboard-shortcuts',
@@ -12310,7 +12284,7 @@ github_desktop: {
       },
     ]
   },
-gcloud: {
+  gcloud: {
       name: 'Google Cloud CLI',
       icon: 'fab fa-google',
       source: 'https://cloud.google.com/sdk/gcloud/reference',
@@ -12498,7 +12472,7 @@ gcloud: {
         },
       ]
     },
-azure_cli: {
+  azure_cli: {
       name: 'Azure CLI',
       icon: 'fab fa-microsoft',
       source: 'https://learn.microsoft.com/en-us/cli/azure/reference-index',
@@ -12718,7 +12692,7 @@ azure_cli: {
       ] }
     ]
   },
-cron: {
+  cron: {
       name: 'Cron / Crontab',
       icon: 'fas fa-clock',
       source: 'https://man7.org/linux/man-pages/man1/crontab.1.html',
@@ -12844,7 +12818,7 @@ cron: {
     ]
   },
 
-awk_cmd: {
+  awk_cmd: {
       name: 'awk',
       icon: 'fas fa-terminal',
       source: 'https://man7.org/linux/man-pages/man1/gawk.1.html',
@@ -12910,7 +12884,7 @@ awk_cmd: {
       ]
     },
 
-jq_cmd: {
+  jq_cmd: {
       name: 'jq (JSON)',
       icon: 'fas fa-code',
       source: 'https://jqlang.github.io/jq/manual/',
@@ -13186,7 +13160,7 @@ jq_cmd: {
       },
     ]
   },
-tcpdump_cmd: {
+  tcpdump_cmd: {
       name: 'tcpdump',
       icon: 'fas fa-network-wired',
       source: 'https://man7.org/linux/man-pages/man1/tcpdump.1.html',
@@ -13262,7 +13236,7 @@ tcpdump_cmd: {
       ]
     },
 
-wireshark: {
+  wireshark: {
       name: 'Wireshark Filters',
       icon: 'fas fa-filter',
       source: 'https://www.wireshark.org/docs/man-pages/wireshark.html',
@@ -13464,7 +13438,7 @@ wireshark: {
       },
     ]
   },
-vagrant: {
+  vagrant: {
       name: 'Vagrant',
       icon: 'fas fa-cube',
       source: 'https://developer.hashicorp.com/vagrant/docs/cli',
@@ -13506,7 +13480,7 @@ vagrant: {
         },
       ]
     },
-htop_cmd: {
+  htop_cmd: {
       name: 'htop',
       icon: 'fas fa-chart-bar',
       source: 'https://man7.org/linux/man-pages/man1/htop.1.html',
@@ -13657,7 +13631,7 @@ htop_cmd: {
       },
     ]
   },
-esxi: {
+  esxi: {
       name: 'VMware ESXi',
       icon: 'fas fa-server',
       source: 'https://developer.broadcom.com/xapis/esxcli-command-reference/latest/',
@@ -13761,7 +13735,7 @@ esxi: {
       },
     ]
   },
-grafana: {
+  grafana: {
       name: 'Grafana',
       icon: 'fas fa-chart-line',
       source: 'https://grafana.com/docs/grafana/latest/dashboards/use-dashboards/',
@@ -13793,7 +13767,7 @@ grafana: {
         },
       ]
     },
-elasticsearch: {
+  elasticsearch: {
       name: 'Elasticsearch',
       icon: 'fas fa-search',
       source: 'https://github.com/elastic/elasticsearch-specification',
@@ -14685,7 +14659,7 @@ elasticsearch: {
       },
     ]
   },
-paloalto: {
+  paloalto: {
       name: 'Palo Alto PAN-OS',
       icon: 'fas fa-shield-alt',
       source: 'https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-cli-quick-start/get-started-with-the-cli/cli-cheat-sheets',
@@ -15149,7 +15123,7 @@ paloalto: {
       ] }
     ]
   },
-framer: {
+  framer: {
       name: 'Framer',
       icon: 'fas fa-desktop',
       source: 'https://www.framer.com/shortcuts',
@@ -15233,7 +15207,7 @@ framer: {
         },
       ]
     },
-spline: {
+  spline: {
       name: 'Spline 3D',
       icon: 'fas fa-cube',
       source: 'https://docs.spline.design/basics/keyboard-shortcuts',
@@ -15284,7 +15258,7 @@ spline: {
         },
       ]
     },
-lunacy: {
+  lunacy: {
       name: 'Lunacy',
       icon: 'fas fa-palette',
       source: 'https://docs.icons8.com/shortcuts',
@@ -15880,7 +15854,7 @@ lunacy: {
       },
     ]
   },
-godot: {
+  godot: {
       name: 'Godot Engine',
       icon: 'fas fa-gamepad',
       source: 'https://docs.godotengine.org/en/4.5/tutorials/editor/default_key_mapping.html',
@@ -16114,7 +16088,7 @@ godot: {
         },
       ]
     },
-cinema4d: {
+  cinema4d: {
       name: 'Cinema 4D',
       icon: 'fas fa-cube',
       source: 'https://help.maxon.net/c4d/en-us/Content/html/Shortcuts.html',
@@ -16533,7 +16507,7 @@ cinema4d: {
       ] }
     ]
   },
-raycast: {
+  raycast: {
       name: 'Raycast',
       icon: 'fas fa-bolt',
       source: 'https://manual.raycast.com/keyboard-shortcuts',
