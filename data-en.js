@@ -5130,20 +5130,112 @@ const shortcutData = {
   lvm: {
     name: 'LVM (Logical Volume)',
     icon: 'fas fa-hdd',
+    source: 'https://man7.org/linux/man-pages/man8/lvm.8.html',
     categories: [
       {
-        name: 'Volume Management',
+        name: 'Built-in Commands',
         shortcuts: [
-          { keys: 'pvs', desc: 'List PVs', usage: 'List Physical Volumes.' },
-          { keys: 'vgs', desc: 'List VGs', usage: 'List Volume Groups.' },
-          { keys: 'lvs', desc: 'List LVs', usage: 'List Logical Volumes.' },
-          { keys: 'pvcreate [device]', desc: 'Create PV', usage: 'Initialize a device as Physical Volume.' },
-          { keys: 'vgcreate [VG] [PV]', desc: 'Create VG', usage: 'Create a Volume Group.' },
-          { keys: 'lvcreate -L [size] -n [LV] [VG]', desc: 'Create LV', usage: 'Create a Logical Volume.' },
-          { keys: 'lvextend -L +[size] [LV]', desc: 'Extend LV', usage: 'Extend a Logical Volume.' },
-          { keys: 'resize2fs [LV]', desc: 'Resize filesystem', usage: 'Resize filesystem to match extended LV.' },
+          { keys: 'config', desc: 'The same as lvmconfig(8) below', usage: 'The same as lvmconfig(8) below.' },
+          { keys: 'devtypes', desc: 'Display the recognised built-in block device types', usage: 'Display the recognised built-in block device types.' },
+          { keys: 'dumpconfig', desc: 'The same as lvmconfig(8) below', usage: 'The same as lvmconfig(8) below.' },
+          { keys: 'formats', desc: 'Display recognised metadata formats', usage: 'Display recognised metadata formats.' },
+          { keys: 'fullreport', desc: 'Report information about PVs, PV segments, VGs', usage: 'Report information about PVs, PV segments, VGs, LVs and LV segments, all at once.' },
+          { keys: 'help', desc: 'Display the help text', usage: 'Display the help text.' },
+          { keys: 'lastlog', desc: 'Display log report of last command run in LVM shell if', usage: 'Display log report of last command run in LVM shell if command log reporting is enabled.' },
+          { keys: 'lvpoll', desc: 'Complete lvmpolld operations (Internal command)', usage: 'Complete lvmpolld operations (Internal command).' },
+          { keys: 'segtypes', desc: 'Display recognised Logical Volume segment types', usage: 'Display recognised Logical Volume segment types.' },
+          { keys: 'systemid', desc: 'Display any system ID currently set on this host', usage: 'Display any system ID currently set on this host.' },
+          { keys: 'tags', desc: 'Display any tags defined on this host', usage: 'Display any tags defined on this host.' },
+          { keys: 'version', desc: 'Display version information', usage: 'Display version information.' }
         ]
       },
+      {
+        name: 'Physical Volume Commands',
+        shortcuts: [
+          { keys: 'pvchange', desc: 'Change attributes of a Physical Volume', usage: 'Change attributes of a Physical Volume.' },
+          { keys: 'pvck', desc: 'Check Physical Volume metadata', usage: 'Check Physical Volume metadata.' },
+          { keys: 'pvcreate', desc: 'Initialize a disk or partition for use by LVM', usage: 'Initialize a disk or partition for use by LVM.' },
+          { keys: 'pvdisplay', desc: 'Display attributes of a Physical Volume', usage: 'Display attributes of a Physical Volume.' },
+          { keys: 'pvmove', desc: 'Move Physical Extents', usage: 'Move Physical Extents.' },
+          { keys: 'pvremove', desc: 'Remove a Physical Volume', usage: 'Remove a Physical Volume.' },
+          { keys: 'pvresize', desc: 'Resize a disk or partition in use by LVM', usage: 'Resize a disk or partition in use by LVM.' },
+          { keys: 'pvs', desc: 'Report information about Physical Volumes', usage: 'Report information about Physical Volumes.' },
+          { keys: 'pvscan', desc: 'List Physical Volumes', usage: 'List Physical Volumes.' }
+        ]
+      },
+      {
+        name: 'Volume Group Commands',
+        shortcuts: [
+          { keys: 'vgcfgbackup', desc: 'Backup Volume Group descriptor area', usage: 'Backup Volume Group descriptor area.' },
+          { keys: 'vgcfgrestore', desc: 'Restore Volume Group descriptor area', usage: 'Restore Volume Group descriptor area.' },
+          { keys: 'vgchange', desc: 'Change attributes of a Volume Group', usage: 'Change attributes of a Volume Group.' },
+          { keys: 'vgck', desc: 'Check Volume Group metadata', usage: 'Check Volume Group metadata.' },
+          { keys: 'vgcreate', desc: 'Create a Volume Group', usage: 'Create a Volume Group.' },
+          { keys: 'vgdisplay', desc: 'Display attributes of Volume Groups', usage: 'Display attributes of Volume Groups.' },
+          { keys: 'vgexport', desc: 'Make Volume Groups unknown to the system', usage: 'Make Volume Groups unknown to the system.' },
+          { keys: 'vgextend', desc: 'Add Physical Volumes to a Volume Group', usage: 'Add Physical Volumes to a Volume Group.' },
+          { keys: 'vgimport', desc: 'Make exported Volume Groups known to the system', usage: 'Make exported Volume Groups known to the system.' },
+          { keys: 'vgimportclone', desc: 'Import and rename duplicated Volume Group', usage: 'Import and rename duplicated Volume Group (e.g. a hardware snapshot).' },
+          { keys: 'vgimportdevices', desc: 'Add PVs from a VG to the devices file', usage: 'Add PVs from a VG to the devices file.' },
+          { keys: 'vgmerge', desc: 'Merge two Volume Groups', usage: 'Merge two Volume Groups.' },
+          { keys: 'vgmknodes', desc: 'Recreate Volume Group directory and Logical Volume special', usage: 'Recreate Volume Group directory and Logical Volume special files' },
+          { keys: 'vgreduce', desc: 'Reduce a Volume Group by removing one or more Physical', usage: 'Reduce a Volume Group by removing one or more Physical Volumes.' },
+          { keys: 'vgremove', desc: 'Remove a Volume Group', usage: 'Remove a Volume Group.' },
+          { keys: 'vgrename', desc: 'Rename a Volume Group', usage: 'Rename a Volume Group.' },
+          { keys: 'vgs', desc: 'Report information about Volume Groups', usage: 'Report information about Volume Groups.' },
+          { keys: 'vgscan', desc: 'List Volume Groups', usage: 'List Volume Groups.' },
+          { keys: 'vgsplit', desc: 'Split a Volume Group into two', usage: 'Split a Volume Group into two, moving any logical volumes from one Volume Group to another by moving entire Physical Volumes.' }
+        ]
+      },
+      {
+        name: 'Logical Volume Commands',
+        shortcuts: [
+          { keys: 'lvchange', desc: 'Change attributes of a Logical Volume', usage: 'Change attributes of a Logical Volume.' },
+          { keys: 'lvconvert', desc: 'Convert a Logical Volume from linear to mirror or snapshot', usage: 'Convert a Logical Volume from linear to mirror or snapshot.' },
+          { keys: 'lvcreate', desc: 'Create a Logical Volume in an existing Volume Group', usage: 'Create a Logical Volume in an existing Volume Group.' },
+          { keys: 'lvdisplay', desc: 'Display attributes of a Logical Volume', usage: 'Display attributes of a Logical Volume.' },
+          { keys: 'lvextend', desc: 'Extend the size of a Logical Volume', usage: 'Extend the size of a Logical Volume.' },
+          { keys: 'lvreduce', desc: 'Reduce the size of a Logical Volume', usage: 'Reduce the size of a Logical Volume.' },
+          { keys: 'lvremove', desc: 'Remove a Logical Volume', usage: 'Remove a Logical Volume.' },
+          { keys: 'lvrename', desc: 'Rename a Logical Volume', usage: 'Rename a Logical Volume.' },
+          { keys: 'lvresize', desc: 'Resize a Logical Volume', usage: 'Resize a Logical Volume.' },
+          { keys: 'lvs', desc: 'Report information about Logical Volumes', usage: 'Report information about Logical Volumes.' },
+          { keys: 'lvscan', desc: 'List Logical Volumes', usage: 'List Logical Volumes.' }
+        ]
+      },
+      {
+        name: 'LVM Utilities',
+        shortcuts: [
+          { keys: 'lvmconfig', desc: 'Display the configuration information after loading', usage: 'Display the configuration information after loading lvm.conf(5) and any other configuration files.' },
+          { keys: 'lvmdevices', desc: 'Manage the devices file', usage: 'Manage the devices file.' },
+          { keys: 'lvmdiskscan', desc: 'Scan for all devices visible to LVM', usage: 'Scan for all devices visible to LVM.' },
+          { keys: 'lvmdump', desc: 'Create LVM information dumps for diagnostic purposes', usage: 'Create LVM information dumps for diagnostic purposes.' }
+        ]
+      },
+      {
+        name: 'Environment Variables',
+        shortcuts: [
+          { keys: 'HOME', desc: 'Directory containing .lvm_history if the internal readline', usage: 'Directory containing .lvm_history if the internal readline shell is invoked.' },
+          { keys: 'LVM_OUT_FD', desc: 'File descriptor to use for common output from LVM commands', usage: 'File descriptor to use for common output from LVM commands.' },
+          { keys: 'LVM_ERR_FD', desc: 'File descriptor to use for error output from LVM commands', usage: 'File descriptor to use for error output from LVM commands.' },
+          { keys: 'LVM_REPORT_FD', desc: 'File descriptor to use for report output from LVM commands', usage: 'File descriptor to use for report output from LVM commands.' },
+          { keys: 'LVM_COMMAND_PROFILE', desc: 'Name of default command profile to use for LVM commands', usage: 'Name of default command profile to use for LVM commands. This profile is overridden by direct use of --commandprofile command line option.' },
+          { keys: 'LVM_RUN_BY_DMEVENTD', desc: 'This variable is normally set by dmeventd plugin to inform', usage: 'This variable is normally set by dmeventd plugin to inform lvm command it is running from dmeventd plugin so lvm takes some extra action to avoid communication and deadlocks with dmeventd.' },
+          { keys: 'LVM_SYSTEM_DIR', desc: 'Directory containing lvm.conf(5) and other LVM system', usage: 'Directory containing lvm.conf(5) and other LVM system files. Defaults to "/etc/lvm".' },
+          { keys: 'LVM_SUPPRESS_FD_WARNINGS', desc: 'Suppress warnings about unexpected file descriptors passed', usage: 'Suppress warnings about unexpected file descriptors passed into LVM.' },
+          { keys: 'LVM_SUPPRESS_SYSLOG', desc: 'Suppress contacting syslog', usage: 'Suppress contacting syslog.' },
+          { keys: 'LVM_VG_NAME', desc: 'The Volume Group name that is assumed for any reference', usage: 'The Volume Group name that is assumed for any reference to a Logical Volume that doesn\'t specify a path. Not set by default.' },
+          { keys: 'LVM_LVMPOLLD_PIDFILE', desc: 'Path to the file that stores the lvmpolld process ID', usage: 'Path to the file that stores the lvmpolld process ID.' },
+          { keys: 'LVM_LVMPOLLD_SOCKET', desc: 'Path to the socket used to communicate with lvmpolld', usage: 'Path to the socket used to communicate with lvmpolld..' },
+          { keys: 'LVM_LOG_FILE_EPOCH', desc: 'A string of up to 32 letters appended to the log filename', usage: 'A string of up to 32 letters appended to the log filename and followed by the process ID and a startup timestamp using this format string "_%s_%d_%llu". When set, each process logs to a separate file.' },
+          { keys: 'LVM_LOG_FILE_MAX_LINES', desc: 'If more than this number of lines are sent to the log', usage: 'If more than this number of lines are sent to the log file, the command gets aborted. Automated tests use this to terminate looping commands.' },
+          { keys: 'LVM_EXPECTED_EXIT_STATUS', desc: 'The status anticipated when the process exits', usage: 'The status anticipated when the process exits. Use ">N" to match any status greater than N. If the actual exit status matches and a log file got produced, it is deleted. LVM_LOG_FILE_EPOCH and LVM_EXPECTED_EXIT_STATUS together allow automated test scripts to discard uninteresting log data.' },
+          { keys: 'LVM_SUPPRESS_LOCKING_FAILURE_MESSAGES', desc: 'Used to suppress warning messages when the configured', usage: 'Used to suppress warning messages when the configured locking is known to be unavailable.' },
+          { keys: 'DM_ABORT_ON_INTERNAL_ERRORS', desc: 'Abort processing if the code detects a non-fatal internal', usage: 'Abort processing if the code detects a non-fatal internal error.' },
+          { keys: 'DM_DISABLE_UDEV', desc: 'Avoid interaction with udev', usage: 'Avoid interaction with udev. LVM will manage the relevant nodes in /dev directly.' },
+          { keys: 'DM_DEBUG_WITH_LINE_NUMBERS', desc: 'Prepends source file name and code line number with libdm', usage: 'Prepends source file name and code line number with libdm debugging.' }
+        ]
+      }
     ]
   },
   proxmox: {
@@ -11998,19 +12090,221 @@ const shortcutData = {
   zfs: {
     name: 'ZFS',
     icon: 'fas fa-hdd',
+    source: 'https://openzfs.github.io/openzfs-docs/man/master/8/index.html',
     categories: [
       {
-        name: 'Pool/Volume Management',
+        name: 'General',
         shortcuts: [
-          { keys: 'zpool status', desc: 'Pool status', usage: 'Check ZFS pool status.' },
-          { keys: 'zpool list', desc: 'List pools', usage: 'Show ZFS pool list.' },
-          { keys: 'zpool create [pool] [disk]', desc: 'Create pool', usage: 'Create a new ZFS pool.' },
-          { keys: 'zfs list', desc: 'List datasets', usage: 'Show ZFS dataset list.' },
-          { keys: 'zfs create [pool]/[name]', desc: 'Create dataset', usage: 'Create a new dataset.' },
-          { keys: 'zfs snapshot [name]@[snap]', desc: 'Create snapshot', usage: 'Create a snapshot.' },
-          { keys: 'zfs rollback [name]@[snap]', desc: 'Rollback', usage: 'Rollback to a snapshot.' },
+          { keys: 'zfs -?', desc: 'Displays a help message', usage: 'Displays a help message.' },
+          { keys: 'zfs -V, --version', desc: 'Displays the software version of the zfs userland utility', usage: 'Displays the software version of the zfs userland utility and the zfs kernel module. Use -j option to output in JSON format.' },
+          { keys: 'zfs version [-j]', desc: 'Displays the software version of the zfs userland utility', usage: 'Displays the software version of the zfs userland utility and the zfs kernel module. Use -j option to output in JSON format.' },
+          { keys: 'zpool -?', desc: 'Displays a help message', usage: 'Displays a help message.' },
+          { keys: 'zpool -V, --version', desc: 'Displays the software version of the zpool userland', usage: 'Displays the software version of the zpool userland utility and the ZFS kernel module. Use -j option to output in JSON format.' },
+          { keys: 'zpool version [-j]', desc: 'Displays the software version of the zpool userland', usage: 'Displays the software version of the zpool userland utility and the ZFS kernel module. Use -j option to output in JSON format.' }
         ]
       },
+      {
+        name: 'Dataset Management',
+        shortcuts: [
+          { keys: 'zfs list', desc: 'Lists the property information for the given datasets', usage: 'Lists the property information for the given datasets in tabular form.' },
+          { keys: 'zfs create', desc: 'Creates a new ZFS file system or volume', usage: 'Creates a new ZFS file system or volume.' },
+          { keys: 'zfs destroy', desc: 'Destroys the given dataset(s), snapshot(s), or bookmark', usage: 'Destroys the given dataset(s), snapshot(s), or bookmark.' },
+          { keys: 'zfs rename', desc: 'Renames the given dataset (filesystem or snapshot)', usage: 'Renames the given dataset (filesystem or snapshot).' },
+          { keys: 'zfs upgrade', desc: 'Manage upgrading the on-disk version of filesystems', usage: 'Manage upgrading the on-disk version of filesystems.' }
+        ]
+      },
+      {
+        name: 'Snapshots',
+        shortcuts: [
+          { keys: 'zfs snapshot', desc: 'Creates snapshots with the given names', usage: 'Creates snapshots with the given names.' },
+          { keys: 'zfs rollback', desc: 'Roll back the given dataset to a previous snapshot', usage: 'Roll back the given dataset to a previous snapshot.' },
+          { keys: 'zfs hold', desc: 'Add or remove a hold reference to the specified snapshot', usage: 'Add or remove a hold reference to the specified snapshot or snapshots. If a hold exists on a snapshot, attempts to destroy that snapshot by using the zfs destroy command return EBUSY.' },
+          { keys: 'zfs release', desc: 'Add or remove a hold reference to the specified snapshot', usage: 'Add or remove a hold reference to the specified snapshot or snapshots. If a hold exists on a snapshot, attempts to destroy that snapshot by using the zfs destroy command return EBUSY.' },
+          { keys: 'zfs diff', desc: 'Display the difference between a snapshot of a given', usage: 'Display the difference between a snapshot of a given filesystem and another snapshot of that filesystem from a later time or the current contents of the filesystem.' }
+        ]
+      },
+      {
+        name: 'Clones',
+        shortcuts: [
+          { keys: 'zfs clone', desc: 'Creates a clone of the given snapshot', usage: 'Creates a clone of the given snapshot.' },
+          { keys: 'zfs promote', desc: 'Promotes a clone file system to no longer be dependent', usage: 'Promotes a clone file system to no longer be dependent on its "origin" snapshot.' }
+        ]
+      },
+      {
+        name: 'Send & Receive',
+        shortcuts: [
+          { keys: 'zfs send', desc: 'Generate a send stream, which may be of a filesystem', usage: 'Generate a send stream, which may be of a filesystem, and may be incremental from a bookmark.' },
+          { keys: 'zfs receive', desc: 'Creates a snapshot whose contents are as specified', usage: 'Creates a snapshot whose contents are as specified in the stream provided on standard input. If a full stream is received, then a new file system is created as well. Streams are created using the zfs-send(8) subcommand, which by default creates a full stream.' },
+          { keys: 'zfs bookmark', desc: 'Creates a new bookmark of the given snapshot or bookmark', usage: 'Creates a new bookmark of the given snapshot or bookmark. Bookmarks mark the point in time when the snapshot was created, and can be used as the incremental source for a zfs send command.' },
+          { keys: 'zfs redact', desc: 'Generate a new redaction bookmark', usage: 'Generate a new redaction bookmark. This feature can be used to allow clones of a filesystem to be made available on a remote system, in the case where their parent need not (or needs to not) be usable.' }
+        ]
+      },
+      {
+        name: 'Properties',
+        shortcuts: [
+          { keys: 'zfs get', desc: 'Displays properties for the given datasets', usage: 'Displays properties for the given datasets.' },
+          { keys: 'zfs set', desc: 'Sets the property or list of properties to the given', usage: 'Sets the property or list of properties to the given value(s) for each dataset.' },
+          { keys: 'zfs inherit', desc: 'Clears the specified property', usage: 'Clears the specified property, causing it to be inherited from an ancestor, restored to default if no ancestor has the property set, or with the -S option reverted to the received value if one exists.' }
+        ]
+      },
+      {
+        name: 'Quotas',
+        shortcuts: [
+          { keys: 'zfs userspace', desc: 'Displays space consumed by, and quotas on, each user', usage: 'Displays space consumed by, and quotas on, each user, group, or project in the specified filesystem or snapshot.' },
+          { keys: 'zfs groupspace', desc: 'Displays space consumed by, and quotas on, each user', usage: 'Displays space consumed by, and quotas on, each user, group, or project in the specified filesystem or snapshot.' },
+          { keys: 'zfs projectspace', desc: 'Displays space consumed by, and quotas on, each user', usage: 'Displays space consumed by, and quotas on, each user, group, or project in the specified filesystem or snapshot.' },
+          { keys: 'zfs project', desc: 'List, set, or clear project ID and/or inherit flag', usage: 'List, set, or clear project ID and/or inherit flag on the files or directories.' }
+        ]
+      },
+      {
+        name: 'Mountpoints',
+        shortcuts: [
+          { keys: 'zfs mount', desc: 'Displays all ZFS file systems currently mounted', usage: 'Displays all ZFS file systems currently mounted, or mount ZFS filesystem on a path described by its mountpoint property.' },
+          { keys: 'zfs unmount', desc: 'Unmounts currently mounted ZFS file systems', usage: 'Unmounts currently mounted ZFS file systems.' }
+        ]
+      },
+      {
+        name: 'Shares',
+        shortcuts: [
+          { keys: 'zfs share', desc: 'Shares available ZFS file systems', usage: 'Shares available ZFS file systems.' },
+          { keys: 'zfs unshare', desc: 'Unshares currently shared ZFS file systems', usage: 'Unshares currently shared ZFS file systems.' }
+        ]
+      },
+      {
+        name: 'Delegated Administration',
+        shortcuts: [
+          { keys: 'zfs allow', desc: 'Delegate permissions on the specified filesystem or volume', usage: 'Delegate permissions on the specified filesystem or volume.' },
+          { keys: 'zfs unallow', desc: 'Remove delegated permissions on the specified filesystem', usage: 'Remove delegated permissions on the specified filesystem or volume.' }
+        ]
+      },
+      {
+        name: 'Encryption',
+        shortcuts: [
+          { keys: 'zfs change-key', desc: 'Add or change an encryption key on the specified dataset', usage: 'Add or change an encryption key on the specified dataset.' },
+          { keys: 'zfs load-key', desc: 'Load the key for the specified encrypted dataset', usage: 'Load the key for the specified encrypted dataset, enabling access.' },
+          { keys: 'zfs unload-key', desc: 'Unload a key for the specified dataset', usage: 'Unload a key for the specified dataset, removing the ability to access the dataset.' }
+        ]
+      },
+      {
+        name: 'Channel Programs',
+        shortcuts: [
+          { keys: 'zfs program', desc: 'Execute ZFS administrative operations programmatically via', usage: 'Execute ZFS administrative operations programmatically via a Lua script-language channel program.' }
+        ]
+      },
+      {
+        name: 'Data rewrite',
+        shortcuts: [
+          { keys: 'zfs rewrite', desc: 'Rewrite specified files without modification', usage: 'Rewrite specified files without modification.' }
+        ]
+      },
+      {
+        name: 'Jails',
+        shortcuts: [
+          { keys: 'zfs jail', desc: 'Attaches a filesystem to a jail', usage: 'Attaches a filesystem to a jail.' },
+          { keys: 'zfs unjail', desc: 'Detaches a filesystem from a jail', usage: 'Detaches a filesystem from a jail.' }
+        ]
+      },
+      {
+        name: 'Waiting',
+        shortcuts: [
+          { keys: 'zfs wait', desc: 'Wait for background activity in a filesystem to complete', usage: 'Wait for background activity in a filesystem to complete.' }
+        ]
+      },
+      {
+        name: 'Pool Creation',
+        shortcuts: [
+          { keys: 'zpool create', desc: 'Creates a new storage pool containing the virtual devices', usage: 'Creates a new storage pool containing the virtual devices specified on the command line.' },
+          { keys: 'zpool initialize', desc: 'Begins initializing by writing to all unallocated regions', usage: 'Begins initializing by writing to all unallocated regions on the specified devices, or all eligible devices in the pool if no individual devices are specified.' }
+        ]
+      },
+      {
+        name: 'Pool Destruction',
+        shortcuts: [
+          { keys: 'zpool destroy', desc: 'Destroys the given pool', usage: 'Destroys the given pool, freeing up any devices for other use.' },
+          { keys: 'zpool labelclear', desc: 'Removes ZFS label information from the specified device', usage: 'Removes ZFS label information from the specified device, making all data inaccessible without specialized recovery tools. Cannot be undone with ZFS tooling.' }
+        ]
+      },
+      {
+        name: 'Virtual Devices',
+        shortcuts: [
+          { keys: 'zpool attach', desc: 'Converts a non-redundant disk into a mirror', usage: 'Converts a non-redundant disk into a mirror, or increases the redundancy level of an existing mirror (attach), or performs the inverse operation (detach).' },
+          { keys: 'zpool detach', desc: 'Converts a non-redundant disk into a mirror', usage: 'Converts a non-redundant disk into a mirror, or increases the redundancy level of an existing mirror (attach), or performs the inverse operation (detach).' },
+          { keys: 'zpool add', desc: 'Adds the specified virtual devices to the given pool', usage: 'Adds the specified virtual devices to the given pool, or removes the specified device from the pool.' },
+          { keys: 'zpool remove', desc: 'Adds the specified virtual devices to the given pool', usage: 'Adds the specified virtual devices to the given pool, or removes the specified device from the pool.' },
+          { keys: 'zpool replace', desc: 'Replaces an existing device', usage: 'Replaces an existing device (which may be faulted) with a new one.' },
+          { keys: 'zpool split', desc: 'Creates a new pool by splitting all mirrors in an existing', usage: 'Creates a new pool by splitting all mirrors in an existing pool (which decreases its redundancy).' }
+        ]
+      },
+      {
+        name: 'Pool Properties',
+        shortcuts: [
+          { keys: 'zpool list', desc: 'Lists the given pools along with a health status and space', usage: 'Lists the given pools along with a health status and space usage.' },
+          { keys: 'zpool get', desc: 'Retrieves the given list of properties', usage: 'Retrieves the given list of properties (or all properties if all is used) for the specified storage pool(s).' },
+          { keys: 'zpool set', desc: 'Retrieves the given list of properties', usage: 'Retrieves the given list of properties (or all properties if all is used) for the specified storage pool(s).' }
+        ]
+      },
+      {
+        name: 'Monitoring',
+        shortcuts: [
+          { keys: 'zpool status', desc: 'Displays the detailed health status for the given pools', usage: 'Displays the detailed health status for the given pools.' },
+          { keys: 'zpool iostat', desc: 'Displays logical I/O statistics for the given pools/vdevs', usage: 'Displays logical I/O statistics for the given pools/vdevs. Physical I/O operations may be observed via iostat(1).' },
+          { keys: 'zpool events', desc: 'Lists all recent events generated by the ZFS kernel', usage: 'Lists all recent events generated by the ZFS kernel modules. These events are consumed by the zed(8) and used to automate administrative tasks such as replacing a failed device with a hot spare. That manual page also describes the subclasses and event payloads that can be generated.' },
+          { keys: 'zpool history', desc: 'Displays the command history of the specified pool(s)', usage: 'Displays the command history of the specified pool(s) or all pools if no pool is specified.' }
+        ]
+      },
+      {
+        name: 'Maintenance',
+        shortcuts: [
+          { keys: 'zpool prefetch', desc: 'Prefetches specific types of pool data', usage: 'Prefetches specific types of pool data.' },
+          { keys: 'zpool scrub', desc: 'Begins a scrub or resumes a paused scrub', usage: 'Begins a scrub or resumes a paused scrub.' },
+          { keys: 'zpool condense', desc: 'Condense, flush', usage: 'Condense, flush, garbage collect or otherwise clean up pool metadata.' },
+          { keys: 'zpool checkpoint', desc: 'Checkpoints the current state of pool', usage: 'Checkpoints the current state of pool, which can be later restored by zpool import --rewind-to-checkpoint.' },
+          { keys: 'zpool trim', desc: 'Initiates an immediate on-demand TRIM operation', usage: 'Initiates an immediate on-demand TRIM operation for all of the free space in a pool. This operation informs the underlying storage devices of all blocks in the pool which are no longer allocated and allows thinly provisioned devices to reclaim the space.' },
+          { keys: 'zpool sync', desc: 'This command forces all in-core dirty data to be written', usage: 'This command forces all in-core dirty data to be written to the primary pool storage and not the ZIL. It will also update administrative information including quota reporting. Without arguments, zpool sync will sync all pools on the system. Otherwise, it will sync only the specified pool(s).' },
+          { keys: 'zpool upgrade', desc: 'Manage the on-disk format version of storage pools', usage: 'Manage the on-disk format version of storage pools.' },
+          { keys: 'zpool wait', desc: 'Waits until all background activity of the given types has', usage: 'Waits until all background activity of the given types has ceased in the given pool.' }
+        ]
+      },
+      {
+        name: 'Fault Resolution',
+        shortcuts: [
+          { keys: 'zpool offline', desc: 'Takes the specified physical device offline or brings', usage: 'Takes the specified physical device offline or brings it online.' },
+          { keys: 'zpool online', desc: 'Takes the specified physical device offline or brings', usage: 'Takes the specified physical device offline or brings it online.' },
+          { keys: 'zpool resilver', desc: 'Starts a resilver', usage: 'Starts a resilver. If an existing resilver is already running it will be restarted from the beginning.' },
+          { keys: 'zpool reopen', desc: 'Reopen all the vdevs associated with the pool', usage: 'Reopen all the vdevs associated with the pool.' },
+          { keys: 'zpool clear', desc: 'Clears device errors in a pool', usage: 'Clears device errors in a pool.' }
+        ]
+      },
+      {
+        name: 'Import & Export',
+        shortcuts: [
+          { keys: 'zpool import', desc: 'Make disks containing ZFS storage pools available', usage: 'Make disks containing ZFS storage pools available for use on the system.' },
+          { keys: 'zpool export', desc: 'Exports the given pools from the system', usage: 'Exports the given pools from the system.' },
+          { keys: 'zpool reguid', desc: 'Generates a new unique identifier for the pool', usage: 'Generates a new unique identifier for the pool.' }
+        ]
+      },
+      {
+        name: 'Environment Variables',
+        shortcuts: [
+          { keys: 'ZFS_COLOR', desc: 'Use ANSI color in zfs diff and zfs list output', usage: 'Use ANSI color in zfs diff and zfs list output.' },
+          { keys: 'ZFS_MOUNT_HELPER', desc: 'Cause zfs mount to use mount(8) to mount ZFS datasets', usage: 'Cause zfs mount to use mount(8) to mount ZFS datasets. This option is provided for backwards compatibility with older ZFS versions.' },
+          { keys: 'ZFS_SET_PIPE_MAX', desc: 'Tells zfs to set the maximum pipe size for sends/receives', usage: 'Tells zfs to set the maximum pipe size for sends/receives. Disabled by default on Linux due to an unfixed deadlock in Linux\'s pipe size handling code.' },
+          { keys: 'ZFS_MODULE_TIMEOUT', desc: 'Time, in seconds, to wait for /dev/zfs to appear', usage: 'Time, in seconds, to wait for /dev/zfs to appear. Defaults to 10, max 600 (10 minutes). If <0, wait forever; if 0, don\'t wait.' },
+          { keys: 'ZFS_ABORT', desc: 'Cause zpool to dump core on exit for the purposes', usage: 'Cause zpool to dump core on exit for the purposes of running ::findleaks.' },
+          { keys: 'ZPOOL_AUTO_POWER_ON_SLOT', desc: 'Automatically attempt to turn on the drives enclosure slot', usage: 'Automatically attempt to turn on the drives enclosure slot power to a drive when running the zpool online or zpool clear commands. This has the same effect as passing the --power option to those commands.' },
+          { keys: 'ZPOOL_POWER_ON_SLOT_TIMEOUT_MS', desc: 'The maximum time in milliseconds to wait for a slot power', usage: 'The maximum time in milliseconds to wait for a slot power sysfs value to return the correct value after writing it. For example, after writing "on" to the sysfs enclosure slot power_control file, it can take some time for the enclosure to power down the slot and return "on" if you read back the \'power_control\' value. Defaults to 30 seconds (30000ms) if not set.' },
+          { keys: 'ZPOOL_IMPORT_PATH', desc: 'The search path for devices or files to use with the pool', usage: 'The search path for devices or files to use with the pool. This is a colon-separated list of directories in which zpool looks for device nodes and files. Similar to the -d option in zpool import.' },
+          { keys: 'ZPOOL_IMPORT_UDEV_TIMEOUT_MS', desc: 'The maximum time in milliseconds that zpool import will', usage: 'The maximum time in milliseconds that zpool import will wait for an expected device to be available.' },
+          { keys: 'ZPOOL_STATUS_NON_NATIVE_ASHIFT_IGNORE', desc: 'If set, suppress warning about non-native vdev ashift', usage: 'If set, suppress warning about non-native vdev ashift in zpool status. The value is not used, only the presence or absence of the variable matters.' },
+          { keys: 'ZPOOL_VDEV_NAME_GUID', desc: 'Cause zpool subcommands to output vdev GUIDs by default', usage: 'Cause zpool subcommands to output vdev GUIDs by default. This behavior is identical to the zpool status -g command line option.' },
+          { keys: 'ZPOOL_VDEV_NAME_FOLLOW_LINKS', desc: 'Cause zpool subcommands to follow links for vdev names', usage: 'Cause zpool subcommands to follow links for vdev names by default. This behavior is identical to the zpool status -L command line option.' },
+          { keys: 'ZPOOL_VDEV_NAME_PATH', desc: 'Cause zpool subcommands to output full vdev path names', usage: 'Cause zpool subcommands to output full vdev path names by default. This behavior is identical to the zpool status -P command line option.' },
+          { keys: 'ZFS_VDEV_DEVID_OPT_OUT', desc: 'Older OpenZFS implementations had issues when attempting', usage: 'Older OpenZFS implementations had issues when attempting to display pool config vdev names if a devid NVP value is present in the pool\'s config. For example, a pool that originated on illumos platform would have a devid value in the config and zpool status would fail when listing the config. This would also be true for future Linux-based pools. A pool can be stripped of any devid values on import or prevented from adding them on zpool create or zpool add by setting ZFS_VDEV_DEVID_OPT_OUT.' },
+          { keys: 'ZPOOL_SCRIPTS_AS_ROOT', desc: 'Allow a privileged user to run zpool status/iostat -c', usage: 'Allow a privileged user to run zpool status/iostat -c. Normally, only unprivileged users are allowed to run -c.' },
+          { keys: 'ZPOOL_SCRIPTS_PATH', desc: 'The search path for scripts when running zpool', usage: 'The search path for scripts when running zpool status/iostat -c. This is a colon-separated list of directories and overrides the default ~/.zpool.d and /etc/zfs/zpool.d search paths.' },
+          { keys: 'ZPOOL_SCRIPTS_ENABLED', desc: 'Allow a user to run zpool status/iostat -c', usage: 'Allow a user to run zpool status/iostat -c. If ZPOOL_SCRIPTS_ENABLED is not set, it is assumed that the user is allowed to run zpool status/iostat -c.' }
+        ]
+      }
     ]
   },
   grok: {
