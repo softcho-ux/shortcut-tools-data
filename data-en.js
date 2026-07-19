@@ -10835,19 +10835,262 @@ const shortcutData = {
       ] }
     ]
   },
+
   keynote: {
     name: 'Apple Keynote',
     icon: 'fas fa-tv',
+    source: 'https://support.apple.com/guide/keynote/keyboard-shortcuts-tanfde4a3e6d/mac',
     categories: [
       {
-        name: 'Presentation',
+        name: 'General',
         shortcuts: [
-          { keys: 'Cmd + N', desc: 'New presentation', usage: 'Create a new presentation.' },
-          { keys: 'Cmd + Shift + N', desc: 'New slide', usage: 'Add a new slide.' },
-          { keys: 'Cmd + D', desc: 'Duplicate slide', usage: 'Duplicate the slide.' },
-          { keys: 'Option + Cmd + P', desc: 'Start presentation', usage: 'Start the slideshow.' },
-          { keys: 'Esc', desc: 'End presentation', usage: 'End the slideshow.' },
-          { keys: 'Cmd + Shift + K', desc: 'Hyperlink', usage: 'Add a hyperlink.' },
+          { keys: 'Fn + D', desc: 'Start dictation', usage: 'Start dictation. To change your dictation settings, choose Apple menu > System Settings > then click Keyboard in the sidebar. (You may need to scroll down.) Go to Dictation, then make your desired changes in the Dictation section.' },
+          { keys: 'Cmd + N', desc: 'Open the theme chooser', usage: 'Open the theme chooser.' },
+          { keys: 'Option + Cmd + N', desc: 'Open the theme chooser and show the Language pop-up menu', usage: 'Open the theme chooser and show the Language pop-up menu.' },
+          { keys: 'Esc', desc: 'Close the theme chooser', usage: 'Close the theme chooser. Also in Find and delete text, use comments, and check spelling: Hide the Find window. Also in Work with tables: In the Formula Editor, discard changes. Also in Play a presentation and use the presenter mode: Close the slide switcher. Also in Play a presentation and use the presenter mode: Quit presentation mode.' },
+          { keys: 'Cmd + O', desc: 'Open an existing presentation', usage: 'Open an existing presentation.' },
+          { keys: 'Cmd + S', desc: 'Save a presentation', usage: 'Save a presentation.' },
+          { keys: 'Option + Shift + Cmd + S', desc: 'Save as', usage: 'Save as.' },
+          { keys: 'Shift + Cmd + S', desc: 'Duplicate a presentation', usage: 'Duplicate a presentation.' },
+          { keys: 'Cmd + P', desc: 'Print a presentation', usage: 'Print a presentation.' },
+          { keys: 'Shift + Cmd + ?', desc: 'Open the Keynote User Guide', usage: 'Open the Keynote User Guide.' },
+          { keys: 'Cmd + W', desc: 'Close a window', usage: 'Close a window.' },
+          { keys: 'Option + Cmd + W', desc: 'Close all windows', usage: 'Close all windows.' },
+          { keys: 'Cmd + M', desc: 'Minimize a window', usage: 'Minimize a window.' },
+          { keys: 'Option + Cmd + M', desc: 'Minimize all windows', usage: 'Minimize all windows.' },
+          { keys: 'Ctrl + Cmd + F', desc: 'Enter full-screen view', usage: 'Enter full-screen view.' },
+          { keys: 'Shift + Cmd + >', desc: 'Zoom in', usage: 'Zoom in.' },
+          { keys: 'Shift + Cmd + <', desc: 'Zoom out', usage: 'Zoom out.' },
+          { keys: 'Cmd + ,', desc: 'Show the Settings window', usage: 'Show the Settings window.' },
+          { keys: 'Shift + Cmd + 0', desc: 'Zoom to selection', usage: 'Zoom to selection.' },
+          { keys: 'Option + Shift + Cmd + 0', desc: 'Zoom to fit content (including objects on the extended canvas) in the window', usage: 'Zoom to fit content (including objects on the extended canvas) in the window.' },
+          { keys: 'Option + Cmd + 0', desc: 'Fit slide in the window', usage: 'Fit slide in the window.' },
+          { keys: 'Cmd + 0', desc: 'Return to actual size', usage: 'Return to actual size.' },
+          { keys: 'Cmd + R', desc: 'Show the presentation rulers', usage: 'Show the presentation rulers.' },
+          { keys: 'Shift + Cmd + V', desc: 'Choose a file to insert', usage: 'Choose a file to insert. Also in Work with tables: Paste a formula result.' },
+          { keys: 'Shift + Cmd + C', desc: 'Show the Colors window', usage: 'Show the Colors window. Also in Format text: Show the Colors window.' },
+          { keys: 'Option + Cmd + T', desc: 'Hide or show the toolbar', usage: 'Hide or show the toolbar.' },
+          { keys: 'Option + Cmd + I', desc: 'Hide or show inspector sidebars', usage: 'Hide or show inspector sidebars.' },
+          { keys: 'Shift + Cmd + L', desc: 'Hide or show the object list', usage: 'Hide or show the object list. Also in Move, group, layer, and resize objects: Show or hide the object list.' },
+          { keys: 'Cmd + A', desc: 'Select all object types in the object list filter menu', usage: 'Select all object types in the object list filter menu. Also in Select text: Select all objects and text. Also in Work with tables: Select all content in a table.' },
+          { keys: 'Shift + Cmd + A', desc: 'Deselect all object types in the object list filter menu', usage: 'Deselect all object types in the object list filter menu. Also in Select text: Deselect all objects and text.' },
+          { keys: 'Ctrl + `', desc: 'Open the next tab in the sidebar', usage: 'Open the next tab in the sidebar.' },
+          { keys: 'Shift + Ctrl + `', desc: 'Open the previous tab in the sidebar', usage: 'Open the previous tab in the sidebar.' },
+          { keys: 'Shift + Cmd + E', desc: 'Enter or exit Edit Slide Layouts view', usage: 'Enter or exit Edit Slide Layouts view.' },
+          { keys: 'Shift + Cmd + N', desc: 'Add a new slide layout (from Edit Slide Layouts view)', usage: 'Add a new slide layout (from Edit Slide Layouts view).' },
+          { keys: 'Cmd + H', desc: 'Hide Keynote', usage: 'Hide Keynote.' },
+          { keys: 'Option + Cmd + H', desc: 'Hide other windows', usage: 'Hide other windows.' },
+          { keys: 'Cmd + Z', desc: 'Undo the last action', usage: 'Undo the last action.' },
+          { keys: 'Shift + Cmd + Z', desc: 'Redo the last action', usage: 'Redo the last action.' },
+          { keys: 'Cmd + Q', desc: 'Quit Keynote', usage: 'Quit Keynote.' },
+          { keys: 'Option + Cmd + Q', desc: 'Quit Keynote and keep windows open', usage: 'Quit Keynote and keep windows open.' },
+        ]
+      },
+      {
+        name: 'Move around within a presentation',
+        shortcuts: [
+          { keys: 'Left', desc: 'Move one character to the left', usage: 'Move one character to the left. Also in Use Navigator view: Collapse a slide group. Also in Use Light Table view: Move to the previous slide. Also in Play a presentation and use the presenter mode: Go to previous slide.' },
+          { keys: 'Right', desc: 'Move one character to the right', usage: 'Move one character to the right. Also in Use Navigator view: Expand a slide group. Also in Use Light Table view: Move to the next slide. Also in Play a presentation and use the presenter mode: Advance to the next slide or build.' },
+          { keys: 'Ctrl + B', desc: 'Move one character backward (works for left-to-right and right-to-left text)', usage: 'Move one character backward (works for left-to-right and right-to-left text).' },
+          { keys: 'Ctrl + F', desc: 'Move one character forward (works for left-to-right and right-to-left text)', usage: 'Move one character forward (works for left-to-right and right-to-left text).' },
+          { keys: 'Up', desc: 'Move to the line above', usage: 'Move to the line above. Also in Use Navigator view: Move to the previous slide.' },
+          { keys: 'Down', desc: 'Move to the line below', usage: 'Move to the line below. Also in Use Navigator view: Move to the next slide.' },
+          { keys: 'Option + Left', desc: 'Move to the beginning of the current or previous word', usage: 'Move to the beginning of the current or previous word. Also in Work with tables: Add a column to the left of the selected cells.' },
+          { keys: 'Option + Right', desc: 'Move to the end of the current or next word', usage: 'Move to the end of the current or next word. Also in Work with tables: Add a column to the right of the selected cells.' },
+          { keys: 'Cmd + Up', desc: 'Move to the beginning of the current text area', usage: 'Move to the beginning of the current text area. Also in Use Light Table view: Select the first slide.' },
+          { keys: 'Cmd + Down', desc: 'Move to the bottom of the current text area', usage: 'Move to the bottom of the current text area. Also in Use Light Table view: Select the last slide.' },
+          { keys: 'Cmd + Left', desc: 'Move to the beginning of the current line', usage: 'Move to the beginning of the current line.' },
+          { keys: 'Cmd + Right', desc: 'Move to the end of the current line', usage: 'Move to the end of the current line.' },
+          { keys: 'Option + Up', desc: 'Move to the beginning of the current paragraph', usage: 'Move to the beginning of the current paragraph. Also in Work with tables: Add a row above the selected cells.' },
+          { keys: 'Option + Down', desc: 'Move to the end of the current paragraph', usage: 'Move to the end of the current paragraph. Also in Work with tables: Add a row below the selected cells.' },
+          { keys: 'Cmd + E', desc: 'Find the selected item in the presentation', usage: 'Find the selected item in the presentation. Also in Find and delete text, use comments, and check spelling: Place the selected text in the Find & Replace text field.' },
+          { keys: 'Cmd + J', desc: 'Jump to a selection in a presentation', usage: 'Jump to a selection in a presentation. Also in Find and delete text, use comments, and check spelling: Scroll the window to show the selected text or object.' },
+          { keys: 'Home', desc: 'Scroll to the beginning of the slide', usage: 'Scroll to the beginning of the slide. Also in Play a presentation and use the presenter mode: Go to first slide.' },
+          { keys: 'End', desc: 'Scroll to the end of the slide', usage: 'Scroll to the end of the slide. Also in Play a presentation and use the presenter mode: Go to last slide.' },
+          { keys: 'Ctrl + L', desc: 'Center the insertion point in the app window', usage: 'Center the insertion point in the app window.' },
+          { keys: 'Fn + Down', desc: 'Move to the next slide', usage: 'Move to the next slide.' },
+          { keys: 'Fn + Up', desc: 'Move to the previous slide', usage: 'Move to the previous slide.' },
+          { keys: 'Fn + Left', desc: 'Move to the first slide', usage: 'Move to the first slide.' },
+          { keys: 'Fn + Right', desc: 'Move to the last slide', usage: 'Move to the last slide.' },
+          { keys: 'Ctrl + Cmd + G', desc: 'Go to a specific slide', usage: 'Go to a specific slide.' },
+        ]
+      },
+      {
+        name: 'Select text',
+        shortcuts: [
+          { keys: 'Shift + Right', desc: 'Extend the selection one character to the right', usage: 'Extend the selection one character to the right. Also in Work with tables: Select additional columns. Also in Use Light Table view: Extend the selection to the next slide. Also in Play a presentation and use the presenter mode: Advance to the next build or slide without animation.' },
+          { keys: 'Shift + Left', desc: 'Extend the selection one character to the left', usage: 'Extend the selection one character to the left. Also in Use Light Table view: Extend the selection to the previous slide. Also in Play a presentation and use the presenter mode: Go back to previous build.' },
+          { keys: 'Option + Shift + Right', desc: 'Extend the selection to the end of the current word, then to the end of subsequent words', usage: 'Extend the selection to the end of the current word, then to the end of subsequent words.' },
+          { keys: 'Option + Shift + Left', desc: 'Extend the selection to the beginning of the current word', usage: 'Extend the selection to the beginning of the current word.' },
+          { keys: 'Shift + Cmd + Right', desc: 'Extend the selection to the end of the current line', usage: 'Extend the selection to the end of the current line.' },
+          { keys: 'Shift + Cmd + Left', desc: 'Extend the selection to the beginning of the current line', usage: 'Extend the selection to the beginning of the current line.' },
+          { keys: 'Shift + Up', desc: 'Extend the selection to the line above', usage: 'Extend the selection to the line above. Also in Work with tables: Select additional rows.' },
+          { keys: 'Shift + Down', desc: 'Extend the selection to the line below', usage: 'Extend the selection to the line below. Also in Play a presentation and use the presenter mode: Advance to the next slide without builds and animations.' },
+          { keys: 'Option + Shift + Up', desc: 'Extend the selection to the beginning of the current paragraph', usage: 'Extend the selection to the beginning of the current paragraph.' },
+          { keys: 'Option + Shift + Down', desc: 'Extend the selection to the end of the current paragraph', usage: 'Extend the selection to the end of the current paragraph.' },
+          { keys: 'Shift + Cmd + Up', desc: 'Extend the selection to the beginning of the text', usage: 'Extend the selection to the beginning of the text. Also in Use Light Table view: Extend the selection to the first slide.' },
+          { keys: 'Shift + Cmd + Down', desc: 'Extend the selection to the end of the text', usage: 'Extend the selection to the end of the text. Also in Use Light Table view: Extend the selection to the last slide.' },
+        ]
+      },
+      {
+        name: 'Format text',
+        shortcuts: [
+          { keys: 'Cmd + T', desc: 'Show the Fonts window', usage: 'Show the Fonts window.' },
+          { keys: 'Cmd + B', desc: 'Apply boldface to selected text', usage: 'Apply boldface to selected text.' },
+          { keys: 'Cmd + I', desc: 'Apply italic to selected text', usage: 'Apply italic to selected text.' },
+          { keys: 'Cmd + U', desc: 'Apply underline to selected text', usage: 'Apply underline to selected text.' },
+          { keys: 'Delete', desc: 'Delete the previous character or selection', usage: 'Delete the previous character or selection. Also in Work with tables: Delete the selected table, or the contents of selected cells. Also in Use Navigator view: Delete selected slides.' },
+          { keys: 'Fn + Delete', desc: 'Delete the next character or selection', usage: 'Delete the next character or selection.' },
+          { keys: 'Option + Delete', desc: 'Delete the word before the insertion point', usage: 'Delete the word before the insertion point.' },
+          { keys: 'Ctrl + K', desc: 'Delete the text between the insertion point and the next paragraph break', usage: 'Delete the text between the insertion point and the next paragraph break.' },
+          { keys: 'Cmd + +', desc: 'Make the font size bigger', usage: 'Make the font size bigger. Also in Play a presentation and use the presenter mode: Increase note font size.' },
+          { keys: 'Cmd + -', desc: 'Make the font size smaller', usage: 'Make the font size smaller. Also in Play a presentation and use the presenter mode: Decrease note font size.' },
+          { keys: 'Option + Cmd + [', desc: 'Decrease the space between selected characters', usage: 'Decrease the space between selected characters.' },
+          { keys: 'Option + Cmd + ]', desc: 'Increase the space between selected characters', usage: 'Increase the space between selected characters.' },
+          { keys: 'Ctrl + Cmd + +', desc: 'Make the text superscript', usage: 'Make the text superscript.' },
+          { keys: 'Ctrl + Cmd + -', desc: 'Make the text subscript', usage: 'Make the text subscript.' },
+          { keys: 'Cmd + {', desc: 'Align the text flush left', usage: 'Align the text flush left.' },
+          { keys: 'Cmd + |', desc: 'Center the text', usage: 'Center the text.' },
+          { keys: 'Cmd + }', desc: 'Align the text flush right', usage: 'Align the text flush right.' },
+          { keys: 'Option + Cmd + |', desc: 'Align the text flush left and flush right (justify)', usage: 'Align the text flush left and flush right (justify).' },
+          { keys: 'Cmd + [', desc: 'Decrease the indent level of a block of text or a list item', usage: 'Decrease the indent level of a block of text or a list item.' },
+          { keys: 'Cmd + ]', desc: 'Increase the indent level of a block of text or a list item', usage: 'Increase the indent level of a block of text or a list item.' },
+          { keys: 'Shift + Tab', desc: 'Decrease the indent level of a list item or headline', usage: 'Decrease the indent level of a list item or headline. Also in Move, group, layer, and resize objects: Select the previous object on the slide. Also in Work with tables: Select the previous cell. Also in Work with tables: Select the table name. Also in Edit chart data: Complete a cell entry and move the selection to the left. Also in Use Navigator view: Move indented slides to the left.' },
+          { keys: 'Tab', desc: 'Increase the indent level of a list item or headline', usage: 'Increase the indent level of a list item or headline. Also in Move, group, layer, and resize objects: Select the next object on the slide. Also in Work with tables: Select the next cell or, if the last cell is selected, add a new row. Also in Edit chart data: Complete a cell entry and move the selection to the right. Also in Use Navigator view: Indent selected slides to the right.' },
+          { keys: 'Cmd + K', desc: 'Turn text or an object into a link', usage: 'Turn text or an object into a link.' },
+          { keys: 'Cmd + X', desc: 'Cut the selection', usage: 'Cut the selection.' },
+          { keys: 'Cmd + C', desc: 'Copy the selection', usage: 'Copy the selection.' },
+          { keys: 'Option + Cmd + C', desc: 'Copy the paragraph style', usage: 'Copy the paragraph style. Also in Move, group, layer, and resize objects: Copy the graphic style of text. Also in Work with tables: Copy cell style.' },
+          { keys: 'Cmd + V', desc: 'Paste the selection', usage: 'Paste the selection.' },
+          { keys: 'Option + Cmd + V', desc: 'Paste the paragraph style', usage: 'Paste the paragraph style. Also in Move, group, layer, and resize objects: Paste the graphic style of text. Also in Work with tables: Paste cell style.' },
+          { keys: 'Option + Shift + Cmd + V', desc: 'Paste and match the style of the destination text', usage: 'Paste and match the style of the destination text. Also in Work with tables: Paste and preserve the style of the destination cell.' },
+          { keys: 'Option + Space', desc: 'Insert a nonbreaking space', usage: 'Insert a nonbreaking space.' },
+          { keys: 'Shift + Return', desc: 'Insert a line break (soft return)', usage: 'Insert a line break (soft return). Also in Work with tables: Select the cell above. Also in Work with tables: Insert a line break (soft return) when editing text in a cell. Also in Edit chart data: Complete a cell entry and move the selection up.' },
+          { keys: 'Return', desc: 'Insert a paragraph break', usage: 'Insert a paragraph break. Also in Find and delete text, use comments, and check spelling: Replace text. Also in Work with tables: Select the cell below. Also in Work with tables: Insert a paragraph break (hard return) when editing text in a cell. Also in Work with tables: In the Formula Editor, save changes. Also in Work with tables: Select the first cell in a selected table. Also in Edit chart data: Complete a cell entry and move the selection down. Also in Use Navigator view: Create a new slide at same level as last selected slide. Also in Play a presentation and use the presenter mode: Go to the current slide and close the slide switcher.' },
+          { keys: 'Ctrl + O', desc: 'Insert a new line after the insertion point', usage: 'Insert a new line after the insertion point.' },
+          { keys: 'Ctrl + Cmd + Space', desc: 'Enter special characters', usage: 'Enter special characters.' },
+          { keys: 'Ctrl + T', desc: 'Transpose the characters on either side of the insertion point', usage: 'Transpose the characters on either side of the insertion point.' },
+        ]
+      },
+      {
+        name: 'Find and delete text, use comments, and check spelling',
+        shortcuts: [
+          { keys: 'Cmd + F', desc: 'Find', usage: 'Find.' },
+          { keys: 'Cmd + G', desc: 'Find next (while in the Find window)', usage: 'Find next (while in the Find window).' },
+          { keys: 'Shift + Cmd + G', desc: 'Find previous (while in the Find window)', usage: 'Find previous (while in the Find window).' },
+          { keys: 'Ctrl + Cmd + D', desc: 'Look up the word at the insertion point', usage: 'Look up the word at the insertion point.' },
+          { keys: 'Option + Esc', desc: 'Display a list of words to complete the selected word', usage: 'Display a list of words to complete the selected word.' },
+          { keys: 'Cmd + ;', desc: 'Check spelling and grammar', usage: 'Check spelling and grammar.' },
+          { keys: 'Shift + Cmd + :', desc: 'Show the “Spelling and Grammar” window', usage: 'Show the “Spelling and Grammar” window.' },
+          { keys: 'Shift + Cmd + K', desc: 'Open a new comment for the selected text, object, or table cell', usage: 'Open a new comment for the selected text, object, or table cell.' },
+          { keys: 'Cmd + Return', desc: 'Save a comment', usage: 'Save a comment. Also in Move, group, layer, and resize objects: Exit text editing and select the object. Also in Work with tables: Stop editing the cell and select the cell. Also in Work with tables: Select the parent of the current selection.' },
+          { keys: 'Option + Cmd + K', desc: 'Show the next comment', usage: 'Show the next comment.' },
+          { keys: 'Option + Shift + Cmd + K', desc: 'Show the previous comment', usage: 'Show the previous comment.' },
+          { keys: 'Ctrl + Shift + F', desc: 'Clean up slide', usage: 'Clean up slide.' },
+        ]
+      },
+      {
+        name: 'Move, group, layer, and resize objects',
+        shortcuts: [
+          { keys: 'Shift + Cmd + B', desc: 'Send the selected object to the back', usage: 'Send the selected object to the back.' },
+          { keys: 'Option + Shift + Cmd + B', desc: 'Send the selected object one layer back', usage: 'Send the selected object one layer back.' },
+          { keys: 'Shift + Cmd + F', desc: 'Bring the selected object to the front', usage: 'Bring the selected object to the front.' },
+          { keys: 'Option + Shift + Cmd + F', desc: 'Bring the selected object one layer forward', usage: 'Bring the selected object one layer forward.' },
+          { keys: 'Option + Cmd + G', desc: 'Group selected objects', usage: 'Group selected objects.' },
+          { keys: 'Option + Shift + Cmd + G', desc: 'Ungroup selected objects', usage: 'Ungroup selected objects.' },
+          { keys: 'Cmd + L', desc: 'Lock selected objects', usage: 'Lock selected objects.' },
+          { keys: 'Option + Cmd + L', desc: 'Unlock selected objects', usage: 'Unlock selected objects.' },
+          { keys: 'Cmd + D', desc: 'Duplicate the object', usage: 'Duplicate the object. Also in Use Navigator view: Duplicate a slide.' },
+          { keys: 'Shift + Cmd + M', desc: 'Mask or unmask the object', usage: 'Mask or unmask the object.' },
+          { keys: 'Ctrl + Option + Cmd + I', desc: 'Define the object as a media placeholder', usage: 'Define the object as a media placeholder.' },
+          { keys: 'Ctrl + Option + Cmd + T', desc: 'Define the selected text as a text placeholder', usage: 'Define the selected text as a text placeholder.' },
+        ]
+      },
+      {
+        name: 'Modify editable shapes',
+        shortcuts: [
+          { keys: 'Option + Shift + Cmd + P', desc: 'Draw a custom shape with the Pen tool', usage: 'Draw a custom shape with the Pen tool.' },
+        ]
+      },
+      {
+        name: 'Work with tables',
+        shortcuts: [
+          { keys: 'Option + Cmd + E', desc: 'Insert an equation', usage: 'Insert an equation.' },
+          { keys: 'Option + Cmd + Return', desc: 'Select all rows that intersect the current selection', usage: 'Select all rows that intersect the current selection.' },
+          { keys: 'Ctrl + Cmd + Return', desc: 'Select all columns that intersect the current selection', usage: 'Select all columns that intersect the current selection.' },
+          { keys: 'Space', desc: 'Open a pop-up menu in a selected cell', usage: 'Open a pop-up menu in a selected cell. Also in Control a video during a presentation: Play the video.' },
+          { keys: 'Option + Cmd + U', desc: 'Auto-align cell content', usage: 'Auto-align cell content.' },
+          { keys: 'Option + Tab', desc: 'Insert a tab when editing text or a formula', usage: 'Insert a tab when editing text or a formula. Also in Create cell references in formulas: Insert a tab.' },
+          { keys: '=', desc: 'Open the Formula Editor for the selected nonformula cell', usage: 'Open the Formula Editor for the selected nonformula cell.' },
+          { keys: 'Option + Cmd + Left', desc: 'Select the first populated cell in the current row', usage: 'Select the first populated cell in the current row.' },
+          { keys: 'Option + Cmd + Right', desc: 'Select the last populated cell in the current row', usage: 'Select the last populated cell in the current row.' },
+          { keys: 'Option + Cmd + Up', desc: 'Select the first populated cell in the current column', usage: 'Select the first populated cell in the current column.' },
+          { keys: 'Option + Cmd + Down', desc: 'Select the last populated cell in the current column', usage: 'Select the last populated cell in the current column.' },
+          { keys: 'Option + Cmd + Delete', desc: 'Delete selected rows', usage: 'Delete selected rows.' },
+          { keys: 'Ctrl + Cmd + Delete', desc: 'Delete selected columns', usage: 'Delete selected columns.' },
+          { keys: 'Option + Shift + Cmd + Left', desc: 'Expand the current selection to include the first populated cell in the current row', usage: 'Expand the current selection to include the first populated cell in the current row.' },
+          { keys: 'Option + Shift + Cmd + Right', desc: 'Expand the current selection to include the last populated cell in the current row', usage: 'Expand the current selection to include the last populated cell in the current row.' },
+          { keys: 'Option + Shift + Cmd + Up', desc: 'Expand the current selection to include the first populated cell in the current column', usage: 'Expand the current selection to include the first populated cell in the current column.' },
+          { keys: 'Option + Shift + Cmd + Down', desc: 'Expand the current selection to include the last populated cell in the current column', usage: 'Expand the current selection to include the last populated cell in the current column.' },
+          { keys: 'Ctrl + Cmd + M', desc: 'Merge selected cells', usage: 'Merge selected cells.' },
+          { keys: 'Ctrl + Shift + Cmd + M', desc: 'Unmerge selected cells', usage: 'Unmerge selected cells.' },
+          { keys: 'Ctrl + Option + Cmd + Up', desc: 'Add or remove the top border', usage: 'Add or remove the top border.' },
+          { keys: 'Ctrl + Option + Cmd + Down', desc: 'Add or remove the bottom border', usage: 'Add or remove the bottom border.' },
+          { keys: 'Ctrl + Option + Cmd + Right', desc: 'Add or remove the right border', usage: 'Add or remove the right border.' },
+          { keys: 'Ctrl + Option + Cmd + Left', desc: 'Add or remove the left border', usage: 'Add or remove the left border.' },
+          { keys: 'Cmd + \\', desc: 'Turn on autofill mode', usage: 'Turn on autofill mode.' },
+          { keys: 'Ctrl + Cmd + \\', desc: 'Autofill from the column before', usage: 'Autofill from the column before.' },
+          { keys: 'Option + Cmd + \\', desc: 'Autofill from the row above', usage: 'Autofill from the row above.' },
+        ]
+      },
+      {
+        name: 'Edit chart data',
+        shortcuts: [
+          { keys: 'Shift + Cmd + D', desc: 'Show or hide the Chart Data Editor', usage: 'Show or hide the Chart Data Editor.' },
+        ]
+      },
+      {
+        name: 'Create cell references in formulas',
+        shortcuts: [
+          { keys: 'Option + Return', desc: 'Insert a line break', usage: 'Insert a line break.' },
+        ]
+      },
+      {
+        name: 'Use Navigator view',
+        shortcuts: [
+          { keys: 'Shift + Cmd + H', desc: 'Skip a slide so it doesn’t show in a presentation, or show a slide that’s being skipped', usage: 'Skip a slide so it doesn’t show in a presentation, or show a slide that’s being skipped.' },
+        ]
+      },
+      {
+        name: 'Play a presentation and use the presenter mode',
+        shortcuts: [
+          { keys: 'Option + Cmd + P', desc: 'Play a presentation', usage: 'Play a presentation.' },
+          { keys: 'Shift + Cmd + P', desc: 'Show or hide presenter notes', usage: 'Show or hide presenter notes.' },
+          { keys: 'Z', desc: 'Go back through previously viewed slides', usage: 'Go back through previously viewed slides.' },
+          { keys: 'F', desc: 'Pause the presentation', usage: 'Pause the presentation.' },
+          { keys: 'B', desc: 'Pause the presentation and show a black screen', usage: 'Pause the presentation and show a black screen.' },
+          { keys: 'W', desc: 'Pause the presentation and show a white screen', usage: 'Pause the presentation and show a white screen.' },
+          { keys: 'C', desc: 'Show or hide the pointer', usage: 'Show or hide the pointer.' },
+          { keys: 'S', desc: 'Display the slide number', usage: 'Display the slide number.' },
+          { keys: '+', desc: 'Go to the next slide in the slide switcher', usage: 'Go to the next slide in the slide switcher.' },
+          { keys: '-', desc: 'Go to the previous slide in the slide switcher', usage: 'Go to the previous slide in the slide switcher.' },
+          { keys: 'X', desc: 'Switch the primary and presenter displays', usage: 'Switch the primary and presenter displays.' },
+          { keys: 'R', desc: 'Reset timer', usage: 'Reset timer.' },
+          { keys: 'U', desc: 'Scroll the presenter notes up', usage: 'Scroll the presenter notes up.' },
+          { keys: 'D', desc: 'Scroll the presenter notes down', usage: 'Scroll the presenter notes down.' },
+          { keys: 'H', desc: 'Hide the presentation and switch to last app used', usage: 'Hide the presentation and switch to last app used.' },
+          { keys: '?', desc: 'Show or hide keyboard shortcuts', usage: 'Show or hide keyboard shortcuts.' },
+          { keys: 'Option + X', desc: 'Switch displays in rehearsal mode', usage: 'Switch displays in rehearsal mode.' },
+        ]
+      },
+      {
+        name: 'Control a video during a presentation',
+        shortcuts: [
+          { keys: 'K', desc: 'Pause or resume playing the video', usage: 'Pause or resume playing the video.' },
+          { keys: 'J', desc: 'Rewind the video (by frame, if it’s paused)', usage: 'Rewind the video (by frame, if it’s paused).' },
+          { keys: 'L', desc: 'Fast forward the video (by frame, if it’s paused)', usage: 'Fast forward the video (by frame, if it’s paused).' },
+          { keys: 'I', desc: 'Jump to the beginning of the video', usage: 'Jump to the beginning of the video.' },
+          { keys: 'O', desc: 'Jump to the end of the video', usage: 'Jump to the end of the video.' },
         ]
       },
     ]
@@ -16473,20 +16716,219 @@ const shortcutData = {
         },
       ]
     },
+
   zbrush: {
     name: 'ZBrush',
     icon: 'fas fa-paint-brush',
+    source: 'https://help.maxon.net/zbr/en-us/Content/html/user-guide/keyboard-shortcuts/shortcuts-by-category/shortcuts-by-category.html',
     categories: [
       {
-        name: 'Sculpting',
+        name: 'General Shortcuts',
         shortcuts: [
-          { keys: 'B', desc: 'Brush', usage: 'Select a brush.' },
-          { keys: 'S', desc: 'Draw Size', usage: 'Adjust brush size.' },
-          { keys: 'Z', desc: 'Draw Intensity', usage: 'Adjust brush intensity.' },
-          { keys: 'Shift', desc: 'Smooth', usage: 'Switch to smooth brush.' },
-          { keys: 'Alt', desc: 'Subtract', usage: 'Invert brush direction (subtract).' },
-          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo last action.' },
-          { keys: 'T', desc: 'Edit mode', usage: 'Toggle edit mode.' },
+          { keys: 'Ctrl + O', desc: 'Open Project', usage: 'Open Project – Ctrl+O.' },
+          { keys: 'Ctrl + S', desc: 'Save Project', usage: 'Save Project – Ctrl+S.' },
+          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo – Ctrl+Z.' },
+          { keys: 'Shift + Ctrl + Z', desc: 'Redo', usage: 'Redo – Shift+Ctrl+Z.' },
+          { keys: 'F1', desc: 'Tools', usage: 'Tools – F1.' },
+          { keys: 'F2', desc: 'Brushes', usage: 'Brushes – F2.' },
+          { keys: 'F3', desc: 'Strokes', usage: 'Strokes – F3.' },
+          { keys: 'F4', desc: 'Alphas', usage: 'Alphas – F4.' },
+          { keys: 'F5', desc: 'Textures', usage: 'Textures – F5.' },
+          { keys: 'F6', desc: 'Materials', usage: 'Materials – F6 (with cursor off canvas area).' },
+          { keys: 'Space', desc: 'Show QuickMenu', usage: 'Show QuickMenu – Spacebar or Right Mouse click. Also: To move action line while drawing – hold – Spacebar. Also: Coin Controller – Spacebar.' },
+          { keys: 'Tab', desc: 'Show/hide floating palettes', usage: 'Show/hide floating palettes – TAB.' },
+          { keys: 'G', desc: 'Projection Master', usage: 'Projection Master – G.' },
+        ]
+      },
+      {
+        name: 'Lightbox and Spotlight',
+        shortcuts: [
+          { keys: ',', desc: 'Show/hide Lightbox', usage: 'Show/hide Lightbox – , [comma key].' },
+          { keys: 'Shift + Z', desc: 'Turn on/off Spotlight', usage: 'Turn on/off Spotlight – Shift+Z.' },
+          { keys: 'Z', desc: 'Show/hide Spotlight Dial', usage: 'Show/hide Spotlight Dial – Z.' },
+        ]
+      },
+      {
+        name: 'Sculpting and Painting',
+        shortcuts: [
+          { keys: 'S', desc: 'Draw Size', usage: 'Draw Size – S.' },
+          { keys: 'O', desc: 'Focal Shift', usage: 'Focal Shift – O.' },
+          { keys: 'I', desc: 'RGB Intensity', usage: 'RGB Intensity – I.' },
+          { keys: 'U', desc: 'Z Intensity', usage: 'Z Intensity – U.' },
+          { keys: ']', desc: 'Increase Draw Size by set units', usage: 'Increase Draw Size by set units – ].' },
+          { keys: '[', desc: 'Decrease Draw Size by set units', usage: 'Decrease Draw Size by set units – [.' },
+          { keys: 'T', desc: 'Edit mode on/off', usage: 'Edit mode on/off – T.' },
+          { keys: 'Q', desc: 'Draw', usage: 'Draw – Q. Also: Draw Pointer – Q.' },
+          { keys: 'W', desc: 'Move', usage: 'Move – W.' },
+          { keys: 'E', desc: 'Scale', usage: 'Scale – E.' },
+          { keys: 'R', desc: 'Rotate', usage: 'Rotate – R.' },
+          { keys: 'Alt', desc: 'Toggle ZAdd and ZSub', usage: 'Toggle ZAdd and ZSub – Alt (hold down). Also: reverse clip area – Alt (hold down). Also: Reverse 2.5D brush effect – Alt (hold down).' },
+        ]
+      },
+      {
+        name: 'Sculpting Brushes',
+        shortcuts: [
+          { keys: 'B', desc: 'Show Brush pop-up', usage: 'Show Brush pop-up – B.' },
+          { keys: 'B, S, T', desc: 'Standard Brush', usage: 'Standard Brush – B – S – T.' },
+          { keys: 'B, S, S', desc: 'Smooth Stronger', usage: 'Smooth Stronger – B – S – S.' },
+          { keys: 'B, M, E', desc: 'Move Elastic', usage: 'Move Elastic – B – M – E.' },
+          { keys: 'B, M, P', desc: 'MPolish', usage: 'MPolish – B – M – P.' },
+          { keys: 'B, C, C', desc: 'ClipCurve', usage: 'ClipCurve – B – C – C.' },
+          { keys: 'B, C, L', desc: 'ClayLine', usage: 'ClayLine – B – C – L.' },
+          { keys: 'M', desc: 'Show all meshes in brush', usage: 'show all meshes in brush – M.' },
+        ]
+      },
+      {
+        name: 'Color',
+        shortcuts: [
+          { keys: 'C', desc: 'Select Color under cursor', usage: 'Select Color under cursor – C.' },
+          { keys: 'V', desc: 'Switch Color', usage: 'Switch Color – V.' },
+        ]
+      },
+      {
+        name: 'Stroke',
+        shortcuts: [
+          { keys: 'L', desc: 'Lazy mouse', usage: 'Lazy mouse – L.' },
+          { keys: '1', desc: 'Replay Last Stroke', usage: 'Replay Last Stroke – 1.' },
+          { keys: '3', desc: 'Record Stroke', usage: 'Record Stroke – 3.' },
+          { keys: '2', desc: 'Replay All Recorded Strokes', usage: 'Replay All Recorded Strokes – 2.' },
+          { keys: '6', desc: 'Smooth curve', usage: 'Smooth curve – 6.' },
+          { keys: '5', desc: 'Snapshot curve', usage: 'Snapshot curve – 5.' },
+        ]
+      },
+      {
+        name: '3D Models',
+        shortcuts: [
+          { keys: 'Shift + Ctrl + T', desc: 'Save Tool', usage: 'Save Tool – Shift+Ctrl+T.' },
+          { keys: 'F', desc: 'Fit Mesh to view', usage: 'Fit Mesh to view – F. Also: Center mesh in canvas (when in Edit mode) – F.' },
+          { keys: 'P', desc: 'Perspective', usage: 'Perspective – P.' },
+          { keys: 'Shift + P', desc: 'Floor Grid', usage: 'Floor Grid – Shift+P. Also: Clear Pivot Point – Shift+P.' },
+          { keys: 'X', desc: 'Activate Symmetry', usage: 'Activate Symmetry – X.' },
+          { keys: 'Shift + F', desc: 'Show/hide Polyframe & polygroups', usage: 'Show/hide Polyframe & polygroups – Shift+F. Also: Draw Polyframe – Shift+F.' },
+          { keys: 'Shift + Ctrl + P', desc: 'Point Selection Mode', usage: 'Point Selection Mode – Shift+Ctrl+P.' },
+          { keys: 'Ctrl + P', desc: 'Set Pivot Point', usage: 'Set Pivot Point – Ctrl+ P.' },
+          { keys: 'Shift + S', desc: 'Snapshot a version to canvas', usage: 'Snapshot a version to canvas – Shift+S. Also: Snapshot object – Shift+S.' },
+        ]
+      },
+      {
+        name: 'SubTools',
+        shortcuts: [
+          { keys: 'N', desc: 'List all SubTools', usage: 'List all SubTools – N.' },
+        ]
+      },
+      {
+        name: 'Geometry',
+        shortcuts: [
+          { keys: 'Ctrl + D', desc: 'Divide', usage: 'Divide – Ctrl+D.' },
+          { keys: 'Shift + D', desc: 'Lower Res', usage: 'Lower Res – Shift+D.' },
+          { keys: 'D', desc: 'Higher Res', usage: 'Higher Res – D.' },
+          { keys: 'Ctrl + E', desc: 'Edge Loop', usage: 'Edge Loop – Ctrl+E (partially hidden mesh).' },
+        ]
+      },
+      {
+        name: 'HD Geometry',
+        shortcuts: [
+          { keys: 'A', desc: 'Toggle in/out of HD Sculpting mode', usage: 'Toggle in/out of HD Sculpting mode – A (cursor over mesh). Also: Render all HD Geometry – A (cursor over background). Also: Preview Adaptive Skin – A. Also: Preview Unified Skin – A.' },
+        ]
+      },
+      {
+        name: 'Masking',
+        shortcuts: [
+          { keys: 'Ctrl + H', desc: 'View Mask', usage: 'View Mask – Ctrl+H. Also: Hide/Show Stencil – Ctrl+H.' },
+          { keys: 'Ctrl + I', desc: 'Invert Mask', usage: 'Invert Mask – Ctrl+I.' },
+          { keys: 'Ctrl + A', desc: 'Mask All', usage: 'Mask All – Ctrl+A.' },
+          { keys: 'Ctrl', desc: 'Select Masking Brush', usage: 'Select Masking Brush – hold – Ctrl while selecting brush from popup. Also: Paint mask on object (alphas/strokes can be used) – Ctrl (hold down).' },
+          { keys: 'Ctrl + Alt', desc: 'Delete or paint reverse mask', usage: 'Delete or paint reverse mask – Ctrl+Alt (hold down).' },
+        ]
+      },
+      {
+        name: 'Polygroups',
+        shortcuts: [
+          { keys: 'Ctrl + W', desc: 'Group Masked and Clear Mask', usage: 'Group Masked and Clear Mask – Ctrl+W.' },
+        ]
+      },
+      {
+        name: 'Partial Mesh Visibility & Clip Brushes',
+        shortcuts: [
+          { keys: 'Shift + Ctrl', desc: 'Select Selection or Clip Brush', usage: 'Select Selection or Clip Brush – hold – Shift+Ctrl while selecting brush from popup.' },
+        ]
+      },
+      {
+        name: 'Stencil',
+        shortcuts: [
+          { keys: 'Alt + H', desc: 'Stencil', usage: 'Stencil On – Alt+H.' },
+        ]
+      },
+      {
+        name: 'ZSketch',
+        shortcuts: [
+          { keys: 'Shift + A', desc: 'Activate ZSketch Edit mode', usage: 'Activate ZSketch Edit mode – Shift+A (with a ZSphere armature in Edit mode).' },
+        ]
+      },
+      {
+        name: 'Canvas and 2.5D',
+        shortcuts: [
+          { keys: 'Shift + Ctrl + F', desc: 'Crop And Fill', usage: 'Crop And Fill – Shift+Ctrl+F. Also: CropAndFill – Shift+Ctrl+F.' },
+          { keys: 'Shift + Ctrl + G', desc: 'Grab Texture From Document', usage: 'Grab Texture From Document – Shift+Ctrl+G.' },
+        ]
+      },
+      {
+        name: 'Document Layers',
+        shortcuts: [
+          { keys: 'Ctrl + N', desc: 'Clear Layer', usage: 'Clear Layer – Ctrl+N.' },
+          { keys: 'Ctrl + F', desc: 'Fill Layer', usage: 'Fill Layer – Ctrl+F.' },
+          { keys: 'Ctrl + B', desc: 'Bake Layer', usage: 'Bake Layer – Ctrl+B.' },
+        ]
+      },
+      {
+        name: 'Markers',
+        shortcuts: [
+          { keys: 'Ctrl + M', desc: 'Remove Marker', usage: 'Remove Marker – Ctrl+M.' },
+        ]
+      },
+      {
+        name: 'Canvas Zoom',
+        shortcuts: [
+          { keys: '0', desc: 'Actual Size', usage: 'Actual Size – 0 [zero].' },
+          { keys: 'Ctrl + 0', desc: 'Antialiased Half Size', usage: 'Antialiased Half Size – Ctrl+0.' },
+          { keys: '+', desc: 'Zoom', usage: 'Zoom In – + [plus sign].' },
+        ]
+      },
+      {
+        name: 'Timeline',
+        shortcuts: [
+          { keys: 'Left', desc: 'Go to Previous Camera key frame', usage: 'Go to Previous Camera key frame – LEFT ARROW. Also: Go to Previous Camera key frame Dot – LEFT ARROW.' },
+          { keys: 'Right', desc: 'Go to Next Camera key frame', usage: 'Go to Next Camera key frame – RIGHT ARROW. Also: Go to Next Camera key frame Dot – RIGHT ARROW.' },
+        ]
+      },
+      {
+        name: 'Movie',
+        shortcuts: [
+          { keys: 'Ctrl + Shift + !', desc: 'Snapshot to Movie', usage: 'Snapshot to Movie – Ctrl+ Shift+! (US) Shift+Ctrl+PageUp (UK).' },
+        ]
+      },
+      {
+        name: 'Render',
+        shortcuts: [
+          { keys: 'Shift + R', desc: 'Best Preview Render (BPR)', usage: 'Best Preview Render (BPR) – Shift+R.' },
+          { keys: 'Shift + Ctrl + R', desc: 'Render All', usage: 'Render All – Shift+Ctrl+R.' },
+          { keys: 'Ctrl + R', desc: 'Cursor Selective Render', usage: 'Cursor Selective Render – Ctrl+R.' },
+        ]
+      },
+      {
+        name: 'Custom UI and Configuration',
+        shortcuts: [
+          { keys: 'Shift + Ctrl + I', desc: 'Store Configuration File', usage: 'Store Configuration File – Shift+Ctrl+I.' },
+          { keys: 'Ctrl + L', desc: 'Load User Interface Configuration File', usage: 'Load User Interface Configuration File – Ctrl+L.' },
+          { keys: 'Shift + Ctrl + Alt + I', desc: 'Save User Interface Configuration File', usage: 'Save User Interface Configuration File – Shift+Ctrl+Alt+I.' },
+        ]
+      },
+      {
+        name: 'ZScripts',
+        shortcuts: [
+          { keys: 'Shift + Ctrl + L', desc: 'Load ZScript', usage: 'Load ZScript – Shift+Ctrl+L.' },
+          { keys: 'Ctrl + U', desc: 'Reload ZScript', usage: 'Reload ZScript – Ctrl+U.' },
+          { keys: 'H', desc: 'Show/Hide ZScript window', usage: 'Show/Hide ZScript window – H.' },
         ]
       },
     ]
