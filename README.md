@@ -1,6 +1,6 @@
 # shortcut-tools-data
 
-The open dataset behind [shortcut-tools.com](https://shortcut-tools.com) — **7,300+ keyboard shortcuts across 271 platforms** (VS Code, Vim, tmux, Figma, Slack, kubectl and more).
+The open dataset behind [shortcut-tools.com](https://shortcut-tools.com) — **7,400+ keyboard shortcuts across 271 platforms** (VS Code, Vim, tmux, Figma, Slack, kubectl and more).
 
 ## Suggest an edit
 
