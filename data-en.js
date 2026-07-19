@@ -3953,23 +3953,266 @@ warp: {
       },
     ]
   },
-  openai_codex: {
-    name: 'OpenAI Codex CLI',
-    icon: 'fas fa-terminal',
-    categories: [
-      {
-        name: 'Basic Commands',
-        shortcuts: [
-          { keys: 'Esc', desc: 'Stop response', usage: 'Stop the currently generating response.' },
-          { keys: 'Up / Down', desc: 'Browse history', usage: 'Navigate through prompt history.' },
-          { keys: 'Tab', desc: 'Autocomplete', usage: 'Autocomplete file names or commands.' },
-          { keys: 'Ctrl + C', desc: 'Cancel', usage: 'Cancel the current operation.' },
-          { keys: 'Ctrl + L', desc: 'Clear screen', usage: 'Clear the terminal screen.' },
-          { keys: 'Ctrl + D', desc: 'Exit', usage: 'Exit Codex CLI.' },
-        ]
-      },
-    ]
-  },
+openai_codex: {
+      name: 'OpenAI Codex CLI',
+      icon: 'fas fa-terminal',
+      source: 'https://developers.openai.com/codex/cli/reference/',
+      kind: 'commands',
+      categories: [
+        {
+          name: 'Global Flags',
+          shortcuts: [
+            { keys: '--add-dir', desc: 'Grant additional directories write access alongside the main workspace. Repeat for multiple', usage: 'Grant additional directories write access alongside the main workspace. Repeat for multiple.' },
+            { keys: '--ask-for-approval, -a', desc: 'Control when Codex pauses for human approval before running a command', usage: 'Control when Codex pauses for human approval before running a command.' },
+            { keys: '--cd, -C', desc: 'Set the working directory for the agent before it starts processing your request', usage: 'Set the working directory for the agent before it starts processing your request.' },
+            { keys: '--config, -c', desc: 'Override configuration values. Values parse as TOML if possible; otherwise the literal string', usage: 'Override configuration values. Values parse as TOML if possible; otherwise the literal string.' },
+            { keys: '--dangerously-bypass-approvals-and-sandbox, --yolo', desc: 'Run every command without approvals or sandboxing. Only use inside an externally hardened', usage: 'Run every command without approvals or sandboxing. Only use inside an externally hardened.' },
+            { keys: '--dangerously-bypass-hook-trust', desc: 'Run enabled hooks without requiring persisted hook trust for this invocation. Intended only', usage: 'Run enabled hooks without requiring persisted hook trust for this invocation. Intended only.' },
+            { keys: '--disable', desc: 'Force-disable a feature flag (translates to -c features.<name>=false). Repeatable', usage: 'Force-disable a feature flag (translates to -c features.<name>=false). Repeatable.' },
+            { keys: '--enable', desc: 'Force-enable a feature flag (translates to -c features.<name>=true). Repeatable', usage: 'Force-enable a feature flag (translates to -c features.<name>=true). Repeatable.' },
+            { keys: '--image, -i', desc: 'Attach one or more image files to the initial prompt. Separate multiple paths with commas', usage: 'Attach one or more image files to the initial prompt. Separate multiple paths with commas.' },
+            { keys: '--local-provider', desc: 'Choose the local provider used with --oss, overriding oss_provider for this run', usage: 'Choose the local provider used with --oss, overriding oss_provider for this run.' },
+            { keys: '--model, -m', desc: 'Override the model set in configuration (for example gpt-5.4)', usage: 'Override the model set in configuration (for example gpt-5.4).' },
+            { keys: '--no-alt-screen', desc: 'Disable alternate screen mode for the TUI (overrides tui.alternate_screen for this run)', usage: 'Disable alternate screen mode for the TUI (overrides tui.alternate_screen for this run).' },
+            { keys: '--oss', desc: 'Use a local open source model provider. Codex uses --local-provider, your configured', usage: 'Use a local open source model provider. Codex uses --local-provider, your configured.' },
+            { keys: '--profile, -p', desc: 'Layer $CODEX_HOME/profile-name.config.toml on top of the base user config', usage: 'Layer $CODEX_HOME/profile-name.config.toml on top of the base user config.' },
+            { keys: '--remote', desc: 'Connect to a remote app-server endpoint over WebSocket or a Unix socket. Supported for codex', usage: 'Connect to a remote app-server endpoint over WebSocket or a Unix socket. Supported for codex.' },
+            { keys: '--remote-auth-token-env', desc: 'Read a bearer token from this environment variable and send it when connecting with --remote.', usage: 'Read a bearer token from this environment variable and send it when connecting with --remote..' },
+            { keys: '--sandbox, -s', desc: 'Select the sandbox policy for model-generated shell commands', usage: 'Select the sandbox policy for model-generated shell commands.' },
+            { keys: '--search', desc: 'Enable live web search (sets web_search = "live" instead of the default "cached")', usage: 'Enable live web search (sets web_search = "live" instead of the default "cached").' },
+            { keys: '--strict-config', desc: 'Error when config.toml contains fields this Codex version does not recognize. Supported', usage: 'Error when config.toml contains fields this Codex version does not recognize. Supported.' },
+            { keys: 'PROMPT', desc: 'Optional text instruction to start the session. Omit to launch the TUI without a pre-filled', usage: 'Optional text instruction to start the session. Omit to launch the TUI without a pre-filled.' },
+          ]
+        },
+        {
+          name: 'Commands',
+          shortcuts: [
+            { keys: 'codex', desc: 'Launch the terminal UI. Accepts the global flags above plus an optional prompt or image', usage: 'Launch the terminal UI. Accepts the global flags above plus an optional prompt or image.' },
+            { keys: 'codex app', desc: 'Launch the ChatGPT desktop app on macOS or Windows. On macOS, Codex can open a workspace path', usage: 'Launch the ChatGPT desktop app on macOS or Windows. On macOS, Codex can open a workspace path.' },
+            { keys: 'codex app-server', desc: 'Launch the Codex app server for local development or debugging over stdio, WebSocket, or a Unix', usage: 'Launch the Codex app server for local development or debugging over stdio, WebSocket, or a Unix.' },
+            { keys: 'codex apply', desc: 'Apply the latest diff generated by a Codex cloud chat to your local working tree. Alias: codex', usage: 'Apply the latest diff generated by a Codex cloud chat to your local working tree. Alias: codex.' },
+            { keys: 'codex archive', desc: 'Archive a saved interactive session by session ID or session name', usage: 'Archive a saved interactive session by session ID or session name.' },
+            { keys: 'codex cloud', desc: 'Browse or execute Codex cloud chats from the terminal without opening the TUI. Alias: codex', usage: 'Browse or execute Codex cloud chats from the terminal without opening the TUI. Alias: codex.' },
+            { keys: 'codex completion', desc: 'Generate shell completion scripts for Bash, Zsh, Fish, or PowerShell', usage: 'Generate shell completion scripts for Bash, Zsh, Fish, or PowerShell.' },
+            { keys: 'codex debug app-server send-message-v2', desc: 'Debug app-server by sending a single V2 message through the built-in test client', usage: 'Debug app-server by sending a single V2 message through the built-in test client.' },
+            { keys: 'codex debug models', desc: 'Print the raw model catalog Codex sees, including an option to inspect only the bundled catalog', usage: 'Print the raw model catalog Codex sees, including an option to inspect only the bundled catalog.' },
+            { keys: 'codex debug prompt-input', desc: 'Render the model-visible prompt input list as JSON, optionally with a prompt and images', usage: 'Render the model-visible prompt input list as JSON, optionally with a prompt and images.' },
+            { keys: 'codex delete', desc: 'Permanently delete a saved interactive session by session ID or session name', usage: 'Permanently delete a saved interactive session by session ID or session name.' },
+            { keys: 'codex doctor', desc: 'Generate a diagnostic report for local installation, config, auth, runtime, Git, terminal', usage: 'Generate a diagnostic report for local installation, config, auth, runtime, Git, terminal.' },
+            { keys: 'codex exec', desc: 'Run Codex non-interactively. Alias: codex e. Stream results to stdout or JSONL and optionally', usage: 'Run Codex non-interactively. Alias: codex e. Stream results to stdout or JSONL and optionally.' },
+            { keys: 'codex execpolicy', desc: 'Evaluate execpolicy rule files and see whether a command would be allowed, prompted, or blocked', usage: 'Evaluate execpolicy rule files and see whether a command would be allowed, prompted, or blocked.' },
+            { keys: 'codex features', desc: 'List feature flags and persistently enable or disable them in config.toml', usage: 'List feature flags and persistently enable or disable them in config.toml.' },
+            { keys: 'codex fork', desc: 'Fork a previous interactive session into a new chat, preserving the original transcript', usage: 'Fork a previous interactive session into a new chat, preserving the original transcript.' },
+            { keys: 'codex login', desc: 'Authenticate Codex using ChatGPT OAuth, device auth, an API key, or an access token piped over', usage: 'Authenticate Codex using ChatGPT OAuth, device auth, an API key, or an access token piped over.' },
+            { keys: 'codex logout', desc: 'Remove stored authentication credentials', usage: 'Remove stored authentication credentials.' },
+            { keys: 'codex mcp', desc: 'Manage Model Context Protocol servers (list, add, remove, authenticate)', usage: 'Manage Model Context Protocol servers (list, add, remove, authenticate).' },
+            { keys: 'codex mcp-server', desc: 'Run Codex itself as an MCP server over stdio. Useful when another agent consumes Codex', usage: 'Run Codex itself as an MCP server over stdio. Useful when another agent consumes Codex.' },
+            { keys: 'codex plugin', desc: 'Install, list, and remove plugins from configured marketplace sources', usage: 'Install, list, and remove plugins from configured marketplace sources.' },
+            { keys: 'codex plugin marketplace', desc: 'Add, list, upgrade, or remove plugin marketplaces from Git or local sources', usage: 'Add, list, upgrade, or remove plugin marketplaces from Git or local sources.' },
+            { keys: 'codex remote-control', desc: 'Run or manage remote control for the local app-server, or create a short-lived pairing code', usage: 'Run or manage remote control for the local app-server, or create a short-lived pairing code.' },
+            { keys: 'codex resume', desc: 'Continue a previous interactive session by ID or resume the most recent chat', usage: 'Continue a previous interactive session by ID or resume the most recent chat.' },
+            { keys: 'codex review', desc: 'Run a non-interactive review of uncommitted changes, a base branch diff, a commit, or custom', usage: 'Run a non-interactive review of uncommitted changes, a base branch diff, a commit, or custom.' },
+            { keys: 'codex sandbox', desc: 'Run arbitrary commands inside Codex-provided macOS, Linux, or Windows sandboxes', usage: 'Run arbitrary commands inside Codex-provided macOS, Linux, or Windows sandboxes.' },
+            { keys: 'codex unarchive', desc: 'Restore an archived interactive session by session ID or session name', usage: 'Restore an archived interactive session by session ID or session name.' },
+            { keys: 'codex update', desc: 'Check for and apply a Codex CLI update when the installed release supports self-update', usage: 'Check for and apply a Codex CLI update when the installed release supports self-update.' },
+          ]
+        },
+        {
+          name: 'codex app-server',
+          shortcuts: [
+            { keys: '--analytics-default-enabled', desc: 'Defaults analytics to enabled for first-party app-server clients unless the user opts out', usage: 'Defaults analytics to enabled for first-party app-server clients unless the user opts out.' },
+            { keys: '--listen', desc: 'Transport listener URL. Use stdio:// for JSONL, ws://IP:PORT for a TCP WebSocket endpoint', usage: 'Transport listener URL. Use stdio:// for JSONL, ws://IP:PORT for a TCP WebSocket endpoint.' },
+            { keys: '--stdio', desc: 'Use stdio transport. Equivalent to --listen stdio:// and mutually exclusive with --listen', usage: 'Use stdio transport. Equivalent to --listen stdio:// and mutually exclusive with --listen.' },
+            { keys: '--ws-audience', desc: 'Expected aud claim for signed bearer tokens. Requires --ws-auth signed-bearer-token', usage: 'Expected aud claim for signed bearer tokens. Requires --ws-auth signed-bearer-token.' },
+            { keys: '--ws-auth', desc: 'Authentication mode for app-server WebSocket clients. If omitted, WebSocket auth is disabled', usage: 'Authentication mode for app-server WebSocket clients. If omitted, WebSocket auth is disabled.' },
+            { keys: '--ws-issuer', desc: 'Expected iss claim for signed bearer tokens. Requires --ws-auth signed-bearer-token', usage: 'Expected iss claim for signed bearer tokens. Requires --ws-auth signed-bearer-token.' },
+            { keys: '--ws-max-clock-skew-seconds', desc: 'Clock skew allowance when validating signed bearer token exp and nbf claims. Requires --ws-auth', usage: 'Clock skew allowance when validating signed bearer token exp and nbf claims. Requires --ws-auth.' },
+            { keys: '--ws-shared-secret-file', desc: 'File containing the HMAC shared secret used to validate signed JWT bearer tokens. Required', usage: 'File containing the HMAC shared secret used to validate signed JWT bearer tokens. Required.' },
+            { keys: '--ws-token-file', desc: 'File containing the shared capability token. Use with --ws-auth capability-token unless you', usage: 'File containing the shared capability token. Use with --ws-auth capability-token unless you.' },
+            { keys: '--ws-token-sha256', desc: 'Expected SHA-256 digest for capability-token authentication. Use instead of --ws-token-file', usage: 'Expected SHA-256 digest for capability-token authentication. Use instead of --ws-token-file.' },
+          ]
+        },
+        {
+          name: 'codex app',
+          shortcuts: [
+            { keys: '--download-url', desc: 'Advanced override for the ChatGPT desktop app installer URL used during install', usage: 'Advanced override for the ChatGPT desktop app installer URL used during install.' },
+            { keys: 'PATH', desc: 'Workspace path for the ChatGPT desktop app. On macOS, Codex opens this path; on Windows, Codex', usage: 'Workspace path for the ChatGPT desktop app. On macOS, Codex opens this path; on Windows, Codex.' },
+          ]
+        },
+        {
+          name: 'codex review',
+          shortcuts: [
+            { keys: '--base', desc: 'Review changes against the specified base branch', usage: 'Review changes against the specified base branch.' },
+            { keys: '--commit', desc: 'Review the changes introduced by the specified commit', usage: 'Review the changes introduced by the specified commit.' },
+            { keys: '--title', desc: 'Set the commit title shown in the review summary. Requires --commit', usage: 'Set the commit title shown in the review summary. Requires --commit.' },
+            { keys: '--uncommitted', desc: 'Review staged, unstaged, and untracked changes', usage: 'Review staged, unstaged, and untracked changes.' },
+          ]
+        },
+        {
+          name: 'codex cloud',
+          shortcuts: [
+            { keys: '--attempts', desc: 'Number of assistant attempts (best-of-N) Codex cloud should run', usage: 'Number of assistant attempts (best-of-N) Codex cloud should run.' },
+            { keys: '--env', desc: 'Target Codex cloud environment identifier (required). Use codex cloud to list options', usage: 'Target Codex cloud environment identifier (required). Use codex cloud to list options.' },
+            { keys: 'QUERY', desc: 'Task prompt. If omitted, Codex prompts interactively for details', usage: 'Task prompt. If omitted, Codex prompts interactively for details.' },
+          ]
+        },
+        {
+          name: 'codex cloud list',
+          shortcuts: [
+            { keys: '--cursor', desc: 'Pagination cursor returned by a previous request', usage: 'Pagination cursor returned by a previous request.' },
+            { keys: '--json', desc: 'Emit machine-readable JSON instead of plain text', usage: 'Emit machine-readable JSON instead of plain text.' },
+            { keys: '--limit', desc: 'Maximum number of tasks to return', usage: 'Maximum number of tasks to return.' },
+          ]
+        },
+        {
+          name: 'codex doctor',
+          shortcuts: [
+            { keys: '--all', desc: 'Expand long lists in the detailed human-readable report', usage: 'Expand long lists in the detailed human-readable report.' },
+            { keys: '--ascii', desc: 'Use ASCII status labels and separators in human-readable output', usage: 'Use ASCII status labels and separators in human-readable output.' },
+            { keys: '--no-color', desc: 'Disable ANSI color in human-readable output', usage: 'Disable ANSI color in human-readable output.' },
+            { keys: '--summary', desc: 'Show grouped check rows and the final count summary only', usage: 'Show grouped check rows and the final count summary only.' },
+          ]
+        },
+        {
+          name: 'codex exec',
+          shortcuts: [
+            { keys: '--color', desc: 'Control ANSI color in stdout', usage: 'Control ANSI color in stdout.' },
+            { keys: '--ephemeral', desc: 'Run without persisting session rollout files to disk', usage: 'Run without persisting session rollout files to disk.' },
+            { keys: '--full-auto', desc: 'Deprecated compatibility flag. Prefer --sandbox workspace-write; Codex prints a warning when', usage: 'Deprecated compatibility flag. Prefer --sandbox workspace-write; Codex prints a warning when.' },
+            { keys: '--ignore-rules', desc: 'Do not load user or project execpolicy .rules files for this run', usage: 'Do not load user or project execpolicy .rules files for this run.' },
+            { keys: '--ignore-user-config', desc: 'Do not load $CODEX_HOME/config.toml. Authentication still uses CODEX_HOME', usage: 'Do not load $CODEX_HOME/config.toml. Authentication still uses CODEX_HOME.' },
+            { keys: '--json, --experimental-json', desc: 'Print newline-delimited JSON events instead of formatted text', usage: 'Print newline-delimited JSON events instead of formatted text.' },
+            { keys: '--output-last-message, -o', desc: 'Write the assistant’s final message to a file. Useful for downstream scripting', usage: 'Write the assistant’s final message to a file. Useful for downstream scripting.' },
+            { keys: '--output-schema', desc: 'JSON Schema file describing the expected final response shape. Codex validates tool output', usage: 'JSON Schema file describing the expected final response shape. Codex validates tool output.' },
+            { keys: '--skip-git-repo-check', desc: 'Allow running outside a Git repository (useful for one-off directories)', usage: 'Allow running outside a Git repository (useful for one-off directories).' },
+            { keys: '-c, --config', desc: 'Inline configuration override for the non-interactive run (repeatable)', usage: 'Inline configuration override for the non-interactive run (repeatable).' },
+            { keys: '--last', desc: 'Resume the most recent chat from the current working directory', usage: 'Resume the most recent chat from the current working directory.' },
+            { keys: 'SESSION_ID', desc: 'Resume the specified session. Omit and use --last to continue the most recent session', usage: 'Resume the specified session. Omit and use --last to continue the most recent session.' },
+          ]
+        },
+        {
+          name: 'codex execpolicy',
+          shortcuts: [
+            { keys: '--pretty', desc: 'Pretty-print the JSON result', usage: 'Pretty-print the JSON result.' },
+            { keys: '--rules, -r', desc: 'Path to an execpolicy rule file to evaluate. Provide multiple flags to combine rules across', usage: 'Path to an execpolicy rule file to evaluate. Provide multiple flags to combine rules across.' },
+            { keys: 'COMMAND...', desc: 'Command to be checked against the specified policies', usage: 'Command to be checked against the specified policies.' },
+          ]
+        },
+        {
+          name: 'codex login',
+          shortcuts: [
+            { keys: '--device-auth', desc: 'Use OAuth device code flow instead of launching a browser window', usage: 'Use OAuth device code flow instead of launching a browser window.' },
+            { keys: '--with-access-token', desc: 'Read an access token from stdin', usage: 'Read an access token from stdin.' },
+            { keys: '--with-api-key', desc: 'Read an API key from stdin (for example printenv OPENAI_API_KEY | codex login --with-api-key)', usage: 'Read an API key from stdin (for example printenv OPENAI_API_KEY | codex login --with-api-key).' },
+          ]
+        },
+        {
+          name: 'codex mcp',
+          shortcuts: [
+            { keys: 'list', desc: 'List configured MCP servers. Add --json for machine-readable output', usage: 'List configured MCP servers. Add --json for machine-readable output.' },
+            { keys: '--bearer-token-env-var', desc: 'Environment variable whose value is sent as a bearer token when connecting to a streamable HTTP', usage: 'Environment variable whose value is sent as a bearer token when connecting to a streamable HTTP.' },
+            { keys: '--env KEY=VALUE', desc: 'Environment variable assignments applied when launching a stdio server', usage: 'Environment variable assignments applied when launching a stdio server.' },
+            { keys: '--oauth-client-id', desc: 'OAuth client identifier for a streamable HTTP MCP server. Requires --url', usage: 'OAuth client identifier for a streamable HTTP MCP server. Requires --url.' },
+            { keys: '--oauth-resource', desc: 'OAuth resource parameter to include during login for a streamable HTTP MCP server. Requires', usage: 'OAuth resource parameter to include during login for a streamable HTTP MCP server. Requires.' },
+            { keys: '--url', desc: 'Register a streamable HTTP server instead of stdio. Mutually exclusive with COMMAND', usage: 'Register a streamable HTTP server instead of stdio. Mutually exclusive with COMMAND.' },
+          ]
+        },
+        {
+          name: 'Sandbox',
+          shortcuts: [
+            { keys: '--allow-unix-socket', desc: 'Allow the sandboxed command to bind or connect Unix sockets rooted at this path. Repeat', usage: 'Allow the sandboxed command to bind or connect Unix sockets rooted at this path. Repeat.' },
+            { keys: '--include-managed-config', desc: 'Include managed requirements while resolving an explicit permissions profile. Requires', usage: 'Include managed requirements while resolving an explicit permissions profile. Requires.' },
+            { keys: '--log-denials', desc: 'Capture macOS sandbox denials with log stream while the command runs and print them after exit', usage: 'Capture macOS sandbox denials with log stream while the command runs and print them after exit.' },
+            { keys: '--permission-profile, -P', desc: 'Apply a named permissions profile from the active configuration stack', usage: 'Apply a named permissions profile from the active configuration stack.' },
+          ]
+        },
+        {
+          name: 'Slash Commands',
+          shortcuts: [
+            { keys: '/permissions', desc: 'Relax or tighten approval requirements mid-session, such as switching between Auto and Read', usage: 'Relax or tighten approval requirements mid-session, such as switching between Auto and Read.' },
+            { keys: '/ide', desc: 'Pull editor context into the next prompt without re-explaining what’s open in your IDE', usage: 'Pull editor context into the next prompt without re-explaining what’s open in your IDE.' },
+            { keys: '/keymap', desc: 'Inspect and persist custom shortcut bindings in config.toml', usage: 'Inspect and persist custom shortcut bindings in config.toml.' },
+            { keys: '/vim', desc: 'Switch between Vim normal/insert behavior and the default composer editing mode', usage: 'Switch between Vim normal/insert behavior and the default composer editing mode.' },
+            { keys: '/setup-default-sandbox', desc: 'Replace the degraded Windows sandbox after Codex offers the elevated setup', usage: 'Replace the degraded Windows sandbox after Codex offers the elevated setup.' },
+            { keys: '/sandbox-add-read-dir', desc: 'Unblock commands that need to read an absolute directory path outside the current readable', usage: 'Unblock commands that need to read an absolute directory path outside the current readable.' },
+            { keys: '/agent, /subagents', desc: 'Inspect or continue work in a spawned subagent thread', usage: 'Inspect or continue work in a spawned subagent thread.' },
+            { keys: '/apps', desc: 'Attach an app as $app-slug before asking Codex to use it', usage: 'Attach an app as $app-slug before asking Codex to use it.' },
+            { keys: '/plugins', desc: 'Inspect plugin tools, install suggested plugins, or manage plugin availability', usage: 'Inspect plugin tools, install suggested plugins, or manage plugin availability.' },
+            { keys: '/hooks', desc: 'Inspect configured hooks, trust new or changed hooks, or disable non-managed hooks before they', usage: 'Inspect configured hooks, trust new or changed hooks, or disable non-managed hooks before they.' },
+            { keys: '/clear', desc: 'Reset the visible UI and chat context together when you want a fresh start', usage: 'Reset the visible UI and chat context together when you want a fresh start.' },
+            { keys: '/rename', desc: 'Give a saved session a recognizable name without leaving the TUI', usage: 'Give a saved session a recognizable name without leaving the TUI.' },
+            { keys: '/archive', desc: 'Remove the current session from active session lists without deleting its transcript', usage: 'Remove the current session from active session lists without deleting its transcript.' },
+            { keys: '/delete', desc: 'Remove the transcript and descendant sessions when archiving isn’t enough', usage: 'Remove the transcript and descendant sessions when archiving isn’t enough.' },
+            { keys: '/compact', desc: 'Use after long runs so Codex retains key points without blowing the context window', usage: 'Use after long runs so Codex retains key points without blowing the context window.' },
+            { keys: '/copy', desc: 'Grab the latest finished response or plan text without manually selecting it. You can also', usage: 'Grab the latest finished response or plan text without manually selecting it. You can also.' },
+            { keys: '/diff', desc: 'Review Codex’s edits before you commit or run tests', usage: 'Review Codex’s edits before you commit or run tests.' },
+            { keys: '/exit', desc: 'Alternative spelling; both commands exit the session', usage: 'Alternative spelling; both commands exit the session.' },
+            { keys: '/experimental', desc: 'Enable options such as Network proxy or Prevent sleep while running', usage: 'Enable options such as Network proxy or Prevent sleep while running.' },
+            { keys: '/approve', desc: 'Retry a command or action that the auto reviewer denied', usage: 'Retry a command or action that the auto reviewer denied.' },
+            { keys: '/memories', desc: 'Turn memory injection or memory generation on or off without leaving the TUI', usage: 'Turn memory injection or memory generation on or off without leaving the TUI.' },
+            { keys: '/skills', desc: 'Improve task-specific behavior by selecting a relevant local skill', usage: 'Improve task-specific behavior by selecting a relevant local skill.' },
+            { keys: '/import', desc: 'Migrate supported external-agent artifacts into Codex configuration and local files', usage: 'Migrate supported external-agent artifacts into Codex configuration and local files.' },
+            { keys: '/feedback', desc: 'Report issues or share diagnostics with support', usage: 'Report issues or share diagnostics with support.' },
+            { keys: '/init', desc: 'Capture persistent instructions for the repository or subdirectory you’re working', usage: 'Capture persistent instructions for the repository or subdirectory you’re working.' },
+            { keys: '/logout', desc: 'Clear local credentials when using a shared machine', usage: 'Clear local credentials when using a shared machine.' },
+            { keys: '/mcp', desc: 'Check which external tools Codex can call during the session; add verbose for server details', usage: 'Check which external tools Codex can call during the session; add verbose for server details.' },
+            { keys: '/mention', desc: 'Point Codex at specific files or folders you want it to inspect next', usage: 'Point Codex at specific files or folders you want it to inspect next.' },
+            { keys: '/model', desc: 'Switch between models such as gpt-5.4-mini and gpt-5.5 before running a task', usage: 'Switch between models such as gpt-5.4-mini and gpt-5.5 before running a task.' },
+            { keys: '/fast', desc: 'Turn the current model’s Fast tier on or off and persist the selection', usage: 'Turn the current model’s Fast tier on or off and persist the selection.' },
+            { keys: '/plan', desc: 'Ask Codex to propose an execution plan before implementation work starts', usage: 'Ask Codex to propose an execution plan before implementation work starts.' },
+            { keys: '/goal', desc: 'Give Codex a persistent target to track while a larger task runs', usage: 'Give Codex a persistent target to track while a larger task runs.' },
+            { keys: '/personality', desc: 'Make Codex more concise, more explanatory, or more collaborative without changing your', usage: 'Make Codex more concise, more explanatory, or more collaborative without changing your.' },
+            { keys: '/ps', desc: 'Check long-running commands without leaving the main transcript', usage: 'Check long-running commands without leaving the main transcript.' },
+            { keys: '/stop', desc: 'Cancel background terminal work started by the current session', usage: 'Cancel background terminal work started by the current session.' },
+            { keys: '/fork', desc: 'Branch the active session to explore a new approach without losing the current transcript', usage: 'Branch the active session to explore a new approach without losing the current transcript.' },
+            { keys: '/app', desc: 'Move from the TUI to the desktop app on macOS or Windows', usage: 'Move from the TUI to the desktop app on macOS or Windows.' },
+            { keys: '/side, /btw', desc: 'Ask a focused follow-up without disrupting the main chat’s transcript', usage: 'Ask a focused follow-up without disrupting the main chat’s transcript.' },
+            { keys: '/raw', desc: 'Make terminal selection and copying less formatted while reviewing long output', usage: 'Make terminal selection and copying less formatted while reviewing long output.' },
+            { keys: '/resume', desc: 'Continue work from a previous CLI session without starting over', usage: 'Continue work from a previous CLI session without starting over.' },
+            { keys: '/new', desc: 'Reset the chat context without leaving the CLI when you want a fresh prompt in the same repo', usage: 'Reset the chat context without leaving the CLI when you want a fresh prompt in the same repo.' },
+            { keys: '/quit', desc: 'Leave the session immediately', usage: 'Leave the session immediately.' },
+            { keys: '/review', desc: 'Run after Codex completes work or when you want a second set of eyes on local changes', usage: 'Run after Codex completes work or when you want a second set of eyes on local changes.' },
+            { keys: '/status', desc: 'Confirm the active model, approval policy, writable roots, and remaining context capacity', usage: 'Confirm the active model, approval policy, writable roots, and remaining context capacity.' },
+            { keys: '/usage', desc: 'Inspect daily, weekly, or cumulative ChatGPT token activity from inside the TUI', usage: 'Inspect daily, weekly, or cumulative ChatGPT token activity from inside the TUI.' },
+            { keys: '/debug-config', desc: 'Debug precedence and policy requirements, including experimental network constraints', usage: 'Debug precedence and policy requirements, including experimental network constraints.' },
+            { keys: '/statusline', desc: 'Pick and reorder footer items (model/context/limits/git/tokens/session) and persist', usage: 'Pick and reorder footer items (model/context/limits/git/tokens/session) and persist.' },
+            { keys: '/title', desc: 'Pick and reorder title items such as project, status, thread, branch, model, and task progress', usage: 'Pick and reorder title items such as project, status, thread, branch, model, and task progress.' },
+            { keys: '/theme', desc: 'Preview and persist a terminal syntax-highlighting theme', usage: 'Preview and persist a terminal syntax-highlighting theme.' },
+            { keys: '/pets, /pet', desc: 'Personalize the TUI with a built-in or custom ambient pet', usage: 'Personalize the TUI with a built-in or custom ambient pet.' },
+            { keys: '/cloud', desc: 'Run the chat in the cloud, when cloud execution is available', usage: 'Run the chat in the cloud, when cloud execution is available.' },
+            { keys: '/cloud-environment', desc: 'Choose the cloud environment for the chat', usage: 'Choose the cloud environment for the chat.' },
+            { keys: '/ide-context', desc: 'Turn automatic IDE context on or off', usage: 'Turn automatic IDE context on or off.' },
+            { keys: '/local', desc: 'Run the chat in your local workspace', usage: 'Run the chat in your local workspace.' },
+            { keys: '/project', desc: 'Choose a project for new chats', usage: 'Choose a project for new chats.' },
+            { keys: '/reasoning', desc: 'Choose the reasoning effort for the current chat', usage: 'Choose the reasoning effort for the current chat.' },
+            { keys: '/side', desc: 'Start a temporary side chat without interrupting the main chat', usage: 'Start a temporary side chat without interrupting the main chat.' },
+            { keys: '/worktree', desc: 'Run the chat in a new Git worktree', usage: 'Run the chat in a new Git worktree.' },
+          ]
+        },
+        {
+          name: 'Extension Commands',
+          shortcuts: [
+            { keys: 'chatgpt.addToThread', desc: 'Add selected text range as context for the current chat', usage: 'Add selected text range as context for the current chat.' },
+            { keys: 'chatgpt.addFileToThread', desc: 'Add the entire file as context for the current chat', usage: 'Add the entire file as context for the current chat.' },
+            { keys: 'chatgpt.newChat', desc: 'Create a new chat', usage: 'Create a new chat.' },
+            { keys: 'chatgpt.newCodexPanel', desc: 'Create a new Codex panel', usage: 'Create a new Codex panel.' },
+            { keys: 'chatgpt.openCommandMenu', desc: 'Open the Codex command menu', usage: 'Open the Codex command menu.' },
+            { keys: 'chatgpt.openSidebar', desc: 'Open the Codex sidebar panel', usage: 'Open the Codex sidebar panel.' },
+          ]
+        },
+        {
+          name: 'Additional Commands',
+          shortcuts: [
+            { keys: 'Esc', desc: 'Stop response', usage: 'Stop the currently generating response.' },
+            { keys: 'Up / Down', desc: 'Browse history', usage: 'Navigate through prompt history.' },
+            { keys: 'Tab', desc: 'Autocomplete', usage: 'Autocomplete file names or commands.' },
+            { keys: 'Ctrl + C', desc: 'Cancel', usage: 'Cancel the current operation.' },
+            { keys: 'Ctrl + L', desc: 'Clear screen', usage: 'Clear the terminal screen.' },
+            { keys: 'Ctrl + D', desc: 'Exit', usage: 'Exit Codex CLI.' },
+          ]
+        },
+      ]
+    },
   openclaw: {
     name: 'OpenClaw',
     icon: 'fas fa-robot',
@@ -13088,23 +13331,48 @@ htop_cmd: {
       },
     ]
   },
-  esxi: {
-    name: 'VMware ESXi',
-    icon: 'fas fa-server',
-    categories: [
-      {
-        name: 'esxcli Commands',
-        shortcuts: [
-          { keys: 'esxcli system version get', desc: 'Version', usage: 'Check ESXi version.' },
-          { keys: 'esxcli vm process list', desc: 'List VMs', usage: 'List running VMs.' },
-          { keys: 'esxcli network ip interface list', desc: 'Network', usage: 'List network interfaces.' },
-          { keys: 'esxcli storage filesystem list', desc: 'Storage', usage: 'List filesystems.' },
-          { keys: 'esxcli hardware cpu list', desc: 'CPU', usage: 'List CPU info.' },
-          { keys: 'esxcli hardware memory get', desc: 'Memory', usage: 'Get memory info.' },
-        ]
-      },
-    ]
-  },
+esxi: {
+      name: 'VMware ESXi',
+      icon: 'fas fa-server',
+      source: 'https://developer.broadcom.com/xapis/esxcli-command-reference/latest/',
+      kind: 'commands',
+      categories: [
+        {
+          name: 'Namespaces',
+          shortcuts: [
+            { keys: 'esxcli daemon', desc: 'Commands for controlling daemons built with Daemon SDK (DSDK)', usage: 'Commands for controlling daemons built with Daemon SDK (DSDK).' },
+            { keys: 'esxcli device', desc: 'Device manager commands', usage: 'Device manager commands.' },
+            { keys: 'esxcli esxcli', desc: 'Commands that operate on the esxcli system itself allowing users to get additional information', usage: 'Commands that operate on the esxcli system itself allowing users to get additional information.' },
+            { keys: 'esxcli graphics', desc: 'VMware graphics commands', usage: 'VMware graphics commands.' },
+            { keys: 'esxcli hardware', desc: 'VMKernel hardware properties and commands for configuring hardware', usage: 'VMKernel hardware properties and commands for configuring hardware.' },
+            { keys: 'esxcli iscsi', desc: 'VMware iSCSI commands', usage: 'VMware iSCSI commands.' },
+            { keys: 'esxcli licensing', desc: 'Operations to manage license credentials', usage: 'Operations to manage license credentials.' },
+            { keys: 'esxcli memtier', desc: 'Operations to manage memory tiering', usage: 'Operations to manage memory tiering.' },
+            { keys: 'esxcli network', desc: 'Operations that pertain to the maintenance of networking on an ESX host. This includes a wide', usage: 'Operations that pertain to the maintenance of networking on an ESX host. This includes a wide.' },
+            { keys: 'esxcli nsx', desc: 'NSX CLI', usage: 'NSX CLI.' },
+            { keys: 'esxcli nvme', desc: 'VMware NVMe driver operations', usage: 'VMware NVMe driver operations.' },
+            { keys: 'esxcli rdma', desc: 'Operations that pertain to remote direct memory access (RDMA) protocol stack on an ESX host', usage: 'Operations that pertain to remote direct memory access (RDMA) protocol stack on an ESX host.' },
+            { keys: 'esxcli sched', desc: 'VMKernel system properties and commands for configuring scheduling related functionality', usage: 'VMKernel system properties and commands for configuring scheduling related functionality.' },
+            { keys: 'esxcli software', desc: 'Manage the ESXi software image and packages', usage: 'Manage the ESXi software image and packages.' },
+            { keys: 'esxcli storage', desc: 'VMware storage commands', usage: 'VMware storage commands.' },
+            { keys: 'esxcli system', desc: 'VMKernel system properties and commands for configuring properties of the kernel core system', usage: 'VMKernel system properties and commands for configuring properties of the kernel core system.' },
+            { keys: 'esxcli vm', desc: 'A small number of operations that allow a user to Control Virtual Machine operations', usage: 'A small number of operations that allow a user to Control Virtual Machine operations.' },
+            { keys: 'esxcli vsan', desc: 'VMware vSAN commands. See the vSphere Storage publication for details', usage: 'VMware vSAN commands. See the vSphere Storage publication for details.' },
+          ]
+        },
+        {
+          name: 'Additional Commands',
+          shortcuts: [
+            { keys: 'esxcli system version get', desc: 'Version', usage: 'Check ESXi version.' },
+            { keys: 'esxcli vm process list', desc: 'List VMs', usage: 'List running VMs.' },
+            { keys: 'esxcli network ip interface list', desc: 'Network', usage: 'List network interfaces.' },
+            { keys: 'esxcli storage filesystem list', desc: 'Storage', usage: 'List filesystems.' },
+            { keys: 'esxcli hardware cpu list', desc: 'CPU', usage: 'List CPU info.' },
+            { keys: 'esxcli hardware memory get', desc: 'Memory', usage: 'Get memory info.' },
+          ]
+        },
+      ]
+    },
   ipmitool: {
     name: 'ipmitool',
     icon: 'fas fa-server',
@@ -14091,23 +14359,43 @@ elasticsearch: {
       },
     ]
   },
-  paloalto: {
-    name: 'Palo Alto PAN-OS',
-    icon: 'fas fa-shield-alt',
-    categories: [
-      {
-        name: 'CLI Commands',
-        shortcuts: [
-          { keys: 'show system info', desc: 'System info', usage: 'Show system information.' },
-          { keys: 'show interface all', desc: 'Interfaces', usage: 'Show all interfaces.' },
-          { keys: 'show running security-policy', desc: 'Security policy', usage: 'Show running security policies.' },
-          { keys: 'show session all', desc: 'Session list', usage: 'Show all sessions.' },
-          { keys: 'commit', desc: 'Apply config', usage: 'Apply configuration changes.' },
-          { keys: 'show log traffic', desc: 'Traffic log', usage: 'Show traffic logs.' },
-        ]
-      },
-    ]
-  },
+paloalto: {
+      name: 'Palo Alto PAN-OS',
+      icon: 'fas fa-shield-alt',
+      source: 'https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-cli-quick-start/get-started-with-the-cli/cli-cheat-sheets',
+      kind: 'commands',
+      categories: [
+        {
+          name: 'Configuration Commands',
+          shortcuts: [
+            { keys: 'set deviceconfig system ip-address', desc: 'Set the MGT interface', usage: 'Set the MGT interface.' },
+            { keys: 'set mgt-config users admin password', desc: 'Set the admin password', usage: 'Set the admin password.' },
+            { keys: 'set deviceconfig system dns-setting servers', desc: 'Set the DNS', usage: 'Set the DNS.' },
+            { keys: 'set deviceconfig system ntp-servers', desc: 'Set the NTP', usage: 'Set the NTP.' },
+            { keys: 'set network interface', desc: 'Set the Interfaces', usage: 'Set the Interfaces.' },
+            { keys: 'set deviceconfig system', desc: 'Set the System settings', usage: 'Set the System settings.' },
+            { keys: 'set zone <name> # set vsys <name> zone <name>', desc: 'Set the Zones', usage: 'Set the Zones.' },
+            { keys: 'set rulebase # set vsys vsys1 rulebase', desc: 'Set the Policy', usage: 'Set the Policy.' },
+            { keys: 'set deviceconfig setting management quota-settings', desc: 'Set the Log Quotas', usage: 'Set the Log Quotas.' },
+            { keys: 'set deviceconfig setting autofocus', desc: 'Set the AutoFocus Settings', usage: 'Set the AutoFocus Settings.' },
+            { keys: 'set deviceconfig setting wildfire', desc: 'Set the WildFire Settings', usage: 'Set the WildFire Settings.' },
+            { keys: 'set deviceconfig system panorama-server', desc: 'Set the Panorama', usage: 'Set the Panorama.' },
+            { keys: 'request restart system', desc: 'Set the Restart', usage: 'Set the Restart.' },
+          ]
+        },
+        {
+          name: 'Additional Commands',
+          shortcuts: [
+            { keys: 'show system info', desc: 'System info', usage: 'Show system information.' },
+            { keys: 'show interface all', desc: 'Interfaces', usage: 'Show all interfaces.' },
+            { keys: 'show running security-policy', desc: 'Security policy', usage: 'Show running security policies.' },
+            { keys: 'show session all', desc: 'Session list', usage: 'Show all sessions.' },
+            { keys: 'commit', desc: 'Apply config', usage: 'Apply configuration changes.' },
+            { keys: 'show log traffic', desc: 'Traffic log', usage: 'Show traffic logs.' },
+          ]
+        },
+      ]
+    },
   arista: {
     name: 'Arista EOS',
     icon: 'fas fa-network-wired',
