@@ -4525,8 +4525,8 @@ const shortcutData = {
           { keys: 'tail -f [file]', desc: 'Follow file', usage: 'Follow the end of a file in real time.' },
           { keys: 'wc -l [file]', desc: 'Count lines', usage: 'Count lines in a file.' },
           { keys: 'sort [file]', desc: 'Sort', usage: 'Sort file contents.' },
-          { keys: 'sed ’s/old/new/g’ [file]', desc: 'Find & replace', usage: 'Find and replace text in files.' },
-          { keys: 'awk ’{print $1}’ [file]', desc: 'Extract fields', usage: 'Extract specific fields from files.' },
+          { keys: 'sed \'s/old/new/g\' [file]', desc: 'Find & replace', usage: 'Find and replace text in files.' },
+          { keys: 'awk \'{print $1}\' [file]', desc: 'Extract fields', usage: 'Extract specific fields from files.' },
         ]
       },
       {
@@ -9666,12 +9666,12 @@ const shortcutData = {
       {
         name: 'Text Processing',
         shortcuts: [
-          { keys: 'sed ’s/old/new/’ [file]', desc: 'First replace', usage: 'Replace first match per line.' },
-          { keys: 'sed ’s/old/new/g’ [file]', desc: 'Replace all', usage: 'Replace all matches.' },
-          { keys: 'sed -i ’s/old/new/g’ [file]', desc: 'In-place edit', usage: 'Modify file directly.' },
-          { keys: 'sed -n ’5,10p’ [file]', desc: 'Print range', usage: 'Print lines 5-10.' },
-          { keys: 'sed ’/pattern/d’ [file]', desc: 'Delete pattern', usage: 'Delete lines matching pattern.' },
-          { keys: 'sed ’3a\\\\text’ [file]', desc: 'Append line', usage: 'Append text after line 3.' },
+          { keys: 'sed \'s/old/new/\' [file]', desc: 'First replace', usage: 'Replace first match per line.' },
+          { keys: 'sed \'s/old/new/g\' [file]', desc: 'Replace all', usage: 'Replace all matches.' },
+          { keys: 'sed -i \'s/old/new/g\' [file]', desc: 'In-place edit', usage: 'Modify file directly.' },
+          { keys: 'sed -n \'5,10p\' [file]', desc: 'Print range', usage: 'Print lines 5-10.' },
+          { keys: 'sed \'/pattern/d\' [file]', desc: 'Delete pattern', usage: 'Delete lines matching pattern.' },
+          { keys: 'sed \'3a\\\\text\' [file]', desc: 'Append line', usage: 'Append text after line 3.' },
         ]
       },
     ]
@@ -9683,12 +9683,12 @@ const shortcutData = {
       {
         name: 'Text Processing',
         shortcuts: [
-          { keys: 'awk ’{print $1}’ [file]', desc: 'First field', usage: 'Print first field.' },
-          { keys: 'awk -F’,’ ’{print $2}’ [file]', desc: 'CSV field', usage: 'Print second field from CSV.' },
-          { keys: 'awk ’/pattern/’ [file]', desc: 'Pattern match', usage: 'Print lines matching pattern.' },
-          { keys: 'awk ’{sum+=$1} END {print sum}’', desc: 'Sum', usage: 'Calculate sum of first field.' },
-          { keys: 'awk ’NR==5’ [file]', desc: 'Specific line', usage: 'Print line 5.' },
-          { keys: 'awk ’{print NR, $0}’ [file]', desc: 'Line numbers', usage: 'Print with line numbers.' },
+          { keys: 'awk \'{print $1}\' [file]', desc: 'First field', usage: 'Print first field.' },
+          { keys: 'awk -F\',\' \'{print $2}\' [file]', desc: 'CSV field', usage: 'Print second field from CSV.' },
+          { keys: 'awk \'/pattern/\' [file]', desc: 'Pattern match', usage: 'Print lines matching pattern.' },
+          { keys: 'awk \'{sum+=$1} END {print sum}\'', desc: 'Sum', usage: 'Calculate sum of first field.' },
+          { keys: 'awk \'NR==5\' [file]', desc: 'Specific line', usage: 'Print line 5.' },
+          { keys: 'awk \'{print NR, $0}\' [file]', desc: 'Line numbers', usage: 'Print with line numbers.' },
         ]
       },
     ]
@@ -9700,12 +9700,12 @@ const shortcutData = {
       {
         name: 'JSON Processing',
         shortcuts: [
-          { keys: 'jq ’.’ [file]', desc: 'Pretty print', usage: 'Pretty-print JSON.' },
-          { keys: 'jq ’.key’ [file]', desc: 'Extract key', usage: 'Extract a specific key value.' },
-          { keys: 'jq ’.array[]’ [file]', desc: 'Iterate array', usage: 'Print each array element.' },
-          { keys: 'jq ’.[] | .name’ [file]', desc: 'Extract field', usage: 'Extract name field from each.' },
-          { keys: 'jq ’length’ [file]', desc: 'Length', usage: 'Get array or object length.' },
-          { keys: 'jq ’select(.age > 30)’ [file]', desc: 'Filter', usage: 'Filter elements by condition.' },
+          { keys: 'jq \'.\' [file]', desc: 'Pretty print', usage: 'Pretty-print JSON.' },
+          { keys: 'jq \'.key\' [file]', desc: 'Extract key', usage: 'Extract a specific key value.' },
+          { keys: 'jq \'.array[]\' [file]', desc: 'Iterate array', usage: 'Print each array element.' },
+          { keys: 'jq \'.[] | .name\' [file]', desc: 'Extract field', usage: 'Extract name field from each.' },
+          { keys: 'jq \'length\' [file]', desc: 'Length', usage: 'Get array or object length.' },
+          { keys: 'jq \'select(.age > 30)\' [file]', desc: 'Filter', usage: 'Filter elements by condition.' },
         ]
       },
     ]
@@ -9797,7 +9797,7 @@ const shortcutData = {
           { keys: 'rsync -avz src/ dest/', desc: 'Local sync', usage: 'Sync local directories.' },
           { keys: 'rsync -avz src/ user@host:dest/', desc: 'Remote sync', usage: 'Sync to remote server.' },
           { keys: 'rsync -avz --delete src/ dest/', desc: 'Mirror', usage: 'Mirror including deletions.' },
-          { keys: 'rsync -avz --exclude=’*.log’', desc: 'Exclude', usage: 'Exclude specific patterns.' },
+          { keys: 'rsync -avz --exclude=\'*.log\'', desc: 'Exclude', usage: 'Exclude specific patterns.' },
           { keys: 'rsync -avzn src/ dest/', desc: 'Dry run', usage: 'Preview without changes.' },
           { keys: 'rsync -avz -e ssh src/ user@host:dest/', desc: 'Sync over SSH', usage: 'Force rsync to use SSH as the transport.' },
           { keys: 'rsync -avz --progress src/ dest/', desc: 'Show progress', usage: 'Display per-file transfer progress.' },
