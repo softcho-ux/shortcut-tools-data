@@ -6748,18 +6748,123 @@ const shortcutData = {
   navisworks: {
     name: 'Navisworks',
     icon: 'fas fa-building',
+    source: 'https://help.autodesk.com/cloudhelp/2026/ENU/Navisworks-Quick-Start/files/GUID-E5041421-ADEA-4FB8-88FF-D59860A8E826.htm',
     categories: [
       {
-        name: 'Navigation & View',
+        name: 'General Shortcuts',
         shortcuts: [
-          { keys: 'Shift + W', desc: 'Fit all', usage: 'Fit entire model to view.' },
-          { keys: 'Ctrl + Shift + V', desc: 'Save viewpoint', usage: 'Save current view as viewpoint.' },
-          { keys: 'F5', desc: 'Refresh', usage: 'Refresh the scene.' },
-          { keys: 'Ctrl + F', desc: 'Find', usage: 'Search for objects in model.' },
-          { keys: 'Ctrl + H', desc: 'Hide', usage: 'Hide selected objects.' },
-          { keys: 'Ctrl + Shift + H', desc: 'Show all', usage: 'Show all hidden objects.' },
-          { keys: 'F2', desc: 'Rename', usage: 'Rename selected item.' },
-          { keys: 'Ctrl + Shift + C', desc: 'Clash detection', usage: 'Run clash detection.' },
+          { keys: 'Page Up', desc: 'Zooms to view all objects in the Scene View', usage: 'Zooms to view all objects in the Scene View.' },
+          { keys: 'Page Down', desc: 'Zooms to magnify all selected objects in the Scene View', usage: 'Zooms to magnify all selected objects in the Scene View.' },
+          { keys: 'Home', desc: 'Takes you to Home view. This keyboard shortcut only applies  (General Shortcuts)', usage: 'Takes you to Home view. This keyboard shortcut only applies to the Scene View windows. This means it will only work when this window has focus (In General Shortcuts.)' },
+          { keys: 'Esc', desc: 'Deselects everything (General Shortcuts)', usage: 'Deselects everything (In General Shortcuts.)' },
+          { keys: 'Shift', desc: 'Used to modify the middle mouse button actions', usage: 'Used to modify the middle mouse button actions.' },
+          { keys: 'Ctrl', desc: 'Used to modify the middle mouse button actions', usage: 'Used to modify the middle mouse button actions.' },
+          { keys: 'Alt', desc: 'Turns the keytips on or off', usage: 'Turns the keytips on or off.' },
+          { keys: 'Alt + F4', desc: 'Closes the currently active dockable window when it is undoc', usage: 'Closes the currently active dockable window when it is undocked, or exits the application if the main application window is active.' },
+          { keys: 'Ctrl + 0', desc: 'Turns on Turntable mode', usage: 'Turns on Turntable mode.' },
+          { keys: 'Ctrl + 1', desc: 'Turns on Select mode', usage: 'Turns on Select mode.' },
+          { keys: 'Ctrl + 2', desc: 'Turns on Walk mode', usage: 'Turns on Walk mode.' },
+          { keys: 'Ctrl + 3', desc: 'Turns on Look Around mode', usage: 'Turns on Look Around mode.' },
+          { keys: 'Ctrl + 4', desc: 'Turns on Zoom mode', usage: 'Turns on Zoom mode.' },
+          { keys: 'Ctrl + 5', desc: 'Turns on Zoom Window mode', usage: 'Turns on Zoom Window mode.' },
+          { keys: 'Ctrl + 6', desc: 'Turns on Pan mode', usage: 'Turns on Pan mode.' },
+          { keys: 'Ctrl + 7', desc: 'Turns on Orbit mode', usage: 'Turns on Orbit mode.' },
+          { keys: 'Ctrl + 8', desc: 'Turns on Free Orbit mode', usage: 'Turns on Free Orbit mode.' },
+          { keys: 'Ctrl + 9', desc: 'Turns on Fly mode', usage: 'Turns on Fly mode.' },
+          { keys: 'Ctrl + A', desc: 'Displays the Append dialog box', usage: 'Displays the Append dialog box.' },
+          { keys: 'Ctrl + D', desc: 'Toggles Collision mode. You must be in appropriate navigatio', usage: 'Toggles Collision mode. You must be in appropriate navigation mode (that is, Walk or Fly ) for this keyboard shortcut to work.' },
+          { keys: 'Ctrl + F', desc: 'Displays the Quick Find dialog box', usage: 'Displays the Quick Find dialog box.' },
+          { keys: 'Ctrl + G', desc: 'Toggles Gravity mode', usage: 'Toggles Gravity mode.' },
+          { keys: 'Ctrl + H', desc: 'Toggles Hidden mode for selected items', usage: 'Toggles Hidden mode for selected items.' },
+          { keys: 'Ctrl + I', desc: 'Displays the Insert From File dialog box', usage: 'Displays the Insert From File dialog box.' },
+          { keys: 'Ctrl + L', desc: 'Toggles pivot point lock on and off', usage: 'Toggles pivot point lock on and off.' },
+          { keys: 'Ctrl + M', desc: 'Displays the Merge dialog box', usage: 'Displays the Merge dialog box.' },
+          { keys: 'Ctrl + N', desc: 'Resets the program, closes the currently open Autodesk Navis', usage: 'Resets the program, closes the currently open Autodesk Navisworks file, and creates a new file.' },
+          { keys: 'Ctrl + O', desc: 'Displays the Open dialog box', usage: 'Displays the Open dialog box.' },
+          { keys: 'Ctrl + P', desc: 'Displays the Print dialog box', usage: 'Displays the Print dialog box.' },
+          { keys: 'Ctrl + R', desc: 'Toggles Require mode for selected items', usage: 'Toggles Require mode for selected items.' },
+          { keys: 'Ctrl + S', desc: 'Saves the currently open Autodesk Navisworks file', usage: 'Saves the currently open Autodesk Navisworks file.' },
+          { keys: 'Ctrl + T', desc: 'Toggles Third Person mode', usage: 'Toggles Third Person mode.' },
+          { keys: 'Ctrl + Y', desc: 'Reverses the last operation performed by the Undo command', usage: 'Reverses the last operation performed by the Undo command.' },
+          { keys: 'Ctrl + Z', desc: 'Reverses the last performed operation', usage: 'Reverses the last performed operation.' },
+          { keys: 'Ctrl + Page Up', desc: 'Displays the previous sheet', usage: 'Displays the previous sheet.' },
+          { keys: 'Ctrl + Page Down', desc: 'Displays the next sheet', usage: 'Displays the next sheet.' },
+          { keys: 'Ctrl + F1', desc: 'Opens the Help system', usage: 'Opens the Help system.' },
+          { keys: 'Ctrl + F2', desc: 'Opens the Clash Detective window. This feature is available ', usage: 'Opens the Clash Detective window. This feature is available for Autodesk Navisworks Manage users only.' },
+          { keys: 'Ctrl + F3', desc: 'Toggles the TimeLiner window', usage: 'Toggles the TimeLiner window.' },
+          { keys: 'Ctrl + F4', desc: 'Toggles the docking window for the currently active graphics', usage: 'Toggles the docking window for the currently active graphics system (i.e. the Autodesk Rendering window ).' },
+          { keys: 'Ctrl + F5', desc: 'Toggles the Animator window', usage: 'Toggles the Animator window.' },
+          { keys: 'Ctrl + F6', desc: 'Toggles the Scripter window', usage: 'Toggles the Scripter window.' },
+          { keys: 'Ctrl + F7', desc: 'Toggles the Tilt window', usage: 'Toggles the Tilt window.' },
+          { keys: 'Ctrl + F8', desc: 'Toggles the Quantification Workbook window', usage: 'Toggles the Quantification Workbook window.' },
+          { keys: 'Ctrl + F9', desc: 'Toggles the Plan View window', usage: 'Toggles the Plan View window.' },
+          { keys: 'Ctrl + F10', desc: 'Toggles the Section View window', usage: 'Toggles the Section View window.' },
+          { keys: 'Ctrl + F11', desc: 'Toggles the Saved Viewpoints window', usage: 'Toggles the Saved Viewpoints window.' },
+          { keys: 'Ctrl + F12', desc: 'Toggles the Selection Tree window', usage: 'Toggles the Selection Tree window.' },
+          { keys: 'Ctrl + Home', desc: 'Dollies and pans the camera so that the entire model is in v (General Shortcuts)', usage: 'Dollies and pans the camera so that the entire model is in view (In General Shortcuts.)' },
+          { keys: 'Ctrl + Right', desc: 'Play selected animation', usage: 'Play selected animation.' },
+          { keys: 'Ctrl + Left', desc: 'Reverse Play selected animation', usage: 'Reverse Play selected animation.' },
+          { keys: 'Ctrl + Up', desc: 'Record viewpoint animation', usage: 'Record viewpoint animation.' },
+          { keys: 'Ctrl + Down', desc: 'Stop playing animation', usage: 'Stop playing animation.' },
+          { keys: 'Ctrl + Space', desc: 'Pause playing animation', usage: 'Pause playing animation.' },
+          { keys: 'Ctrl + Shift + A', desc: 'Opens the Animation Export dialog box', usage: 'Opens the Animation Export dialog box.' },
+          { keys: 'Ctrl + Shift + C', desc: 'Opens the Export dialog box and enables you to export curren', usage: 'Opens the Export dialog box and enables you to export current search.' },
+          { keys: 'Ctrl + Shift + I', desc: 'Opens the Image Export dialog box', usage: 'Opens the Image Export dialog box.' },
+          { keys: 'Ctrl + Shift + R', desc: 'Opens the Export Rendered Image dialog box', usage: 'Opens the Export Rendered Image dialog box.' },
+          { keys: 'Ctrl + Shift + S', desc: 'Opens the Export dialog box and enables you to export search', usage: 'Opens the Export dialog box and enables you to export search sets.' },
+          { keys: 'Ctrl + Shift + T', desc: 'Opens the Export dialog box and enables you to export the cu', usage: 'Opens the Export dialog box and enables you to export the current TimeLiner schedule.' },
+          { keys: 'Ctrl + Shift + V', desc: 'Opens the Export dialog box and enables you to export viewpo', usage: 'Opens the Export dialog box and enables you to export viewpoints.' },
+          { keys: 'Ctrl + Shift + W', desc: 'Opens the Export dialog box and enables you to export viewpo', usage: 'Opens the Export dialog box and enables you to export viewpoint report.' },
+          { keys: 'Ctrl + Shift + Home', desc: 'Sets current view as Home (General Shortcuts)', usage: 'Sets current view as Home (In General Shortcuts.)' },
+          { keys: 'Ctrl + Shift + End', desc: 'Sets current view as Front (General Shortcuts)', usage: 'Sets current view as Front (In General Shortcuts.)' },
+          { keys: 'Ctrl + Shift + Left', desc: 'Takes you to the previous markup tag', usage: 'Takes you to the previous markup tag.' },
+          { keys: 'Ctrl + Shift + Right', desc: 'Takes you to the next markup tag', usage: 'Takes you to the next markup tag.' },
+          { keys: 'Ctrl + Shift + Up', desc: 'Takes you to the first markup tag', usage: 'Takes you to the first markup tag.' },
+          { keys: 'Ctrl + Shift + Down', desc: 'Takes you to the last markup tag', usage: 'Takes you to the last markup tag.' },
+          { keys: 'F1', desc: 'Opens the Help system', usage: 'Opens the Help system.' },
+          { keys: 'F2', desc: 'Renames the selected item, when appropriate (General Shortcuts)', usage: 'Renames the selected item, when appropriate (In General Shortcuts.)' },
+          { keys: 'F3', desc: 'Repeats the previously run Quick Find search', usage: 'Repeats the previously run Quick Find search.' },
+          { keys: 'F5', desc: 'Refreshes your scene with the latest versions of currently l', usage: 'Refreshes your scene with the latest versions of currently loaded model files.' },
+          { keys: 'F11', desc: 'Toggles Full Screen mode', usage: 'Toggles Full Screen mode.' },
+          { keys: 'F12', desc: 'Opens the Options Editor ', usage: 'Opens the Options Editor .' },
+          { keys: 'Shift + W', desc: 'Opens the last used SteeringWheel ', usage: 'Opens the last used SteeringWheel .' },
+          { keys: 'Shift + F1', desc: 'Enables you to get context-sensitive help', usage: 'Enables you to get context-sensitive help.' },
+          { keys: 'Shift + F2', desc: 'Toggles the Sets window', usage: 'Toggles the Sets window.' },
+          { keys: 'Shift + F3', desc: 'Toggles the Find Items window', usage: 'Toggles the Find Items window.' },
+          { keys: 'Shift + F4', desc: 'Toggles the Find Comments window', usage: 'Toggles the Find Comments window.' },
+          { keys: 'Shift + F6', desc: 'Toggles the Comments window', usage: 'Toggles the Comments window.' },
+          { keys: 'Shift + F7', desc: 'Toggles the Properties window', usage: 'Toggles the Properties window.' },
+          { keys: 'Shift + F10', desc: 'Opens a context menu', usage: 'Opens a context menu.' },
+          { keys: 'Shift + F11', desc: 'Opens the File Options dialog box', usage: 'Opens the File Options dialog box.' },
+        ]
+      },
+      {
+        name: 'Shortcuts for TimeLiner Tasks or Simulate tabs',
+        shortcuts: [
+          { keys: 'Esc', desc: 'Cancels the current edits (Shortcuts for TimeLiner Tasks or Simulate tabs)', usage: 'Cancels the current edits (In Shortcuts for TimeLiner Tasks or Simulate tabs.)' },
+          { keys: 'F2', desc: 'Starts editing the selected field (Shortcuts for TimeLiner Tasks or Simulate tabs)', usage: 'Starts editing the selected field (In Shortcuts for TimeLiner Tasks or Simulate tabs.)' },
+          { keys: 'Right', desc: 'Moves the selection to the next right field, unless the curr', usage: 'Moves the selection to the next right field, unless the current field is in a tree column that can be expanded. In this case, it expands the row.' },
+          { keys: 'Left', desc: 'Moves the selection to the next left field, unless the curre', usage: 'Moves the selection to the next left field, unless the current field is in a tree column that can be expanded. In this case, it expands the row.' },
+          { keys: 'Home', desc: 'Selects the first row (Shortcuts for TimeLiner Tasks or Simulate tabs)', usage: 'Selects the first row (In Shortcuts for TimeLiner Tasks or Simulate tabs.)' },
+          { keys: 'Shift + Home', desc: 'Extends the selection from the selection anchor to the first', usage: 'Extends the selection from the selection anchor to the first row.' },
+          { keys: 'Ctrl + Home', desc: 'Moves the current row to the first row without changing sele (Shortcuts for TimeLiner Tasks or Simulate tabs)', usage: 'Moves the current row to the first row without changing selection (In Shortcuts for TimeLiner Tasks or Simulate tabs.)' },
+          { keys: 'Ctrl + Shift + Home', desc: 'Adds the rows from the current row to the first row to the s (Shortcuts for TimeLiner Tasks or Simulate tabs)', usage: 'Adds the rows from the current row to the first row to the selection (In Shortcuts for TimeLiner Tasks or Simulate tabs.)' },
+          { keys: 'End', desc: 'Selects the last row', usage: 'Selects the last row.' },
+          { keys: 'Shift + End', desc: 'Extends the selection from the selection anchor to the end', usage: 'Extends the selection from the selection anchor to the end.' },
+          { keys: 'Ctrl + End', desc: 'Moves the current row to the last row without changing selec', usage: 'Moves the current row to the last row without changing selection.' },
+          { keys: 'Ctrl + Shift + End', desc: 'Adds the rows from the current row to the last row to the se (Shortcuts for TimeLiner Tasks or Simulate tabs)', usage: 'Adds the rows from the current row to the last row to the selection (In Shortcuts for TimeLiner Tasks or Simulate tabs.)' },
+        ]
+      },
+      {
+        name: 'Shortcuts for Measure Tools panel, including the Lock feature',
+        shortcuts: [
+          { keys: 'X', desc: 'Lock to the X axis', usage: 'Lock to the X axis.' },
+          { keys: 'Y', desc: 'Lock to the Y axis', usage: 'Lock to the Y axis.' },
+          { keys: 'Z', desc: 'Lock to the Z axis', usage: 'Lock to the Z axis.' },
+          { keys: 'P', desc: 'Lock to a point perpendicular to a surface', usage: 'Lock to a point perpendicular to a surface.' },
+          { keys: 'L', desc: 'Lock to a point parallel to a surface', usage: 'Lock to a point parallel to a surface.' },
+          { keys: 'Enter', desc: 'Quick zoom to measured area', usage: 'Quick zoom to measured area.' },
+          { keys: '-', desc: 'Use with Enter key to zoom out of measured area', usage: 'Use with Enter key to zoom out of measured area.' },
         ]
       },
     ]
@@ -16042,16 +16147,546 @@ const shortcutData = {
   pro_tools: {
     name: 'Pro Tools',
     icon: 'fas fa-headphones-alt',
+    source: 'https://resources.avid.com/SupportFiles/PT/Pro_Tools_Shortcuts_2025.10.pdf',
     categories: [
       {
-        name: 'Editing',
+        name: 'Alternate Keyboard Shortcuts Presets',
         shortcuts: [
-          { keys: 'Space', desc: 'Play/Stop', usage: 'Play or stop playback.' },
-          { keys: 'Ctrl + Space', desc: 'Record', usage: 'Start recording.' },
-          { keys: 'Cmd + E', desc: 'Separate', usage: 'Separate selection.' },
-          { keys: 'Cmd + Z', desc: 'Undo', usage: 'Undo last action.' },
-          { keys: 'Cmd + D', desc: 'Duplicate', usage: 'Duplicate selection.' },
-          { keys: 'Cmd + =', desc: 'Zoom in', usage: 'Zoom in timeline.' },
+          { keys: 'Ctrl + Alt + O', desc: 'Open Dashboard (Alternate Keyboard Shortcuts Presets)', usage: 'Open Dashboard (In Alternate Keyboard Shortcuts Presets.)' },
+          { keys: 'Ctrl + S', desc: 'Sign in or Sign out (Alternate Keyboard Shortcuts Presets)', usage: 'Sign in or Sign out (In Alternate Keyboard Shortcuts Presets.)' },
+          { keys: 'Ctrl + 4', desc: 'Select Getting Started tab (Alternate Keyboard Shortcuts Presets)', usage: 'Select Getting Started tab (In Alternate Keyboard Shortcuts Presets.)' },
+          { keys: 'Ctrl + F', desc: 'Toggle between Files types (WAV or AIFF)', usage: 'Toggle between Files types (WAV or AIFF).' },
+          { keys: 'Ctrl + B', desc: 'Toggle through Bit Depth options (16-bit, 24-bit, or 32-bit  (Alternate Keyboard Shortcuts Presets)', usage: 'Toggle through Bit Depth options (16-bit, 24-bit, or 32-bit floating) (In Alternate Keyboard Shortcuts Presets.)' },
+          { keys: 'Ctrl + R', desc: 'Toggle through Sample Rate options (Alternate Keyboard Shortcuts Presets)', usage: 'Toggle through Sample Rate options (In Alternate Keyboard Shortcuts Presets.)' },
+          { keys: 'Ctrl + I', desc: 'Toggle through the available IO Setup options (Alternate Keyboard Shortcuts Presets)', usage: 'Toggle through the available IO Setup options (In Alternate Keyboard Shortcuts Presets.)' },
+          { keys: 'Ctrl + G', desc: 'Enable or disable the Interleaved option (Alternate Keyboard Shortcuts Presets)', usage: 'Enable or disable the Interleaved option (In Alternate Keyboard Shortcuts Presets.)' },
+          { keys: 'Ctrl + O', desc: 'Open from Disk (sessions only)', usage: 'Open from Disk (sessions only).' },
+        ]
+      },
+      {
+        name: 'Playback',
+        shortcuts: [
+          { keys: 'Space', desc: 'Start/stop playback (Playback)', usage: 'Start/stop playback (In Playback.)' },
+          { keys: 'Shift + Space', desc: 'Half-speed playback', usage: 'Half-speed playback.' },
+          { keys: 'Ctrl + J', desc: 'Enable/disable online playback (Playback)', usage: 'Enable/disable online playback (In Playback.)' },
+          { keys: 'Alt + [', desc: 'Play Edit selection', usage: 'Play Edit selection.' },
+          { keys: 'Ctrl + Win + P', desc: 'Dynamic Transport Mode toggle (Playback)', usage: 'Dynamic Transport Mode toggle (In Playback.)' },
+        ]
+      },
+      {
+        name: 'Recording',
+        shortcuts: [
+          { keys: 'Ctrl + Space', desc: 'Start record', usage: 'Start record.' },
+          { keys: 'Space', desc: 'Stop record (Recording)', usage: 'Stop record (In Recording.)' },
+          { keys: 'Ctrl + Shift + Space', desc: 'Half-speed record', usage: 'Half-speed record.' },
+          { keys: 'Ctrl + Alt + Space', desc: 'Enable/disable online record', usage: 'Enable/disable online record.' },
+          { keys: 'Alt + L', desc: 'Loop Record toggle (Recording)', usage: 'Loop Record toggle (In Recording.)' },
+          { keys: 'Ctrl + Shift + T', desc: 'TrackPunch toggle (Pro Tools Ultimate only)', usage: 'TrackPunch toggle (Pro Tools Ultimate only).' },
+          { keys: 'Ctrl + Shift + P', desc: 'QuickPunch toggle (Recording)', usage: 'QuickPunch toggle (In Recording.)' },
+        ]
+      },
+      {
+        name: 'Transport Mode (Numeric Keypad)',
+        shortcuts: [
+          { keys: '0', desc: 'Play/Stop (Transport Mode (Numeric Keypad))', usage: 'Play/Stop (In Transport Mode (Numeric Keypad).)' },
+          { keys: '1', desc: 'Rewind (Transport Mode (Numeric Keypad))', usage: 'Rewind (In Transport Mode (Numeric Keypad).)' },
+          { keys: '2', desc: 'Fast Forward (Transport Mode (Numeric Keypad))', usage: 'Fast Forward (In Transport Mode (Numeric Keypad).)' },
+          { keys: '3', desc: 'Record Enable (Transport Mode (Numeric Keypad))', usage: 'Record Enable (In Transport Mode (Numeric Keypad).)' },
+          { keys: '4', desc: 'Loop Playback mode on/off (Transport Mode (Numeric Keypad))', usage: 'Loop Playback mode on/off (In Transport Mode (Numeric Keypad).)' },
+          { keys: '5', desc: 'Loop Record mode on/off (Transport Mode (Numeric Keypad))', usage: 'Loop Record mode on/off (In Transport Mode (Numeric Keypad).)' },
+          { keys: '6', desc: 'QuickPunch mode on/off (Transport Mode (Numeric Keypad))', usage: 'QuickPunch mode on/off (In Transport Mode (Numeric Keypad).)' },
+          { keys: '8', desc: 'Countoff on/off (Transport Mode (Numeric Keypad))', usage: 'Countoff on/off (In Transport Mode (Numeric Keypad).)' },
+          { keys: '9', desc: 'MIDI Merge/Replace mode on/off (Transport Mode (Numeric Keypad))', usage: 'MIDI Merge/Replace mode on/off (In Transport Mode (Numeric Keypad).)' },
+        ]
+      },
+      {
+        name: 'Shuttle Mode (Numeric Keypad)',
+        shortcuts: [
+          { keys: '6', desc: '1 x Forward playback speed (Shuttle Mode (Numeric Keypad))', usage: '1 x Forward playback speed (In Shuttle Mode (Numeric Keypad).)' },
+          { keys: '4', desc: '1 x Rewind playback speed (Shuttle Mode (Numeric Keypad))', usage: '1 x Rewind playback speed (In Shuttle Mode (Numeric Keypad).)' },
+          { keys: '9', desc: '2 x Forward playback speed 8 (Shuttle Mode (Numeric Keypad))', usage: '2 x Forward playback speed 8 (In Shuttle Mode (Numeric Keypad).)' },
+          { keys: '7', desc: '2 x Backward playback speed 8 (Shuttle Mode (Numeric Keypad))', usage: '2 x Backward playback speed 8 (In Shuttle Mode (Numeric Keypad).)' },
+          { keys: '3', desc: '1/16 x Forward playback speed 2 (Shuttle Mode (Numeric Keypad))', usage: '1/16 x Forward playback speed 2 (In Shuttle Mode (Numeric Keypad).)' },
+          { keys: '1', desc: '1/16 x Backward playback speed 2 Loop playback of Edit Selec (Shuttle Mode (Numeric Keypad))', usage: '1/16 x Backward playback speed 2 Loop playback of Edit Selection 0 (In Shuttle Mode (Numeric Keypad).)' },
+        ]
+      },
+      {
+        name: 'Scrub (Jog)/Shuttle',
+        shortcuts: [
+          { keys: '0', desc: 'Shuttle Lock stop (Classic or Transport mode)', usage: 'Shuttle Lock stop (Classic or Transport mode).' },
+          { keys: 'Space', desc: 'Exit Shuttle Lock mode (Classic or Transport mode)', usage: 'Exit Shuttle Lock mode (Classic or Transport mode).' },
+        ]
+      },
+      {
+        name: 'Edit Modes and Edit Tools',
+        shortcuts: [
+          { keys: 'F1', desc: 'Shuffle mode', usage: 'Shuffle mode.' },
+          { keys: 'F2', desc: 'Slip mode', usage: 'Slip mode.' },
+          { keys: 'F3', desc: 'Spot mode', usage: 'Spot mode.' },
+          { keys: 'F4', desc: 'Grid mode', usage: 'Grid mode.' },
+          { keys: 'F1 + F4', desc: 'Enable Snap to Grid and Shuffle mode', usage: 'Enable Snap to Grid and Shuffle mode.' },
+          { keys: 'F2 + F4', desc: 'Enable Snap to Grid and Slip mode', usage: 'Enable Snap to Grid and Slip mode.' },
+          { keys: 'F3 + F4', desc: 'Enable Snap to Grid and Spot mode', usage: 'Enable Snap to Grid and Spot mode.' },
+          { keys: 'F5', desc: 'Zoomer tool', usage: 'Zoomer tool.' },
+          { keys: 'F6', desc: 'Trimmer tool', usage: 'Trimmer tool.' },
+          { keys: 'F7', desc: 'Selector tool', usage: 'Selector tool.' },
+          { keys: '8', desc: 'Grabber tool F (Edit Modes and Edit Tools)', usage: 'Grabber tool F (In Edit Modes and Edit Tools.)' },
+          { keys: '9', desc: 'Scrubber tool F (Edit Modes and Edit Tools)', usage: 'Scrubber tool F (In Edit Modes and Edit Tools.)' },
+          { keys: '6 + F7', desc: 'Smart Tool F', usage: 'Smart Tool F.' },
+        ]
+      },
+      {
+        name: 'Edit Selection, Definition, and Navigation',
+        shortcuts: [
+          { keys: 'Ctrl + Alt + T', desc: 'Enable or disable Tab to Transients command (Edit Selection, Definition, and Navigation)', usage: 'Enable or disable Tab to Transients command (In Edit Selection, Definition, and Navigation.)' },
+          { keys: 'Tab', desc: 'Locate cursor to next transient (Edit Selection, Definition, and Navigation)', usage: 'Locate cursor to next transient (In Edit Selection, Definition, and Navigation.)' },
+          { keys: 'Ctrl + Tab', desc: 'Locate cursor to previous transient', usage: 'Locate cursor to previous transient.' },
+          { keys: 'Win + Tab', desc: 'Go to and select next Clip', usage: 'Go to and select next Clip.' },
+          { keys: 'Ctrl + Win + Tab', desc: 'Go to and select previous Clip', usage: 'Go to and select previous Clip.' },
+          { keys: 'Win + Enter', desc: 'Go to Song Start', usage: 'Go to Song Start.' },
+          { keys: 'Shift + Win + Enter', desc: 'Extend selection to Song Start', usage: 'Extend selection to Song Start.' },
+          { keys: 'Shift + Tab', desc: 'Extend selection to next Clip-boundary (Edit Selection, Definition, and Navigation)', usage: 'Extend selection to next Clip-boundary (In Edit Selection, Definition, and Navigation.)' },
+          { keys: 'Ctrl + Shift + Tab', desc: 'Extend selection to previous Clip-boundary', usage: 'Extend selection to previous Clip-boundary.' },
+          { keys: 'Win + Shift + Tab', desc: 'Extend selection to include next Clip', usage: 'Extend selection to include next Clip.' },
+        ]
+      },
+      {
+        name: 'MIDI Note Editing',
+        shortcuts: [
+          { keys: 'Up', desc: 'Transpose up one semitone', usage: 'Transpose up one semitone.' },
+          { keys: 'Down', desc: 'Transpose down one semitone', usage: 'Transpose down one semitone.' },
+          { keys: 'Alt + Up', desc: 'Copy and transpose up one semitone', usage: 'Copy and transpose up one semitone.' },
+          { keys: 'Alt + Down', desc: 'Copy and transpose down one semitone', usage: 'Copy and transpose down one semitone.' },
+          { keys: 'Shift + Up', desc: 'Transpose up one octave', usage: 'Transpose up one octave.' },
+          { keys: 'Shift + Down', desc: 'Transpose down one octave', usage: 'Transpose down one octave.' },
+          { keys: 'Alt + Shift + Up', desc: 'Copy and transpose up one octave', usage: 'Copy and transpose up one octave.' },
+          { keys: 'Alt + Shift + Down', desc: 'Copy and transpose down one octave (MIDI Note Editing)', usage: 'Copy and transpose down one octave (In MIDI Note Editing.)' },
+          { keys: 'Win + Up', desc: 'Transpose up in key', usage: 'Transpose up in key.' },
+          { keys: 'Win + Down', desc: 'Transpose down in key', usage: 'Transpose down in key.' },
+          { keys: 'Alt + Win + Up', desc: 'Copy and transpose up in key', usage: 'Copy and transpose up in key.' },
+          { keys: 'Alt + Win + Down', desc: 'Copy and transpose down in key', usage: 'Copy and transpose down in key.' },
+          { keys: 'Ctrl + Up', desc: 'Increase velocity by five', usage: 'Increase velocity by five.' },
+          { keys: 'Ctrl + Down', desc: 'Decrease velocity by five', usage: 'Decrease velocity by five.' },
+          { keys: 'Ctrl + Shift + Up', desc: 'Increase velocity by fifteen (MIDI Note Editing)', usage: 'Increase velocity by fifteen (In MIDI Note Editing.)' },
+          { keys: 'Ctrl + Shift + Down', desc: 'Decrease velocity by fifteen (MIDI Note Editing)', usage: 'Decrease velocity by fifteen (In MIDI Note Editing.)' },
+          { keys: 'Left', desc: 'Select previous note', usage: 'Select previous note.' },
+          { keys: 'Right', desc: 'Select next note', usage: 'Select next note.' },
+          { keys: 'Shift + Left', desc: 'Add previous note to the current selection (MIDI Note Editing)', usage: 'Add previous note to the current selection (In MIDI Note Editing.)' },
+          { keys: 'Shift + Right', desc: 'Add next note to the current selection (MIDI Note Editing)', usage: 'Add next note to the current selection (In MIDI Note Editing.)' },
+          { keys: 'Win + Left', desc: 'Trim note start to the left', usage: 'Trim note start to the left.' },
+          { keys: 'Win + Right', desc: 'Trim note start to the right', usage: 'Trim note start to the right.' },
+          { keys: 'Alt + Left', desc: 'Trim note end to the left (MIDI Note Editing)', usage: 'Trim note end to the left (In MIDI Note Editing.)' },
+          { keys: 'Alt + Right', desc: 'Trim note end to the right', usage: 'Trim note end to the right.' },
+          { keys: 'Win + Shift + Left', desc: 'Trim note start to the left by the next value', usage: 'Trim note start to the left by the next value.' },
+          { keys: 'Win + Shift + Right', desc: 'Trim note start to the right by the next value', usage: 'Trim note start to the right by the next value.' },
+          { keys: 'Alt + Shift + Left', desc: 'Trim note end to the left by the next value', usage: 'Trim note end to the left by the next value.' },
+          { keys: 'Alt + Shift + Right', desc: 'Trim note end to the right by the next value', usage: 'Trim note end to the right by the next value.' },
+        ]
+      },
+      {
+        name: 'Clip Gain',
+        shortcuts: [
+          { keys: 'Win + Shift + E', desc: 'Add a Clip Gain breakpoint at the current Edit location', usage: 'Add a Clip Gain breakpoint at the current Edit location.' },
+          { keys: 'Win + Shift + Up', desc: 'Nudge the selected clip gain up', usage: 'Nudge the selected clip gain up.' },
+          { keys: 'Win + Shift + Down', desc: 'Nudge the selected clip gain down', usage: 'Nudge the selected clip gain down.' },
+          { keys: 'Win + Shift + B', desc: 'Clear Clip Gain', usage: 'Clear Clip Gain.' },
+          { keys: 'Win + Shift + X', desc: 'Cut Clip Gain', usage: 'Cut Clip Gain.' },
+          { keys: 'Win + Shift + C', desc: 'Copy Clip Gain', usage: 'Copy Clip Gain.' },
+          { keys: 'Ctrl + V', desc: 'Paste Clip Gain (Clip Gain)', usage: 'Paste Clip Gain (In Clip Gain.)' },
+        ]
+      },
+      {
+        name: 'Clip Effects',
+        shortcuts: [
+          { keys: 'Alt + 6', desc: 'Show or hide the Clip Effects display (Pro Tools Ultimate an (Clip Effects)', usage: 'Show or hide the Clip Effects display (Pro Tools Ultimate and Studio only) (In Clip Effects.)' },
+          { keys: 'Ctrl + Alt + Win + B', desc: 'Clear Clip Effects', usage: 'Clear Clip Effects.' },
+          { keys: 'Ctrl + Alt + Win + X', desc: 'Cut Clip Effects (Pro Tools Ultimate and Studio only)', usage: 'Cut Clip Effects (Pro Tools Ultimate and Studio only).' },
+          { keys: 'Ctrl + Alt + Win + C', desc: 'Copy Clip Effects (Pro Tools Ultimate and Studio only)', usage: 'Copy Clip Effects (Pro Tools Ultimate and Studio only).' },
+          { keys: 'Ctrl + V', desc: 'Paste Clip Effects (Pro Tools Ultimate and Studio only)', usage: 'Paste Clip Effects (Pro Tools Ultimate and Studio only).' },
+        ]
+      },
+      {
+        name: 'Track Compositing',
+        shortcuts: [
+          { keys: 'Shift + S', desc: 'Solo the Playlist lane containing the Edit cursor', usage: 'Solo the Playlist lane containing the Edit cursor.' },
+          { keys: 'Ctrl + Shift + Right', desc: 'To designate the Target playlist for the playlist containing (Track Compositing)', usage: 'To designate the Target playlist for the playlist containing the Edit insertion (In Track Compositing.)' },
+          { keys: 'Shift + Right', desc: 'To show the Target playlist as the Main Playlist (Track Compositing)', usage: 'To show the Target playlist as the Main Playlist (In Track Compositing.)' },
+          { keys: 'Shift + Left', desc: 'To toggle between the current and most recent Main playlists (Track Compositing)', usage: 'To toggle between the current and most recent Main playlists (In Track Compositing.)' },
+          { keys: 'Alt + Win + V', desc: 'playlist', usage: 'playlist.' },
+          { keys: 'Alt + Shift + T', desc: 'Move the selection to the Target playlist', usage: 'Move the selection to the Target playlist.' },
+          { keys: 'Alt + Shift + Down', desc: 'Copy the selection to a new playlist (Track Compositing)', usage: 'Copy the selection to a new playlist (In Track Compositing.)' },
+          { keys: 'Alt + Shift + N', desc: 'Move the selection to a new playlist', usage: 'Move the selection to a new playlist.' },
+          { keys: 'Ctrl + Shift + Up', desc: 'To cycle in material in the Edit selection from the previous (Track Compositing)', usage: 'To cycle in material in the Edit selection from the previous playlist (In Track Compositing.)' },
+          { keys: 'Ctrl + Shift + Down', desc: 'To cycle in material in the Edit selection from the next pla (Track Compositing)', usage: 'To cycle in material in the Edit selection from the next playlist (In Track Compositing.)' },
+          { keys: 'Win + \\', desc: 'Create a new playlist for the first selected track in the se', usage: 'Create a new playlist for the first selected track in the session.' },
+          { keys: 'Win + Alt + \\', desc: 'Create a new playlist for each track in the session', usage: 'Create a new playlist for each track in the session.' },
+          { keys: 'Win + Alt + Shift + \\', desc: 'Create a new playlist for each selected track in the session', usage: 'Create a new playlist for each selected track in the session.' },
+          { keys: 'Ctrl + Win + \\', desc: 'Duplicate the main playlist for the first selected track in ', usage: 'Duplicate the main playlist for the first selected track in the session.' },
+          { keys: 'Ctrl + Alt + Win + \\', desc: 'Duplicate the main playlist for each track in the session', usage: 'Duplicate the main playlist for each track in the session.' },
+          { keys: 'Ctrl + Alt + Win + Shift + \\', desc: 'Duplicate the main playlist for each selected track in the s', usage: 'Duplicate the main playlist for each selected track in the session.' },
+        ]
+      },
+      {
+        name: 'Zoom',
+        shortcuts: [
+          { keys: 'Ctrl + ]', desc: 'Horizontal zoom in or out', usage: 'Horizontal zoom in or out.' },
+          { keys: 'Ctrl + Win + [', desc: 'Zoom to show entire session horizontally', usage: 'Zoom to show entire session horizontally.' },
+        ]
+      },
+      {
+        name: 'Memory Locations and Markers',
+        shortcuts: [
+          { keys: 'Enter', desc: 'Create Memory Location (Marker) on the targeted ruler or tra (Memory Locations and Markers)', usage: 'Create Memory Location (Marker) on the targeted ruler or track (In Memory Locations and Markers.)' },
+          { keys: 'Ctrl + Enter', desc: 'Add marker to the Marker ruler at the current edit location  (Memory Locations and Markers)', usage: 'Add marker to the Marker ruler at the current edit location or playback location without opening the New Memory Location dialog (In Memory Locations and Markers.)' },
+          { keys: 'Ctrl + A', desc: 'Select all memory locations in the Memory Locations window w (Memory Locations and Markers)', usage: 'Select all memory locations in the Memory Locations window without updating the active memory location (In Memory Locations and Markers.)' },
+          { keys: 'Delete', desc: 'Delete a memory location in the Memory Locations window (Memory Locations and Markers)', usage: 'Delete a memory location in the Memory Locations window (In Memory Locations and Markers.)' },
+        ]
+      },
+      {
+        name: 'Automation',
+        shortcuts: [
+          { keys: 'Ctrl + Alt + H', desc: 'Copy Automation to Send', usage: 'Copy Automation to Send.' },
+          { keys: 'Ctrl + Alt + T', desc: 'Thin Automation (Automation)', usage: 'Thin Automation (In Automation.)' },
+        ]
+      },
+      {
+        name: 'Fades',
+        shortcuts: [
+          { keys: 'Ctrl + F', desc: 'Create Fades (open Fades dialog)', usage: 'Create Fades (open Fades dialog).' },
+          { keys: 'Win + D', desc: 'Fade to Start', usage: 'Fade to Start.' },
+          { keys: 'Win + G', desc: 'Fade to End', usage: 'Fade to End.' },
+        ]
+      },
+      {
+        name: 'Clip List',
+        shortcuts: [
+          { keys: 'Ctrl + Shift + F', desc: 'Find Clip (Clip List)', usage: 'Find Clip (In Clip List.)' },
+          { keys: 'Ctrl + Shift + D', desc: 'Clear Find', usage: 'Clear Find.' },
+          { keys: 'Ctrl + Shift + 1', desc: 'Show/Hide Audio Clips', usage: 'Show/Hide Audio Clips.' },
+          { keys: 'Ctrl + Shift + 2', desc: 'Show/Hide MIDI Clips', usage: 'Show/Hide MIDI Clips.' },
+          { keys: 'Ctrl + Shift + 3', desc: 'Show/Hide Video Clips', usage: 'Show/Hide Video Clips.' },
+          { keys: 'Ctrl + Shift + 4', desc: 'Show/Hide Clip Groups', usage: 'Show/Hide Clip Groups.' },
+        ]
+      },
+      {
+        name: 'Plugin Inserts and Sends',
+        shortcuts: [
+          { keys: 'Shift + A', desc: 'Bypass (or unbypass) all inserts on selected tracks', usage: 'Bypass (or unbypass) all inserts on selected tracks.' },
+          { keys: 'Shift + 2', desc: 'Bypass (or unbypass) inserts A–E on selected tracks', usage: 'Bypass (or unbypass) inserts A–E on selected tracks.' },
+          { keys: 'Shift + 3', desc: 'Bypass (or unbypass) inserts F–J on selected tracks', usage: 'Bypass (or unbypass) inserts F–J on selected tracks.' },
+          { keys: 'Shift + E', desc: 'Bypass (or unbypass) all EQ plugins on selected tracks', usage: 'Bypass (or unbypass) all EQ plugins on selected tracks.' },
+          { keys: 'Shift + C', desc: 'Bypass (or unbypass) all Dynamics plugins on selected tracks', usage: 'Bypass (or unbypass) all Dynamics plugins on selected tracks.' },
+          { keys: 'Shift + V', desc: 'Bypass (or unbypass) all Reverb plugins on selected tracks', usage: 'Bypass (or unbypass) all Reverb plugins on selected tracks.' },
+          { keys: 'Shift + D', desc: 'Bypass (or unbypass) all Delay plugins on selected tracks', usage: 'Bypass (or unbypass) all Delay plugins on selected tracks.' },
+          { keys: 'Shift + W', desc: 'Bypass (or unbypass) all Modulation plugins on selected trac', usage: 'Bypass (or unbypass) all Modulation plugins on selected tracks.' },
+          { keys: 'Shift + 4', desc: 'Mute (or unmute) Sends A–E on selected tracks', usage: 'Mute (or unmute) Sends A–E on selected tracks.' },
+        ]
+      },
+      {
+        name: 'File Menu',
+        shortcuts: [
+          { keys: 'Ctrl + N', desc: 'New Session (File Menu)', usage: 'New Session (In File Menu.)' },
+          { keys: 'Ctrl + O', desc: 'Open Session (File Menu)', usage: 'Open Session (In File Menu.)' },
+          { keys: 'Ctrl + Alt + Win + O', desc: 'Open Sketch', usage: 'Open Sketch.' },
+          { keys: 'Ctrl + Alt + O', desc: 'Open Dashboard (File Menu)', usage: 'Open Dashboard (In File Menu.)' },
+          { keys: 'Ctrl + Shift + O', desc: 'Open Most Recent', usage: 'Open Most Recent.' },
+          { keys: 'Ctrl + Shift + W', desc: 'Close session', usage: 'Close session.' },
+          { keys: 'Ctrl + S', desc: 'Save Session (File Menu)', usage: 'Save Session (In File Menu.)' },
+          { keys: 'Ctrl + Win + S', desc: 'Save As (sessions) or Save As New Version (projects)', usage: 'Save As (sessions) or Save As New Version (projects).' },
+          { keys: 'Ctrl + Win + O', desc: 'Open Revision History window (projects only)', usage: 'Open Revision History window (projects only).' },
+          { keys: 'Ctrl + Alt + B', desc: 'Bounce Mix', usage: 'Bounce Mix.' },
+          { keys: 'Shift + Alt + I', desc: 'Import Session Data', usage: 'Import Session Data.' },
+          { keys: 'Ctrl + Shift + I', desc: 'Import Audio', usage: 'Import Audio.' },
+          { keys: 'Ctrl + Alt + L', desc: 'Import MIDI (File Menu)', usage: 'Import MIDI (In File Menu.)' },
+          { keys: 'Ctrl + Alt + Shift + I', desc: 'Import Video', usage: 'Import Video.' },
+          { keys: 'Ctrl + P', desc: 'Print Score from Pro Tools Session (File Menu)', usage: 'Print Score from Pro Tools Session (In File Menu.)' },
+        ]
+      },
+      {
+        name: 'Edit Menu',
+        shortcuts: [
+          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo.' },
+          { keys: 'Ctrl + Shift + Z', desc: 'Redo', usage: 'Redo.' },
+          { keys: 'Ctrl + Alt + Z', desc: 'Restore Last Selection', usage: 'Restore Last Selection.' },
+          { keys: 'Ctrl + X', desc: 'Cut', usage: 'Cut.' },
+          { keys: 'Ctrl + C', desc: 'Copy', usage: 'Copy.' },
+          { keys: 'Ctrl + V', desc: 'Paste (Edit Menu)', usage: 'Paste (In Edit Menu.)' },
+          { keys: 'Ctrl + B', desc: 'Clear (Edit Menu)', usage: 'Clear (In Edit Menu.)' },
+        ]
+      },
+      {
+        name: 'View Menu',
+        shortcuts: [
+          { keys: 'Ctrl + Alt + M', desc: 'View Narrow Mix window option', usage: 'View Narrow Mix window option.' },
+          { keys: 'Alt + 7', desc: 'Show/Hide Universe display', usage: 'Show/Hide Universe display.' },
+          { keys: 'Win + Alt + Shift + =', desc: 'Show/Hide docked MIDI Editor', usage: 'Show/Hide docked MIDI Editor.' },
+          { keys: 'Alt + 8', desc: 'Show/Hide docked Melodyne Editor', usage: 'Show/Hide docked Melodyne Editor.' },
+          { keys: 'Win + Alt + 8', desc: 'Open Melodyne Editor to full height', usage: 'Open Melodyne Editor to full height.' },
+          { keys: 'Alt + 6', desc: 'Show/Hide docked Clip Effects (View Menu)', usage: 'Show/Hide docked Clip Effects (In View Menu.)' },
+          { keys: 'Win + Shift + U', desc: 'Show/Hide Track Transcription Lane', usage: 'Show/Hide Track Transcription Lane.' },
+        ]
+      },
+      {
+        name: 'Track Menu',
+        shortcuts: [
+          { keys: 'Ctrl + Shift + N', desc: 'New Track', usage: 'New Track.' },
+          { keys: 'Ctrl + G', desc: 'Group Tracks (Track Menu)', usage: 'Group Tracks (In Track Menu.)' },
+          { keys: 'Alt + Shift + D', desc: 'Duplicate Tracks', usage: 'Duplicate Tracks.' },
+          { keys: 'Ctrl + Alt + Shift + N', desc: 'Move to New Folder', usage: 'Move to New Folder.' },
+          { keys: 'Alt + Shift + C', desc: 'Commit Track', usage: 'Commit Track.' },
+          { keys: 'Ctrl + Alt + Shift + B', desc: 'Bounce Track', usage: 'Bounce Track.' },
+          { keys: 'Alt + Shift + P', desc: 'Save Track Preset (Track Menu)', usage: 'Save Track Preset (In Track Menu.)' },
+          { keys: 'Alt + K', desc: 'Auto Input Monitoring/Input Only Monitoring (Pro Tools only)', usage: 'Auto Input Monitoring/Input Only Monitoring (Pro Tools only).' },
+          { keys: 'Alt + C', desc: 'Clear all Clip indicators (Track Menu)', usage: 'Clear all Clip indicators (In Track Menu.)' },
+          { keys: 'Ctrl + Shift + Right', desc: 'Designate as Target Playlist (Track Menu)', usage: 'Designate as Target Playlist (In Track Menu.)' },
+          { keys: 'Shift + Right', desc: 'Show Target Playlist (Track Menu)', usage: 'Show Target Playlist (In Track Menu.)' },
+          { keys: 'Shift + Left', desc: 'Toggle Recent Playlist (Track Menu)', usage: 'Toggle Recent Playlist (In Track Menu.)' },
+        ]
+      },
+      {
+        name: 'Clip Menu',
+        shortcuts: [
+          { keys: 'Ctrl + L', desc: 'Lock/Unlock Clips (Clip Menu)', usage: 'Lock/Unlock Clips (In Clip Menu.)' },
+          { keys: 'Alt + Win + L', desc: 'Time Lock/Unlock the selected Clip', usage: 'Time Lock/Unlock the selected Clip.' },
+          { keys: 'Alt + Shift + F', desc: 'Bring to Front', usage: 'Bring to Front.' },
+          { keys: 'Alt + Shift + B', desc: 'Send to Back', usage: 'Send to Back.' },
+          { keys: 'Ctrl + Alt + G', desc: 'Group Clips', usage: 'Group Clips.' },
+          { keys: 'Ctrl + Alt + U', desc: 'Ungroup Clips', usage: 'Ungroup Clips.' },
+          { keys: 'Ctrl + Alt + R', desc: 'Regroup Clips', usage: 'Regroup Clips.' },
+          { keys: 'Ctrl + Alt + L', desc: 'Loop Clip (Clip Menu)', usage: 'Loop Clip (In Clip Menu.)' },
+          { keys: 'Ctrl + R', desc: 'Capture Clip (Clip Menu)', usage: 'Capture Clip (In Clip Menu.)' },
+          { keys: 'Ctrl + Alt + Shift + R', desc: 'Rename', usage: 'Rename.' },
+          { keys: 'Ctrl + 0', desc: 'Quantize Clip to Nearest Grid', usage: 'Quantize Clip to Nearest Grid.' },
+          { keys: 'Ctrl + Alt + 0', desc: 'Quantize MIDI to Nearest Grid', usage: 'Quantize MIDI to Nearest Grid.' },
+          { keys: 'Win + Shift + A', desc: 'Edit selected audio clip with Melodyne', usage: 'Edit selected audio clip with Melodyne.' },
+          { keys: 'Alt + 5', desc: 'Open Elastic Properties windows', usage: 'Open Elastic Properties windows.' },
+        ]
+      },
+      {
+        name: 'Event Menu',
+        shortcuts: [
+          { keys: 'Alt + 1', desc: 'Open Time Operations window', usage: 'Open Time Operations window.' },
+          { keys: 'Alt + 2', desc: 'Open Tempo Operations window', usage: 'Open Tempo Operations window.' },
+          { keys: 'Alt + 3', desc: 'Open MIDI Operations window (Event Menu)', usage: 'Open MIDI Operations window (In Event Menu.)' },
+          { keys: 'Alt + 0', desc: 'Quantize (in MIDI Operations window)', usage: 'Quantize (in MIDI Operations window).' },
+          { keys: 'Alt + P', desc: 'Change Duration (in MIDI Operations window)', usage: 'Change Duration (in MIDI Operations window).' },
+          { keys: 'Alt + T', desc: 'Transpose (in MIDI Operations window)', usage: 'Transpose (in MIDI Operations window).' },
+          { keys: 'Alt + Y', desc: 'Select/Split Notes (in MIDI Operations window)', usage: 'Select/Split Notes (in MIDI Operations window).' },
+          { keys: 'Alt + 4', desc: 'Open Real Time Properties window', usage: 'Open Real Time Properties window.' },
+          { keys: 'Ctrl + 8', desc: 'Open Beat Detective window', usage: 'Open Beat Detective window.' },
+          { keys: 'Ctrl + I', desc: 'Identify Beat (Event Menu)', usage: 'Identify Beat (In Event Menu.)' },
+        ]
+      },
+      {
+        name: 'Options Menu',
+        shortcuts: [
+          { keys: 'Alt + L', desc: 'Loop Record (Options Menu)', usage: 'Loop Record (In Options Menu.)' },
+          { keys: 'Ctrl + Shift + P', desc: 'QuickPunch (Options Menu)', usage: 'QuickPunch (In Options Menu.)' },
+          { keys: 'Ctrl + Shift + T', desc: 'TrackPunch (Options Menu)', usage: 'TrackPunch (In Options Menu.)' },
+          { keys: 'Ctrl + J', desc: 'Transport Online (Options Menu)', usage: 'Transport Online (In Options Menu.)' },
+          { keys: 'Ctrl + Shift + J', desc: 'Video Track Online', usage: 'Video Track Online.' },
+          { keys: 'Ctrl + K', desc: 'Pre/Post-Roll', usage: 'Pre/Post-Roll.' },
+          { keys: 'Ctrl + Shift + L', desc: 'Loop Playback', usage: 'Loop Playback.' },
+          { keys: 'Ctrl + Win + P', desc: 'Dynamic Transport (Options Menu)', usage: 'Dynamic Transport (In Options Menu.)' },
+          { keys: 'Shift + T', desc: 'Enable/Disable Link Track and Edit selection', usage: 'Enable/Disable Link Track and Edit selection.' },
+          { keys: 'Ctrl + Alt + Tab', desc: 'Enable/Disable Tab to Transients', usage: 'Enable/Disable Tab to Transients.' },
+          { keys: 'Shift + J', desc: 'Cycle Video Track Online through all shown video tracks (Pro', usage: 'Cycle Video Track Online through all shown video tracks (Pro Tools Ultimate only).' },
+          { keys: 'Ctrl + P', desc: 'Auto-Spot Clips (Options Menu)', usage: 'Auto-Spot Clips (In Options Menu.)' },
+          { keys: 'Win + Shift + T', desc: 'Edit Tool Mode Keyboard Lock Additional Options menu command', usage: 'Edit Tool Mode Keyboard Lock Additional Options menu commands are in Playback and Recording.' },
+        ]
+      },
+      {
+        name: 'Setup Menu',
+        shortcuts: [
+          { keys: 'Ctrl + 2', desc: 'Session Setup window (Setup Menu)', usage: 'Session Setup window (In Setup Menu.)' },
+          { keys: 'Win + Shift + K', desc: 'Keyboard Shortcuts', usage: 'Keyboard Shortcuts.' },
+        ]
+      },
+      {
+        name: 'Window Menu',
+        shortcuts: [
+          { keys: 'Ctrl + Alt + Win + W', desc: 'Hide All Floating Windows', usage: 'Hide All Floating Windows.' },
+          { keys: 'Ctrl + Alt + J', desc: 'Show Window Configuration List', usage: 'Show Window Configuration List.' },
+        ]
+      },
+      {
+        name: 'Revision History',
+        shortcuts: [
+          { keys: 'Ctrl + Win + O', desc: 'Open Revision History window (Revision History)', usage: 'Open Revision History window (In Revision History.)' },
+          { keys: 'Esc', desc: 'Close Revision History window (Revision History)', usage: 'Close Revision History window (In Revision History.)' },
+          { keys: 'R', desc: 'Restore the selected version in the Revision History list', usage: 'Restore the selected version in the Revision History list.' },
+          { keys: 'I', desc: 'Import data from the selected version in the Revision Histor', usage: 'Import data from the selected version in the Revision History list into the currently active version.' },
+          { keys: 'D', desc: 'Delete the selected version in the Revision History list', usage: 'Delete the selected version in the Revision History list.' },
+        ]
+      },
+      {
+        name: 'Missing Files Dialog',
+        shortcuts: [
+          { keys: 'Ctrl + S', desc: 'Skip all missing files (Missing Files Dialog)', usage: 'Skip all missing files (In Missing Files Dialog.)' },
+          { keys: 'Ctrl + M', desc: 'Manually find and relink all missing files (Missing Files Dialog)', usage: 'Manually find and relink all missing files (In Missing Files Dialog.)' },
+          { keys: 'Ctrl + A', desc: 'Automatically find and relink all missing files (Missing Files Dialog)', usage: 'Automatically find and relink all missing files (In Missing Files Dialog.)' },
+          { keys: 'Ctrl + R', desc: 'Regenerate missing fades (Missing Files Dialog)', usage: 'Regenerate missing fades (In Missing Files Dialog.)' },
+          { keys: 'Ctrl + D', desc: 'Regenerate missing render files (Missing Files Dialog)', usage: 'Regenerate missing render files (In Missing Files Dialog.)' },
+        ]
+      },
+      {
+        name: 'Batch Track Rename and Batch Clip Rename Dialogs',
+        shortcuts: [
+          { keys: 'Ctrl + R', desc: 'Replace (Batch Track Rename and Batch Clip Rename Dialogs)', usage: 'Replace (In Batch Track Rename and Batch Clip Rename Dialogs.)' },
+          { keys: 'Ctrl + T', desc: 'Trim (Batch Track Rename and Batch Clip Rename Dialogs)', usage: 'Trim (In Batch Track Rename and Batch Clip Rename Dialogs.)' },
+          { keys: 'Ctrl + D', desc: 'Add (Batch Track Rename and Batch Clip Rename Dialogs)', usage: 'Add (In Batch Track Rename and Batch Clip Rename Dialogs.)' },
+          { keys: 'Ctrl + N', desc: 'Numbering (Batch Track Rename and Batch Clip Rename Dialogs)', usage: 'Numbering (In Batch Track Rename and Batch Clip Rename Dialogs.)' },
+        ]
+      },
+      {
+        name: 'Save Track Presets Dialog',
+        shortcuts: [
+          { keys: 'Alt + Shift + P', desc: 'To open the Save Tracks Presets dialog for selected tracks (Save Track Presets Dialog)', usage: 'To open the Save Tracks Presets dialog for selected tracks (In Save Track Presets Dialog.)' },
+          { keys: 'Ctrl + I', desc: 'To enable or disable the Include Audio and Media Clips optio (Save Track Presets Dialog)', usage: 'To enable or disable the Include Audio and Media Clips option (In Save Track Presets Dialog.)' },
+          { keys: 'Ctrl + N', desc: 'To enable or disable the Clips in Edit Selection Only option (Save Track Presets Dialog)', usage: 'To enable or disable the Clips in Edit Selection Only option (In Save Track Presets Dialog.)' },
+          { keys: 'Ctrl + T', desc: 'To enable or disable the Auto-populate Tags from Track Data  (Save Track Presets Dialog)', usage: 'To enable or disable the Auto-populate Tags from Track Data option (In Save Track Presets Dialog.)' },
+          { keys: 'Ctrl + R', desc: 'To open the Track Data To Recall Dialog (Save Track Presets Dialog)', usage: 'To open the Track Data To Recall Dialog (In Save Track Presets Dialog.)' },
+        ]
+      },
+      {
+        name: 'MIDI Events List',
+        shortcuts: [
+          { keys: 'Ctrl + Enter', desc: 'Enter start time field for editing (MIDI Events List)', usage: 'Enter start time field for editing (In MIDI Events List.)' },
+          { keys: 'Ctrl + F', desc: 'Show Event Filter dialog (MIDI Events List)', usage: 'Show Event Filter dialog (In MIDI Events List.)' },
+          { keys: 'Ctrl + G', desc: 'Go to (MIDI Events List)', usage: 'Go to (In MIDI Events List.)' },
+          { keys: 'Ctrl + M', desc: 'Insert another event (MIDI Events List)', usage: 'Insert another event (In MIDI Events List.)' },
+          { keys: 'Ctrl + N', desc: 'Insert note (MIDI Events List)', usage: 'Insert note (In MIDI Events List.)' },
+          { keys: 'Ctrl + P', desc: 'Insert Program Change (MIDI Events List)', usage: 'Insert Program Change (In MIDI Events List.)' },
+          { keys: 'Ctrl + L', desc: 'Insert Controller (MIDI Events List)', usage: 'Insert Controller (In MIDI Events List.)' },
+          { keys: 'Ctrl + O', desc: 'Insert Poly Pressure (MIDI Events List)', usage: 'Insert Poly Pressure (In MIDI Events List.)' },
+        ]
+      },
+      {
+        name: 'MIDI Operations',
+        shortcuts: [
+          { keys: 'Alt + O', desc: 'Open or close MIDI Operations window Quantize (MIDI Operations)', usage: 'Open or close MIDI Operations window Quantize (In MIDI Operations.)' },
+          { keys: 'Alt + T', desc: 'Open or close MIDI Operations window Transpose (MIDI Operations)', usage: 'Open or close MIDI Operations window Transpose (In MIDI Operations.)' },
+          { keys: 'Alt + Y', desc: 'Open or close MIDI Operations window Split Selected Notes (MIDI Operations)', usage: 'Open or close MIDI Operations window Split Selected Notes (In MIDI Operations.)' },
+          { keys: 'Alt + P', desc: 'Open or close MIDI Operations window Duration (MIDI Operations)', usage: 'Open or close MIDI Operations window Duration (In MIDI Operations.)' },
+          { keys: 'Alt + 3', desc: 'Open or close MIDI Operations window (MIDI Operations)', usage: 'Open or close MIDI Operations window (In MIDI Operations.)' },
+          { keys: 'Enter', desc: 'Choose Apply in active panel and close Event Ops window (MIDI Operations)', usage: 'Choose Apply in active panel and close Event Ops window (In MIDI Operations.)' },
+          { keys: 'Tab', desc: 'Activate next number or text field in active panel (MIDI Operations)', usage: 'Activate next number or text field in active panel (In MIDI Operations.)' },
+          { keys: 'Shift + Tab', desc: 'Activate previous number or text field in active panel (MIDI Operations)', usage: 'Activate previous number or text field in active panel (In MIDI Operations.)' },
+        ]
+      },
+      {
+        name: 'Step Input',
+        shortcuts: [
+          { keys: '1', desc: 'Whole note (Step Input)', usage: 'Whole note (In Step Input.)' },
+          { keys: '2', desc: '1/2 note (Step Input)', usage: '1/2 note (In Step Input.)' },
+          { keys: '4', desc: '1/4 note (Step Input)', usage: '1/4 note (In Step Input.)' },
+          { keys: '5', desc: '1/8 note (Step Input)', usage: '1/8 note (In Step Input.)' },
+          { keys: '6', desc: '1/16 note (Step Input)', usage: '1/16 note (In Step Input.)' },
+          { keys: '7', desc: '1/32 note (Step Input)', usage: '1/32 note (In Step Input.)' },
+          { keys: '8', desc: '1/64 note (Step Input)', usage: '1/64 note (In Step Input.)' },
+          { keys: '3', desc: 'Toggle Tuplet on/off (Step Input)', usage: 'Toggle Tuplet on/off (In Step Input.)' },
+          { keys: 'Enter', desc: 'Next step (Step Input)', usage: 'Next step (In Step Input.)' },
+          { keys: '0', desc: 'Undo step (Step Input)', usage: 'Undo step (In Step Input.)' },
+          { keys: '/', desc: 'Edit Selection indicators', usage: 'Edit Selection indicators.' },
+        ]
+      },
+      {
+        name: 'Peripherals Dialog',
+        shortcuts: [
+          { keys: 'Ctrl + 1', desc: 'Go to Synchronization page (Peripherals Dialog)', usage: 'Go to Synchronization page (In Peripherals Dialog.)' },
+          { keys: 'Ctrl + 2', desc: 'Go to Machine Control page (Peripherals Dialog)', usage: 'Go to Machine Control page (In Peripherals Dialog.)' },
+          { keys: 'Ctrl + 3', desc: 'Go to MIDI Controllers page (Peripherals Dialog)', usage: 'Go to MIDI Controllers page (In Peripherals Dialog.)' },
+          { keys: 'Ctrl + 4', desc: 'Go to Ethernet Controllers page (Peripherals Dialog)', usage: 'Go to Ethernet Controllers page (In Peripherals Dialog.)' },
+          { keys: 'Ctrl + 5', desc: 'Go to Mic Preamps page (Pro Tools Ultimate only)', usage: 'Go to Mic Preamps page (Pro Tools Ultimate only).' },
+          { keys: 'Ctrl + 6', desc: 'Go to Satellites page', usage: 'Go to Satellites page.' },
+          { keys: 'Ctrl + 7', desc: 'Go to VENUE page', usage: 'Go to VENUE page.' },
+        ]
+      },
+      {
+        name: 'Preferences Dialog',
+        shortcuts: [
+          { keys: 'Ctrl + 1', desc: 'Go to Display page (Preferences Dialog)', usage: 'Go to Display page (In Preferences Dialog.)' },
+          { keys: 'Ctrl + 2', desc: 'Go to Operation page (Preferences Dialog)', usage: 'Go to Operation page (In Preferences Dialog.)' },
+          { keys: 'Ctrl + 3', desc: 'Go to Editing page (Preferences Dialog)', usage: 'Go to Editing page (In Preferences Dialog.)' },
+        ]
+      },
+      {
+        name: 'Import Session Data Dialog',
+        shortcuts: [
+          { keys: 'Ctrl + A', desc: 'Select all source tracks and toggle to new tracks or none, a (Import Session Data Dialog)', usage: 'Select all source tracks and toggle to new tracks or none, and tracks are automatically imported if linked (In Import Session Data Dialog.)' },
+          { keys: 'Ctrl + N', desc: 'Trigger the Add button (Import Session Data Dialog)', usage: 'Trigger the Add button (In Import Session Data Dialog.)' },
+          { keys: 'Ctrl + B', desc: 'Triggers the Clear button (Import Session Data Dialog)', usage: 'Triggers the Clear button (In Import Session Data Dialog.)' },
+          { keys: 'Ctrl + M', desc: 'Triggers the Match button (Import Session Data Dialog)', usage: 'Triggers the Match button (In Import Session Data Dialog.)' },
+          { keys: 'Ctrl + F', desc: 'Filter tracks by name (Import Session Data Dialog)', usage: 'Filter tracks by name (In Import Session Data Dialog.)' },
+          { keys: 'Ctrl + E', desc: 'Toggle Exact Match option on/off', usage: 'Toggle Exact Match option on/off.' },
+          { keys: 'Ctrl + U', desc: 'Toggle UInlink on/off', usage: 'Toggle UInlink on/off.' },
+          { keys: 'A', desc: 'Add', usage: 'Add.' },
+          { keys: 'M', desc: 'Match', usage: 'Match.' },
+          { keys: 'C', desc: 'Clear', usage: 'Clear.' },
+          { keys: 'U', desc: 'Unlink', usage: 'Unlink.' },
+          { keys: 'E', desc: 'Exact match', usage: 'Exact match.' },
+        ]
+      },
+      {
+        name: 'Import Audio Dialog',
+        shortcuts: [
+          { keys: 'Alt + P', desc: 'Start/stop audition of currently selected audio file/Clip (Import Audio Dialog)', usage: 'Start/stop audition of currently selected audio file/Clip (In Import Audio Dialog.)' },
+          { keys: 'Alt + I', desc: 'Import selected audio files (Import Audio Dialog)', usage: 'Import selected audio files (In Import Audio Dialog.)' },
+          { keys: 'Alt + C', desc: 'Convert and import selected audio files (Import Audio Dialog)', usage: 'Convert and import selected audio files (In Import Audio Dialog.)' },
+          { keys: 'Alt + O', desc: 'Convert and import selected Clips (Import Audio Dialog)', usage: 'Convert and import selected Clips (In Import Audio Dialog.)' },
+          { keys: 'Tab', desc: 'Move between file windows (Import Audio Dialog)', usage: 'Move between file windows (In Import Audio Dialog.)' },
+          { keys: 'Esc', desc: 'Cancel (Import Audio Dialog)', usage: 'Cancel (In Import Audio Dialog.)' },
+          { keys: 'Alt + E', desc: 'Done', usage: 'Done.' },
+        ]
+      },
+      {
+        name: 'Global Workspace Shortcuts',
+        shortcuts: [
+          { keys: 'Alt + I', desc: 'Open a new Workspace (default)', usage: 'Open a new Workspace (default).' },
+          { keys: 'Alt + Win + I', desc: 'Open new Workspace (Soundbase)', usage: 'Open new Workspace (Soundbase).' },
+          { keys: 'Alt + O', desc: 'Open a new Workspace browser focused on the Project (Global Workspace Shortcuts)', usage: 'Open a new Workspace browser focused on the Project (In Global Workspace Shortcuts.)' },
+          { keys: 'Alt + J', desc: 'Bring all browsers to the foreground', usage: 'Bring all browsers to the foreground.' },
+          { keys: 'Alt + Shift + J', desc: 'Send all browsers to the back', usage: 'Send all browsers to the back.' },
+          { keys: 'Ctrl + F', desc: 'Simple search (Global Workspace Shortcuts)', usage: 'Simple search (In Global Workspace Shortcuts.)' },
+          { keys: 'Ctrl + Shift + F', desc: 'Advanced search on a selected or checked items in the Locati (Global Workspace Shortcuts)', usage: 'Advanced search on a selected or checked items in the Locations pane (In Global Workspace Shortcuts.)' },
+          { keys: 'Win + 1', desc: 'View presets in Workspace browsers', usage: 'View presets in Workspace browsers.' },
+          { keys: 'Ctrl + Alt + ]', desc: 'vertically preview', usage: 'vertically preview.' },
+        ]
+      },
+      {
+        name: 'Auditioning',
+        shortcuts: [
+          { keys: 'Space', desc: 'Browser Item: Start or stop auditioning from head (when Spac (Auditioning)', usage: 'Browser Item: Start or stop auditioning from head (when Spacebar Toggle File Preview is enabled) Audio Import dialog: Start or stop auditioning from head (In Auditioning.)' },
+          { keys: 'Alt + Space', desc: 'Browser Item: Start or stop loop auditioning from head', usage: 'Browser Item: Start or stop loop auditioning from head.' },
+          { keys: 'Ctrl + P', desc: 'Start or stop preview when browser is front-most window (Auditioning)', usage: 'Start or stop preview when browser is front-most window (In Auditioning.)' },
+          { keys: 'Esc', desc: 'Stop preview when browser is front-most window (Auditioning)', usage: 'Stop preview when browser is front-most window (In Auditioning.)' },
+          { keys: 'Alt + P', desc: 'Import Audio dialog: Start or stop auditioning (Auditioning)', usage: 'Import Audio dialog: Start or stop auditioning (In Auditioning.)' },
+        ]
+      },
+      {
+        name: 'Delete or Duplicate',
+        shortcuts: [
+          { keys: 'Delete', desc: 'Clip List: Delete selected Clip from the timeline Browser It (Delete or Duplicate)', usage: 'Clip List: Delete selected Clip from the timeline Browser Item: Delete items from the browser/disk (In Delete or Duplicate.)' },
+          { keys: 'Ctrl + Delete', desc: 'Delete locked files selected in a browser', usage: 'Delete locked files selected in a browser.' },
+          { keys: 'Alt + Delete', desc: 'Delete any selected browser item, and suppresses any warning', usage: 'Delete any selected browser item, and suppresses any warning dialog.' },
+          { keys: 'Ctrl + D', desc: 'Create duplicates of any selected files (Delete or Duplicate)', usage: 'Create duplicates of any selected files (In Delete or Duplicate.)' },
+        ]
+      },
+      {
+        name: 'Soundbase',
+        shortcuts: [
+          { keys: 'Ctrl + Alt + Win + T', desc: 'Show/Hide Tags pane', usage: 'Show/Hide Tags pane.' },
+          { keys: 'Alt + Win + T', desc: 'Show/Hide Assign Tags pop-up window', usage: 'Show/Hide Assign Tags pop-up window.' },
+          { keys: 'Win + F', desc: 'Enable/Disable Favorites in the Assign', usage: 'Enable/Disable Favorites in the Assign.' },
+        ]
+      },
+      {
+        name: 'General Deck Control Commands',
+        shortcuts: [
+          { keys: 'Ctrl + \\', desc: 'Toggle Transport Master', usage: 'Toggle Transport Master.' },
+          { keys: 'Ctrl + Left', desc: 'Cue to Selection Start', usage: 'Cue to Selection Start.' },
+          { keys: 'Ctrl + Right', desc: 'Cue to Selection End', usage: 'Cue to Selection End.' },
+          { keys: 'Alt + Left', desc: 'Cue to Selection Start Minus Preroll (General Deck Control Commands)', usage: 'Cue to Selection Start Minus Preroll (In General Deck Control Commands.)' },
         ]
       },
     ]
@@ -16059,16 +16694,351 @@ const shortcutData = {
   cubase: {
     name: 'Cubase',
     icon: 'fas fa-music',
+    source: 'https://www.steinberg.help/r/cubase-pro/15.0/en/cubase_nuendo/topics/key_commands/key_commands_default_c.html',
     categories: [
       {
-        name: 'Editing',
+        name: 'Add Track',
         shortcuts: [
-          { keys: 'Space', desc: 'Play/Stop', usage: 'Play or stop playback.' },
-          { keys: '*', desc: 'Record', usage: 'Start recording.' },
-          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo last action.' },
-          { keys: 'Ctrl + D', desc: 'Duplicate', usage: 'Duplicate event.' },
-          { keys: 'P', desc: 'Left locator', usage: 'Set left locator.' },
-          { keys: 'X', desc: 'Split', usage: 'Split with scissors tool.' },
+          { keys: 'T', desc: 'Add Track', usage: 'Add Track (Add Track category).' },
+        ]
+      },
+      {
+        name: 'Audio',
+        shortcuts: [
+          { keys: 'A', desc: 'Adjust Fades to Range', usage: 'Adjust Fades to Range (Audio category).' },
+          { keys: 'Shift + Q', desc: 'Auto-Grid', usage: 'Auto-Grid (Audio category).' },
+          { keys: 'X', desc: 'Crossfade', usage: 'Crossfade (Audio category).' },
+        ]
+      },
+      {
+        name: 'Automation',
+        shortcuts: [
+          { keys: 'F6', desc: 'Open Panel', usage: 'Open Panel (Automation category).' },
+          { keys: 'Alt + R', desc: 'Read Automation for All Tracks On/Off', usage: 'Read Automation for All Tracks On/Off (Automation category).' },
+          { keys: 'Alt + W', desc: 'Write Automation for All Tracks On/Off', usage: 'Write Automation for All Tracks On/Off (Automation category).' },
+        ]
+      },
+      {
+        name: 'Chords',
+        shortcuts: [
+          { keys: 'Ctrl + Shift + C', desc: 'Show/Hide Chord Pads', usage: 'Show/Hide Chord Pads (Chords category).' },
+        ]
+      },
+      {
+        name: 'Devices (Studio)',
+        shortcuts: [
+          { keys: 'F4', desc: 'Audio Connections', usage: 'Audio Connections (Devices (Studio) category).' },
+          { keys: 'F12', desc: 'Audio Performance Monitor', usage: 'Audio Performance Monitor (Devices (Studio) category).' },
+          { keys: 'F3', desc: 'MixConsole', usage: 'MixConsole (Devices (Studio) category).' },
+          { keys: 'Alt + F3', desc: 'MixConsole in Project Window', usage: 'MixConsole in Project Window (Devices (Studio) category).' },
+          { keys: 'Alt + K', desc: 'On-Screen Keyboard', usage: 'On-Screen Keyboard (Devices (Studio) category).' },
+          { keys: 'F11', desc: 'VST Instruments', usage: 'VST Instruments (Devices (Studio) category).' },
+          { keys: 'F8', desc: 'Video Player', usage: 'Video Player (Devices (Studio) category).' },
+        ]
+      },
+      {
+        name: 'Direct Offline Processing',
+        shortcuts: [
+          { keys: 'F7', desc: 'Direct Offline Processing', usage: 'Direct Offline Processing (Direct Offline Processing category).' },
+        ]
+      },
+      {
+        name: 'Edit',
+        shortcuts: [
+          { keys: 'Alt + A', desc: 'Activate/Deactivate Focused Object', usage: 'Activate/Deactivate Focused Object (Edit category).' },
+          { keys: 'F', desc: 'Auto-Scroll On/Off', usage: 'Auto-Scroll On/Off (Edit category).' },
+          { keys: 'Ctrl + C', desc: 'Copy', usage: 'Copy (Edit category).' },
+          { keys: 'Ctrl + X', desc: 'Cut', usage: 'Cut (Edit category).' },
+          { keys: 'Ctrl + Shift + X', desc: 'Cut Time', usage: 'Cut Time (Edit category).' },
+          { keys: 'Delete', desc: 'Delete', usage: 'Delete (Edit category).' },
+          { keys: 'Shift + Backspace', desc: 'Delete Time', usage: 'Delete Time (Edit category).' },
+          { keys: 'Ctrl + D', desc: 'Duplicate', usage: 'Duplicate (Edit category).' },
+          { keys: 'Shift + T', desc: 'Enter Tempo', usage: 'Enter Tempo (Edit category).' },
+          { keys: 'Shift + C', desc: 'Enter Time Signature', usage: 'Enter Time Signature (Edit category).' },
+          { keys: 'Alt + E', desc: 'Expand/Reduce', usage: 'Expand/Reduce (Edit category).' },
+          { keys: 'Ctrl + F', desc: 'Find Track/Channel', usage: 'Find Track/Channel (Edit category).' },
+          { keys: 'Ctrl + G', desc: 'Group', usage: 'Group (Edit category).' },
+          { keys: 'K', desc: 'Group Editing on Selected Tracks On/Off', usage: 'Group Editing on Selected Tracks On/Off (Edit category).' },
+          { keys: 'Ctrl + Shift + E', desc: 'Insert Silence', usage: 'Insert Silence (Edit category).' },
+          { keys: 'Alt + F', desc: 'Invert', usage: 'Invert (Edit category).' },
+          { keys: 'Ctrl + Alt + I', desc: 'Invert Selection', usage: 'Invert Selection (Edit category).' },
+          { keys: 'E', desc: 'Left Selection Side to Cursor', usage: 'Left Selection Side to Cursor (Edit category).' },
+          { keys: 'Ctrl + Shift + L', desc: 'Lock', usage: 'Lock (Edit category).' },
+          { keys: 'Ctrl + L', desc: 'Move Event Start/Range Start to Cursor', usage: 'Move Event Start/Range Start to Cursor (Edit category).' },
+          { keys: 'U', desc: 'Move Events to Front', usage: 'Move Events to Front (Edit category).' },
+          { keys: 'M', desc: 'Mute', usage: 'Mute (Edit category).' },
+          { keys: 'Shift + M', desc: 'Mute Events', usage: 'Mute Events (Edit category).' },
+          { keys: 'Alt + M', desc: 'Mute/Unmute Objects', usage: 'Mute/Unmute Objects (Edit category).' },
+          { keys: 'Ctrl + E', desc: 'Open', usage: 'Open (Edit category).' },
+          { keys: 'Ctrl + V', desc: 'Paste', usage: 'Paste (Edit category).' },
+          { keys: 'Shift + V', desc: 'Paste Relative to Cursor', usage: 'Paste Relative to Cursor (Edit category).' },
+          { keys: 'Ctrl + Shift + V', desc: 'Paste Time', usage: 'Paste Time (Edit category).' },
+          { keys: 'Alt + V', desc: 'Paste at Origin', usage: 'Paste at Origin (Edit category).' },
+          { keys: 'Ctrl + Shift + Down', desc: 'Primary Parameter', usage: 'Primary Parameter — Decrease.' },
+          { keys: 'Ctrl + Shift + Up', desc: 'Primary Parameter', usage: 'Primary Parameter — Increase.' },
+          { keys: 'R', desc: 'Record Enable', usage: 'Record Enable (Edit category).' },
+          { keys: 'Ctrl + Shift + Z', desc: 'Redo', usage: 'Redo (Edit category).' },
+          { keys: 'Alt + F2', desc: 'Rename First Selected Track', usage: 'Rename First Selected Track (Edit category).' },
+          { keys: 'F2', desc: 'Rename Selected Events', usage: 'Rename Selected Events (Edit category).' },
+          { keys: 'Ctrl + K', desc: 'Repeat', usage: 'Repeat (Edit category).' },
+          { keys: 'D', desc: 'Right Selection Side to Cursor', usage: 'Right Selection Side to Cursor (Edit category).' },
+          { keys: 'Ctrl + Shift + Left', desc: 'Secondary Parameter', usage: 'Secondary Parameter — Decrease.' },
+          { keys: 'Ctrl + Shift + Right', desc: 'Secondary Parameter', usage: 'Secondary Parameter — Increase.' },
+          { keys: 'Ctrl + A', desc: 'Select All', usage: 'Select All (Edit category).' },
+          { keys: 'Ctrl + Shift + A', desc: 'Select None', usage: 'Select None (Edit category).' },
+          { keys: 'J', desc: 'Snap On/Off', usage: 'Snap On/Off (Edit category).' },
+          { keys: 'S', desc: 'Solo', usage: 'Solo (Edit category).' },
+          { keys: 'Alt + X', desc: 'Split At Cursor', usage: 'Split At Cursor (Edit category).' },
+          { keys: 'Shift + X', desc: 'Split Range', usage: 'Split Range (Edit category).' },
+          { keys: 'Alt + C', desc: 'Stationary Cursor', usage: 'Stationary Cursor (Edit category).' },
+          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo (Edit category).' },
+          { keys: 'Ctrl + U', desc: 'Ungroup', usage: 'Ungroup (Edit category).' },
+          { keys: 'Ctrl + Shift + U', desc: 'Unlock', usage: 'Unlock (Edit category).' },
+          { keys: 'Shift + U', desc: 'Unmute Events', usage: 'Unmute Events (Edit category).' },
+          { keys: 'W', desc: 'Write', usage: 'Write (Edit category).' },
+        ]
+      },
+      {
+        name: 'Editors',
+        shortcuts: [
+          { keys: 'Ctrl + Shift + I', desc: 'Edit In-Place', usage: 'Edit In-Place (Editors category).' },
+          { keys: 'Ctrl + R', desc: 'Open Score Editor', usage: 'Open Score Editor (Editors category).' },
+          { keys: 'Enter', desc: 'Open/Close Editor (Editors)', usage: 'Open/Close Editor (Editors category) (In Editors.)' },
+        ]
+      },
+      {
+        name: 'File',
+        shortcuts: [
+          { keys: 'Ctrl + W', desc: 'Close', usage: 'Close (File category).' },
+          { keys: 'Ctrl + N', desc: 'New', usage: 'New (File category).' },
+          { keys: 'Ctrl + O', desc: 'Open', usage: 'Open (File category).' },
+          { keys: 'Ctrl + Q', desc: 'Quit', usage: 'Quit (File category).' },
+          { keys: 'Ctrl + S', desc: 'Save', usage: 'Save (File category).' },
+          { keys: 'Ctrl + Shift + S', desc: 'Save As', usage: 'Save As (File category).' },
+          { keys: 'Ctrl + Alt + S', desc: 'Save New Version', usage: 'Save New Version (File category).' },
+        ]
+      },
+      {
+        name: 'Focus',
+        shortcuts: [
+          { keys: 'Alt + Shift + Space', desc: 'Confirm', usage: 'Confirm (Focus category).' },
+          { keys: 'Ctrl + Alt + Enter', desc: 'Edit', usage: 'Edit (Focus category).' },
+          { keys: 'Tab', desc: 'Next', usage: 'Next (Focus category).' },
+          { keys: 'Shift + Tab', desc: 'Previous', usage: 'Previous (Focus category).' },
+        ]
+      },
+      {
+        name: 'MIDI',
+        shortcuts: [
+          { keys: 'Alt + L', desc: 'Show/Hide Controller Lanes', usage: 'Show/Hide Controller Lanes (MIDI category).' },
+        ]
+      },
+      {
+        name: 'Marker',
+        shortcuts: [
+          { keys: 'Insert', desc: 'Add Position Marker on Active Track', usage: 'Add Position Marker on Active Track (Marker category).' },
+        ]
+      },
+      {
+        name: 'Media',
+        shortcuts: [
+          { keys: 'F5', desc: 'Open MediaBay', usage: 'Open MediaBay (Media category).' },
+          { keys: 'Ctrl + Alt + Numpad 6', desc: 'Open/Close Attribute Inspector', usage: 'Open/Close Attribute Inspector (Media category).' },
+          { keys: 'Ctrl + Alt + Numpad 8', desc: 'Open/Close Favorites', usage: 'Open/Close Favorites (Media category).' },
+          { keys: 'Ctrl + Alt + Numpad 4', desc: 'Open/Close File Browser', usage: 'Open/Close File Browser (Media category).' },
+          { keys: 'Ctrl + Alt + Numpad 5', desc: 'Open/Close Filters', usage: 'Open/Close Filters (Media category).' },
+          { keys: 'Ctrl + Alt + Numpad 2', desc: 'Open/Close Previewer', usage: 'Open/Close Previewer (Media category).' },
+          { keys: 'Shift + Numpad /', desc: 'Preview Cycle On/Off', usage: 'Preview Cycle On/Off (Media category).' },
+          { keys: 'Shift + Enter', desc: 'Preview Start', usage: 'Preview Start (Media category).' },
+          { keys: 'Shift + Numpad 0', desc: 'Preview Stop', usage: 'Preview Stop (Media category).' },
+          { keys: 'Shift + F5', desc: 'Search MediaBay', usage: 'Search MediaBay (Media category).' },
+        ]
+      },
+      {
+        name: 'MixConsole History',
+        shortcuts: [
+          { keys: 'Alt + Shift + Z', desc: 'Redo MixConsole Step', usage: 'Redo MixConsole Step (MixConsole History category).' },
+          { keys: 'Alt + Z', desc: 'Undo MixConsole Step', usage: 'Undo MixConsole Step (MixConsole History category).' },
+        ]
+      },
+      {
+        name: 'Navigate',
+        shortcuts: [
+          { keys: 'Shift + Down', desc: 'Add Down', usage: 'Add Down — Expand/Undo selection in the Project window to the bottom/Move selected event in the Key Editor down 1 octave.' },
+          { keys: 'Shift + Left', desc: 'Add Left', usage: 'Add Left — Expand/Undo selection in the Project window/Key Editor to the left.' },
+          { keys: 'Shift + Right', desc: 'Add Right', usage: 'Add Right — Expand/Undo selection in the Project window/Key Editor to the right.' },
+          { keys: 'Shift + Up', desc: 'Add Up', usage: 'Add Up — Expand/Undo selection in the Project window to the top/Move selected event in the Key Editor up one octave.' },
+          { keys: 'End', desc: 'Bottom', usage: 'Bottom — Select bottom track in the track list.' },
+          { keys: 'Down', desc: 'Down', usage: 'Down — Select next in the Project window/Move selected event in the Key Editor one semitone down.' },
+          { keys: 'Left', desc: 'Left', usage: 'Left — Select previous in the Project window/Key Editor.' },
+          { keys: 'Page Down', desc: 'Page Down', usage: 'Page Down (Navigate category).' },
+          { keys: 'Page Up', desc: 'Page Up', usage: 'Page Up (Navigate category).' },
+          { keys: 'Right', desc: 'Right', usage: 'Right — Select next in the Project window/Key Editor.' },
+          { keys: 'Ctrl + Space', desc: 'Toggle Selection', usage: 'Toggle Selection (Navigate category).' },
+          { keys: 'Home', desc: 'Top', usage: 'Top — Select top track in the track list.' },
+          { keys: 'Up', desc: 'Up', usage: 'Up — Select next in the Project window/ Move selected event in the Key Editor one semitone up.' },
+        ]
+      },
+      {
+        name: 'Nudge',
+        shortcuts: [
+          { keys: 'Ctrl + Left', desc: 'Left', usage: 'Left (Nudge category).' },
+          { keys: 'Alt + Down', desc: 'Nudge Bottom Down', usage: 'Nudge Bottom Down (Nudge category).' },
+          { keys: 'Alt + Shift + Up', desc: 'Nudge Bottom Up', usage: 'Nudge Bottom Up (Nudge category).' },
+          { keys: 'Alt + Shift + Left', desc: 'Nudge End Left', usage: 'Nudge End Left (Nudge category).' },
+          { keys: 'Alt + Right', desc: 'Nudge End Right', usage: 'Nudge End Right (Nudge category).' },
+          { keys: 'Alt + Left', desc: 'Nudge Start Left', usage: 'Nudge Start Left (Nudge category).' },
+          { keys: 'Alt + Shift + Right', desc: 'Nudge Start Right', usage: 'Nudge Start Right (Nudge category).' },
+          { keys: 'Alt + Shift + Down', desc: 'Nudge Top Down', usage: 'Nudge Top Down (Nudge category).' },
+          { keys: 'Alt + Up', desc: 'Nudge Top Up', usage: 'Nudge Top Up (Nudge category).' },
+          { keys: 'Ctrl + Right', desc: 'Right', usage: 'Right (Nudge category).' },
+        ]
+      },
+      {
+        name: 'Project',
+        shortcuts: [
+          { keys: 'Alt + Shift + S', desc: 'Colors', usage: 'Colors (Project category).' },
+          { keys: 'Ctrl + M', desc: 'Open Markers', usage: 'Open Markers (Project category).' },
+          { keys: 'Ctrl + P', desc: 'Open Pool', usage: 'Open Pool (Project category).' },
+          { keys: 'Ctrl + T', desc: 'Open Tempo Track Editor', usage: 'Open Tempo Track Editor (Project category).' },
+          { keys: 'Shift + Delete', desc: 'Remove Selected Tracks', usage: 'Remove Selected Tracks (Project category).' },
+          { keys: 'Alt + Shift + C', desc: 'Set Track/Event Color', usage: 'Set Track/Event Color (Project category).' },
+          { keys: 'Shift + S', desc: 'Setup', usage: 'Setup (Project category).' },
+          { keys: 'Shift + Space', desc: 'Tap Tempo', usage: 'Tap Tempo (Project category).' },
+        ]
+      },
+      {
+        name: 'Quantize',
+        shortcuts: [
+          { keys: 'Q', desc: 'Quantize', usage: 'Quantize (Quantize category).' },
+        ]
+      },
+      {
+        name: 'Set Insert Length',
+        shortcuts: [
+          { keys: 'Alt + 1', desc: '1/1', usage: '1/1 (Set Insert Length category).' },
+          { keys: 'Alt + 8', desc: '1/128', usage: '1/128 (Set Insert Length category).' },
+          { keys: 'Alt + 5', desc: '1/16', usage: '1/16 (Set Insert Length category).' },
+          { keys: 'Alt + 2', desc: '1/2', usage: '1/2 (Set Insert Length category).' },
+          { keys: 'Alt + 6', desc: '1/32', usage: '1/32 (Set Insert Length category).' },
+          { keys: 'Alt + 3', desc: '1/4', usage: '1/4 (Set Insert Length category).' },
+          { keys: 'Alt + 7', desc: '1/64', usage: '1/64 (Set Insert Length category).' },
+          { keys: 'Alt + 4', desc: '1/8', usage: '1/8 (Set Insert Length category).' },
+          { keys: 'Alt + .', desc: 'Toggle Dotted', usage: 'Toggle Dotted (Set Insert Length category).' },
+          { keys: 'Alt + ,', desc: 'Toggle Triplet', usage: 'Toggle Triplet (Set Insert Length category).' },
+        ]
+      },
+      {
+        name: 'Tool',
+        shortcuts: [
+          { keys: 'Alt + Shift + 1', desc: 'Combine Selection Tools On/Off', usage: 'Combine Selection Tools On/Off (Tool category).' },
+          { keys: '8', desc: 'Draw Tool', usage: 'Draw Tool (Tool category).' },
+          { keys: '0', desc: 'Drumstick Tool', usage: 'Drumstick Tool (Tool category).' },
+          { keys: '5', desc: 'Erase Tool', usage: 'Erase Tool (Tool category).' },
+          { keys: '4', desc: 'Glue Tool', usage: 'Glue Tool (Tool category).' },
+          { keys: '7', desc: 'Mute Tool', usage: 'Mute Tool (Tool category).' },
+          { keys: 'F10', desc: 'Next Tool', usage: 'Next Tool (Tool category).' },
+          { keys: '1', desc: 'Object Selection Tool', usage: 'Object Selection Tool (Tool category).' },
+          { keys: '9', desc: 'Play Tool', usage: 'Play Tool (Tool category).' },
+          { keys: 'F9', desc: 'Previous Tool', usage: 'Previous Tool (Tool category).' },
+          { keys: '2', desc: 'Range Selection Tool', usage: 'Range Selection Tool (Tool category).' },
+          { keys: '3', desc: 'Split Tool', usage: 'Split Tool (Tool category).' },
+          { keys: '6', desc: 'Zoom Tool', usage: 'Zoom Tool (Tool category).' },
+        ]
+      },
+      {
+        name: 'Track Versions',
+        shortcuts: [
+          { keys: 'Ctrl + Shift + D', desc: 'Duplicate Version', usage: 'Duplicate Version (Track Versions category).' },
+          { keys: 'Ctrl + Shift + N', desc: 'New Version', usage: 'New Version (Track Versions category).' },
+          { keys: 'Ctrl + Shift + H', desc: 'Next Version', usage: 'Next Version (Track Versions category).' },
+          { keys: 'Ctrl + Shift + G', desc: 'Previous Version', usage: 'Previous Version (Track Versions category).' },
+        ]
+      },
+      {
+        name: 'Transport',
+        shortcuts: [
+          { keys: 'Alt + Shift + T', desc: 'Activate External Sync', usage: 'Activate External Sync (Transport category).' },
+          { keys: 'C', desc: 'Activate Metronome', usage: 'Activate Metronome (Transport category).' },
+          { keys: 'I', desc: 'Activate Punch In', usage: 'Activate Punch In (Transport category).' },
+          { keys: 'O', desc: 'Activate Punch Out', usage: 'Activate Punch Out (Transport category).' },
+          { keys: 'Numpad /', desc: 'Cycle', usage: 'Cycle (Transport category).' },
+          { keys: 'Shift + L', desc: 'Enter Left Locator', usage: 'Enter Left Locator (Transport category).' },
+          { keys: 'Shift + D', desc: 'Enter Locator Range Duration', usage: 'Enter Locator Range Duration (Transport category).' },
+          { keys: 'Shift + P', desc: 'Enter Project Cursor Position', usage: 'Enter Project Cursor Position (Transport category).' },
+          { keys: 'Shift + I', desc: 'Enter Punch In Position', usage: 'Enter Punch In Position (Transport category).' },
+          { keys: 'Shift + O', desc: 'Enter Punch Out Position', usage: 'Enter Punch Out Position (Transport category).' },
+          { keys: 'Shift + R', desc: 'Enter Right Locator', usage: 'Enter Right Locator (Transport category).' },
+          { keys: '.', desc: 'Exchange Time Formats', usage: 'Exchange Time Formats (Transport category).' },
+          { keys: 'Shift + Numpad +', desc: 'Fast Forward', usage: 'Fast Forward (Transport category).' },
+          { keys: 'Shift + Numpad ', desc: 'Fast Rewind', usage: 'Fast Rewind (Transport category).' },
+          { keys: 'Numpad +', desc: 'Forward', usage: 'Forward (Transport category).' },
+          { keys: 'Numpad 1', desc: 'Go to Left Locator', usage: 'Go to Left Locator (Transport category).' },
+          { keys: 'Numpad .', desc: 'Go to Project Start', usage: 'Go to Project Start (Transport category).' },
+          { keys: 'Numpad 2', desc: 'Go to Right Locator', usage: 'Go to Right Locator (Transport category).' },
+          { keys: 'N', desc: 'Locate Next Event', usage: 'Locate Next Event (Transport category).' },
+          { keys: 'Alt + N', desc: 'Locate Next Hitpoint', usage: 'Locate Next Hitpoint (Transport category).' },
+          { keys: 'Shift + N', desc: 'Locate Next Marker', usage: 'Locate Next Marker (Transport category).' },
+          { keys: 'B', desc: 'Locate Previous Event', usage: 'Locate Previous Event (Transport category).' },
+          { keys: 'Alt + B', desc: 'Locate Previous Hitpoint', usage: 'Locate Previous Hitpoint (Transport category).' },
+          { keys: 'Shift + B', desc: 'Locate Previous Marker', usage: 'Locate Previous Marker (Transport category).' },
+          { keys: 'L', desc: 'Locate Selection Start', usage: 'Locate Selection Start (Transport category).' },
+          { keys: 'P', desc: 'Locators to Selection', usage: 'Locators to Selection (Transport category).' },
+          { keys: 'Alt + P', desc: 'Loop Selection', usage: 'Loop Selection (Transport category).' },
+          { keys: 'Alt + Shift + P', desc: 'Loop Selection Solo', usage: 'Loop Selection Solo (Transport category).' },
+          { keys: 'Ctrl + Numpad ', desc: 'Nudge Cursor Left', usage: 'Nudge Cursor Left (Transport category).' },
+          { keys: 'Ctrl + Numpad +', desc: 'Nudge Cursor Right', usage: 'Nudge Cursor Right (Transport category).' },
+          { keys: 'Alt + Space', desc: 'Play Selection Range', usage: 'Play Selection Range (Transport category).' },
+          { keys: 'Ctrl + Alt + Space', desc: 'Play Selection Solo', usage: 'Play Selection Solo (Transport category).' },
+          { keys: 'Numpad *', desc: 'Record', usage: 'Record (Transport category).' },
+          { keys: 'Numpad ', desc: 'Rewind', usage: 'Rewind (Transport category).' },
+          { keys: 'Ctrl + Numpad 1', desc: 'Set Left Locator to Project Cursor Position', usage: 'Set Left Locator to Project Cursor Position (Transport category).' },
+          { keys: 'Ctrl + 1', desc: 'Set Marker 1', usage: 'Set Marker 1 (Transport category).' },
+          { keys: 'Ctrl + 2', desc: 'Set Marker 2', usage: 'Set Marker 2 (Transport category).' },
+          { keys: 'Ctrl + Numpad 2', desc: 'Set Right Locator to Project Cursor Position', usage: 'Set Right Locator to Project Cursor Position (Transport category).' },
+          { keys: 'Enter', desc: 'Start (Transport)', usage: 'Start (Transport category) (In Transport.)' },
+          { keys: 'Space', desc: 'Start/Stop', usage: 'Start/Stop (Transport category).' },
+          { keys: 'Numpad 0', desc: 'Stop', usage: 'Stop (Transport category).' },
+          { keys: 'Shift + 1', desc: 'To Marker 1', usage: 'To Marker 1 (Transport category).' },
+          { keys: 'Shift + 2', desc: 'To Marker 2', usage: 'To Marker 2 (Transport category).' },
+        ]
+      },
+      {
+        name: 'Window Zones',
+        shortcuts: [
+          { keys: 'Ctrl + Alt + Right', desc: 'Show Next Tab', usage: 'Show Next Tab (Window Zones category).' },
+          { keys: 'Ctrl + Alt + Left', desc: 'Show Previous Tab', usage: 'Show Previous Tab (Window Zones category).' },
+          { keys: 'Ctrl + Alt + C', desc: 'Show/Hide Channel', usage: 'Show/Hide Channel (Window Zones category).' },
+          { keys: 'Ctrl + I', desc: 'Show/Hide Info Line', usage: 'Show/Hide Info Line (Window Zones category).' },
+          { keys: 'Alt + O', desc: 'Show/Hide Overview', usage: 'Show/Hide Overview (Window Zones category).' },
+          { keys: 'Ctrl + Alt + R', desc: 'Show/Hide Right Zone', usage: 'Show/Hide Right Zone (Window Zones category).' },
+          { keys: 'Ctrl + Alt + T', desc: 'Show/Hide Transport Zone', usage: 'Show/Hide Transport Zone (Window Zones category).' },
+        ]
+      },
+      {
+        name: 'Workspaces',
+        shortcuts: [
+          { keys: 'Ctrl + Numpad 0', desc: 'New', usage: 'New (Workspaces category).' },
+          { keys: 'Alt + Numpad 0', desc: 'No Workspace', usage: 'No Workspace (Workspaces category).' },
+          { keys: 'Alt + U', desc: 'Update Workspace', usage: 'Update Workspace (Workspaces category).' },
+          { keys: 'Ctrl + Alt + Numpad 0', desc: 'Workspace X', usage: 'Workspace X (Workspaces category).' },
+        ]
+      },
+      {
+        name: 'Zoom',
+        shortcuts: [
+          { keys: 'Shift + F', desc: 'Zoom Full', usage: 'Zoom Full (Zoom category).' },
+          { keys: 'H', desc: 'Zoom In', usage: 'Zoom In (Zoom category).' },
+          { keys: 'Alt + H', desc: 'Zoom In On Waveform Vertically', usage: 'Zoom In On Waveform Vertically (Zoom category).' },
+          { keys: 'Ctrl + Down', desc: 'Zoom In Tracks', usage: 'Zoom In Tracks (Zoom category).' },
+          { keys: 'Shift + H', desc: 'Zoom In Vertically', usage: 'Zoom In Vertically (Zoom category).' },
+          { keys: 'G', desc: 'Zoom Out', usage: 'Zoom Out (Zoom category).' },
+          { keys: 'Alt + G', desc: 'Zoom Out Of Waveform Vertically', usage: 'Zoom Out Of Waveform Vertically (Zoom category).' },
+          { keys: 'Ctrl + Up', desc: 'Zoom Out Tracks', usage: 'Zoom Out Tracks (Zoom category).' },
+          { keys: 'Shift + G', desc: 'Zoom Out Vertically', usage: 'Zoom Out Vertically (Zoom category).' },
+          { keys: 'Z', desc: 'Zoom Tracks Exclusive', usage: 'Zoom Tracks Exclusive (Zoom category).' },
+          { keys: 'Shift + E', desc: 'Zoom to Event', usage: 'Zoom to Event (Zoom category).' },
+          { keys: 'Alt + S', desc: 'Zoom to Selection', usage: 'Zoom to Selection (Zoom category).' },
         ]
       },
     ]
