@@ -5342,22 +5342,270 @@ const shortcutData = {
   sketch: {
     name: 'Sketch',
     icon: 'fas fa-palette',
+    source: 'https://www.sketch.com/docs/shortcuts/mac/',
     categories: [
       {
-        name: 'Tools & Editing',
+        name: 'General',
         shortcuts: [
-          { keys: 'R', desc: 'Rectangle', usage: 'Activate rectangle tool.' },
-          { keys: 'O', desc: 'Oval', usage: 'Activate oval tool.' },
-          { keys: 'V', desc: 'Vector', usage: 'Activate vector tool.' },
-          { keys: 'T', desc: 'Text', usage: 'Activate text tool.' },
-          { keys: 'A', desc: 'Artboard', usage: 'Activate artboard tool.' },
-          { keys: 'Cmd + G', desc: 'Group', usage: 'Group selected elements.' },
-          { keys: 'Cmd + Shift + G', desc: 'Ungroup', usage: 'Ungroup selection.' },
-          { keys: 'Cmd + R', desc: 'Rename', usage: 'Rename selected layer.' },
+          { keys: 'S', desc: 'Open the Command Bar', usage: 'Open the Command Bar in Sketch. Alternative: Cmd + K.' },
+          { keys: 'Cmd + ,', desc: 'Open Settings', usage: 'Open Settings in Sketch.' },
+          { keys: 'Cmd + Shift + ,', desc: 'Open Document Settings', usage: 'Open Document Settings in Sketch.' },
+          { keys: 'Cmd + P', desc: 'Open the Prototype Preview window', usage: 'Open the Prototype Preview window in Sketch. In Browse components: Preserve current Symbol dimensions (only when replacing).' },
+          { keys: 'Ctrl + Shift + K', desc: 'Run script', usage: 'Run script in Sketch.' },
+          { keys: 'Ctrl + Shift + R', desc: 'Run the last plugin', usage: 'Run the last plugin in Sketch.' }
         ]
       },
+      {
+        name: 'Document',
+        shortcuts: [
+          { keys: 'Cmd + N', desc: 'New document', usage: 'New document in Sketch.' },
+          { keys: 'Cmd + O', desc: 'Open workspace document', usage: 'Open workspace document in Sketch.' },
+          { keys: 'Cmd + Shift + O', desc: 'Open local document', usage: 'Open local document in Sketch.' },
+          { keys: 'Cmd + W', desc: 'Close document', usage: 'Close document in Sketch.' },
+          { keys: 'Ctrl + Tab', desc: 'Show next tab', usage: 'Show next tab in Sketch.' },
+          { keys: 'Ctrl + Shift + Tab', desc: 'Show previous tab', usage: 'Show previous tab in Sketch.' },
+          { keys: 'Cmd + S', desc: 'Save new or local document', usage: 'Save new or local document in Sketch.' },
+          { keys: 'Cmd + Ctrl + S', desc: 'Create a version of workspace document', usage: 'Create a version of workspace document in Sketch.' },
+          { keys: 'Option + Enter', desc: 'Line break on the description field', usage: 'Line break on the description field in Sketch.' },
+          { keys: 'Cmd + Shift + S', desc: 'Duplicate current document', usage: 'Duplicate current document in Sketch.' },
+          { keys: 'Cmd + Shift + Option + S', desc: 'Save As', usage: 'Save As in Sketch.' },
+          { keys: 'Cmd + Shift + N', desc: 'New page', usage: 'New page in Sketch.' },
+          { keys: 'Fn + Up / Down', desc: 'Go to previous/next page', usage: 'Go to previous/next page in Sketch.' },
+          { keys: 'Cmd + Shift + C', desc: 'Copy link to page or frame', usage: 'Copy link to page or frame in Sketch.' }
+        ]
+      },
+      {
+        name: 'Interface',
+        shortcuts: [
+          { keys: 'Ctrl + 1', desc: 'Switch to Canvas View', usage: 'Switch to Canvas View in Sketch.' },
+          { keys: 'Ctrl + 2', desc: 'Switch to Components View', usage: 'Switch to Components View in Sketch.' },
+          { keys: 'Cmd + .', desc: 'Toggle interface', usage: 'Toggle interface in Sketch.' },
+          { keys: 'Cmd + Ctrl + F', desc: 'Toggle full screen', usage: 'Toggle full screen in Sketch.' }
+        ]
+      },
+      {
+        name: 'Canvas',
+        shortcuts: [
+          { keys: 'Cmd + +', desc: 'Zoom in', usage: 'Zoom in in Sketch.' },
+          { keys: 'Cmd + -', desc: 'Zoom out', usage: 'Zoom out in Sketch.' },
+          { keys: 'Cmd + 0', desc: 'Zoom to 100%', usage: 'Zoom to 100% in Sketch.' },
+          { keys: 'Cmd + 1', desc: 'Zoom to fit all layers in the Canvas', usage: 'Zoom to fit all layers in the Canvas in Sketch. In Components View: Symbols.' },
+          { keys: 'Cmd + 2', desc: 'Zoom to fit selection', usage: 'Zoom to fit selection in Sketch. In Components View: Text Styles.' },
+          { keys: 'Cmd + 3', desc: 'Center selection in the Canvas', usage: 'Center selection in the Canvas in Sketch. In Components View: Layer Styles.' },
+          { keys: 'Cmd + 4', desc: 'Zoom to fit top-level frame', usage: 'Zoom to fit top-level frame in Sketch. In Components View: Color Variables.' },
+          { keys: '~', desc: 'Temporarily zoom out to 100%', usage: 'Temporarily zoom out to 100% in Sketch. Alternative: §.' },
+          { keys: 'Space', desc: 'Hide selection highlights, handles, grids and guides', usage: 'Hide selection highlights, handles, grids and guides in Sketch.' },
+          { keys: 'Ctrl + M', desc: 'Show/hide minimap', usage: 'Show/hide minimap in Sketch.' },
+          { keys: 'Ctrl + R', desc: 'Show/hide rulers', usage: 'Show/hide rulers in Sketch.' },
+          { keys: 'Ctrl + P', desc: 'Show/hide pixels on zoom', usage: 'Show/hide pixels on zoom in Sketch.' },
+          { keys: 'Ctrl + X', desc: 'Show/hide pixel grid', usage: 'Show/hide pixel grid in Sketch.' },
+          { keys: 'Ctrl + G', desc: 'Show/hide grid', usage: 'Show/hide grid in Sketch.' },
+          { keys: 'Cmd + Ctrl + G', desc: 'Grid settings', usage: 'Grid settings in Sketch.' },
+          { keys: 'Ctrl + L', desc: 'Show/hide layout grid', usage: 'Show/hide layout grid in Sketch.' },
+          { keys: 'Cmd + Ctrl + L', desc: 'Layout grid settings', usage: 'Layout grid settings in Sketch.' }
+        ]
+      },
+      {
+        name: 'Comments',
+        shortcuts: [
+          { keys: 'N', desc: 'Insert comment', usage: 'Insert comment in Sketch.' },
+          { keys: 'Cmd + Enter', desc: 'Submit comment', usage: 'Submit comment in Sketch. In Edit: Edit frame, group, graphic, symbol, text, image, or shape/vector. In Symbols: Go to Symbol Source.' },
+          { keys: 'Ctrl + N', desc: 'Show/hide comments', usage: 'Show/hide comments in Sketch.' },
+          { keys: 'Ctrl + Shift + N', desc: 'Show/hide resolved comments', usage: 'Show/hide resolved comments in Sketch.' }
+        ]
+      },
+      {
+        name: 'Insert',
+        shortcuts: [
+          { keys: 'F', desc: 'Frame', usage: 'Frame in Sketch.' },
+          { keys: 'G', desc: 'Graphic', usage: 'Graphic in Sketch.' },
+          { keys: 'R', desc: 'Rectangle', usage: 'Rectangle in Sketch.' },
+          { keys: 'O', desc: 'Oval', usage: 'Oval in Sketch.' },
+          { keys: 'L', desc: 'Line', usage: 'Line in Sketch.' },
+          { keys: 'V', desc: 'Vector', usage: 'Vector in Sketch.' },
+          { keys: 'P', desc: 'Pencil', usage: 'Pencil in Sketch.' },
+          { keys: 'T', desc: 'Text', usage: 'Text in Sketch.' },
+          { keys: 'E', desc: 'Slice', usage: 'Slice in Sketch.' },
+          { keys: 'I', desc: 'Interaction', usage: 'Interaction in Sketch.' },
+          { keys: 'Y', desc: 'Symbol', usage: 'Symbol in Sketch. In Components: Insert Symbol.' },
+          { keys: 'Ctrl + T', desc: 'Text Style', usage: 'Text Style in Sketch. In Components: Insert Text Style.' }
+        ]
+      },
+      {
+        name: 'Select',
+        shortcuts: [
+          { keys: 'X', desc: 'Marquee', usage: 'Marquee in Sketch.' },
+          { keys: 'Enter', desc: 'Dive deeper into container', usage: 'Dive deeper into container in Sketch. In Browse components: Choose component.' },
+          { keys: 'Esc', desc: 'Select parent container', usage: 'Select parent container in Sketch.' },
+          { keys: 'Shift + Esc', desc: 'Select root symbol', usage: 'Select root symbol in Sketch.' },
+          { keys: 'Ctrl + Esc', desc: 'Clear selection', usage: 'Clear selection in Sketch.' },
+          { keys: 'Cmd + A', desc: 'Select all layers, except hidden/locked', usage: 'Select all layers, except hidden/locked in Sketch.' },
+          { keys: 'Cmd + Ctrl + A', desc: 'Select all layers, including hidden and locked layers', usage: 'Select all layers, including hidden and locked layers in Sketch.' },
+          { keys: 'Cmd + Shift + A', desc: 'Select all top-level frames and graphics', usage: 'Select all top-level frames and graphics in Sketch.' },
+          { keys: 'Cmd + Option + F', desc: 'Find layer', usage: 'Find layer in Sketch. In Components View: Find component.' },
+          { keys: 'Cmd + Shift + J', desc: 'Reveal selection in Layer List', usage: 'Reveal selection in Layer List in Sketch.' },
+          { keys: 'Tab', desc: 'Select next/previous layer in container', usage: 'Select next/previous layer in container in Sketch. Alternative: Shift + Tab. In Shapes: Select next/previous point.' },
+          { keys: 'Fn + Left / Right', desc: 'Select previous/next top-level frame', usage: 'Select previous/next top-level frame in Sketch.' }
+        ]
+      },
+      {
+        name: 'Edit',
+        shortcuts: [
+          { keys: 'Cmd + Z', desc: 'Undo', usage: 'Undo in Sketch.' },
+          { keys: 'Cmd + Shift + Z', desc: 'Redo', usage: 'Redo in Sketch.' },
+          { keys: 'Cmd + X', desc: 'Cut', usage: 'Cut in Sketch.' },
+          { keys: 'Cmd + C', desc: 'Copy', usage: 'Copy in Sketch.' },
+          { keys: 'Cmd + V', desc: 'Paste', usage: 'Paste in Sketch.' },
+          { keys: 'Cmd + Shift + V', desc: 'Paste over selection', usage: 'Paste over selection in Sketch.' },
+          { keys: 'Cmd + Shift + R', desc: 'Paste and replace selection', usage: 'Paste and replace selection in Sketch.' },
+          { keys: 'Cmd + D', desc: 'Duplicate', usage: 'Duplicate in Sketch.' },
+          { keys: 'Cmd + Shift + D', desc: 'Duplicate behind', usage: 'Duplicate behind in Sketch.' },
+          { keys: 'Cmd + R', desc: 'Rename layer(s)', usage: 'Rename layer(s) in Sketch.' },
+          { keys: 'Backspace', desc: 'Delete layer', usage: 'Delete layer in Sketch.' },
+          { keys: 'Cmd + Option + R', desc: 'Replace template, layer, symbol, or style', usage: 'Replace template, layer, symbol, or style in Sketch. In Components: Replace symbol, style, or template.' },
+          { keys: 'Cmd + Shift + H', desc: 'Hide/show layer', usage: 'Hide/show layer in Sketch.' },
+          { keys: 'Cmd + Shift + L', desc: 'Lock/unlock layer', usage: 'Lock/unlock layer in Sketch.' },
+          { keys: 'Cmd + Ctrl + R', desc: 'Rotate', usage: 'Rotate in Sketch.' },
+          { keys: 'Shift + H', desc: 'Flip horizontally', usage: 'Flip horizontally in Sketch.' },
+          { keys: 'Shift + V', desc: 'Flip vertically', usage: 'Flip vertically in Sketch.' },
+          { keys: 'Cmd + Ctrl + M', desc: 'Use as mask', usage: 'Use as mask in Sketch.' },
+          { keys: 'Ctrl + Shift + D', desc: 'Refresh Data', usage: 'Refresh Data in Sketch.' }
+        ]
+      },
+      {
+        name: 'Style',
+        shortcuts: [
+          { keys: 'Cmd + Option + C', desc: 'Copy properties', usage: 'Copy properties in Sketch.' },
+          { keys: 'Cmd + Option + V', desc: 'Paste style', usage: 'Paste style in Sketch.' },
+          { keys: 'Cmd + Ctrl + Option + V', desc: 'Paste style without corners', usage: 'Paste style without corners in Sketch.' },
+          { keys: 'Ctrl + S', desc: 'Update shared style', usage: 'Update shared style in Sketch.' },
+          { keys: 'Ctrl + Option + S', desc: 'Reset shared style', usage: 'Reset shared style in Sketch.' },
+          { keys: 'Shift + F', desc: 'Toggle fills', usage: 'Toggle fills in Sketch.' },
+          { keys: 'Shift + B', desc: 'Toggle borders', usage: 'Toggle borders in Sketch.' },
+          { keys: 'Shift + X', desc: 'Swap fills and borders', usage: 'Swap fills and borders in Sketch.' },
+          { keys: 'Ctrl + C', desc: 'Pick color', usage: 'Pick color in Sketch.' },
+          { keys: '0-9', desc: 'Change opacity', usage: 'Change opacity in Sketch. In Style: Place gradient stop between 0% and 100%.' },
+          { keys: '=', desc: 'Place gradient stop halfway between adjacent stops', usage: 'Place gradient stop halfway between adjacent stops in Sketch.' }
+        ]
+      },
+      {
+        name: 'Export',
+        shortcuts: [
+          { keys: 'Cmd + E', desc: 'Mark as exportable / Export selection', usage: 'Mark as exportable / Export selection in Sketch.' },
+          { keys: 'Cmd + Shift + E', desc: 'Export all assets', usage: 'Export all assets in Sketch.' }
+        ]
+      },
+      {
+        name: 'Move and resize',
+        shortcuts: [
+          { keys: 'Arrow Keys', desc: 'Move by 1px', usage: 'Move by 1px in Sketch. In Align and layout: Reorder layer in stack. In Browse components: Select component.' },
+          { keys: 'Shift + Arrow Keys', desc: 'Move by 10px', usage: 'Move by 10px in Sketch. In Align and layout: Move layer to start/end of stack.' },
+          { keys: 'Cmd + Arrow Keys', desc: 'Resize by 1px', usage: 'Resize by 1px in Sketch.' },
+          { keys: 'Cmd + Shift + Arrow Keys', desc: 'Resize by 10px', usage: 'Resize by 10px in Sketch.' },
+          { keys: 'Cmd + Shift + F', desc: 'Resize selection to fit contents', usage: 'Resize selection to fit contents in Sketch.' },
+          { keys: 'Cmd + Option + Arrow Keys', desc: 'Resize container by 1px, without adjusting contents', usage: 'Resize container by 1px, without adjusting contents in Sketch.' },
+          { keys: 'Cmd + Shift + Option + Arrow Keys', desc: 'Resize container by 10px, without adjusting contents', usage: 'Resize container by 10px, without adjusting contents in Sketch.' },
+          { keys: 'K', desc: 'Scale layer', usage: 'Scale layer in Sketch.' },
+          { keys: 'Cmd + Shift + P', desc: 'Round layer to pixel', usage: 'Round layer to pixel in Sketch.' },
+          { keys: 'Cmd + Ctrl + X', desc: 'Fit layers to pixel bounds', usage: 'Fit layers to pixel bounds in Sketch.' }
+        ]
+      },
+      {
+        name: 'Organize and arrange',
+        shortcuts: [
+          { keys: 'Cmd + F', desc: 'Group in a frame', usage: 'Group in a frame in Sketch. In Browse components: Open filter menu (only in Command Bar).' },
+          { keys: 'Cmd + G', desc: 'Group in a group', usage: 'Group in a group in Sketch.' },
+          { keys: 'Cmd + Shift + G', desc: 'Ungroup container', usage: 'Ungroup container in Sketch.' },
+          { keys: 'Cmd + ]', desc: 'Bring forward', usage: 'Bring forward in Sketch.' },
+          { keys: 'Cmd + Option + ]', desc: 'Bring to front', usage: 'Bring to front in Sketch.' },
+          { keys: 'Cmd + [', desc: 'Send backward', usage: 'Send backward in Sketch.' },
+          { keys: 'Cmd + Option + [', desc: 'Send to back', usage: 'Send to back in Sketch.' },
+          { keys: 'Cmd + Shift + Option + Up', desc: 'Move up (out of parent container)', usage: 'Move up (out of parent container) in Sketch.' }
+        ]
+      },
+      {
+        name: 'Align and layout',
+        shortcuts: [
+          { keys: 'Cmd + Ctrl + Arrow Keys / H / V', desc: 'Align left, right, top, bottom, horizontally, or vertically', usage: 'Align left, right, top, bottom, horizontally, or vertically in Sketch.' },
+          { keys: 'Shift + A', desc: 'Auto-pin', usage: 'Auto-pin in Sketch.' },
+          { keys: 'Shift + Option + A', desc: 'Auto-pin all children of container', usage: 'Auto-pin all children of container in Sketch.' },
+          { keys: 'Cmd + L', desc: 'Add stack layout', usage: 'Add stack layout in Sketch. Alternative: Shift + S.' },
+          { keys: 'Cmd + Option + L', desc: 'Remove stack layout', usage: 'Remove stack layout in Sketch. Alternative: Shift + Option + S.' },
+          { keys: 'Cmd + Shift + I', desc: 'Ignore stack layout', usage: 'Ignore stack layout in Sketch.' }
+        ]
+      },
+      {
+        name: 'Shapes',
+        shortcuts: [
+          { keys: 'Cmd + Ctrl + T', desc: 'Transform shape', usage: 'Transform shape in Sketch.' },
+          { keys: 'Cmd + Option + A', desc: 'Add shapes', usage: 'Add shapes in Sketch.' },
+          { keys: 'Cmd + Option + U', desc: 'Union shapes', usage: 'Union shapes in Sketch.' },
+          { keys: 'Cmd + Option + S', desc: 'Subtract shapes', usage: 'Subtract shapes in Sketch.' },
+          { keys: 'Cmd + Option + I', desc: 'Intersect shapes', usage: 'Intersect shapes in Sketch.' },
+          { keys: 'Cmd + Option + X', desc: 'Difference shapes', usage: 'Difference shapes in Sketch.' },
+          { keys: '1', desc: 'Set point to Straight', usage: 'Set point to Straight in Sketch.' },
+          { keys: '2', desc: 'Set point to Mirror angle and length', usage: 'Set point to Mirror angle and length in Sketch.' },
+          { keys: '3', desc: 'Set point to Independent', usage: 'Set point to Independent in Sketch.' },
+          { keys: '4', desc: 'Set point to Mirror angle', usage: 'Set point to Mirror angle in Sketch.' },
+          { keys: 'Option + 1', desc: 'No pixel snapping', usage: 'No pixel snapping in Sketch.' },
+          { keys: 'Option + 2', desc: 'Snap to full pixels', usage: 'Snap to full pixels in Sketch.' },
+          { keys: 'Option + 3', desc: 'Snap to half pixels', usage: 'Snap to half pixels in Sketch.' },
+          { keys: 'Option + 4', desc: 'Snap to quarter pixels', usage: 'Snap to quarter pixels in Sketch.' }
+        ]
+      },
+      {
+        name: 'Text',
+        shortcuts: [
+          { keys: 'Cmd + Shift + Option + V', desc: 'Paste as rich text', usage: 'Paste as rich text in Sketch.' },
+          { keys: 'Cmd + T', desc: 'Change typeface', usage: 'Change typeface in Sketch.' },
+          { keys: 'Cmd + B', desc: 'Bold', usage: 'Bold in Sketch.' },
+          { keys: 'Cmd + I', desc: 'Italic', usage: 'Italic in Sketch.' },
+          { keys: 'Cmd + U', desc: 'Underline', usage: 'Underline in Sketch.' },
+          { keys: 'Cmd + Option + +', desc: 'Increase font size', usage: 'Increase font size in Sketch.' },
+          { keys: 'Cmd + Option + -', desc: 'Decrease font size', usage: 'Decrease font size in Sketch.' },
+          { keys: 'Ctrl + Option + L', desc: 'Loosen character spacing', usage: 'Loosen character spacing in Sketch.' },
+          { keys: 'Ctrl + Option + T', desc: 'Tighten character spacing', usage: 'Tighten character spacing in Sketch.' },
+          { keys: 'Cmd + Shift + {', desc: 'Align left', usage: 'Align left in Sketch.' },
+          { keys: 'Cmd + Shift + |', desc: 'Align center', usage: 'Align center in Sketch.' },
+          { keys: 'Cmd + Shift + }', desc: 'Align right', usage: 'Align right in Sketch.' },
+          { keys: 'Cmd + Option + O', desc: 'Convert to outlines', usage: 'Convert to outlines in Sketch.' }
+        ]
+      },
+      {
+        name: 'Components View',
+        shortcuts: [
+          { keys: 'Cmd + 5', desc: 'Color Variables', usage: 'Color Variables in Sketch.' },
+          { keys: 'Cmd + 6', desc: 'Graphic Templates', usage: 'Graphic Templates in Sketch.' }
+        ]
+      },
+      {
+        name: 'Browse components',
+        shortcuts: [
+          { keys: 'Cmd + Down', desc: 'Open filter menu at current location (only in Command Bar)', usage: 'Open filter menu at current location (only in Command Bar) in Sketch.' },
+          { keys: 'Cmd + Up', desc: 'Go to parent group', usage: 'Go to parent group in Sketch.' },
+          { keys: 'Cmd + Option + Up', desc: 'Go to current library', usage: 'Go to current library in Sketch.' },
+          { keys: 'Cmd + Ctrl + Option + Up', desc: 'Go to all components', usage: 'Go to all components in Sketch.' }
+        ]
+      },
+      {
+        name: 'Symbols',
+        shortcuts: [
+          { keys: 'Cmd + Y', desc: 'Create Symbol', usage: 'Create Symbol in Sketch.' },
+          { keys: 'Cmd + Shift + Y', desc: 'Detach from Symbol', usage: 'Detach from Symbol in Sketch.' },
+          { keys: 'Cmd + Shift + Option + Y', desc: 'Detach all contents from Symbol', usage: 'Detach all contents from Symbol in Sketch.' }
+        ]
+      },
+      {
+        name: 'Inspector fields',
+        shortcuts: [
+          { keys: 'Up / Down', desc: 'Increase or decrease value by 1', usage: 'Increase or decrease value by 1 in Sketch.' },
+          { keys: 'Shift + Up / Down', desc: 'Increase or decrease value by 10', usage: 'Increase or decrease value by 10 in Sketch.' },
+          { keys: 'Option + Up / Down', desc: 'Increase or decrease value by 0.1', usage: 'Increase or decrease value by 0.1 in Sketch.' }
+        ]
+      }
     ]
   },
+
   xcode: {
     name: "Xcode",
     icon: "fas fa-hammer",
