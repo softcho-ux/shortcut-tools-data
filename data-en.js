@@ -5605,11 +5605,40 @@ const shortcutData = {
   nginx: {
     name: 'Nginx',
     icon: 'fas fa-server',
+    source: 'https://nginx.org/en/docs/switches.html',
+    kind: 'commands',
     categories: [
       {
-        name: 'Server Management',
+        name: 'Command Line Switches',
         shortcuts: [
-          { keys: 'nginx -t', desc: 'Test config', usage: 'Test Nginx configuration syntax.' },
+          { keys: 'nginx -h', desc: 'print help for command-line parameters', usage: 'print help for command-line parameters.' },
+          { keys: 'nginx -c file', desc: 'use an alternative configuration file instead of a default file', usage: 'use an alternative configuration file instead of a default file.' },
+          { keys: 'nginx -e file', desc: 'use an alternative error log file to store the log instead of a default file (1.19.5)', usage: 'use an alternative error log file to store the log instead of a default file (1.19.5).' },
+          { keys: 'nginx -g directives', desc: 'set global configuration directives, for example, nginx -g "pid /var/run/nginx.pid', usage: 'set global configuration directives, for example, nginx -g "pid /var/run/nginx.pid.' },
+          { keys: 'nginx -l port', desc: 'enable nginx control REST API on a specified port or UNIX-domain socket (1.29.8). This', usage: 'enable nginx control REST API on a specified port or UNIX-domain socket (1.29.8). This.' },
+          { keys: 'nginx -p prefix', desc: 'set nginx path prefix, i.e. a directory that will keep server files', usage: 'set nginx path prefix, i.e. a directory that will keep server files.' },
+          { keys: 'nginx -q', desc: 'suppress non-error messages during configuration testing', usage: 'suppress non-error messages during configuration testing.' },
+          { keys: 'nginx -s signal', desc: 'send a signal to the master process. The argument signal can be one of: stop - shut down', usage: 'send a signal to the master process. The argument signal can be one of: stop - shut down.' },
+          { keys: 'nginx -t', desc: 'test the configuration file: nginx checks the configuration for correct syntax, and then tries', usage: 'test the configuration file: nginx checks the configuration for correct syntax, and then tries.' },
+          { keys: 'nginx -T', desc: 'same as -t, but additionally dump configuration files to standard output (1.9.2)', usage: 'same as -t, but additionally dump configuration files to standard output (1.9.2).' },
+          { keys: 'nginx -v', desc: 'print nginx version', usage: 'print nginx version.' },
+          { keys: 'nginx -V', desc: 'print nginx version, compiler version, and configure parameters', usage: 'print nginx version, compiler version, and configure parameters.' },
+        ]
+      },
+      {
+        name: 'Process Signals',
+        shortcuts: [
+          { keys: 'kill -TERM', desc: 'Fast shutdown', usage: 'Fast shutdown.' },
+          { keys: 'kill -QUIT', desc: 'Graceful shutdown', usage: 'Graceful shutdown.' },
+          { keys: 'kill -HUP', desc: 'Changing configuration, keeping up with a changed time zone (only for FreeBSD and Linux)', usage: 'Changing configuration, keeping up with a changed time zone (only for FreeBSD and Linux).' },
+          { keys: 'kill -USR1', desc: 'Re-opening log files', usage: 'Re-opening log files.' },
+          { keys: 'kill -USR2', desc: 'Upgrading an executable file', usage: 'Upgrading an executable file.' },
+          { keys: 'kill -WINCH', desc: 'Graceful shutdown of worker processes', usage: 'Graceful shutdown of worker processes.' },
+        ]
+      },
+      {
+        name: 'Additional Commands',
+        shortcuts: [
           { keys: 'nginx -s reload', desc: 'Reload config', usage: 'Reload config without downtime.' },
           { keys: 'nginx -s stop', desc: 'Stop server', usage: 'Stop Nginx server immediately.' },
           { keys: 'nginx -s quit', desc: 'Graceful stop', usage: 'Stop after processing current connections.' },
@@ -13617,9 +13646,40 @@ const shortcutData = {
   mikrotik: {
     name: 'MikroTik RouterOS',
     icon: 'fas fa-network-wired',
+    source: 'https://help.mikrotik.com/docs/spaces/ROS/pages/328155/Command+Line+Interface',
+    kind: 'commands',
     categories: [
       {
-        name: 'Commands',
+        name: 'Configuration Export',
+        shortcuts: [
+          { keys: 'compact', desc: 'Outputs only the modified configuration. Starting from v6rc1, "export compact" became', usage: 'Outputs only the modified configuration. Starting from v6rc1, "export compact" became.' },
+          { keys: 'file', desc: 'Export configuration to a specified file. When the file is not specified export output will be', usage: 'Export configuration to a specified file. When the file is not specified export output will be.' },
+          { keys: 'path', desc: 'Parameter allows to include or exclude specific configuration menu from router entire', usage: 'Parameter allows to include or exclude specific configuration menu from router entire.' },
+          { keys: 'show-sensitive', desc: 'Show sensitive information, like passwords, keys, etc. By default, sensitive information', usage: 'Show sensitive information, like passwords, keys, etc. By default, sensitive information.' },
+          { keys: 'terse', desc: 'With this parameter, the export command will output the configuration as full commands', usage: 'With this parameter, the export command will output the configuration as full commands.' },
+          { keys: 'verbose', desc: 'With this parameter, the export command will output whole configuration parameters and items', usage: 'With this parameter, the export command will output whole configuration parameters and items.' },
+        ]
+      },
+      {
+        name: 'Configuration Import',
+        shortcuts: [
+          { keys: 'from-line', desc: 'Start executing the script from the specified line number. This option is only available', usage: 'Start executing the script from the specified line number. This option is only available.' },
+          { keys: 'file-name', desc: 'Name of the script (.rsc) file to be executed', usage: 'Name of the script (.rsc) file to be executed.' },
+          { keys: 'dry-run', desc: 'Simulates the import without making any configuration changes. This helps in catching syntax', usage: 'Simulates the import without making any configuration changes. This helps in catching syntax.' },
+        ]
+      },
+      {
+        name: 'Startup delay',
+        shortcuts: [
+          { keys: 'keep-users', desc: 'Do not remove existing users from the configuration', usage: 'Do not remove existing users from the configuration.' },
+          { keys: 'no-defaults', desc: 'Do not load the default configuration, just clear the configuration', usage: 'Do not load the default configuration, just clear the configuration.' },
+          { keys: 'skip-backup', desc: 'Skip automatic backup file generation before reset', usage: 'Skip automatic backup file generation before reset.' },
+          { keys: 'run-after-reset', desc: 'Run specified .rsc file after reset. That way you can load your custom configuration. If', usage: 'Run specified .rsc file after reset. That way you can load your custom configuration. If.' },
+          { keys: 'caps-mode', desc: 'Run caps-mode script after configuration reset', usage: 'Run caps-mode script after configuration reset.' },
+        ]
+      },
+      {
+        name: 'Additional Commands',
         shortcuts: [
           { keys: '/interface print', desc: 'List interfaces', usage: 'List interfaces.' },
           { keys: '/ip address print', desc: 'IP addresses', usage: 'Show IP addresses.' },
