@@ -2192,53 +2192,80 @@ const shortcutData = {
   cursor: {
     name: 'Cursor AI',
     icon: 'fas fa-wand-magic-sparkles',
+    source: 'https://cursor.com/docs/reference/keyboard-shortcuts',
     categories: [
       {
-        name: 'AI Core Features',
+        name: 'General',
         shortcuts: [
-          { keys: 'Ctrl + K', desc: 'AI Inline Edit', usage: 'AI modifies selected code directly. Describe changes in natural language.' },
-          { keys: 'Ctrl + L', desc: 'AI Chat', usage: 'Opens AI chat panel. Ask code questions, get explanations, or debug.' },
-          { keys: 'Ctrl + I', desc: 'Open Composer', usage: 'Opens multi-file AI editing tool (Composer). Edit multiple files simultaneously.' },
-          { keys: 'Ctrl + Shift + I', desc: 'Composer Fullscreen', usage: 'Opens Composer in fullscreen mode.' },
-          { keys: 'Ctrl + Shift + L', desc: 'Add Selection to Chat', usage: 'Adds selected code to AI chat context.' },
-          { keys: 'Ctrl + Shift + K', desc: 'Terminal AI (Cmd K)', usage: 'Invoke AI command generation in terminal.' },
-          { keys: 'Tab', desc: 'Accept AI Completion', usage: 'Accept AI-suggested code autocomplete.' },
-          { keys: 'Esc', desc: 'Dismiss AI Suggestion', usage: 'Dismiss AI autocomplete suggestion.' },
-          { keys: 'Ctrl + Shift + Enter', desc: 'Accept AI Edit', usage: 'Accept AI-suggested inline edit.' },
-          { keys: 'Ctrl + Backspace', desc: 'Reject AI Edit', usage: 'Reject AI-suggested inline edit.' },
-          { keys: '@', desc: 'Context Mention', usage: 'Use @filename, @folder in chat to add context.' },
+          { keys: 'Cmd + I', desc: 'Toggle Sidepanel (unless bound to mode)', usage: 'Toggle Sidepanel (unless bound to mode).' },
+          { keys: 'Cmd + L', desc: 'Toggle Sidepanel (unless bound to mode)', usage: 'Toggle Sidepanel (unless bound to mode).' },
+          { keys: 'Cmd + E', desc: 'Toggle Agent layout', usage: 'Toggle Agent layout.' },
+          { keys: 'Cmd + .', desc: 'Mode Menu', usage: 'Mode Menu.' },
+          { keys: 'Cmd + /', desc: 'Loop between AI models', usage: 'Loop between AI models.' },
+          { keys: 'Cmd + Shift + J', desc: 'Cursor settings', usage: 'Cursor settings.' },
+          { keys: 'Cmd + Shift + Space', desc: 'Toggle Voice Mode', usage: 'Toggle Voice Mode.' },
+          { keys: 'Cmd + ,', desc: 'General settings', usage: 'General settings.' },
+          { keys: 'Cmd + Shift + P', desc: 'Command palette', usage: 'Command palette.' },
         ]
       },
       {
-        name: 'Editing & Navigation',
+        name: 'Chat',
         shortcuts: [
-          { keys: 'Ctrl + P', desc: 'Quick Open File', usage: 'Quickly search and open files by name.' },
-          { keys: 'Ctrl + Shift + P', desc: 'Command Palette', usage: 'Search and execute any command.' },
-          { keys: 'Ctrl + /', desc: 'Toggle Comment', usage: 'Comment or uncomment selected lines.' },
-          { keys: 'Ctrl + D', desc: 'Select Next Match', usage: 'Multi-select same word. Press multiple times to add selections.' },
-          { keys: 'Alt + Up/Down', desc: 'Move Line', usage: 'Move current line up or down.' },
-          { keys: 'Alt + Shift + Up/Down', desc: 'Duplicate Line', usage: 'Duplicate current line up or down.' },
-          { keys: 'Ctrl + Shift + K', desc: 'Delete Line', usage: 'Delete current line.' },
-          { keys: 'Ctrl + G', desc: 'Go to Line', usage: 'Jump to a specific line number.' },
-          { keys: 'Ctrl + Shift + \\', desc: 'Go to Matching Bracket', usage: 'Move cursor to matching bracket.' },
-          { keys: 'F12', desc: 'Go to Definition', usage: 'Navigate to function or variable definition.' },
-          { keys: 'Alt + F12', desc: 'Peek Definition', usage: 'Preview definition in inline popup.' },
-          { keys: 'Ctrl + Shift + F', desc: 'Search All Files', usage: 'Search text across entire project.' },
-          { keys: 'Ctrl + H', desc: 'Find and Replace', usage: 'Find and replace text in current file.' },
-          { keys: 'Ctrl + \\', desc: 'Split Editor', usage: 'Split editor view side by side.' },
-          { keys: 'Ctrl + `', desc: 'Toggle Terminal', usage: 'Open or close integrated terminal.' },
-          { keys: 'Ctrl + B', desc: 'Toggle Sidebar', usage: 'Show or hide left sidebar.' },
-          { keys: 'Ctrl + Shift + E', desc: 'Open Explorer', usage: 'Open file explorer panel.' },
-          { keys: 'Ctrl + Shift + X', desc: 'Extensions', usage: 'Open extensions panel.' },
+          { keys: 'Enter', desc: 'Nudge (default)', usage: 'Nudge (default).' },
+          { keys: 'Ctrl + Enter', desc: 'Queue message', usage: 'Queue message.' },
+          { keys: 'Cmd + Enter', desc: 'Force send message (Chat)', usage: 'Force send message. (When typing.) (In Chat.)' },
+          { keys: 'Cmd + Shift + Backspace', desc: 'Cancel generation (Chat)', usage: 'Cancel generation (In Chat.)' },
+          { keys: 'Cmd + Shift + L', desc: 'Add selected code as context (Chat)', usage: 'Add selected code as context. (With code selected.) (In Chat.)' },
+          { keys: 'Cmd + V', desc: 'Add clipboard as context', usage: 'Add clipboard as context. (With code or log in clipboard.)' },
+          { keys: 'Cmd + Shift + V', desc: 'Add clipboard to input box', usage: 'Add clipboard to input box. (With code or log in clipboard.)' },
+          { keys: 'Cmd + Backspace', desc: 'Reject all changes', usage: 'Reject all changes.' },
+          { keys: 'Tab', desc: 'Cycle to next message (Chat)', usage: 'Cycle to next message (In Chat.)' },
+          { keys: 'Shift + Tab', desc: 'Rotate between Agent modes', usage: 'Rotate between Agent modes.' },
+          { keys: 'Cmd + Option + /', desc: 'Model toggle', usage: 'Model toggle.' },
+          { keys: 'Cmd + N', desc: 'New chat', usage: 'New chat.' },
+          { keys: 'Cmd + T', desc: 'New chat tab', usage: 'New chat tab.' },
+          { keys: 'Cmd + [', desc: 'Previous chat', usage: 'Previous chat.' },
+          { keys: 'Cmd + ]', desc: 'Next chat', usage: 'Next chat.' },
+          { keys: 'Cmd + W', desc: 'Close chat', usage: 'Close chat.' },
+          { keys: 'Esc', desc: 'Unfocus field (Chat)', usage: 'Unfocus field (In Chat.)' },
         ]
       },
       {
-        name: 'Prompt Tips',
+        name: 'Inline Edit',
         shortcuts: [
-          { keys: '@filename', desc: 'Reference file', usage: 'Reference specific files in questions.' },
-          { keys: '@codebase', desc: 'Codebase context', usage: 'Reference entire project context.' },
-          { keys: '@web', desc: 'Web search', usage: 'Search web for latest information.' },
-          { keys: '@docs', desc: 'Documentation', usage: 'Reference official docs for code generation.' },
+          { keys: 'Cmd + K', desc: 'Open (Inline Edit)', usage: 'Open (In Inline Edit.)' },
+          { keys: 'Cmd + Shift + K', desc: 'Toggle input focus (Inline Edit)', usage: 'Toggle input focus (In Inline Edit.)' },
+          { keys: 'Enter', desc: 'Submit (Inline Edit)', usage: 'Submit (In Inline Edit.)' },
+          { keys: 'Cmd + Shift + Backspace', desc: 'Cancel (Inline Edit)', usage: 'Cancel (In Inline Edit.)' },
+          { keys: 'Option + Enter', desc: 'Ask quick question', usage: 'Ask quick question.' },
+        ]
+      },
+      {
+        name: 'Code Selection & Context',
+        shortcuts: [
+          { keys: '@', desc: '@-mentions', usage: '@-mentions.' },
+          { keys: '/', desc: 'Shortcut Commands', usage: 'Shortcut Commands.' },
+          { keys: 'Cmd + Shift + L', desc: 'Add selection to Chat (Code Selection & Context)', usage: 'Add selection to Chat (In Code Selection & Context.)' },
+          { keys: 'Cmd + Shift + K', desc: 'Add selection to Edit (Code Selection & Context)', usage: 'Add selection to Edit (In Code Selection & Context.)' },
+          { keys: 'Cmd + L', desc: 'Add selection to new chat (Code Selection & Context)', usage: 'Add selection to new chat (In Code Selection & Context.)' },
+          { keys: 'Cmd + M', desc: 'Toggle file reading strategies', usage: 'Toggle file reading strategies.' },
+          { keys: 'Cmd + Right', desc: 'Accept next word of suggestion (Code Selection & Context)', usage: 'Accept next word of suggestion (In Code Selection & Context.)' },
+          { keys: 'Cmd + Enter', desc: 'Search codebase in chat (Code Selection & Context)', usage: 'Search codebase in chat (In Code Selection & Context.)' },
+        ]
+      },
+      {
+        name: 'Tab',
+        shortcuts: [
+          { keys: 'Tab', desc: 'Accept suggestion (Tab)', usage: 'Accept suggestion (In Tab.)' },
+          { keys: 'Cmd + Right', desc: 'Accept next word (Tab)', usage: 'Accept next word (In Tab.)' },
+        ]
+      },
+      {
+        name: 'Terminal',
+        shortcuts: [
+          { keys: 'Cmd + K', desc: 'Open terminal prompt bar (Terminal)', usage: 'Open terminal prompt bar (In Terminal.)' },
+          { keys: 'Cmd + Enter', desc: 'Run generated command (Terminal)', usage: 'Run generated command (In Terminal.)' },
+          { keys: 'Esc', desc: 'Accept command (Terminal)', usage: 'Accept command (In Terminal.)' },
         ]
       },
     ]
@@ -9281,23 +9308,7 @@ const shortcutData = {
       ] }
     ]
   },
-  cursor_rules: {
-    name: 'Cursor Rules',
-    icon: 'fas fa-brain',
-    categories: [
-      {
-        name: 'Editor',
-        shortcuts: [
-          { keys: 'Ctrl + L', desc: 'AI Chat', usage: 'Open AI chat panel.' },
-          { keys: 'Ctrl + I', desc: 'Inline edit', usage: 'Start AI inline editing.' },
-          { keys: 'Ctrl + K', desc: 'Command palette', usage: 'Open command palette.' },
-          { keys: 'Ctrl + Shift + I', desc: 'Composer', usage: 'Open Composer panel.' },
-          { keys: 'Tab', desc: 'Accept suggestion', usage: 'Accept AI code suggestion.' },
-          { keys: 'Ctrl + Shift + P', desc: 'Settings', usage: 'Search settings commands.' },
-        ]
-      },
-    ]
-  },
+
   camtasia: {
       name: 'Camtasia',
       icon: 'fas fa-video',
@@ -9492,16 +9503,88 @@ const shortcutData = {
   screenflow: {
     name: 'ScreenFlow',
     icon: 'fas fa-desktop',
+    source: 'https://www.telestream.net/pdfs/technical/ScreenFlow-6-Shortcuts.pdf',
     categories: [
       {
-        name: 'Editing',
+        name: 'Editing (Timeline)',
         shortcuts: [
-          { keys: 'Space', desc: 'Play/Stop', usage: 'Play or stop playback.' },
-          { keys: 'T', desc: 'Split', usage: 'Split clip at playhead.' },
-          { keys: 'Cmd + Z', desc: 'Undo', usage: 'Undo last action.' },
-          { keys: 'Cmd + Shift + E', desc: 'Export', usage: 'Export the project.' },
-          { keys: 'Cmd + R', desc: 'Start recording', usage: 'Start a new recording.' },
-          { keys: 'Delete', desc: 'Delete', usage: 'Delete selected clip.' },
+          { keys: 'Shift + Z', desc: 'Resize timeline to fit visible area', usage: 'Resize timeline to fit visible area.' },
+          { keys: 'Shift + S', desc: 'Toggle live audio scrubbing', usage: 'Toggle live audio scrubbing.' },
+          { keys: '=', desc: 'Zoom in timeline', usage: 'Zoom in timeline.' },
+          { keys: 'Cmd + K', desc: 'Add video action', usage: 'Add video action.' },
+          { keys: 'Cmd + L', desc: 'Add callout', usage: 'Add callout.' },
+          { keys: 'Cmd + R', desc: 'Add screen recording action', usage: 'Add screen recording action.' },
+          { keys: 'Option + Cmd + T', desc: 'Insert Annotations clip', usage: 'Insert Annotations clip.' },
+          { keys: 'T', desc: 'Split clip (keep clip on left selected)', usage: 'Split clip (keep clip on left selected).' },
+          { keys: 'Shift + T', desc: 'Split clip (keep clip on right selected)', usage: 'Split clip (keep clip on right selected).' },
+          { keys: 'Shift + Cmd + F', desc: 'Add freeze frame', usage: 'Add freeze frame.' },
+          { keys: 'Option + Cmd + L', desc: 'Lock/unlock clip', usage: 'Lock/unlock clip.' },
+          { keys: 'Cmd + G', desc: 'Group clips', usage: 'Group clips.' },
+          { keys: 'Cmd + U', desc: 'Ungroup clips', usage: 'Ungroup clips.' },
+          { keys: 'Ctrl + N', desc: 'Toggle snapping to guide lines (Editing (Timeline))', usage: 'Toggle snapping to guide lines (In Editing (Timeline).)' },
+          { keys: 'Space', desc: 'Play presentation', usage: 'Play presentation.' },
+          { keys: 'Option + Cmd + A', desc: 'Paste audio properties', usage: 'Paste audio properties.' },
+          { keys: 'J', desc: 'Scrub backwards, stop, forward', usage: 'Scrub backwards, stop, forward.' },
+          { keys: 'Option + Cmd + C', desc: 'Paste callout properties', usage: 'Paste callout properties.' },
+          { keys: 'Option + Cmd + I', desc: 'Paste video properties', usage: 'Paste video properties.' },
+          { keys: ';', desc: 'Move scrubber to previous clip start/end', usage: 'Move scrubber to previous clip start/end.' },
+          { keys: 'Option + Cmd + S', desc: 'Paste screen recording properties', usage: 'Paste screen recording properties.' },
+          { keys: 'Shift + Cmd + V', desc: 'Insert media at scrubber position', usage: 'Insert media at scrubber position.' },
+          { keys: '`', desc: 'Insert Marker at scrubber position', usage: 'Insert Marker at scrubber position.' },
+          { keys: 'Option + Cmd + N', desc: 'Nest Clips', usage: 'Nest Clips.' },
+          { keys: 'Shift + ~', desc: 'Delete Marker at scrubber position', usage: 'Delete Marker at scrubber position.' },
+          { keys: 'Shift + Up', desc: 'Next Marker', usage: 'Next Marker.' },
+          { keys: 'Shift + Down', desc: 'Previous Marker', usage: 'Previous Marker.' },
+          { keys: 'W', desc: 'scrubber position', usage: 'scrubber position.' },
+          { keys: 'E', desc: 'scrubber position', usage: 'scrubber position.' },
+          { keys: 'I', desc: 'Insert In Point', usage: 'Insert In Point.' },
+          { keys: 'O', desc: 'Insert Out Point', usage: 'Insert Out Point.' },
+          { keys: 'Option + Z', desc: 'Clear in and out Points', usage: 'Clear in and out Points.' },
+          { keys: 'Shift + I', desc: 'Move scrubber to in point', usage: 'Move scrubber to in point.' },
+          { keys: 'Shift + O', desc: 'Move scrubber to out point', usage: 'Move scrubber to out point.' },
+          { keys: 'Cmd + Backspace', desc: 'Ripple delete between current In/Out Points', usage: 'Ripple delete between current In/Out Points.' },
+          { keys: 'Cmd + A', desc: 'Select all clips', usage: 'Select all clips.' },
+          { keys: 'Shift + Cmd + A', desc: 'Deselect all clips', usage: 'Deselect all clips.' },
+          { keys: 'Right', desc: 'Forward one frame', usage: 'Forward one frame.' },
+          { keys: 'Left', desc: 'Backward one frame', usage: 'Backward one frame.' },
+          { keys: 'Shift + Right', desc: 'Forward one second', usage: 'Forward one second.' },
+          { keys: 'Shift + Left', desc: 'Backward one second', usage: 'Backward one second.' },
+          { keys: 'Home', desc: 'Move scrubber to start of presentation', usage: 'Move scrubber to start of presentation.' },
+          { keys: 'End', desc: 'Move scrubber to end of presentation', usage: 'Move scrubber to end of presentation.' },
+        ]
+      },
+      {
+        name: 'Editing (Preview)',
+        shortcuts: [
+          { keys: 'Cmd', desc: 'Temporarily toggle snapping', usage: 'Temporarily toggle snapping.' },
+          { keys: 'Option + Cmd + 0', desc: 'Set Preview area to natural size', usage: 'Set Preview area to natural size.' },
+          { keys: 'Ctrl + N', desc: 'Toggle snapping to guide lines (Editing (Preview))', usage: 'Toggle snapping to guide lines (In Editing (Preview).)' },
+          { keys: 'Option + Cmd + V', desc: 'Paste style', usage: 'Paste style.' },
+          { keys: 'Option + Shift + Cmd + V', desc: 'Paste and match style', usage: 'Paste and match style.' },
+        ]
+      },
+      {
+        name: 'Record & Export',
+        shortcuts: [
+          { keys: 'Cmd + Shift + 2', desc: 'Record', usage: 'Record.' },
+          { keys: 'Cmd + N', desc: 'New recording', usage: 'New recording.' },
+          { keys: 'Cmd + O', desc: 'Open recording document', usage: 'Open recording document.' },
+          { keys: 'Cmd + H', desc: 'Hide ScreenFlow windows', usage: 'Hide ScreenFlow windows.' },
+          { keys: 'Option + Cmd + H', desc: 'Hide other windows', usage: 'Hide other windows.' },
+          { keys: 'Cmd + E', desc: 'Export as video', usage: 'Export as video.' },
+          { keys: 'Cmd + Shift + /', desc: 'Open help window', usage: 'Open help window.' },
+        ]
+      },
+      {
+        name: 'Other',
+        shortcuts: [
+          { keys: 'Cmd + 1', desc: 'Show Video Properties', usage: 'Show Video Properties.' },
+          { keys: 'Cmd + 2', desc: 'Show Audio Properties', usage: 'Show Audio Properties.' },
+          { keys: 'Cmd + 3', desc: 'Show Screen Recording Properties', usage: 'Show Screen Recording Properties.' },
+          { keys: 'Cmd + 4', desc: 'Show Callout Properties', usage: 'Show Callout Properties.' },
+          { keys: 'Cmd + 5', desc: 'Show Annotations Properties', usage: 'Show Annotations Properties.' },
+          { keys: 'Cmd + 6', desc: 'Show Text Properties', usage: 'Show Text Properties.' },
+          { keys: 'Cmd + 7', desc: 'Show Media', usage: 'Show Media.' },
         ]
       },
     ]
@@ -13839,20 +13922,33 @@ const shortcutData = {
         },
       ]
     },
-
   juniper: {
     name: 'Juniper JunOS',
     icon: 'fas fa-network-wired',
+    source: 'https://www.juniper.net/documentation/us/en/software/junos/cli/cli.pdf',
     categories: [
       {
-        name: 'Basic Commands',
+        name: 'CLI Navigation & Editing',
         shortcuts: [
-          { keys: 'show interfaces terse', desc: 'Interface summary', usage: 'Summarize interface status.' },
-          { keys: 'show route', desc: 'Routing table', usage: 'Show routing table.' },
-          { keys: 'show configuration', desc: 'Show config', usage: 'Show current configuration.' },
-          { keys: 'configure', desc: 'Config mode', usage: 'Enter configuration mode.' },
-          { keys: 'commit', desc: 'Apply config', usage: 'Apply configuration.' },
-          { keys: 'rollback 1', desc: 'Rollback', usage: 'Rollback to previous config.' },
+          { keys: 'Ctrl + B', desc: 'Move the cursor back one character', usage: 'Move the cursor back one character.' },
+          { keys: 'Esc + B', desc: 'Move the cursor back one word', usage: 'Move the cursor back one word.' },
+          { keys: 'Ctrl + F', desc: 'Move the cursor forward one character', usage: 'Move the cursor forward one character.' },
+          { keys: 'Esc + F', desc: 'Move the cursor forward one word', usage: 'Move the cursor forward one word.' },
+          { keys: 'Ctrl + A', desc: 'Move the cursor to the beginning of the command line', usage: 'Move the cursor to the beginning of the command line.' },
+          { keys: 'Ctrl + E', desc: 'Move the cursor to the end of the command line', usage: 'Move the cursor to the end of the command line.' },
+          { keys: 'Ctrl + H', desc: 'Delete the character before the cursor', usage: 'Delete the character before the cursor.' },
+          { keys: 'Ctrl + D', desc: 'Delete the character at the cursor', usage: 'Delete the character at the cursor.' },
+          { keys: 'Ctrl + K', desc: 'Delete the all characters from the cursor to the end of the ', usage: 'Delete the all characters from the cursor to the end of the command line.' },
+          { keys: 'Ctrl + U', desc: 'Delete the all characters from the command line', usage: 'Delete the all characters from the command line.' },
+          { keys: 'Ctrl + W', desc: 'Delete the word before the cursor', usage: 'Delete the word before the cursor.' },
+          { keys: 'Esc + D', desc: 'Delete the word after the cursor', usage: 'Delete the word after the cursor.' },
+          { keys: 'Ctrl + Y', desc: 'Insert the most recently deleted text at the cursor', usage: 'Insert the most recently deleted text at the cursor.' },
+          { keys: 'Ctrl + L', desc: 'Redraw the current line', usage: 'Redraw the current line.' },
+          { keys: 'Ctrl + P', desc: 'Scroll backward through the list of recently executed comman', usage: 'Scroll backward through the list of recently executed commands.' },
+          { keys: 'Ctrl + N', desc: 'Scroll forward through the list of recently executed command', usage: 'Scroll forward through the list of recently executed commands.' },
+          { keys: 'Ctrl + R', desc: 'Search the CLI history incrementally in reverse order for li', usage: 'Search the CLI history incrementally in reverse order for lines matching the search string.' },
+          { keys: 'Esc + /', desc: 'Search the CLI history for words for which the current word ', usage: 'Search the CLI history for words for which the current word is a prefix.' },
+          { keys: 'Esc + .', desc: 'Scroll backward through the list of recently entered words i', usage: 'Scroll backward through the list of recently entered words in a command line.' },
         ]
       },
     ]
