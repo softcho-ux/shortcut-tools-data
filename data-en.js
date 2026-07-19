@@ -3678,24 +3678,67 @@ todoist: {
       },
     ]
   },
-  arc: {
-    name: 'Arc Browser',
-    icon: 'fas fa-compass',
-    categories: [
-      {
-        name: 'Tabs & Spaces',
-        shortcuts: [
-          { keys: 'Cmd + T', desc: 'New Tab', usage: 'Open a new tab.' },
-          { keys: 'Cmd + W', desc: 'Close Tab', usage: 'Close current tab.' },
-          { keys: 'Cmd + S', desc: 'Pin Tab', usage: 'Pin tab to sidebar.' },
-          { keys: 'Ctrl + 1~8', desc: 'Switch Space', usage: 'Switch to specific space.' },
-          { keys: 'Cmd + D', desc: 'Split View', usage: 'Split screen with two tabs.' },
-          { keys: 'Cmd + L', desc: 'Command Bar', usage: 'Open Arc command bar.' },
-          { keys: 'Cmd + \\', desc: 'Toggle Sidebar', usage: 'Show or hide sidebar.' },
-        ]
-      },
-    ]
-  },
+arc: {
+      name: 'Arc Browser',
+      icon: 'fas fa-compass',
+      source: 'https://resources.arc.net/hc/en-us/articles/20595231349911-Keyboard-Shortcuts',
+      categories: [
+        {
+          name: 'Everyday Use',
+          shortcuts: [
+            { keys: 'Ctrl + T', desc: 'Open a new tab', usage: 'Open a new tab.' },
+            { keys: 'Ctrl + N', desc: 'Open a new window', usage: 'Open a new window.' },
+            { keys: 'Ctrl + Shift + N', desc: 'Open a new incognito window', usage: 'Open a new incognito window.' },
+            { keys: 'Ctrl + W', desc: 'Close the current tab or window', usage: 'Close the current tab or window.' },
+            { keys: 'Ctrl + Shift + T', desc: 'Re-open the last closed tab', usage: 'Re-open the last closed tab.' },
+            { keys: 'Ctrl + D', desc: 'Pin or unpin the current tab', usage: 'Pin or unpin the current tab.' },
+            { keys: 'Ctrl + Shift + C', desc: 'Copy the current tab URL', usage: 'Copy the current tab URL.' },
+            { keys: 'Ctrl + Shift + Alt + C', desc: 'Copy the current tab URL as Markdown', usage: 'Copy the current tab URL as Markdown.' },
+            { keys: 'Ctrl + L', desc: 'Change the current tab URL', usage: 'Change the current tab URL.' },
+            { keys: 'Ctrl + S', desc: 'Show or hide the Sidebar', usage: 'Show or hide the Sidebar.' },
+            { keys: 'Ctrl + Shift + K', desc: 'Clear unpinned tabs', usage: 'Clear unpinned tabs.' },
+          ]
+        },
+        {
+          name: 'Quick Navigation',
+          shortcuts: [
+            { keys: 'Ctrl + 1', desc: 'Go directly to a numbered tab', usage: 'Go directly to a numbered tab.' },
+            { keys: 'Alt + 1', desc: 'Focus on a numbered Space', usage: 'Focus on a numbered Space.' },
+            { keys: 'Ctrl + Tab', desc: 'Toggle between recent tabs', usage: 'Toggle between recent tabs.' },
+            { keys: 'Ctrl + Alt + Up', desc: 'Switch between tabs', usage: 'Switch between tabs.' },
+            { keys: 'Ctrl + Alt + Left', desc: 'Switch between Spaces', usage: 'Switch between Spaces.' },
+            { keys: 'Alt + Right', desc: 'Go forward in tab history', usage: 'Go forward in tab history.' },
+            { keys: 'Alt + Left', desc: 'Go back in tab history', usage: 'Go back in tab history.' },
+            { keys: 'Ctrl + Shift + +', desc: 'Add Split View', usage: 'Add Split View.' },
+            { keys: 'Ctrl + Shift + -', desc: 'Close Split View', usage: 'Close Split View.' },
+            { keys: 'Ctrl + Shift + 1', desc: 'Switch Split View focus', usage: 'Switch Split View focus.' },
+          ]
+        },
+        {
+          name: 'Other',
+          shortcuts: [
+            { keys: 'Ctrl + H', desc: 'View History', usage: 'View History.' },
+            { keys: 'Ctrl + +', desc: 'Zoom in on the webpage', usage: 'Zoom in on the webpage.' },
+            { keys: 'Ctrl + -', desc: 'Zoom out on the webpage', usage: 'Zoom out on the webpage.' },
+            { keys: 'Ctrl + 0', desc: 'Reset webpage zoom', usage: 'Reset webpage zoom.' },
+            { keys: 'Ctrl + R', desc: 'Reload the webpage', usage: 'Reload the webpage.' },
+            { keys: 'Ctrl + F', desc: 'Find in the webpage', usage: 'Find in the webpage.' },
+          ]
+        },
+        {
+          name: 'Additional Shortcuts',
+          shortcuts: [
+            { keys: 'Cmd + T', desc: 'New Tab', usage: 'Open a new tab.' },
+            { keys: 'Cmd + W', desc: 'Close Tab', usage: 'Close current tab.' },
+            { keys: 'Cmd + S', desc: 'Pin Tab', usage: 'Pin tab to sidebar.' },
+            { keys: 'Ctrl + 1~8', desc: 'Switch Space', usage: 'Switch to specific space.' },
+            { keys: 'Cmd + D', desc: 'Split View', usage: 'Split screen with two tabs.' },
+            { keys: 'Cmd + L', desc: 'Command Bar', usage: 'Open Arc command bar.' },
+            { keys: 'Cmd + \\', desc: 'Toggle Sidebar', usage: 'Show or hide sidebar.' },
+          ]
+        },
+      ]
+    },
 warp: {
       name: 'Warp Terminal',
       icon: 'fas fa-terminal',
@@ -7585,23 +7628,54 @@ clickup: {
         },
       ]
     },
-  monday: {
-    name: 'Monday.com',
-    icon: 'fas fa-calendar-check',
-    categories: [
-      {
-        name: 'Board',
-        shortcuts: [
-          { keys: 'Ctrl + Enter', desc: 'Add item', usage: 'Add a new item.' },
-          { keys: 'Ctrl + C', desc: 'Copy', usage: 'Copy selected cell.' },
-          { keys: 'Ctrl + V', desc: 'Paste', usage: 'Paste content.' },
-          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo last action.' },
-          { keys: 'Ctrl + F', desc: 'Search', usage: 'Search in the board.' },
-          { keys: 'Arrow Keys', desc: 'Navigate cells', usage: 'Navigate cells with arrow keys.' },
-        ]
-      },
-    ]
-  },
+monday: {
+      name: 'Monday.com',
+      icon: 'fas fa-calendar-check',
+      source: 'https://support.monday.com/hc/en-us/articles/115005339905-monday-com-Shortcuts',
+      categories: [
+        {
+          name: 'Navigation',
+          shortcuts: [
+            { keys: 'Ctrl + B', desc: 'Quick Search', usage: 'Quick Search.' },
+            { keys: 'Esc', desc: 'Close item page, dialogs or search', usage: 'Close item page, dialogs or search.' },
+            { keys: 'Ctrl + .', desc: 'Open or close the navigation pane', usage: 'Open or close the navigation pane.' },
+            { keys: 'Tab', desc: 'Navigate to the next cell', usage: 'Navigate to the next cell.' },
+            { keys: 'Shift + Tab', desc: 'Navigate to the previous cell', usage: 'Navigate to the previous cell.' },
+          ]
+        },
+        {
+          name: 'Board Editing',
+          shortcuts: [
+            { keys: 'Enter', desc: 'Edit cell content', usage: 'Edit cell content.' },
+            { keys: 'Backspace', desc: 'Clear cell content', usage: 'Clear cell content.' },
+            { keys: 'Space', desc: 'Open Column View', usage: 'Open Column View.' },
+            { keys: 'Ctrl + F', desc: 'Search the board', usage: 'Search the board.' },
+            { keys: 'Ctrl + C', desc: 'Copy cell content', usage: 'Copy cell content.' },
+            { keys: 'Ctrl + V', desc: 'Paste cell content', usage: 'Paste cell content.' },
+            { keys: 'Ctrl + X', desc: 'Cut cell content', usage: 'Cut cell content.' },
+            { keys: 'Ctrl + Enter', desc: 'Select item', usage: 'Select item.' },
+            { keys: 'Shift + Enter', desc: 'Select a range of items', usage: 'Select a range of items.' },
+          ]
+        },
+        {
+          name: 'Board Structure',
+          shortcuts: [
+            { keys: 'Ctrl + Shift + G', desc: 'Create a new group', usage: 'Create a new group.' },
+            { keys: 'Ctrl + Shift + C', desc: 'Create a new column', usage: 'Create a new column.' },
+            { keys: 'Ctrl + Shift + L', desc: 'Open the activity log', usage: 'Open the activity log.' },
+            { keys: 'Ctrl + Shift + E', desc: 'Export the board to Excel', usage: 'Export the board to Excel.' },
+            { keys: 'Ctrl + G', desc: 'Collapse or expand all groups', usage: 'Collapse or expand all groups.' },
+          ]
+        },
+        {
+          name: 'Additional Shortcuts',
+          shortcuts: [
+            { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo last action.' },
+            { keys: 'Arrow Keys', desc: 'Navigate cells', usage: 'Navigate cells with arrow keys.' },
+          ]
+        },
+      ]
+    },
   google_calendar: {
     name: "Google Calendar",
     icon: "fas fa-calendar",
