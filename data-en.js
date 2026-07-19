@@ -4407,30 +4407,60 @@ aider: {
         },
       ]
     },
-  runway: {
-    name: 'Runway ML',
-    icon: 'fas fa-film',
-    categories: [
-      {
-        name: 'Editor',
-        shortcuts: [
-          { keys: 'Space', desc: 'Play/Pause', usage: 'Play or pause the preview.' },
-          { keys: 'J / L', desc: 'Forward/Backward', usage: 'Navigate timeline forward and backward.' },
-          { keys: 'I / O', desc: 'In/Out points', usage: 'Set clip start and end points.' },
-          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo last action.' },
-          { keys: 'Ctrl + E', desc: 'Export', usage: 'Export the video.' },
-        ]
-      },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'Camera movement', desc: 'Camera control', usage: 'Specify pan left, zoom in, orbit for camera motion.' },
-          { keys: 'Style reference', desc: 'Style control', usage: 'Specify cinematic, anime, watercolor styles.' },
-          { keys: 'Image reference', desc: 'Start frame', usage: 'Upload a start image as the first frame.' },
-        ]
-      },
-    ]
-  },
+runway: {
+      name: 'Runway ML',
+      icon: 'fas fa-film',
+      source: 'https://help.runwayml.com/hc/en-us/articles/4405907853203-Video-editor-shortcuts',
+      categories: [
+        {
+          name: 'Playback',
+          shortcuts: [
+            { keys: 'Space', desc: 'Play or pause, or hold to pan the canvas', usage: 'Play or pause, or hold to pan the canvas.' },
+            { keys: 'Left', desc: 'Go to the previous frame', usage: 'Go to the previous frame.' },
+            { keys: 'Right', desc: 'Go to the next frame', usage: 'Go to the next frame.' },
+          ]
+        },
+        {
+          name: 'Editing',
+          shortcuts: [
+            { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo.' },
+            { keys: 'Ctrl + Y', desc: 'Redo', usage: 'Redo.' },
+            { keys: 'Ctrl + K', desc: 'Split the layer at the playhead', usage: 'Split the layer at the playhead.' },
+            { keys: 'Backspace', desc: 'Delete the selected layer', usage: 'Delete the selected layer.' },
+            { keys: 'Ctrl + C', desc: 'Copy the selected layer', usage: 'Copy the selected layer.' },
+            { keys: 'Ctrl + V', desc: 'Paste the copied layer', usage: 'Paste the copied layer.' },
+          ]
+        },
+        {
+          name: 'Tools',
+          shortcuts: [
+            { keys: 'M', desc: 'Select the Move tool', usage: 'Select the Move tool.' },
+          ]
+        },
+        {
+          name: 'View',
+          shortcuts: [
+            { keys: '+', desc: 'Zoom', usage: 'Zoom in.' },
+            { keys: '-', desc: 'Zoom out', usage: 'Zoom out.' },
+            { keys: 'Z + F', desc: 'Zoom to fit', usage: 'Zoom to fit.' },
+            { keys: 'Shift + 1', desc: 'Zoom to 100 percent', usage: 'Zoom to 100 percent.' },
+            { keys: 'Shift + 2', desc: 'Zoom to 200 percent', usage: 'Zoom to 200 percent.' },
+            { keys: 'Ctrl', desc: 'Enable zoom on the mouse wheel while held', usage: 'Enable zoom on the mouse wheel while held.' },
+          ]
+        },
+        {
+          name: 'Additional Shortcuts',
+          shortcuts: [
+            { keys: 'J / L', desc: 'Forward/Backward', usage: 'Navigate timeline forward and backward.' },
+            { keys: 'I / O', desc: 'In/Out points', usage: 'Set clip start and end points.' },
+            { keys: 'Ctrl + E', desc: 'Export', usage: 'Export the video.' },
+            { keys: 'Camera movement', desc: 'Camera control', usage: 'Specify pan left, zoom in, orbit for camera motion.' },
+            { keys: 'Style reference', desc: 'Style control', usage: 'Specify cinematic, anime, watercolor styles.' },
+            { keys: 'Image reference', desc: 'Start frame', usage: 'Upload a start image as the first frame.' },
+          ]
+        },
+      ]
+    },
   stable_diffusion: {
     name: 'Stable Diffusion',
     icon: 'fas fa-image',
@@ -14330,23 +14360,90 @@ elasticsearch: {
       ] }
     ]
   },
-  framer: {
-    name: 'Framer',
-    icon: 'fas fa-desktop',
-    categories: [
-      {
-        name: 'Editor',
-        shortcuts: [
-          { keys: 'F', desc: 'Frame', usage: 'Activate frame tool.' },
-          { keys: 'T', desc: 'Text', usage: 'Activate text tool.' },
-          { keys: 'R', desc: 'Rectangle', usage: 'Draw a rectangle.' },
-          { keys: 'P', desc: 'Preview', usage: 'Open preview.' },
-          { keys: 'Cmd + D', desc: 'Duplicate', usage: 'Duplicate element.' },
-          { keys: 'Cmd + G', desc: 'Group', usage: 'Group elements.' },
-        ]
-      },
-    ]
-  },
+framer: {
+      name: 'Framer',
+      icon: 'fas fa-desktop',
+      source: 'https://www.framer.com/shortcuts',
+      categories: [
+        {
+          name: 'AI Agent',
+          shortcuts: [
+            { keys: 'A', desc: 'Show the Agent panel', usage: 'Show the Agent panel.' },
+            { keys: 'Ctrl + Alt + A', desc: 'Open Agent Select', usage: 'Open Agent Select.' },
+            { keys: 'Enter', desc: 'Send the prompt', usage: 'Send the prompt.' },
+            { keys: 'Shift + Enter', desc: 'Insert a new line without sending', usage: 'Insert a new line without sending.' },
+            { keys: 'Ctrl + Enter', desc: 'Send immediately', usage: 'Send immediately.' },
+            { keys: 'Esc', desc: 'Close or blur the input', usage: 'Close or blur the input.' },
+            { keys: 'Alt + Up', desc: 'Go to the previous prompt in history', usage: 'Go to the previous prompt in history.' },
+            { keys: 'Alt + Down', desc: 'Go to the next prompt in history', usage: 'Go to the next prompt in history.' },
+            { keys: 'Ctrl + Shift + Z', desc: 'Redo inside the input', usage: 'Redo inside the input.' },
+          ]
+        },
+        {
+          name: 'Arrange',
+          shortcuts: [
+            { keys: ']', desc: 'Bring to front', usage: 'Bring to front.' },
+            { keys: '[', desc: 'Send to back', usage: 'Send to back.' },
+            { keys: 'Ctrl + Alt + Up', desc: 'Bring forward', usage: 'Bring forward.' },
+            { keys: 'Ctrl + Alt + Down', desc: 'Send backward', usage: 'Send backward.' },
+          ]
+        },
+        {
+          name: 'Align',
+          shortcuts: [
+            { keys: 'Alt + A', desc: 'Align left', usage: 'Align left.' },
+            { keys: 'Alt + H', desc: 'Align horizontally', usage: 'Align horizontally.' },
+            { keys: 'Alt + D', desc: 'Align right', usage: 'Align right.' },
+            { keys: 'Alt + W', desc: 'Align top', usage: 'Align top.' },
+            { keys: 'Alt + V', desc: 'Align vertically', usage: 'Align vertically.' },
+            { keys: 'Alt + S', desc: 'Align bottom', usage: 'Align bottom.' },
+            { keys: 'Alt + Shift + H', desc: 'Distribute horizontally', usage: 'Distribute horizontally.' },
+            { keys: 'Alt + Shift + V', desc: 'Distribute vertically', usage: 'Distribute vertically.' },
+          ]
+        },
+        {
+          name: 'Components',
+          shortcuts: [
+            { keys: 'Ctrl + Shift + M', desc: 'Merge to main', usage: 'Merge to main.' },
+            { keys: 'Ctrl + Alt + K', desc: 'Create a component', usage: 'Create a component.' },
+            { keys: 'Ctrl + Shift + K', desc: 'Create from code', usage: 'Create from code.' },
+          ]
+        },
+        {
+          name: 'Project',
+          shortcuts: [
+            { keys: 'Ctrl + S', desc: 'Save the file', usage: 'Save the file.' },
+            { keys: 'Ctrl + Alt + P', desc: 'Run the most recent plugin', usage: 'Run the most recent plugin.' },
+            { keys: 'Ctrl + Alt + L', desc: 'Open the development plugin', usage: 'Open the development plugin.' },
+          ]
+        },
+        {
+          name: 'Edit',
+          shortcuts: [
+            { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo.' },
+            { keys: 'Ctrl + [', desc: 'Go back', usage: 'Go back.' },
+            { keys: 'Ctrl + ]', desc: 'Go forward', usage: 'Go forward.' },
+            { keys: 'Ctrl + X', desc: 'Cut', usage: 'Cut.' },
+            { keys: 'Ctrl + C', desc: 'Copy', usage: 'Copy.' },
+            { keys: 'Ctrl + V', desc: 'Paste', usage: 'Paste.' },
+            { keys: 'Ctrl + Alt + C', desc: 'Copy style', usage: 'Copy style.' },
+            { keys: 'Ctrl + Alt + V', desc: 'Paste style', usage: 'Paste style.' },
+            { keys: 'Ctrl + Shift + C', desc: 'Copy fill', usage: 'Copy fill.' },
+          ]
+        },
+        {
+          name: 'Additional Shortcuts',
+          shortcuts: [
+            { keys: 'F', desc: 'Frame', usage: 'Activate frame tool.' },
+            { keys: 'T', desc: 'Text', usage: 'Activate text tool.' },
+            { keys: 'R', desc: 'Rectangle', usage: 'Draw a rectangle.' },
+            { keys: 'P', desc: 'Preview', usage: 'Open preview.' },
+            { keys: 'Cmd + D', desc: 'Duplicate', usage: 'Duplicate element.' },
+            { keys: 'Cmd + G', desc: 'Group', usage: 'Group elements.' },
+          ]
+        },
+      ]
+    },
 spline: {
       name: 'Spline 3D',
       icon: 'fas fa-cube',
@@ -15339,23 +15436,152 @@ godot: {
       ] }
     ]
   },
-  raycast: {
-    name: 'Raycast',
-    icon: 'fas fa-bolt',
-    categories: [
-      {
-        name: 'Launcher',
-        shortcuts: [
-          { keys: 'Cmd + Space', desc: 'Open Raycast', usage: 'Open Raycast.' },
-          { keys: 'Enter', desc: 'Execute', usage: 'Execute selected item.' },
-          { keys: 'Cmd + K', desc: 'Search commands', usage: 'Search for commands.' },
-          { keys: 'Tab', desc: 'Autocomplete', usage: 'Autocomplete suggestion.' },
-          { keys: 'Ctrl + C', desc: 'Clipboard history', usage: 'Open clipboard history.' },
-          { keys: 'Cmd + ,', desc: 'Settings', usage: 'Open settings.' },
-        ]
-      },
-    ]
-  },
+raycast: {
+      name: 'Raycast',
+      icon: 'fas fa-bolt',
+      source: 'https://manual.raycast.com/keyboard-shortcuts',
+      categories: [
+        {
+          name: 'Global',
+          shortcuts: [
+            { keys: 'Alt + Space', desc: 'Open or close Raycast', usage: 'Open or close Raycast.' },
+          ]
+        },
+        {
+          name: 'Navigation',
+          shortcuts: [
+            { keys: 'Esc', desc: 'Go back to the previous view, or close the window from Root Search', usage: 'Go back to the previous view, or close the window from Root Search.' },
+            { keys: 'Shift + Esc', desc: 'Pop to Root', usage: 'Pop to Root.' },
+            { keys: 'Ctrl + W', desc: 'Close the Raycast window', usage: 'Close the Raycast window.' },
+            { keys: 'Ctrl + ,', desc: 'Open Raycast Settings', usage: 'Open Raycast Settings.' },
+            { keys: 'Ctrl + Shift + /', desc: 'Open the User Guide', usage: 'Open the User Guide.' },
+          ]
+        },
+        {
+          name: 'List Navigation',
+          shortcuts: [
+            { keys: 'Up', desc: 'Move up in the list', usage: 'Move up in the list.' },
+            { keys: 'Down', desc: 'Move down in the list', usage: 'Move down in the list.' },
+            { keys: 'Alt + Up', desc: 'Jump to the previous page of results', usage: 'Jump to the previous page of results.' },
+            { keys: 'Alt + Down', desc: 'Jump to the next page of results', usage: 'Jump to the next page of results.' },
+            { keys: 'Ctrl + Up', desc: 'Jump to the previous section', usage: 'Jump to the previous section.' },
+            { keys: 'Ctrl + Down', desc: 'Jump to the next section', usage: 'Jump to the next section.' },
+          ]
+        },
+        {
+          name: 'Root Search',
+          shortcuts: [
+            { keys: 'Enter', desc: 'Run the primary action', usage: 'Run the primary action.' },
+            { keys: 'Ctrl + K', desc: 'Open the Action Panel', usage: 'Open the Action Panel.' },
+            { keys: 'Shift + Tab', desc: 'Navigate to the parent directory', usage: 'Navigate to the parent directory.' },
+            { keys: 'Ctrl + F', desc: 'Add the selected item to Favorites', usage: 'Add the selected item to Favorites.' },
+            { keys: 'Ctrl + Shift + Up', desc: 'Move a favorite item up', usage: 'Move a favorite item up.' },
+            { keys: 'Ctrl + Shift + Down', desc: 'Move a favorite item down', usage: 'Move a favorite item down.' },
+            { keys: 'Ctrl + Shift + ,', desc: 'Configure Extension', usage: 'Configure Extension.' },
+            { keys: 'Ctrl + Shift + D', desc: 'Disable Command', usage: 'Disable Command.' },
+          ]
+        },
+        {
+          name: 'Action Panel',
+          shortcuts: [
+            { keys: 'Ctrl + Enter', desc: 'Execute the secondary action', usage: 'Execute the secondary action.' },
+            { keys: 'Ctrl + Shift + Enter', desc: 'Execute the tertiary action', usage: 'Execute the tertiary action.' },
+          ]
+        },
+        {
+          name: 'Item Actions',
+          shortcuts: [
+            { keys: 'Ctrl + O', desc: 'Open item', usage: 'Open item.' },
+            { keys: 'Ctrl + Shift + O', desc: 'Reveal in Finder or File Explorer', usage: 'Reveal in Finder or File Explorer.' },
+            { keys: 'Ctrl + Alt + O', desc: 'Open', usage: 'Open With.' },
+            { keys: 'Ctrl + Y', desc: 'Toggle Quick Look preview', usage: 'Toggle Quick Look preview.' },
+            { keys: 'Ctrl + E', desc: 'Edit item', usage: 'Edit item.' },
+            { keys: 'Ctrl + I', desc: 'Show info or details', usage: 'Show info or details.' },
+            { keys: 'Ctrl + D', desc: 'Duplicate item', usage: 'Duplicate item.' },
+            { keys: 'Ctrl + .', desc: 'Pin or unpin item', usage: 'Pin or unpin item.' },
+            { keys: 'Ctrl + Shift + .', desc: 'Show hidden items', usage: 'Show hidden items.' },
+          ]
+        },
+        {
+          name: 'Copy and Paste',
+          shortcuts: [
+            { keys: 'Ctrl + C', desc: 'Copy', usage: 'Copy.' },
+            { keys: 'Ctrl + Shift + C', desc: 'Copy the secondary value, such as a deeplink', usage: 'Copy the secondary value, such as a deeplink.' },
+            { keys: 'Ctrl + V', desc: 'Paste', usage: 'Paste.' },
+            { keys: 'Ctrl + Shift + V', desc: 'Paste the secondary value', usage: 'Paste the secondary value.' },
+          ]
+        },
+        {
+          name: 'Delete',
+          shortcuts: [
+            { keys: 'Ctrl + X', desc: 'Delete the selected item, or cut in a text field', usage: 'Delete the selected item, or cut in a text field.' },
+            { keys: 'Ctrl + Shift + X', desc: 'Delete all', usage: 'Delete all.' },
+          ]
+        },
+        {
+          name: 'AI Chat',
+          shortcuts: [
+            { keys: 'Ctrl + Shift + S', desc: 'Toggle the chat history sidebar', usage: 'Toggle the chat history sidebar.' },
+            { keys: 'Ctrl + Shift + F', desc: 'Search chats', usage: 'Search chats.' },
+            { keys: 'Ctrl + J', desc: 'Send the selected item to AI Chat', usage: 'Send the selected item to AI Chat.' },
+            { keys: 'Ctrl + Shift + A', desc: 'Add an attachment to the composer', usage: 'Add an attachment to the composer.' },
+            { keys: 'Ctrl + Shift + B', desc: 'Branch the chat from a message', usage: 'Branch the chat from a message.' },
+            { keys: 'Ctrl + Shift + M', desc: 'Change the AI model', usage: 'Change the AI model.' },
+            { keys: 'Ctrl + Shift + Y', desc: 'Change the creativity level', usage: 'Change the creativity level.' },
+            { keys: 'Ctrl + Shift + U', desc: 'Change the reasoning effort', usage: 'Change the reasoning effort.' },
+            { keys: 'Ctrl + Alt + A', desc: 'Archive the chat', usage: 'Archive the chat.' },
+            { keys: 'Ctrl + Alt + N', desc: 'Create a folder', usage: 'Create a folder.' },
+            { keys: 'Ctrl + Alt + M', desc: 'Move to a folder', usage: 'Move to a folder.' },
+            { keys: 'Ctrl + Shift + =', desc: 'Upvote the response', usage: 'Upvote the response.' },
+            { keys: 'Ctrl + Shift + -', desc: 'Downvote the response', usage: 'Downvote the response.' },
+          ]
+        },
+        {
+          name: 'Forms',
+          shortcuts: [
+            { keys: 'Tab', desc: 'Move to the next field', usage: 'Move to the next field.' },
+          ]
+        },
+        {
+          name: 'Text Editing',
+          shortcuts: [
+            { keys: 'Ctrl + A', desc: 'Select all', usage: 'Select all.' },
+            { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo.' },
+            { keys: 'Ctrl + Shift + Z', desc: 'Redo', usage: 'Redo.' },
+          ]
+        },
+        {
+          name: 'Emacs Bindings',
+          shortcuts: [
+            { keys: 'Ctrl + N', desc: 'Move down', usage: 'Move down.' },
+            { keys: 'Ctrl + P', desc: 'Move up', usage: 'Move up.' },
+            { keys: 'Ctrl + B', desc: 'Move left', usage: 'Move left.' },
+          ]
+        },
+        {
+          name: 'Vim Bindings',
+          shortcuts: [
+            { keys: 'Ctrl + Shift + K', desc: 'Move up', usage: 'Move up.' },
+            { keys: 'Ctrl + L', desc: 'Move right', usage: 'Move right.' },
+            { keys: 'Ctrl + H', desc: 'Move left', usage: 'Move left.' },
+          ]
+        },
+        {
+          name: 'Support',
+          shortcuts: [
+            { keys: 'Ctrl + Alt + F', desc: 'Request a feature', usage: 'Request a feature.' },
+          ]
+        },
+        {
+          name: 'Additional Shortcuts',
+          shortcuts: [
+            { keys: 'Cmd + Space', desc: 'Open Raycast', usage: 'Open Raycast.' },
+            { keys: 'Cmd + K', desc: 'Search commands', usage: 'Search for commands.' },
+            { keys: 'Cmd + ,', desc: 'Settings', usage: 'Open settings.' },
+          ]
+        },
+      ]
+    },
   alfred: {
     name: 'Alfred',
     icon: 'fas fa-search',
