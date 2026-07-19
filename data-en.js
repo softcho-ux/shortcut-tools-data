@@ -7256,23 +7256,144 @@ proxmox: {
       },
     ]
   },
-  clickup: {
-    name: 'ClickUp',
-    icon: 'fas fa-check-double',
-    categories: [
-      {
-        name: 'Task Management',
-        shortcuts: [
-          { keys: 'Q', desc: 'Quick create', usage: 'Quickly create a task.' },
-          { keys: 'M', desc: 'Assign to me', usage: 'Assign task to me.' },
-          { keys: 'D', desc: 'Set due date', usage: 'Set a due date.' },
-          { keys: 'S', desc: 'Change status', usage: 'Change task status.' },
-          { keys: 'P', desc: 'Set priority', usage: 'Set priority level.' },
-          { keys: 'Ctrl + K', desc: 'Command center', usage: 'Open command center.' },
-        ]
-      },
-    ]
-  },
+clickup: {
+      name: 'ClickUp',
+      icon: 'fas fa-check-double',
+      source: 'https://help.clickup.com/hc/en-us/articles/6309030550167-Use-keyboard-shortcuts',
+      categories: [
+        {
+          name: 'General',
+          shortcuts: [
+            { keys: 'T', desc: 'Create task', usage: 'Create task.' },
+            { keys: 'R', desc: 'Create Reminder', usage: 'Create Reminder.' },
+            { keys: 'Ctrl + K', desc: 'Open Search/Command Center', usage: 'Open Search/Command Center to search for items in ClickUp. In a text editor the same combination inserts a hyperlink on the highlighted text.' },
+            { keys: 'Ctrl + O', desc: 'Open ClickUp Brain', usage: 'Open ClickUp Brain.' },
+            { keys: 'Alt + K', desc: 'Search saved prompts from ClickUp Brain', usage: 'Search saved prompts from ClickUp Brain.' },
+            { keys: 'N', desc: 'Open Notepad', usage: 'Open Notepad.' },
+            { keys: 'Ctrl + \\', desc: 'Show/hide sidebar', usage: 'Show/hide sidebar.' },
+            { keys: 'Ctrl + I', desc: 'Scroll to current position in left Sidebar', usage: 'Scroll to current position in left Sidebar.' },
+          ]
+        },
+        {
+          name: 'Navigation',
+          shortcuts: [
+            { keys: 'H', desc: 'Go to Home', usage: 'Go to Home.' },
+            { keys: 'I', desc: 'Go to Inbox', usage: 'Go to Inbox.' },
+            { keys: 'D', desc: 'Go to Dashboards', usage: 'Go to Dashboards.' },
+            { keys: 'Esc', desc: 'Close any task or window', usage: 'Close any task or window.' },
+          ]
+        },
+        {
+          name: 'Text Editor',
+          shortcuts: [
+            { keys: '/', desc: 'Slash Commands', usage: 'Slash Commands.' },
+            { keys: '@', desc: 'Mention (tag) a user', usage: 'Mention (tag) a user.' },
+            { keys: '@@', desc: 'Mention a task', usage: 'Mention a task.' },
+            { keys: '@@@', desc: 'Mention a Doc', usage: 'Mention a Doc.' },
+            { keys: ':', desc: 'Add an emoji while in text editor', usage: 'Add an emoji while in text editor.' },
+            { keys: 'Ctrl + V', desc: 'Paste text or images', usage: 'Paste text or images.' },
+            { keys: 'Ctrl + Shift + H', desc: 'Apply last used highlighting color', usage: 'Apply last used highlighting color.' },
+            { keys: 'Ctrl + D', desc: 'Duplicate selected text', usage: 'Duplicate selected text.' },
+            { keys: 'Ctrl + Shift + L', desc: 'Align text to the left', usage: 'Align text to the left.' },
+            { keys: 'Ctrl + Shift + R', desc: 'Align text to the right', usage: 'Align text to the right.' },
+            { keys: 'Ctrl + Shift + E', desc: 'Align text to the center', usage: 'Align text to the center.' },
+            { keys: 'Ctrl + Shift + C', desc: 'Inline code formatting', usage: 'Inline code formatting.' },
+            { keys: 'Ctrl + Shift + 9', desc: 'Create a bulleted list', usage: 'Create a bulleted list.' },
+            { keys: 'Ctrl + Shift + 8', desc: 'Create a checklist', usage: 'Create a checklist.' },
+            { keys: 'Ctrl + Shift + 7', desc: 'Create a numbered list', usage: 'Create a numbered list.' },
+            { keys: 'Alt + Ctrl + 1', desc: 'Create a heading', usage: 'Create a heading.' },
+            { keys: 'Ctrl + Shift + 6', desc: 'Toggle current item', usage: 'Toggle current item.' },
+            { keys: 'Alt + Ctrl + 6', desc: 'Toggle all items', usage: 'Toggle all items.' },
+          ]
+        },
+        {
+          name: 'Task',
+          shortcuts: [
+            { keys: 'Shift + S', desc: 'Open Status field', usage: 'Open Status field.' },
+            { keys: 'Shift + M', desc: 'Open Comment field', usage: 'Open Comment field.' },
+            { keys: 'Shift + D', desc: 'Open Date field', usage: 'Open Date field.' },
+            { keys: 'Shift + A', desc: 'Open Assignee field', usage: 'Open Assignee field.' },
+            { keys: 'M', desc: 'Assign task to self', usage: 'Assign task to self.' },
+            { keys: 'Alt + A', desc: 'Add task to Priorities', usage: 'Add task to Priorities.' },
+            { keys: 'Shift + .', desc: 'Open Timer', usage: 'Open Timer.' },
+            { keys: 'Shift + L', desc: 'Open Tag field', usage: 'Open Tag field.' },
+            { keys: 'Shift + T', desc: 'Create Subtask', usage: 'Create Subtask.' },
+            { keys: 'Ctrl + Enter', desc: 'Create and open subtask', usage: 'Create and open subtask.' },
+            { keys: 'Shift + P', desc: 'Open Priority field', usage: 'Open Priority field.' },
+            { keys: 'Ctrl + Shift + Left', desc: 'Navigate between tasks in a List', usage: 'Navigate between tasks in a List.' },
+          ]
+        },
+        {
+          name: 'Chat',
+          shortcuts: [
+            { keys: 'Ctrl + G', desc: 'Compose a message', usage: 'Compose a message.' },
+            { keys: 'E', desc: 'Edit a message from the context menu', usage: 'Edit a message from the context menu.' },
+            { keys: 'U', desc: 'Mark message unread or read', usage: 'Mark message unread or read.' },
+            { keys: 'C', desc: 'Copy link to message', usage: 'Copy link to message.' },
+            { keys: 'Delete', desc: 'Delete a message from the context menu', usage: 'Delete a message from the context menu.' },
+            { keys: 'Ctrl + F', desc: 'Search for messages', usage: 'Search for messages.' },
+            { keys: 'Ctrl + Shift + J', desc: 'Jump to the first unread message in a conversation', usage: 'Jump to the first unread message in a conversation.' },
+          ]
+        },
+        {
+          name: 'Inbox',
+          shortcuts: [
+            { keys: 'Shift + Q', desc: 'Go to All tab', usage: 'Go to All tab.' },
+            { keys: 'Shift + 4', desc: 'Go to Primary or Important tab', usage: 'Go to Primary or Important tab.' },
+            { keys: 'Shift + O', desc: 'Go to Other tab', usage: 'Go to Other tab.' },
+            { keys: 'Shift + Z', desc: 'Go to Snoozed tab', usage: 'Go to Snoozed tab.' },
+            { keys: 'Shift + C', desc: 'Go to Cleared tab', usage: 'Go to Cleared tab.' },
+            { keys: 'Shift + 1', desc: 'Toggle Assigned filter', usage: 'Toggle Assigned filter.' },
+            { keys: 'Shift + 2', desc: 'Toggle @Mentions filter', usage: 'Toggle @Mentions filter.' },
+            { keys: 'Shift + 3', desc: 'Toggle Unread filter', usage: 'Toggle Unread filter.' },
+            { keys: 'O', desc: 'Open or close notification', usage: 'Open or close notification.' },
+            { keys: 'Q', desc: 'Close notification', usage: 'Close notification.' },
+            { keys: 'J', desc: 'Next notification', usage: 'Next notification.' },
+            { keys: 'K', desc: 'Previous notification', usage: 'Previous notification.' },
+            { keys: ']', desc: 'Open or close Details sidebar', usage: 'Open or close Details sidebar.' },
+            { keys: 'Shift + Up', desc: 'Jump to top', usage: 'Jump to top.' },
+            { keys: 'Shift + Down', desc: 'Jump to bottom', usage: 'Jump to bottom.' },
+            { keys: 'Space', desc: 'Refresh Inbox', usage: 'Refresh Inbox.' },
+            { keys: 'Shift + E', desc: 'Clear all', usage: 'Clear all.' },
+            { keys: 'Z', desc: 'Snooze', usage: 'Snooze.' },
+            { keys: 'Ctrl + Z', desc: 'Undo last clear, unclear, or snooze', usage: 'Undo last clear, unclear, or snooze.' },
+            { keys: 'W', desc: 'Watch or stop watching', usage: 'Watch or stop watching.' },
+            { keys: 'Ctrl + Win + T', desc: 'Add or remove from Tray', usage: 'Add or remove from Tray.' },
+          ]
+        },
+        {
+          name: 'Views',
+          shortcuts: [
+            { keys: '-', desc: 'Clear filters', usage: 'Clear filters.' },
+            { keys: 'L', desc: 'Navigate to List view', usage: 'Navigate to List view.' },
+            { keys: 'B', desc: 'Navigate to Board view', usage: 'Navigate to Board view.' },
+            { keys: 'Shift + K', desc: 'Navigate to Calendar view', usage: 'Navigate to Calendar view.' },
+            { keys: 'X', desc: 'Navigate to Team view', usage: 'Navigate to Team view.' },
+          ]
+        },
+        {
+          name: 'SyncUp Calls',
+          shortcuts: [
+            { keys: 'Alt + Ctrl + H', desc: 'Toggle SyncUp Call', usage: 'Toggle SyncUp Call.' },
+            { keys: 'Alt + Ctrl + Shift + M', desc: 'Toggle Microphone', usage: 'Toggle Microphone.' },
+            { keys: 'Alt + Ctrl + O', desc: 'Toggle Camera', usage: 'Toggle Camera.' },
+            { keys: 'Alt + Ctrl + Shift + S', desc: 'Toggle Screen Sharing', usage: 'Toggle Screen Sharing.' },
+            { keys: 'Alt + Ctrl + Shift + C', desc: 'Toggle Thread Sidebar', usage: 'Toggle Thread Sidebar.' },
+            { keys: 'Alt + Ctrl + Shift + P', desc: 'Toggle Participants Sidebar', usage: 'Toggle Participants Sidebar.' },
+            { keys: 'Alt + Ctrl + N', desc: 'Open Fullscreen Mode', usage: 'Open Fullscreen Mode.' },
+            { keys: 'Alt + Ctrl + Shift + E', desc: 'Invite Participants', usage: 'Invite Participants.' },
+            { keys: 'Alt + Ctrl + R', desc: 'Start or stop Recording', usage: 'Start or stop Recording.' },
+          ]
+        },
+        {
+          name: 'Additional Shortcuts',
+          shortcuts: [
+            { keys: 'S', desc: 'Change status', usage: 'Change task status.' },
+            { keys: 'P', desc: 'Set priority', usage: 'Set priority level.' },
+          ]
+        },
+      ]
+    },
   monday: {
     name: 'Monday.com',
     icon: 'fas fa-calendar-check',
@@ -8394,24 +8515,98 @@ camtasia: {
       },
     ]
   },
-  brave: {
-    name: 'Brave Browser',
-    icon: 'fab fa-brave',
-    categories: [
-      {
-        name: 'Tabs & Navigation',
-        shortcuts: [
-          { keys: 'Ctrl + T', desc: 'New tab', usage: 'Open a new tab.' },
-          { keys: 'Ctrl + W', desc: 'Close tab', usage: 'Close current tab.' },
-          { keys: 'Ctrl + Shift + T', desc: 'Reopen tab', usage: 'Reopen last closed tab.' },
-          { keys: 'Ctrl + L', desc: 'Address bar', usage: 'Focus the address bar.' },
-          { keys: 'Ctrl + Shift + N', desc: 'Private window', usage: 'Open private browsing window.' },
-          { keys: 'Ctrl + Shift + B', desc: 'Bookmark bar', usage: 'Toggle bookmark bar.' },
-          { keys: 'F12', desc: 'Dev tools', usage: 'Open developer tools.' },
-        ]
-      },
-    ]
-  },
+brave: {
+      name: 'Brave Browser',
+      icon: 'fab fa-brave',
+      source: 'https://support.brave.app/hc/en-us/articles/360032272171-What-keyboard-shortcuts-can-I-use-in-Brave',
+      categories: [
+        {
+          name: 'Tab and Window',
+          shortcuts: [
+            { keys: 'Ctrl + n', desc: 'Open a new window', usage: 'Open a new window.' },
+            { keys: 'Ctrl + Shift + n', desc: 'Open a new window in Private mode', usage: 'Open a new window in Private mode.' },
+            { keys: 'Ctrl + t', desc: 'Open a new tab, and jump to it', usage: 'Open a new tab, and jump to it.' },
+            { keys: 'Ctrl + Shift + t', desc: 'Reopen the last closed tab, and jump to it', usage: 'Reopen the last closed tab, and jump to it.' },
+            { keys: 'Ctrl + Tab', desc: 'Jump to the next open tab', usage: 'Jump to the next open tab.' },
+            { keys: 'Ctrl + Shift + Tab', desc: 'Jump to the previous open tab', usage: 'Jump to the previous open tab.' },
+            { keys: 'Ctrl + 1', desc: 'Jump to a specific tab', usage: 'Jump to a specific tab.' },
+            { keys: 'Ctrl + 9', desc: 'Jump to the last tab', usage: 'Jump to the last tab.' },
+            { keys: 'Alt + Home', desc: 'Open your home page in the current tab', usage: 'Open your home page in the current tab.' },
+            { keys: 'Alt + Left', desc: 'Open the previous page from your browsing history', usage: 'Open the previous page from your browsing history.' },
+            { keys: 'Alt + Right', desc: 'Open the next page from your browsing history', usage: 'Open the next page from your browsing history.' },
+            { keys: 'Ctrl + w', desc: 'Close the current tab', usage: 'Close the current tab.' },
+            { keys: 'Ctrl + Shift + w', desc: 'Close the current window', usage: 'Close the current window.' },
+            { keys: 'Alt + Space + n', desc: 'Minimize the current window', usage: 'Minimize the current window.' },
+            { keys: 'Alt + Space + x', desc: 'Maximize the current window', usage: 'Maximize the current window.' },
+            { keys: 'Alt + F4', desc: 'Close the current window (system)', usage: 'Close the current window (system).' },
+          ]
+        },
+        {
+          name: 'Brave Features',
+          shortcuts: [
+            { keys: 'Alt + f', desc: 'Open the Main menu', usage: 'Open the Main menu.' },
+            { keys: 'Ctrl + Shift + b', desc: 'Show or hide the Bookmarks bar', usage: 'Show or hide the Bookmarks bar.' },
+            { keys: 'Ctrl + Shift + o', desc: 'Open the Bookmarks Manager', usage: 'Open the Bookmarks Manager.' },
+            { keys: 'Ctrl + h', desc: 'Open the History page in a new tab', usage: 'Open the History page in a new tab.' },
+            { keys: 'Ctrl + j', desc: 'Open the Downloads page in a new tab', usage: 'Open the Downloads page in a new tab.' },
+            { keys: 'Shift + Esc', desc: 'Open the Brave Task Manager', usage: 'Open the Brave Task Manager.' },
+            { keys: 'Shift + Alt + t', desc: 'Set focus on the first item in the toolbar', usage: 'Set focus on the first item in the toolbar.' },
+            { keys: 'F10', desc: 'Set focus on the last item in the toolbar', usage: 'Set focus on the last item in the toolbar.' },
+            { keys: 'F6', desc: 'Switch focus to unfocused dialog (if showing)', usage: 'Switch focus to unfocused dialog (if showing).' },
+            { keys: 'Ctrl + f', desc: 'Open the Find Bar to search the current page', usage: 'Open the Find Bar to search the current page.' },
+            { keys: 'Ctrl + g', desc: 'Jump to the next match to your Find Bar search', usage: 'Jump to the next match to your Find Bar search.' },
+            { keys: 'Ctrl + Shift + g', desc: 'Jump to the previous match to your Find Bar search', usage: 'Jump to the previous match to your Find Bar search.' },
+            { keys: 'Ctrl + Shift + j', desc: 'Open Developer Tools', usage: 'Open Developer Tools.' },
+            { keys: 'Ctrl + Shift + Delete', desc: 'Open the Clear Browsing Data options', usage: 'Open the Clear Browsing Data options.' },
+            { keys: 'F1', desc: 'Open the Brave Help Center in a new tab', usage: 'Open the Brave Help Center in a new tab.' },
+            { keys: 'Ctrl + Shift + m', desc: 'Open Profile menu', usage: 'Open Profile menu.' },
+          ]
+        },
+        {
+          name: 'Address Bar',
+          shortcuts: [
+            { keys: 'Ctrl + l', desc: 'Jump to the address bar', usage: 'Jump to the address bar.' },
+            { keys: 'Ctrl + k', desc: 'Search from anywhere on the page', usage: 'Search from anywhere on the page.' },
+          ]
+        },
+        {
+          name: 'Webpage',
+          shortcuts: [
+            { keys: 'Ctrl + p', desc: 'Open options to print the current page', usage: 'Open options to print the current page.' },
+            { keys: 'Ctrl + s', desc: 'Open options to save the current page', usage: 'Open options to save the current page.' },
+            { keys: 'F5', desc: 'Reload the current page', usage: 'Reload the current page.' },
+            { keys: 'Ctrl + Shift + r', desc: 'Reload the current page, ignoring cached content', usage: 'Reload the current page, ignoring cached content.' },
+            { keys: 'Esc', desc: 'Stop the page loading', usage: 'Stop the page loading.' },
+            { keys: 'Tab', desc: 'Browse clickable items moving forward', usage: 'Browse clickable items moving forward.' },
+            { keys: 'Shift + Tab', desc: 'Browse clickable items moving backward', usage: 'Browse clickable items moving backward.' },
+            { keys: 'Ctrl + u', desc: 'Display non-editable HTML source code for the current page', usage: 'Display non-editable HTML source code for the current page.' },
+            { keys: 'Ctrl + d', desc: 'Save your current webpage as a bookmark', usage: 'Save your current webpage as a bookmark.' },
+            { keys: 'Ctrl + Shift + d', desc: 'Save all open tabs as bookmarks in a new folder', usage: 'Save all open tabs as bookmarks in a new folder.' },
+            { keys: 'F11', desc: 'Turn full-screen mode on or off', usage: 'Turn full-screen mode on or off.' },
+            { keys: 'Ctrl + 0', desc: 'Return everything on the page to default size', usage: 'Return everything on the page to default size.' },
+            { keys: 'Space', desc: 'Scroll down a webpage, a screen at a time', usage: 'Scroll down a webpage, a screen at a time.' },
+            { keys: 'Shift + Space', desc: 'Scroll up a webpage, a screen at a time', usage: 'Scroll up a webpage, a screen at a time.' },
+            { keys: 'Home', desc: 'Go to the top of the page', usage: 'Go to the top of the page.' },
+            { keys: 'End', desc: 'Go to the bottom of the page', usage: 'Go to the bottom of the page.' },
+            { keys: 'Ctrl + Left', desc: 'Move your cursor to the front of the previous word in a text field', usage: 'Move your cursor to the front of the previous word in a text field.' },
+            { keys: 'Ctrl + Right', desc: 'Move your cursor to the back of the next word in a text field', usage: 'Move your cursor to the back of the next word in a text field.' },
+            { keys: 'Ctrl + Backspace', desc: 'Delete the previous word in a text field', usage: 'Delete the previous word in a text field.' },
+          ]
+        },
+        {
+          name: 'Additional Shortcuts',
+          shortcuts: [
+            { keys: 'Ctrl + T', desc: 'New tab', usage: 'Open a new tab.' },
+            { keys: 'Ctrl + W', desc: 'Close tab', usage: 'Close current tab.' },
+            { keys: 'Ctrl + Shift + T', desc: 'Reopen tab', usage: 'Reopen last closed tab.' },
+            { keys: 'Ctrl + L', desc: 'Address bar', usage: 'Focus the address bar.' },
+            { keys: 'Ctrl + Shift + N', desc: 'Private window', usage: 'Open private browsing window.' },
+            { keys: 'Ctrl + Shift + B', desc: 'Bookmark bar', usage: 'Toggle bookmark bar.' },
+            { keys: 'F12', desc: 'Dev tools', usage: 'Open developer tools.' },
+          ]
+        },
+      ]
+    },
   signal: {
     name: 'Signal',
     icon: 'fas fa-comment-dots',
