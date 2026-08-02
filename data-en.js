@@ -19412,21 +19412,6 @@ const shortcutData = {
       },
                 ]
   },
-  ideogram: {
-    name: 'Ideogram',
-    icon: 'fas fa-font',
-    categories: [
-            {
-        name: 'Text in Images',
-        shortcuts: [
-          { keys: '"text in quotes"', desc: 'Render text', usage: 'Put the exact text you want displayed in double quotes.' },
-          { keys: 'Use Design style for text', desc: 'Best for text', usage: 'Design style renders text most accurately.' },
-          { keys: 'Short phrases work best', desc: 'Text tip', usage: 'Shorter text (1-5 words) renders more reliably.' },
-          { keys: 'Specify font style', desc: 'Font control', usage: 'Describe font: "bold sans-serif", "handwritten", etc.' },
-        ]
-      },
-          ]
-  },
   udio: {
     name: 'Udio',
     icon: 'fas fa-music',
@@ -19436,9 +19421,6 @@ const shortcutData = {
         shortcuts: [
           { keys: 'Space', desc: 'Play / pause', usage: 'Play or pause the current audio preview.' },
           { keys: 'Ctrl + Enter', desc: 'Generate track', usage: 'Generate a new track with current settings.' },
-          { keys: 'Extend', desc: 'Extend track', usage: 'Add more seconds to the generated track.' },
-          { keys: 'Remix', desc: 'Remix track', usage: 'Generate a variation of the current track.' },
-          { keys: 'Remaster', desc: 'Improve quality', usage: 'Enhance audio quality of the current generation.' },
         ]
       },
           ]
@@ -19484,19 +19466,59 @@ const shortcutData = {
   kestra: {
     name: 'Kestra',
     icon: 'fas fa-stream',
+    source: { name: 'Kestra Docs — kestractl CLI reference', url: 'https://kestra.io/docs/kestra-cli/kestractl' },
     categories: [
       {
-        name: 'CLI Commands',
+        name: 'Server CLI (kestra)',
         shortcuts: [
-          { keys: 'kestra server standalone', desc: 'Start server', usage: 'Start Kestra in standalone mode (all services).' },
-          { keys: 'kestra flow validate <file>', desc: 'Validate flow', usage: 'Validate a flow YAML file for syntax errors.' },
-          { keys: 'kestra flow namespace update <ns> <dir>', desc: 'Deploy flows', usage: 'Deploy all flows in a directory to a namespace.' },
-          { keys: 'kestra flow list', desc: 'List flows', usage: 'List all flows in Kestra.' },
-          { keys: 'kestra execution create --flow-id <id>', desc: 'Run flow', usage: 'Trigger a flow execution from the CLI.' },
-          { keys: 'kestra plugins list', desc: 'List plugins', usage: 'List all installed Kestra plugins.' },
+          { keys: 'kestra server standalone', desc: 'Start All-in-One Server', usage: 'Runs every Kestra component (webserver, scheduler, executor, worker) in a single process — the standard single-node deployment.' },
+          { keys: 'kestra server local', desc: 'Start Local Dev Server', usage: 'Development mode with an embedded H2 file database; no external backend needed.' },
+          { keys: 'kestra plugins install <plugin>', desc: 'Install Plugins', usage: 'Standalone JARs ship without plugins; install what your tasks need before starting the server.' },
+          { keys: 'kestra flow validate <file>', desc: 'Validate a Flow', usage: 'Checks a YAML flow definition against a running server; the CI/CD workhorse.' },
+          { keys: 'kestra flow namespace update <ns> <dir>', desc: 'Deploy Flows to Namespace', usage: 'Uploads a directory of flows into a namespace; add --no-delete to keep flows not present in the directory.' },
         ]
       },
-          ]
+      {
+        name: 'kestractl — Setup & Flows',
+        shortcuts: [
+          { keys: 'kestractl config add', desc: 'Add Auth Context', usage: 'Stores a server, tenant, and credentials in ~/.kestractl/config.yaml; basic auth for OSS, API token for Enterprise.' },
+          { keys: 'kestractl flows list', desc: 'List Flows', usage: 'Lists flows across all namespaces, or one namespace; add --output json for scripting.' },
+          { keys: 'kestractl flows deploy <dir>', desc: 'Deploy Flows', usage: 'Deploys a directory with --namespace, --override, and --fail-fast flags for release pipelines.' },
+          { keys: 'kestractl flows validate <path>', desc: 'Validate Flow or Directory', usage: 'Validates a single YAML file or a whole directory before deployment.' },
+          { keys: 'kestractl flows export', desc: 'Export Flows to ZIP', usage: 'Exports a namespace\'s flows with --namespace and --output-file; export-by-ids and export-by-query narrow the set.' },
+          { keys: 'kestractl flows import <zip>', desc: 'Import Flows from ZIP', usage: 'Restores flows from an exported archive.' },
+          { keys: 'kestractl flows enable <ns> <flow>', desc: 'Enable a Flow', usage: 'Turns a disabled flow back on; disable-by-query and enable-by-query handle bulk changes.' },
+          { keys: 'kestractl flows disable <ns> <flow>', desc: 'Disable a Flow', usage: 'Stops a flow from triggering without deleting it.' },
+          { keys: 'kestractl flows delete <ns> <flow>', desc: 'Delete a Flow', usage: 'Removes a flow; delete-by-query bulk-deletes by filter.' },
+          { keys: 'kestractl flows graph <ns> <flow>', desc: 'Show Flow Topology', usage: 'Prints the task graph of a deployed flow; --revision inspects older versions.' },
+        ]
+      },
+      {
+        name: 'kestractl — Executions',
+        shortcuts: [
+          { keys: 'kestractl executions run <ns> <flow>', desc: 'Run a Flow', usage: 'Starts an execution; --wait blocks until completion and --output json returns the result for scripts.' },
+          { keys: 'kestractl executions list', desc: 'List Executions', usage: 'Filters by --namespace and --flow.' },
+          { keys: 'kestractl executions get <id>', desc: 'Execution Details', usage: 'Shows one execution; aliases show and describe.' },
+          { keys: 'kestractl executions watch <id>', desc: 'Watch in Real Time', usage: 'Follows an execution live and exits non-zero on FAILED, KILLED, or CANCELLED — ideal as a CI gate.' },
+          { keys: 'kestractl executions kill <id>', desc: 'Kill Execution', usage: 'Stops a running execution.' },
+          { keys: 'kestractl executions pause <id>', desc: 'Pause Execution', usage: 'Suspends a running execution.' },
+          { keys: 'kestractl executions resume <id>', desc: 'Resume Execution', usage: 'Continues a paused execution.' },
+          { keys: 'kestractl executions restart <id>', desc: 'Restart Execution', usage: 'Re-runs a finished or failed execution.' },
+        ]
+      },
+      {
+        name: 'kestractl — Namespaces, KV & Plugins',
+        shortcuts: [
+          { keys: 'kestractl namespaces update', desc: 'Update a Namespace', usage: 'Manages namespace settings and plugin defaults; list, get, create, and delete complete the set.' },
+          { keys: 'kestractl nsfiles upload <ns> <dir>', desc: 'Upload Namespace Files', usage: 'Syncs local files into namespace storage with --path, --override, and --fail-fast.' },
+          { keys: 'kestractl kv set', desc: 'Set Key-Value Pair', usage: 'Stores a value with an optional TTL; update, get, and delete manage existing keys.' },
+          { keys: 'kestractl kv get', desc: 'Get Key-Value Pair', usage: 'Reads a stored value; note that kv list requires token auth.' },
+          { keys: 'kestractl logs list', desc: 'List Execution Logs', usage: 'Lists logs; search, download, and delete complete the log commands.' },
+          { keys: 'kestractl plugins list', desc: 'List Compatible Plugins', usage: 'Shows plugins compatible with a given Kestra version.' },
+          { keys: 'kestractl plugins download', desc: 'Download Plugins', usage: 'Fetches plugin JARs to a local directory for offline installs.' },
+        ]
+      },
+    ]
   },
   nmap: {
     name: 'Nmap',
