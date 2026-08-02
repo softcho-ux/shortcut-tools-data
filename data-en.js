@@ -82,7 +82,7 @@ const shortcutData = {
   mac: {
     name: 'Mac',
     icon: 'fab fa-apple',
-    source: 'https://support.apple.com/en-us/102650',
+    source: { name: 'Apple Support', url: 'https://support.apple.com/en-us/102650' },
     categories: [
       {
         name: 'Basic Editing',
@@ -2560,23 +2560,12 @@ const shortcutData = {
           { keys: 'Cmd/Ctrl + Shift + T', desc: 'Toggle Theme', usage: 'Switch light/dark theme' },
         ]
       },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'Role Assignment', desc: 'Set expert role', usage: 'Assign a specific role for more professional responses.' },
-          { keys: 'Step-by-step', desc: 'Structured analysis', usage: 'Ask for step by step explanation for logical answers.' },
-          { keys: 'Output Format', desc: 'Format specification', usage: 'Specify table, markdown, JSON or other formats.' },
-          { keys: 'Few-shot', desc: 'Provide examples', usage: 'Give 1-3 examples for consistent pattern output.' },
-          { keys: 'Constraints', desc: 'Set boundaries', usage: 'Add word limits or audience level constraints.' },
-          { keys: 'Iterate', desc: 'Refine results', usage: 'Follow up with shorter, more professional, etc.' },
-        ]
-      },
-    ]
+          ]
   },
   cursor: {
     name: 'Cursor AI',
     icon: 'fas fa-wand-magic-sparkles',
-    source: 'https://cursor.com/docs/reference/keyboard-shortcuts',
+    source: { name: 'Cursor Docs', url: 'https://cursor.com/docs/reference/keyboard-shortcuts' },
     categories: [
       {
         name: 'General',
@@ -3607,17 +3596,7 @@ const shortcutData = {
           { keys: 'Ctrl + /', desc: 'View Shortcuts', usage: 'Display available keyboard shortcuts.' },
         ]
       },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'XML Tags', desc: 'Structured input', usage: 'Use XML tags for structured, precise answers.' },
-          { keys: 'Persona', desc: 'Set role', usage: 'Specify roles for domain expert responses.' },
-          { keys: 'Chain of Thought', desc: 'Show reasoning', usage: 'Ask to show thinking process for visible reasoning.' },
-          { keys: 'Artifacts', desc: 'Generate code/docs', usage: 'Request artifacts for standalone executable output.' },
-          { keys: 'Projects', desc: 'Project context', usage: 'Upload docs to Projects for persistent context.' },
-        ]
-      },
-    ]
+          ]
   },
   copilot: {
     name: 'GitHub Copilot',
@@ -4016,7 +3995,7 @@ const shortcutData = {
   telegram: {
     name: "Telegram",
     icon: "fab fa-telegram",
-    source: "https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts",
+    source: { name: 'GitHub (official repo)', url: 'https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts' },
     categories: [
       {
         name: "Chats",
@@ -4086,7 +4065,7 @@ const shortcutData = {
   todoist: {
       name: 'Todoist',
       icon: 'fas fa-check-circle',
-      source: 'https://www.todoist.com/help/articles/use-keyboard-shortcuts-in-todoist-Wyovn2',
+      source: { name: 'Todoist Help', url: 'https://www.todoist.com/help/articles/use-keyboard-shortcuts-in-todoist-Wyovn2' },
       categories: [
         {
           name: 'General',
@@ -4370,7 +4349,7 @@ const shortcutData = {
   arc: {
       name: 'Arc Browser',
       icon: 'fas fa-compass',
-      source: 'https://resources.arc.net/hc/en-us/articles/20595231349911-Keyboard-Shortcuts',
+      source: { name: 'Arc Resources', url: 'https://resources.arc.net/hc/en-us/articles/20595231349911-Keyboard-Shortcuts' },
       categories: [
         {
           name: 'Everyday Use',
@@ -4431,7 +4410,7 @@ const shortcutData = {
   warp: {
       name: 'Warp Terminal',
       icon: 'fas fa-terminal',
-      source: 'https://docs.warp.dev/getting-started/keyboard-shortcuts',
+      source: { name: 'Warp Docs', url: 'https://docs.warp.dev/getting-started/keyboard-shortcuts' },
       categories: [
         {
           name: 'All Shortcuts',
@@ -4645,7 +4624,7 @@ const shortcutData = {
   openai_codex: {
       name: 'OpenAI Codex CLI',
       icon: 'fas fa-terminal',
-      source: 'https://developers.openai.com/codex/cli/reference/',
+      source: { name: 'OpenAI Developers', url: 'https://developers.openai.com/codex/cli/reference/' },
       kind: 'commands',
       categories: [
         {
@@ -4983,18 +4962,7 @@ const shortcutData = {
           { keys: 'claude --output-format json', desc: 'JSON output', usage: 'Return structured JSON output for scripting.' },
         ]
       },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'Think step by step', desc: 'Activate reasoning', usage: 'Triggers extended thinking for complex problems.' },
-          { keys: 'Use ultrathink', desc: 'Deep reasoning mode', usage: 'Activates maximum thinking budget for hard tasks.' },
-          { keys: 'Be concise', desc: 'Shorter responses', usage: 'Instructs Claude to give compact answers.' },
-          { keys: 'Implement, do not explain', desc: 'Code-only mode', usage: 'Skip explanations and produce code directly.' },
-          { keys: 'Run the tests after', desc: 'Auto-validate', usage: 'Tell Claude to run tests after making changes.' },
-          { keys: 'Do not modify other files', desc: 'Scope limit', usage: 'Restrict changes to specified files only.' },
-        ]
-      },
-    ]
+          ]
   },
   gemini: {
     name: 'Gemini',
@@ -5026,20 +4994,7 @@ const shortcutData = {
           { keys: '--debug', desc: 'Debug mode', usage: 'Show detailed debug output.' },
         ]
       },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'Analyze this image: [upload]', desc: 'Vision input', usage: 'Use Gemini\'s multimodal capabilities with images.' },
-          { keys: 'Summarize this document', desc: 'Long context', usage: 'Leverage Gemini\'s 1M+ token context window.' },
-          { keys: 'Think step by step', desc: 'Reasoning mode', usage: 'Activate chain-of-thought reasoning.' },
-          { keys: 'Use grounding (Google Search)', desc: 'Web grounding', usage: 'Ground responses with real-time Google Search data.' },
-          { keys: 'Generate with code execution', desc: 'Code runner', usage: 'Ask Gemini to write and execute Python code.' },
-          { keys: 'Compare these two files', desc: 'Multi-document', usage: 'Provide multiple documents for comparison.' },
-          { keys: 'Respond in JSON format', desc: 'Structured output', usage: 'Request machine-readable JSON responses.' },
-          { keys: 'Watch this video and summarize', desc: 'Video analysis', usage: 'Upload a video for Gemini to analyse.' },
-        ]
-      },
-    ]
+          ]
   },
   midjourney: {
     name: 'Midjourney',
@@ -5106,19 +5061,7 @@ const shortcutData = {
           { keys: 'Math', desc: 'Math solver', usage: 'Solve mathematical problems step by step.' },
         ]
       },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'Explain like I\'m 5', desc: 'Simple explanation', usage: 'Get a simplified explanation of complex topics.' },
-          { keys: 'What are the latest updates on...', desc: 'Real-time info', usage: 'Leverage Perplexity\'s real-time search capability.' },
-          { keys: 'Compare X vs Y', desc: 'Comparison query', usage: 'Get a structured side-by-side comparison.' },
-          { keys: 'Give me a step-by-step guide', desc: 'Tutorial mode', usage: 'Request numbered, actionable instructions.' },
-          { keys: 'Cite your sources', desc: 'Source request', usage: 'Ask Perplexity to list its source references.' },
-          { keys: 'Summarize this URL: <url>', desc: 'URL summary', usage: 'Summarise the content of any webpage.' },
-          { keys: 'What do experts say about...', desc: 'Expert opinion', usage: 'Filter for authoritative expert sources.' },
-        ]
-      },
-    ]
+          ]
   },
   v0: {
     name: 'v0',
@@ -5133,33 +5076,7 @@ const shortcutData = {
           { keys: 'Ctrl + Shift + Z', desc: 'Redo', usage: 'Redo the last undone generation.' },
         ]
       },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'Use shadcn/ui', desc: 'Component library', usage: 'Specify shadcn/ui for styled components.' },
-          { keys: 'Tailwind CSS only', desc: 'Styling constraint', usage: 'Limit styling to Tailwind utility classes.' },
-          { keys: 'Mobile-first, responsive', desc: 'Responsive design', usage: 'Request layouts that work on all screen sizes.' },
-          { keys: 'Dark mode support', desc: 'Theme toggle', usage: 'Ask for dark/light mode toggle implementation.' },
-          { keys: 'Add TypeScript types', desc: 'Type safety', usage: 'Request fully typed components.' },
-          { keys: 'No external dependencies', desc: 'Dependency control', usage: 'Keep the component dependency-free.' },
-          { keys: 'Use lucide-react icons', desc: 'Icon library', usage: 'Specify lucide-react for consistent icon usage.' },
-          { keys: 'Make it accessible (ARIA)', desc: 'Accessibility', usage: 'Request ARIA labels and keyboard navigation.' },
-          { keys: 'Add loading and error states', desc: 'State handling', usage: 'Include skeleton loaders and error UI.' },
-          { keys: 'Animate with Framer Motion', desc: 'Animations', usage: 'Use Framer Motion for smooth transitions.' },
-          { keys: 'Export as named component', desc: 'Export style', usage: 'Request named exports instead of default.' },
-        ]
-      },
-      {
-        name: 'Iteration Commands',
-        shortcuts: [
-          { keys: 'Make it more minimal', desc: 'Simplify UI', usage: 'Reduce visual complexity.' },
-          { keys: 'Add more interactivity', desc: 'Enhance UX', usage: 'Request hover effects and click animations.' },
-          { keys: 'Fix the layout on mobile', desc: 'Mobile fix', usage: 'Target responsive layout issues.' },
-          { keys: 'Split into subcomponents', desc: 'Refactor', usage: 'Decompose a large component into smaller ones.' },
-          { keys: 'Add form validation', desc: 'Validation', usage: 'Add client-side form validation logic.' },
-        ]
-      },
-    ]
+                ]
   },
   windsurf: {
     name: 'Windsurf',
@@ -5206,15 +5123,7 @@ const shortcutData = {
           { keys: 'Chat mode', desc: 'Ask only', usage: 'Cascade answers questions without editing files.' },
         ]
       },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'Use @filename to focus', desc: 'File scoping', usage: 'Direct Cascade to a specific file for precise edits.' },
-          { keys: 'Be specific about scope', desc: 'Precision', usage: 'Name the function or class you want changed.' },
-          { keys: 'Ask for a plan first', desc: 'Plan before code', usage: 'Request a written plan before implementation.' },
-        ]
-      },
-    ]
+          ]
   },
   bolt: {
     name: 'Bolt.new',
@@ -5230,15 +5139,7 @@ const shortcutData = {
           { keys: 'Ctrl + Shift + P', desc: 'Command palette', usage: 'Open command palette.' },
         ]
       },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'Specify stack', desc: 'Framework choice', usage: 'Specify React, Next.js, Vue or other frameworks.' },
-          { keys: 'UI library', desc: 'Design system', usage: 'Specify Tailwind, shadcn/ui or other UI libraries.' },
-          { keys: 'Reference image', desc: 'Design reference', usage: 'Attach screenshots or URLs for design reference.' },
-        ]
-      },
-    ]
+          ]
   },
   replit_ai: {
     name: 'Replit AI',
@@ -5280,7 +5181,7 @@ const shortcutData = {
   aider: {
       name: 'Aider',
       icon: 'fas fa-terminal',
-      source: 'https://aider.chat/docs/usage/commands.html',
+      source: { name: 'Aider Docs', url: 'https://aider.chat/docs/usage/commands.html' },
       kind: 'commands',
       categories: [
         {
@@ -5342,7 +5243,7 @@ const shortcutData = {
   runway: {
       name: 'Runway ML',
       icon: 'fas fa-film',
-      source: 'https://help.runwayml.com/hc/en-us/articles/4405907853203-Video-editor-shortcuts',
+      source: { name: 'Runway Help Center', url: 'https://help.runwayml.com/hc/en-us/articles/4405907853203-Video-editor-shortcuts' },
       categories: [
         {
           name: 'Playback',
@@ -5396,7 +5297,7 @@ const shortcutData = {
   stable_diffusion: {
       name: 'Stable Diffusion',
       icon: 'fas fa-image',
-      source: 'https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Command-Line-Arguments-and-Settings',
+      source: { name: 'GitHub (official repo)', url: 'https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Command-Line-Arguments-and-Settings' },
       kind: 'commands',
       categories: [
         {
@@ -5545,20 +5446,7 @@ const shortcutData = {
             { keys: '--max-batch-count', desc: 'No longer has an effect. moved to ui-config.json txt2img/Batch count/maximum img2img/Batch', usage: 'No longer has an effect. moved to ui-config.json txt2img/Batch count/maximum img2img/Batch.' },
           ]
         },
-        {
-          name: 'Additional Shortcuts',
-          shortcuts: [
-            { keys: '(keyword:1.5)', desc: 'Increase weight', usage: 'Increase keyword emphasis for stronger effect.' },
-            { keys: '(keyword:0.5)', desc: 'Decrease weight', usage: 'Decrease keyword emphasis for weaker effect.' },
-            { keys: '[keyword]', desc: 'Soft emphasis', usage: 'Bracket keyword for subtle emphasis.' },
-            { keys: 'Negative prompt', desc: 'Negative prompt', usage: 'Specify elements to exclude (ugly, blurry, low quality).' },
-            { keys: 'Steps: 20~50', desc: 'Sampling steps', usage: 'Higher = more detail but slower generation.' },
-            { keys: 'CFG Scale: 7~12', desc: 'Prompt adherence', usage: 'Higher = more faithful to the prompt.' },
-            { keys: 'Seed: [number]', desc: 'Fix seed', usage: 'Same seed reproduces consistent results.' },
-            { keys: 'LoRA: <lora:name:1>', desc: 'Apply LoRA', usage: 'Apply a trained LoRA model.' },
-          ]
-        },
-      ]
+              ]
     },
   notebooklm: {
     name: 'NotebookLM',
@@ -5694,75 +5582,67 @@ const shortcutData = {
     ]
   },
   retool: {
-      name: 'Retool',
-      icon: 'fas fa-th-large',
-      source: 'https://docs.retool.com/apps/reference/keyboard-shortcuts',
-      kind: 'shortcuts',
-      categories: [
-        {
-          name: 'Global',
-          shortcuts: [
-            { keys: 'Ctrl + K', desc: 'Command Palette', usage: 'Command Palette.' },
-          ]
-        },
-        {
-          name: 'Components',
-          shortcuts: [
-            { keys: 'Escape', desc: 'Cancel Drag Or Resize', usage: 'Cancel Drag Or Resize.' },
-            { keys: 'Ctrl + C', desc: 'Copy', usage: 'Copy.' },
-            { keys: 'Ctrl + X', desc: 'Cut', usage: 'Cut.' },
-            { keys: 'Delete', desc: 'Delete', usage: 'Delete.' },
-            { keys: 'Ctrl + D', desc: 'Duplicate', usage: 'Duplicate.' },
-            { keys: 'Cursor keys', desc: 'Move', usage: 'Move.' },
-            { keys: 'Ctrl + V', desc: 'Paste', usage: 'Paste.' },
-            { keys: 'Ctrl + Cursor key', desc: 'Resize', usage: 'Resize.' },
-            { keys: 'Alt + Shift + Ctrl + R', desc: 'Resize Fixed Containers To Fit', usage: 'Resize Fixed Containers To Fit.' },
-            { keys: 'Ctrl + A', desc: 'Select All', usage: 'Select All.' },
-            { keys: 'Ctrl + Click', desc: 'Select Multiple', usage: 'Select Multiple.' },
-            { keys: 'Ctrl + /', desc: 'Toggle Hidden Components', usage: 'Toggle Hidden Components.' },
-          ]
-        },
-        {
-          name: 'General',
-          shortcuts: [
-            { keys: 'Shift + Ctrl + K', desc: 'Inspector Search', usage: 'Inspector Search.' },
-            { keys: 'Shift + /', desc: 'Keyboard Shortcuts', usage: 'Keyboard Shortcuts.' },
-            { keys: 'Ctrl + P', desc: 'Pin Sidebar', usage: 'Pin Sidebar.' },
-            { keys: 'Shift + Ctrl + Z', desc: 'Redo', usage: 'Redo.' },
-            { keys: 'Ctrl + S', desc: 'Save', usage: 'Save.' },
-            { keys: 'Shift + Ctrl + A', desc: 'Toggle Add Components', usage: 'Toggle Add Components.' },
-            { keys: 'Ctrl + .', desc: 'Toggle All Panels', usage: 'Toggle All Panels.' },
-            { keys: 'Shift + Ctrl + E', desc: 'Toggle Code', usage: 'Toggle Code.' },
-            { keys: 'Shift + Ctrl + F', desc: 'Toggle Code Search', usage: 'Toggle Code Search.' },
-            { keys: 'Shift + Ctrl + D', desc: 'Toggle Component Tree', usage: 'Toggle Component Tree.' },
-            { keys: 'Ctrl + U', desc: 'Toggle Inspector', usage: 'Toggle Inspector.' },
-            { keys: 'Alt + Ctrl + Enter', desc: 'Toggle Preview Mode', usage: 'Toggle Preview Mode.' },
-            { keys: 'Ctrl + B', desc: 'Toggle Sidebar', usage: 'Toggle Sidebar.' },
-            { keys: 'Shift + Ctrl + P', desc: 'Toggle User Mode', usage: 'Toggle User Mode.' },
-            { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo.' },
-            { keys: 'Ctrl + I', desc: 'Toggle Assist', usage: 'Toggle Assist.' },
-            { keys: 'Ctrl + Shift + I', desc: 'Ask Mode', usage: 'Ask Mode.' },
-            { keys: 'Ctrl + Shift + B', desc: 'Build Mode', usage: 'Build Mode.' },
-          ]
-        },
-        {
-          name: 'Canvas',
-          shortcuts: [
-            { keys: 'Space + Drag', desc: 'Pan Canvas', usage: 'Pan Canvas.' },
-            { keys: 'Shift + Ctrl + G', desc: 'Toggle Grid', usage: 'Toggle Grid.' },
-            { keys: 'Ctrl + +', desc: 'Zoom', usage: 'Zoom In.' },
-            { keys: 'Ctrl + -', desc: 'Zoom Out', usage: 'Zoom Out.' },
-          ]
-        },
-        {
-          name: 'Additional Shortcuts',
-          shortcuts: [
-            { keys: 'Ctrl + E', desc: 'Preview', usage: 'Switch to app preview mode.' },
-            { keys: 'Ctrl + Enter', desc: 'Run query', usage: 'Execute the current query.' },
-          ]
-        },
-      ]
-    },
+    name: 'Retool',
+    icon: 'fas fa-th-large',
+    source: { name: 'Retool Docs — App IDE keyboard shortcuts', url: 'https://docs.retool.com/apps/reference/keyboard-shortcuts' },
+    categories: [
+      {
+        name: 'Global',
+        shortcuts: [
+          { keys: 'Ctrl + K', desc: 'Command Palette', usage: 'Searches components, queries, apps and over 90 IDE actions from one box.' },
+        ]
+      },
+      {
+        name: 'Components',
+        shortcuts: [
+          { keys: 'Esc', desc: 'Cancel Drag / Deselect', usage: 'One key, two jobs: cancels a drag or resize mid-way, and deselects components otherwise.' },
+          { keys: 'Ctrl + C', desc: 'Copy', usage: 'Copies the selected components.' },
+          { keys: 'Ctrl + X', desc: 'Cut', usage: 'Cuts the selected components.' },
+          { keys: 'Ctrl + V', desc: 'Paste', usage: 'Pastes copied components onto the canvas.' },
+          { keys: 'Ctrl + D', desc: 'Duplicate', usage: 'Duplicates the selected components.' },
+          { keys: 'Delete', desc: 'Delete', usage: 'Deletes the selected components.' },
+          { keys: 'Cursor keys', desc: 'Move', usage: 'Nudges the selected components around the grid.' },
+          { keys: 'Ctrl + Cursor key', desc: 'Resize', usage: 'Resizes the selected components by grid units.' },
+          { keys: 'Alt + Shift + Ctrl + R', desc: 'Resize Fixed Containers To Fit', usage: 'Shrinks or grows fixed containers to their content.' },
+          { keys: 'Ctrl + A', desc: 'Select All', usage: 'Selects every component on the canvas.' },
+          { keys: 'Ctrl + Click', desc: 'Select Multiple / Without Interacting', usage: 'Adds components to the selection one by one — and selects interactive components without triggering them.' },
+          { keys: 'Ctrl + /', desc: 'Toggle Hidden Components', usage: 'Shows or hides components whose hidden property is set.' },
+        ]
+      },
+      {
+        name: 'General',
+        shortcuts: [
+          { keys: 'Ctrl + S', desc: 'Save', usage: 'Saves the app.' },
+          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Steps back through changes.' },
+          { keys: 'Shift + Ctrl + Z', desc: 'Redo', usage: 'Steps forward again.' },
+          { keys: 'Shift + Ctrl + K', desc: 'Inspector Search', usage: 'Searches within the Inspector.' },
+          { keys: 'Shift + /', desc: 'Keyboard Shortcuts', usage: 'Shows the shortcut reference overlay.' },
+          { keys: 'Ctrl + P', desc: 'Pin Sidebar', usage: 'Pins or unpins the sidebar.' },
+          { keys: 'Ctrl + B', desc: 'Toggle Sidebar', usage: 'Shows or hides the sidebar.' },
+          { keys: 'Ctrl + U', desc: 'Toggle Inspector', usage: 'Shows or hides the Inspector panel.' },
+          { keys: 'Shift + Ctrl + A', desc: 'Toggle Add Components', usage: 'Shows or hides the Add Components panel.' },
+          { keys: 'Shift + Ctrl + D', desc: 'Toggle Component Tree', usage: 'Shows or hides the component tree.' },
+          { keys: 'Ctrl + .', desc: 'Toggle All Panels', usage: 'Collapses or restores every panel at once — the fastest way to a clean canvas.' },
+          { keys: 'Shift + Ctrl + E', desc: 'Toggle Code', usage: 'Shows or hides the code editor.' },
+          { keys: 'Shift + Ctrl + F', desc: 'Toggle Code Search', usage: 'Searches across all code in the app.' },
+          { keys: 'Alt + Ctrl + Enter', desc: 'Toggle Preview Mode', usage: 'Switches between edit and preview.' },
+          { keys: 'Shift + Ctrl + P', desc: 'Toggle User Mode', usage: 'Views the app exactly as an end user will.' },
+          { keys: 'Ctrl + I', desc: 'Toggle Assist', usage: 'Opens or closes Retool\'s AI Assist panel.' },
+          { keys: 'Ctrl + Shift + I', desc: 'Assist: Ask Mode', usage: 'Switches Assist to Ask mode for questions about the app.' },
+          { keys: 'Ctrl + Shift + B', desc: 'Assist: Build Mode', usage: 'Switches Assist to Build mode to generate changes.' },
+        ]
+      },
+      {
+        name: 'Canvas',
+        shortcuts: [
+          { keys: 'Space + Drag', desc: 'Pan Canvas', usage: 'Pans around the canvas.' },
+          { keys: 'Shift + Ctrl + G', desc: 'Toggle Grid', usage: 'Shows or hides the layout grid.' },
+          { keys: 'Ctrl + +', desc: 'Zoom In', usage: 'Zooms in on the canvas.' },
+          { keys: 'Ctrl + -', desc: 'Zoom Out', usage: 'Zooms out on the canvas.' },
+        ]
+      },
+    ]
+  },
   airtable: {
     name: 'Airtable',
     icon: 'fas fa-table',
@@ -6001,7 +5881,7 @@ const shortcutData = {
   python_cli: {
       name: 'Python',
       icon: 'fab fa-python',
-      source: 'https://docs.python.org/3/using/cmdline.html',
+      source: { name: 'Python Docs', url: 'https://docs.python.org/3/using/cmdline.html' },
       categories: [
         {
           name: 'Running Code',
@@ -6142,7 +6022,7 @@ const shortcutData = {
   nginx: {
     name: 'Nginx',
     icon: 'fas fa-server',
-    source: 'https://nginx.org/en/docs/switches.html',
+    source: { name: 'NGINX Docs', url: 'https://nginx.org/en/docs/switches.html' },
     kind: 'commands',
     categories: [
       {
@@ -6371,7 +6251,7 @@ const shortcutData = {
   ansible: {
     name: 'Ansible',
     icon: 'fas fa-server',
-    source: 'https://docs.ansible.com/ansible/latest/cli/ansible.html',
+    source: { name: 'Ansible Docs', url: 'https://docs.ansible.com/ansible/latest/cli/ansible.html' },
     categories: [
       { name: 'ansible (ad-hoc)', shortcuts: [
         { keys: 'ansible --become-method <BECOME_METHOD>', desc: 'Privilege escalation method to use (default=sudo)', usage: 'privilege escalation method to use (default=sudo), use ansible-doc -t become -l to list valid choices.' },
@@ -6614,7 +6494,7 @@ const shortcutData = {
   lvm: {
     name: 'LVM (Logical Volume)',
     icon: 'fas fa-hdd',
-    source: 'https://man7.org/linux/man-pages/man8/lvm.8.html',
+    source: { name: 'Linux man pages (man7.org)', url: 'https://man7.org/linux/man-pages/man8/lvm.8.html' },
     categories: [
       {
         name: 'Built-in Commands',
@@ -6725,7 +6605,7 @@ const shortcutData = {
   proxmox: {
       name: 'Proxmox VE',
       icon: 'fas fa-server',
-      source: 'https://pve.proxmox.com/pve-docs/',
+      source: { name: 'Proxmox VE Docs', url: 'https://pve.proxmox.com/pve-docs/' },
       kind: 'commands',
       categories: [
         {
@@ -7503,7 +7383,7 @@ const shortcutData = {
   navisworks: {
     name: 'Navisworks',
     icon: 'fas fa-building',
-    source: 'https://help.autodesk.com/cloudhelp/2026/ENU/Navisworks-Quick-Start/files/GUID-E5041421-ADEA-4FB8-88FF-D59860A8E826.htm',
+    source: { name: 'Autodesk Help', url: 'https://help.autodesk.com/cloudhelp/2026/ENU/Navisworks-Quick-Start/files/GUID-E5041421-ADEA-4FB8-88FF-D59860A8E826.htm' },
     categories: [
       {
         name: 'General Shortcuts',
@@ -7627,7 +7507,7 @@ const shortcutData = {
   sketch: {
     name: 'Sketch',
     icon: 'fas fa-palette',
-    source: 'https://www.sketch.com/docs/shortcuts/mac/',
+    source: { name: 'Sketch Docs', url: 'https://www.sketch.com/docs/shortcuts/mac/' },
     categories: [
       {
         name: 'General',
@@ -7894,7 +7774,7 @@ const shortcutData = {
   xcode: {
     name: "Xcode",
     icon: "fas fa-hammer",
-    source: "https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/xcode_help-command_shortcuts/MenuCommands/MenuCommands014.html",
+    source: { name: 'Apple Developer', url: 'https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/xcode_help-command_shortcuts/MenuCommands/MenuCommands014.html' },
     categories: [
       {
         name: "Build & Run",
@@ -8002,7 +7882,7 @@ const shortcutData = {
   android_studio: {
     name: "Android Studio",
     icon: "fab fa-android",
-    source: "https://developer.android.com/studio/intro/keyboard-shortcuts",
+    source: { name: 'Android Developers', url: 'https://developer.android.com/studio/intro/keyboard-shortcuts' },
     categories: [
       {
         name: "Search & Navigation",
@@ -8110,7 +7990,7 @@ const shortcutData = {
   postman: {
     name: "Postman",
     icon: "fas fa-paper-plane",
-    source: "https://learning.postman.com/docs/getting-started/basics/navigating-postman",
+    source: { name: 'Postman Learning Center', url: 'https://learning.postman.com/docs/getting-started/basics/navigating-postman' },
     categories: [
       {
         name: "Requests & Tabs",
@@ -8211,7 +8091,7 @@ const shortcutData = {
   powershell: {
     name: "PowerShell",
     icon: "fas fa-terminal",
-    source: "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_line_editing",
+    source: { name: 'Microsoft Learn', url: 'https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_line_editing' },
     categories: [
       {
         name: "Line Editing",
@@ -8276,7 +8156,7 @@ const shortcutData = {
   audacity: {
     name: 'Audacity',
     icon: 'fas fa-wave-square',
-    source: 'https://manual.audacityteam.org/man/keyboard_shortcut_reference.html',
+    source: { name: 'Audacity Manual', url: 'https://manual.audacityteam.org/man/keyboard_shortcut_reference.html' },
     categories: [
       { name: 'File', shortcuts: [
         { keys: 'Ctrl + N', desc: 'New', usage: 'Creates a new empty project window, to start working on new or imported tracks.' },
@@ -8414,7 +8294,7 @@ const shortcutData = {
   fl_studio: {
       name: 'FL Studio',
       icon: 'fas fa-music',
-      source: 'https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/basics_shortcuts.htm',
+      source: { name: 'Image-Line (FL Studio) Docs', url: 'https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/basics_shortcuts.htm' },
       categories: [
         {
           name: 'File Operations',
@@ -8643,7 +8523,7 @@ const shortcutData = {
   trello: {
     name: "Trello",
     icon: "fab fa-trello",
-    source: "https://support.atlassian.com/trello/docs/keyboard-shortcuts-in-trello/",
+    source: { name: 'Atlassian Support', url: 'https://support.atlassian.com/trello/docs/keyboard-shortcuts-in-trello/' },
     categories: [
       {
         name: "Navigation",
@@ -8699,7 +8579,7 @@ const shortcutData = {
   google_slides: {
     name: 'Google Slides',
     icon: 'fas fa-file-powerpoint',
-    source: 'https://support.google.com/docs/answer/1696717',
+    source: { name: 'Google Support', url: 'https://support.google.com/docs/answer/1696717' },
     categories: [
       { name: 'Common Actions', shortcuts: [
         { keys: 'Ctrl + M', desc: 'New slide', usage: 'New slide in Google Slides.' },
@@ -8839,7 +8719,7 @@ const shortcutData = {
   onenote: {
     name: 'OneNote',
     icon: 'fas fa-book',
-    source: 'https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-onenote-44b8b3f4-c274-4bcc-a089-e80fdcc87950',
+    source: { name: 'Microsoft Support', url: 'https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-onenote-44b8b3f4-c274-4bcc-a089-e80fdcc87950' },
     categories: [
       { name: 'Frequently Used', shortcuts: [
         { keys: 'Ctrl + M', desc: 'Open a new OneNote window', usage: 'Open a new OneNote window.' },
@@ -9033,7 +8913,7 @@ const shortcutData = {
   clickup: {
       name: 'ClickUp',
       icon: 'fas fa-check-double',
-      source: 'https://help.clickup.com/hc/en-us/articles/6309030550167-Use-keyboard-shortcuts',
+      source: { name: 'ClickUp Help', url: 'https://help.clickup.com/hc/en-us/articles/6309030550167-Use-keyboard-shortcuts' },
       categories: [
         {
           name: 'General',
@@ -9171,7 +9051,7 @@ const shortcutData = {
   monday: {
       name: 'Monday.com',
       icon: 'fas fa-calendar-check',
-      source: 'https://support.monday.com/hc/en-us/articles/115005339905-monday-com-Shortcuts',
+      source: { name: 'monday.com Support', url: 'https://support.monday.com/hc/en-us/articles/115005339905-monday-com-Shortcuts' },
       categories: [
         {
           name: 'Navigation',
@@ -9219,7 +9099,7 @@ const shortcutData = {
   google_calendar: {
     name: "Google Calendar",
     icon: "fas fa-calendar",
-    source: "https://support.google.com/calendar/answer/37034",
+    source: { name: 'Google Support', url: 'https://support.google.com/calendar/answer/37034' },
     categories: [
       {
         name: "Navigation",
@@ -9267,7 +9147,7 @@ const shortcutData = {
   xd: {
     name: 'Adobe XD',
     icon: 'fas fa-vector-square',
-    source: 'https://helpx.adobe.com/xd/desktop/introduction/keyboard-shortcuts.html',
+    source: { name: 'Adobe Help Center', url: 'https://helpx.adobe.com/xd/desktop/introduction/keyboard-shortcuts.html' },
     categories: [
       { name: 'Editing', shortcuts: [
         { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo in Adobe XD.' },
@@ -9373,7 +9253,7 @@ const shortcutData = {
   procreate: {
       name: 'Procreate',
       icon: 'fas fa-paint-brush',
-      source: 'https://help.procreate.com/procreate/handbook/interface-gestures/keyboard',
+      source: { name: 'Procreate Handbook', url: 'https://help.procreate.com/procreate/handbook/interface-gestures/keyboard' },
       kind: 'shortcuts',
       categories: [
         {
@@ -9485,7 +9365,7 @@ const shortcutData = {
   webstorm: {
     name: "WebStorm",
     icon: "fas fa-code",
-    source: "https://resources.jetbrains.com/storage/products/webstorm/docs/WebStorm_ReferenceCard.pdf",
+    source: { name: 'JetBrains Resources', url: 'https://resources.jetbrains.com/storage/products/webstorm/docs/WebStorm_ReferenceCard.pdf' },
     categories: [
       {
         name: "General",
@@ -9654,7 +9534,7 @@ const shortcutData = {
   rider: {
     name: "JetBrains Rider",
     icon: "fas fa-code",
-    source: "https://resources.jetbrains.com/storage/products/rider/docs/Rider_default_win_shortcuts.pdf",
+    source: { name: 'JetBrains Resources', url: 'https://resources.jetbrains.com/storage/products/rider/docs/Rider_default_win_shortcuts.pdf' },
     categories: [
       {
         name: "Create & Edit",
@@ -9877,7 +9757,7 @@ const shortcutData = {
   eclipse: {
     name: 'Eclipse',
     icon: 'fas fa-code',
-    source: 'https://github.com/eclipse-platform/eclipse.platform.ui/blob/master/bundles/org.eclipse.ui/plugin.xml',
+    source: { name: 'GitHub (official repo)', url: 'https://github.com/eclipse-platform/eclipse.platform.ui/blob/master/bundles/org.eclipse.ui/plugin.xml' },
     categories: [
       { name: 'General & Workbench', shortcuts: [
         { keys: 'Ctrl + 3', desc: 'Find Actions (Quick Access)', usage: 'Quickly reach any command, view, or preference page by typing its name.' },
@@ -10045,7 +9925,7 @@ const shortcutData = {
   atom: {
     name: 'Atom',
     icon: 'fas fa-code',
-    source: 'https://github.com/atom/atom/tree/master/keymaps',
+    source: { name: 'GitHub (official repo)', url: 'https://github.com/atom/atom/tree/master/keymaps' },
     categories: [
       { name: 'General', shortcuts: [
         { keys: 'Ctrl + Shift + P', desc: 'Command Palette', usage: 'Open the command palette and run any Atom command by name.' },
@@ -10172,7 +10052,7 @@ const shortcutData = {
   camtasia: {
       name: 'Camtasia',
       icon: 'fas fa-video',
-      source: 'https://www.techsmith.com/learn/tutorials/camtasia/camtasia-shortcuts/',
+      source: { name: 'TechSmith (Camtasia) Docs', url: 'https://www.techsmith.com/learn/tutorials/camtasia/camtasia-shortcuts/' },
       categories: [
         {
           name: 'Recorder Options',
@@ -10363,7 +10243,7 @@ const shortcutData = {
   screenflow: {
     name: 'ScreenFlow',
     icon: 'fas fa-desktop',
-    source: 'https://www.telestream.net/pdfs/technical/ScreenFlow-6-Shortcuts.pdf',
+    source: { name: 'Telestream (ScreenFlow) Docs', url: 'https://www.telestream.net/pdfs/technical/ScreenFlow-6-Shortcuts.pdf' },
     categories: [
       {
         name: 'Editing (Timeline)',
@@ -10452,7 +10332,7 @@ const shortcutData = {
   brave: {
       name: 'Brave Browser',
       icon: 'fab fa-brave',
-      source: 'https://support.brave.app/hc/en-us/articles/360032272171-What-keyboard-shortcuts-can-I-use-in-Brave',
+      source: { name: 'Brave Support', url: 'https://support.brave.app/hc/en-us/articles/360032272171-What-keyboard-shortcuts-can-I-use-in-Brave' },
       categories: [
         {
           name: 'Tab and Window',
@@ -10544,7 +10424,7 @@ const shortcutData = {
   signal: {
     name: 'Signal',
     icon: 'fas fa-comment-dots',
-    source: 'https://github.com/signalapp/Signal-Desktop/blob/main/ts/components/ShortcutGuide.dom.tsx',
+    source: { name: 'GitHub (official repo)', url: 'https://github.com/signalapp/Signal-Desktop/blob/main/ts/components/ShortcutGuide.dom.tsx' },
     categories: [
       { name: 'Navigation', shortcuts: [
         { keys: 'Ctrl + T', desc: 'Navigate by section', usage: 'Navigate by section in Signal Desktop.' },
@@ -10630,7 +10510,7 @@ const shortcutData = {
   tmux: {
     name: "tmux",
     icon: "fas fa-terminal",
-    source: "https://man7.org/linux/man-pages/man1/tmux.1.html",
+    source: { name: 'Linux man pages (man7.org)', url: 'https://man7.org/linux/man-pages/man1/tmux.1.html' },
     categories: [
       {
         name: "Sessions",
@@ -10745,7 +10625,7 @@ const shortcutData = {
   screen: {
     name: "GNU Screen",
     icon: "fas fa-terminal",
-    source: "https://www.gnu.org/software/screen/manual/html_node/Default-Key-Bindings.html",
+    source: { name: 'GNU Manuals', url: 'https://www.gnu.org/software/screen/manual/html_node/Default-Key-Bindings.html' },
     categories: [
       {
         name: "Sessions",
@@ -10841,7 +10721,7 @@ const shortcutData = {
   vim_advanced: {
       name: 'Vim (Advanced)',
       icon: 'fas fa-code',
-      source: 'https://vimhelp.org/quickref.txt.html',
+      source: { name: 'Vim Help', url: 'https://vimhelp.org/quickref.txt.html' },
       categories: [
         {
           name: 'Left-right motions',
@@ -11279,7 +11159,7 @@ const shortcutData = {
   lazygit: {
     name: "Lazygit",
     icon: "fab fa-git-alt",
-    source: "https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_en.md",
+    source: { name: 'GitHub (official repo)', url: 'https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_en.md' },
     categories: [
       {
         name: "Global",
@@ -11624,7 +11504,7 @@ const shortcutData = {
   evernote: {
     name: "Evernote",
     icon: "fas fa-sticky-note",
-    source: "https://help.evernote.com/hc/en-us/articles/34296687388307-Keyboard-shortcuts",
+    source: { name: 'Evernote Help', url: 'https://help.evernote.com/hc/en-us/articles/34296687388307-Keyboard-shortcuts' },
     categories: [
       {
         name: "Global (System-Wide)",
@@ -11730,7 +11610,7 @@ const shortcutData = {
   libreoffice_writer: {
     name: 'LibreOffice Writer',
     icon: 'fas fa-file-word',
-    source: 'https://help.libreoffice.org/latest/en-US/text/swriter/04/01020000.html',
+    source: { name: 'LibreOffice Help', url: 'https://help.libreoffice.org/latest/en-US/text/swriter/04/01020000.html' },
     categories: [
       { name: 'Function Keys', shortcuts: [
         { keys: 'F2', desc: 'Formula Bar', usage: 'Formula Bar.' },
@@ -11837,7 +11717,7 @@ const shortcutData = {
   libreoffice_calc: {
     name: 'LibreOffice Calc',
     icon: 'fas fa-file-excel',
-    source: 'https://help.libreoffice.org/latest/en-US/text/scalc/04/01020000.html',
+    source: { name: 'LibreOffice Help', url: 'https://help.libreoffice.org/latest/en-US/text/scalc/04/01020000.html' },
     categories: [
       { name: 'Cursor Movement', shortcuts: [
         { keys: 'Ctrl + Home', desc: 'Moves the cursor to the first cell in the sheet (A1)', usage: 'Moves the cursor to the first cell in the sheet (A1). Also applies in pivot table.' },
@@ -11918,7 +11798,7 @@ const shortcutData = {
   keynote: {
     name: 'Apple Keynote',
     icon: 'fas fa-tv',
-    source: 'https://support.apple.com/guide/keynote/keyboard-shortcuts-tanfde4a3e6d/mac',
+    source: { name: 'Apple Support', url: 'https://support.apple.com/guide/keynote/keyboard-shortcuts-tanfde4a3e6d/mac' },
     categories: [
       {
         name: 'General',
@@ -12348,7 +12228,7 @@ const shortcutData = {
   visual_studio: {
     name: "Visual Studio",
     icon: "fas fa-code",
-    source: "https://learn.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio",
+    source: { name: 'Microsoft Learn', url: 'https://learn.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio' },
     categories: [
       {
         name: "Search & Navigation",
@@ -12459,7 +12339,7 @@ const shortcutData = {
   phpstorm: {
     name: "PhpStorm",
     icon: "fas fa-code",
-    source: "https://resources.jetbrains.com/storage/products/phpstorm/docs/PhpStorm_ReferenceCard.pdf",
+    source: { name: 'JetBrains Resources', url: 'https://resources.jetbrains.com/storage/products/phpstorm/docs/PhpStorm_ReferenceCard.pdf' },
     categories: [
       {
         name: "General",
@@ -12676,7 +12556,7 @@ const shortcutData = {
   zed: {
     name: 'Zed Editor',
     icon: 'fas fa-bolt',
-    source: 'https://github.com/zed-industries/zed/blob/main/assets/keymaps/default-macos.json',
+    source: { name: 'GitHub (official repo)', url: 'https://github.com/zed-industries/zed/blob/main/assets/keymaps/default-macos.json' },
     categories: [
       { name: 'General', shortcuts: [
         { keys: 'Cmd + Shift + P', desc: 'Command Palette', usage: 'Open the command palette to run any Zed action by name.' },
@@ -12843,7 +12723,7 @@ const shortcutData = {
   helix: {
     name: "Helix Editor",
     icon: "fas fa-code",
-    source: "https://docs.helix-editor.com/keymap.html",
+    source: { name: 'Helix Docs', url: 'https://docs.helix-editor.com/keymap.html' },
     categories: [
       {
         name: "Movement (Normal Mode)",
@@ -13117,7 +12997,7 @@ const shortcutData = {
   nano: {
     name: "Nano",
     icon: "fas fa-terminal",
-    source: "https://www.nano-editor.org/dist/latest/cheatsheet.html",
+    source: { name: 'GNU nano Docs', url: 'https://www.nano-editor.org/dist/latest/cheatsheet.html' },
     categories: [
       {
         name: "File Handling",
@@ -13235,7 +13115,7 @@ const shortcutData = {
   dbeaver: {
       name: 'DBeaver',
       icon: 'fas fa-database',
-      source: 'https://github.com/dbeaver/dbeaver/wiki/Shortcuts',
+      source: { name: 'GitHub (official repo)', url: 'https://github.com/dbeaver/dbeaver/wiki/Shortcuts' },
       categories: [
         {
           name: 'Connection',
@@ -13536,7 +13416,7 @@ const shortcutData = {
   github_desktop: {
       name: 'GitHub Desktop',
       icon: 'fab fa-github',
-      source: 'https://docs.github.com/en/desktop/overview/github-desktop-keyboard-shortcuts',
+      source: { name: 'GitHub Docs', url: 'https://docs.github.com/en/desktop/overview/github-desktop-keyboard-shortcuts' },
       categories: [
         {
           name: 'Application Wide',
@@ -13638,7 +13518,7 @@ const shortcutData = {
   gcloud: {
       name: 'Google Cloud CLI',
       icon: 'fab fa-google',
-      source: 'https://cloud.google.com/sdk/gcloud/reference',
+      source: { name: 'Google Cloud Docs', url: 'https://cloud.google.com/sdk/gcloud/reference' },
       kind: 'commands',
       categories: [
         {
@@ -13826,7 +13706,7 @@ const shortcutData = {
   azure_cli: {
       name: 'Azure CLI',
       icon: 'fab fa-microsoft',
-      source: 'https://learn.microsoft.com/en-us/cli/azure/reference-index',
+      source: { name: 'Microsoft Learn', url: 'https://learn.microsoft.com/en-us/cli/azure/reference-index' },
       categories: [
         {
           name: 'Monitoring & Management',
@@ -13968,7 +13848,7 @@ const shortcutData = {
   podman: {
     name: 'Podman',
     icon: 'fab fa-docker',
-    source: 'https://docs.podman.io/en/latest/markdown/podman.1.html',
+    source: { name: 'Podman Docs', url: 'https://docs.podman.io/en/latest/markdown/podman.1.html' },
     categories: [
       { name: 'Images', shortcuts: [
         { keys: 'podman artifact', desc: 'Manage OCI artifacts', usage: 'Manage OCI artifacts.' },
@@ -14046,7 +13926,7 @@ const shortcutData = {
   cron: {
       name: 'Cron / Crontab',
       icon: 'fas fa-clock',
-      source: 'https://man7.org/linux/man-pages/man1/crontab.1.html',
+      source: { name: 'Linux man pages (man7.org)', url: 'https://man7.org/linux/man-pages/man1/crontab.1.html' },
       kind: 'commands',
       categories: [
         {
@@ -14116,7 +13996,7 @@ const shortcutData = {
   sed_cmd: {
     name: 'sed',
     icon: 'fas fa-terminal',
-    source: 'https://man7.org/linux/man-pages/man1/sed.1.html',
+    source: { name: 'Linux man pages (man7.org)', url: 'https://man7.org/linux/man-pages/man1/sed.1.html' },
     categories: [
       {
         name: 'Options',
@@ -14172,7 +14052,7 @@ const shortcutData = {
   awk_cmd: {
       name: 'awk',
       icon: 'fas fa-terminal',
-      source: 'https://man7.org/linux/man-pages/man1/gawk.1.html',
+      source: { name: 'Linux man pages (man7.org)', url: 'https://man7.org/linux/man-pages/man1/gawk.1.html' },
       categories: [
         {
           name: 'Options',
@@ -14238,7 +14118,7 @@ const shortcutData = {
   jq_cmd: {
       name: 'jq (JSON)',
       icon: 'fas fa-code',
-      source: 'https://jqlang.github.io/jq/manual/',
+      source: { name: 'jq Manual', url: 'https://jqlang.github.io/jq/manual/' },
       categories: [
         {
           name: 'Basic filters',
@@ -14514,7 +14394,7 @@ const shortcutData = {
   tcpdump_cmd: {
       name: 'tcpdump',
       icon: 'fas fa-network-wired',
-      source: 'https://man7.org/linux/man-pages/man1/tcpdump.1.html',
+      source: { name: 'Linux man pages (man7.org)', url: 'https://man7.org/linux/man-pages/man1/tcpdump.1.html' },
       categories: [
         {
           name: 'Options',
@@ -14590,7 +14470,7 @@ const shortcutData = {
   wireshark: {
       name: 'Wireshark Filters',
       icon: 'fas fa-filter',
-      source: 'https://www.wireshark.org/docs/man-pages/wireshark.html',
+      source: { name: 'Wireshark Docs', url: 'https://www.wireshark.org/docs/man-pages/wireshark.html' },
       kind: 'commands',
       categories: [
         {
@@ -14690,7 +14570,7 @@ const shortcutData = {
   ss_cmd: {
     name: 'ss / netstat',
     icon: 'fas fa-plug',
-    source: 'https://man7.org/linux/man-pages/man8/ss.8.html',
+    source: { name: 'Linux man pages (man7.org)', url: 'https://man7.org/linux/man-pages/man8/ss.8.html' },
     categories: [
       {
         name: 'Options',
@@ -14792,7 +14672,7 @@ const shortcutData = {
   vagrant: {
       name: 'Vagrant',
       icon: 'fas fa-cube',
-      source: 'https://developer.hashicorp.com/vagrant/docs/cli',
+      source: { name: 'HashiCorp Developer', url: 'https://developer.hashicorp.com/vagrant/docs/cli' },
       kind: 'commands',
       categories: [
         {
@@ -14834,7 +14714,7 @@ const shortcutData = {
   htop_cmd: {
       name: 'htop',
       icon: 'fas fa-chart-bar',
-      source: 'https://man7.org/linux/man-pages/man1/htop.1.html',
+      source: { name: 'Linux man pages (man7.org)', url: 'https://man7.org/linux/man-pages/man1/htop.1.html' },
       categories: [
         {
           name: 'Command-line Options',
@@ -14921,7 +14801,7 @@ const shortcutData = {
   juniper: {
     name: 'Juniper JunOS',
     icon: 'fas fa-network-wired',
-    source: 'https://www.juniper.net/documentation/us/en/software/junos/cli/cli.pdf',
+    source: { name: 'Juniper Documentation', url: 'https://www.juniper.net/documentation/us/en/software/junos/cli/cli.pdf' },
     categories: [
       {
         name: 'CLI Navigation & Editing',
@@ -14981,7 +14861,7 @@ const shortcutData = {
   mikrotik: {
     name: 'MikroTik RouterOS',
     icon: 'fas fa-network-wired',
-    source: 'https://help.mikrotik.com/docs/spaces/ROS/pages/328155/Command+Line+Interface',
+    source: { name: 'MikroTik Docs', url: 'https://help.mikrotik.com/docs/spaces/ROS/pages/328155/Command+Line+Interface' },
     kind: 'commands',
     categories: [
       {
@@ -15029,7 +14909,7 @@ const shortcutData = {
   esxi: {
       name: 'VMware ESXi',
       icon: 'fas fa-server',
-      source: 'https://developer.broadcom.com/xapis/esxcli-command-reference/latest/',
+      source: { name: 'Broadcom (VMware) Developer', url: 'https://developer.broadcom.com/xapis/esxcli-command-reference/latest/' },
       kind: 'commands',
       categories: [
         {
@@ -15133,7 +15013,7 @@ const shortcutData = {
   grafana: {
       name: 'Grafana',
       icon: 'fas fa-chart-line',
-      source: 'https://grafana.com/docs/grafana/latest/dashboards/use-dashboards/',
+      source: { name: 'Grafana Docs', url: 'https://grafana.com/docs/grafana/latest/dashboards/use-dashboards/' },
       categories: [
         {
           name: 'Global',
@@ -15165,7 +15045,7 @@ const shortcutData = {
   elasticsearch: {
       name: 'Elasticsearch',
       icon: 'fas fa-search',
-      source: 'https://github.com/elastic/elasticsearch-specification',
+      source: { name: 'GitHub (official repo)', url: 'https://github.com/elastic/elasticsearch-specification' },
       kind: 'commands',
       categories: [
         {
@@ -16057,7 +15937,7 @@ const shortcutData = {
   paloalto: {
       name: 'Palo Alto PAN-OS',
       icon: 'fas fa-shield-alt',
-      source: 'https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-cli-quick-start/get-started-with-the-cli/cli-cheat-sheets',
+      source: { name: 'Palo Alto Networks Docs', url: 'https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-cli-quick-start/get-started-with-the-cli/cli-cheat-sheets' },
       kind: 'commands',
       categories: [
         {
@@ -16141,7 +16021,7 @@ const shortcutData = {
   affinity_designer: {
     name: 'Affinity Designer',
     icon: 'fas fa-bezier-curve',
-    source: 'https://affinity.help/designer2/English.lproj/pages/Workspace/shortcuts.html',
+    source: { name: 'Affinity Help', url: 'https://affinity.help/designer2/English.lproj/pages/Workspace/shortcuts.html' },
     categories: [
       { name: 'Operations', shortcuts: [
         { keys: 'Ctrl + .', desc: 'Set Selection Box', usage: 'Set Selection Box in Affinity Designer.' },
@@ -16331,7 +16211,7 @@ const shortcutData = {
   affinity_photo: {
     name: 'Affinity Photo',
     icon: 'fas fa-image',
-    source: 'https://affinity.help/photo2/English.lproj/pages/Workspace/shortcuts.html',
+    source: { name: 'Affinity Help', url: 'https://affinity.help/photo2/English.lproj/pages/Workspace/shortcuts.html' },
     categories: [
       { name: 'Editing', shortcuts: [
         { keys: 'Ctrl + Alt + I', desc: 'Resize Document', usage: 'Resize Document in Affinity Photo.' },
@@ -16521,7 +16401,7 @@ const shortcutData = {
   framer: {
       name: 'Framer',
       icon: 'fas fa-desktop',
-      source: 'https://www.framer.com/shortcuts',
+      source: { name: 'Framer Shortcuts', url: 'https://www.framer.com/shortcuts' },
       categories: [
         {
           name: 'AI Agent',
@@ -16603,60 +16483,83 @@ const shortcutData = {
       ]
     },
   spline: {
-      name: 'Spline 3D',
-      icon: 'fas fa-cube',
-      source: 'https://docs.spline.design/basics/keyboard-shortcuts',
-      categories: [
-        {
-          name: 'Shortcuts',
-          shortcuts: [
-            { keys: 'Ctrl + O', desc: 'Open / Import', usage: 'Open / Import' },
-            { keys: 'Ctrl + Shift + S', desc: 'Save File to Local', usage: 'Save File to Local' },
-            { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo' },
-            { keys: 'Ctrl + Shift + Z', desc: 'Redo', usage: 'Redo' },
-            { keys: 'Ctrl + C', desc: 'Copy', usage: 'Copy' },
-            { keys: 'Ctrl + X', desc: 'Cut', usage: 'Cut' },
-            { keys: 'Ctrl + D', desc: 'Duplicate', usage: 'Duplicate' },
-            { keys: 'Ctrl + V', desc: 'Paste', usage: 'Paste' },
-            { keys: 'Ctrl + Shift + V', desc: 'Paste in Place', usage: 'Paste in Place' },
-            { keys: 'Ctrl + A', desc: 'Select All Objects', usage: 'Select All Objects' },
-            { keys: 'Esc', desc: 'Unselect Objects', usage: 'Unselect Objects' },
-            { keys: 'Ctrl + R', desc: 'Rename', usage: 'Rename' },
-            { keys: 'Ctrl + \\', desc: 'Toggle UI', usage: 'Toggle UI' },
-            { keys: 'Ctrl + Shift + F', desc: 'Toggle Full Screen', usage: 'Toggle Full Screen' },
-            { keys: 'Ctrl', desc: 'Zoom', usage: 'Zoom In' },
-            { keys: 'Ctrl + -', desc: 'Zoom Out', usage: 'Zoom Out' },
-            { keys: 'Alt + R', desc: 'Reset View / Camera', usage: 'Reset View / Camera' },
-            { keys: 'Ctrl + G', desc: 'Group Selection', usage: 'Group Selection' },
-            { keys: 'DELETE', desc: 'Delete Objects', usage: 'Delete Objects' },
-            { keys: 'R', desc: 'Rectangle', usage: 'Rectangle' },
-            { keys: 'O', desc: 'Ellipse', usage: 'Ellipse' },
-            { keys: 'K', desc: 'Triangle', usage: 'Triangle' },
-            { keys: 'J', desc: 'Polygon', usage: 'Polygon' },
-            { keys: 'L', desc: 'Switch to Local/World Space (TransformControls)', usage: 'Switch to Local/World Space (TransformControls)' },
-            { keys: 'S', desc: 'Focus Object', usage: 'Focus Object' },
-            { keys: 'Shift + S', desc: 'Orientated to Object', usage: 'Orientated to Object' },
-            { keys: 'Shift + 1', desc: 'Zoom 100%', usage: 'Zoom 100%' },
-            { keys: 'M', desc: 'Perspective/Orthographic', usage: 'Perspective/Orthographic' },
-            { keys: 'Alt', desc: 'Transform (Mirror)', usage: 'Transform (Mirror)' },
-            { keys: 'Shift', desc: 'Transform (Aspect Ratio)', usage: 'Transform (Aspect Ratio)' },
-            { keys: 'Shift + Alt', desc: 'Transform (Mirror & Aspect Ratio)', usage: 'Transform (Mirror & Aspect Ratio)' },
-          ]
-        },
-        {
-          name: 'Additional Shortcuts',
-          shortcuts: [
-            { keys: 'V', desc: 'Move', usage: 'Activate move tool.' },
-            { keys: 'Delete', desc: 'Delete', usage: 'Delete selected object.' },
-            { keys: 'Space', desc: 'Play', usage: 'Play animation.' },
-          ]
-        },
-      ]
-    },
+    name: 'Spline',
+    icon: 'fas fa-cube',
+    source: { name: 'Spline Docs — Keyboard shortcuts', url: 'https://docs.spline.design/basics/keyboard-shortcuts' },
+    categories: [
+      {
+        name: 'File & Edit',
+        shortcuts: [
+          { keys: 'Ctrl + O', desc: 'Open / Import', usage: 'Opens or imports a file into the scene.' },
+          { keys: 'Ctrl + Shift + S', desc: 'Save File to Local', usage: 'Saves the project to a local file.' },
+          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Steps back through the edit history.' },
+          { keys: 'Ctrl + Shift + Z', desc: 'Redo', usage: 'Steps forward again; Ctrl + Y does the same on Windows.' },
+          { keys: 'Ctrl + C', desc: 'Copy', usage: 'Copies the selected objects.' },
+          { keys: 'Ctrl + X', desc: 'Cut', usage: 'Cuts the selected objects.' },
+          { keys: 'Ctrl + V', desc: 'Paste', usage: 'Pastes at the default position.' },
+          { keys: 'Ctrl + Shift + V', desc: 'Paste in Place', usage: 'Pastes at the exact coordinates the object was copied from.' },
+          { keys: 'Ctrl + D', desc: 'Duplicate', usage: 'Duplicates the selection in place.' },
+          { keys: 'Ctrl + Drag', desc: 'Drag Copy', usage: 'Drags out a copy of the object instead of moving it.' },
+        ]
+      },
+      {
+        name: 'Selection & Objects',
+        shortcuts: [
+          { keys: 'Ctrl + A', desc: 'Select All Objects', usage: 'Selects everything in the scene.' },
+          { keys: 'Esc', desc: 'Unselect / Escape Creating', usage: 'Clears the selection, and also cancels an object you are mid-creating.' },
+          { keys: 'Ctrl + R', desc: 'Rename', usage: 'Renames the selected object in the outliner.' },
+          { keys: 'Ctrl + G', desc: 'Group Selection', usage: 'Groups the selected objects; the docs list Ungroup as ⌘⇧G on Mac.' },
+          { keys: 'Delete', desc: 'Delete Objects', usage: 'Removes the selected objects.' },
+          { keys: 'S', desc: 'Focus Object', usage: 'Frames the camera on the selected object.' },
+          { keys: 'Shift + S', desc: 'Orientate to Object', usage: 'Aligns the view square-on to the selected object.' },
+        ]
+      },
+      {
+        name: 'Shape & Transform Tools',
+        shortcuts: [
+          { keys: 'R', desc: 'Rectangle', usage: 'Starts drawing a rectangle.' },
+          { keys: 'O', desc: 'Ellipse', usage: 'Starts drawing an ellipse — O, not E.' },
+          { keys: 'K', desc: 'Triangle', usage: 'Starts drawing a triangle.' },
+          { keys: 'J', desc: 'Polygon', usage: 'Starts drawing a polygon.' },
+          { keys: 'L', desc: 'Local/World Space Toggle', usage: 'Switches the transform gizmo between local and world axes.' },
+          { keys: 'Alt', desc: 'Transform: Mirror', usage: 'Hold while transforming to mirror around the centre.' },
+          { keys: 'Shift', desc: 'Transform: Aspect Ratio', usage: 'Hold while transforming to constrain proportions.' },
+          { keys: 'Shift + Alt', desc: 'Transform: Mirror & Aspect', usage: 'Hold both to mirror and constrain at once.' },
+        ]
+      },
+      {
+        name: 'View & Camera',
+        shortcuts: [
+          { keys: 'Ctrl + +', desc: 'Zoom In', usage: 'Zooms the viewport in.' },
+          { keys: 'Ctrl + -', desc: 'Zoom Out', usage: 'Zooms the viewport out.' },
+          { keys: 'Shift + 1', desc: 'Zoom 100%', usage: 'Resets zoom to actual size.' },
+          { keys: 'Alt + R', desc: 'Reset View / Camera', usage: 'Returns the camera to its default position.' },
+          { keys: 'M', desc: 'Perspective / Orthographic', usage: 'Toggles the projection mode.' },
+          { keys: 'Ctrl + \\\\', desc: 'Toggle UI', usage: 'Hides or shows the interface panels.' },
+          { keys: 'Ctrl + Shift + F', desc: 'Toggle Full Screen', usage: 'Enters or leaves full screen.' },
+          { keys: 'Ctrl + Wheel', desc: 'Zoom (mouse)', usage: 'Zooms with the scroll wheel.' },
+          { keys: 'Space + Drag', desc: 'Pan (mouse)', usage: 'Pans the viewport while Space is held.' },
+          { keys: 'Alt + Drag', desc: 'Orbit (mouse)', usage: 'Orbits the camera around the scene.' },
+        ]
+      },
+      {
+        name: 'Selecting with Modifiers',
+        shortcuts: [
+          { keys: 'Shift + Click', desc: 'Select range / one by one', usage: 'In the outliner, selects a range of objects with children; in the viewport, toggles objects one by one.' },
+          { keys: 'Shift + Drag', desc: 'Select multiple (viewport)', usage: 'Marquee-selects multiple objects with their children.' },
+          { keys: 'Ctrl + Click', desc: 'Select multiple (outliner)', usage: 'Toggles objects with children one at a time in the outliner.' },
+          { keys: 'Alt + Ctrl + Click', desc: 'Select single without children', usage: 'Picks the clicked object only, leaving its children out.' },
+          { keys: 'Alt + Ctrl + Drag', desc: 'Select multiple without children', usage: 'Marquee-selects objects while excluding their children.' },
+          { keys: 'Alt + Ctrl + Shift + Click', desc: 'Toggle without children, one by one', usage: 'Adds or removes single objects, children excluded.' },
+          { keys: 'Alt + Ctrl + Shift + Drag', desc: 'Marquee toggle without children', usage: 'Marquee version of the same child-excluding selection.' },
+        ]
+      },
+    ]
+  },
   lunacy: {
       name: 'Lunacy',
       icon: 'fas fa-palette',
-      source: 'https://docs.icons8.com/shortcuts',
+      source: { name: 'Icons8 (Lunacy) Docs', url: 'https://docs.icons8.com/shortcuts' },
       categories: [
         {
           name: 'General Shortcuts',
@@ -16851,7 +16754,7 @@ const shortcutData = {
   penpot: {
     name: 'Penpot',
     icon: 'fas fa-pen-nib',
-    source: 'https://github.com/penpot/penpot/blob/main/frontend/src/app/main/data/workspace/shortcuts.cljs',
+    source: { name: 'GitHub (official repo)', url: 'https://github.com/penpot/penpot/blob/main/frontend/src/app/main/data/workspace/shortcuts.cljs' },
     categories: [
       { name: 'Editing', shortcuts: [
         { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo in Penpot.' },
@@ -17038,7 +16941,7 @@ const shortcutData = {
   pro_tools: {
     name: 'Pro Tools',
     icon: 'fas fa-headphones-alt',
-    source: 'https://resources.avid.com/SupportFiles/PT/Pro_Tools_Shortcuts_2025.10.pdf',
+    source: { name: 'Avid (Pro Tools) Resources', url: 'https://resources.avid.com/SupportFiles/PT/Pro_Tools_Shortcuts_2025.10.pdf' },
     categories: [
       {
         name: 'Alternate Keyboard Shortcuts Presets',
@@ -17585,7 +17488,7 @@ const shortcutData = {
   cubase: {
     name: 'Cubase',
     icon: 'fas fa-music',
-    source: 'https://www.steinberg.help/r/cubase-pro/15.0/en/cubase_nuendo/topics/key_commands/key_commands_default_c.html',
+    source: { name: 'Steinberg Help', url: 'https://www.steinberg.help/r/cubase-pro/15.0/en/cubase_nuendo/topics/key_commands/key_commands_default_c.html' },
     categories: [
       {
         name: 'Add Track',
@@ -18032,20 +17935,7 @@ const shortcutData = {
           { keys: 'Drag PNG onto canvas', desc: 'Import workflow', usage: 'Drop a ComfyUI-generated PNG to load its workflow.' },
         ]
       },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: '(keyword:1.3)', desc: 'Increase weight', usage: 'Boost the influence of a keyword above 1.0.' },
-          { keys: '(keyword:0.7)', desc: 'Decrease weight', usage: 'Reduce the influence of a keyword below 1.0.' },
-          { keys: '[keyword]', desc: 'Decrease weight (alt)', usage: 'Alternate syntax to slightly decrease keyword weight.' },
-          { keys: 'masterpiece, best quality', desc: 'Quality boosters', usage: 'Standard quality tags for better outputs.' },
-          { keys: 'negative: nsfw, blurry, bad anatomy', desc: 'Negative prompt', usage: 'Common negative prompt terms to avoid artifacts.' },
-          { keys: 'BREAK', desc: 'Attention separator', usage: 'Split prompt into independently weighted sections.' },
-          { keys: 'Steps: 20-30', desc: 'Optimal steps', usage: '20 steps for speed, 30+ for quality.' },
-          { keys: 'CFG Scale: 7', desc: 'Guidance scale', usage: 'Balance between prompt adherence and creativity.' },
-        ]
-      },
-    ]
+          ]
   },
   huggingface: {
     name: 'Hugging Face CLI',
@@ -18117,7 +18007,7 @@ const shortcutData = {
   godot: {
       name: 'Godot Engine',
       icon: 'fas fa-gamepad',
-      source: 'https://docs.godotengine.org/en/4.5/tutorials/editor/default_key_mapping.html',
+      source: { name: 'Godot Docs', url: 'https://docs.godotengine.org/en/4.5/tutorials/editor/default_key_mapping.html' },
       categories: [
         {
           name: 'General editor actions',
@@ -18351,7 +18241,7 @@ const shortcutData = {
   cinema4d: {
       name: 'Cinema 4D',
       icon: 'fas fa-cube',
-      source: 'https://help.maxon.net/c4d/en-us/Content/html/Shortcuts.html',
+      source: { name: 'Maxon Help', url: 'https://help.maxon.net/c4d/en-us/Content/html/Shortcuts.html' },
       kind: 'shortcuts',
       categories: [
         {
@@ -18677,7 +18567,7 @@ const shortcutData = {
   zbrush: {
     name: 'ZBrush',
     icon: 'fas fa-paint-brush',
-    source: 'https://help.maxon.net/zbr/en-us/Content/html/user-guide/keyboard-shortcuts/shortcuts-by-category/shortcuts-by-category.html',
+    source: { name: 'Maxon Help', url: 'https://help.maxon.net/zbr/en-us/Content/html/user-guide/keyboard-shortcuts/shortcuts-by-category/shortcuts-by-category.html' },
     categories: [
       {
         name: 'General Shortcuts',
@@ -18893,7 +18783,7 @@ const shortcutData = {
   substance: {
     name: 'Substance 3D Painter',
     icon: 'fas fa-cube',
-    source: 'https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/interface/settings/shortcuts',
+    source: { name: 'Adobe Experience League', url: 'https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/interface/settings/shortcuts' },
     categories: [
       { name: 'Viewport & Camera', shortcuts: [
         { keys: 'Tab', desc: 'Hide UI', usage: 'Hide UI in Substance 3D Painter.' },
@@ -18969,7 +18859,7 @@ const shortcutData = {
   raycast: {
       name: 'Raycast',
       icon: 'fas fa-bolt',
-      source: 'https://manual.raycast.com/keyboard-shortcuts',
+      source: { name: 'Raycast Manual', url: 'https://manual.raycast.com/keyboard-shortcuts' },
       categories: [
         {
           name: 'Global',
@@ -19137,7 +19027,7 @@ const shortcutData = {
   zfs: {
     name: 'ZFS',
     icon: 'fas fa-hdd',
-    source: 'https://openzfs.github.io/openzfs-docs/man/master/8/index.html',
+    source: { name: 'OpenZFS Docs', url: 'https://openzfs.github.io/openzfs-docs/man/master/8/index.html' },
     categories: [
       {
         name: 'General',
@@ -19377,68 +19267,61 @@ const shortcutData = {
           { keys: 'Voice mode', desc: 'Voice chat', usage: 'Speak to Grok and receive spoken responses.' },
         ]
       },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'What\'s happening with [topic]?', desc: 'Real-time info', usage: 'Leverage Grok\'s access to X/Twitter real-time data.' },
-          { keys: 'Analyse the sentiment about [topic]', desc: 'Social analysis', usage: 'Use X data to gauge public sentiment.' },
-          { keys: 'Be brutally honest', desc: 'Unfiltered mode', usage: 'Request Grok\'s less filtered, direct response style.' },
-          { keys: 'Use DeepSearch and cite sources', desc: 'Research mode', usage: 'Get web-grounded answers with citations.' },
-          { keys: 'Think step by step', desc: 'Reasoning chain', usage: 'Activate chain-of-thought for complex problems.' },
-          { keys: 'Summarise the top posts about [X]', desc: 'X/Twitter summary', usage: 'Get a digest of trending X posts on a topic.' },
-          { keys: 'What does @[handle] think about...', desc: 'X user context', usage: 'Reference a specific X user\'s public posts.' },
-          { keys: 'Generate an image of...', desc: 'Image generation', usage: 'Create images using Grok\'s Aurora model.' },
-        ]
-      },
-    ]
+          ]
   },
   amazon_q: {
     name: 'Amazon Q',
     icon: 'fab fa-aws',
+    source: { name: 'AWS Docs — Amazon Q Developer shortcut keys', url: 'https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/actions-and-shortcuts.html' },
     categories: [
       {
-        name: 'VS Code Shortcuts',
+        name: 'Inline Suggestions (VS Code & JetBrains)',
         shortcuts: [
-          { keys: 'Ctrl + I', desc: 'Open Q chat', usage: 'Open the Amazon Q inline chat panel.' },
-          { keys: 'Tab', desc: 'Accept suggestion', usage: 'Accept the current AI code suggestion.' },
-          { keys: 'Esc', desc: 'Dismiss suggestion', usage: 'Dismiss the current AI suggestion.' },
-          { keys: 'Alt + C', desc: 'Next suggestion', usage: 'Cycle to the next code suggestion.' },
-          { keys: 'Ctrl + Shift + I', desc: 'Q Developer panel', usage: 'Open the Amazon Q Developer side panel.' },
+          { keys: 'Alt + C', desc: 'Manually Trigger Suggestion', usage: 'Invokes Amazon Q\'s inline suggestion on demand — this key triggers, it does not cycle. macOS uses Option + C.' },
+          { keys: 'Tab', desc: 'Accept Suggestion', usage: 'Accepts the current inline recommendation.' },
+          { keys: 'Right', desc: 'Next Suggestion', usage: 'Cycles forward through alternative recommendations.' },
+          { keys: 'Left', desc: 'Previous Suggestion', usage: 'Cycles back through recommendations.' },
+          { keys: 'Esc', desc: 'Reject Suggestion', usage: 'Dismisses the recommendation; Backspace or simply typing on does the same.' },
+          { keys: 'Alt + Right', desc: 'Accept Next Word', usage: 'Accepts the suggestion one word at a time; AWS documents the macOS form Option + Right for VS Code.' },
+        ]
+      },
+      {
+        name: 'Inline Suggestions (Eclipse)',
+        shortcuts: [
+          { keys: 'Alt + ]', desc: 'Next Suggestion', usage: 'Eclipse uses bracket keys instead of arrows.' },
+          { keys: 'Alt + [', desc: 'Previous Suggestion', usage: 'Cycles back in Eclipse.' },
+        ]
+      },
+      {
+        name: 'Agentic Chat (VS Code)',
+        shortcuts: [
+          { keys: 'Shift + Ctrl + Enter', desc: 'Run Command', usage: 'Runs the command Q proposes in the chat panel; active only while focus is in the chat.' },
+          { keys: 'Shift + Ctrl + R', desc: 'Reject Command', usage: 'Declines the proposed command.' },
+          { keys: 'Shift + Ctrl + Backspace', desc: 'Stop Generation', usage: 'Stops the response mid-stream.' },
         ]
       },
       {
         name: 'CLI Commands',
         shortcuts: [
-          { keys: 'q chat', desc: 'Start chat', usage: 'Open an interactive Q Developer chat session.' },
-          { keys: 'q chat "prompt"', desc: 'Single query', usage: 'Ask a one-shot question and get a response.' },
-          { keys: 'q translate', desc: 'Shell translation', usage: 'Translate natural language to shell commands.' },
-          { keys: 'q --help', desc: 'Help', usage: 'Show all available Q CLI commands and options.' },
-          { keys: 'q doctor', desc: 'Diagnose issues', usage: 'Check Q CLI configuration and connectivity.' },
-          { keys: 'q version', desc: 'Show version', usage: 'Display the installed Q CLI version.' },
-          { keys: 'q logout', desc: 'Logout', usage: 'Sign out of the Amazon Q session.' },
-          { keys: 'q login', desc: 'Login', usage: 'Authenticate with AWS Builder ID or IAM Identity Center.' },
+          { keys: 'q chat', desc: 'Start Chat Session', usage: 'Opens an interactive Amazon Q session in the terminal.' },
+          { keys: 'q chat "prompt"', desc: 'Single Query', usage: 'Asks one question and returns to the shell.' },
+          { keys: 'q translate', desc: 'Natural Language to Shell', usage: 'Turns an English description into a shell command.' },
+          { keys: 'q doctor', desc: 'Diagnose Installation', usage: 'Checks and fixes common setup problems.' },
+          { keys: 'q login', desc: 'Sign In', usage: 'Authenticates with Builder ID or IAM Identity Center.' },
+          { keys: 'q logout', desc: 'Sign Out', usage: 'Ends the authenticated session.' },
+          { keys: 'q version', desc: 'Show Version', usage: 'Prints the installed CLI version.' },
+          { keys: 'q --help', desc: 'Help', usage: 'Lists all available CLI commands.' },
         ]
       },
       {
         name: 'Slash Commands (Chat)',
         shortcuts: [
-          { keys: '/help', desc: 'Show commands', usage: 'List available slash commands in chat.' },
-          { keys: '/clear', desc: 'Clear history', usage: 'Clear the current conversation.' },
-          { keys: '/quit', desc: 'Exit chat', usage: 'Exit the Q CLI chat session.' },
-          { keys: '/transform', desc: 'Code transform', usage: 'Upgrade Java or other language code automatically.' },
-          { keys: '/dev', desc: 'Dev agent', usage: 'Start an agentic development task.' },
-          { keys: '/review', desc: 'Code review', usage: 'Request an automated code review.' },
-        ]
-      },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'How do I set up <AWS service>?', desc: 'AWS setup', usage: 'Q has deep AWS documentation knowledge.' },
-          { keys: 'Write a CDK stack for...', desc: 'CDK generation', usage: 'Generate AWS CDK infrastructure code.' },
-          { keys: 'Debug this CloudWatch log: [paste]', desc: 'Log analysis', usage: 'Paste logs for Q to diagnose issues.' },
-          { keys: 'Explain this IAM policy', desc: 'Policy analysis', usage: 'Get a plain-language explanation of IAM JSON.' },
-          { keys: 'Optimise this Lambda function', desc: 'Code optimisation', usage: 'Request performance and cost improvements.' },
-          { keys: 'Generate a Terraform config for...', desc: 'IaC generation', usage: 'Create Terraform or CloudFormation templates.' },
+          { keys: '/help', desc: 'Show Commands', usage: 'Lists what the chat can do.' },
+          { keys: '/clear', desc: 'Clear History', usage: 'Wipes the current conversation context.' },
+          { keys: '/quit', desc: 'Exit Chat', usage: 'Leaves the interactive session.' },
+          { keys: '/transform', desc: 'Code Transformation', usage: 'Starts an automated language or framework upgrade.' },
+          { keys: '/dev', desc: 'Development Agent', usage: 'Has Q implement a feature across files from a description.' },
+          { keys: '/review', desc: 'Code Review', usage: 'Runs an automated review for issues and vulnerabilities.' },
         ]
       },
     ]
@@ -19483,17 +19366,7 @@ const shortcutData = {
           { keys: '@clipboard', desc: 'Clipboard content', usage: 'Include clipboard contents as context.' },
         ]
       },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'Explain this code', desc: 'Code explanation', usage: 'Get a plain-language explanation of selected code.' },
-          { keys: 'Refactor using <pattern>', desc: 'Refactor request', usage: 'Apply a specific design pattern to the code.' },
-          { keys: 'Find bugs in this function', desc: 'Bug detection', usage: 'Ask Continue to identify potential issues.' },
-          { keys: 'Write tests for edge cases', desc: 'Edge case tests', usage: 'Generate comprehensive test coverage.' },
-          { keys: 'Translate this to TypeScript', desc: 'Language convert', usage: 'Convert code between programming languages.' },
-        ]
-      },
-    ]
+          ]
   },
   elevenlabs: {
     name: 'ElevenLabs',
@@ -19508,17 +19381,7 @@ const shortcutData = {
           { keys: 'Ctrl + S', desc: 'Save project', usage: 'Save the current project.' },
         ]
       },
-      {
-        name: 'Voice Design',
-        shortcuts: [
-          { keys: 'Voice Cloning', desc: 'Clone a voice', usage: 'Upload 1-3 minutes of clean audio to clone a voice.' },
-          { keys: 'Instant Voice Cloning', desc: 'Quick clone', usage: 'Clone with minimal audio sample for fast results.' },
-          { keys: 'Professional Voice Cloning', desc: 'High-fidelity clone', usage: 'Upload 30+ minutes for studio-quality cloning.' },
-          { keys: 'Voice Design', desc: 'Describe a voice', usage: 'Generate a new synthetic voice from a text description.' },
-          { keys: 'Voice Library', desc: 'Community voices', usage: 'Browse and use community-shared voices.' },
-        ]
-      },
-      {
+            {
         name: 'SSML & Control Tags',
         shortcuts: [
           { keys: '<break time=1s/>', desc: 'Add pause', usage: 'Insert a pause of specified duration.' },
@@ -19528,20 +19391,7 @@ const shortcutData = {
           { keys: '<say-as interpret-as=spell-out>', desc: 'Spell out', usage: 'Read a word letter by letter.' },
         ]
       },
-      {
-        name: 'API & Prompt Tips',
-        shortcuts: [
-          { keys: 'stability: 0.5', desc: 'Voice stability', usage: 'Lower = more expressive, higher = more consistent.' },
-          { keys: 'similarity_boost: 0.75', desc: 'Similarity boost', usage: 'Higher = closer to original voice. Balance with stability.' },
-          { keys: 'style: 0.5', desc: 'Style exaggeration', usage: 'Amplifies the speaking style of the voice.' },
-          { keys: 'use_speaker_boost: true', desc: 'Speaker boost', usage: 'Boosts similarity to target speaker.' },
-          { keys: 'model: eleven_turbo_v2', desc: 'Fast model', usage: 'Use turbo model for faster, cheaper inference.' },
-          { keys: 'model: eleven_multilingual_v2', desc: 'Multilingual', usage: 'Use multilingual model for 29 languages.' },
-          { keys: 'Add punctuation for natural pauses', desc: 'Pacing tip', usage: 'Commas and periods create natural speech rhythm.' },
-          { keys: 'Avoid ALL CAPS (use italics intent)', desc: 'Emphasis tip', usage: 'ALL CAPS distorts pronunciation; use SSML instead.' },
-        ]
-      },
-    ]
+          ]
   },
   leonardo_ai: {
     name: 'Leonardo.ai',
@@ -19560,53 +19410,13 @@ const shortcutData = {
           { keys: ']', desc: 'Increase brush', usage: 'Increase the brush size.' },
         ]
       },
-      {
-        name: 'Generation Settings',
-        shortcuts: [
-          { keys: 'Alchemy', desc: 'High quality mode', usage: 'Enable Alchemy for enhanced prompt adherence and quality.' },
-          { keys: 'PhotoReal', desc: 'Photorealistic mode', usage: 'Specialised mode for photorealistic outputs.' },
-          { keys: 'Image Guidance', desc: 'Reference image', usage: 'Use an image as style or composition reference.' },
-          { keys: 'Init Image Strength', desc: 'Image influence', usage: 'How much the reference image influences the output.' },
-          { keys: 'Negative Prompt', desc: 'Avoid elements', usage: 'List things to exclude from the generation.' },
-          { keys: 'Seed', desc: 'Reproducibility', usage: 'Fix a seed number to reproduce identical outputs.' },
-          { keys: 'Scheduler: DPM++ SDE', desc: 'Best quality', usage: 'Recommended scheduler for high-quality outputs.' },
-          { keys: 'Steps: 30-40', desc: 'Quality steps', usage: 'More steps = higher quality at cost of speed.' },
-        ]
-      },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'cinematic lighting, 8k', desc: 'Quality boosters', usage: 'Common quality-enhancing suffix terms.' },
-          { keys: 'by Greg Rutkowski', desc: 'Artist style', usage: 'Reference a specific artist\'s visual style.' },
-          { keys: 'golden hour, bokeh, shallow depth of field', desc: 'Photo style', usage: 'Photography-inspired quality modifiers.' },
-          { keys: 'shot on Sony A7, 85mm lens', desc: 'Camera prompt', usage: 'Describe a camera setup for photorealistic looks.' },
-          { keys: 'trending on ArtStation', desc: 'Quality signal', usage: 'Popular quality-boosting term for concept art.' },
-          { keys: 'negative: blurry, deformed, text, watermark', desc: 'Standard negative', usage: 'Common negative prompt to avoid artifacts.' },
-          { keys: '(subject:1.4), (style:0.8)', desc: 'Weighted terms', usage: 'Use parentheses and weights to control emphasis.' },
-          { keys: 'Low CFG (3-5)', desc: 'More creative', usage: 'Lower CFG scale allows more creative freedom.' },
-          { keys: 'High CFG (8-12)', desc: 'More literal', usage: 'Higher CFG follows the prompt more literally.' },
-        ]
-      },
-    ]
+                ]
   },
   ideogram: {
     name: 'Ideogram',
     icon: 'fas fa-font',
     categories: [
-      {
-        name: 'Generation Settings',
-        shortcuts: [
-          { keys: 'Magic Prompt: Auto', desc: 'Prompt enhancement', usage: 'Ideogram automatically expands your prompt for better results.' },
-          { keys: 'Magic Prompt: On', desc: 'Force enhancement', usage: 'Always enhance the prompt regardless of length.' },
-          { keys: 'Magic Prompt: Off', desc: 'Exact prompt', usage: 'Use your prompt exactly as written.' },
-          { keys: 'Style: Realistic', desc: 'Photorealistic', usage: 'Generate photorealistic images.' },
-          { keys: 'Style: Design', desc: 'Graphic design', usage: 'Clean, design-oriented output. Best for text in images.' },
-          { keys: 'Style: 3D Render', desc: '3D look', usage: 'Generate 3D rendered style images.' },
-          { keys: 'Style: Anime', desc: 'Anime style', usage: 'Generate anime/manga style images.' },
-          { keys: 'Aspect Ratio', desc: 'Output dimensions', usage: 'Choose from standard ratios: 1:1, 16:9, 9:16, etc.' },
-        ]
-      },
-      {
+            {
         name: 'Text in Images',
         shortcuts: [
           { keys: '"text in quotes"', desc: 'Render text', usage: 'Put the exact text you want displayed in double quotes.' },
@@ -19615,18 +19425,7 @@ const shortcutData = {
           { keys: 'Specify font style', desc: 'Font control', usage: 'Describe font: "bold sans-serif", "handwritten", etc.' },
         ]
       },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'Describe text placement', desc: 'Layout control', usage: 'Specify: "text at bottom", "centred logo" etc.' },
-          { keys: 'Minimalist design, white background', desc: 'Clean look', usage: 'Useful for logos and marketing assets.' },
-          { keys: 'Vector style, flat design', desc: 'Icon/logo style', usage: 'Great for creating icon-like outputs.' },
-          { keys: 'Color palette: [colors]', desc: 'Color control', usage: 'Specify brand colors: "blue and white palette".' },
-          { keys: 'Remix: vary seed', desc: 'Iterate output', usage: 'Remix existing images to explore variations.' },
-          { keys: 'Negative: blurry text', desc: 'Avoid bad text', usage: 'Add "blurry text" to negatives to improve legibility.' },
-        ]
-      },
-    ]
+          ]
   },
   udio: {
     name: 'Udio',
@@ -19642,23 +19441,7 @@ const shortcutData = {
           { keys: 'Remaster', desc: 'Improve quality', usage: 'Enhance audio quality of the current generation.' },
         ]
       },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: '[genre], [mood], [instruments]', desc: 'Core structure', usage: 'Basic prompt structure: genre + mood + instruments.' },
-          { keys: 'Instrumental only', desc: 'No vocals', usage: 'Remove vocals from the generated track.' },
-          { keys: '[verse]\n[chorus]', desc: 'Song structure', usage: 'Use brackets to define song structure sections.' },
-          { keys: 'BPM: 120', desc: 'Set tempo', usage: 'Specify beats per minute for the track.' },
-          { keys: 'Key of C major', desc: 'Set key', usage: 'Specify the musical key for the composition.' },
-          { keys: 'no lyrics, pure instrumental', desc: 'Instrumental tip', usage: 'Explicitly request an instrumental track.' },
-          { keys: 'in the style of [artist]', desc: 'Artist reference', usage: 'Reference an artist\'s style for the generation.' },
-          { keys: 'uplifting, energetic, fast-paced', desc: 'Mood descriptors', usage: 'Mood words strongly influence the output feel.' },
-          { keys: 'lo-fi, vinyl crackle, warm tones', desc: 'Texture terms', usage: 'Describe the sonic texture and production style.' },
-          { keys: 'cinematic score, orchestral, epic', desc: 'Film score style', usage: 'Generate cinematic background music.' },
-          { keys: 'Use Extend for full songs', desc: 'Full track tip', usage: 'Generate 30s then extend multiple times for a full track.' },
-        ]
-      },
-    ]
+          ]
   },
   activepieces: {
     name: 'Activepieces',
@@ -19675,15 +19458,7 @@ const shortcutData = {
           { keys: 'Ctrl + S', desc: 'Save flow', usage: 'Save the current automation flow.' },
         ]
       },
-      {
-        name: 'Prompt Tips',
-        shortcuts: [
-          { keys: 'Test flow', desc: 'Test automation', usage: 'Run a test to verify your flow works end-to-end.' },
-          { keys: 'Use Code step for custom logic', desc: 'Custom code', usage: 'Add a Code step to write JavaScript for complex transformations.' },
-          { keys: 'Branch for conditional logic', desc: 'Branching', usage: 'Use Branch steps to route data based on conditions.' },
-        ]
-      },
-    ]
+          ]
   },
   airflow: {
     name: 'Apache Airflow',
@@ -19704,18 +19479,7 @@ const shortcutData = {
           { keys: 'airflow celery worker', desc: 'Start worker', usage: 'Start a Celery worker for task execution.' },
         ]
       },
-      {
-        name: 'DAG Authoring Tips',
-        shortcuts: [
-          { keys: '@daily', desc: 'Daily schedule', usage: 'Shorthand for cron 0 0 * * * - runs at midnight daily.' },
-          { keys: '@hourly', desc: 'Hourly schedule', usage: 'Shorthand for cron 0 * * * * - runs every hour.' },
-          { keys: 'catchup=False', desc: 'Disable backfill', usage: 'Prevent Airflow from running missed historical DAG runs.' },
-          { keys: 'task >> next_task', desc: 'Set dependency', usage: 'Define task execution order using >> operator.' },
-          { keys: 'PythonOperator', desc: 'Python task', usage: 'Run a Python function as an Airflow task.' },
-          { keys: 'BashOperator', desc: 'Shell task', usage: 'Run a bash command as an Airflow task.' },
-        ]
-      },
-    ]
+          ]
   },
   kestra: {
     name: 'Kestra',
@@ -19732,17 +19496,7 @@ const shortcutData = {
           { keys: 'kestra plugins list', desc: 'List plugins', usage: 'List all installed Kestra plugins.' },
         ]
       },
-      {
-        name: 'Flow YAML Tips',
-        shortcuts: [
-          { keys: 'id: my-flow', desc: 'Flow ID', usage: 'Unique identifier for the flow.' },
-          { keys: 'namespace: company.team', desc: 'Namespace', usage: 'Organise flows by namespace.' },
-          { keys: 'triggers: schedule', desc: 'Schedule trigger', usage: 'Run flow on a cron schedule.' },
-          { keys: '{{ inputs.param }}', desc: 'Input variable', usage: 'Reference a flow input parameter in tasks.' },
-          { keys: '{{ outputs.task.value }}', desc: 'Task output', usage: 'Reference the output of a previous task.' },
-        ]
-      },
-    ]
+          ]
   },
   nmap: {
     name: 'Nmap',
@@ -19799,17 +19553,7 @@ const shortcutData = {
           { keys: 'echo "enable server backend/server1" | socat stdio /var/run/haproxy.sock', desc: 'Enable server', usage: 'Re-enable a backend server.' },
         ]
       },
-      {
-        name: 'Config Tips',
-        shortcuts: [
-          { keys: 'balance roundrobin', desc: 'Round-robin LB', usage: 'Distribute requests evenly across backends.' },
-          { keys: 'balance leastconn', desc: 'Least connections', usage: 'Route to server with fewest active connections.' },
-          { keys: 'option httpchk GET /health', desc: 'Health check', usage: 'Check backend health with HTTP endpoint.' },
-          { keys: 'timeout connect 5s', desc: 'Connect timeout', usage: 'Set max time to establish backend connection.' },
-          { keys: 'maxconn 10000', desc: 'Max connections', usage: 'Set maximum concurrent connections.' },
-        ]
-      },
-    ]
+          ]
   },
   openshift: {
     name: 'OpenShift',
@@ -21198,58 +20942,87 @@ const shortcutData = {
   shortcut: {
     name: 'Shortcut',
     icon: 'fas fa-forward',
+    source: { name: 'Shortcut Help Center — Keyboard Commands', url: 'https://www.shortcut.com/help/getting-started/keyboard-commands' },
     categories: [
-      { name: 'General', shortcuts: [
-        { keys: 'Ctrl + K', desc: 'Command Palette', usage: 'Open the Command Palette - Cmd + K on Mac. Search and run almost any action.' },
-        { keys: '?', desc: 'Show keyboard shortcuts', usage: 'Show the full keyboard shortcuts list anywhere in the app.' },
-        { keys: 'O + A', desc: 'Open Activity Feed', usage: 'Press O then A to open the Activity Feed.' },
-        { keys: 'F', desc: 'Toggle fullscreen mode', usage: 'Toggle fullscreen mode on the current view.' },
-        { keys: 'M', desc: 'Toggle sidebar', usage: 'Maximize or minimize the left sidebar.' },
-      ]},
-      { name: 'Create', shortcuts: [
-        { keys: 'N', desc: 'New Story', usage: 'Add a new Story from anywhere.' },
-        { keys: 'Shift + N', desc: 'New Story from template', usage: 'Add a new Story starting from a Story Template.' },
-      ]},
-      { name: 'Navigation', shortcuts: [
-        { keys: 'G + D', desc: 'Go to Home', usage: 'Press G then D to go to the Home dashboard.' },
-        { keys: 'G + S', desc: 'Go to Stories', usage: 'Press G then S to open the Stories page.' },
-        { keys: 'G + E', desc: 'Go to Epics', usage: 'Press G then E to open Epics.' },
-        { keys: 'G + I', desc: 'Go to Iterations', usage: 'Press G then I to open Iterations (sprints).' },
-        { keys: 'G + B', desc: 'Go to Backlog', usage: 'Press G then B to open the Backlog.' },
-        { keys: 'G + L', desc: 'Go to Labels', usage: 'Press G then L to open Labels.' },
-        { keys: 'G + O', desc: 'Go to Objectives', usage: 'Press G then O to open Objectives.' },
-        { keys: 'G + R', desc: 'Go to Reports', usage: 'Press G then R to open Reports.' },
-        { keys: 'G + Space', desc: 'Advanced Story search', usage: 'Press G then Space to open advanced Story search.' },
-      ]},
-      { name: 'Stories Page', shortcuts: [
-        { keys: 'Shift + S', desc: 'Save Space changes', usage: 'Save changes to the current Space (Stories beta).' },
-        { keys: 'Shift + U', desc: 'Discard Space changes', usage: 'Discard unsaved Space changes (Stories beta).' },
-        { keys: 'T', desc: 'Story Template menu', usage: 'Open the Story Template menu.' },
-        { keys: 'Ctrl + Shift + Up', desc: 'Move Story to top', usage: 'Move the selected Story to the top of the list - Cmd + Shift + Up on Mac.' },
-        { keys: 'Ctrl + Shift + Down', desc: 'Move Story to bottom', usage: 'Move the selected Story to the bottom of the list - Cmd + Shift + Down on Mac.' },
-        { keys: 'D + 1', desc: 'Title-only density', usage: 'Press D then 1 to switch to the "Title only" Story density view.' },
-        { keys: 'D + 2', desc: 'Minimal density', usage: 'Press D then 2 to switch to the "Minimal" Story density view.' },
-        { keys: 'D + 3', desc: 'Standard density', usage: 'Press D then 3 to switch to the "Standard" Story density view.' },
-        { keys: 'D + 4', desc: 'Jumbo density', usage: 'Press D then 4 to switch to the "Jumbo" Story density view.' },
-      ]},
-      { name: 'Story Dialog', shortcuts: [
-        { keys: 'I', desc: 'Toggle yourself as owner', usage: 'Add or remove yourself as an owner of the current Story.' },
-        { keys: 'F', desc: 'Follow / unfollow Story', usage: 'Follow or unfollow the current Story.' },
-        { keys: 'Shift + S', desc: 'Change state', usage: 'Change the workflow state of the current Story.' },
-        { keys: 'Shift + I', desc: 'Change iteration', usage: 'Change the Iteration of the current Story.' },
-        { keys: 'Shift + E', desc: 'Change estimate', usage: 'Change the estimate of the current Story.' },
-        { keys: 'Ctrl + Shift + ,', desc: 'Copy branch name', usage: 'Copy the Git branch name for this Story - Cmd + Shift + , on Mac.' },
-        { keys: 'Ctrl + Shift + .', desc: 'Copy branch & start', usage: 'Copy the branch name and move the Story to Started - Cmd + Shift + . on Mac.' },
-        { keys: 'Ctrl + Enter', desc: 'Save description / comment', usage: 'Save a Story description or comment - Cmd + Enter on Mac.' },
-        { keys: 'Ctrl + Alt + C', desc: 'Copy Story as Markdown', usage: 'Copy the open Story and all its context to Markdown - Cmd + Option + C on Mac.' },
-        { keys: 'Shift + A', desc: 'Archive Story', usage: 'Archive the current Story.' },
-        { keys: 'Shift + D', desc: 'Delete archived Story', usage: 'Delete a Story that was already archived.' },
-      ]},
-      { name: 'Epic View', shortcuts: [
-        { keys: 'N', desc: 'New Story in Epic', usage: 'Add a new Story inside the current Epic.' },
-        { keys: 'Ctrl + Enter', desc: 'Save changes', usage: 'Save changes in the Epic view - Cmd + Enter on Mac.' },
-      ]},
-    ],
+      {
+        name: 'General',
+        shortcuts: [
+          { keys: 'Ctrl + K', desc: 'Power Bar (Command Palette)', usage: 'Navigate, create and act from one box — Shortcut\'s front door for keyboard use.' },
+          { keys: '?', desc: 'Show Keyboard Shortcuts', usage: 'Opens the shortcut reference; typing s then h does the same.' },
+          { keys: 'O, A', desc: 'Open Activity Feed', usage: 'Sequence: press O, then A.' },
+          { keys: 'F', desc: 'Toggle Fullscreen Mode', usage: 'Expands the current view. Inside a Story dialog, F follows the Story instead.' },
+          { keys: 'M', desc: 'Maximize/Minimize Sidebar', usage: 'Collapses or expands the sidebar.' },
+        ]
+      },
+      {
+        name: 'Go-To Navigation',
+        shortcuts: [
+          { keys: 'G, D', desc: 'Go to My Work / Home', usage: 'All G sequences are two quick keys, not chords: press G, then the letter.' },
+          { keys: 'G, S', desc: 'Go to Stories', usage: 'Opens the Stories page.' },
+          { keys: 'G, E', desc: 'Go to Epics', usage: 'Opens Epics.' },
+          { keys: 'G, O', desc: 'Go to Objectives', usage: 'Opens Objectives.' },
+          { keys: 'G, I', desc: 'Go to Iterations', usage: 'Opens Iterations.' },
+          { keys: 'G, B', desc: 'Go to Backlog', usage: 'Opens the Backlog.' },
+          { keys: 'G, W', desc: 'Go to Docs', usage: 'Opens Docs (W for write).' },
+          { keys: 'G, P', desc: 'Go to Projects', usage: 'Opens the deprecated Projects view where enabled.' },
+          { keys: 'G, L', desc: 'Go to Labels', usage: 'Opens Labels.' },
+          { keys: 'G, R', desc: 'Go to Reports', usage: 'Opens Reports.' },
+          { keys: 'G, T', desc: 'Go to Status', usage: 'Opens the Status page.' },
+          { keys: 'G, Space', desc: 'Advanced Story Search', usage: 'Jumps to advanced search with operators.' },
+          { keys: '/', desc: 'Go to Search', usage: 'Focuses the search box.' },
+          { keys: 'G, S, P', desc: 'Go to Space', usage: 'Three-key sequence for Spaces.' },
+          { keys: 'G, S, E', desc: 'Go to Settings', usage: 'Three-key sequence for Settings.' },
+          { keys: 'G, I, N', desc: 'Go to Integrations', usage: 'Three-key sequence for Integrations.' },
+        ]
+      },
+      {
+        name: 'Create',
+        shortcuts: [
+          { keys: 'N', desc: 'New Story', usage: 'Creates a Story anywhere; inside an Epic it creates the Story in that Epic.' },
+          { keys: 'Shift + N', desc: 'New Story from Template', usage: 'Creates a Story pre-filled from a template.' },
+          { keys: 'N, E, P', desc: 'New Epic', usage: 'Sequence: N, then E, then P.' },
+          { keys: 'N, I', desc: 'New Iteration', usage: 'Creates an Iteration.' },
+          { keys: 'N, L', desc: 'New Label', usage: 'Creates a Label.' },
+          { keys: 'N, O', desc: 'New Objective', usage: 'Creates an Objective.' },
+          { keys: 'N, D', desc: 'New Doc', usage: 'Creates a Doc where Docs are enabled.' },
+        ]
+      },
+      {
+        name: 'Stories Page',
+        shortcuts: [
+          { keys: 'Shift + S', desc: 'Save Space Changes', usage: 'Saves the current Space configuration. Inside a Story dialog, the same keys change the workflow state instead.' },
+          { keys: 'Shift + U', desc: 'Discard Space Changes', usage: 'Reverts unsaved Space changes.' },
+          { keys: 'T', desc: 'Story Template Menu', usage: 'Opens the template picker.' },
+          { keys: 'Ctrl + Shift + Up', desc: 'Move Story to Top', usage: 'Sends the selected Story to the top of its list.' },
+          { keys: 'Ctrl + Shift + Down', desc: 'Move Story to Bottom', usage: 'Sends it to the bottom.' },
+          { keys: 'D, 1', desc: 'Title-Only Density', usage: 'The D sequences switch the card density view.' },
+          { keys: 'D, 2', desc: 'Minimal Density', usage: 'Compact cards.' },
+          { keys: 'D, 3', desc: 'Standard Density', usage: 'The default card size.' },
+          { keys: 'D, 4', desc: 'Jumbo Density', usage: 'The largest card view.' },
+        ]
+      },
+      {
+        name: 'Story Dialog',
+        shortcuts: [
+          { keys: 'A', desc: 'Update Story Owners', usage: 'Opens the owners picker.' },
+          { keys: 'I', desc: 'Toggle Yourself as Owner', usage: 'Adds or removes you as an owner in one keystroke.' },
+          { keys: 'F', desc: 'Follow / Unfollow Story', usage: 'Subscribes you to the Story\'s activity.' },
+          { keys: 'E', desc: 'Edit Story Description', usage: 'Drops the cursor into the description.' },
+          { keys: 'R', desc: 'Rename Story Title', usage: 'Puts the title into edit mode.' },
+          { keys: 'C', desc: 'Add Comment', usage: 'Jumps to the comment box.' },
+          { keys: 'Shift + S', desc: 'Change State', usage: 'Opens the workflow-state picker.' },
+          { keys: 'Shift + I', desc: 'Change Iteration', usage: 'Opens the iteration picker.' },
+          { keys: 'Shift + E', desc: 'Change Estimate', usage: 'Opens the estimate picker.' },
+          { keys: 'Ctrl + Shift + ,', desc: 'Copy Branch Name', usage: 'Copies the Git branch name for the Story.' },
+          { keys: 'Ctrl + Shift + .', desc: 'Copy Branch & Start', usage: 'Copies the branch name and moves the Story to Started.' },
+          { keys: 'Ctrl + Enter', desc: 'Save Description / Comment', usage: 'Saves what you are writing; also saves changes in an Epic.' },
+          { keys: 'Alt + C', desc: 'Copy Permalink', usage: 'Copies a direct link to the Story.' },
+          { keys: 'Ctrl + Alt + C', desc: 'Copy Story as Markdown', usage: 'Copies the open Story as Markdown; the docs list the Mac form Cmd + Opt + C.' },
+          { keys: 'Shift + A', desc: 'Archive Story', usage: 'Archives the Story.' },
+          { keys: 'Shift + D', desc: 'Delete Archived Story', usage: 'Deletes a Story that is already archived — the two-step guard against accidents.' },
+        ]
+      },
+    ]
   },
 };
 
