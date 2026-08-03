@@ -4967,34 +4967,71 @@ const shortcutData = {
   gemini: {
     name: 'Gemini',
     icon: 'fas fa-gem',
+    source: { name: 'Gemini CLI documentation (Google, GitHub)', url: 'https://github.com/google-gemini/gemini-cli/tree/main/docs/reference' },
     categories: [
       {
-        name: 'Web Shortcuts',
+        name: 'Web App',
         shortcuts: [
-          { keys: 'Enter', desc: 'Send message', usage: 'Submit your prompt to Gemini.' },
-          { keys: 'Shift + Enter', desc: 'New line', usage: 'Add a line break without sending.' },
-          { keys: 'Ctrl + Shift + C', desc: 'Copy response', usage: 'Copy the last response to clipboard.' },
-          { keys: 'Ctrl + Z', desc: 'Edit last message', usage: 'Edit your last sent message.' },
-          { keys: 'Ctrl + /', desc: 'Keyboard shortcuts', usage: 'Display the keyboard shortcuts reference.' },
+          { keys: 'Enter', desc: 'Send Message', usage: 'Sends the prompt in gemini.google.com.' },
+          { keys: 'Shift + Enter', desc: 'New Line', usage: 'Line break without sending.' },
+          { keys: 'Ctrl + Shift + C', desc: 'Copy Response', usage: 'Copies the last response.' },
+          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo in the prompt box.' },
+          { keys: 'Ctrl + /', desc: 'Show Shortcuts', usage: 'Opens the in-app shortcut list.' },
         ]
       },
       {
-        name: 'Gemini CLI',
+        name: 'Gemini CLI — Slash Commands',
         shortcuts: [
-          { keys: 'gemini', desc: 'Start interactive', usage: 'Launch interactive Gemini CLI session.' },
-          { keys: 'gemini -p "prompt"', desc: 'One-shot prompt', usage: 'Send a single prompt and get a response.' },
-          { keys: 'cat file | gemini', desc: 'Pipe input', usage: 'Pipe file content as context.' },
-          { keys: '/help', desc: 'Show commands', usage: 'Display available CLI slash commands.' },
-          { keys: '/clear', desc: 'Clear history', usage: 'Clear the conversation history.' },
-          { keys: '/quit', desc: 'Exit', usage: 'Exit the Gemini CLI.' },
-          { keys: '/tools', desc: 'List tools', usage: 'Show available integrated tools.' },
-          { keys: '/mcp', desc: 'MCP status', usage: 'Show connected MCP servers.' },
-          { keys: '--model gemini-2.0-flash', desc: 'Select model', usage: 'Specify model version on startup.' },
-          { keys: '--yolo', desc: 'Auto-approve mode', usage: 'Skip confirmation prompts for file edits.' },
-          { keys: '--debug', desc: 'Debug mode', usage: 'Show detailed debug output.' },
+          { keys: '/help', desc: 'Show Help', usage: 'Lists commands and keybindings (alias /?).' },
+          { keys: '/clear', desc: 'Clear Screen', usage: 'Wipes the terminal display (Ctrl + L does the same).' },
+          { keys: '/quit', desc: 'Exit CLI', usage: 'Ends the session (alias /exit).' },
+          { keys: '/tools', desc: 'List Tools', usage: 'Shows the tools available to the model.' },
+          { keys: '/mcp', desc: 'MCP Servers', usage: 'Lists configured MCP servers and their tools.' },
+          { keys: '/memory', desc: 'Manage Memory', usage: 'Show, add to, or refresh the hierarchical GEMINI.md context.' },
+          { keys: '/stats', desc: 'Session Stats', usage: 'Token usage and savings for the session.' },
+          { keys: '/chat', desc: 'Save / Resume Chat', usage: 'Checkpoint conversations: /chat save, /chat resume, /chat list.' },
+          { keys: '/compress', desc: 'Compress Context', usage: 'Replaces the whole context with a summary to save tokens.' },
+          { keys: '/copy', desc: 'Copy Last Output', usage: 'Copies the last response to the clipboard.' },
+          { keys: '/theme', desc: 'Change Theme', usage: 'Opens the visual theme picker.' },
+          { keys: '/vim', desc: 'Vim Mode', usage: 'Toggles vim-style editing in the input field.' },
         ]
       },
-          ]
+      {
+        name: 'Gemini CLI — Editing Keys',
+        shortcuts: [
+          { keys: 'Ctrl + A', desc: 'Start of Line', usage: 'Moves the cursor to the beginning of the input.' },
+          { keys: 'Ctrl + E', desc: 'End of Line', usage: 'Moves the cursor to the end of the input.' },
+          { keys: 'Alt + B', desc: 'Word Left', usage: 'Moves back one word.' },
+          { keys: 'Alt + F', desc: 'Word Right', usage: 'Moves forward one word.' },
+          { keys: 'Ctrl + W', desc: 'Delete Word Left', usage: 'Deletes the previous word.' },
+          { keys: 'Ctrl + K', desc: 'Delete to End', usage: 'Deletes from the cursor to the end of the line.' },
+          { keys: 'Ctrl + U', desc: 'Delete to Start', usage: 'Deletes from the cursor to the start of the line.' },
+          { keys: 'Ctrl + Z', desc: 'Undo Edit', usage: 'Undoes the last text edit in the input.' },
+        ]
+      },
+      {
+        name: 'Gemini CLI — Control & History',
+        shortcuts: [
+          { keys: 'Ctrl + C', desc: 'Cancel / Quit', usage: 'Cancels the current request; quits when input is empty.' },
+          { keys: 'Ctrl + D', desc: 'Exit on Empty', usage: 'Exits the CLI when the input buffer is empty.' },
+          { keys: 'Esc', desc: 'Dismiss / Cancel', usage: 'Closes dialogs or cancels the current focus.' },
+          { keys: 'Ctrl + P', desc: 'Previous History', usage: 'Recalls the previous prompt (with Up arrow).' },
+          { keys: 'Ctrl + N', desc: 'Next History', usage: 'Moves forward through prompt history.' },
+          { keys: 'Ctrl + R', desc: 'Search History', usage: 'Reverse-search through past prompts.' },
+        ]
+      },
+      {
+        name: 'Gemini CLI — Invocation & Flags',
+        shortcuts: [
+          { keys: 'gemini', desc: 'Start Interactive Session', usage: 'Launches the REPL in the current directory.' },
+          { keys: 'gemini -p "prompt"', desc: 'One-Shot Prompt', usage: 'Runs a single prompt non-interactively and prints the answer.' },
+          { keys: 'cat file | gemini', desc: 'Pipe Input', usage: 'Feeds file contents as context via stdin.' },
+          { keys: '--model <name>', desc: 'Select Model', usage: 'Chooses the Gemini model for the session.' },
+          { keys: '--yolo', desc: 'Auto-Approve Actions', usage: 'Skips confirmation prompts for tool calls — use with care.' },
+          { keys: '--debug', desc: 'Debug Output', usage: 'Verbose logging for troubleshooting.' },
+        ]
+      },
+    ]
   },
   midjourney: {
     name: 'Midjourney',
@@ -5048,17 +5085,6 @@ const shortcutData = {
           { keys: 'query filetype:pdf', desc: 'File type filter', usage: 'Find PDF documents about a topic.' },
           { keys: 'query after:2024', desc: 'Date filter', usage: 'Restrict results to after a specific year.' },
           { keys: '-exclude term', desc: 'Exclude term', usage: 'Remove a word from search results.' },
-        ]
-      },
-      {
-        name: 'Focus Modes',
-        shortcuts: [
-          { keys: 'Web (default)', desc: 'General web search', usage: 'Search across the entire web.' },
-          { keys: 'Academic', desc: 'Research papers', usage: 'Search peer-reviewed academic sources.' },
-          { keys: 'YouTube', desc: 'Video search', usage: 'Find and summarise YouTube videos.' },
-          { keys: 'Reddit', desc: 'Community search', usage: 'Search Reddit discussions and threads.' },
-          { keys: 'Writing', desc: 'Writing assistant', usage: 'Draft and edit text without web citations.' },
-          { keys: 'Math', desc: 'Math solver', usage: 'Solve mathematical problems step by step.' },
         ]
       },
           ]
@@ -5669,6 +5695,7 @@ const shortcutData = {
   docker: {
     name: 'Docker',
     icon: 'fab fa-docker',
+    source: { name: 'Docker CLI reference', url: 'https://docs.docker.com/reference/cli/docker/' },
     categories: [
       {
         name: 'Container Management',
@@ -5719,6 +5746,7 @@ const shortcutData = {
   git: {
     name: 'Git',
     icon: 'fab fa-git-alt',
+    source: { name: 'Git official documentation', url: 'https://git-scm.com/docs' },
     categories: [
       {
         name: 'Basic Commands',
@@ -5823,6 +5851,7 @@ const shortcutData = {
   bash: {
     name: 'Bash / Shell',
     icon: 'fas fa-terminal',
+    source: { name: 'GNU Bash Reference Manual', url: 'https://www.gnu.org/software/bash/manual/bash.html' },
     categories: [
       {
         name: 'Files & Directories',
@@ -5874,6 +5903,36 @@ const shortcutData = {
           { keys: '[cmd] >> [file]', desc: 'Append output', usage: 'Append command output to file.' },
           { keys: '[cmd] 2>&1', desc: 'Redirect stderr', usage: 'Merge error output with standard output.' },
           { keys: 'xargs', desc: 'Pass arguments', usage: 'Convert stdin to arguments for a command.' },
+        ]
+      },
+      {
+        name: 'Line Editing (readline)',
+        shortcuts: [
+          { keys: 'Ctrl + A', desc: 'Start of Line', usage: 'Moves the cursor to the beginning of the command line.' },
+          { keys: 'Ctrl + E', desc: 'End of Line', usage: 'Moves the cursor to the end of the line.' },
+          { keys: 'Ctrl + B', desc: 'Back One Character', usage: 'Same as Left arrow.' },
+          { keys: 'Ctrl + F', desc: 'Forward One Character', usage: 'Same as Right arrow.' },
+          { keys: 'Alt + B', desc: 'Back One Word', usage: 'Jumps the cursor back a word.' },
+          { keys: 'Alt + F', desc: 'Forward One Word', usage: 'Jumps the cursor forward a word.' },
+          { keys: 'Ctrl + W', desc: 'Delete Word Before Cursor', usage: 'Cuts the previous word into the kill ring.' },
+          { keys: 'Alt + D', desc: 'Delete Word After Cursor', usage: 'Cuts the next word.' },
+          { keys: 'Ctrl + U', desc: 'Delete to Line Start', usage: 'Cuts everything before the cursor — fastest way to scrap a mistyped command.' },
+          { keys: 'Ctrl + K', desc: 'Delete to Line End', usage: 'Cuts everything after the cursor.' },
+          { keys: 'Ctrl + Y', desc: 'Yank (Paste)', usage: 'Pastes the most recently cut text back.' },
+          { keys: 'Ctrl + T', desc: 'Transpose Characters', usage: 'Swaps the two characters around the cursor — fixes “sl” for “ls”.' },
+          { keys: 'Ctrl + L', desc: 'Clear Screen', usage: 'Clears the terminal, keeping the current line.' },
+          { keys: 'Ctrl + _', desc: 'Undo', usage: 'Undoes the last editing change (also Ctrl + X, Ctrl + U).' },
+        ]
+      },
+      {
+        name: 'History',
+        shortcuts: [
+          { keys: 'Ctrl + R', desc: 'Reverse Search', usage: 'Incremental search backward through history — keep pressing to go further back.' },
+          { keys: 'Ctrl + S', desc: 'Forward Search', usage: 'Searches forward (needs `stty -ixon` in many terminals).' },
+          { keys: 'Ctrl + P', desc: 'Previous Command', usage: 'Same as Up arrow.' },
+          { keys: 'Ctrl + N', desc: 'Next Command', usage: 'Same as Down arrow.' },
+          { keys: '!!', desc: 'Repeat Last Command', usage: 'Classic use: `sudo !!` after a permissions error.' },
+          { keys: '!$', desc: 'Last Argument', usage: 'Expands to the final argument of the previous command.' },
         ]
       },
     ]
@@ -6187,6 +6246,7 @@ const shortcutData = {
   cisco: {
     name: 'Cisco IOS',
     icon: 'fas fa-network-wired',
+    source: { name: 'Cisco IOS Configuration Fundamentals — Using the CLI', url: 'https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/fundamentals/configuration/15mt/fundamentals-15-mt-book/cf-cli-basics.html' },
     categories: [
       {
         name: 'Basic Commands',
@@ -19667,69 +19727,99 @@ const shortcutData = {
   quickbooks: {
     name: 'QuickBooks',
     icon: 'fas fa-calculator',
+    source: { name: 'Intuit — Keyboard shortcuts in QuickBooks Desktop', url: 'https://quickbooks.intuit.com/learn-support/en-us/help-article/multi-user-mode/keyboard-shortcuts-quickbooks-desktop/L7xynnaf3_US_en_US' },
     categories: [
       {
-        name: 'Navigation',
+        name: 'Navigate',
         shortcuts: [
-          { keys: 'Ctrl + 1', desc: 'Open Home', usage: 'Opens the QuickBooks Home page.' },
-          { keys: 'Ctrl + W', desc: 'Chart of Accounts', usage: 'Opens the Chart of Accounts list.' },
-          { keys: 'Ctrl + A', desc: 'Accounts List', usage: 'Opens the full list of all accounts.' },
-          { keys: 'Ctrl + J', desc: 'Customer Center', usage: 'Opens the Customer Center.' },
-          { keys: 'Ctrl + U', desc: 'Vendor Center', usage: 'Opens the Vendor Center.' },
-          { keys: 'Ctrl + K', desc: 'Employee Center', usage: 'Opens the Employee Center.' },
-          { keys: 'F1', desc: 'Help', usage: 'Opens QuickBooks Help window.' },
-          { keys: 'F2', desc: 'Product Information', usage: 'Shows product and license info.' },
+          { keys: 'F1', desc: 'Open Help', usage: 'Opens the QuickBooks Desktop Help window.' },
+          { keys: 'Esc', desc: 'Close Current Window', usage: 'Closes whatever window has focus.' },
+          { keys: 'F2 or Ctrl + 1', desc: 'Product Information', usage: 'License number, file location, and file size — the first window support asks for.' },
+          { keys: 'Ctrl + F', desc: 'Find Transaction', usage: 'Opens the Find window for transactions and invoices.' },
+          { keys: 'F3 or Ctrl + 2', desc: 'Search', usage: 'Global search across customers, accounts, and transactions.' },
+          { keys: 'F2, F3', desc: 'Tech Help Window', usage: 'Open Product Information first, then press F3 for system details.' },
         ]
       },
       {
-        name: 'Transactions',
+        name: 'Data Fields on Forms',
         shortcuts: [
-          { keys: 'Ctrl + I', desc: 'Create Invoice', usage: 'Opens a new blank invoice form.' },
-          { keys: 'Ctrl + E', desc: 'Edit Transaction', usage: 'Opens the selected transaction for editing.' },
-          { keys: 'Ctrl + D', desc: 'Delete Transaction', usage: 'Deletes the currently selected transaction.' },
-          { keys: 'Ctrl + M', desc: 'Memorize Transaction', usage: 'Memorizes the transaction for recurring use.' },
-          { keys: 'Ctrl + N', desc: 'New Transaction', usage: 'Creates a new transaction of the same type.' },
-          { keys: 'Ctrl + T', desc: 'Memorized List', usage: 'Opens the memorized transactions list.' },
-          { keys: 'Ctrl + L', desc: 'Open List', usage: 'Opens the list associated with current field.' },
-          { keys: 'Ctrl + Q', desc: 'Quick Report', usage: 'Generates a quick report on selected item.' },
-        ]
-      },
-      {
-        name: 'Editing',
-        shortcuts: [
-          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undoes the last action.' },
-          { keys: 'Ctrl + C', desc: 'Copy', usage: 'Copies selected text or data.' },
-          { keys: 'Ctrl + V', desc: 'Paste', usage: 'Pastes clipboard content.' },
-          { keys: 'Ctrl + X', desc: 'Cut', usage: 'Cuts selected text or data.' },
-          { keys: 'Ctrl + F', desc: 'Find', usage: 'Opens the Find transactions window.' },
-          { keys: 'Ctrl + H', desc: 'Find & Replace', usage: 'Opens Find and Replace dialog.' },
-          { keys: 'Ctrl + G', desc: 'Register', usage: 'Opens the register for the selected account.' },
-          { keys: 'Ctrl + R', desc: 'Use Register', usage: 'Opens the register window.' },
-          { keys: 'Ctrl + Y', desc: 'Transaction Journal', usage: 'Shows the journal entry for the transaction.' },
-        ]
-      },
-      {
-        name: 'Reports',
-        shortcuts: [
-          { keys: 'Ctrl + Shift + P', desc: 'Print Report', usage: 'Prints the currently displayed report.' },
-          { keys: 'Ctrl + Shift + E', desc: 'Export to Excel', usage: 'Exports the current report to Excel.' },
-          { keys: 'Ctrl + Shift + S', desc: 'Save Report', usage: 'Saves report customizations.' },
-          { keys: 'Ctrl + P', desc: 'Print', usage: 'Opens print dialog for current window.' },
+          { keys: 'Tab', desc: 'Next Field', usage: 'Moves to the next data field on a form.' },
+          { keys: 'Shift + Tab', desc: 'Previous Field', usage: 'Moves back one field.' },
+          { keys: '+ / -', desc: 'Increase / Decrease Amount', usage: 'Steps a number or check/form number up or down.' },
+          { keys: 'Ctrl + C', desc: 'Copy', usage: 'Copies the selected field text.' },
+          { keys: 'Ctrl + V', desc: 'Paste', usage: 'Pastes into the current field.' },
+          { keys: 'Ctrl + X', desc: 'Cut', usage: 'Cuts the selected field text.' },
+          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undoes the last edit in the field.' },
         ]
       },
       {
         name: 'Date Fields',
         shortcuts: [
-          { keys: 'T', desc: 'Today', usage: 'Sets date field to today.' },
-          { keys: 'W', desc: 'First Day of Week', usage: 'Sets to first day of current week.' },
-          { keys: 'K', desc: 'Last Day of Week', usage: 'Sets to last day of current week.' },
-          { keys: 'M', desc: 'First Day of Month', usage: 'Sets to first day of current month.' },
-          { keys: 'H', desc: 'Last Day of Month', usage: 'Sets to last day of current month.' },
-          { keys: 'Y', desc: 'First Day of Year', usage: 'Sets to first day of current year.' },
-          { keys: 'R', desc: 'Last Day of Year', usage: 'Sets to last day of current year.' },
-          { keys: '+', desc: 'Next Day', usage: 'Advances date by one day.' },
-          { keys: '-', desc: 'Previous Day', usage: 'Goes back one day.' },
-          { keys: 'Alt + Down', desc: 'Open Calendar', usage: 'Opens the calendar picker in date fields.' },
+          { keys: 'Alt + Down', desc: 'Open Calendar', usage: 'Pops the date picker on any date field.' },
+          { keys: '+', desc: 'Advance a Day', usage: 'Steps the date forward one day.' },
+          { keys: '-', desc: 'Back a Day', usage: 'Steps the date back one day.' },
+          { keys: 'T', desc: 'Today', usage: 'Jumps to today\'s date.' },
+          { keys: 'W', desc: 'First Day of Week', usage: 'W for “week” — jumps to the start of the week.' },
+          { keys: 'K', desc: 'Last Day of Week', usage: 'K is the last letter of “week”.' },
+          { keys: ']', desc: 'Same Day Next Week', usage: 'Steps forward exactly seven days.' },
+          { keys: '[', desc: 'Same Day Last Week', usage: 'Steps back exactly seven days.' },
+          { keys: 'M', desc: 'First Day of Month', usage: 'M for “month”.' },
+          { keys: 'H', desc: 'Last Day of Month', usage: 'H is the last letter of “month”.' },
+          { keys: ';', desc: 'Same Day Next Month', usage: 'Steps forward one calendar month.' },
+          { keys: '\'', desc: 'Same Day Last Month', usage: 'Apostrophe steps back one calendar month.' },
+          { keys: 'Y', desc: 'First Day of Year', usage: 'Jumps to January 1.' },
+        ]
+      },
+      {
+        name: 'Forms & Transactions',
+        shortcuts: [
+          { keys: 'Enter', desc: 'Record / Save Transaction', usage: 'Records the transaction on most forms.' },
+          { keys: 'Ctrl + Ins', desc: 'New Transaction Line', usage: 'Inserts a line into the current transaction.' },
+          { keys: 'Ctrl + Del', desc: 'Delete Transaction Line', usage: 'Removes the selected line.' },
+          { keys: 'Ctrl + Alt + Y', desc: 'Copy Transaction Line', usage: 'Copies the highlighted line (QuickBooks 2018+).' },
+          { keys: 'Ctrl + Alt + V', desc: 'Paste Transaction Line', usage: 'Pastes onto a blank line (QuickBooks 2018+).' },
+          { keys: 'Up / Down', desc: 'Previous / Next Line', usage: 'Moves between transaction lines.' },
+          { keys: 'Ctrl + L', desc: 'Open Dropdown List', usage: 'Opens the full list for the highlighted dropdown.' },
+          { keys: 'Ctrl + U', desc: 'Use List Item', usage: 'Adds the item selected via Ctrl + L to the open form.' },
+          { keys: 'Page Up / Page Down', desc: 'Move Between Pages', usage: 'Pages through long forms and reports.' },
+          { keys: 'Alt + S', desc: 'Save & Close Form', usage: 'Saves the current form and closes it.' },
+          { keys: 'Alt + P', desc: 'Last Open Form', usage: 'Jumps to your previous form of the same type.' },
+          { keys: 'Alt + N', desc: 'Save & Next Form', usage: 'Saves and opens a fresh form of the same type.' },
+          { keys: 'Ctrl + P', desc: 'Print', usage: 'Prints the current form or list.' },
+          { keys: 'Ctrl + M', desc: 'Memorize Form', usage: 'Saves the form as a memorized transaction.' },
+          { keys: 'Ctrl + T', desc: 'Memorized Transaction List', usage: 'Opens the list of memorized transactions.' },
+          { keys: 'Ctrl + H', desc: 'Transaction History', usage: 'History for the current form.' },
+          { keys: 'Ctrl + Y', desc: 'Transaction Journal', usage: 'Debit/credit journal view of the current form.' },
+        ]
+      },
+      {
+        name: 'Lists',
+        shortcuts: [
+          { keys: 'Ctrl + Page Up / Page Down', desc: 'First / Last Item', usage: 'Jumps to the top or bottom of a list or register.' },
+          { keys: 'Ctrl + N', desc: 'New List Item', usage: 'New account, customer, or item from any list.' },
+          { keys: 'Ctrl + E', desc: 'Edit List Item', usage: 'Edits the selected list entry.' },
+          { keys: 'Ctrl + D', desc: 'Delete List Item', usage: 'Deletes the selected list entry.' },
+          { keys: 'Ctrl + F6', desc: 'Quick Report', usage: 'Runs a QuickReport for the selected item.' },
+          { keys: 'F5', desc: 'Refresh List', usage: 'Multi-user mode only — refreshes a list others may be editing.' },
+        ]
+      },
+      {
+        name: 'Start a New Task',
+        shortcuts: [
+          { keys: 'Ctrl + I', desc: 'Create Invoice', usage: 'New invoice from anywhere in QuickBooks.' },
+          { keys: 'Ctrl + W', desc: 'Create Check', usage: 'Opens the Write Checks window.' },
+          { keys: 'Ctrl + J', desc: 'Customer Center', usage: 'Opens the Customer Center.' },
+          { keys: 'Ctrl + A', desc: 'Chart of Accounts', usage: 'Opens the Chart of Accounts — not select-all here.' },
+          { keys: 'Ctrl + R', desc: 'Open Account Register', usage: 'Pick an account; inside a register, Ctrl + G opens the transfer account\'s register.' },
+        ]
+      },
+      {
+        name: 'Open, Set Up & Close',
+        shortcuts: [
+          { keys: 'Alt (hold on open)', desc: 'Open with No Windows', usage: 'Hold Alt while opening a company file to start without windows.' },
+          { keys: 'Alt + F4', desc: 'Close QuickBooks', usage: 'Exits the application.' },
+          { keys: 'Ctrl + K', desc: 'Service Keys (Payroll)', usage: 'Opens QuickBooks Service Keys.' },
+          { keys: 'Ctrl + Alt + Y', desc: 'YTD Payroll Setup', usage: 'From Help › About QuickBooks — sets up year-to-date payroll amounts.' },
         ]
       },
     ]
