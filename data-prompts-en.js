@@ -510,6 +510,76 @@ const promptData = {
         { keys: 'reasoning_effort: "high"', desc: 'Raise the reasoning effort level when thinking is enabled', usage: 'Values control how much reasoning the model performs before answering.' }
       ] }
     ]
+  },
+  kimi: {
+    name: 'Kimi (Moonshot AI)',
+    icon: 'fas fa-moon',
+    source: { name: 'Kimi API Platform Docs', url: 'https://platform.kimi.ai/docs/api/chat' },
+    categories: [
+      { name: 'Chat API Parameters', shortcuts: [
+        { keys: 'model', desc: 'Model ID to call; kimi-k3 is the default', usage: 'Set to a model ID from the Models & Modes table below.' },
+        { keys: 'messages', desc: 'The conversation message list; supports dynamic tool messages', usage: 'A {"role": "system", "tools": [...]} message can be inserted at any position.' },
+        { keys: 'max_completion_tokens', desc: 'Maximum tokens to generate', usage: 'Kimi K3 defaults to 131072 and can be set up to 1048576. Replaces the deprecated max_tokens.' },
+        { keys: 'max_tokens', desc: 'Deprecated token limit field', usage: 'Use max_completion_tokens instead.' },
+        { keys: 'response_format', desc: 'Controls the output format; {"type": "json_object"} enables JSON mode', usage: 'Default is {"type": "text"}. In JSON mode you must also guide the model to output JSON in the prompt.' },
+        { keys: 'stop', desc: 'Stop words that halt generation on a full match', usage: 'Up to 5 strings, each at most 32 bytes; matched words are not output.' },
+        { keys: 'stream', desc: 'Return the response as a stream', usage: 'Boolean, default false.' },
+        { keys: 'stream_options', desc: 'Options for streaming responses', usage: 'Object with child attributes for stream behavior.' },
+        { keys: 'tools', desc: 'A list of tools the model may call', usage: 'Standard function-tool definitions.' },
+        { keys: 'tool_choice', desc: 'Controls whether and how the model calls tools', usage: 'auto (default), none, required, or an object forcing a specific function.' },
+        { keys: 'logprobs', desc: 'Return log probabilities of the output tokens', usage: 'Boolean, default false; values arrive in the logprobs field of the response.' },
+        { keys: 'top_logprobs', desc: 'Number of most likely tokens to return per position', usage: 'Integer 0-20; requires logprobs: true.' },
+        { keys: 'prediction', desc: 'Predicted Output configuration to speed up largely-known responses', usage: 'Useful when regenerating a file with only minor changes.' },
+        { keys: 'prompt_cache_key', desc: 'Cache key to raise cache hit rates across similar requests', usage: 'For coding agents, typically a session or task ID; reuse it when a session resumes.' },
+        { keys: 'safety_identifier', desc: 'Stable per-user identifier for abuse detection', usage: 'Hash the username or email rather than sending it raw.' },
+        { keys: 'reasoning_effort', desc: 'Reasoning effort level for Kimi K3 thinking', usage: 'Values: low, high, max (default max). K3 always thinks with Preserved Thinking.' }
+      ] },
+      { name: 'Models & Mode Tokens', shortcuts: [
+        { keys: 'kimi-k3', desc: 'Flagship model ID with always-on thinking', usage: 'Default model; set as the model field value.' },
+        { keys: 'kimi-k2.7-code', desc: 'Coding-focused model ID', usage: 'Set as the model field value.' },
+        { keys: 'kimi-k2.7-code-highspeed', desc: 'Faster variant of the coding model', usage: 'Set as the model field value.' },
+        { keys: 'kimi-k2.6', desc: 'Previous-generation general model ID', usage: 'Set as the model field value.' },
+        { keys: 'kimi-k2.5', desc: 'Older general model ID', usage: 'Set as the model field value.' },
+        { keys: 'partial: true', desc: 'Partial Mode: force the reply to continue from a given prefix', usage: 'Append a message with role: assistant, partial: true, and the prefix text in content at the end of messages.' }
+      ] }
+    ]
+  },
+  kling: {
+    name: 'Kling AI',
+    icon: 'fas fa-film',
+    source: { name: 'Kling AI API Documentation', url: 'https://kling.ai/document-api/api/video/3-0-omni/image-to-video' },
+    categories: [
+      { name: 'Generation Input Parameters', shortcuts: [
+        { keys: 'contents', desc: 'Reference input collection: prompts, images, Elements', usage: 'Array of typed inputs forming the generation request.' },
+        { keys: '"type": "prompt"', desc: 'Prompt input identifier inside contents', usage: 'Carries the text field with positive and negative descriptions.' },
+        { keys: '"type": "first_frame"', desc: 'First-frame image input identifier', usage: 'Anchors the opening frame of the generated video.' },
+        { keys: '"type": "last_frame"', desc: 'Last-frame image input identifier', usage: 'Anchors the closing frame of the generated video.' },
+        { keys: '"type": "element"', desc: 'Element input identifier', usage: 'References a reusable Element in the generation.' },
+        { keys: '"type": "image"', desc: 'Appearance reference image (Motion Control)', usage: 'Generated characters follow the reference image; proportions should match the motion video.' },
+        { keys: '"type": "video"', desc: 'Motion reference video identifier (Motion Control)', usage: 'Drives character motion from a reference clip.' },
+        { keys: 'text', desc: 'Prompt text content, positive and negative descriptions', usage: 'String field inside a prompt-type content item; can add elements and motion effects.' }
+      ] },
+      { name: 'Output Settings Parameters', shortcuts: [
+        { keys: 'settings', desc: 'Output configuration object: resolution, duration, and related fields', usage: 'Container for generation output parameters.' },
+        { keys: 'multi_shot', desc: 'Whether to generate multi-shot video', usage: 'Boolean; when false, multi-shot prompts will not produce multi-shot output.' },
+        { keys: 'audio', desc: 'Audio generation switch for the video', usage: 'Values: native (audio matching the visuals) or off (silent).' },
+        { keys: 'resolution', desc: 'Resolution of the generated video', usage: 'Set inside the settings object.' }
+      ] },
+      { name: 'Task & Query Parameters', shortcuts: [
+        { keys: 'options', desc: 'General configuration: callback address, watermark, and similar', usage: 'Container object alongside contents and settings.' },
+        { keys: 'callback_url', desc: 'Callback URL for task result notifications', usage: 'Server sends a notification on task status change; see the Callback Protocol.' },
+        { keys: 'external_task_id', desc: 'Custom task ID, unique within the account', usage: 'Does not overwrite the system task ID; usable for status queries.' },
+        { keys: 'watermark_info', desc: 'Whether to also generate a watermarked result', usage: 'Object with an enabled boolean.' },
+        { keys: 'task_ids', desc: 'System task IDs to query, as a request path parameter', usage: 'Choose either task_ids or external_task_ids per query, not both.' },
+        { keys: 'external_task_ids', desc: 'Custom task IDs to query, as a request path parameter', usage: 'Alternative to task_ids for status queries.' },
+        { keys: 'start_time', desc: 'Start of the task-creation filter window', usage: 'Unix timestamp in milliseconds; defaults to end_time minus 30 days.' },
+        { keys: 'end_time', desc: 'End of the task-creation filter window', usage: 'Unix timestamp in milliseconds; defaults to now.' },
+        { keys: 'cursor', desc: 'Continuation cursor for paged task queries', usage: 'Use next_cursor from the previous query; when set, start_time and end_time are ignored.' },
+        { keys: 'filters', desc: 'Task query filter criteria', usage: 'Key/value entries; key status or product_type.' },
+        { keys: '"key": "status"', desc: 'Filter tasks by status', usage: 'Values: submitted, processing, succeeded, failed.' },
+        { keys: '"key": "product_type"', desc: 'Filter tasks by function type', usage: 'Values: video, image, try_on.' }
+      ] }
+    ]
   }
 };
 export default promptData;
