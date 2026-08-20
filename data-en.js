@@ -2616,8 +2616,6 @@ const shortcutData = {
       {
         name: 'Code Selection & Context',
         shortcuts: [
-          { keys: '@', desc: '@-mentions', usage: '@-mentions.' },
-          { keys: '/', desc: 'Shortcut Commands', usage: 'Shortcut Commands.' },
           { keys: 'Cmd + Shift + L', desc: 'Add selection to Chat (Code Selection & Context)', usage: 'Add selection to Chat (In Code Selection & Context.)' },
           { keys: 'Cmd + Shift + K', desc: 'Add selection to Edit (Code Selection & Context)', usage: 'Add selection to Edit (In Code Selection & Context.)' },
           { keys: 'Cmd + L', desc: 'Add selection to new chat (Code Selection & Context)', usage: 'Add selection to new chat (In Code Selection & Context.)' },
@@ -4649,7 +4647,7 @@ const shortcutData = {
             { keys: '--sandbox, -s', desc: 'Select the sandbox policy for model-generated shell commands', usage: 'Select the sandbox policy for model-generated shell commands.' },
             { keys: '--search', desc: 'Enable live web search (sets web_search = "live" instead of the default "cached")', usage: 'Enable live web search (sets web_search = "live" instead of the default "cached").' },
             { keys: '--strict-config', desc: 'Error when config.toml contains fields this Codex version does not recognize. Supported', usage: 'Error when config.toml contains fields this Codex version does not recognize. Supported.' },
-            { keys: 'PROMPT', desc: 'Optional text instruction to start the session. Omit to launch the TUI without a pre-filled', usage: 'Optional text instruction to start the session. Omit to launch the TUI without a pre-filled.' },
+            { keys: 'PROMPT', desc: 'Optional text instruction to start the session. Omit to launch the TUI without a pre-filled', usage: 'Optional text instruction to start the session. Omit to launch the TUI without a pre-filled.' }
           ]
         },
         {
@@ -4682,7 +4680,7 @@ const shortcutData = {
             { keys: 'codex review', desc: 'Run a non-interactive review of uncommitted changes, a base branch diff, a commit, or custom', usage: 'Run a non-interactive review of uncommitted changes, a base branch diff, a commit, or custom.' },
             { keys: 'codex sandbox', desc: 'Run arbitrary commands inside Codex-provided macOS, Linux, or Windows sandboxes', usage: 'Run arbitrary commands inside Codex-provided macOS, Linux, or Windows sandboxes.' },
             { keys: 'codex unarchive', desc: 'Restore an archived interactive session by session ID or session name', usage: 'Restore an archived interactive session by session ID or session name.' },
-            { keys: 'codex update', desc: 'Check for and apply a Codex CLI update when the installed release supports self-update', usage: 'Check for and apply a Codex CLI update when the installed release supports self-update.' },
+            { keys: 'codex update', desc: 'Check for and apply a Codex CLI update when the installed release supports self-update', usage: 'Check for and apply a Codex CLI update when the installed release supports self-update.' }
           ]
         },
         {
@@ -4697,14 +4695,14 @@ const shortcutData = {
             { keys: '--ws-max-clock-skew-seconds', desc: 'Clock skew allowance when validating signed bearer token exp and nbf claims. Requires --ws-auth', usage: 'Clock skew allowance when validating signed bearer token exp and nbf claims. Requires --ws-auth.' },
             { keys: '--ws-shared-secret-file', desc: 'File containing the HMAC shared secret used to validate signed JWT bearer tokens. Required', usage: 'File containing the HMAC shared secret used to validate signed JWT bearer tokens. Required.' },
             { keys: '--ws-token-file', desc: 'File containing the shared capability token. Use with --ws-auth capability-token unless you', usage: 'File containing the shared capability token. Use with --ws-auth capability-token unless you.' },
-            { keys: '--ws-token-sha256', desc: 'Expected SHA-256 digest for capability-token authentication. Use instead of --ws-token-file', usage: 'Expected SHA-256 digest for capability-token authentication. Use instead of --ws-token-file.' },
+            { keys: '--ws-token-sha256', desc: 'Expected SHA-256 digest for capability-token authentication. Use instead of --ws-token-file', usage: 'Expected SHA-256 digest for capability-token authentication. Use instead of --ws-token-file.' }
           ]
         },
         {
           name: 'codex app',
           shortcuts: [
             { keys: '--download-url', desc: 'Advanced override for the ChatGPT desktop app installer URL used during install', usage: 'Advanced override for the ChatGPT desktop app installer URL used during install.' },
-            { keys: 'PATH', desc: 'Workspace path for the ChatGPT desktop app. On macOS, Codex opens this path; on Windows, Codex', usage: 'Workspace path for the ChatGPT desktop app. On macOS, Codex opens this path; on Windows, Codex.' },
+            { keys: 'PATH', desc: 'Workspace path for the ChatGPT desktop app. On macOS, Codex opens this path; on Windows, Codex', usage: 'Workspace path for the ChatGPT desktop app. On macOS, Codex opens this path; on Windows, Codex.' }
           ]
         },
         {
@@ -4713,7 +4711,7 @@ const shortcutData = {
             { keys: '--base', desc: 'Review changes against the specified base branch', usage: 'Review changes against the specified base branch.' },
             { keys: '--commit', desc: 'Review the changes introduced by the specified commit', usage: 'Review the changes introduced by the specified commit.' },
             { keys: '--title', desc: 'Set the commit title shown in the review summary. Requires --commit', usage: 'Set the commit title shown in the review summary. Requires --commit.' },
-            { keys: '--uncommitted', desc: 'Review staged, unstaged, and untracked changes', usage: 'Review staged, unstaged, and untracked changes.' },
+            { keys: '--uncommitted', desc: 'Review staged, unstaged, and untracked changes', usage: 'Review staged, unstaged, and untracked changes.' }
           ]
         },
         {
@@ -4721,7 +4719,7 @@ const shortcutData = {
           shortcuts: [
             { keys: '--attempts', desc: 'Number of assistant attempts (best-of-N) Codex cloud should run', usage: 'Number of assistant attempts (best-of-N) Codex cloud should run.' },
             { keys: '--env', desc: 'Target Codex cloud environment identifier (required). Use codex cloud to list options', usage: 'Target Codex cloud environment identifier (required). Use codex cloud to list options.' },
-            { keys: 'QUERY', desc: 'Task prompt. If omitted, Codex prompts interactively for details', usage: 'Task prompt. If omitted, Codex prompts interactively for details.' },
+            { keys: 'QUERY', desc: 'Task prompt. If omitted, Codex prompts interactively for details', usage: 'Task prompt. If omitted, Codex prompts interactively for details.' }
           ]
         },
         {
@@ -4729,7 +4727,7 @@ const shortcutData = {
           shortcuts: [
             { keys: '--cursor', desc: 'Pagination cursor returned by a previous request', usage: 'Pagination cursor returned by a previous request.' },
             { keys: '--json', desc: 'Emit machine-readable JSON instead of plain text', usage: 'Emit machine-readable JSON instead of plain text.' },
-            { keys: '--limit', desc: 'Maximum number of tasks to return', usage: 'Maximum number of tasks to return.' },
+            { keys: '--limit', desc: 'Maximum number of tasks to return', usage: 'Maximum number of tasks to return.' }
           ]
         },
         {
@@ -4738,7 +4736,7 @@ const shortcutData = {
             { keys: '--all', desc: 'Expand long lists in the detailed human-readable report', usage: 'Expand long lists in the detailed human-readable report.' },
             { keys: '--ascii', desc: 'Use ASCII status labels and separators in human-readable output', usage: 'Use ASCII status labels and separators in human-readable output.' },
             { keys: '--no-color', desc: 'Disable ANSI color in human-readable output', usage: 'Disable ANSI color in human-readable output.' },
-            { keys: '--summary', desc: 'Show grouped check rows and the final count summary only', usage: 'Show grouped check rows and the final count summary only.' },
+            { keys: '--summary', desc: 'Show grouped check rows and the final count summary only', usage: 'Show grouped check rows and the final count summary only.' }
           ]
         },
         {
@@ -4755,7 +4753,7 @@ const shortcutData = {
             { keys: '--skip-git-repo-check', desc: 'Allow running outside a Git repository (useful for one-off directories)', usage: 'Allow running outside a Git repository (useful for one-off directories).' },
             { keys: '-c, --config', desc: 'Inline configuration override for the non-interactive run (repeatable)', usage: 'Inline configuration override for the non-interactive run (repeatable).' },
             { keys: '--last', desc: 'Resume the most recent chat from the current working directory', usage: 'Resume the most recent chat from the current working directory.' },
-            { keys: 'SESSION_ID', desc: 'Resume the specified session. Omit and use --last to continue the most recent session', usage: 'Resume the specified session. Omit and use --last to continue the most recent session.' },
+            { keys: 'SESSION_ID', desc: 'Resume the specified session. Omit and use --last to continue the most recent session', usage: 'Resume the specified session. Omit and use --last to continue the most recent session.' }
           ]
         },
         {
@@ -4763,7 +4761,7 @@ const shortcutData = {
           shortcuts: [
             { keys: '--pretty', desc: 'Pretty-print the JSON result', usage: 'Pretty-print the JSON result.' },
             { keys: '--rules, -r', desc: 'Path to an execpolicy rule file to evaluate. Provide multiple flags to combine rules across', usage: 'Path to an execpolicy rule file to evaluate. Provide multiple flags to combine rules across.' },
-            { keys: 'COMMAND...', desc: 'Command to be checked against the specified policies', usage: 'Command to be checked against the specified policies.' },
+            { keys: 'COMMAND...', desc: 'Command to be checked against the specified policies', usage: 'Command to be checked against the specified policies.' }
           ]
         },
         {
@@ -4771,7 +4769,7 @@ const shortcutData = {
           shortcuts: [
             { keys: '--device-auth', desc: 'Use OAuth device code flow instead of launching a browser window', usage: 'Use OAuth device code flow instead of launching a browser window.' },
             { keys: '--with-access-token', desc: 'Read an access token from stdin', usage: 'Read an access token from stdin.' },
-            { keys: '--with-api-key', desc: 'Read an API key from stdin (for example printenv OPENAI_API_KEY | codex login --with-api-key)', usage: 'Read an API key from stdin (for example printenv OPENAI_API_KEY | codex login --with-api-key).' },
+            { keys: '--with-api-key', desc: 'Read an API key from stdin (for example printenv OPENAI_API_KEY | codex login --with-api-key)', usage: 'Read an API key from stdin (for example printenv OPENAI_API_KEY | codex login --with-api-key).' }
           ]
         },
         {
@@ -4782,7 +4780,7 @@ const shortcutData = {
             { keys: '--env KEY=VALUE', desc: 'Environment variable assignments applied when launching a stdio server', usage: 'Environment variable assignments applied when launching a stdio server.' },
             { keys: '--oauth-client-id', desc: 'OAuth client identifier for a streamable HTTP MCP server. Requires --url', usage: 'OAuth client identifier for a streamable HTTP MCP server. Requires --url.' },
             { keys: '--oauth-resource', desc: 'OAuth resource parameter to include during login for a streamable HTTP MCP server. Requires', usage: 'OAuth resource parameter to include during login for a streamable HTTP MCP server. Requires.' },
-            { keys: '--url', desc: 'Register a streamable HTTP server instead of stdio. Mutually exclusive with COMMAND', usage: 'Register a streamable HTTP server instead of stdio. Mutually exclusive with COMMAND.' },
+            { keys: '--url', desc: 'Register a streamable HTTP server instead of stdio. Mutually exclusive with COMMAND', usage: 'Register a streamable HTTP server instead of stdio. Mutually exclusive with COMMAND.' }
           ]
         },
         {
@@ -4791,73 +4789,10 @@ const shortcutData = {
             { keys: '--allow-unix-socket', desc: 'Allow the sandboxed command to bind or connect Unix sockets rooted at this path. Repeat', usage: 'Allow the sandboxed command to bind or connect Unix sockets rooted at this path. Repeat.' },
             { keys: '--include-managed-config', desc: 'Include managed requirements while resolving an explicit permissions profile. Requires', usage: 'Include managed requirements while resolving an explicit permissions profile. Requires.' },
             { keys: '--log-denials', desc: 'Capture macOS sandbox denials with log stream while the command runs and print them after exit', usage: 'Capture macOS sandbox denials with log stream while the command runs and print them after exit.' },
-            { keys: '--permission-profile, -P', desc: 'Apply a named permissions profile from the active configuration stack', usage: 'Apply a named permissions profile from the active configuration stack.' },
+            { keys: '--permission-profile, -P', desc: 'Apply a named permissions profile from the active configuration stack', usage: 'Apply a named permissions profile from the active configuration stack.' }
           ]
         },
-        {
-          name: 'Slash Commands',
-          shortcuts: [
-            { keys: '/permissions', desc: 'Relax or tighten approval requirements mid-session, such as switching between Auto and Read', usage: 'Relax or tighten approval requirements mid-session, such as switching between Auto and Read.' },
-            { keys: '/ide', desc: 'Pull editor context into the next prompt without re-explaining what\'s open in your IDE', usage: 'Pull editor context into the next prompt without re-explaining what\'s open in your IDE.' },
-            { keys: '/keymap', desc: 'Inspect and persist custom shortcut bindings in config.toml', usage: 'Inspect and persist custom shortcut bindings in config.toml.' },
-            { keys: '/vim', desc: 'Switch between Vim normal/insert behavior and the default composer editing mode', usage: 'Switch between Vim normal/insert behavior and the default composer editing mode.' },
-            { keys: '/setup-default-sandbox', desc: 'Replace the degraded Windows sandbox after Codex offers the elevated setup', usage: 'Replace the degraded Windows sandbox after Codex offers the elevated setup.' },
-            { keys: '/sandbox-add-read-dir', desc: 'Unblock commands that need to read an absolute directory path outside the current readable', usage: 'Unblock commands that need to read an absolute directory path outside the current readable.' },
-            { keys: '/agent, /subagents', desc: 'Inspect or continue work in a spawned subagent thread', usage: 'Inspect or continue work in a spawned subagent thread.' },
-            { keys: '/apps', desc: 'Attach an app as $app-slug before asking Codex to use it', usage: 'Attach an app as $app-slug before asking Codex to use it.' },
-            { keys: '/plugins', desc: 'Inspect plugin tools, install suggested plugins, or manage plugin availability', usage: 'Inspect plugin tools, install suggested plugins, or manage plugin availability.' },
-            { keys: '/hooks', desc: 'Inspect configured hooks, trust new or changed hooks, or disable non-managed hooks before they', usage: 'Inspect configured hooks, trust new or changed hooks, or disable non-managed hooks before they.' },
-            { keys: '/clear', desc: 'Reset the visible UI and chat context together when you want a fresh start', usage: 'Reset the visible UI and chat context together when you want a fresh start.' },
-            { keys: '/rename', desc: 'Give a saved session a recognizable name without leaving the TUI', usage: 'Give a saved session a recognizable name without leaving the TUI.' },
-            { keys: '/archive', desc: 'Remove the current session from active session lists without deleting its transcript', usage: 'Remove the current session from active session lists without deleting its transcript.' },
-            { keys: '/delete', desc: 'Remove the transcript and descendant sessions when archiving isn\'t enough', usage: 'Remove the transcript and descendant sessions when archiving isn\'t enough.' },
-            { keys: '/compact', desc: 'Use after long runs so Codex retains key points without blowing the context window', usage: 'Use after long runs so Codex retains key points without blowing the context window.' },
-            { keys: '/copy', desc: 'Grab the latest finished response or plan text without manually selecting it. You can also', usage: 'Grab the latest finished response or plan text without manually selecting it. You can also.' },
-            { keys: '/diff', desc: 'Review Codex\'s edits before you commit or run tests', usage: 'Review Codex\'s edits before you commit or run tests.' },
-            { keys: '/exit', desc: 'Alternative spelling; both commands exit the session', usage: 'Alternative spelling; both commands exit the session.' },
-            { keys: '/experimental', desc: 'Enable options such as Network proxy or Prevent sleep while running', usage: 'Enable options such as Network proxy or Prevent sleep while running.' },
-            { keys: '/approve', desc: 'Retry a command or action that the auto reviewer denied', usage: 'Retry a command or action that the auto reviewer denied.' },
-            { keys: '/memories', desc: 'Turn memory injection or memory generation on or off without leaving the TUI', usage: 'Turn memory injection or memory generation on or off without leaving the TUI.' },
-            { keys: '/skills', desc: 'Improve task-specific behavior by selecting a relevant local skill', usage: 'Improve task-specific behavior by selecting a relevant local skill.' },
-            { keys: '/import', desc: 'Migrate supported external-agent artifacts into Codex configuration and local files', usage: 'Migrate supported external-agent artifacts into Codex configuration and local files.' },
-            { keys: '/feedback', desc: 'Report issues or share diagnostics with support', usage: 'Report issues or share diagnostics with support.' },
-            { keys: '/init', desc: 'Capture persistent instructions for the repository or subdirectory you\'re working', usage: 'Capture persistent instructions for the repository or subdirectory you\'re working.' },
-            { keys: '/logout', desc: 'Clear local credentials when using a shared machine', usage: 'Clear local credentials when using a shared machine.' },
-            { keys: '/mcp', desc: 'Check which external tools Codex can call during the session; add verbose for server details', usage: 'Check which external tools Codex can call during the session; add verbose for server details.' },
-            { keys: '/mention', desc: 'Point Codex at specific files or folders you want it to inspect next', usage: 'Point Codex at specific files or folders you want it to inspect next.' },
-            { keys: '/model', desc: 'Switch between models such as gpt-5.4-mini and gpt-5.5 before running a task', usage: 'Switch between models such as gpt-5.4-mini and gpt-5.5 before running a task.' },
-            { keys: '/fast', desc: 'Turn the current model\'s Fast tier on or off and persist the selection', usage: 'Turn the current model\'s Fast tier on or off and persist the selection.' },
-            { keys: '/plan', desc: 'Ask Codex to propose an execution plan before implementation work starts', usage: 'Ask Codex to propose an execution plan before implementation work starts.' },
-            { keys: '/goal', desc: 'Give Codex a persistent target to track while a larger task runs', usage: 'Give Codex a persistent target to track while a larger task runs.' },
-            { keys: '/personality', desc: 'Make Codex more concise, more explanatory, or more collaborative without changing your', usage: 'Make Codex more concise, more explanatory, or more collaborative without changing your.' },
-            { keys: '/ps', desc: 'Check long-running commands without leaving the main transcript', usage: 'Check long-running commands without leaving the main transcript.' },
-            { keys: '/stop', desc: 'Cancel background terminal work started by the current session', usage: 'Cancel background terminal work started by the current session.' },
-            { keys: '/fork', desc: 'Branch the active session to explore a new approach without losing the current transcript', usage: 'Branch the active session to explore a new approach without losing the current transcript.' },
-            { keys: '/app', desc: 'Move from the TUI to the desktop app on macOS or Windows', usage: 'Move from the TUI to the desktop app on macOS or Windows.' },
-            { keys: '/side, /btw', desc: 'Ask a focused follow-up without disrupting the main chat\'s transcript', usage: 'Ask a focused follow-up without disrupting the main chat\'s transcript.' },
-            { keys: '/raw', desc: 'Make terminal selection and copying less formatted while reviewing long output', usage: 'Make terminal selection and copying less formatted while reviewing long output.' },
-            { keys: '/resume', desc: 'Continue work from a previous CLI session without starting over', usage: 'Continue work from a previous CLI session without starting over.' },
-            { keys: '/new', desc: 'Reset the chat context without leaving the CLI when you want a fresh prompt in the same repo', usage: 'Reset the chat context without leaving the CLI when you want a fresh prompt in the same repo.' },
-            { keys: '/quit', desc: 'Leave the session immediately', usage: 'Leave the session immediately.' },
-            { keys: '/review', desc: 'Run after Codex completes work or when you want a second set of eyes on local changes', usage: 'Run after Codex completes work or when you want a second set of eyes on local changes.' },
-            { keys: '/status', desc: 'Confirm the active model, approval policy, writable roots, and remaining context capacity', usage: 'Confirm the active model, approval policy, writable roots, and remaining context capacity.' },
-            { keys: '/usage', desc: 'Inspect daily, weekly, or cumulative ChatGPT token activity from inside the TUI', usage: 'Inspect daily, weekly, or cumulative ChatGPT token activity from inside the TUI.' },
-            { keys: '/debug-config', desc: 'Debug precedence and policy requirements, including experimental network constraints', usage: 'Debug precedence and policy requirements, including experimental network constraints.' },
-            { keys: '/statusline', desc: 'Pick and reorder footer items (model/context/limits/git/tokens/session) and persist', usage: 'Pick and reorder footer items (model/context/limits/git/tokens/session) and persist.' },
-            { keys: '/title', desc: 'Pick and reorder title items such as project, status, thread, branch, model, and task progress', usage: 'Pick and reorder title items such as project, status, thread, branch, model, and task progress.' },
-            { keys: '/theme', desc: 'Preview and persist a terminal syntax-highlighting theme', usage: 'Preview and persist a terminal syntax-highlighting theme.' },
-            { keys: '/pets, /pet', desc: 'Personalize the TUI with a built-in or custom ambient pet', usage: 'Personalize the TUI with a built-in or custom ambient pet.' },
-            { keys: '/cloud', desc: 'Run the chat in the cloud, when cloud execution is available', usage: 'Run the chat in the cloud, when cloud execution is available.' },
-            { keys: '/cloud-environment', desc: 'Choose the cloud environment for the chat', usage: 'Choose the cloud environment for the chat.' },
-            { keys: '/ide-context', desc: 'Turn automatic IDE context on or off', usage: 'Turn automatic IDE context on or off.' },
-            { keys: '/local', desc: 'Run the chat in your local workspace', usage: 'Run the chat in your local workspace.' },
-            { keys: '/project', desc: 'Choose a project for new chats', usage: 'Choose a project for new chats.' },
-            { keys: '/reasoning', desc: 'Choose the reasoning effort for the current chat', usage: 'Choose the reasoning effort for the current chat.' },
-            { keys: '/side', desc: 'Start a temporary side chat without interrupting the main chat', usage: 'Start a temporary side chat without interrupting the main chat.' },
-            { keys: '/worktree', desc: 'Run the chat in a new Git worktree', usage: 'Run the chat in a new Git worktree.' },
-          ]
-        },
-        {
+                {
           name: 'Extension Commands',
           shortcuts: [
             { keys: 'chatgpt.addToThread', desc: 'Add selected text range as context for the current chat', usage: 'Add selected text range as context for the current chat.' },
@@ -4865,7 +4800,7 @@ const shortcutData = {
             { keys: 'chatgpt.newChat', desc: 'Create a new chat', usage: 'Create a new chat.' },
             { keys: 'chatgpt.newCodexPanel', desc: 'Create a new Codex panel', usage: 'Create a new Codex panel.' },
             { keys: 'chatgpt.openCommandMenu', desc: 'Open the Codex command menu', usage: 'Open the Codex command menu.' },
-            { keys: 'chatgpt.openSidebar', desc: 'Open the Codex sidebar panel', usage: 'Open the Codex sidebar panel.' },
+            { keys: 'chatgpt.openSidebar', desc: 'Open the Codex sidebar panel', usage: 'Open the Codex sidebar panel.' }
           ]
         },
         {
@@ -4876,9 +4811,9 @@ const shortcutData = {
             { keys: 'Tab', desc: 'Autocomplete', usage: 'Autocomplete file names or commands.' },
             { keys: 'Ctrl + C', desc: 'Cancel', usage: 'Cancel the current operation.' },
             { keys: 'Ctrl + L', desc: 'Clear screen', usage: 'Clear the terminal screen.' },
-            { keys: 'Ctrl + D', desc: 'Exit', usage: 'Exit Codex CLI.' },
+            { keys: 'Ctrl + D', desc: 'Exit', usage: 'Exit Codex CLI.' }
           ]
-        },
+        }
       ]
     },
   openclaw: {
@@ -4915,42 +4850,17 @@ const shortcutData = {
     name: 'Claude Code',
     icon: 'fas fa-terminal',
     categories: [
-      {
-        name: 'Core Commands',
-        shortcuts: [
-          { keys: '/help', desc: 'Show help', usage: 'Display all available slash commands.' },
-          { keys: '/clear', desc: 'Clear conversation', usage: 'Clear the current conversation history.' },
-          { keys: '/compact', desc: 'Compact mode', usage: 'Compress conversation context to save tokens.' },
-          { keys: '/cost', desc: 'Show token cost', usage: 'Display token usage and cost for the session.' },
-          { keys: '/status', desc: 'Account status', usage: 'Show current account and API status.' },
-          { keys: '/doctor', desc: 'Health check', usage: 'Diagnose configuration and environment issues.' },
-          { keys: '/bug', desc: 'Report bug', usage: 'Open a pre-filled bug report.' },
-          { keys: '/release-notes', desc: 'Release notes', usage: 'Show the latest Claude Code release notes.' },
-          { keys: 'Esc', desc: 'Stop / interrupt', usage: 'Stop the current response or operation immediately.' },
-          { keys: 'Ctrl + C', desc: 'Cancel', usage: 'Cancel the current operation or exit.' },
-        ]
-      },
-      {
+            {
         name: 'File & Code Operations',
         shortcuts: [
           { keys: 'Tab', desc: 'Autocomplete path', usage: 'Autocomplete file names and directory paths.' },
           { keys: '/add-dir <path>', desc: 'Add directory', usage: 'Add an additional directory to the working context.' },
           { keys: '/diff', desc: 'Show diff', usage: 'Display pending file changes as a diff.' },
           { keys: '/undo', desc: 'Undo last edit', usage: 'Revert the most recent file modification.' },
-          { keys: '/ls', desc: 'List files', usage: 'Show files in the current working directory.' },
+          { keys: '/ls', desc: 'List files', usage: 'Show files in the current working directory.' }
         ]
       },
-      {
-        name: 'MCP & Integrations',
-        shortcuts: [
-          { keys: '/mcp', desc: 'MCP status', usage: 'Show connected MCP (Model Context Protocol) servers.' },
-          { keys: '/mcp add <name>', desc: 'Add MCP server', usage: 'Connect a new MCP server by name or URL.' },
-          { keys: '/permissions', desc: 'Edit permissions', usage: 'View and edit tool permission settings.' },
-          { keys: '--allowedTools', desc: 'Allow specific tools', usage: 'Flag to whitelist specific tools when starting.' },
-          { keys: '--dangerously-skip-permissions', desc: 'Skip permission prompts', usage: 'Skip all permission checks (use with caution).' },
-        ]
-      },
-      {
+            {
         name: 'CLI Flags (Startup)',
         shortcuts: [
           { keys: 'claude --print', desc: 'Print mode (-p)', usage: 'Non-interactive mode: print response and exit.' },
@@ -4959,9 +4869,9 @@ const shortcutData = {
           { keys: 'claude --resume <id>', desc: 'Resume by ID', usage: 'Resume a specific past conversation by session ID.' },
           { keys: 'cat file.py | claude', desc: 'Pipe input', usage: 'Pipe file or stdin content directly into Claude Code.' },
           { keys: 'claude --no-markdown', desc: 'Plain text output', usage: 'Disable Markdown formatting in responses.' },
-          { keys: 'claude --output-format json', desc: 'JSON output', usage: 'Return structured JSON output for scripting.' },
+          { keys: 'claude --output-format json', desc: 'JSON output', usage: 'Return structured JSON output for scripting.' }
         ]
-      },
+      }
           ]
   },
   gemini: {
@@ -5029,37 +4939,6 @@ const shortcutData = {
           { keys: '--model <name>', desc: 'Select Model', usage: 'Chooses the Gemini model for the session.' },
           { keys: '--yolo', desc: 'Auto-Approve Actions', usage: 'Skips confirmation prompts for tool calls — use with care.' },
           { keys: '--debug', desc: 'Debug Output', usage: 'Verbose logging for troubleshooting.' },
-        ]
-      },
-    ]
-  },
-  midjourney: {
-    name: 'Midjourney',
-    icon: 'fas fa-image',
-    categories: [
-      {
-        name: 'Discord Commands',
-        shortcuts: [
-          { keys: '/imagine', desc: 'Generate image', usage: 'Generate an image from a text prompt.' },
-          { keys: '/describe', desc: 'Describe image', usage: 'Describe an uploaded image in text.' },
-          { keys: '/blend', desc: 'Blend images', usage: 'Blend 2-5 images together.' },
-          { keys: '/settings', desc: 'Settings', usage: 'Configure model version, quality, etc.' },
-          { keys: '/info', desc: 'Account info', usage: 'Check subscription and usage.' },
-          { keys: 'U1~U4', desc: 'Upscale', usage: 'Upscale the selected image.' },
-          { keys: 'V1~V4', desc: 'Create variation', usage: 'Generate a variation of the selected image.' },
-        ]
-      },
-      {
-        name: 'Prompt Parameters',
-        shortcuts: [
-          { keys: '--ar 16:9', desc: 'Wide aspect ratio', usage: 'Generate wide landscape images.' },
-          { keys: '--ar 9:16', desc: 'Tall aspect ratio', usage: 'Generate tall portrait images.' },
-          { keys: '--style raw', desc: 'Raw style', usage: 'Reduce default beautification.' },
-          { keys: '--chaos 0~100', desc: 'Variation control', usage: 'Higher values = more diverse results.' },
-          { keys: '--no [element]', desc: 'Negative prompt', usage: 'Exclude elements (e.g. --no text).' },
-          { keys: '--q 2', desc: 'High quality', usage: 'Increase rendering quality.' },
-          { keys: '--seed [number]', desc: 'Fix seed', usage: 'Reproduce similar compositions.' },
-          { keys: '--tile', desc: 'Tile pattern', usage: 'Generate seamless tile patterns.' },
         ]
       },
     ]
@@ -5204,68 +5083,6 @@ const shortcutData = {
       },
     ]
   },
-  aider: {
-      name: 'Aider',
-      icon: 'fas fa-terminal',
-      source: { name: 'Aider Docs', url: 'https://aider.chat/docs/usage/commands.html' },
-      kind: 'commands',
-      categories: [
-        {
-          name: 'Slash Commands',
-          shortcuts: [
-            { keys: '/add', desc: 'Add files to the chat so aider can edit them or review them in detail', usage: 'Add files to the chat so aider can edit them or review them in detail' },
-            { keys: '/architect', desc: 'Enter architect/editor mode using 2 different models. If no prompt provided, switches', usage: 'Enter architect/editor mode using 2 different models. If no prompt provided, switches to architect/editor mode.' },
-            { keys: '/ask', desc: 'Ask questions about the code base without editing any files. If no prompt provided, switches', usage: 'Ask questions about the code base without editing any files. If no prompt provided, switches to ask mode.' },
-            { keys: '/chat-mode', desc: 'Switch to a new chat mode', usage: 'Switch to a new chat mode' },
-            { keys: '/clear', desc: 'Clear the chat history', usage: 'Clear the chat history' },
-            { keys: '/code', desc: 'Ask for changes to your code. If no prompt provided, switches to code mode', usage: 'Ask for changes to your code. If no prompt provided, switches to code mode.' },
-            { keys: '/commit', desc: 'Commit edits to the repo made outside the chat (commit message optional)', usage: 'Commit edits to the repo made outside the chat (commit message optional)' },
-            { keys: '/context', desc: 'Enter context mode to see surrounding code context. If no prompt provided, switches to context', usage: 'Enter context mode to see surrounding code context. If no prompt provided, switches to context mode.' },
-            { keys: '/copy', desc: 'Copy the last assistant message to the clipboard', usage: 'Copy the last assistant message to the clipboard' },
-            { keys: '/copy-context', desc: 'Copy the current chat context as markdown, suitable to paste into a web UI', usage: 'Copy the current chat context as markdown, suitable to paste into a web UI' },
-            { keys: '/diff', desc: 'Display the diff of changes since the last message', usage: 'Display the diff of changes since the last message' },
-            { keys: '/drop', desc: 'Remove files from the chat session to free up context space', usage: 'Remove files from the chat session to free up context space' },
-            { keys: '/edit', desc: 'Alias for /editor: Open an editor to write a prompt', usage: 'Alias for /editor: Open an editor to write a prompt' },
-            { keys: '/editor', desc: 'Open an editor to write a prompt', usage: 'Open an editor to write a prompt' },
-            { keys: '/editor-model', desc: 'Switch the Editor Model to a new LLM', usage: 'Switch the Editor Model to a new LLM' },
-            { keys: '/exit', desc: 'Exit the application', usage: 'Exit the application' },
-            { keys: '/git', desc: 'Run a git command (output excluded from chat)', usage: 'Run a git command (output excluded from chat)' },
-            { keys: '/help', desc: 'Ask questions about aider', usage: 'Ask questions about aider' },
-            { keys: '/lint', desc: 'Lint and fix in-chat files or all dirty files if none in chat', usage: 'Lint and fix in-chat files or all dirty files if none in chat' },
-            { keys: '/load', desc: 'Load and execute commands from a file', usage: 'Load and execute commands from a file' },
-            { keys: '/ls', desc: 'List all known files and indicate which are included in the chat session', usage: 'List all known files and indicate which are included in the chat session' },
-            { keys: '/map', desc: 'Print out the current repository map', usage: 'Print out the current repository map' },
-            { keys: '/map-refresh', desc: 'Force a refresh of the repository map', usage: 'Force a refresh of the repository map' },
-            { keys: '/model', desc: 'Switch the Main Model to a new LLM', usage: 'Switch the Main Model to a new LLM' },
-            { keys: '/models', desc: 'Search the list of available models', usage: 'Search the list of available models' },
-            { keys: '/multiline-mode', desc: 'Toggle multiline mode (swaps behavior of Enter and Meta+Enter)', usage: 'Toggle multiline mode (swaps behavior of Enter and Meta+Enter)' },
-            { keys: '/ok', desc: 'Alias for /code Ok, please go ahead and make those changes. (any args are appended)', usage: 'Alias for /code Ok, please go ahead and make those changes. (any args are appended)' },
-            { keys: '/paste', desc: 'Paste image/text from the clipboard into the chat. Optionally provide a name for the image', usage: 'Paste image/text from the clipboard into the chat. Optionally provide a name for the image.' },
-            { keys: '/quit', desc: 'Exit the application', usage: 'Exit the application' },
-            { keys: '/read-only', desc: 'Add files to the chat that are for reference only, or turn added files to read-only', usage: 'Add files to the chat that are for reference only, or turn added files to read-only' },
-            { keys: '/reasoning-effort', desc: 'Set the reasoning effort level (values: number or low/medium/high depending on model)', usage: 'Set the reasoning effort level (values: number or low/medium/high depending on model)' },
-            { keys: '/report', desc: 'Report a problem by opening a GitHub Issue', usage: 'Report a problem by opening a GitHub Issue' },
-            { keys: '/reset', desc: 'Drop all files and clear the chat history', usage: 'Drop all files and clear the chat history' },
-            { keys: '/run', desc: 'Run a shell command and optionally add the output to the chat (alias: !)', usage: 'Run a shell command and optionally add the output to the chat (alias: !)' },
-            { keys: '/save', desc: 'Save commands to a file that can reconstruct the current chat session\'s files', usage: 'Save commands to a file that can reconstruct the current chat session\'s files' },
-            { keys: '/settings', desc: 'Print out the current settings', usage: 'Print out the current settings' },
-            { keys: '/test', desc: 'Run a shell command and add the output to the chat on non-zero exit code', usage: 'Run a shell command and add the output to the chat on non-zero exit code' },
-            { keys: '/think-tokens', desc: 'Set the thinking token budget, eg: 8096, 8k, 10.5k, 0.5M, or 0 to disable', usage: 'Set the thinking token budget, eg: 8096, 8k, 10.5k, 0.5M, or 0 to disable.' },
-            { keys: '/tokens', desc: 'Report on the number of tokens used by the current chat context', usage: 'Report on the number of tokens used by the current chat context' },
-            { keys: '/undo', desc: 'Undo the last git commit if it was done by aider', usage: 'Undo the last git commit if it was done by aider' },
-            { keys: '/voice', desc: 'Record and transcribe voice input', usage: 'Record and transcribe voice input' },
-            { keys: '/weak-model', desc: 'Switch the Weak Model to a new LLM', usage: 'Switch the Weak Model to a new LLM' },
-            { keys: '/web', desc: 'Scrape a webpage, convert to markdown and send in a message', usage: 'Scrape a webpage, convert to markdown and send in a message' },
-          ]
-        },
-        {
-          name: 'Additional Shortcuts',
-          shortcuts: [
-            { keys: 'Ctrl + C', desc: 'Stop', usage: 'Stop current operation.' },
-          ]
-        },
-      ]
-    },
   runway: {
       name: 'Runway ML',
       icon: 'fas fa-film',
@@ -5487,23 +5304,6 @@ const shortcutData = {
           { keys: 'Audio Overview', desc: 'Generate podcast', usage: 'Generate AI podcast from sources.' },
           { keys: 'Generate FAQ', desc: 'Auto FAQ', usage: 'Auto-generate FAQs from sources.' },
           { keys: 'Summarize', desc: 'Document summary', usage: 'Summarize key content from uploaded docs.' },
-        ]
-      },
-    ]
-  },
-  suno: {
-    name: 'Suno AI',
-    icon: 'fas fa-music',
-    categories: [
-      {
-        name: 'Prompt Guide',
-        shortcuts: [
-          { keys: '[Verse]', desc: 'Verse section', usage: 'Specify a verse section in the song.' },
-          { keys: '[Chorus]', desc: 'Chorus section', usage: 'Specify a chorus section.' },
-          { keys: '[Bridge]', desc: 'Bridge section', usage: 'Specify a bridge section.' },
-          { keys: '[Outro]', desc: 'Outro', usage: 'Specify the outro section.' },
-          { keys: 'Genre tags', desc: 'Set genre', usage: 'Tag genres like pop, rock, jazz, hip-hop.' },
-          { keys: 'BPM', desc: 'Set tempo', usage: 'Specify the song BPM (tempo).' },
         ]
       },
     ]
@@ -18035,7 +17835,7 @@ const shortcutData = {
           { keys: 'Shift + Enter', desc: 'New line', usage: 'Insert a line break without sending.' },
           { keys: 'Ctrl + K', desc: 'Clear chat', usage: 'Clear the current chat history.' },
           { keys: 'Ctrl + F', desc: 'Find models', usage: 'Search available models in the browser.' },
-          { keys: 'Ctrl + D', desc: 'Model details', usage: 'View details of the selected model.' },
+          { keys: 'Ctrl + D', desc: 'Model details', usage: 'View details of the selected model.' }
         ]
       },
       {
@@ -18049,20 +17849,10 @@ const shortcutData = {
           { keys: 'lms unload', desc: 'Unload model', usage: 'Unload the currently active model.' },
           { keys: 'GET /v1/models', desc: 'List models (API)', usage: 'OpenAI-compatible endpoint to list loaded models.' },
           { keys: 'POST /v1/chat/completions', desc: 'Chat API', usage: 'OpenAI-compatible chat completions endpoint.' },
-          { keys: 'POST /v1/completions', desc: 'Completion API', usage: 'OpenAI-compatible text completion endpoint.' },
+          { keys: 'POST /v1/completions', desc: 'Completion API', usage: 'OpenAI-compatible text completion endpoint.' }
         ]
-      },
-      {
-        name: 'Model Parameters',
-        shortcuts: [
-          { keys: 'Temperature', desc: 'Creativity (0-1)', usage: 'Higher = more creative, lower = more deterministic.' },
-          { keys: 'Context Length', desc: 'Token window', usage: 'Max tokens for input + output combined.' },
-          { keys: 'Top P', desc: 'Nucleus sampling', usage: 'Probability mass threshold for token selection.' },
-          { keys: 'Repeat Penalty', desc: 'Avoid repetition', usage: 'Penalise recently used tokens to reduce repetition.' },
-          { keys: 'GPU Layers', desc: 'GPU offload', usage: 'Number of model layers to offload to GPU.' },
-        ]
-      },
-    ]
+      }
+          ]
   },
   godot: {
       name: 'Godot Engine',
