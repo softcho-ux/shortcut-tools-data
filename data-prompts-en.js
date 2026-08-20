@@ -441,6 +441,75 @@ const promptData = {
         { keys: 'GPU Layers', desc: 'GPU offload', usage: 'Number of model layers to offload to GPU.' }
       ] }
     ]
+  },
+  deepseek: {
+    name: 'DeepSeek',
+    icon: 'fas fa-brain',
+    source: { name: 'DeepSeek API Docs', url: 'https://api-docs.deepseek.com/api/create-chat-completion' },
+    categories: [
+      { name: 'Chat API Parameters', shortcuts: [
+        { keys: 'model', desc: 'The model used for the chat completion', usage: 'This fingerprint represents the backend configuration that the model runs with.' },
+        { keys: 'messages', desc: 'A list of messages comprising the conversation so far', usage: 'JSON body field of POST /chat/completions.' },
+        { keys: 'temperature', desc: 'What sampling temperature to use, between 0 and 2', usage: 'Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.' },
+        { keys: 'top_p', desc: 'An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the...', usage: 'So 0.1 means only the tokens comprising the top 10% probability mass are consid' },
+        { keys: 'max_tokens', desc: 'The maximum number of tokens that can be generated in the chat completion', usage: 'The total length of input tokens and generated tokens is limited by the model\'s context length.' },
+        { keys: 'frequency_penalty', desc: 'This parameter is no longer supported', usage: 'It will not take effect if you pass it to the API.' },
+        { keys: 'presence_penalty', desc: 'This parameter is no longer supported', usage: 'It will not take effect if you pass it to the API.' },
+        { keys: 'stop', desc: 'Up to 16 sequences where the API will stop generating further tokens', usage: 'JSON body field of POST /chat/completions.' },
+        { keys: 'stream', desc: 'If set, partial message deltas will be sent', usage: 'Tokens will be sent as data-only server-sent events (SSE) as they become available, with the stream terminated by a' },
+        { keys: 'stream_options', desc: 'Options for streaming response', usage: 'Only set this when you set If set, an additional chunk will be streamed before the field on this chunk shows the token usage statistics for the...' },
+        { keys: 'response_format', desc: 'An object specifying the format that the model must output', usage: 'Setting to { "type": "json_object" } enables JSON Output, which guarantees the message the model generates is valid JSON.' },
+        { keys: 'tools', desc: 'A list of tools the model may call', usage: 'Currently, only functions are supported as a tool.' },
+        { keys: 'tool_choice', desc: 'Controls which (if any) tool is called by the model', usage: 'means the model will not call any tool and instead generates a message.' },
+        { keys: 'logprobs', desc: 'Whether to return log probabilities of the output tokens or not', usage: 'If true, returns the log probabilities of each output token returned in the' },
+        { keys: 'top_logprobs', desc: 'An integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with...', usage: 'JSON body field of POST /chat/completions.' },
+        { keys: 'thinking', desc: 'Controls the switch between thinking and non-thinking mode', usage: 'JSON body field of POST /chat/completions.' }
+      ] },
+      { name: 'Models & Beta Feature Tokens', shortcuts: [
+        { keys: 'deepseek-chat', desc: 'Model ID for the general chat model', usage: 'Set as the model field value.' },
+        { keys: 'deepseek-reasoner', desc: 'Model ID for the reasoning model; responses include reasoning_content', usage: 'Set as the model field value. Chain-of-thought is returned in reasoning_content.' },
+        { keys: 'https://api.deepseek.com/beta', desc: 'Base URL that enables beta features', usage: 'Required for chat prefix completion and FIM completion.' },
+        { keys: 'prefix', desc: 'Chat prefix completion: force the assistant reply to continue from a given prefix (beta)', usage: 'Set prefix: true on the last assistant message, with the beta base URL.' },
+        { keys: 'suffix', desc: 'FIM completion: text after the insertion point (beta)', usage: 'Fill-in-the-middle on POST /beta/completions, together with prompt.' },
+        { keys: '{"type": "json_object"}', desc: 'response_format value that switches on JSON mode', usage: 'Also instruct the model to produce JSON in the prompt, or output may be empty.' }
+      ] }
+    ]
+  },
+  glm: {
+    name: 'GLM (Z.ai)',
+    icon: 'fas fa-microchip',
+    source: { name: 'Z.AI API Reference', url: 'https://docs.z.ai/api-reference/llm/chat-completion' },
+    categories: [
+      { name: 'Chat API Parameters', shortcuts: [
+        { keys: 'model', desc: 'The model code to be called', usage: 'GLM-5.3, GLM-5.2, GLM-5.1, GLM-5-Turbo are the latest flagship model series, foundational models specifically designed for agent applications.' },
+        { keys: 'messages', desc: 'The current conversation message list as the model’s prompt input, provided in JSON array format, e.g.,`{“role”:...', usage: 'Possible message types include system messages, user messages, assistant mess' },
+        { keys: 'do_sample', desc: 'When do_sample is true, sampling strategy is enabled; when do_sample is false, sampling strategy parameters such as...', usage: 'Default value is `true`.' },
+        { keys: 'stream', desc: 'This parameter should be set to false or omitted when using synchronous call', usage: 'It indicates that the model returns all content at once after generating all content.' },
+        { keys: 'reasoning_effort', desc: 'Controls the model\'s reasoning effort level, takes effect when `thinking` is enabled', usage: 'Default is `max`, supported by `GLM-5.2` and above.' },
+        { keys: 'temperature', desc: 'Sampling temperature, controls the randomness of the output, must be a positive number within the range: `[0.0, 1.0]`', usage: 'The GLM-5.3, GLM-5.2, GLM-5.1, GLM-5, GLM-4.7, GLM-4.6 series default value is `1.0`, GLM-4.5 series' },
+        { keys: 'top_p', desc: 'Another method of temperature sampling, value range is: `[0.01, 1.0]`', usage: 'The GLM-5.3, GLM-5.2, GLM-5.1, GLM-5, GLM-4.7, GLM-4.6, GLM-4.5 series default value is `0.95`, GLM-4-32B-0414-128K default value is `0.9`.' },
+        { keys: 'max_tokens', desc: 'The maximum number of tokens for model output, the GLM-5.3, GLM-5.2, GLM-5.1, GLM-5, GLM-4.7, GLM-4.6 series...', usage: 'JSON body field (integer) of POST /paas/v4/chat/completions.' },
+        { keys: 'tool_stream', desc: 'Whether to enable streaming response for Function Calls', usage: 'Default value is false.' },
+        { keys: 'tools', desc: 'A list of tools the model may call', usage: 'Currently, only functions are supported as a tool.' },
+        { keys: 'tool_choice', desc: 'Controls how the model selects a tool', usage: 'JSON body field (field) of POST /paas/v4/chat/completions.' },
+        { keys: 'stop', desc: 'Stop word list', usage: 'Generation stops when the model encounters any specified string.' },
+        { keys: 'response_format', desc: 'Specifies the response format of the model', usage: 'Defaults to text.' },
+        { keys: 'request_id', desc: 'Passed by the user side, needs to be unique; used to distinguish each request, 6–64 characters', usage: 'If not provided by the user side, the platform will generate one by default.' },
+        { keys: 'user_id', desc: 'Unique ID for the end user, 6–128 characters', usage: 'Avoid using sensitive information.' }
+      ] },
+      { name: 'Image Generation Parameters', shortcuts: [
+        { keys: 'model', desc: 'Model code', usage: 'JSON body field of the image generation endpoint.' },
+        { keys: 'prompt', desc: 'The text description of the image to be generated', usage: 'JSON body field of the image generation endpoint.' },
+        { keys: 'quality', desc: 'The quality of the generated image', usage: '`glm-image` default is `hd`, others model is `standard`.' },
+        { keys: 'size', desc: 'Image size', usage: '`glm-image` recommended enum values: `1280x1280` (default), `1568x1056`, `1056x1568`, `1472x1088`, `1088x1472`, `1728x960`, `960x1728`.' },
+        { keys: 'user_id', desc: 'Unique ID of the end user, helping the platform intervene in illegal activities, inappropriate content generation,...', usage: 'ID length: 6 to 128 characters.' }
+      ] },
+      { name: 'Model & Mode Tokens', shortcuts: [
+        { keys: 'glm-5.3', desc: 'Latest flagship GLM model ID', usage: 'Set as the model field value in chat completions.' },
+        { keys: 'glm-5-turbo', desc: 'Faster, lower-cost GLM model ID', usage: 'Set as the model field value in chat completions.' },
+        { keys: 'reasoning_effort: "high"', desc: 'Raise the reasoning effort level when thinking is enabled', usage: 'Values control how much reasoning the model performs before answering.' }
+      ] }
+    ]
   }
 };
 export default promptData;
