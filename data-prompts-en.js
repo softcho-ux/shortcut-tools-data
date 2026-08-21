@@ -747,6 +747,125 @@ const promptData = {
         { keys: 'v3.5', desc: 'Oldest listed model version', usage: '1080p output cannot use the 8 second duration.' }
       ] }
     ]
+  },
+  manus: {
+    name: 'Manus',
+    icon: 'fas fa-hands',
+    source: { name: 'Manus API Reference (open.manus.ai)', url: 'https://open.manus.ai/docs/v2/task.create' },
+    categories: [
+      { name: 'Task Parameters', shortcuts: [
+        { keys: 'project_id', desc: 'Project ID to associate this task with', usage: 'The project\'s instruction will be automatically applied. Use project.list to get available project IDs.' },
+        { keys: 'locale', desc: 'Locale for the task output language (e.g., "en", "zh-CN", "ja")', usage: 'Defaults to the user\'s account locale setting.' },
+        { keys: 'interactive_mode', desc: 'When enabled, the agent may pause and ask follow-up questions if the input is insufficient', usage: 'When disabled (default), the agent proceeds with best-effort execution without asking.' },
+        { keys: 'hide_in_task_list', desc: 'When true, the task will not appear in the Manus webapp task list', usage: 'The task is still accessible via the task_url in the response. Useful for automated/background tasks.' },
+        { keys: 'share_visibility', desc: 'Controls who can view the task', usage: '"private" (default) — only the task creator can view. "team" — all team members can view. "public" — anyone with the share_url can view without authentication.' },
+        { keys: 'agent_profile', desc: 'Agent profile to use for the task', usage: '"manus-1.6" (default) — standard capability. "manus-1.6-lite" — lightweight, faster responses. "manus-1.6-max" — maximum capability. Free personal accounts are downgraded to...' },
+        { keys: 'title', desc: 'Custom title for the task', usage: 'If not provided, a title will be auto-generated based on the input message.' },
+        { keys: 'structured_output_schema', desc: 'JSON Schema for structured output extraction', usage: 'When provided, the agent runs normally, then a post-processing step extracts a result conforming to your schema. The schema must follow the Structured Output subset of JSON Schema: all...' }
+      ] },
+      { name: 'Message Object Fields', shortcuts: [
+        { keys: 'message.content', desc: 'String (plain text) or array of ContentPart objects', usage: 'User text is limited to approximately 5,000 estimated tokens per request; the exact character count varies by language and content. For an array, the limit applies to the combined text...' },
+        { keys: 'message.connectors', desc: 'List of connector IDs to enable for this task', usage: 'Resolution order when omitted: 1) if the task belongs to a project, the project\'s default connectors are used; 2) otherwise, the user\'s default enabled connectors are used. Use...' },
+        { keys: 'message.enable_skills', desc: 'Skill IDs to enable for this task', usage: 'If empty or omitted, loads the skills the user has enabled in their account settings. Use skill.list to retrieve available skill IDs.' },
+        { keys: 'message.force_skills', desc: 'Skill IDs the agent must invoke during this task', usage: 'Forced skills are automatically available even if not listed in enable_skills.' },
+        { keys: 'message.task_references', desc: 'Task IDs of existing tasks to reference from this message', usage: 'The agent can then browse the conversation and files of those tasks on demand. Each entry must be a bare 22-character alphanumeric task ID — a full task URL, or a shortcut value such as...' }
+      ] },
+      { name: 'Content Part Types & Fields', shortcuts: [
+        { keys: '"type": "text"', desc: 'Must be "text"', usage: 'Field of a ContentPart item inside message.content.' },
+        { keys: 'text', desc: 'The text content of the message', usage: 'Across a ContentPart array, all text parts must contain no more than approximately 5,000 estimated tokens in total.' },
+        { keys: '"type": "file"', desc: 'Must be "file"', usage: 'Field of a ContentPart item inside message.content.' },
+        { keys: 'file_id', desc: 'ID of a previously uploaded file', usage: 'Upload via file.upload first to get the file ID.' },
+        { keys: 'file_url', desc: 'Publicly accessible URL to the file', usage: 'The agent will download it directly.' },
+        { keys: 'file_data', desc: 'Base64 encoded file content', usage: 'Format: data:<mime_type>;base64,<encoded_content> (e.g., data:application/pdf;base64,JVBERi0...).' },
+        { keys: 'filename', desc: 'Display name of the file including extension (e.g., "report.pdf")', usage: 'Required when using file_data; recommended for file_url.' },
+        { keys: 'mime_type', desc: 'MIME type of the file (e.g., "application/pdf", "image/png")', usage: 'Optional; auto-detected from filename if omitted.' },
+        { keys: '"type": "voice"', desc: 'Must be "voice"', usage: 'Field of a ContentPart item inside message.content.' }
+      ] },
+      { name: 'Endpoints, Profiles & Follow-up Fields', shortcuts: [
+        { keys: 'POST /v2/task.create', desc: 'Create a new task; runs asynchronously', usage: 'Poll task.listMessages for progress. OAuth scope: create_task or manage_all_tasks.' },
+        { keys: 'POST /v2/task.sendMessage', desc: 'Send a follow-up message to an existing task', usage: 'Use this instead of task.create when talking to an agent that already exists.' },
+        { keys: 'manus-1.6', desc: 'Default agent profile: standard capability', usage: 'Set as the agent_profile value on task.create or per turn on task.sendMessage.' },
+        { keys: 'task_id', desc: 'The unique identifier of the task to send the message to', usage: 'Supports the shortcut agent-default-main_task for the IM agent\'s main task.' },
+        { keys: 'clear_connectors', desc: 'Removes all connectors from this task for this and subsequent turns', usage: 'Combine with message.connectors to form three states: a non-empty message.connectors overrides the task\'s connectors with the new list; clear_connectors: true clears all connectors;...' }
+      ] }
+    ]
+  },
+  qwen: {
+    name: 'Qwen (Alibaba Model Studio)',
+    icon: 'fas fa-cloud',
+    source: { name: 'Alibaba Cloud Model Studio - OpenAI compatible Chat', url: 'https://www.alibabacloud.com/help/en/model-studio/qwen-api-via-openai-chat-completions' },
+    categories: [
+      { name: 'Chat API Parameters', shortcuts: [
+        { keys: 'model', desc: 'Model to call', usage: 'Supported families: Qwen LLM (commercial and open source), Qwen-VL, Qwen-Coder, Qwen-Omni, Qwen-Math, plus DeepSeek, Kimi, GLM and MiniMax. Required.' },
+        { keys: 'messages', desc: 'Conversation context passed to the model, in conversational order', usage: 'Required. System message, if present, must come first.' },
+        { keys: 'temperature', desc: 'Sampling temperature controlling output diversity', usage: 'Value range [0, 2). Set either temperature or top_p, not both.' },
+        { keys: 'top_p', desc: 'Nucleus sampling probability threshold', usage: 'Value range (0, 1.0]. Set either temperature or top_p, not both.' },
+        { keys: 'top_k', desc: 'Number of candidate tokens sampled during generation', usage: 'Larger is more random. null or a value above 100 disables the top_k strategy.' },
+        { keys: 'repetition_penalty', desc: 'Penalty for consecutive repeated sequences', usage: '1.0 means no penalty; raise it to reduce repetition. No strict upper bound.' },
+        { keys: 'presence_penalty', desc: 'Controls content repetition across the generated text', usage: 'Value range [-2.0, 2.0]. Positive reduces repetition, negative increases it.' },
+        { keys: 'max_completion_tokens', desc: 'Maximum output length, including chain-of-thought and answer', usage: 'Generation stops early with finish_reason length if exceeded.' },
+        { keys: 'enable_thinking', desc: 'Switch thinking mode on for mixed-thinking models', usage: 'Applies to Qwen3 family, Qwen3-Omni-Flash and Qwen3-VL models.' },
+        { keys: 'thinking_budget', desc: 'Maximum tokens allowed for the thinking process', usage: 'Applies to Qwen3 family, GLM and Kimi models; kimi-k3 does not support it.' },
+        { keys: 'reasoning_effort', desc: 'Inference intensity level', usage: 'Valid values vary by model; DeepSeek-V4 and GLM default to high, with max available.' },
+        { keys: 'seed', desc: 'Random seed for reproducible results', usage: 'Same seed and unchanged parameters return the same result as far as possible.' },
+        { keys: 'tools', desc: 'Array of tool objects the model may call in function calling', usage: 'If set and the model decides to call a tool, tool info is returned in the response.' },
+        { keys: 'stream_options', desc: 'Configuration for streaming output', usage: 'Takes effect only when stream is true; include_usage adds token usage to the last chunk.' },
+        { keys: 'audio', desc: 'Voice and format of the output audio', usage: 'Qwen-Omni models only, and requires modalities set to ["text","audio"].' },
+        { keys: 'search_options', desc: 'Web search strategy', usage: 'Not a standard OpenAI parameter; via the Python SDK place it in extra_body.' }
+      ] },
+      { name: 'Output, Tool & Feature Parameters', shortcuts: [
+        { keys: 'stream', desc: 'Reply in streaming output mode', usage: 'Default false. When true the model outputs content as it is generated, in data chunks.' },
+        { keys: 'stop', desc: 'Stop words or token IDs that halt generation immediately', usage: 'A string or array; you cannot mix strings and token IDs in one array.' },
+        { keys: 'n', desc: 'Number of responses to generate', usage: 'Default 1, range 1-4. Only supported by Qwen3 models in non-thinking mode.' },
+        { keys: 'max_tokens', desc: 'Maximum output tokens (to be deprecated)', usage: 'Use max_completion_tokens for new integrations; the meaning varies by model.' },
+        { keys: 'response_format', desc: 'Format of the response', usage: 'Default {"type": "text"}. Use {"type": "json_object"} for structured JSON output.' },
+        { keys: 'tool_choice', desc: 'Tool selection strategy', usage: 'Default auto. Set it to force a specific tool or to disable all tools.' },
+        { keys: 'parallel_tool_calls', desc: 'Enable parallel tool calling', usage: 'Default false.' },
+        { keys: 'modalities', desc: 'Modality of the output data', usage: 'Default ["text"]. Qwen-Omni models only; ["text","audio"] adds audio output.' },
+        { keys: 'enable_search', desc: 'Enable web search', usage: 'Default false. If search does not trigger, set forced_search inside search_options.' },
+        { keys: 'logprobs', desc: 'Return log probabilities of the output tokens', usage: 'Default false.' },
+        { keys: 'top_logprobs', desc: 'Number of most likely candidate tokens returned per step', usage: 'Range [0, 5]. Takes effect only when logprobs is true.' },
+        { keys: 'vl_high_resolution_images', desc: 'Raise the input image pixel limit to the 16384-token equivalent', usage: 'Default false. Qwen-VL high-resolution image processing.' },
+        { keys: 'enable_code_interpreter', desc: 'Enable the code interpreter feature', usage: 'Default false.' }
+      ] }
+    ]
+  },
+  hunyuan: {
+    name: 'Tencent Hunyuan',
+    icon: 'fas fa-atom',
+    source: { name: 'Tencent Cloud Hunyuan ChatCompletions API', url: 'https://cloud.tencent.com/document/api/1729/105701' },
+    categories: [
+      { name: 'Core Request Parameters', shortcuts: [
+        { keys: 'Model', desc: 'Model name to call', usage: 'Required. Example: hunyuan-turbos-latest. Billing differs by model.' },
+        { keys: 'Messages.N', desc: 'Chat context array, ordered oldest to newest', usage: 'Required. Up to 40 entries. Role values: system, user, assistant, tool. System, if present, must be first; user and assistant alternate.' },
+        { keys: 'Stream', desc: 'Streaming response switch', usage: 'Defaults to false. When true, results arrive incrementally over SSE in Choices[n].Delta.' },
+        { keys: 'StreamModeration', desc: 'Content moderation switch for streaming output', usage: 'Boolean.' },
+        { keys: 'Temperature', desc: 'Sampling temperature controlling output randomness', usage: 'Float. Set either Temperature or TopP, not both.' },
+        { keys: 'TopP', desc: 'Nucleus sampling probability threshold', usage: 'Float. Set either Temperature or TopP, not both.' },
+        { keys: 'Seed', desc: 'Random seed for reproducible output', usage: 'Non-zero positive integer up to 10000. Not recommended unless needed; unsuitable values degrade quality.' },
+        { keys: 'Stop.N', desc: 'Custom stop strings that end generation', usage: 'Array of strings.' }
+      ] },
+      { name: 'Tools & Reasoning Parameters', shortcuts: [
+        { keys: 'Tools.N', desc: 'List of callable tools for function calling', usage: 'Effective only on hunyuan-turbos, hunyuan-t1 and hunyuan-functioncall models.' },
+        { keys: 'ToolChoice', desc: 'Tool usage mode', usage: 'Values: none, auto, custom. Defaults to auto. Effective on hunyuan-turbo and hunyuan-functioncall models.' },
+        { keys: 'EnableThinking', desc: 'Chain-of-thought reasoning switch', usage: 'Enabled by default. Currently effective only on the hunyuan-a13b model.' }
+      ] },
+      { name: 'Search & Enhancement Switches', shortcuts: [
+        { keys: 'EnableEnhancement', desc: 'Capability enhancement switch, such as search', usage: 'Boolean.' },
+        { keys: 'ForceSearchEnhancement', desc: 'Force search enhancement on', usage: 'Boolean.' },
+        { keys: 'EnableSpeedSearch', desc: 'Turn on the fast search variant', usage: 'Defaults to false. When on and search is triggered, streaming returns the first token sooner.' },
+        { keys: 'SearchInfo', desc: 'Return SearchInfo in the response when search is triggered', usage: 'Defaults to false.' },
+        { keys: 'Citation', desc: 'Search citation superscript switch', usage: 'Boolean.' },
+        { keys: 'EnableMultimedia', desc: 'Multimedia output switch', usage: 'Boolean.' },
+        { keys: 'EnableRecommendedQuestions', desc: 'Recommended follow-up questions switch', usage: 'Boolean.' },
+        { keys: 'TopicChoice', desc: 'Topic passed in by the caller', usage: 'String.' }
+      ] },
+      { name: 'Common API Parameters', shortcuts: [
+        { keys: 'Action', desc: 'Common parameter; the API action name', usage: 'Fixed value for this endpoint: ChatCompletions. Required.' },
+        { keys: 'Version', desc: 'Common parameter; the API version', usage: 'Fixed value for this endpoint: 2023-09-01. Required.' },
+        { keys: 'Region', desc: 'Common parameter; the region', usage: 'Optional for this endpoint.' }
+      ] }
+    ]
   }
 };
 export default promptData;
