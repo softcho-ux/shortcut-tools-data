@@ -580,6 +580,80 @@ const promptData = {
         { keys: '"key": "product_type"', desc: 'Filter tasks by function type', usage: 'Values: video, image, try_on.' }
       ] }
     ]
+  },
+  vidu: {
+    name: 'Vidu',
+    icon: 'fas fa-video',
+    source: { name: 'Vidu Platform API Docs', url: 'https://platform.vidu.com/docs/text-to-video' },
+    categories: [
+      { name: 'Generation Parameters', shortcuts: [
+        { keys: 'model', desc: 'Model name', usage: 'Accepted values:viduq3-turbo, viduq3-pro , viduq2 , viduq1 -viduq3-turbo: Compared to viduq3-pro, the generation speed is faster -viduq3-pro: Supports audio-visual synchronization,... Required.' },
+        { keys: 'style', desc: 'The style of output video', usage: 'Defaults to general, Accepted values: general anime - general : General style. Allows style control through prompts - anime: Anime style. Optimized for anime aesthetics, with better...' },
+        { keys: 'prompt', desc: 'Text prompt A textual description for video generation, with a maximum length of 5000 characters', usage: 'Required.' },
+        { keys: 'duration', desc: 'Video duration', usage: 'Default values vary by model: - viduq3-pro,viduq3-turbo: default 5s, available: 1 - 16 - viduq2: default 5s, available: 1 - 10 - viduq1: default 5s, available: 5' },
+        { keys: 'seed', desc: 'Random seed -', usage: 'Defaults to a random seed number - Manually set values will override the default random seed' },
+        { keys: 'aspect_ratio', desc: 'The aspect ratio of the output video', usage: 'Defaults to 16:9, accepted: 16:9 9:163:4 4:3 1:1 Note:3:4& 4:3only support q2 & q3 model' },
+        { keys: 'resolution', desc: 'Resolution', usage: 'Default values vary by model & duration: - viduq3-pro , viduq3-turbo (1-16s): default 720p, available: 540p, 720p, 1080p - viduq2 (1-10s): default 720p, available: 540p 720p 1080p -...' },
+        { keys: 'movement_amplitude', desc: 'The movement amplitude of objects in the frame', usage: 'Defaults to auto, accepted value: auto small medium large This parameter does not take effect when using the q2 & q3 model' },
+        { keys: 'images', desc: 'An image to be used as the start frame of the generated video For fields that accept images: - Only accepts 1 image -...', usage: '- Supported formats: png, jpeg, jpg, webp - The aspect ratio of the images must be less than 1:4 or 4:1 - All images are limited to 50MB - The post body of the HTTP request should not... Required.' },
+        { keys: 'voice_id', desc: 'Voice ID, The Q3 series model is not effective Used to determine the voice character in the video', usage: 'The system will automatically recommend a suitable voice, and optional values can be found in the Voice List. You can also use the Voice Cloning API to clone any voice. The voice_id...' },
+        { keys: 'is_rec', desc: 'Whether to use the recommended prompt', usage: '- true: Yes, the system will automatically generate and apply a recommended prompt to create the video. The number of recommended prompts = 1. - false: No, the video will be generated...' },
+        { keys: 'auto_subjects', desc: 'Optional | Whether to use the intelligent entity library capability, default is false, optional values are true and false...', usage: '- false: Do not use the intelligent agent library capability.' },
+        { keys: 'subjects', desc: 'Required | When using the q3, q2, q1, and 2.0 models, only the main body of the image and text can be used - The maximum...', usage: 'JSON body field of the Vidu generation endpoints.' },
+        { keys: 'videos', desc: 'Optional | The video URL corresponding to the subject', usage: 'All subjects share a 13s duration (each image subject = 1s). Must provide either this or images. - Note 1: This parameter is only supported by the viduq2-pro model. - Note 2: When using...' }
+      ] },
+      { name: 'Task & Delivery Parameters', shortcuts: [
+        { keys: 'bgm', desc: 'Whether to add background music to the generated video.（q3 model not available） Default: false', usage: 'Acceptable values: true, false. When true, the system will automatically add a suitable BGM. BGM has no time limit and the system automatically adapts. BGM does not take effect when the...' },
+        { keys: 'audio', desc: 'Whether to use direct audio-video generation capability', usage: 'Default: true. Enumerated values: - false: No direct audio-video generation, outputs silent video - true: Requires audio-video synchronization, outputs video with sound (including...' },
+        { keys: 'payload', desc: 'transparent transmission parameters No processing, only data transmission，with a maximum length of 1048576 characters', usage: 'JSON body field of the Vidu generation endpoints.' },
+        { keys: 'off_peak', desc: 'off peak mode,', usage: 'Defaults to false, accepted value: true false - true：off peak generate mode； - false：normal generate mode； - The off_peak mode consumes lower points, please refer to the details Pricing....' },
+        { keys: 'callback_url', desc: 'Callback When creating a task, you need to actively set the callback_url with a POST request', usage: 'When the video generation task changes its status, Vidu will send a callback request to this URL, containing the latest status of the task. The structure of the callback request content...' },
+        { keys: 'audio_type', desc: 'Audio type, required when audio is true, defaults to all -All: Sound effects+vocals -Speech_only: Vocal only...', usage: 'JSON body field of the Vidu generation endpoints.' }
+      ] },
+      { name: 'Model IDs', shortcuts: [
+        { keys: 'viduq3-pro', desc: 'Model ID with audio-visual synchronization and video shot segmentation', usage: 'Set as the model field value.' },
+        { keys: 'viduq3-turbo', desc: 'Faster variant of viduq3-pro', usage: 'Set as the model field value.' },
+        { keys: 'viduq2', desc: 'Second-generation Vidu model ID', usage: 'Supports 3:4 and 4:3 aspect ratios; duration 1-10s.' },
+        { keys: 'viduq1', desc: 'First-generation model: clear image, smooth transition, stable camera', usage: 'Fixed 5s duration at 1080p.' }
+      ] }
+    ]
+  },
+  minimax: {
+    name: 'MiniMax (Hailuo)',
+    icon: 'fas fa-wave-square',
+    source: { name: 'MiniMax Platform API Reference', url: 'https://platform.minimax.io/docs/api-reference/video-generation-v2-create' },
+    categories: [
+      { name: 'Video Generation Parameters', shortcuts: [
+        { keys: 'model', desc: 'Model name', usage: 'Currently available: MiniMax-H3.' },
+        { keys: 'content', desc: 'Array of multimodal input describing the information used to generate the video', usage: 'Each element is distinguished by type (text / image_url / video_url / audio_url) and can be labeled with a role. Every request must include one non-empty text item (the prompt is...' },
+        { keys: 'resolution', desc: 'Video resolution', usage: 'Currently available: 768P, 2K.' },
+        { keys: 'duration', desc: 'Duration of the generated video in seconds', usage: 'Required, integer. Available values: 4-15.' },
+        { keys: 'ratio', desc: 'Aspect ratio of the generated video', usage: 'Defaults to adaptive (the most suitable ratio is chosen automatically based on the input; the actual ratio can be read from the ratio field of the query endpoint). Available values:...' },
+        { keys: 'callback_url', desc: 'Callback URL for task status changes', usage: 'Once configured, the MiniMax server first sends a verification request containing a challenge field (you must return the challenge unchanged within 3 seconds to complete verification);...' }
+      ] },
+      { name: 'Multimodal Content & Model Tokens', shortcuts: [
+        { keys: '"type": "text"', desc: 'Text prompt content item; every scenario must include one', usage: 'Inside the content array, with the prompt in the text field.' },
+        { keys: '"type": "image_url"', desc: 'Image input content item', usage: 'Supplies a reference or first-frame image to the generation.' },
+        { keys: '"type": "video_url"', desc: 'Video input content item', usage: 'Supplies a reference video to the generation.' },
+        { keys: '"type": "audio_url"', desc: 'Audio input content item', usage: 'Supplies reference audio to the generation.' },
+        { keys: 'role', desc: 'Position or purpose of a content item', usage: 'Conditionally required depending on the content type.' },
+        { keys: 'MiniMax-H3', desc: 'Current video generation model ID (Hailuo 03)', usage: 'Set as the model field value.' }
+      ] },
+      { name: 'Chat API Parameters', shortcuts: [
+        { keys: 'model', desc: 'Model ID', usage: 'JSON body field of the OpenAI-compatible chat endpoint.' },
+        { keys: 'service_tier', desc: 'Service tier for request admission', usage: 'Supported values are standard and priority. If omitted, the request uses the standard tier. The priority price is 1.5 times the standard price and ensures priority admission so the...' },
+        { keys: 'messages', desc: 'A list of messages containing the conversation history', usage: 'Supports text, image, video, and tool call content.' },
+        { keys: 'thinking', desc: 'Controls MiniMax-M3 thinking', usage: 'When omitted, adaptive thinking is enabled by default and responses include thinking content. For M2.x models, thinking cannot be disabled.' },
+        { keys: 'reasoning_split', desc: 'Output-format switch', usage: 'When enabled, separates thinking content into the reasoning_content and reasoning_details fields. This does not enable or disable thinking.' },
+        { keys: 'stream', desc: 'Whether to use streaming output, defaults to false', usage: 'When set to true, the response will be returned in chunks.' },
+        { keys: 'stream_options', desc: 'Streaming response options', usage: 'JSON body field of the OpenAI-compatible chat endpoint.' },
+        { keys: 'max_completion_tokens', desc: 'Specifies the upper limit for generated content length, in tokens', usage: 'For MiniMax-M3 the recommended value is 131072 (128K) and the maximum is 524288 (512K); for other models the recommended value is 65536 (64K) and the maximum is 204800 (200K). If...' },
+        { keys: 'temperature', desc: 'Temperature coefficient, affects output randomness', usage: 'Range [0, 2], default 1. Higher values produce more random output; lower values produce more deterministic output.' },
+        { keys: 'top_p', desc: 'Nucleus sampling parameter', usage: 'Range [0, 1]. Default is 0.95 for MiniMax-M3 and 0.9 for M2.x models.' },
+        { keys: 'tools', desc: 'Tool definition list', usage: 'Function tools are supported.' },
+        { keys: 'max_tokens', desc: 'Legacy generation length limit parameter', usage: 'Deprecated; use max_completion_tokens instead.' }
+      ] }
+    ]
   }
 };
 export default promptData;
