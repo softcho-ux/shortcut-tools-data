@@ -704,6 +704,49 @@ const promptData = {
         { keys: 'max_tokens', desc: 'Legacy generation length limit parameter', usage: 'Deprecated; use max_completion_tokens instead.' }
       ] }
     ]
+  },
+  pixverse: {
+    name: 'PixVerse',
+    icon: 'fas fa-clapperboard',
+    source: { name: 'PixVerse Platform API Docs', url: 'https://docs.platform.pixverse.ai/text-to-video-generation-13016634e0' },
+    categories: [
+      { name: 'Generation Parameters', shortcuts: [
+        { keys: 'aspect_ratio', desc: 'Aspect ratio', usage: 'other models : 16:9, 4:3, 1:1, 3:4, 9:16 v6/c1 models : 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, 21:9' },
+        { keys: 'duration', desc: 'Video duration', usage: 'v.3.5/v4/v4.5 : 5/8 (v3.5 1080p cannot use 8) v5 : 5/8 v5.5/v5.6 : 5/8/10 (1080p cannot use 10) v6/c1 : 1~15' },
+        { keys: 'model', desc: 'Model version (now supports', usage: 'v3.5/v4/v4.5/v5/v5.5/v5.6/v6/c1' },
+        { keys: 'prompt', desc: 'Prompt <= 5000 characters', usage: 'JSON body field of the PixVerse video generation endpoints.' },
+        { keys: 'quality', desc: 'Video quality ("360p", "540p", "720p", "1080p")', usage: 'JSON body field of the PixVerse video generation endpoints.' },
+        { keys: 'seed', desc: 'Random seed,', usage: 'range: 0 - 2147483647' },
+        { keys: 'generate_multi_clip_switch', desc: 'Supported in', usage: 'v5.5/v6 models. Single or multi-clip switch. controls single-clip and multi-clip generation modes. **true**: Multi-clip , **false**: Single-clip. **default value** : false' }
+      ] },
+      { name: 'Audio & Lip Sync Parameters', shortcuts: [
+        { keys: 'generate_audio_switch', desc: 'Supported in', usage: 'v5.5/v5.6/v6/c1 models. Audio switch. Controls whether the video has audio. **true**: Audio on , **false**: Audio off . **default value** : false' },
+        { keys: 'sound_effect_switch', desc: 'Supported in', usage: 'v5 models and below.' },
+        { keys: 'sound_effect_content', desc: 'Supported in', usage: 'v5 models and below. Activated when sound_effect_switch=true, Describe the sound effect you want. Leave blank for auto generation.' },
+        { keys: 'lip_sync_tts_switch', desc: 'Supported in', usage: 'v5 models and below. Set to true if you want to enable this feature. Default is false.' },
+        { keys: 'lip_sync_tts_content', desc: 'Supported in', usage: 'v5 models and below. ~140 (UTF-8) characters' },
+        { keys: 'lip_sync_tts_speaker_id', desc: 'Supported in', usage: 'v5 models and below. id from Get speech tts list' }
+      ] },
+      { name: 'Image & Template Inputs', shortcuts: [
+        { keys: 'img_id', desc: 'Image ID from Upload image API', usage: 'single image or single-image templates' },
+        { keys: 'img_ids', desc: 'img_ids is only for multi-image templates', usage: 'ex) "img_ids ":[0,0]' },
+        { keys: 'template_id', desc: 'Template ID (template_id must be activated before use)', usage: 'JSON body field of the PixVerse video generation endpoints.' }
+      ] },
+      { name: 'Endpoints & Required Headers', shortcuts: [
+        { keys: 'POST /openapi/v2/video/text/generate', desc: 'Create a text-to-video generation task', usage: 'Requires API-KEY and a unique Ai-trace-id (UUID) header per request.' },
+        { keys: 'POST /openapi/v2/video/img/generate', desc: 'Create an image-to-video generation task', usage: 'Takes img_id from an uploaded image.' },
+        { keys: 'API-KEY', desc: 'Required request header carrying your PixVerse platform key', usage: 'Header, not a body field.' },
+        { keys: 'Ai-trace-id', desc: 'Required request header: a UUID unique to each request', usage: 'Used for tracing; reusing a value across requests is not allowed.' }
+      ] },
+      { name: 'Model IDs', shortcuts: [
+        { keys: 'c1', desc: 'Latest PixVerse model generation', usage: 'Set as the model field value.' },
+        { keys: 'v6', desc: 'Sixth-generation model', usage: 'Supports the newer aspect ratio set and audio switch.' },
+        { keys: 'v5.6', desc: 'Model version with audio generation support', usage: 'Set as the model field value.' },
+        { keys: 'v5.5', desc: 'Model version supporting audio and multi-clip switches', usage: 'Set as the model field value.' },
+        { keys: 'v4.5', desc: 'Earlier model version', usage: 'Duration options differ from v6/c1.' },
+        { keys: 'v3.5', desc: 'Oldest listed model version', usage: '1080p output cannot use the 8 second duration.' }
+      ] }
+    ]
   }
 };
 export default promptData;
