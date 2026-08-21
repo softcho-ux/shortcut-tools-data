@@ -410,6 +410,31 @@ const promptData = {
         { keys: '<lora:filename:multiplier>', desc: 'Apply a LoRA at the given strength', usage: 'Filename without extension; multiplier usually 0-1. Not allowed in the negative prompt.' },
         { keys: '<hypernet:filename:multiplier>', desc: 'Apply a Hypernetwork at the given strength', usage: 'Same syntax family as LoRA extra networks.' },
         { keys: 'embedding-filename', desc: 'Trigger a Textual Inversion embedding by its filename', usage: 'Place the embedding\'s filename anywhere in the prompt.' }
+      ] },
+      { name: 'Script & Job Syntax', shortcuts: [
+        { keys: 'a|b|c', desc: 'Prompt matrix: generate one image for every combination of the parts', usage: 'Separate alternatives with the pipe character; the first part is always kept. Script -> Prompt matrix.' },
+        { keys: '{prompt}', desc: 'Style placeholder: substitute the current prompt into the saved style at that position', usage: 'Without it, a style is appended to the prompt instead of wrapping it. Saved in styles.csv.' },
+        { keys: '--prompt "text"', desc: 'Prompts-from-file job field: the positive prompt for one queued job', usage: 'One job per line in the Prompts from file or textbox script.' },
+        { keys: '--negative_prompt "text"', desc: 'Prompts-from-file job field: things the model should avoid', usage: 'Used as unconditional conditioning instead of an empty string.' },
+        { keys: '--steps N', desc: 'Prompts-from-file job field: sampling steps for that job', usage: 'Overrides the UI value for the single queued job.' },
+        { keys: '--cfg_scale N', desc: 'Prompts-from-file job field: classifier-free guidance scale', usage: 'Higher values follow the prompt more strictly.' },
+        { keys: '--sampler_name "name"', desc: 'Prompts-from-file job field: sampling method', usage: 'Example: DPM++ 2M Karras, DDIM.' },
+        { keys: '--seed N', desc: 'Prompts-from-file job field: fixed starting noise', usage: 'Reuse a seed to reproduce a composition.' },
+        { keys: '--subseed N', desc: 'Prompts-from-file job field: variation seed', usage: 'Paired with subseed_strength to blend between two seeds.' },
+        { keys: '--subseed_strength N', desc: 'Prompts-from-file job field: how far to move toward the variation seed', usage: 'At maximum you get the subseed image, at minimum the original seed.' },
+        { keys: '--width N', desc: 'Prompts-from-file job field: output width', usage: 'Set per job in the queued list.' },
+        { keys: '--height N', desc: 'Prompts-from-file job field: output height', usage: 'Set per job in the queued list.' },
+        { keys: '--batch_size N', desc: 'Prompts-from-file job field: images generated in parallel per batch', usage: 'Limited by available VRAM.' },
+        { keys: '--n_iter N', desc: 'Prompts-from-file job field: number of batches to run', usage: 'Total images equal batch_size multiplied by n_iter.' },
+        { keys: '--styles "name"', desc: 'Prompts-from-file job field: apply a saved style to the job', usage: 'Styles come from styles.csv.' },
+        { keys: '--seed_resize_from_w N', desc: 'Prompts-from-file job field: original width for seed resizing', usage: 'Keeps a known seed looking similar at a different resolution.' },
+        { keys: '--seed_resize_from_h N', desc: 'Prompts-from-file job field: original height for seed resizing', usage: 'Paired with seed_resize_from_w; ancestral samplers hold this less well.' }
+      ] },
+      { name: 'X/Y/Z Plot & Prompt S/R Syntax', shortcuts: [
+        { keys: '1-5', desc: 'X/Y/Z plot value range: expands to every integer in the range', usage: 'Entered in the X, Y, or Z values field.' },
+        { keys: '1-5 (+2)', desc: 'X/Y/Z plot range with an increment in parentheses', usage: 'Expands to 1, 3, 5. Negative increments count down: 10-5 (-3).' },
+        { keys: '1-10 [5]', desc: 'X/Y/Z plot range with a count in square brackets', usage: 'Expands to that many evenly spaced values: 1, 3, 5, 7, 10.' },
+        { keys: 'darkness,"light, green",heat', desc: 'Prompt S/R list where a value itself contains a comma', usage: 'Quote the value with no space after the preceding comma, or it is split into separate items.' }
       ] }
     ]
   },
@@ -439,6 +464,31 @@ const promptData = {
         { keys: 'Top P', desc: 'Nucleus sampling', usage: 'Probability mass threshold for token selection.' },
         { keys: 'Repeat Penalty', desc: 'Avoid repetition', usage: 'Penalise recently used tokens to reduce repetition.' },
         { keys: 'GPU Layers', desc: 'GPU offload', usage: 'Number of model layers to offload to GPU.' }
+      ] },
+      { name: 'OpenAI-Compatible Endpoints', shortcuts: [
+        { keys: '/v1/chat/completions', desc: 'OpenAI-compatible chat endpoint served by LM Studio', usage: 'POST against the local server started with lms server start.' },
+        { keys: '/v1/completions', desc: 'OpenAI-compatible text completion endpoint', usage: 'POST; legacy completion style rather than chat messages.' },
+        { keys: '/v1/embeddings', desc: 'OpenAI-compatible embeddings endpoint', usage: 'POST; returns vectors for the loaded embedding model.' },
+        { keys: '/v1/responses', desc: 'OpenAI-compatible responses endpoint', usage: 'POST; newer response-style API surface.' },
+        { keys: '/v1/models', desc: 'List models currently available to the local server', usage: 'GET; mirrors the OpenAI models listing shape.' }
+      ] },
+      { name: 'Inference Config Parameters', shortcuts: [
+        { keys: 'temperature', desc: 'Inference parameter: sampling randomness', usage: 'Set per request in the config object, e.g. { "temperature": 0.6 }.' },
+        { keys: 'maxTokens', desc: 'Inference parameter: maximum tokens to generate', usage: 'Set per request alongside temperature in the prediction config.' },
+        { keys: 'topP', desc: 'Inference parameter: nucleus sampling cutoff', usage: 'Set per request in the prediction config.' },
+        { keys: 'structured', desc: 'Inference parameter that enforces a schema on the output', usage: 'Pass a schema so the model must emit conforming JSON.' }
+      ] },
+      { name: 'lms CLI Commands', shortcuts: [
+        { keys: 'lms server start', desc: 'Start the local LM Studio server', usage: 'Serves the OpenAI-compatible endpoints listed above.' },
+        { keys: 'lms server stop', desc: 'Stop the local server', usage: 'Ends serving without quitting the app.' },
+        { keys: 'lms server status', desc: 'Show whether the local server is running', usage: 'Quick check before sending API requests.' },
+        { keys: 'lms ls', desc: 'List models available locally', usage: 'Shows what can be loaded without downloading.' },
+        { keys: 'lms ps', desc: 'List models currently loaded into memory', usage: 'Use before unloading to see what is resident.' },
+        { keys: 'lms load', desc: 'Load a model into memory', usage: 'Takes the model key; load parameters are set at load time.' },
+        { keys: 'lms unload', desc: 'Unload a model from memory', usage: 'Frees VRAM or RAM held by a loaded model.' },
+        { keys: 'lms get', desc: 'Download a model to the local models directory', usage: 'Fetches by model identifier.' },
+        { keys: 'lms import', desc: 'Import an existing local model file into LM Studio', usage: 'Registers a GGUF or similar file already on disk.' },
+        { keys: 'lms log stream', desc: 'Stream server and prediction logs', usage: 'Useful for debugging prompts and tool calls live.' }
       ] }
     ]
   },
