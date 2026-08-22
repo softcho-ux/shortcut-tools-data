@@ -888,6 +888,7 @@ const promptData = {
         { keys: '/fast [status|auto|on|off|default]', desc: 'Show, set, or clear fast mode', usage: 'Type in any connected chat channel or the Control UI.' },
         { keys: '/reasoning [on|off|stream]', desc: 'Toggle reasoning visibility', usage: 'Alias: /reason' },
         { keys: '/elevated [on|off|ask|full]', desc: 'Toggle elevated mode', usage: 'Alias: /elev' },
+        { keys: '/codex <action> ...', desc: 'Bind, steer, and inspect the Codex app-server harness', usage: 'Actions include status, threads, resume, model, fast, permissions, compact, review, mcp, skills, and more.' },
         { keys: '/login [codex|openai|openai-codex]', desc: 'Pair Codex/OpenAI login from a private chat or Web UI session', usage: 'Owner/admin only' },
         { keys: '/model [name|#|status] [-s|--session]', desc: 'Show or select a model', usage: 'Direct owner/admin selections request a configured-default update; -s changes only this session' },
         { keys: '/models [provider] [page] [limit=<n>|all]', desc: 'List configured/auth-available providers or models', usage: 'Type in any connected chat channel or the Control UI.' },
@@ -1042,6 +1043,30 @@ const promptData = {
         { keys: '/mcp', desc: 'In-session MCP menu: server status, auth, tools, resources', usage: 'Also where organization-managed connector controls surface.' },
         { keys: '@server:resource', desc: 'Reference an MCP resource in the prompt', usage: 'Pulls the resource content into context.' },
         { keys: '/mcp__server__prompt', desc: 'Run an MCP prompt exposed by a server as a slash command', usage: 'Arguments follow the command like any other slash command.' }
+      ] }
+    ]
+  },
+  agent_files: {
+    name: 'Agent Instruction Files',
+    icon: 'fas fa-file-lines',
+    source: { name: 'AGENTS.md - Official spec', url: 'https://agents.md/' },
+    categories: [
+      { name: 'Cross-Tool Standard', shortcuts: [
+        { keys: 'AGENTS.md', desc: 'Open cross-tool instruction file: a README for agents', usage: 'Read by Codex, Cursor, Gemini CLI, Aider, Zed, Warp, Devin, Copilot coding agent, Factory, Jules, opencode, Windsurf and more. Plain Markdown, no required fields.' },
+        { keys: 'AGENTS.md (nested)', desc: 'Per-package instruction files in a monorepo', usage: 'Agents read the nearest AGENTS.md up the directory tree; the closest one takes precedence, so each subproject can ship its own.' }
+      ] },
+      { name: 'Tool-Specific Files', shortcuts: [
+        { keys: 'CLAUDE.md', desc: 'Claude Code project memory file', usage: 'Loaded at session start from the project root and parent directories; edit in-session with the /memory command documented on our Claude Code page.' },
+        { keys: '~/.claude/CLAUDE.md', desc: 'User-level Claude Code memory', usage: 'Applies across all your projects; project files add to it.' },
+        { keys: '.cursor/rules/*.mdc', desc: 'Cursor project rules (current format)', usage: 'Rule files with metadata controlling when each rule applies.' },
+        { keys: '.cursorrules', desc: 'Cursor legacy single-file rules', usage: 'Still read for backwards compatibility; new projects should use .cursor/rules/.' },
+        { keys: '.github/copilot-instructions.md', desc: 'GitHub Copilot repository-wide custom instructions', usage: 'Applies to Copilot Chat and the coding agent for that repository.' },
+        { keys: '*.instructions.md', desc: 'Copilot scoped instruction files', usage: 'Per-path instructions with applyTo front matter, alongside the repository-wide file.' },
+        { keys: 'GEMINI.md', desc: 'Gemini CLI context file', usage: 'Project instructions for Gemini CLI; it also reads AGENTS.md.' },
+        { keys: 'CONVENTIONS.md', desc: 'Aider coding conventions file', usage: 'Loaded with --read or listed in .aider.conf.yml so it is marked read-only for the LLM.' }
+      ] },
+      { name: 'Compatibility Patterns', shortcuts: [
+        { keys: 'ln -s AGENTS.md CLAUDE.md', desc: 'Symlink pattern: keep one instruction source for tools with their own filename', usage: 'A single AGENTS.md stays canonical while filename-specific tools follow the link.' }
       ] }
     ]
   }
