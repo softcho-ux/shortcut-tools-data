@@ -997,6 +997,53 @@ const promptData = {
         { keys: '/verbose', desc: 'Cycle tool progress display: off → new → all → verbose', usage: 'Can be enabled for messaging via config.' }
       ] }
     ]
+  },
+  mcp: {
+    name: 'MCP (Model Context Protocol)',
+    icon: 'fas fa-plug',
+    source: { name: 'Claude Code Docs - MCP', url: 'https://code.claude.com/docs/en/mcp' },
+    categories: [
+      { name: 'claude mcp CLI', shortcuts: [
+        { keys: 'claude mcp add <name> ...', desc: 'Register an MCP server with Claude Code', usage: 'Local stdio by default; --transport http or sse for remote servers, with -- separating the launch command for stdio.' },
+        { keys: 'claude mcp add-json <name> \'{...}\'', desc: 'Register a server from a JSON definition', usage: 'Paste the same JSON shape used in .mcp.json.' },
+        { keys: 'claude mcp list', desc: 'List all configured servers', usage: 'Shows every server visible in the current scope hierarchy.' },
+        { keys: 'claude mcp get <name>', desc: 'Show details for one server', usage: 'Includes transport, scope, and status.' },
+        { keys: 'claude mcp remove <name>', desc: 'Remove a configured server', usage: 'Takes the server name shown by claude mcp list.' },
+        { keys: 'claude mcp login <name> / logout <name>', desc: 'Authenticate or sign out of a remote server from the command line', usage: 'OAuth flow runs in the browser unless --no-browser is set.' },
+        { keys: 'claude mcp reset-project-choices', desc: 'Reset approval choices for project-scoped .mcp.json servers', usage: 'Claude prompts again before using project-scoped servers.' },
+        { keys: 'claude mcp serve', desc: 'Run Claude Code itself as a stdio MCP server', usage: 'Prints nothing on start; other applications connect to it as a server.' }
+      ] },
+      { name: '.mcp.json Configuration Fields', shortcuts: [
+        { keys: 'mcpServers', desc: 'Top-level object in .mcp.json holding all server definitions', usage: 'Each key is a server name mapping to its config object.' },
+        { keys: 'command / args', desc: 'Launch command and arguments for a local stdio server', usage: 'Example: "command": "npx", "args": ["-y", "@modelcontextprotocol/server-github"].' },
+        { keys: 'env', desc: 'Environment variables passed to a stdio server', usage: 'Object of KEY: value pairs; supports expansion like ${VAR} and ${VAR:-default}.' },
+        { keys: 'type / url', desc: 'Transport type and endpoint for a remote server', usage: '"type": "http" or "sse" with the server URL.' },
+        { keys: 'headers', desc: 'Custom HTTP headers sent to a remote server', usage: 'Used for API keys or bearer tokens on http/sse transports.' },
+        { keys: '${VAR} / ${VAR:-default}', desc: 'Environment variable expansion inside .mcp.json', usage: 'Expands in command, args, env, url, and headers; the :- form supplies a default.' },
+        { keys: '.mcp.json', desc: 'Project-scope server file committed at the repository root', usage: 'Claude prompts for approval before using servers from it; reset with claude mcp reset-project-choices.' }
+      ] },
+      { name: 'Scopes, Transports & Flags', shortcuts: [
+        { keys: '--scope local|project|user', desc: 'Where a server definition is stored', usage: 'local is private to you in this project (default); project writes .mcp.json; user applies across all your projects.' },
+        { keys: '--transport http|sse', desc: 'Remote transport selection on claude mcp add', usage: 'Omit for local stdio; WebSocket servers use a ws:// URL.' },
+        { keys: '--env KEY=value', desc: 'Set an environment variable for a stdio server at add time', usage: 'Repeatable.' },
+        { keys: '--header "Name: value"', desc: 'Attach a custom header to a remote server at add time', usage: 'Repeatable; the usual carrier for API keys.' },
+        { keys: '--callback-port / --client-id / --client-secret', desc: 'Fixed OAuth callback port and pre-configured OAuth credentials', usage: 'For remote servers whose OAuth setup does not support dynamic registration.' },
+        { keys: '--no-browser', desc: 'Print the OAuth URL instead of opening a browser', usage: 'Pair with claude mcp login on headless machines.' },
+        { keys: '--mcp-config <file>', desc: 'Load MCP servers from a JSON file for this run', usage: 'Used with claude -p runs and the Agent SDK.' }
+      ] },
+      { name: 'Environment Variables', shortcuts: [
+        { keys: 'MAX_MCP_OUTPUT_TOKENS', desc: 'Raise the MCP tool output limit', usage: 'Claude warns past 10,000 tokens and truncates at 25,000 by default.' },
+        { keys: 'CLAUDE_CODE_MCP_TOOL_IDLE_TIMEOUT', desc: 'Idle timeout for MCP tool calls', usage: 'Defaults to 30 minutes for stdio servers; before v2.1.203 stdio was exempt.' },
+        { keys: 'CLAUDE_CODE_MCP_AUTO_BACKGROUND_MS', desc: 'Threshold before a long MCP tool call is moved to the background', usage: 'Automatic backgrounding of long tool calls.' },
+        { keys: 'MCP_CLIENT_SECRET', desc: 'Pre-configured OAuth client secret for a remote server', usage: 'Paired with --client-id when dynamic registration is unavailable.' },
+        { keys: 'CLAUDE_CODE_DISABLE_BACKGROUND_TASKS', desc: 'Disable automatic backgrounding entirely', usage: 'Set to 1 to keep every tool call in the foreground.' }
+      ] },
+      { name: 'In-Session Usage', shortcuts: [
+        { keys: '/mcp', desc: 'In-session MCP menu: server status, auth, tools, resources', usage: 'Also where organization-managed connector controls surface.' },
+        { keys: '@server:resource', desc: 'Reference an MCP resource in the prompt', usage: 'Pulls the resource content into context.' },
+        { keys: '/mcp__server__prompt', desc: 'Run an MCP prompt exposed by a server as a slash command', usage: 'Arguments follow the command like any other slash command.' }
+      ] }
+    ]
   }
 };
 export default promptData;
