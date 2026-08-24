@@ -4844,6 +4844,76 @@ const shortcutData = {
           { keys: 'openclaw skills list', desc: 'List skills', usage: 'Show installed skills.' },
         ]
       },
+      { name: 'Global Flags', shortcuts: [
+        { keys: '--dev', desc: 'Isolate state under ~/.openclaw-dev', usage: 'Default gateway port 19001; derived ports shift accordingly.' },
+        { keys: '--profile <name>', desc: 'Isolate state under ~/.openclaw-<name>', usage: 'Sets OPENCLAW_STATE_DIR / OPENCLAW_CONFIG_PATH; replaces canonical paths including a running Gateway service.' },
+        { keys: '--container <name>', desc: 'Run the CLI inside a running Podman/Docker container', usage: 'Default comes from the OPENCLAW_CONTAINER environment variable.' },
+        { keys: '--log-level <level>', desc: 'Override the global log level', usage: 'Applies to both file and console output.' },
+        { keys: '--no-color', desc: 'Disable ANSI colors', usage: 'NO_COLOR=1 is also respected.' },
+        { keys: '--update', desc: 'Shorthand for openclaw update', usage: 'Works for both source checkouts and package installs.' },
+        { keys: '-V, --version', desc: 'Print version and exit', usage: '-v also works.' },
+      ]},
+      { name: 'Setup & Config', shortcuts: [
+        { keys: 'openclaw', desc: 'CLI reference and security model for the inference-backed OpenClaw setup and repair helper', usage: '' },
+        { keys: 'openclaw setup', desc: 'system-agent chat with onboarding fallback', usage: '' },
+        { keys: 'openclaw onboard', desc: 'interactive onboarding', usage: '' },
+        { keys: 'openclaw config', desc: 'get/set/patch/unset/file/schema/validate', usage: '' },
+        { keys: 'openclaw doctor', desc: 'health checks + guided repairs', usage: '' },
+        { keys: 'openclaw dashboard', desc: 'securely open the Control UI', usage: '' },
+      ]},
+      { name: 'Backup, Reset & Update', shortcuts: [
+        { keys: 'openclaw backup', desc: 'archives, SQLite snapshots, and Git history', usage: '' },
+        { keys: 'openclaw migrate', desc: 'import state from another agent system', usage: '' },
+        { keys: 'openclaw reset', desc: 'reset local state/config', usage: '' },
+        { keys: 'openclaw update', desc: 'safe-ish source update + gateway auto-restart', usage: '' },
+      ]},
+      { name: 'Messaging & Agents', shortcuts: [
+        { keys: 'openclaw message', desc: 'send + channel actions', usage: '' },
+        { keys: 'openclaw agent', desc: 'Gateway-backed turns and isolated runs', usage: '' },
+        { keys: 'openclaw agents', desc: 'list/add/delete/bindings/bind/unbind/set identity', usage: '' },
+        { keys: 'openclaw attach', desc: 'launch Claude Code with a scoped Gateway MCP grant', usage: '' },
+        { keys: 'openclaw acp', desc: 'Run the ACP bridge for IDE integrations', usage: '' },
+        { keys: 'openclaw mcp', desc: 'Expose OpenClaw channel conversations over MCP and manage saved MCP server definitions', usage: '' },
+      ]},
+      { name: 'Health & Sessions', shortcuts: [
+        { keys: 'openclaw status', desc: 'diagnostics, probes, usage snapshots', usage: '' },
+        { keys: 'openclaw health', desc: 'gateway health snapshot via RPC', usage: '' },
+        { keys: 'openclaw sessions', desc: 'listing, archiving, deleting, and maintaining stored sessions', usage: '' },
+        { keys: 'openclaw resume', desc: 'attaching the TUI to a recent Gateway session', usage: '' },
+      ]},
+      { name: 'Gateway & Logs', shortcuts: [
+        { keys: 'openclaw gateway', desc: 'run, query, and discover gateways', usage: '' },
+        { keys: 'openclaw logs', desc: 'tail gateway logs via RPC', usage: '' },
+        { keys: 'openclaw system', desc: 'system events, heartbeat, presence', usage: '' },
+      ]},
+      { name: 'Models & Memory', shortcuts: [
+        { keys: 'openclaw models', desc: 'status/list/set/scan, aliases, fallbacks, auth', usage: '' },
+        { keys: 'openclaw infer', desc: 'Infer-first CLI for provider-backed model, image, audio, TTS, video, web, and embedding workflows', usage: '' },
+        { keys: 'openclaw memory', desc: 'status/index/search/promote/promote-explain/rem-harness/rem-backfill/session-backfill', usage: '' },
+      ]},
+      { name: 'Automation', shortcuts: [
+        { keys: 'openclaw cron', desc: 'schedule and run background jobs', usage: '' },
+        { keys: 'openclaw tasks', desc: 'background task ledger and Task Flow state', usage: '' },
+        { keys: 'openclaw hooks', desc: 'agent hooks', usage: '' },
+        { keys: 'openclaw webhooks', desc: 'Gmail Pub/Sub setup and runner', usage: '' },
+      ]},
+      { name: 'Network & Devices', shortcuts: [
+        { keys: 'openclaw channels', desc: 'accounts, status, dead letters, capabilities, resolve, logs, login/logout', usage: '' },
+        { keys: 'openclaw pairing', desc: 'approve/list pairing requests', usage: '' },
+        { keys: 'openclaw qr', desc: 'generate mobile pairing QR + setup code', usage: '' },
+        { keys: 'openclaw devices', desc: 'device pairing + token rotation/revocation', usage: '' },
+        { keys: 'openclaw nodes', desc: 'status, pairing, invoke, camera/screen/location/notify and the macOS widget panel', usage: '' },
+      ]},
+      { name: 'Security, Skills & Plugins', shortcuts: [
+        { keys: 'openclaw security', desc: 'audit and fix common security footguns', usage: '' },
+        { keys: 'openclaw skills', desc: 'search/install/update/verify/list/info/check/workshop', usage: '' },
+        { keys: 'openclaw plugins', desc: 'init, build, validate, list, install, marketplace, uninstall, enable/disable, doctor', usage: '' },
+        { keys: 'openclaw sandbox', desc: 'Manage sandbox runtimes and inspect effective sandbox policy', usage: '' },
+      ]},
+      { name: 'Interfaces', shortcuts: [
+        { keys: 'openclaw tui', desc: 'Gateway-backed or local embedded terminal UI', usage: '' },
+        { keys: 'openclaw browser', desc: 'lifecycle, profiles, tabs, actions, state, and debugging', usage: '' },
+      ]},
     ]
   },
   claude_code: {
@@ -20922,6 +20992,123 @@ const shortcutData = {
           { keys: 'Ctrl + Alt + C', desc: 'Copy Story as Markdown', usage: 'Copies the open Story as Markdown; the docs list the Mac form Cmd + Opt + C.' },
           { keys: 'Shift + A', desc: 'Archive Story', usage: 'Archives the Story.' },
           { keys: 'Shift + D', desc: 'Delete Archived Story', usage: 'Deletes a Story that is already archived — the two-step guard against accidents.' },
+        ]
+      },
+    ]
+  },
+  omniverse: {
+    name: 'NVIDIA Omniverse',
+    icon: 'fas fa-cube',
+    source: { name: 'NVIDIA — Omniverse Keyboard Shortcuts', url: 'https://docs.omniverse.nvidia.com/usd/latest/common/keyboard_shortcuts.html' },
+    categories: [
+      {
+        name: 'Viewport Controls',
+        shortcuts: [
+          { keys: 'RMB + W', desc: 'Move Forward', usage: 'Alternate input: RMB + Up Arrow. Hold Shift to double movement speed, Ctrl to halve it.' },
+          { keys: 'RMB + S', desc: 'Move Backward', usage: 'Alternate input: RMB + Down Arrow.' },
+          { keys: 'RMB + A', desc: 'Move Left', usage: 'Alternate input: RMB + Left Arrow.' },
+          { keys: 'RMB + D', desc: 'Move Right', usage: 'Alternate input: RMB + Right Arrow.' },
+          { keys: 'RMB + Q', desc: 'Move Up', usage: 'Alternate input: RMB + Page Up.' },
+          { keys: 'RMB + E', desc: 'Move Down', usage: 'Alternate input: RMB + Page Down.' },
+          { keys: 'RMB + Ctrl + MMW', desc: 'Adjust Move Speed Incrementally', usage: 'Scroll the middle mouse wheel while holding RMB and Ctrl.' },
+          { keys: 'Scroll Wheel', desc: 'Move Forward / Backwards', usage: 'Alternate input: Alt + RMB.' },
+          { keys: 'LMB', desc: 'Select', usage: 'Left-click selects the asset under the cursor.' },
+          { keys: 'Alt + LMB', desc: 'Orbit / Rotate View', usage: 'Orbits the camera around the current pivot.' },
+          { keys: 'MMB (Hold)', desc: 'Pan / Slide View', usage: 'Hold the middle mouse button and drag.' },
+          { keys: 'RMB (Hold)', desc: 'Look', usage: 'Hold the right mouse button to look around.' },
+          { keys: 'RMB (Click)', desc: 'Invoke Contextual Menus', usage: 'A single right-click opens the context menu.' },
+          { keys: 'Shift + H', desc: 'Toggle De-clutter Visualization', usage: 'Toggles between normal and de-clutter visualization modes.' },
+          { keys: 'F', desc: 'Focus on Selected Asset', usage: 'Frames the current selection in the viewport.' },
+          { keys: 'F7', desc: 'Toggle UI Visibility', usage: 'Enables and disables the visibility of the UI.' },
+          { keys: 'F11', desc: 'Toggle Full Screen', usage: 'Toggles full screen mode.' },
+          { keys: 'F10', desc: 'Capture Screen Shot', usage: 'Saves a screenshot of the viewport.' },
+        ]
+      },
+      {
+        name: 'Selection',
+        shortcuts: [
+          { keys: 'Ctrl + A', desc: 'Select All', usage: 'Selects all assets in the current scene.' },
+          { keys: 'Ctrl + I', desc: 'Invert Selection', usage: 'Selects all assets not selected and deselects all selected assets.' },
+          { keys: 'Esc', desc: 'Deselect All', usage: 'Deselects all assets in the current scene.' },
+        ]
+      },
+      {
+        name: 'File Operations',
+        shortcuts: [
+          { keys: 'Ctrl + S', desc: 'Save File', usage: 'Saves the current stage.' },
+          { keys: 'Ctrl + O', desc: 'Open File', usage: 'Opens a file.' },
+        ]
+      },
+      {
+        name: 'Asset Control',
+        shortcuts: [
+          { keys: 'Del', desc: 'Delete Selected Asset', usage: 'Deletes the selected asset from the stage.' },
+          { keys: 'Ctrl + Shift + I', desc: 'Create Instance', usage: 'Creates an instance of the current asset.' },
+          { keys: 'Ctrl + D', desc: 'Duplicate Asset', usage: 'Duplicates the current asset.' },
+          { keys: 'Ctrl + G', desc: 'Group Assets', usage: 'Groups selected assets into a container.' },
+          { keys: 'H', desc: 'Toggle Asset Visibility', usage: 'Toggles the selected asset\'s visibility.' },
+        ]
+      },
+      {
+        name: 'Animation & Paint Tool',
+        shortcuts: [
+          { keys: 'Space', desc: 'Play / Pause Animations', usage: 'Plays or pauses animations on the stage.' },
+          { keys: 'B + MMW', desc: 'Brush Size', usage: 'Adjusts the Paint Tool brush size with the middle mouse wheel.' },
+          { keys: 'Shift + LMB', desc: 'Erase', usage: 'Erases with the Paint Tool.' },
+          { keys: 'Ctrl + B', desc: 'Toggle Paint Mode', usage: 'Enters or exits Paint Mode.' },
+        ]
+      },
+    ]
+  },
+  ngc_cli: {
+    name: 'NVIDIA NGC CLI',
+    icon: 'fas fa-cloud',
+    source: { name: 'NVIDIA — NGC CLI Commands Reference', url: 'https://docs.ngc.nvidia.com/cli/' },
+    categories: [
+      {
+        name: 'Configuration',
+        shortcuts: [
+          { keys: 'ngc config set', desc: 'Set the configuration in the user settings file', usage: 'Use optional arguments to choose what will be set; --api_key sets the API key non-interactively.' },
+          { keys: 'ngc config current', desc: 'List the current configuration', usage: 'Shows the org, team, and format currently in effect.' },
+          { keys: 'ngc config clear', desc: 'Clear the configuration stored in the user settings file', usage: 'Removes saved settings.' },
+          { keys: 'ngc config clear-cache', desc: 'Clear cached values', usage: 'Clears the CLI\'s cache.' },
+        ]
+      },
+      {
+        name: 'Container Images',
+        shortcuts: [
+          { keys: 'ngc registry image list', desc: 'List container images accessible by the user', usage: 'Wildcards * and ? are allowed; use org/image:* to list all tags. --signed shows only signed images.' },
+          { keys: 'ngc registry image info', desc: 'Display information about an image repository or tagged image', usage: '--layers, --history, and --details expand the output; --scan shows scan details of a tagged image.' },
+          { keys: 'ngc registry image pull', desc: 'Pull a container image from the NGC image registry', usage: 'If no tag is provided, latest is assumed. --scan downloads the image scan report as a CSV instead of pulling.' },
+          { keys: 'ngc registry image push', desc: 'Push a container image to the NGC image registry', usage: 'If no tag is provided, latest is assumed. -y auto-confirms tagging.' },
+          { keys: 'ngc registry image create', desc: 'Create a top-level metadata repository in the image registry', usage: 'Metadata such as --desc, --overview, and --logo can be set at creation.' },
+          { keys: 'ngc registry image remove', desc: 'Remove an image repository or a specific tagged image', usage: 'Wildcards * and ? are allowed; -y skips the confirmation prompt.' },
+          { keys: 'ngc registry image scan', desc: 'Scan a container image from the NGC image registry', usage: 'Triggers a security scan for the targeted image tag.' },
+          { keys: 'ngc registry image set-latest', desc: 'Set the specified tag as the latest tag of the repository', usage: 'Format: org/[team/]image:tag.' },
+          { keys: 'ngc registry image sign', desc: 'Have the image cryptographically signed by NVIDIA', usage: 'ngc registry image publickey returns the public key for local signature validation.' },
+        ]
+      },
+      {
+        name: 'Models & Charts',
+        shortcuts: [
+          { keys: 'ngc registry model list', desc: 'List models in the registry', usage: 'Same org/[team/]name targeting and wildcard rules as images.' },
+          { keys: 'ngc registry model info', desc: 'Display information about a model', usage: 'Model subcommands also include download-version, download-version-signature, upload-version, and commit-version.' },
+          { keys: 'ngc registry model download-version', desc: 'Download a model version', usage: 'Listed among the model subcommands alongside download-version-signature for signed models.' },
+          { keys: 'ngc registry chart list', desc: 'List Helm charts', usage: 'Target format: org/[team/]chart_name[:version]; name and version support * and ? wildcards and character ranges like [1-5].' },
+          { keys: 'ngc registry chart info', desc: 'Retrieve metadata for a chart or chart version', usage: '--files lists the files of a version in addition to details.' },
+          { keys: 'ngc registry chart pull', desc: 'Download a chart version', usage: 'If no version is specified, the latest version is targeted. --dest sets the download directory.' },
+          { keys: 'ngc registry chart push', desc: 'Push (upload) a chart', usage: '--source points at the packaged chart directory; --dry-run lists file paths, total size, and count without uploading.' },
+        ]
+      },
+      {
+        name: 'Collections & Global Options',
+        shortcuts: [
+          { keys: 'ngc registry collection list', desc: 'Display available collections in the registry', usage: 'Wildcards target org/[team/]collection_name namespaces.' },
+          { keys: 'ngc registry collection info', desc: 'Display information about a collection', usage: 'Shows the artifacts the collection contains.' },
+          { keys: 'ngc registry collection find', desc: 'List collections containing a specified artifact', usage: 'Artifact types: MODEL, CHART, RESOURCE, IMAGE.' },
+          { keys: '--format_type ascii|csv|json', desc: 'Output format for any command', usage: 'Default ascii; only commands producing tabular data support csv.' },
+          { keys: '--org <name> / --team <name>', desc: 'Set the org and team context for a command', usage: '--org no-org and --team no-team override other sources; default comes from the current configuration.' },
+          { keys: '--debug', desc: 'Enable debug mode', usage: 'Available on every NGC CLI command.' },
         ]
       },
     ]
