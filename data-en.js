@@ -3112,8 +3112,8 @@ const shortcutData = {
           { keys: 'Ctrl + -', desc: 'Delete Row/Column', usage: 'Delete the selected row or column.' },
           { keys: 'Ctrl + Space', desc: 'Select Column', usage: 'Select the entire current column.' },
           { keys: 'Shift + Space', desc: 'Select Row', usage: 'Select the entire current row.' },
-          { keys: 'Ctrl + Shift + 9', desc: 'Hide Rows', usage: 'Hide the selected rows.' },
-          { keys: 'Ctrl + Shift + 0', desc: 'Hide Columns', usage: 'Hide the selected columns.' },
+          { keys: 'Ctrl + Alt + 9', desc: 'Hide Rows', usage: 'Hide the selected rows.' },
+          { keys: 'Ctrl + Alt + 0', desc: 'Hide Columns', usage: 'Hide the selected columns.' },
         ]
       },
       {
