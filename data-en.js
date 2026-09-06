@@ -1682,53 +1682,293 @@ const shortcutData = {
   indesign: {
     name: 'InDesign',
     icon: 'fas fa-newspaper',
+    source: { name: 'Adobe Help Center — InDesign keyboard shortcuts', url: 'https://helpx.adobe.com/indesign/desktop/get-started/settings-and-preferences/keyboard-shortcuts.html' },
     categories: [
       {
-        name: 'Selection Tools',
+        name: 'Selection and navigation tools',
         shortcuts: [
-          { keys: 'V', desc: 'Selection', usage: 'Activate selection tool' },
-          { keys: 'A', desc: 'Direct Selection', usage: 'Select paths and anchor points' },
-          { keys: 'Shift + A', desc: 'Page Tool', usage: 'Activate page tool' },
-          { keys: 'P', desc: 'Pen', usage: 'Activate pen tool' },
+          { keys: 'V or Esc', desc: 'Selection tool', usage: 'Same key on macOS.' },
+          { keys: 'A', desc: 'Direct Selection tool', usage: 'Same key on macOS.' },
+          { keys: 'Ctrl + Tab', desc: 'Toggle Selection and Direct Selection', usage: 'Mac: Cmd + Ctrl + Tab.' },
+          { keys: 'Shift + P', desc: 'Page tool', usage: 'Same key on macOS.' },
+          { keys: 'U', desc: 'Gap tool', usage: 'Same key on macOS.' },
+          { keys: 'H', desc: 'Hand tool', usage: 'Same key on macOS.' },
+          { keys: 'Space', desc: 'Temporarily select the Hand tool (no insertion point)', usage: 'Same key on macOS.' },
+          { keys: 'Alt + Drag or Alt + Space', desc: 'Temporarily select the Hand tool (with text insertion point)', usage: 'Mac: Option + Drag or Option + Space.' },
+          { keys: 'Z', desc: 'Zoom tool', usage: 'Same key on macOS.' },
+          { keys: 'Ctrl + Space', desc: 'Temporarily select Zoom In tool', usage: 'Mac: Cmd + Space.' },
+          { keys: 'Ctrl + 5 or 2 or or 4', desc: 'Zoom to 50%, 200%, or 400%', usage: 'Mac: Cmd + 5 , 2 , or 4.' },
         ]
       },
       {
-        name: 'Frames',
+        name: 'Drawing and text tools',
         shortcuts: [
-          { keys: 'F', desc: 'Rectangle Frame', usage: 'Draw rectangle frame' },
-          { keys: 'M', desc: 'Rectangle', usage: 'Draw rectangle' },
-          { keys: 'L', desc: 'Ellipse Frame', usage: 'Draw ellipse frame' },
-          { keys: 'Ctrl + D', desc: 'Place', usage: 'Import file' },
-          { keys: 'Ctrl + E', desc: 'Export', usage: 'Export document' },
+          { keys: 'P', desc: 'Pen tool', usage: 'Same key on macOS.' },
+          { keys: '= or = (numeric keypad)', desc: 'Add Anchor Point tool', usage: 'Same key on macOS.' },
+          { keys: '-', desc: 'Delete Anchor Point tool', usage: 'Mac: - or - (numeric keypad).' },
+          { keys: 'Shift + C', desc: 'Convert Direction Point tool', usage: 'Same key on macOS.' },
+          { keys: 'T', desc: 'Type tool', usage: 'Same key on macOS.' },
+          { keys: 'Shift + T', desc: 'Type on a Path tool', usage: 'Same key on macOS.' },
+          { keys: 'N', desc: 'Pencil tool', usage: 'Same key on macOS.' },
+          { keys: '\\', desc: 'Line tool', usage: 'Same key on macOS.' },
         ]
       },
       {
-        name: 'Text',
+        name: 'Shape and frame tools',
         shortcuts: [
-          { keys: 'T', desc: 'Type Tool', usage: 'Activate type tool' },
-          { keys: 'Shift + Ctrl + >', desc: 'Increase Size', usage: 'Increase font size' },
-          { keys: 'Shift + Ctrl + <', desc: 'Decrease Size', usage: 'Decrease font size' },
-          { keys: 'Alt + Left/Right', desc: 'Kerning', usage: 'Adjust letter spacing' },
-          { keys: 'Alt + Up/Down', desc: 'Leading', usage: 'Adjust line spacing' },
-          { keys: 'Ctrl + Alt + Shift + J', desc: 'Justify', usage: 'Justify paragraph' },
+          { keys: 'F', desc: 'Rectangle Frame tool', usage: 'Same key on macOS.' },
+          { keys: 'M', desc: 'Rectangle tool', usage: 'Same key on macOS.' },
+          { keys: 'L', desc: 'Ellipse tool', usage: 'Same key on macOS.' },
+          { keys: 'Y', desc: 'Frame Grid tool (horizontal)', usage: 'Same key on macOS.' },
+          { keys: 'Q', desc: 'Frame Grid tool (vertical)', usage: 'Same key on macOS.' },
         ]
       },
       {
-        name: 'Pages',
+        name: 'Transform tools',
         shortcuts: [
-          { keys: 'Ctrl + J', desc: 'Go to Page', usage: 'Jump to specific page' },
-          { keys: 'Shift + Page Up', desc: 'Previous Page', usage: 'Go to previous page' },
-          { keys: 'Shift + Page Down', desc: 'Next Page', usage: 'Go to next page' },
-          { keys: 'Ctrl + Shift + P', desc: 'Add Page', usage: 'Add new page' },
+          { keys: 'R', desc: 'Rotate tool', usage: 'Same key on macOS.' },
+          { keys: 'S', desc: 'Scale tool', usage: 'Same key on macOS.' },
+          { keys: 'O', desc: 'Shear tool', usage: 'Same key on macOS.' },
+          { keys: 'E', desc: 'Free Transform tool', usage: 'Same key on macOS.' },
         ]
       },
       {
-        name: 'View',
+        name: 'Other tools',
         shortcuts: [
-          { keys: 'W', desc: 'Preview', usage: 'Toggle preview mode' },
-          { keys: 'Ctrl + Alt + ;', desc: 'Lock Guides', usage: 'Lock or unlock guides' },
-          { keys: 'Ctrl + 0', desc: 'Fit Page', usage: 'Fit page to screen' },
-          { keys: 'Ctrl + Alt + 0', desc: 'Fit Spread', usage: 'Fit spread to screen' },
+          { keys: 'I', desc: 'Eyedropper tool', usage: 'Same key on macOS.' },
+          { keys: 'K', desc: 'Measure tool', usage: 'Same key on macOS.' },
+          { keys: 'G', desc: 'Gradient Swatch tool', usage: 'Same key on macOS.' },
+          { keys: 'Shift + G', desc: 'Gradient Feather tool', usage: 'Same key on macOS.' },
+          { keys: 'C', desc: 'Scissors tool', usage: 'Same key on macOS.' },
+          { keys: 'X', desc: 'Toggle Fill and Stroke', usage: 'Same key on macOS.' },
+          { keys: 'Shift + X', desc: 'Swap Fill and Stroke', usage: 'Same key on macOS.' },
+          { keys: 'J', desc: 'Toggle Formatting affects container / text', usage: 'Same key on macOS.' },
+          { keys: ', (comma)', desc: 'Apply Color', usage: 'Same key on macOS.' },
+          { keys: '. (period)', desc: 'Apply Gradient', usage: 'Same key on macOS.' },
+          { keys: '/', desc: 'Apply None', usage: 'Same key on macOS.' },
+          { keys: 'W', desc: 'Switch between Normal and Preview mode', usage: 'Same key on macOS.' },
+        ]
+      },
+      {
+        name: 'Selecting and moving objects',
+        shortcuts: [
+          { keys: 'Any tool (except selection tools) + Ctrl', desc: 'Temporarily select the Selection tool or Direct Selection tool', usage: 'Mac: Any tool (except selection tools) + Cmd.' },
+          { keys: 'Esc or double + Click', desc: 'Select the container of selected content', usage: 'Same key on macOS.' },
+          { keys: 'Shift + Esc or double + Click', desc: 'Select the content of the selected container', usage: 'Same key on macOS.' },
+          { keys: 'Alt + Arrow key', desc: 'Duplicate and offset selection', usage: 'Mac: Option + Arrow key.' },
+          { keys: 'Alt + Shift + Arrow key', desc: 'Duplicate and offset by 10×', usage: 'Mac: Option + Shift + Arrow key.' },
+          { keys: 'Arrow keys', desc: 'Move selection', usage: 'Same key on macOS.' },
+          { keys: 'Ctrl + Shift + Arrow key', desc: 'Move selection by 1/10th', usage: 'Mac: Cmd + Shift + Arrow key.' },
+          { keys: 'Shift + Arrow key', desc: 'Move selection by 10×', usage: 'Same key on macOS.' },
+          { keys: 'Alt + Ctrl + G', desc: 'Select all guides', usage: 'Mac: Option + Cmd + G.' },
+        ]
+      },
+      {
+        name: 'Transforming objects',
+        shortcuts: [
+          { keys: 'Transformation tool + Alt + Drag', desc: 'Duplicate and transform selection', usage: 'Mac: Transformation tool + Option + Drag.' },
+          { keys: 'Selection tool + Ctrl + Drag', desc: 'Resize frame and content', usage: 'Mac: Selection tool + Cmd + Drag.' },
+          { keys: 'Selection tool + Shift + Ctrl + Drag', desc: 'Resize the frame and content proportionately', usage: 'Mac: Selection tool + Shift + Cmd + Drag.' },
+          { keys: 'Ctrl + Alt + Shift + Z', desc: 'Switch between High Quality Display and Fast Display', usage: 'Mac: Cmd + Option + Shift + Z.' },
+        ]
+      },
+      {
+        name: 'Character formatting',
+        shortcuts: [
+          { keys: 'Shift + Ctrl + B', desc: 'Bold (fonts with bold face only)', usage: 'Mac: Shift + Cmd + B.' },
+          { keys: 'Shift + Ctrl + I', desc: 'Italic (fonts with italic face only)', usage: 'Mac: Shift + Cmd + I.' },
+          { keys: 'Shift + Ctrl + Y', desc: 'Normal', usage: 'Mac: Shift + Cmd + Y.' },
+          { keys: 'Shift + Ctrl + U', desc: 'Underline', usage: 'Mac: Shift + Cmd + U.' },
+          { keys: 'Shift + Ctrl + /', desc: 'Strikethrough', usage: 'Mac: Ctrl + Shift + Cmd + /.' },
+          { keys: 'Shift + Ctrl + K', desc: 'All caps on/off', usage: 'Mac: Shift + Cmd + K.' },
+          { keys: 'Shift + Ctrl + H', desc: 'Small caps on/off', usage: 'Mac: Shift + Cmd + H.' },
+          { keys: 'Shift + Ctrl + =', desc: 'Superscript', usage: 'Mac: Shift + Cmd + =.' },
+          { keys: 'Shift + Alt + Ctrl + =', desc: 'Subscript', usage: 'Mac: Shift + Option + Cmd + =.' },
+        ]
+      },
+      {
+        name: 'Type size and leading',
+        shortcuts: [
+          { keys: 'Shift + Ctrl + > or <', desc: 'Increase/decrease point size', usage: 'Mac: Shift + Cmd + > or <.' },
+          { keys: 'Shift + Ctrl + Alt + > or <', desc: 'Increase/decrease point size by 5×', usage: 'Mac: Shift + Cmd + Option + > or <.' },
+          { keys: 'Alt + Up/Down Arrow', desc: 'Increase/decrease leading (horizontal text)', usage: 'Mac: Option + Up/Down Arrow.' },
+          { keys: 'Alt + Right/Left Arrow', desc: 'Increase/decrease leading (vertical text)', usage: 'Mac: Option + Right/Left Arrow.' },
+          { keys: 'Alt + Ctrl + Up/Down Arrow', desc: 'Increase/decrease leading by 5× (horizontal text)', usage: 'Mac: Option + Cmd + Up/Down Arrow.' },
+          { keys: 'Alt + Ctrl + Right/Left Arrow', desc: 'Increase/decrease leading by 5× (vertical text)', usage: 'Mac: Option + Cmd + Right/Left Arrow.' },
+          { keys: 'Shift + Alt + Ctrl + A', desc: 'Auto leading', usage: 'Mac: Shift + Option + Cmd + A.' },
+        ]
+      },
+      {
+        name: 'Kerning and tracking',
+        shortcuts: [
+          { keys: 'Alt + Left/Right Arrow', desc: 'Increase/decrease kerning and tracking (horizontal text)', usage: 'Mac: Option + Left/Right Arrow.' },
+          { keys: 'Alt + Up/Down Arrow', desc: 'Increase/decrease kerning and tracking (vertical text)', usage: 'Mac: Option + Up/Down Arrow.' },
+          { keys: 'Alt + Ctrl + Left/Right Arrow', desc: 'Increase/decrease kerning and tracking by 5× (horizontal text)', usage: 'Mac: Option + Cmd + Left/Right Arrow.' },
+          { keys: 'Alt + Ctrl + Up/Down Arrow', desc: 'Increase/decrease kerning and tracking by 5× (vertical text)', usage: 'Mac: Option + Cmd + Up/Down Arrow.' },
+          { keys: 'Alt + Ctrl + Q', desc: 'Clear all manual kerning and reset tracking to 0', usage: 'Mac: Option + Cmd + Q.' },
+        ]
+      },
+      {
+        name: 'Paragraph formatting',
+        shortcuts: [
+          { keys: 'Shift + Ctrl + L or R or or C', desc: 'Align left, right, or center', usage: 'Mac: Shift + Cmd + L , R , or C.' },
+          { keys: 'Shift + Alt + Ctrl + G', desc: 'Align to grid on/off', usage: 'Mac: Shift + Option + Cmd + G.' },
+          { keys: 'Shift + Alt + Ctrl + H', desc: 'Auto-hyphenate on/off', usage: 'Mac: Shift + Option + Cmd + H.' },
+        ]
+      },
+      {
+        name: 'Baseline shift',
+        shortcuts: [
+          { keys: 'Shift + Alt + Up/Down Arrow', desc: 'Increase/decrease baseline shift (horizontal text)', usage: 'Mac: Shift + Option + Up/Down Arrow.' },
+          { keys: 'Shift + Alt + Right/Left Arrow', desc: 'Increase/decrease baseline shift (vertical text)', usage: 'Mac: Shift + Option + Right/Left Arrow.' },
+          { keys: 'Shift + Alt + Ctrl + Up/Down Arrow', desc: 'Increase/decrease baseline shift by 5× (horizontal text)', usage: 'Mac: Shift + Option + Cmd + Up/Down Arrow.' },
+          { keys: 'Shift + Alt + Ctrl + Right/Left Arrow', desc: 'Increase/decrease baseline shift by 5× (vertical text)', usage: 'Mac: Shift + Option + Cmd + Right/Left Arrow.' },
+        ]
+      },
+      {
+        name: 'Navigating and selecting text',
+        shortcuts: [
+          { keys: 'Right/Left Arrow', desc: 'Move right/left one character', usage: 'Same key on macOS.' },
+          { keys: 'Up/Down Arrow', desc: 'Move up/down one line', usage: 'Same key on macOS.' },
+          { keys: 'Ctrl + Right/Left Arrow', desc: 'Move right/left one word', usage: 'Mac: Cmd + Right/Left Arrow.' },
+          { keys: 'Home / End', desc: 'Move to the start/end of the line', usage: 'Same key on macOS.' },
+          { keys: 'Ctrl + Up/Down Arrow', desc: 'Move to previous/next paragraph', usage: 'Mac: Cmd + Up/Down Arrow.' },
+          { keys: 'Ctrl + Home / End', desc: 'Move to the start/end of the story', usage: 'Mac: Cmd + Home / End.' },
+          { keys: 'Double + Click word', desc: 'Select one word', usage: 'Same key on macOS.' },
+          { keys: 'Shift + Right/Left Arrow', desc: 'Select one character right/left', usage: 'Same key on macOS.' },
+          { keys: 'Shift + Up/Down Arrow', desc: 'Select one line above/below', usage: 'Same key on macOS.' },
+          { keys: 'Shift + Home / End', desc: 'Select to start/end of line', usage: 'Same key on macOS.' },
+          { keys: 'Shift + Ctrl + Up/Down Arrow', desc: 'Select one paragraph before/after', usage: 'Mac: Shift + Cmd + Up/Down Arrow.' },
+          { keys: 'Shift + Ctrl + \\', desc: 'Select current line', usage: 'Mac: Shift + Cmd + \\.' },
+          { keys: 'Shift + Ctrl + Home / End', desc: 'Select the start/end of the story', usage: 'Mac: Shift + Cmd + Home / End.' },
+          { keys: 'Ctrl + A', desc: 'Select all in the story', usage: 'Mac: Cmd + A.' },
+        ]
+      },
+      {
+        name: 'Tables',
+        shortcuts: [
+          { keys: 'Start dragging the border, then hold Alt', desc: 'Insert or delete rows/columns while dragging', usage: 'Mac: Start dragging the border, then hold Option.' },
+          { keys: 'Shift + Drag interior border', desc: 'Resize rows/columns without changing table size', usage: 'Same key on macOS.' },
+          { keys: 'Shift + Drag right or bottom border', desc: 'Resize rows/columns proportionally', usage: 'Same key on macOS.' },
+          { keys: 'Tab / Shift + Tab', desc: 'Move to next/previous cell', usage: 'Same key on macOS.' },
+          { keys: 'Alt + Page Up / Page Down', desc: 'Move to the first/last cell in the column', usage: 'Mac: Option + Page Up / Page Down.' },
+          { keys: 'Alt + Home / End', desc: 'Move to the first/last cell in the row', usage: 'Mac: Option + Home / End.' },
+          { keys: 'Up/Down Arrow', desc: 'Move up/down one cell', usage: 'Same key on macOS.' },
+          { keys: 'Shift + Up/Down Arrow', desc: 'Select cell above/below', usage: 'Same key on macOS.' },
+          { keys: 'Shift + Right/Left Arrow', desc: 'Select the cell to the right/left', usage: 'Same key on macOS.' },
+          { keys: 'Enter (numeric keypad)', desc: 'Start row on the next column', usage: 'Same key on macOS.' },
+          { keys: 'Shift + Enter (numeric keypad)', desc: 'Start row on next frame', usage: 'Same key on macOS.' },
+        ]
+      },
+      {
+        name: 'Viewing documents',
+        shortcuts: [
+          { keys: 'Double + Click the Hand tool', desc: 'Fit spread in the window', usage: 'Same key on macOS.' },
+          { keys: 'Alt + Ctrl + 2', desc: 'Switch between the current and previous zoom levels', usage: 'Mac: Option + Cmd + 2.' },
+          { keys: 'Shift + F5', desc: 'Redraw screen', usage: 'Same key on macOS.' },
+          { keys: 'Ctrl + Alt + N', desc: 'Open a new default document', usage: 'Mac: Cmd + Option + N.' },
+          { keys: 'Page Up / Page Down', desc: 'Scroll up/down one screen', usage: 'Same key on macOS.' },
+          { keys: 'Ctrl + Page Up / Page Down', desc: 'Go back/forward to the last viewed page', usage: 'Mac: Cmd + Page Up / Page Down.' },
+          { keys: 'Alt + Page Up / Page Down', desc: 'Go to previous/next spread', usage: 'Mac: Option + Page Up / Page Down.' },
+          { keys: 'Ctrl + J', desc: 'Activate the Go To command', usage: 'Mac: Cmd + J.' },
+          { keys: 'Ctrl + Alt + =', desc: 'Fit selection in the window', usage: 'Mac: Cmd + Option + =.' },
+          { keys: 'Shift + Alt + Ctrl + U', desc: 'Cycle through units of measurement', usage: 'Mac: Shift + Option + Cmd + U.' },
+        ]
+      },
+      {
+        name: 'Panels',
+        shortcuts: [
+          { keys: 'Alt + Click Delete icon', desc: 'Delete without confirmation', usage: 'Mac: Option + Click Delete icon.' },
+          { keys: 'Alt + Click New icon', desc: 'Create an item and set options', usage: 'Mac: Option + Click New icon.' },
+          { keys: 'Shift + Enter', desc: 'Apply value and keep focus on the option', usage: 'Mac: Shift + Return.' },
+          { keys: 'Ctrl + Alt + ~', desc: 'Activate the last option in the last panel', usage: 'Mac: Cmd + Option + ~.' },
+          { keys: 'Shift + Click', desc: 'Select a range in the panel', usage: 'Same key on macOS.' },
+          { keys: 'Ctrl + Click', desc: 'Select non-adjacent items in the panel', usage: 'Mac: Cmd + Click.' },
+          { keys: 'Tab', desc: 'Show/hide all panels with no insertion point', usage: 'Same key on macOS.' },
+          { keys: 'Shift + Tab', desc: 'Show/hide all panels except the Tools and Control panels', usage: 'Same key on macOS.' },
+          { keys: 'Ctrl + Alt + Tab', desc: 'Open/close all stashed panels', usage: 'Mac: Cmd + Option + Tab.' },
+        ]
+      },
+      {
+        name: 'Specific panels',
+        shortcuts: [
+          { keys: 'Ctrl + 6', desc: 'Activate the Control panel', usage: 'Mac: Cmd + 6.' },
+          { keys: 'Ctrl + Alt + 7', desc: 'Toggle Character / Paragraph mode ( Control panel)', usage: 'Mac: Cmd + Option + 7.' },
+          { keys: 'Ctrl + T', desc: 'Character panel', usage: 'Mac: Cmd + T.' },
+          { keys: 'Ctrl + Alt + T', desc: 'Paragraph panel', usage: 'Mac: Cmd + Option + T.' },
+          { keys: 'F11', desc: 'Paragraph Styles panel', usage: 'Mac: Cmd + F11.' },
+          { keys: 'Shift + F11', desc: 'Character Styles panel', usage: 'Mac: Cmd + Shift + F11.' },
+          { keys: 'Shift + Ctrl + T', desc: 'Tabs panel', usage: 'Mac: Shift + Cmd + T.' },
+          { keys: 'F7', desc: 'Layers panel', usage: 'Same key on macOS.' },
+          { keys: 'F12', desc: 'Pages panel', usage: 'Mac: Cmd + F12.' },
+          { keys: 'F6', desc: 'Color panel', usage: 'Same key on macOS.' },
+          { keys: 'F5', desc: 'Swatches panel', usage: 'Same key on macOS.' },
+          { keys: 'F10', desc: 'Stroke panel', usage: 'Mac: Cmd + F10.' },
+          { keys: 'Alt + Ctrl + M', desc: 'Drop Shadow panel', usage: 'Mac: Cmd + Option + M.' },
+        ]
+      },
+      {
+        name: 'Styles',
+        shortcuts: [
+          { keys: 'Select text + Shift + Alt + Ctrl + C', desc: 'Make the character style definition match the text', usage: 'Mac: Select text + Shift + Option + Cmd + C.' },
+          { keys: 'Select text + Shift + Alt + Ctrl + R', desc: 'Make paragraph style definition match text', usage: 'Mac: Select text + Shift + Option + Cmd + R.' },
+          { keys: 'Shift + Alt + Ctrl + double + Click style', desc: 'Change options without applying style', usage: 'Mac: Shift + Option + Cmd + double + Click style.' },
+          { keys: 'Alt + Click paragraph style', desc: 'Remove style and local formatting', usage: 'Mac: Option + Click paragraph style.' },
+          { keys: 'Alt + Shift + Click paragraph style', desc: 'Clear overrides from paragraph style', usage: 'Mac: Option + Shift + Click paragraph style.' },
+        ]
+      },
+      {
+        name: 'Finding and changing text',
+        shortcuts: [
+          { keys: 'Ctrl + F1', desc: 'Insert selected text into the Find What box', usage: 'Mac: Cmd + F1.' },
+          { keys: 'Shift + F1', desc: 'Insert selected text into Find What and find next', usage: 'Same key on macOS.' },
+          { keys: 'Shift + F2 or Alt + Ctrl + F', desc: 'Find the next occurrence of Find What text', usage: 'Mac: Shift + F2 or Option + Cmd + F.' },
+          { keys: 'Ctrl + F2', desc: 'Insert selected text into the Change To box', usage: 'Mac: Cmd + F2.' },
+          { keys: 'Ctrl + F3', desc: 'Replace selection with Change To text', usage: 'Mac: Cmd + F3.' },
+        ]
+      },
+      {
+        name: 'XML',
+        shortcuts: [
+          { keys: 'Right/Left Arrow', desc: 'Expand/Collapse element', usage: 'Same key on macOS.' },
+          { keys: 'Alt + Right/Left Arrow', desc: 'Expand/Collapse element and child elements', usage: 'Mac: Option + Right/Left Arrow.' },
+          { keys: 'Shift + Up/Down Arrow', desc: 'Extend XML selection up/down', usage: 'Same key on macOS.' },
+          { keys: 'Up/Down Arrow', desc: 'Move XML selection up/down', usage: 'Same key on macOS.' },
+          { keys: 'Page Up / Page Down', desc: 'Scroll the structure pane up/down one screen', usage: 'Same key on macOS.' },
+          { keys: 'Home / End', desc: 'Select first/last XML node', usage: 'Same key on macOS.' },
+          { keys: 'Shift + Home / End', desc: 'Extend selection to first/last XML node', usage: 'Same key on macOS.' },
+          { keys: 'Ctrl + Left/Right Arrow', desc: 'Go to previous/next validation error', usage: 'Mac: Cmd + Left/Right Arrow.' },
+          { keys: 'Ctrl + Alt + Shift + F7', desc: 'Auto-tag text frames and tables', usage: 'Mac: Cmd + Option + Shift + F7.' },
+        ]
+      },
+      {
+        name: 'Indexing',
+        shortcuts: [
+          { keys: 'Shift + Ctrl + Alt + [', desc: 'Create index entry without dialog box (alphanumeric only)', usage: 'Mac: Shift + Cmd + Option + [.' },
+          { keys: 'Ctrl + 7', desc: 'Open the index entry dialog box', usage: 'Mac: Cmd + 7.' },
+          { keys: 'Shift + Ctrl + Alt + ]', desc: 'Create proper name index entry (last name, first name)', usage: 'Mac: Shift + Cmd + Option + ].' },
+        ]
+      },
+      {
+        name: 'Color and swatches',
+        shortcuts: [
+          { keys: 'Shift + Drag slider', desc: 'Move color sliders in tandem', usage: 'Same key on macOS.' },
+          { keys: 'Alt + Click color bar', desc: 'Select a color for non-active fill or stroke', usage: 'Mac: Option + Click color bar.' },
+          { keys: 'Shift + Click color bar', desc: 'Switch between color modes', usage: 'Same key on macOS.' },
+          { keys: 'Alt + Click New Swatch icon', desc: 'Create a new swatch based on the current swatch', usage: 'Mac: Option + Click New Swatch icon.' },
+          { keys: 'Alt + Ctrl + Click New Swatch icon', desc: 'Create a spot color swatch based on the current swatch', usage: 'Mac: Option + Cmd + Click New Swatch icon.' },
+        ]
+      },
+      {
+        name: 'Separations Preview',
+        shortcuts: [
+          { keys: 'Ctrl + Alt + Shift + Y', desc: 'Turn on Overprint preview', usage: 'Mac: Cmd + Option + Shift + Y.' },
+          { keys: 'Ctrl + Alt + Shift + ~', desc: 'Show all plates', usage: 'Mac: Cmd + Option + Shift + ~.' },
+          { keys: 'Ctrl + Alt + Shift + 1', desc: 'Show Cyan plate', usage: 'Mac: Cmd + Option + Shift + 1.' },
+          { keys: 'Ctrl + Alt + Shift + 2', desc: 'Show Magenta plate', usage: 'Mac: Cmd + Option + Shift + 2.' },
+          { keys: 'Ctrl + Alt + Shift + 3', desc: 'Show Yellow plate', usage: 'Mac: Cmd + Option + Shift + 3.' },
+          { keys: 'Ctrl + Alt + Shift + 4', desc: 'Show Black plate', usage: 'Mac: Cmd + Option + Shift + 4.' },
+          { keys: 'Ctrl + Alt + Shift + 5 or 6 or or 7', desc: 'Show 1st–3rd Spot plates', usage: 'Mac: Cmd + Option + Shift + 5 , 6 , or 7.' },
         ]
       },
     ]
@@ -3854,29 +4094,53 @@ const shortcutData = {
   spotify: {
     name: 'Spotify',
     icon: 'fab fa-spotify',
+    source: { name: 'Spotify Support — Keyboard shortcuts', url: 'https://support.spotify.com/us/article/keyboard-shortcuts/' },
     categories: [
       {
         name: 'Playback',
         shortcuts: [
-          { keys: 'Space', desc: 'Play/Pause', usage: 'Play or pause current track.' },
-          { keys: 'Ctrl + Right', desc: 'Next Track', usage: 'Skip to next track.' },
-          { keys: 'Ctrl + Left', desc: 'Previous Track', usage: 'Go to previous track.' },
-          { keys: 'Ctrl + Up', desc: 'Volume Up', usage: 'Increase volume.' },
-          { keys: 'Ctrl + Down', desc: 'Volume Down', usage: 'Decrease volume.' },
-          { keys: 'Ctrl + S', desc: 'Toggle Shuffle', usage: 'Turn shuffle on or off.' },
-          { keys: 'Ctrl + R', desc: 'Toggle Repeat', usage: 'Cycle through repeat modes.' },
-          { keys: 'Shift + Left/Right', desc: 'Seek 5s', usage: 'Seek forward/backward 5 seconds.' },
+          { keys: 'Space', desc: 'Play/Pause', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + S', desc: 'Shuffle', usage: 'Mac: Alt + S (as listed by Spotify; Windows/Linux uses Ctrl + S).' },
+          { keys: 'Ctrl + R', desc: 'Repeat', usage: 'Mac: Alt + R.' },
+          { keys: 'M', desc: 'Mute/Unmute', usage: 'Same key on Mac.' },
+          { keys: 'Up', desc: 'Go to Previous', usage: 'Same key on Mac.' },
+          { keys: 'Down', desc: 'Go to Next', usage: 'Same key on Mac.' },
+          { keys: 'Left', desc: 'Add to Library', usage: 'Same key on Mac.' },
+          { keys: 'Right', desc: 'Add to Queue', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + B', desc: 'Like/Dislike Song', usage: 'Same key on Mac.' },
+        ]
+      },
+      {
+        name: 'General',
+        shortcuts: [
+          { keys: 'Ctrl + K', desc: 'Open Search', usage: 'Mac: Cmd + K.' },
+          { keys: 'Ctrl + / or Ctrl + ?', desc: 'Open Help', usage: 'Mac: Cmd + / or Cmd + ?.' },
+          { keys: 'Ctrl + A', desc: 'Select All', usage: 'Mac: Cmd + A.' },
+          { keys: 'Ctrl + F', desc: 'Filter', usage: 'Mac: Cmd + F.' },
+          { keys: 'Ctrl + ,', desc: 'Go to Preferences', usage: 'Mac: Cmd + ,.' },
+          { keys: 'Alt + J', desc: 'Open Context Menu', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + F6', desc: 'Log Out', usage: 'Same key on Mac.' },
         ]
       },
       {
         name: 'Navigation',
         shortcuts: [
-          { keys: 'Ctrl + L', desc: 'Search', usage: 'Go to search bar.' },
-          { keys: 'Ctrl + N', desc: 'New Playlist', usage: 'Create a new playlist.' },
-          { keys: 'Alt + Left', desc: 'Go Back', usage: 'Navigate back.' },
-          { keys: 'Alt + Right', desc: 'Go Forward', usage: 'Navigate forward.' },
-          { keys: 'Ctrl + F', desc: 'Filter', usage: 'Filter current view.' },
-          { keys: 'Delete', desc: 'Remove from Playlist', usage: 'Remove track from playlist.' },
+          { keys: 'Alt + Shift + H', desc: 'Go to Home', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + L', desc: 'Go to Search', usage: 'Mac: Cmd + Shift + L.' },
+          { keys: 'Alt + Shift + 0', desc: 'Go to Library', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + 1', desc: 'Go to Playlists', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + 2', desc: 'Go to Podcasts', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + 3', desc: 'Go to Artists', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + 4', desc: 'Go to Albums', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + 5', desc: 'Go to Audiobooks', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + J', desc: 'Go to Now Playing', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + S', desc: 'Go to Liked Songs', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + M', desc: 'Go to Made For You', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + N', desc: 'Go to New Releases', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + C', desc: 'Go to Charts', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + Q', desc: 'Go to Queue', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + R', desc: 'Toggle Now Playing View Sidebar', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + L', desc: 'Toggle Your Library Sidebar', usage: 'Same key on Mac.' },
         ]
       },
     ]
@@ -4594,27 +4858,404 @@ const shortcutData = {
   ableton: {
     name: 'Ableton Live',
     icon: 'fas fa-music',
+    source: { name: 'Ableton — Live 12 Reference Manual, chapter “Live Keyboard Shortcuts”', url: 'https://www.ableton.com/en/manual/live-keyboard-shortcuts/' },
     categories: [
       {
-        name: 'Playback & Recording',
+        name: 'Showing and Hiding Views',
         shortcuts: [
-          { keys: 'Space', desc: 'Play/Stop', usage: 'Start or stop playback.' },
-          { keys: 'F9', desc: 'Record', usage: 'Start recording.' },
-          { keys: 'Home', desc: 'Go to Start', usage: 'Go to arrangement start.' },
+          { keys: 'F11', desc: 'Toggle Full Screen Mode', usage: 'Mac: Ctrl + Cmd + F.' },
+          { keys: 'Ctrl + Shift + W', desc: 'Toggle Second Window', usage: 'Mac: Cmd + Shift + W.' },
+          { keys: 'Tab', desc: 'Toggle Session/Arrangement View', usage: 'Same key on Mac.' },
+          { keys: 'Shift + Tab or F12', desc: 'Toggle Between Device/Clip View', usage: 'Same key on Mac.' },
+          { keys: 'Q', desc: 'Toggle Hot-Swap Mode', usage: 'Same key on Mac.' },
+          { keys: 'D', desc: 'Toggle Drum Rack/Last Selected Pad', usage: 'Same key on Mac.' },
+          { keys: 'Shift + ?', desc: 'Hide/Show Info View', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Alt + V', desc: 'Hide/Show Video Window', usage: 'Mac: Cmd + Option + V.' },
+          { keys: 'Ctrl + Alt + B or Ctrl + Alt + 5', desc: 'Hide/Show Browser', usage: 'Mac: Cmd + Option + B or Cmd + Option + 5.' },
+          { keys: 'Ctrl + Alt + O', desc: 'Hide/Show Overview', usage: 'Mac: Cmd + Option + O.' },
+          { keys: 'Ctrl + Alt + I', desc: 'Hide/Show In/Out', usage: 'Mac: Cmd + Option + I.' },
+          { keys: 'Ctrl + Alt + S', desc: 'Hide/Show Sends', usage: 'Mac: Cmd + Option + S.' },
+          { keys: 'Ctrl + Alt + M', desc: 'Hide/Show Mixer', usage: 'Mac: Cmd + Option + M.' },
+          { keys: 'Ctrl + Alt + 3', desc: 'Hide/Show Clip View', usage: 'Mac: Cmd + Option + 3.' },
+          { keys: 'Ctrl + Alt + 4', desc: 'Hide/Show Device View', usage: 'Mac: Cmd + Option + 4.' },
+          { keys: 'Ctrl + Alt + 6', desc: 'Hide/Show the Groove Pool', usage: 'Mac: Cmd + Option + 6.' },
+          { keys: 'Ctrl + Alt + 7', desc: 'Hide/Show the Learn View', usage: 'Mac: Cmd + Option + 7.' },
+          { keys: 'Ctrl + ,', desc: 'Open the Settings', usage: 'Mac: Cmd + ,.' },
+          { keys: 'Esc', desc: 'Close Window/Dialog', usage: 'Same key on Mac.' },
         ]
       },
       {
-        name: 'Editing & View',
+        name: 'Keyboard Focus and Navigation',
         shortcuts: [
-          { keys: 'Ctrl + E', desc: 'Split', usage: 'Split clip at selection.' },
-          { keys: 'Ctrl + J', desc: 'Consolidate', usage: 'Consolidate selected clips.' },
-          { keys: 'Ctrl + D', desc: 'Duplicate', usage: 'Duplicate clip or track.' },
-          { keys: 'Ctrl + R', desc: 'Rename', usage: 'Rename selected item.' },
-          { keys: 'Ctrl + T', desc: 'Add Audio Track', usage: 'Add new audio track.' },
-          { keys: 'Ctrl + Shift + T', desc: 'Add MIDI Track', usage: 'Add new MIDI track.' },
-          { keys: 'Tab', desc: 'Session/Arrange', usage: 'Toggle session and arrangement view.' },
-          { keys: 'Ctrl + L', desc: 'Set Loop', usage: 'Set selection as loop.' },
-          { keys: 'Ctrl + G', desc: 'Group Tracks', usage: 'Group selected tracks.' },
+          { keys: 'Alt + 0', desc: 'Move Focus to the Control Bar', usage: 'Mac: Option + 0.' },
+          { keys: 'Alt + 1', desc: 'Move Focus to the Session View', usage: 'Mac: Option + 1.' },
+          { keys: 'Alt + 2', desc: 'Move Focus to the Arrangement View', usage: 'Mac: Option + 2.' },
+          { keys: 'Alt + 3', desc: 'Move Focus to the Clip View', usage: 'Mac: Option + 3.' },
+          { keys: 'Alt + 4', desc: 'Move Focus to the Device View', usage: 'Mac: Option + 4.' },
+          { keys: 'Alt + 5', desc: 'Move Focus to the Browser', usage: 'Mac: Option + 5.' },
+          { keys: 'Alt + 6', desc: 'Move Focus to the Groove Pool', usage: 'Mac: Option + 6.' },
+          { keys: 'Alt + 7', desc: 'Move Focus to the Learn View', usage: 'Mac: Option + 7.' },
+          { keys: 'Alt + 8', desc: 'Move Focus to the Selected Clip Panel', usage: 'Mac: Option + 8.' },
+          { keys: 'Alt + Shift + P', desc: 'Move Focus to the Clip Panels', usage: 'Mac: Option + Shift + P.' },
+          { keys: 'Tab', desc: 'Move to Next Focusable Control', usage: 'Same key on Mac.' },
+          { keys: 'Shift + Tab', desc: 'Move to Previous Focusable Control', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Tab', desc: 'Move to Next Neighbor of Current Control', usage: 'Mac: Option + Tab.' },
+          { keys: 'Ctrl + Shift + Tab', desc: 'Move to Previous Neighbor of Current Control', usage: 'Mac: Option + Shift + Tab.' },
+        ]
+      },
+      {
+        name: 'Working with Sets and the Program',
+        shortcuts: [
+          { keys: 'Ctrl + N', desc: 'New Live Set', usage: 'Mac: Cmd + N.' },
+          { keys: 'Ctrl + O', desc: 'Open Live Set', usage: 'Mac: Cmd + O.' },
+          { keys: 'Ctrl + S', desc: 'Save Live Set', usage: 'Mac: Cmd + S.' },
+          { keys: 'Ctrl + Shift + S', desc: 'Save Live Set As…', usage: 'Mac: Cmd + Shift + S.' },
+          { keys: 'Ctrl + Q', desc: 'Quit Live', usage: 'Mac: Cmd + Q.' },
+          { keys: 'Cmd + H', desc: 'Hide Live', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Shift + R', desc: 'Export Audio/Video', usage: 'Mac: Cmd + Shift + R.' },
+          { keys: 'Ctrl + Shift + E', desc: 'Export MIDI File', usage: 'Mac: Cmd + Shift + E.' },
+        ]
+      },
+      {
+        name: 'Working with Devices and Plug-Ins',
+        shortcuts: [
+          { keys: 'Ctrl + G', desc: 'Group Devices', usage: 'Mac: Cmd + G.' },
+          { keys: 'Ctrl + Shift + G', desc: 'Ungroup Devices', usage: 'Mac: Cmd + Shift + G.' },
+          { keys: 'Shift + Click', desc: 'Add Device(s) to Selection', usage: 'Same key on Mac.' },
+          { keys: 'Enter', desc: 'Load Selected Device from Browser', usage: 'Same key on Mac.' },
+          { keys: 'Q', desc: 'Hot-Swap Selected Device', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Alt + P', desc: 'Hide/Show Open Plug-In Windows', usage: 'Mac: Cmd + Option + P.' },
+          { keys: 'Ctrl', desc: 'Open Multiple Windows with Show/Hide Plug-In Window Button', usage: 'Mac: Cmd.' },
+          { keys: 'P', desc: 'Compare A/B: Switch Device State', usage: 'Same key on Mac.' },
+        ]
+      },
+      {
+        name: 'Editing',
+        shortcuts: [
+          { keys: 'Ctrl + X', desc: 'Cut', usage: 'Mac: Cmd + X.' },
+          { keys: 'Ctrl + C', desc: 'Copy', usage: 'Mac: Cmd + C.' },
+          { keys: 'Ctrl + V', desc: 'Paste', usage: 'Mac: Cmd + V.' },
+          { keys: 'Ctrl + D', desc: 'Duplicate', usage: 'Mac: Cmd + D.' },
+          { keys: 'Delete', desc: 'Delete', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Mac: Cmd + Z.' },
+          { keys: 'Ctrl + Y', desc: 'Redo', usage: 'Mac: Cmd + Shift + Z.' },
+          { keys: 'Ctrl + R', desc: 'Rename', usage: 'Mac: Cmd + R.' },
+          { keys: 'Ctrl + A', desc: 'Select All', usage: 'Mac: Cmd + A.' },
+          { keys: 'Ctrl + Click', desc: 'Select Multiple Items', usage: 'Mac: Cmd + Click.' },
+          { keys: 'Shift + Click', desc: 'Select Multiple Items by First and Last Item', usage: 'Same key on Mac.' },
+          { keys: 'Tab', desc: 'Move to Next Track/Scene When Renaming', usage: 'Same key on Mac.' },
+          { keys: 'Alt', desc: 'Ignore Grid Quantization When Dragging', usage: 'Mac: Cmd.' },
+          { keys: 'Shift', desc: 'Clips and Slots Across All Tracks', usage: 'Same key on Mac.' },
+          { keys: 'Shift', desc: 'Time Across All Tracks', usage: 'Same key on Mac.' },
+          { keys: 'Alt', desc: 'The Selected Part of the Envelope', usage: 'Mac: Option.' },
+        ]
+      },
+      {
+        name: 'Adjusting Values',
+        shortcuts: [
+          { keys: 'Up/Down', desc: 'Decrement/Increment', usage: 'Same key on Mac.' },
+          { keys: 'Shift + Up/Down', desc: 'Decrement/Increment in Octaves or Fine Adjustments', usage: 'Same key on Mac.' },
+          { keys: 'Shift', desc: 'Finer Resolution When Dragging', usage: 'Same key on Mac.' },
+          { keys: 'Delete', desc: 'Return to Default', usage: 'Same key on Mac.' },
+          { keys: '0-9', desc: 'Type In Value', usage: 'Same key on Mac.' },
+          { keys: '. / ,', desc: 'Go to Next Field (Bar/Beat/16th)', usage: 'Same key on Mac.' },
+          { keys: 'Esc', desc: 'Cancel Value Entry', usage: 'Same key on Mac.' },
+          { keys: 'Enter', desc: 'Confirm Value Entry', usage: 'Same key on Mac.' },
+        ]
+      },
+      {
+        name: 'Commands for Breakpoint Envelopes',
+        shortcuts: [
+          { keys: 'A', desc: 'Toggle Automation Mode', usage: 'Same key on Mac.' },
+          { keys: 'Shift', desc: 'Finer Resolution When Dragging', usage: 'Same key on Mac.' },
+          { keys: 'Alt', desc: 'Create Curved Automation Segment', usage: 'Mac: Option.' },
+          { keys: 'F', desc: 'Momentarily Toggle Fade Controls', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Delete', desc: 'Delete Selected Breakpoint Envelope', usage: 'Mac: Cmd + Delete.' },
+          { keys: 'Alt', desc: 'Ignore Grid Quantization When Dragging', usage: 'Mac: Cmd.' },
+        ]
+      },
+      {
+        name: 'Loop Brace and Start/End Markers',
+        shortcuts: [
+          { keys: 'Ctrl + F9', desc: 'Set Start Marker', usage: 'Mac: Cmd + F9.' },
+          { keys: 'Ctrl + F10', desc: 'Set Loop Brace Start', usage: 'Mac: Cmd + F10.' },
+          { keys: 'Ctrl + F11', desc: 'Set Loop Brace End', usage: 'Mac: Cmd + F11.' },
+          { keys: 'Ctrl + F12', desc: 'Set End Marker', usage: 'Mac: Cmd + F12.' },
+          { keys: 'Ctrl + Click', desc: 'Move Start Marker to Position', usage: 'Mac: Cmd + Click.' },
+          { keys: 'Ctrl + Shift + Click', desc: 'Move End Marker to Position', usage: 'Mac: Cmd + Shift + Click.' },
+          { keys: 'Left/Right', desc: 'Nudge Loop Brace Left/Right', usage: 'Same key on Mac.' },
+          { keys: 'Up/Down', desc: 'Move Loop by Loop Length', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Up/Down', desc: 'Halve/Double Loop Length', usage: 'Mac: Cmd + Up/Down.' },
+          { keys: 'Ctrl + Left/Right', desc: 'Shorten/Lengthen Loop', usage: 'Mac: Cmd + Left/Right.' },
+          { keys: 'Ctrl + Shift + L', desc: 'Select Material in Loop', usage: 'Mac: Cmd + Shift + L.' },
+        ]
+      },
+      {
+        name: 'Zooming, Display and Selections',
+        shortcuts: [
+          { keys: 'Ctrl + +', desc: 'Zoom In Window', usage: 'Mac: Cmd + +.' },
+          { keys: 'Ctrl + -', desc: 'Zoom Out Window', usage: 'Mac: Cmd + -.' },
+          { keys: '+', desc: 'Zoom In Time Ruler', usage: 'Same key on Mac.' },
+          { keys: '-', desc: 'Zoom Out Time Ruler', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + F', desc: 'Scroll Display to Follow Playback', usage: 'Mac: Option + Shift + F.' },
+          { keys: 'Shift + Scroll', desc: 'Scroll Left/Right', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Alt', desc: 'Pan Left/Right of Selection', usage: 'Mac: Cmd + Option.' },
+          { keys: 'Shift + Click or Drag', desc: 'Add Items to a Selection', usage: 'Same key on Mac.' },
+          { keys: 'Shift + Click', desc: 'Add Adjacent Clips/Tracks/Scenes to Multi-Selection', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Click', desc: 'Add Nonadjacent Clips/Tracks/Scenes to a Multi-Selection', usage: 'Mac: Cmd + Click.' },
+        ]
+      },
+      {
+        name: 'Clip View Editor View Modes',
+        shortcuts: [
+          { keys: 'Ctrl + Tab', desc: 'Switch Between Sample/Envelopes Tabs', usage: 'Mac: Option + Tab.' },
+          { keys: 'Ctrl + Tab', desc: 'Switch Between Notes/Envelopes/MPE Tabs', usage: 'Mac: Option + Tab.' },
+          { keys: 'Alt + Shift + 1', desc: 'Switch to Sample/Notes Tab', usage: 'Mac: Option + Shift + 1.' },
+          { keys: 'Alt + Shift + 2', desc: 'Switch to Envelopes Tab', usage: 'Mac: Option + Shift + 2.' },
+          { keys: 'Alt + Shift + 3', desc: 'Switch to MPE Tab', usage: 'Mac: Option + Shift + 3.' },
+        ]
+      },
+      {
+        name: 'Clip View Sample Editor',
+        shortcuts: [
+          { keys: 'Ctrl + U', desc: 'Quantize', usage: 'Mac: Cmd + U.' },
+          { keys: 'Ctrl + Shift + U', desc: 'Quantize Settings…', usage: 'Mac: Cmd + Shift + U.' },
+          { keys: 'Left/Right', desc: 'Move Selected Warp Marker', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Left/Right', desc: 'Select Warp Marker', usage: 'Mac: Cmd + Left/Right.' },
+          { keys: 'Ctrl + Shift + F', desc: 'Scroll Display to Follow Playback', usage: 'Mac: Option + Shift + F.' },
+          { keys: 'Shift + Left/Right', desc: 'Move Clip Region with Start Marker', usage: 'Same key on Mac.' },
+          { keys: 'Z', desc: 'Zoom to Clip Selection', usage: 'Same key on Mac.' },
+          { keys: 'X', desc: 'Zoom Back from Clip Selection', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + I', desc: 'Insert Warp Marker', usage: 'Mac: Cmd + I.' },
+          { keys: 'Delete', desc: 'Delete Warp Marker', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Shift + I', desc: 'Insert Transient', usage: 'Mac: Cmd + Shift + I.' },
+          { keys: 'Ctrl + Shift + Delete', desc: 'Delete Transient', usage: 'Mac: Cmd + Shift + Delete.' },
+          { keys: 'W', desc: 'Fit Content to View Width', usage: 'Same key on Mac.' },
+          { keys: 'H', desc: 'Fit Content to View Height', usage: 'Same key on Mac.' },
+        ]
+      },
+      {
+        name: 'Clip View MIDI Note Editor',
+        shortcuts: [
+          { keys: 'Ctrl + A', desc: 'Select All Notes', usage: 'Mac: Cmd + A.' },
+          { keys: 'Ctrl + Drag', desc: 'Copy Notes', usage: 'Mac: Option + Drag.' },
+          { keys: 'Ctrl + E', desc: 'Chop Selected Notes on Grid or Split Notes at Time Selection Start/End', usage: 'Mac: Cmd + E.' },
+          { keys: 'Ctrl + E + Drag + up/down', desc: 'Chop Notes in Increments of 1', usage: 'Mac: Cmd + E + Drag + up/down.' },
+          { keys: 'Ctrl + Shift + E + Drag + up/down', desc: 'Chop Notes in Increments of 2', usage: 'Mac: Cmd + Shift + E + Drag + up/down.' },
+          { keys: 'Ctrl + J', desc: 'Join Notes', usage: 'Mac: Cmd + J.' },
+          { keys: 'Ctrl + Alt + J', desc: 'Fit Notes to Time Range', usage: 'Mac: Cmd + Option + J.' },
+          { keys: 'W', desc: 'Fit Content to View Width', usage: 'Same key on Mac.' },
+          { keys: 'H', desc: 'Fit Content to View Height', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + U', desc: 'Quantize', usage: 'Mac: Cmd + U.' },
+          { keys: 'Ctrl + Shift + U', desc: 'Quantize Settings…', usage: 'Mac: Cmd + Shift + U.' },
+          { keys: 'Page + Up/Down', desc: 'Scroll Editor Vertically', usage: 'Same key on Mac.' },
+          { keys: 'Shift + Page + Up/Down', desc: 'Scroll Editor Vertically in Fine Increments', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Page + Up/Down', desc: 'Scroll Editor Horizontally', usage: 'Mac: Cmd + Page + Up/Down.' },
+          { keys: 'Alt + Drag', desc: 'Change Velocity from MIDI Note Editor', usage: 'Mac: Cmd + Drag.' },
+          { keys: 'Alt + Up/Down', desc: 'Select Next/Previous Note', usage: 'Mac: Option + Up/Down.' },
+          { keys: 'Alt + Left/Right', desc: 'Select Next/Previous Note in Same Key Track', usage: 'Mac: Option + Left/Right.' },
+          { keys: 'Ctrl + Shift + F', desc: 'Scroll Display to Follow Playback', usage: 'Mac: Option + Shift + F.' },
+          { keys: 'Shift + Left/Right', desc: 'Move Clip Region with Start Marker', usage: 'Same key on Mac.' },
+          { keys: 'Z', desc: 'Zoom to Clip Selection', usage: 'Same key on Mac.' },
+          { keys: 'X', desc: 'Zoom Back from Clip Selection', usage: 'Same key on Mac.' },
+          { keys: '+/-', desc: 'Zoom In/Out Horizontally', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Up/Down', desc: 'Adjust Note Selection Velocity', usage: 'Mac: Cmd + Up/Down.' },
+          { keys: 'Ctrl + Shift + Up/Down', desc: 'Adjust Note Selection Velocity Deviation', usage: 'Mac: Cmd + Shift + Up/Down.' },
+          { keys: 'Ctrl + Alt + Up/Down', desc: 'Adjust Note Selection Chance', usage: 'Mac: Cmd + Option + Up/Down.' },
+          { keys: 'Ctrl + Alt + E', desc: 'Toggle Full-Size Clip View', usage: 'Mac: Cmd + Option + E.' },
+          { keys: 'Ctrl + G', desc: 'Group Notes (Play All)', usage: 'Mac: Cmd + G.' },
+          { keys: 'Ctrl + Shift + G', desc: 'Ungroup Notes', usage: 'Mac: Cmd + Shift + G.' },
+          { keys: 'Ctrl + Enter', desc: 'Apply Current MIDI Tool Settings', usage: 'Mac: Cmd + Enter.' },
+          { keys: 'Ctrl + Shift + A', desc: 'Invert Note Selection', usage: 'Mac: Cmd + Shift + A.' },
+          { keys: 'K', desc: 'Highlight Scale', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Shift + E', desc: 'Split Arrangement Clip Based on Time Selection', usage: 'Mac: Cmd + Shift + E.' },
+          { keys: 'Ctrl + Shift + F', desc: 'Show/Hide MIDI Note Filters', usage: 'Mac: Cmd + Shift + F.' },
+        ]
+      },
+      {
+        name: 'Grid Snapping and Drawing',
+        shortcuts: [
+          { keys: 'B', desc: 'Toggle Draw Mode (Pitch Lock Off)', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + 1', desc: 'Narrow Grid', usage: 'Mac: Cmd + 1.' },
+          { keys: 'Ctrl + 2', desc: 'Widen Grid', usage: 'Mac: Cmd + 2.' },
+          { keys: 'Ctrl + 3', desc: 'Triplet Grid', usage: 'Mac: Cmd + 3.' },
+          { keys: 'Ctrl + 4', desc: 'Snap to Grid', usage: 'Mac: Cmd + 4.' },
+          { keys: 'Ctrl + 5', desc: 'Fixed/Zoom-Adaptive Grid', usage: 'Mac: Cmd + 5.' },
+          { keys: 'Alt', desc: 'Bypass Snapping While Dragging', usage: 'Mac: Cmd.' },
+        ]
+      },
+      {
+        name: 'Global Quantization',
+        shortcuts: [
+          { keys: 'Ctrl + 6', desc: 'Sixteenth-Note Quantization', usage: 'Mac: Cmd + 6.' },
+          { keys: 'Ctrl + 7', desc: 'Eighth-Note Quantization', usage: 'Mac: Cmd + 7.' },
+          { keys: 'Ctrl + 8', desc: 'Quarter-Note Quantization', usage: 'Mac: Cmd + 8.' },
+          { keys: 'Ctrl + 9', desc: '1-Bar Quantization', usage: 'Mac: Cmd + 9.' },
+          { keys: 'Ctrl + 0', desc: 'Quantization Off', usage: 'Mac: Cmd + 0.' },
+        ]
+      },
+      {
+        name: 'Session View',
+        shortcuts: [
+          { keys: 'Enter', desc: 'Launch Selected Clip/Slot', usage: 'Same key on Mac.' },
+          { keys: 'Arrow + Keys', desc: 'Select Neighboring Clip/Slot', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + A', desc: 'Select All Clips/Slots', usage: 'Mac: Cmd + A.' },
+          { keys: 'Ctrl + Drag', desc: 'Copy Clips', usage: 'Mac: Option + Drag.' },
+          { keys: 'Ctrl + E', desc: 'Add/Remove Stop Button', usage: 'Mac: Cmd + E.' },
+          { keys: 'Ctrl + Enter', desc: 'Stop Clips in Track with Slot Selection', usage: 'Mac: Cmd + Enter.' },
+          { keys: 'Ctrl + Shift + M', desc: 'Insert MIDI clip', usage: 'Mac: Cmd + Shift + M.' },
+          { keys: 'Ctrl + I', desc: 'Insert Scene', usage: 'Mac: Cmd + I.' },
+          { keys: 'Ctrl + Shift + I', desc: 'Insert Captured Scene', usage: 'Mac: Cmd + Shift + I.' },
+          { keys: 'Up/Down', desc: 'Move Up/Down Between Scenes (One at a Time)', usage: 'Same key on Mac.' },
+          { keys: 'Page + Up/Down', desc: 'Move Up/Down Between Scenes (Eight at a Time)', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Shift + F9', desc: 'Record to Session View', usage: 'Mac: Cmd + Shift + F9.' },
+          { keys: 'Shift + Enter', desc: 'Toggle Follow Actions for Selected Clips', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Shift + Enter', desc: 'Create Follow Action Chain', usage: 'Mac: Cmd + Shift + Enter.' },
+          { keys: 'Ctrl + Left/Right', desc: 'Move Selected Track Left/Right', usage: 'Mac: Cmd + Left/Right.' },
+          { keys: 'Ctrl + Up/Down', desc: 'Move Nonadjacent Scenes Without Collapsing', usage: 'Mac: Cmd + Up/Down.' },
+          { keys: 'Ctrl', desc: 'Drop Browser Clips as a Scene', usage: 'Mac: Cmd.' },
+          { keys: '0', desc: 'Deactivate Selected Clip', usage: 'Same key on Mac.' },
+          { keys: 'Esc', desc: 'Jump to Highlighted Track Title Bar', usage: 'Same key on Mac.' },
+          { keys: 'S', desc: 'Solo Selected Chain', usage: 'Same key on Mac.' },
+        ]
+      },
+      {
+        name: 'Arrangement View',
+        shortcuts: [
+          { keys: 'Ctrl + E', desc: 'Split Clip at Selection', usage: 'Mac: Cmd + E.' },
+          { keys: 'Ctrl + J', desc: 'Consolidate Selection into Clip', usage: 'Mac: Cmd + J.' },
+          { keys: 'Ctrl + Shift + J', desc: 'Crop Selected Clips', usage: 'Mac: Cmd + Shift + J.' },
+          { keys: 'Enter + Left/Right', desc: 'Resize Clip When Insert Marker is at Clip Edge', usage: 'Same key on Mac.' },
+          { keys: 'Shift + Alt + Drag', desc: 'Slide Waveform', usage: 'Mac: Shift + Option + Drag.' },
+          { keys: 'Ctrl + Alt + F', desc: 'Create Fade/Crossfade', usage: 'Mac: Cmd + Option + F.' },
+          { keys: 'Ctrl + Alt + Backspace', desc: 'Delete Fades/Crossfades in Selected Clip(s)', usage: 'Mac: Cmd + Option + Delete.' },
+          { keys: 'F', desc: 'Momentarily Toggle Fade Handles', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + L', desc: 'Toggle Loop Brace', usage: 'Mac: Cmd + L.' },
+          { keys: 'Ctrl + Left/Right', desc: 'Adjust Loop Brace Length', usage: 'Mac: Cmd + Left/Right.' },
+          { keys: 'Ctrl + Shift + L', desc: 'Select Loop Brace Contents', usage: 'Mac: Cmd + Shift + L.' },
+          { keys: 'Ctrl + I', desc: 'Insert Silence', usage: 'Mac: Cmd + I.' },
+          { keys: 'Ctrl + Shift + X', desc: 'Cut Time', usage: 'Mac: Cmd + Shift + X.' },
+          { keys: 'Ctrl + Shift + C', desc: 'Copy Time', usage: 'Mac: Cmd + Shift + C.' },
+          { keys: 'Ctrl + Shift + V', desc: 'Paste Time', usage: 'Mac: Cmd + Shift + V.' },
+          { keys: 'Ctrl + Shift + D', desc: 'Duplicate Time', usage: 'Mac: Cmd + Shift + D.' },
+          { keys: 'Ctrl + Shift + Delete', desc: 'Delete Time', usage: 'Mac: Cmd + Shift + Delete.' },
+          { keys: 'U or Left/Right', desc: 'Fold/Unfold Selected Tracks', usage: 'Same key on Mac.' },
+          { keys: 'Alt + U', desc: 'Unfold All Tracks', usage: 'Mac: Option + U.' },
+          { keys: 'Alt + +/-', desc: 'Adjust Height of Selected Tracks/Clips', usage: 'Mac: Option + +/-.' },
+          { keys: 'Ctrl + Shift + F', desc: 'Scroll Display to Follow Playback', usage: 'Mac: Option + Shift + F.' },
+          { keys: 'Ctrl + Alt + Drag', desc: 'Scroll Display Left/Right of Selection', usage: 'Mac: Cmd + Option + Drag.' },
+          { keys: 'H', desc: 'Optimize Arrangement Height', usage: 'Same key on Mac.' },
+          { keys: 'W', desc: 'Optimize Arrangement Width', usage: 'Same key on Mac.' },
+          { keys: '0', desc: 'Deactivate Selection', usage: 'Same key on Mac.' },
+          { keys: 'Left/Right', desc: 'Nudge Selection Left/Right', usage: 'Same key on Mac.' },
+          { keys: 'R', desc: 'Reverse Audio Clip Selection', usage: 'Same key on Mac.' },
+          { keys: 'Z', desc: 'Zoom to Arrangement Time Selection', usage: 'Same key on Mac.' },
+          { keys: 'X', desc: 'Zoom Back from Arrangement Time Selection', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Space', desc: 'Play from Insert Marker in Selected Clip', usage: 'Mac: Option + Space.' },
+          { keys: 'Ctrl + Shift + Space', desc: 'Move Insert Marker to Playhead Position', usage: 'Mac: Cmd + Shift + Space.' },
+          { keys: 'Esc', desc: 'Jump to Highlighted Track Title Bar', usage: 'Same key on Mac.' },
+          { keys: 'Alt + Shift + M', desc: 'Move Focus to Mixer', usage: 'Mac: Option + Shift + M.' },
+        ]
+      },
+      {
+        name: 'Comping',
+        shortcuts: [
+          { keys: 'Ctrl + Alt + U', desc: 'Show Take Lanes', usage: 'Mac: Cmd + Option + U.' },
+          { keys: 'Enter', desc: 'Add Selected Take Lane Area to Main Track Lane', usage: 'Same key on Mac.' },
+          { keys: 'T', desc: 'Audition Selected Take Lane', usage: 'Same key on Mac.' },
+          { keys: 'Shift + Alt + T', desc: 'Add Take Lane', usage: 'Mac: Shift + Option + T.' },
+          { keys: 'Ctrl + D', desc: 'Duplicate Selected Take Lane', usage: 'Mac: Cmd + D.' },
+          { keys: 'Ctrl + Up/Down', desc: 'Replace Main Take Clip with Next/Previous Take', usage: 'Mac: Cmd + Up/Down.' },
+        ]
+      },
+      {
+        name: 'Bounce to Audio',
+        shortcuts: [
+          { keys: 'Ctrl + B', desc: 'Bounce to New Track', usage: 'Mac: Cmd + B.' },
+          { keys: 'Ctrl + Alt + V', desc: 'Paste Bounced Audio', usage: 'Mac: Cmd + Option + V.' },
+        ]
+      },
+      {
+        name: 'Commands for Tracks',
+        shortcuts: [
+          { keys: 'Ctrl + T', desc: 'Insert Audio Track', usage: 'Mac: Cmd + T.' },
+          { keys: 'Ctrl + Shift + T', desc: 'Insert MIDI Track', usage: 'Mac: Cmd + Shift + T.' },
+          { keys: 'Ctrl + Alt + T', desc: 'Insert Return Track', usage: 'Mac: Cmd + Option + T.' },
+          { keys: 'Ctrl + R', desc: 'Rename Selected Track', usage: 'Mac: Cmd + R.' },
+          { keys: 'Tab', desc: 'Go to Next Track When Renaming', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + G', desc: 'Group Selected Tracks', usage: 'Mac: Cmd + G.' },
+          { keys: 'Ctrl + Shift + G', desc: 'Ungroup Tracks', usage: 'Mac: Cmd + Shift + G.' },
+          { keys: '+', desc: 'Show Grouped Tracks', usage: 'Same key on Mac.' },
+          { keys: '-', desc: 'Hide Grouped Tracks', usage: 'Same key on Mac.' },
+          { keys: 'U', desc: 'Collapse/Expand Grouped Tracks', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Alt + R', desc: 'Hide/Show Return Tracks', usage: 'Mac: Cmd + Option + R.' },
+          { keys: 'Ctrl + Arrow + Keys', desc: 'Move Nonadjacent Tracks Without Collapsing', usage: 'Mac: Cmd + Arrow + Keys.' },
+          { keys: 'C', desc: 'Arm Selected Tracks', usage: 'Same key on Mac.' },
+          { keys: 'S', desc: 'Solo Selected Tracks', usage: 'Same key on Mac.' },
+          { keys: 'Enter', desc: 'Add Device from Browser', usage: 'Same key on Mac.' },
+          { keys: '0', desc: 'Deactivate Selected Track', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Alt + Shift + F', desc: 'Freeze/Unfreeze Tracks', usage: 'Mac: Cmd + Option + Shift + F.' },
+          { keys: 'Delete', desc: 'Delete Track from Track Title Bar', usage: 'Same key on Mac.' },
+        ]
+      },
+      {
+        name: 'Transport',
+        shortcuts: [
+          { keys: 'Space', desc: 'Play from Start Marker/Stop', usage: 'Same key on Mac.' },
+          { keys: 'Shift + Space', desc: 'Continue Play from Stop Point', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Space', desc: 'Stop Playback at End of Selection', usage: 'Mac: Option + Space.' },
+          { keys: 'Space', desc: 'Play Arrangement View Selection', usage: 'Same key on Mac.' },
+          { keys: 'F9', desc: 'Record', usage: 'Same key on Mac.' },
+          { keys: 'Shift + F9', desc: 'Arm Recording in Arrangement View', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Shift + F9', desc: 'Record to Session View', usage: 'Mac: Cmd + Shift + F9.' },
+          { keys: 'F10', desc: 'Back to Arrangement', usage: 'Same key on Mac.' },
+          { keys: 'F1-F8', desc: 'Activate/Deactivate Track 1…8', usage: 'Same key on Mac.' },
+          { keys: 'O', desc: 'Toggle Metronome', usage: 'Same key on Mac.' },
+        ]
+      },
+      {
+        name: 'Audio Engine',
+        shortcuts: [
+          { keys: 'Ctrl + Alt + Shift + E', desc: 'Turn Audio Engine On/Off', usage: 'Mac: Cmd + Option + Shift + E.' },
+        ]
+      },
+      {
+        name: 'Browser',
+        shortcuts: [
+          { keys: 'Up/Down', desc: 'Scroll Down/Up', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Alt + B', desc: 'Hide/Show Browser', usage: 'Mac: Cmd + Option + B.' },
+          { keys: 'Left/Right', desc: 'Close/Open Folders', usage: 'Same key on Mac.' },
+          { keys: 'Enter', desc: 'Load Selected Item from Browser', usage: 'Same key on Mac.' },
+          { keys: 'Shift + Enter or Right', desc: 'Preview Selected File', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + F', desc: 'Search in Browser', usage: 'Mac: Cmd + F.' },
+          { keys: 'Down or Enter', desc: 'Jump to Search Results', usage: 'Same key on Mac.' },
+          { keys: '1-7', desc: 'Assign Color(s) to Selected Browser Item(s)', usage: 'Same key on Mac.' },
+          { keys: '0', desc: 'Reset Assigned Color(s) for Selected Browser Item(s)', usage: 'Same key on Mac.' },
+          { keys: 'Ctrl + Shift + F', desc: 'Show Similar Files Using Similarity Search', usage: 'Mac: Cmd + Shift + F.' },
+          { keys: 'Ctrl + [', desc: 'Browser History Back', usage: 'Mac: Cmd + [.' },
+          { keys: 'Ctrl + ]', desc: 'Browser History Forward', usage: 'Mac: Cmd + ].' },
+          { keys: 'Ctrl + Alt + G', desc: 'Hide/Show Filter View', usage: 'Mac: Cmd + Option + G.' },
+          { keys: 'Ctrl + Shift + E', desc: 'Hide/Show Tag Editor', usage: 'Mac: Cmd + Shift + E.' },
+        ]
+      },
+      {
+        name: 'Similar Sample Swapping',
+        shortcuts: [
+          { keys: 'Ctrl + Right', desc: 'Swap to Next Similar Sample', usage: 'Mac: Cmd + Right.' },
+          { keys: 'Ctrl + Left', desc: 'Swap to Previous Similar Sample', usage: 'Mac: Cmd + Left.' },
+          { keys: 'Ctrl + Up', desc: 'Save as Similarity Reference', usage: 'Mac: Cmd + Up.' },
+          { keys: 'Ctrl + Down', desc: 'Return to Reference', usage: 'Mac: Cmd + Down.' },
+          { keys: 'Alt', desc: 'Temporarily Toggle Similar Sample Swap Controls in Drum Racks', usage: 'Mac: Option.' },
+        ]
+      },
+      {
+        name: 'Key/MIDI Map Mode and the Computer MIDI Keyboard',
+        shortcuts: [
+          { keys: 'Ctrl + M', desc: 'Toggle MIDI Map Mode', usage: 'Mac: Cmd + M.' },
+          { keys: 'Ctrl + K', desc: 'Toggle Key Map Mode', usage: 'Mac: Cmd + K.' },
+          { keys: 'M', desc: 'Computer MIDI Keyboard', usage: 'Same key on Mac.' },
+          { keys: 'X / Z', desc: 'Adjust Computer MIDI Keyboard Octave Range Up/Down', usage: 'Same key on Mac.' },
+          { keys: 'C / V', desc: 'Adjust Computer MIDI Keyboard Incoming Note Velocity Up/Down', usage: 'Same key on Mac.' },
         ]
       },
     ]
@@ -6913,39 +7554,269 @@ const shortcutData = {
   inventor: {
     name: 'Autodesk Inventor',
     icon: 'fas fa-cog',
+    source: { name: 'Autodesk — Inventor keyboard shortcuts guide', url: 'https://www.autodesk.com/shortcuts/inventor' },
     categories: [
       {
-        name: 'Sketch',
+        name: 'Keyboard Shortcuts: General',
         shortcuts: [
-          { keys: 'L', desc: 'Line', usage: 'Draw a line in sketch.' },
-          { keys: 'C', desc: 'Circle', usage: 'Draw a circle with center and radius.' },
-          { keys: 'R', desc: 'Rectangle', usage: 'Draw a rectangle.' },
-          { keys: 'X', desc: 'Trim', usage: 'Trim at intersection points.' },
-          { keys: 'D', desc: 'Dimension', usage: 'Add dimensions to sketch.' },
-          { keys: 'F', desc: 'Fillet', usage: 'Apply fillet to edges.' },
-          { keys: 'O', desc: 'Offset', usage: 'Offset copy of selected elements.' },
-          { keys: 'S', desc: 'Start Sketch', usage: 'Start a 2D sketch.' },
+          { keys: 'Ctrl + A', desc: 'Select All', usage: 'Selects everything on the screen.' },
+          { keys: 'Ctrl + C', desc: 'Copy', usage: 'Copies selected items.' },
+          { keys: 'Ctrl + F', desc: 'Find', usage: 'Presents the Find Part Sketches dialog box in part files; opens the Find Assembly Components dialog box in assembly files.' },
+          { keys: 'Ctrl + N', desc: 'New', usage: 'Displays the New File dialog box.' },
+          { keys: 'Ctrl + O', desc: 'Open', usage: 'Displays the Open dialog box, to open an existing file.' },
+          { keys: 'Ctrl + P', desc: 'Print', usage: 'Displays the Print dialog box.' },
+          { keys: 'Ctrl + S', desc: 'Save', usage: 'Displays the Save As dialog box.' },
+          { keys: 'Ctrl + V', desc: 'Paste', usage: 'Pastes a cut or copied item from one location to another.' },
+          { keys: 'Ctrl + X', desc: 'Cut', usage: 'Cuts selected items.' },
+          { keys: 'Ctrl + Y', desc: 'Redo', usage: 'Redoes previously undone commands.' },
+          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undoes the effects of commands.' },
+          { keys: 'Delete', desc: 'Delete', usage: 'Removes the selected item from the model or drawing.' },
+          { keys: 'Shift + Right Click', desc: 'Select', usage: 'Activates the select command menu.' },
+          { keys: 'Esc', desc: 'Cancel', usage: 'Closes the active tool.' },
+          { keys: 'F1', desc: 'Help', usage: 'Opens the Inventor help files.' },
+          { keys: 'Alt + F8', desc: 'Macros', usage: 'Opens the Macros dialog box.' },
+          { keys: 'Alt + F11', desc: 'Visual Basic Editor', usage: 'Launches the Microsoft Visual Basic Editor.' },
         ]
       },
       {
-        name: 'Modeling',
+        name: 'Keyboard Shortcuts: View',
         shortcuts: [
-          { keys: 'E', desc: 'Extrude', usage: 'Extrude sketch to create 3D shape.' },
-          { keys: 'H', desc: 'Hole', usage: 'Create a hole feature.' },
-          { keys: 'Ctrl + Shift + N', desc: 'New part', usage: 'Create a new part file.' },
-          { keys: 'F5', desc: 'iProperties', usage: 'Open and edit file properties.' },
-          { keys: 'F6', desc: 'Isometric view', usage: 'Switch to isometric view.' },
-          { keys: 'Shift + MMB', desc: 'Pan', usage: 'Pan the view.' },
-          { keys: 'F4', desc: 'Rotate', usage: 'Rotate the 3D view.' },
+          { keys: 'F2', desc: 'Pan', usage: 'Views areas of the graphics window. You must hold the F2 key down.' },
+          { keys: 'F3', desc: 'Zoom', usage: 'Realtime zoom in and out of the graphics window. You must hold the F3 key down.' },
+          { keys: 'F4', desc: 'Rotate', usage: 'Rotates objects in the graphics window.' },
+          { keys: 'F5', desc: 'Previous View', usage: 'Returns to the last display.' },
+          { keys: 'Shift + F5', desc: 'Next View', usage: 'Advances to the next view.' },
+          { keys: 'F6', desc: 'Home View', usage: 'Rotates objects in the graphics window into an isometric orientation.' },
+          { keys: 'F10', desc: 'Sketch Visibility', usage: 'Makes sketches visible.' },
+          { keys: 'Home', desc: 'Zoom All', usage: 'Zooms to the extents of all objects in the graphics window.' },
+          { keys: 'End', desc: 'Zoom Selected', usage: 'Zooms in on a specifically selected item.' },
+          { keys: 'Page Up', desc: 'Look At', usage: 'Looks at a selected entity.' },
+          { keys: 'Shift + F3', desc: 'Zoom Window', usage: 'Zooms to the area you define with a window.' },
+          { keys: 'Shift + Middle Click', desc: 'Rotate', usage: 'Rotates a model.' },
+          { keys: 'Ctrl + 0', desc: 'Toggle Screen', usage: 'Toggles full screen.' },
+          { keys: 'Ctrl + W', desc: 'Steering Wheels', usage: 'Displays the Steering Wheel view tool.' },
+          { keys: 'Ctrl + Shift + E', desc: 'Degrees of Freedom', usage: 'Displays degrees of freedom.' },
+          { keys: 'Ctrl + Shift + Q', desc: 'iMate Glyph', usage: 'Activates the iMate Glyph tool.' },
+          { keys: 'Alt + .', desc: 'User Work Points Visibility', usage: 'Makes work points visible.' },
+          { keys: 'Alt + ]', desc: 'User Work Plane Visibility', usage: 'Makes work planes visible.' },
+          { keys: 'Alt + /', desc: 'User Work Axes Visibility', usage: 'Makes work axes visible.' },
+          { keys: 'Ctrl + .', desc: 'Origin Points Visibility', usage: 'Makes the default origin points visible.' },
+          { keys: 'Ctrl + ]', desc: 'Origin Plane Visibility', usage: 'Makes the default origin planes visible.' },
+          { keys: 'Ctrl + /', desc: 'Origin Axes Visibility', usage: 'Makes the default origin axes visible.' },
         ]
       },
       {
-        name: 'Assembly',
+        name: 'Keyboard Shortcuts: Sketch',
         shortcuts: [
-          { keys: 'P', desc: 'Place', usage: 'Place a component in assembly.' },
-          { keys: 'C', desc: 'Constrain', usage: 'Add assembly constraints.' },
-          { keys: 'Alt + Drag', desc: 'Move component', usage: 'Move component in assembly.' },
-          { keys: 'G', desc: 'Ground/Unground', usage: 'Ground or unground a component.' },
+          { keys: '=', desc: 'Equal', usage: 'Constrains curves to equal radius or length.' },
+          { keys: 'F7', desc: 'Slice Graphics', usage: 'Slices away temporarily the portion of the model that obscures the plane.' },
+          { keys: 'F8', desc: 'Show All Constraints', usage: 'Displays all constraints.' },
+          { keys: 'F9', desc: 'Hide All Constraints', usage: 'Hides all constraints.' },
+        ]
+      },
+      {
+        name: 'Keyboard Shortcuts: Part & Features',
+        shortcuts: [
+          { keys: 'Ctrl + Shift + K', desc: 'Chamfer', usage: 'Activates the Chamfer tool.' },
+          { keys: 'Ctrl + Shift + L', desc: 'Loft', usage: 'Activates the Loft tool.' },
+          { keys: 'Ctrl + Shift + M', desc: 'Mirror', usage: 'Activates the Mirror tool.' },
+          { keys: 'Ctrl + Shift + O', desc: 'Circular Pattern', usage: 'Opens the Circular Pattern dialog box.' },
+          { keys: 'Ctrl + Shift + R', desc: 'Rectangular Pattern', usage: 'Opens the Rectangular Pattern dialog box.' },
+          { keys: 'Ctrl + Shift + S', desc: 'Sweep', usage: 'Activates the Sweep tool.' },
+        ]
+      },
+      {
+        name: 'Keyboard Shortcuts: Work Features',
+        shortcuts: [
+          { keys: ';', desc: 'Grounded Work Point', usage: 'Creates a grounded work point and activates the 3D Move/Rotate tool.' },
+          { keys: '/', desc: 'Work Axis', usage: 'Creates a new work axis.' },
+          { keys: ']', desc: 'Work Plane', usage: 'Creates a new work plane.' },
+          { keys: '.', desc: 'Work Point', usage: 'Creates a new work point.' },
+        ]
+      },
+      {
+        name: 'Keyboard Shortcuts: Assembly',
+        shortcuts: [
+          { keys: 'Alt + Drag', desc: 'Mate Constraint', usage: 'Applies a mate constraint.' },
+          { keys: 'Ctrl + H', desc: 'Replace Component', usage: 'Replaces one assembly component with another component.' },
+          { keys: 'Shift + Tab', desc: 'Promote', usage: 'Removes a part from a subassembly and makes it an individual part in the parent assembly.' },
+        ]
+      },
+      {
+        name: 'Keyboard Shortcuts: Drawing Manager',
+        shortcuts: [
+          { keys: 'Ctrl + Shift + N', desc: 'New Sheet', usage: 'Inserts a new drawing sheet.' },
+          { keys: 'Ctrl + Shift + T', desc: 'Leader Text', usage: 'Adds notes with leader lines to a drawing.' },
+        ]
+      },
+      {
+        name: 'Command Aliases: Sketch',
+        shortcuts: [
+          { keys: 'L', desc: 'Line', usage: 'Creates a line or arc.' },
+          { keys: 'A', desc: 'Arc', usage: 'Activates the Arc tool (Baseline Set or Animate in other environments).' },
+          { keys: 'A3', desc: 'Three Point Arc', usage: 'Draws a three-point arc using dynamic input.' },
+          { keys: 'CE', desc: 'Center Point Circle', usage: 'Draws a center point circle using dynamic input.' },
+          { keys: 'TC', desc: 'Tangent Circle', usage: 'Creates circle tangent to three lines.' },
+          { keys: 'EL', desc: 'Ellipse', usage: 'Creates an ellipse with a center point, a major axis, and a minor axis that you define.' },
+          { keys: 'REC', desc: 'Two Point Rectangle', usage: 'Draws a two-point rectangle using dynamic input.' },
+          { keys: 'REC3', desc: 'Three Point Rectangle', usage: 'Draws a three-point rectangle using dynamic input.' },
+          { keys: 'POL', desc: 'Polygon', usage: 'Creates polygon shapes.' },
+          { keys: 'SP', desc: 'Spline', usage: 'Creates a spline.' },
+          { keys: 'PO', desc: 'Point, Center Point', usage: 'Sketches points and center points.' },
+          { keys: 'FI', desc: 'Fillet', usage: 'Adds fillets or rounds to one or more edges.' },
+          { keys: 'CH', desc: 'Chamfer', usage: 'Creates a chamfer.' },
+          { keys: 'X', desc: 'Trim', usage: 'Activates the Trim command.' },
+          { keys: 'EX', desc: 'Extend', usage: 'Makes surfaces larger in one or more directions.' },
+          { keys: 'O', desc: 'Offset', usage: 'Duplicates selected sketch geometry and positions it an offset distance from the original.' },
+          { keys: 'MO', desc: 'Move', usage: 'Moves selected sketch geometry from point to point or moves a copy of the geometry.' },
+          { keys: 'RO', desc: 'Rotate Component', usage: 'Activates the Rotate Component command.' },
+          { keys: 'MI', desc: 'Mirror', usage: 'Mirrors sketch geometry about a selected plane.' },
+          { keys: 'RP', desc: 'Rectangular Pattern', usage: 'Creates rectangular pattern of sketch geometry.' },
+          { keys: 'CP', desc: 'Circular Pattern', usage: 'Creates circular pattern of sketch geometry.' },
+          { keys: 'I', desc: 'Vertical', usage: 'Activates the vertical constraint tool.' },
+          { keys: 'AD', desc: 'Auto Dimension', usage: 'Prompts the Auto Dimension dialog box.' },
+          { keys: 'H', desc: 'Fill/Hatch Sketch Region', usage: 'Hatches or color fills an enclosed boundary in a drawing sketch.' },
+          { keys: 'BE', desc: 'Bend', usage: 'Creates a bend.' },
+        ]
+      },
+      {
+        name: 'Command Aliases: Sketch Features',
+        shortcuts: [
+          { keys: 'E', desc: 'Extrude', usage: 'Extrudes a profile.' },
+          { keys: 'R', desc: 'Revolve', usage: 'Revolves a sketch.' },
+          { keys: 'H', desc: 'Hole', usage: 'Creates a hole in a feature.' },
+          { keys: 'LO', desc: 'Loft', usage: 'Creates lofted features or bodies by blending multiple profiles into smooth shapes.' },
+          { keys: 'SW', desc: 'Sweep', usage: 'Creates a sweep feature.' },
+          { keys: 'BP', desc: 'Bend Part', usage: 'Bends a portion of a part.' },
+        ]
+      },
+      {
+        name: 'Command Aliases: Placed Features',
+        shortcuts: [
+          { keys: 'F', desc: 'Fillet', usage: 'Creates a fillet in part and assembly files.' },
+          { keys: 'CH', desc: 'Chamfer', usage: 'Creates a chamfer.' },
+          { keys: 'SH', desc: 'Shell', usage: 'Removes material from a part interior, creating a hollow cavity with walls of a specified thickness.' },
+          { keys: 'TH', desc: 'Thread', usage: 'Creates threads in holes or on shafts, studs, or bolts.' },
+          { keys: 'MI', desc: 'Mirror', usage: 'Creates a mirror feature.' },
+          { keys: 'RP', desc: 'Rectangular Pattern', usage: 'Creates rectangular pattern of feature.' },
+          { keys: 'DE', desc: 'Direct Edit', usage: 'Allows you to make quick edits to existing solids.' },
+          { keys: 'S', desc: '2D Sketch', usage: 'Activates the 2D Sketch command.' },
+          { keys: 'S3', desc: 'New 3D Sketch', usage: 'Activates the 3D Sketch command.' },
+          { keys: 'Q', desc: 'Create iMate', usage: 'Displays the Create iMate dialog box, for developing iMates.' },
+          { keys: 'GW', desc: 'Groove Weld', usage: 'Creates a groove weld feature in a weldment assembly that connects two face sets with a solid weld bead.' },
+          { keys: 'EF', desc: 'End Fill', usage: 'Adds a weld end fill annotation in a drawing view or on a 3D weld bead.' },
+          { keys: 'WS', desc: 'Welding Symbol', usage: 'Provides annotation and groups multiple beads under a single welding symbol.' },
+        ]
+      },
+      {
+        name: 'Command Aliases: Assembly',
+        shortcuts: [
+          { keys: 'P', desc: 'Place Component', usage: 'Places a component in the current assembly.' },
+          { keys: 'N', desc: 'Create Component', usage: 'Displays the Create In-Place Component dialog box.' },
+          { keys: 'C', desc: 'Constraints', usage: 'Adds an assembly constraint.' },
+          { keys: 'V', desc: 'Move Component', usage: 'Activates the Move Component command.' },
+          { keys: 'G', desc: 'Rotate Component', usage: 'Activates the Rotate tool.' },
+          { keys: 'CO', desc: 'Copy Components', usage: 'Creates a copy of the component.' },
+          { keys: 'MI', desc: 'Mirror Components', usage: 'Creates a mirror component.' },
+          { keys: 'PC', desc: 'Pattern Component', usage: 'Selects one or more components to include in the pattern.' },
+          { keys: 'RA', desc: 'Replace All', usage: 'Replaces all occurrences of the component in the current assembly.' },
+          { keys: 'IA', desc: 'Analyze Interference', usage: 'Analyzes assemblies for interference.' },
+        ]
+      },
+      {
+        name: 'Command Aliases: Drawing Manager',
+        shortcuts: [
+          { keys: 'BV', desc: 'Base View', usage: 'Creates a base view.' },
+          { keys: 'PV', desc: 'Projected View', usage: 'Creates a projected view.' },
+          { keys: 'AV', desc: 'Auxiliary View', usage: 'Places an auxiliary view by projecting from an edge or line in a parent view.' },
+          { keys: 'SV', desc: 'Section View', usage: 'Creates a section view.' },
+          { keys: 'DV', desc: 'Detail View', usage: 'Provides circular and rectangular shapes of detail profile.' },
+          { keys: 'BRV', desc: 'Break', usage: 'Creates a broken, foreshortened view.' },
+          { keys: 'BO', desc: 'Break Out', usage: 'Removes a defined area of material to expose obscured parts or features in an existing drawing view.' },
+          { keys: 'CR', desc: 'Crop', usage: 'Sets boundary type and visibility of crop cut lines for crop operations.' },
+          { keys: 'RD', desc: 'Retrieve Dimensions', usage: 'Retrieves model dimensions in a drawing.' },
+          { keys: 'B', desc: 'Balloon / BOM', usage: 'Activates the Balloon tool or displays the BOM Properties dialog box, depending on the work environment.' },
+        ]
+      },
+      {
+        name: 'Command Aliases: Dimension',
+        shortcuts: [
+          { keys: 'D', desc: 'General Dimension', usage: 'Adds a dimension to a sketch or drawing.' },
+          { keys: 'BD', desc: 'Baseline Dimension', usage: 'Adds baseline dimensions.' },
+          { keys: 'OD', desc: 'Ordinate Dimension', usage: 'Adds an ordinate dimension.' },
+          { keys: 'O', desc: 'Ordinate Dimension Set', usage: 'Activates the Ordinate Dimension Set command.' },
+          { keys: 'HN', desc: 'Hole/Thread Notes', usage: 'Adds a hole or thread note with a leader line.' },
+          { keys: 'CN', desc: 'Chamfer Note', usage: 'Adds a chamfer note to a drawing view.' },
+          { keys: 'BN', desc: 'Bend Notes', usage: 'Creates or edits a bend note.' },
+          { keys: 'PN', desc: 'Punch Notes', usage: 'Creates a punch note.' },
+        ]
+      },
+      {
+        name: 'Command Aliases: Annotation',
+        shortcuts: [
+          { keys: 'T', desc: 'Text', usage: 'Activates the text tool in a drawing file.' },
+          { keys: 'LE', desc: 'Leader Text', usage: 'Adds notes with leader lines to a drawing.' },
+          { keys: 'BA', desc: 'Auto Balloon', usage: 'Creates one or more item balloons used to identify components in drawing views.' },
+          { keys: 'PL', desc: 'Parts List', usage: 'Creates a parts list.' },
+          { keys: 'TB', desc: 'Table', usage: 'Creates a table.' },
+          { keys: 'HTV', desc: 'Hole Table - View', usage: 'Adds a hole table to a view.' },
+          { keys: 'HTF', desc: 'Hole Table - Features', usage: 'Selects a feature set (all punch center instances from a single feature).' },
+          { keys: 'HTS', desc: 'Hole Table - Selection', usage: 'Selects recovered punch centers individually.' },
+          { keys: 'CL', desc: 'Centerline', usage: 'Adds a centerline.' },
+          { keys: 'CB', desc: 'Centerline Bisector', usage: 'Adds a centerline bisector.' },
+          { keys: 'CM', desc: 'Center Mark', usage: 'Adds a center mark.' },
+          { keys: 'F', desc: 'Feature Control Frame', usage: 'Places a feature control frame in drawing files.' },
+          { keys: 'FI', desc: 'Feature Identifier Symbol', usage: 'Adds a feature identifier symbol.' },
+          { keys: 'DI', desc: 'Datum Identifier Symbol', usage: 'Adds a datum identifier symbol.' },
+          { keys: 'ST', desc: 'Surface Texture Symbol', usage: 'Adds a surface texture symbol.' },
+          { keys: 'WS', desc: 'Welding Symbol', usage: 'Adds a welding symbol referencing multiple beads.' },
+          { keys: 'CAT', desc: 'Caterpillar', usage: 'Adds a weld caterpillar annotation.' },
+          { keys: 'EF', desc: 'End Fill', usage: 'Adds a weld end fill annotation.' },
+          { keys: 'SY', desc: 'Symbols', usage: 'Adds sketched symbols to a drawing sheet.' },
+          { keys: 'RT', desc: 'Revision Tag', usage: 'Adds revision tags to a drawing.' },
+          { keys: 'RTB', desc: 'Revision Table', usage: 'Creates a revision table.' },
+        ]
+      },
+      {
+        name: 'Command Aliases: Sheet Metal',
+        shortcuts: [
+          { keys: 'FA', desc: 'Face', usage: 'Creates a sheet metal face.' },
+          { keys: 'CF', desc: 'Contour Flange', usage: 'Creates a contour flange.' },
+          { keys: 'BE', desc: 'Bend', usage: 'Creates a bend.' },
+          { keys: 'FO', desc: 'Fold', usage: 'Defines the fold in a sheet metal face along a sketched line that terminates at face edges.' },
+          { keys: 'HEM', desc: 'Hem', usage: 'Creates a folded hem along sheet metal edges.' },
+          { keys: 'CS', desc: 'Corner Seam', usage: 'Defines the corner seams you add to sheet metal faces.' },
+          { keys: 'CR', desc: 'Corner Round', usage: 'Adds fillets or rounds to one or more corners of a sheet metal part.' },
+          { keys: 'CC', desc: 'Corner Chamfer', usage: 'Activates the corner chamfer command.' },
+          { keys: 'PT', desc: 'PunchTool', usage: 'Defines the punch of a 3D shape into a sheet metal face.' },
+          { keys: 'ST', desc: 'Sheet Metal Defaults', usage: 'Changes the options and parameters for the active sheet metal part.' },
+        ]
+      },
+      {
+        name: 'Command Aliases: Presentation',
+        shortcuts: [
+          { keys: 'CV', desc: 'Create View', usage: 'Adds a new presentation view.' },
+          { keys: 'T', desc: 'Tweak Components', usage: 'Tweaks components in a presentation.' },
+        ]
+      },
+      {
+        name: 'Command Aliases: Tools & View',
+        shortcuts: [
+          { keys: 'M', desc: 'Measure Distance', usage: 'Opens the Measure Distance window.' },
+          { keys: 'OP', desc: 'Application Options', usage: 'Opens the Application Options settings.' },
+          { keys: 'SE', desc: 'Edit Styles', usage: 'Opens the Style and Standard Editor.' },
+          { keys: 'LA', desc: 'Edit Layers', usage: 'Specifies a layer name and attributes for common display properties of drawing objects.' },
+          { keys: 'Z', desc: 'Zoom Window', usage: 'Zooms in on a specified area.' },
+          { keys: 'PAN', desc: 'Pan', usage: 'Pans the view.' },
+          { keys: 'ORBIT', desc: 'Free Orbit', usage: 'Rotates a model about the center of the screen or about axes in model space.' },
+          { keys: 'VC', desc: 'ViewCube', usage: 'Toggles the view of the ViewCube.' },
+        ]
+      },
+      {
+        name: 'Command Aliases: Part',
+        shortcuts: [
+          { keys: '1', desc: 'Toggle Smooth', usage: 'Activates the toggle smooth command.' },
+          { keys: 'E', desc: 'Edit Form', usage: 'Edits an existing form to add, remove, or modify controls.' },
         ]
       },
     ]
@@ -8019,66 +8890,132 @@ const shortcutData = {
     ]
   },
   powershell: {
-    name: "PowerShell",
-    icon: "fas fa-terminal",
-    source: { name: 'Microsoft Learn', url: 'https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_line_editing' },
+    name: 'PowerShell',
+    icon: 'fas fa-terminal',
+    source: { name: 'Microsoft Learn — about_PSReadLine_Functions (Windows key mode) + about_Line_Editing', url: 'https://learn.microsoft.com/en-us/powershell/module/psreadline/about/about_psreadline_functions' },
     categories: [
       {
-        name: "Line Editing",
+        name: 'Line Editing',
         shortcuts: [
-          { keys: "Shift + Enter", desc: "Add Line", usage: "Start a new line without running the command; each new line shows the >> continuation prompt." },
-          { keys: "Ctrl + Left", desc: "Word Left", usage: "Move the cursor one word to the left." },
-          { keys: "Ctrl + Right", desc: "Word Right", usage: "Move the cursor one word to the right." },
-          { keys: "Home", desc: "Line Start", usage: "Move to the beginning of the line; press twice in multi-line input to reach the first line." },
-          { keys: "End", desc: "Line End", usage: "Move to the end of the line; press twice in multi-line input to reach the last line." },
-          { keys: "Ctrl + Home", desc: "Delete to Start", usage: "Delete everything from the cursor to the beginning of the line." },
-          { keys: "Ctrl + End", desc: "Delete to End", usage: "Delete everything from the cursor to the end of the line." },
-          { keys: "Ctrl + Backspace", desc: "Delete Word Back", usage: "Delete the word before the cursor." },
-          { keys: "Ctrl + Delete", desc: "Delete Word Forward", usage: "Delete the word after the cursor." },
-          { keys: "Insert", desc: "Overstrike Mode", usage: "Toggle between insert and overwrite mode." },
+          { keys: 'Ctrl + Left', desc: 'Word Left', usage: 'Move the cursor one word to the left.' },
+          { keys: 'Ctrl + Right', desc: 'Word Right', usage: 'Move the cursor one word to the right.' },
+          { keys: 'Insert', desc: 'Overstrike Mode', usage: 'Toggle between insert and overwrite mode.' },
         ]
       },
       {
-        name: "Completion",
+        name: 'Completion',
         shortcuts: [
-          { keys: "Tab", desc: "Complete", usage: "Complete a cmdlet name, parameter, or path; press again to cycle through matches." },
-          { keys: "Shift + Tab", desc: "Complete Backward", usage: "Cycle backward through the completion candidates." },
-          { keys: "Ctrl + Space", desc: "Menu Complete", usage: "Show a menu of possible completions and pick with the arrow keys." },
+          { keys: 'Ctrl + Space', desc: 'Menu Complete', usage: 'Show a menu of possible completions and pick with the arrow keys.' },
         ]
       },
       {
-        name: "History",
+        name: 'History',
         shortcuts: [
-          { keys: "Up", desc: "Previous Command", usage: "Recall the previous command from history." },
-          { keys: "Down", desc: "Next Command", usage: "Recall the next command from history." },
-          { keys: "Ctrl + R", desc: "Reverse History Search", usage: "Interactively search backward through your command history." },
-          { keys: "Ctrl + S", desc: "Forward History Search", usage: "Interactively search forward through your command history." },
-          { keys: "F8", desc: "History Search Backward", usage: "Recall the previous command that starts with what you've typed." },
-          { keys: "Shift + F8", desc: "History Search Forward", usage: "Recall the next command that starts with what you've typed." },
-          { keys: "Alt + .", desc: "Yank Last Argument", usage: "Insert the last argument of the previous command; press again to walk further back." },
+          { keys: 'Up', desc: 'Previous Command', usage: 'Recall the previous command from history.' },
+          { keys: 'Down', desc: 'Next Command', usage: 'Recall the next command from history.' },
         ]
       },
       {
-        name: "Editing & Clipboard",
+        name: 'Editing & Clipboard',
         shortcuts: [
-          { keys: "Ctrl + C", desc: "Copy or Cancel", usage: "Copy the selection, or cancel the current input when nothing is selected." },
-          { keys: "Ctrl + X", desc: "Cut", usage: "Cut the selected text." },
-          { keys: "Ctrl + V", desc: "Paste", usage: "Paste from the clipboard." },
-          { keys: "Ctrl + Z", desc: "Undo", usage: "Undo the last edit on the command line." },
-          { keys: "Ctrl + Y", desc: "Redo", usage: "Redo the last undone edit." },
-          { keys: "Ctrl + A", desc: "Select All", usage: "Select the entire command line." },
-          { keys: "Esc", desc: "Revert Line", usage: "Clear the current input." },
-          { keys: "Ctrl + L", desc: "Clear Screen", usage: "Clear the screen, like the cls or clear commands." },
+          { keys: 'Esc', desc: 'Revert Line', usage: 'Clear the current input.' },
         ]
       },
       {
-        name: "Advanced",
+        name: 'PSReadLine: Basic editing',
         shortcuts: [
-          { keys: "Alt + A", desc: "Select Command Argument", usage: "Cycle through the arguments on the line so you can replace each value quickly." },
-          { keys: "Ctrl + ]", desc: "Go to Brace", usage: "Jump to the bracket, brace, or parenthesis matching the one at the cursor." },
-          { keys: "Alt + 0", desc: "Digit Argument", usage: "Alt + 0 through Alt + 9 repeat the next keystroke that many times (e.g. Alt + 4 then # types ####)." },
-          { keys: "F2", desc: "Switch Prediction View", usage: "Toggle the predictive IntelliSense display between inline and list view." },
-          { keys: "Alt + ?", desc: "What Is Key", usage: "Show which function is bound to the next key you press." },
+          { keys: 'Enter', desc: 'AcceptLine', usage: 'Attempt to execute the current input. If the current input is incomplete (for example there\'s a missing closing parenthesis, bracket, or quote) then the continuation prompt is displayed on the next line and PSReadLine waits for keys to edit the current input.' },
+          { keys: 'Shift + Enter', desc: 'AddLine', usage: 'The continuation prompt is displayed on the next line and PSReadLine waits for keys to edit the current input. This is useful to enter multi-line input as a single command even when a single line is complete input by itself.' },
+          { keys: 'Backspace or Ctrl + H', desc: 'BackwardDeleteChar', usage: 'Delete the character before the cursor.' },
+          { keys: 'Ctrl + Home', desc: 'BackwardDeleteInput', usage: 'Like BackwardKillInput - deletes text from the point to the start of the input, but doesn\'t put the deleted text in the kill-ring.' },
+          { keys: 'Ctrl + Backspace or Ctrl + W', desc: 'BackwardKillWord', usage: 'Clear the input from the start of the current word to the cursor. If the cursor is between words, the input is cleared from the start of the previous word to the cursor. The cleared text is placed in the kill-ring.' },
+          { keys: 'Ctrl + C', desc: 'Copy', usage: 'Copy selected region to the system clipboard. If no region is selected, copy the whole line.' },
+          { keys: 'Ctrl + C', desc: 'CopyOrCancelLine', usage: 'If text is selected, copy to the clipboard, otherwise cancel the line.' },
+          { keys: 'Ctrl + X', desc: 'Cut', usage: 'Delete selected region placing deleted text in the system clipboard.' },
+          { keys: 'Delete', desc: 'DeleteChar', usage: 'Delete the character under the cursor.' },
+          { keys: 'Ctrl + End', desc: 'ForwardDeleteInput', usage: 'Like KillLine - deletes text from the point to the end of the input, but doesn\'t put the deleted text in the kill-ring.' },
+          { keys: 'Ctrl + Enter', desc: 'InsertLineAbove', usage: 'A new empty line is created above the current line regardless of where the cursor is on the current line. The cursor moves to the beginning of the new line.' },
+          { keys: 'Shift + Ctrl + Enter', desc: 'InsertLineBelow', usage: 'A new empty line is created below the current line regardless of where the cursor is on the current line. The cursor moves to the beginning of the new line.' },
+          { keys: 'Alt + D or Ctrl + Delete', desc: 'KillWord', usage: 'Clear the input from the cursor to the end of the current word. If the cursor is between words, the input is cleared from the cursor to the end of the next word. The cleared text is placed in the kill-ring.' },
+          { keys: 'Ctrl + V or Shift + Insert', desc: 'Paste', usage: 'Paste text from the system clipboard.' },
+          { keys: 'Ctrl + Y', desc: 'Redo', usage: 'Undo an undo.' },
+          { keys: 'Escape', desc: 'RevertLine', usage: 'Reverts all input to the current input.' },
+          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo a previous edit.' },
+          { keys: 'Alt + .', desc: 'YankLastArg', usage: 'Yank the last argument from the previous history line. With an argument, the first time it\'s invoked, behaves just like YankNthArg. If invoked multiple times, instead it iterates through history and arg sets the direction (negative reverses the direction.)' },
+        ]
+      },
+      {
+        name: 'PSReadLine: Completion',
+        shortcuts: [
+          { keys: 'Ctrl + @ or Ctrl + Spacebar', desc: 'MenuComplete', usage: 'Attempt to perform completion on the text surrounding the cursor. If there are multiple possible completions, the longest unambiguous prefix is used for completion. If trying to complete the longest unambiguous completion, a list of possible completions is displayed.' },
+          { keys: 'Tab', desc: 'TabCompleteNext', usage: 'Attempt to complete the text surrounding the cursor with the next available completion.' },
+          { keys: 'Shift + Tab', desc: 'TabCompletePrevious', usage: 'Attempt to complete the text surrounding the cursor with the previous available completion.' },
+        ]
+      },
+      {
+        name: 'PSReadLine: Cursor movement',
+        shortcuts: [
+          { keys: 'LeftArrow', desc: 'BackwardChar', usage: 'Move the cursor one character to the left. This may move the cursor to the previous line of multi-line input.' },
+          { keys: 'Ctrl + LeftArrow', desc: 'BackwardWord', usage: 'Move the cursor back to the start of the current word, or if between words, the start of the previous word. Word boundaries are defined by a configurable set of characters.' },
+          { keys: 'Home', desc: 'BeginningOfLine', usage: 'If the input has multiple lines, move to the start of the current line, or if already at the start of the line, move to the start of the input. If the input has a single line, move to the start of the input.' },
+          { keys: 'End', desc: 'EndOfLine', usage: 'If the input has multiple lines, move to the end of the current line, or if already at the end of the line, move to the end of the input. If the input has a single line, move to the end of the input.' },
+          { keys: 'RightArrow', desc: 'ForwardChar', usage: 'Move the cursor one character to the right. This may move the cursor to the next line of multi-line input.' },
+          { keys: 'Ctrl + ]', desc: 'GotoBrace', usage: 'Go to the matching brace, parenthesis, or square bracket.' },
+          { keys: 'Ctrl + RightArrow', desc: 'NextWord', usage: 'Move the cursor forward to the start of the next word. Word boundaries are defined by a configurable set of characters.' },
+        ]
+      },
+      {
+        name: 'PSReadLine: History',
+        shortcuts: [
+          { keys: 'Alt + F7', desc: 'ClearHistory', usage: 'Clears history in PSReadLine. This doesn\'t affect PowerShell history.' },
+          { keys: 'Ctrl + S', desc: 'ForwardSearchHistory', usage: 'Perform an incremental forward search through history.' },
+          { keys: 'F8', desc: 'HistorySearchBackward', usage: 'Replace the current input with the \'previous\' item from PSReadLine history that matches the characters between the start and the input and the cursor.' },
+          { keys: 'Shift + F8', desc: 'HistorySearchForward', usage: 'Replace the current input with the \'next\' item from PSReadLine history that matches the characters between the start and the input and the cursor.' },
+          { keys: 'DownArrow', desc: 'NextHistory', usage: 'Replace the current input with the \'next\' item from PSReadLine history.' },
+          { keys: 'UpArrow', desc: 'PreviousHistory', usage: 'Replace the current input with the \'previous\' item from PSReadLine history.' },
+          { keys: 'Ctrl + R', desc: 'ReverseSearchHistory', usage: 'Perform an incremental backward search through history.' },
+        ]
+      },
+      {
+        name: 'PSReadLine: Miscellaneous',
+        shortcuts: [
+          { keys: 'Ctrl + L', desc: 'ClearScreen', usage: 'Clear the screen and draw the current line at the top of the screen.' },
+          { keys: 'Alt + 0 or Alt + 1', desc: 'DigitArgument', usage: 'Start a new digit argument to pass to other functions. You can use this as a multiplier for the next function that\'s invoked by a keypress. For example, pressing <Alt+1> <Alt+0> sets the digit-argument value to 10. Then, pressing the # key sends 10 # characters ( ########## ) to the input line. Similarly, you can use this with other operations, like <Delete> or Left-Arrow .' },
+          { keys: 'PageDown', desc: 'ScrollDisplayDown', usage: 'Scroll the display down one screen.' },
+          { keys: 'Ctrl + PageDown', desc: 'ScrollDisplayDownLine', usage: 'Scroll the display down one line.' },
+          { keys: 'PageUp', desc: 'ScrollDisplayUp', usage: 'Scroll the display up one screen.' },
+          { keys: 'Ctrl + PageUp', desc: 'ScrollDisplayUpLine', usage: 'Scroll the display up one line.' },
+          { keys: 'F1', desc: 'ShowCommandHelp', usage: 'Provides a view of full cmdlet help. When the cursor is at the end of a fully expanded parameter, hitting the <F1> key positions the display of help at the location of that parameter.' },
+          { keys: 'Ctrl + Alt + ?', desc: 'ShowKeyBindings', usage: 'Show all bound keys.' },
+          { keys: 'Alt + H', desc: 'ShowParameterHelp', usage: 'Provides dynamic help for parameters by showing it below the current command line like MenuComplete . The cursor must be at the end of the fully expanded parameter name when you press the <Alt+h> key.' },
+          { keys: 'Alt + ?', desc: 'WhatIsKey', usage: 'Read a key and tell me what the key is bound to.' },
+        ]
+      },
+      {
+        name: 'PSReadLine: Prediction',
+        shortcuts: [
+          { keys: 'F4', desc: 'ShowFullPredictionTooltip', usage: 'Show the tooltip of the currently selected list item in the full view.' },
+          { keys: 'F2', desc: 'SwitchPredictionView', usage: 'Switch the view style for prediction between InlineView and ListView .' },
+        ]
+      },
+      {
+        name: 'PSReadLine: Search',
+        shortcuts: [
+          { keys: 'F3', desc: 'CharacterSearch', usage: 'Read a character and search forward for the next occurrence of that character. If an argument is specified, search forward (or backward if negative) for the nth occurrence.' },
+          { keys: 'Shift + F3', desc: 'CharacterSearchBackward', usage: 'Read a character and search backward for the next occurrence of that character. If an argument is specified, search backward (or forward if negative) for the nth occurrence.' },
+        ]
+      },
+      {
+        name: 'PSReadLine: Selection',
+        shortcuts: [
+          { keys: 'Ctrl + A', desc: 'SelectAll', usage: 'Select the entire line.' },
+          { keys: 'Shift + LeftArrow', desc: 'SelectBackwardChar', usage: 'Adjust the current selection to include the previous character.' },
+          { keys: 'Shift + Home', desc: 'SelectBackwardsLine', usage: 'Adjust the current selection to include from the cursor to the start of the line.' },
+          { keys: 'Shift + Ctrl + LeftArrow', desc: 'SelectBackwardWord', usage: 'Adjust the current selection to include the previous word.' },
+          { keys: 'Alt + A', desc: 'SelectCommandArgument', usage: 'Make visual selection of the command arguments. Selection of arguments is scoped within a scriptblock. Based on the cursor position, it searches from the innermost scriptblock to the outmost scriptblock, and stops when it finds any arguments in a scriptblock scope.' },
+          { keys: 'Shift + RightArrow', desc: 'SelectForwardChar', usage: 'Adjust the current selection to include the next character.' },
+          { keys: 'Shift + End', desc: 'SelectLine', usage: 'Adjust the current selection to include from the cursor to the end of the line.' },
+          { keys: 'Shift + Ctrl + RightArrow', desc: 'SelectNextWord', usage: 'Adjust the current selection to include the next word.' },
         ]
       },
     ]
@@ -8825,17 +9762,102 @@ const shortcutData = {
   asana: {
     name: 'Asana',
     icon: 'fas fa-check-circle',
+    source: { name: 'Asana Help Center — Keyboard shortcuts', url: 'https://help.asana.com/s/article/keyboard-shortcuts' },
     categories: [
       {
-        name: 'Task Management',
+        name: 'Inbox',
         shortcuts: [
-          { keys: 'Tab + Q', desc: 'Quick add', usage: 'Quickly add a task.' },
-          { keys: 'Tab + Enter', desc: 'Open task', usage: 'Open selected task.' },
-          { keys: 'Tab + C', desc: 'Comment', usage: 'Add a comment to task.' },
-          { keys: 'Tab + A', desc: 'Assign to me', usage: 'Assign task to yourself.' },
-          { keys: 'Tab + D', desc: 'Set due date', usage: 'Set a due date.' },
-          { keys: 'Tab + H', desc: 'Mark complete', usage: 'Mark task as complete.' },
-          { keys: 'Tab + /', desc: 'Search', usage: 'Search tasks.' },
+          { keys: 'K / J', desc: 'Move up/down', usage: 'Move between inbox notifications. Same on Mac.' },
+          { keys: 'A', desc: 'Jump to Activity tab', usage: 'Same on Mac.' },
+          { keys: 'D', desc: 'Jump to Archive tab', usage: 'Same on Mac.' },
+          { keys: 'F', desc: 'Join or leave task', usage: 'Same on Mac.' },
+          { keys: 'I or E', desc: 'Archive', usage: 'Archive the notification. Same on Mac.' },
+          { keys: 'U', desc: 'Move to inbox', usage: 'Move an archived notification back to the inbox. Same on Mac.' },
+        ]
+      },
+      {
+        name: 'Tasks',
+        shortcuts: [
+          { keys: 'Tab + Q', desc: 'Quick add task', usage: 'Hold Tab and press Q. Same on Mac.' },
+          { keys: 'Tab + Del', desc: 'Delete selected task(s)', usage: 'Same on Mac.' },
+          { keys: 'Ctrl + Enter', desc: 'Complete selected task(s)', usage: 'Mac: Cmd + Enter.' },
+          { keys: 'Tab + Enter', desc: 'Open task details', usage: 'Same on Mac.' },
+          { keys: 'Esc', desc: 'Close task details', usage: 'Same on Mac.' },
+          { keys: 'Tab + D', desc: 'Set due date', usage: 'Same on Mac.' },
+          { keys: 'Tab + M', desc: 'Assign to me', usage: 'Same on Mac.' },
+          { keys: 'Tab + R', desc: 'Jump to task description', usage: 'Same on Mac.' },
+          { keys: 'Tab + K', desc: 'Like selected task', usage: 'Same on Mac.' },
+          { keys: 'Tab + C', desc: 'Comment on task', usage: 'Same on Mac.' },
+          { keys: 'Tab + F', desc: 'Add collaborators', usage: 'Same on Mac.' },
+          { keys: 'Tab + J', desc: 'Join task', usage: 'Same on Mac.' },
+          { keys: 'Tab + L', desc: 'Leave task', usage: 'Same on Mac.' },
+          { keys: 'Tab + T', desc: 'Add tag', usage: 'Same on Mac.' },
+          { keys: 'Tab + P', desc: 'Add task(s) to project', usage: 'Same on Mac.' },
+          { keys: 'Tab + S', desc: 'Add subtask(s)', usage: 'Same on Mac.' },
+          { keys: 'Tab + X', desc: 'View full screen', usage: 'Same on Mac.' },
+        ]
+      },
+      {
+        name: 'Task Actions',
+        shortcuts: [
+          { keys: 'Enter', desc: 'Create a new task', usage: 'Same on Mac.' },
+          { keys: 'Shift + Enter', desc: 'Create a new task above the current task', usage: 'Same on Mac.' },
+          { keys: 'Tab + N', desc: 'Create a section', usage: 'Same on Mac.' },
+          { keys: 'Shift + Ctrl + F', desc: 'Create a follow-up task', usage: 'Mac: Shift + Tab + F.' },
+          { keys: 'Up / Down', desc: 'Change selected task', usage: 'Same on Mac.' },
+          { keys: 'Ctrl + Up / Down', desc: 'Move selected task(s) up/down', usage: 'Mac: Cmd + Up / Down.' },
+          { keys: 'Ctrl + Shift + Up / Down', desc: 'Move selected task(s) to next/previous section', usage: 'Mac: Cmd + Shift + Up / Down.' },
+          { keys: 'Ctrl + C', desc: 'Copy selected tasks', usage: 'Mac: Cmd + C.' },
+          { keys: 'Ctrl + V', desc: 'Paste tasks (one per line)', usage: 'Mac: Cmd + V.' },
+        ]
+      },
+      {
+        name: 'Navigation',
+        shortcuts: [
+          { keys: 'Tab + Z', desc: 'Navigate to My tasks', usage: 'Same on Mac.' },
+          { keys: 'Tab + I', desc: 'Navigate to Inbox', usage: 'Same on Mac.' },
+          { keys: 'Tab + H', desc: 'Navigate to Home', usage: 'Same on Mac.' },
+          { keys: 'Tab + O', desc: 'Collapse sidebar', usage: 'Same on Mac.' },
+          { keys: 'Tab + A', desc: 'Assign selected task', usage: 'Same on Mac.' },
+          { keys: 'Tab + /', desc: 'Search for a project, tag, person, or task', usage: 'Same on Mac.' },
+          { keys: 'Right, Right', desc: 'Enable list view field navigation', usage: 'Press Right twice. Same on Mac.' },
+        ]
+      },
+      {
+        name: 'Selection',
+        shortcuts: [
+          { keys: 'Up / Down', desc: 'Change selection', usage: 'Same on Mac.' },
+          { keys: 'Shift + Click', desc: 'Select range', usage: 'Same on Mac.' },
+          { keys: 'Shift + Up / Down', desc: 'Select range with the keyboard', usage: 'Same on Mac.' },
+          { keys: 'Ctrl + Click', desc: 'Multi-select individual task', usage: 'Mac: Cmd + Click.' },
+        ]
+      },
+      {
+        name: 'Application',
+        shortcuts: [
+          { keys: 'Ctrl + /', desc: 'Show keyboard shortcuts', usage: 'Mac: Cmd + /.' },
+          { keys: 'Esc', desc: 'Collapse the right pane', usage: 'Same on Mac.' },
+          { keys: 'Tab + X', desc: 'Enter focus mode', usage: 'Same on Mac.' },
+          { keys: 'Tab + Enter', desc: 'Post comment (from comment field)', usage: 'Same on Mac.' },
+          { keys: 'Tab + B', desc: 'What it sounds like', usage: 'Requires the Tab-B hack to be enabled in Settings. Same on Mac.' },
+        ]
+      },
+      {
+        name: 'Desktop App',
+        shortcuts: [
+          { keys: 'Ctrl + N', desc: 'New window', usage: 'Mac: Cmd + N.' },
+          { keys: 'Ctrl + T', desc: 'New tab', usage: 'Mac: Cmd + T.' },
+          { keys: 'Ctrl + W', desc: 'Close tab', usage: 'Mac: Cmd + W.' },
+          { keys: 'Ctrl + Shift + W', desc: 'Close window', usage: 'Mac: Cmd + Shift + W.' },
+          { keys: 'Ctrl + Shift + T', desc: 'Reopen closed tab', usage: 'Mac: Cmd + Shift + T.' },
+          { keys: 'Ctrl + Tab', desc: 'Next tab', usage: 'Mac: Cmd + Option + Right.' },
+          { keys: 'Ctrl + Shift + Tab', desc: 'Previous tab', usage: 'Mac: Cmd + Option + Left.' },
+          { keys: 'Ctrl + Shift + Page Up', desc: 'Move tab right', usage: 'Same on Mac.' },
+          { keys: 'Ctrl + Shift + Page Down', desc: 'Move tab left', usage: 'Same on Mac.' },
+          { keys: 'Ctrl + M', desc: 'Minimize the window', usage: 'Mac: Cmd + M.' },
+          { keys: 'Ctrl + H', desc: 'Hide Asana', usage: 'Mac: Cmd + H.' },
+          { keys: 'Ctrl + Q', desc: 'Quit Asana', usage: 'Mac: Cmd + Q.' },
+          { keys: 'Ctrl + Shift + +', desc: 'Create task', usage: 'Mac: Cmd + Shift + +.' },
         ]
       },
     ]
@@ -12132,25 +13154,508 @@ const shortcutData = {
   ms_access: {
     name: 'Microsoft Access',
     icon: 'fas fa-database',
+    source: { name: 'Microsoft Support — Keyboard shortcuts for Access', url: 'https://support.microsoft.com/en-us/office/keyboard-shortcuts-for-access-70a673e4-4f7b-4300-b8e5-3320fa6606e2' },
     categories: [
       {
-        name: 'Database',
+        name: 'Frequently used shortcuts',
         shortcuts: [
-          { keys: 'Ctrl + N', desc: 'New database', usage: 'Create a new database.' },
-          { keys: 'F5', desc: 'Switch view', usage: 'Switch between form and design view.' },
-          { keys: 'Ctrl + ;', desc: 'Current date', usage: 'Insert current date.' },
-          { keys: 'Ctrl + :', desc: 'Current time', usage: 'Insert current time.' },
-          { keys: 'Ctrl + F6', desc: 'Next window', usage: 'Switch to next database window.' },
-          { keys: 'F11', desc: 'Navigation Pane', usage: 'Show or focus the Navigation Pane.' },
-          { keys: 'F2', desc: 'Edit mode', usage: 'Toggle between edit and navigation mode in a field.' },
-          { keys: 'Shift + F2', desc: 'Zoom box', usage: 'Open the Zoom window to edit long field content.' },
-          { keys: 'Ctrl + F', desc: 'Find', usage: 'Find records matching a value.' },
-          { keys: 'Ctrl + H', desc: 'Replace', usage: 'Find and replace values in records.' },
-          { keys: 'Ctrl + +', desc: 'New record', usage: 'Add a new record to the table or form.' },
-          { keys: 'Ctrl + -', desc: 'Delete record', usage: 'Delete the current record.' },
-          { keys: 'Ctrl + \'', desc: 'Copy from previous', usage: 'Insert the value from the same field in the previous record.' },
-          { keys: 'F4', desc: 'Open dropdown', usage: 'Open a combo box or lookup list.' },
-          { keys: 'Ctrl + S', desc: 'Save', usage: 'Save design changes to the current object.' },
+          { keys: 'Alt or F10', desc: 'Select the active tab of the ribbon and activate KeyTips', usage: 'To move to a different ribbon tab, use KeyTips or the arrow keys.' },
+          { keys: 'Alt + H', desc: 'Go to the Home tab', usage: 'Go to the Home tab.' },
+          { keys: 'Alt + Q', desc: 'Go to the Tell me box on the ribbon', usage: 'Go to the Tell me box on the ribbon.' },
+          { keys: 'Shift + F10 or the Windows Menu key', desc: 'Display the shortcut menu for the selected item', usage: 'Display the shortcut menu for the selected item.' },
+          { keys: 'F6', desc: 'Move the focus to a different pane of the window', usage: 'Move the focus to a different pane of the window.' },
+          { keys: 'Ctrl + O', desc: 'Open an existing database', usage: 'Open an existing database.' },
+          { keys: 'F11', desc: 'Show or hide the Navigation Pane ', usage: 'Show or hide the Navigation Pane .' },
+          { keys: 'F4', desc: 'Show or hide a property sheet', usage: 'Show or hide a property sheet.' },
+          { keys: 'F2', desc: 'Switch between Edit mode (with insertion point displayed) and Navigation mode in the Datasheet View or Design View ', usage: 'Switch between Edit mode (with insertion point displayed) and Navigation mode in the Datasheet View or Design View .' },
+          { keys: 'F5', desc: 'Switch to the Form View from the form in the Design View ', usage: 'Switch to the Form View from the form in the Design View .' },
+          { keys: 'Tab or Shift + Tab', desc: 'Move to the next or previous field in the Datasheet View ', usage: 'Move to the next or previous field in the Datasheet View .' },
+          { keys: 'Ctrl + P', desc: 'Open the Print dialog box (for datasheets, forms, and reports)', usage: 'Open the Print dialog box (for datasheets, forms, and reports).' },
+          { keys: 'S', desc: 'Open the Page Setup dialog box (for forms and reports)', usage: 'Open the Page Setup dialog box (for forms and reports).' },
+          { keys: 'Ctrl + F', desc: 'Open the Find tab in the Find and Replace dialog box in the Datasheet View or Form View ', usage: 'Open the Find tab in the Find and Replace dialog box in the Datasheet View or Form View .' },
+          { keys: 'F1', desc: 'Open the Help window', usage: 'Open the Help window.' },
+          { keys: 'Alt + F4', desc: 'Exit Access', usage: 'Exit Access.' },
+        ]
+      },
+      {
+        name: 'Navigate the ribbon with only the keyboard',
+        shortcuts: [
+          { keys: 'Alt + F', desc: 'Go to the File menu', usage: 'Go to the File menu.' },
+          { keys: 'Alt + H', desc: 'Go to the Home tab', usage: 'Go to the Home tab.' },
+          { keys: 'Alt + C', desc: 'Go to the Create tab', usage: 'Go to the Create tab.' },
+          { keys: 'Alt + X', desc: 'Go to the External Data tab', usage: 'Go to the External Data tab.' },
+          { keys: 'Alt + Y, 1', desc: 'Go to the Database Tools tab', usage: 'Go to the Database Tools tab.' },
+          { keys: 'Alt + J, T', desc: 'Go to the Table tab', usage: 'Go to the Table tab.' },
+          { keys: 'Alt + X, 2', desc: 'Go to the Add-ins tab, if present', usage: 'Go to the Add-ins tab, if present.' },
+          { keys: 'Alt + Q', desc: 'Go to the Tell me box on the ribbon', usage: 'Go to the Tell me box on the ribbon.' },
+        ]
+      },
+      {
+        name: 'Open and save databases',
+        shortcuts: [
+          { keys: 'Ctrl + N', desc: 'Open a new database', usage: 'Open a new database.' },
+          { keys: 'Ctrl + O', desc: 'Open an existing database', usage: 'Open an existing database.' },
+          { keys: 'Enter', desc: 'Open the selected folder or file', usage: 'Open the selected folder or file.' },
+          { keys: 'Backspace', desc: 'Open the folder one level above the selected folder', usage: 'Open the folder one level above the selected folder.' },
+          { keys: 'Delete', desc: 'Delete the selected folder or file', usage: 'Delete the selected folder or file.' },
+          { keys: 'Shift + F10 or the Windows Menu key', desc: 'Display a shortcut menu for a selected item such as a folder or file', usage: 'Display a shortcut menu for a selected item such as a folder or file.' },
+          { keys: 'Tab', desc: 'Move forward through options', usage: 'Move forward through options.' },
+          { keys: 'Shift + Tab', desc: 'Move backward through options', usage: 'Move backward through options.' },
+          { keys: 'F4 or Alt + I', desc: 'Open the Look in list', usage: 'Open the Look in list.' },
+          { keys: 'Ctrl + S', desc: 'Save a database object', usage: 'Save a database object.' },
+          { keys: 'F12 or Alt + F, S', desc: 'Open the Save As dialog box', usage: 'Open the Save As dialog box.' },
+        ]
+      },
+      {
+        name: 'Print database information',
+        shortcuts: [
+          { keys: 'Ctrl + P', desc: 'Print the current or selected object', usage: 'Print the current or selected object.' },
+          { keys: 'P or Ctrl + P', desc: 'From Print Preview , open the Print dialog box', usage: 'From Print Preview , open the Print dialog box.' },
+          { keys: 'S', desc: 'From Print Preview , open the Page Setup dialog box', usage: 'From Print Preview , open the Page Setup dialog box.' },
+          { keys: 'Esc', desc: 'Cancel Print Preview or Layout Preview ', usage: 'Cancel Print Preview or Layout Preview .' },
+          { keys: 'Esc', desc: 'From the File menu, return to your database', usage: 'From the File menu, return to your database.' },
+        ]
+      },
+      {
+        name: 'Move in the Access workspace',
+        shortcuts: [
+          { keys: 'F11', desc: 'Show or hide the Navigation Pane ', usage: 'Show or hide the Navigation Pane .' },
+          { keys: 'Ctrl + F', desc: 'Go to the Search box in the Navigation Pane when the focus is already on the Navigation Pane ', usage: 'Go to the Search box in the Navigation Pane when the focus is already on the Navigation Pane .' },
+          { keys: 'Ctrl + F6 or Ctrl + Shift + F6', desc: 'Switch to the next or previous database window', usage: 'Switch to the next or previous database window.' },
+          { keys: 'Enter', desc: 'Restore the selected minimized window when all windows are minimized', usage: 'Restore the selected minimized window when all windows are minimized.' },
+          { keys: 'Ctrl + W', desc: 'Close the active database window', usage: 'Close the active database window.' },
+          { keys: 'Alt + F11', desc: 'Switch between the Visual Basic Editor and the previous active window', usage: 'Switch between the Visual Basic Editor and the previous active window.' },
+        ]
+      },
+      {
+        name: 'Use menus',
+        shortcuts: [
+          { keys: 'Alt or F10', desc: 'Show KeyTips', usage: 'Show KeyTips.' },
+          { keys: 'Alt + Space', desc: 'Show the program icon menu (on the program title bar), also known as the control menu', usage: 'Show the program icon menu (on the program title bar), also known as the control menu.' },
+          { keys: 'Down or Up', desc: 'With the menu or submenu visible, select the next or previous command', usage: 'With the menu or submenu visible, select the next or previous command.' },
+          { keys: 'Left or Right', desc: 'Select the menu to the left or right or, when a submenu is visible, switch between the main menu and the submenu', usage: 'Select the menu to the left or right or, when a submenu is visible, switch between the main menu and the submenu.' },
+          { keys: 'Home or End', desc: 'Select the first or last command on the menu or submenu', usage: 'Select the first or last command on the menu or submenu.' },
+          { keys: 'Space or Enter', desc: 'Open the selected menu, or perform the action assigned to the selected button', usage: 'Open the selected menu, or perform the action assigned to the selected button.' },
+          { keys: 'Shift + F10 or the Windows Menu key', desc: 'Open a shortcut menu or open a dropdown menu for the selected gallery item', usage: 'Open a shortcut menu or open a dropdown menu for the selected gallery item.' },
+          { keys: 'Page Up or Page Down', desc: 'Scroll up or down in the selected gallery list', usage: 'Scroll up or down in the selected gallery list.' },
+          { keys: 'Ctrl + Home or Ctrl + End', desc: 'Move to the top or bottom of the selected gallery list', usage: 'Move to the top or bottom of the selected gallery list.' },
+          { keys: 'Alt', desc: 'Close the visible menu and submenu at the same time', usage: 'Close the visible menu and submenu at the same time.' },
+          { keys: 'Esc', desc: 'Close the visible menu or, with a submenu visible, close only the submenu', usage: 'Close the visible menu or, with a submenu visible, close only the submenu.' },
+        ]
+      },
+      {
+        name: 'Use dialog boxes',
+        shortcuts: [
+          { keys: 'Ctrl + Tab', desc: 'Switch to the next tab in a dialog box', usage: 'Switch to the next tab in a dialog box.' },
+          { keys: 'Ctrl + Shift + Tab', desc: 'Switch to the previous tab in a dialog box', usage: 'Switch to the previous tab in a dialog box.' },
+          { keys: 'Tab or Shift + Tab', desc: 'Move to the next or previous option or option group', usage: 'Move to the next or previous option or option group.' },
+          { keys: 'Arrow keys', desc: 'Move between options in the selected dropdown list box or move between options in a group of options', usage: 'Move between options in the selected dropdown list box or move between options in a group of options.' },
+          { keys: 'Space', desc: 'Perform the action assigned to the selected button or select or clear the checkbox', usage: 'Perform the action assigned to the selected button or select or clear the checkbox.' },
+          { keys: 'Alt + letter key', desc: 'Select the option, or select or clear the checkbox by the letter underlined in the option name', usage: 'Select the option, or select or clear the checkbox by the letter underlined in the option name.' },
+          { keys: 'Alt + Down', desc: 'Open the selected dropdown list box', usage: 'Open the selected dropdown list box.' },
+          { keys: 'Esc', desc: 'Close the selected dropdown list box', usage: 'Close the selected dropdown list box.' },
+          { keys: 'Enter', desc: 'Perform the action assigned to the default button in the dialog box', usage: 'Perform the action assigned to the default button in the dialog box.' },
+          { keys: 'Esc', desc: 'Cancel the command and close the dialog box', usage: 'Cancel the command and close the dialog box.' },
+        ]
+      },
+      {
+        name: 'Use wizards',
+        shortcuts: [
+          { keys: 'Tab', desc: 'Toggle the focus forward between controls in the wizard', usage: 'Toggle the focus forward between controls in the wizard.' },
+          { keys: 'F6', desc: 'Toggle the focus between sections (header, body, and footer) of the wizard', usage: 'Toggle the focus between sections (header, body, and footer) of the wizard.' },
+          { keys: 'Alt + F', desc: 'Complete the wizard', usage: 'Complete the wizard.' },
+        ]
+      },
+      {
+        name: 'Use property sheets',
+        shortcuts: [
+          { keys: 'F4', desc: 'Show or hide the property sheet', usage: 'Show or hide the property sheet.' },
+          { keys: 'Down or Up', desc: 'Move among choices in the control selection dropdown list one item at a time', usage: 'Move among choices in the control selection dropdown list one item at a time.' },
+          { keys: 'Page Down or Page Up', desc: 'Move among choices in the control selection dropdown list one page at a time', usage: 'Move among choices in the control selection dropdown list one page at a time.' },
+          { keys: 'Tab', desc: 'Move to the property sheet tabs from the control selection dropdown list', usage: 'Move to the property sheet tabs from the control selection dropdown list.' },
+          { keys: 'Left or Right', desc: 'Move among the property sheet tabs with a tab selected, but no property selected', usage: 'Move among the property sheet tabs with a tab selected, but no property selected.' },
+          { keys: 'Tab', desc: 'With a property already selected, move down one property on a tab', usage: 'With a property already selected, move down one property on a tab.' },
+          { keys: 'Shift + Tab', desc: 'With a property selected, move up one property on a tab, or if already at the top, move to the tab', usage: 'With a property selected, move up one property on a tab, or if already at the top, move to the tab.' },
+          { keys: 'Ctrl + Tab', desc: 'Toggle forward between tabs when a property is selected', usage: 'Toggle forward between tabs when a property is selected.' },
+          { keys: 'Ctrl + Shift + Tab', desc: 'Toggle backward between tabs when a property is selected', usage: 'Toggle backward between tabs when a property is selected.' },
+        ]
+      },
+      {
+        name: 'Edit a text box',
+        shortcuts: [
+          { keys: 'Home', desc: 'Move to the beginning of the entry', usage: 'Move to the beginning of the entry.' },
+          { keys: 'End', desc: 'Move to the end of the entry', usage: 'Move to the end of the entry.' },
+          { keys: 'Left or Right', desc: 'Move one character to the left or right', usage: 'Move one character to the left or right.' },
+          { keys: 'Ctrl + Left or Right', desc: 'Move one word to the left or right', usage: 'Move one word to the left or right.' },
+          { keys: 'Shift + Home', desc: 'Select from the insertion point to the beginning of the text entry', usage: 'Select from the insertion point to the beginning of the text entry.' },
+          { keys: 'Shift + End', desc: 'Select from the insertion point to the end of the text entry', usage: 'Select from the insertion point to the end of the text entry.' },
+          { keys: 'Shift + Left', desc: 'Change the selection by one character to the left', usage: 'Change the selection by one character to the left.' },
+          { keys: 'Shift + Right', desc: 'Change the selection by one character to the right', usage: 'Change the selection by one character to the right.' },
+          { keys: 'Ctrl + Shift + Left', desc: 'Change the selection by one word to the left', usage: 'Change the selection by one word to the left.' },
+          { keys: 'Ctrl + Shift + Right', desc: 'Change the selection by one word to the right', usage: 'Change the selection by one word to the right.' },
+        ]
+      },
+      {
+        name: 'Use a combo or list box',
+        shortcuts: [
+          { keys: 'F4 or Alt + Down', desc: 'Open a combo box', usage: 'Open a combo box.' },
+          { keys: 'F9', desc: 'Refresh the contents of the Lookup field list box or a combo box', usage: 'Refresh the contents of the Lookup field list box or a combo box.' },
+          { keys: 'Down', desc: 'Move down one line', usage: 'Move down one line.' },
+          { keys: 'Page Down', desc: 'Move down one page', usage: 'Move down one page.' },
+          { keys: 'Up', desc: 'Move up one line', usage: 'Move up one line.' },
+          { keys: 'Page Up', desc: 'Move up one page', usage: 'Move up one page.' },
+          { keys: 'Tab', desc: 'Exit the combo box or list box', usage: 'Exit the combo box or list box.' },
+        ]
+      },
+      {
+        name: 'Edit and navigate the Objects list',
+        shortcuts: [
+          { keys: 'F2', desc: 'Rename a selected object. Note: You can only rename an object when it is closed', usage: 'Rename a selected object. Note: You can only rename an object when it is closed.' },
+          { keys: 'Down', desc: 'Move down one line', usage: 'Move down one line.' },
+          { keys: 'Page Down', desc: 'Move down one window', usage: 'Move down one window.' },
+          { keys: 'End', desc: 'Move to the last object', usage: 'Move to the last object.' },
+          { keys: 'Up', desc: 'Move up one line', usage: 'Move up one line.' },
+          { keys: 'Page Up', desc: 'Move up one window', usage: 'Move up one window.' },
+        ]
+      },
+      {
+        name: 'Navigate and open objects',
+        shortcuts: [
+          { keys: 'Enter', desc: 'Open the selected table or query in the Datasheet View ', usage: 'Open the selected table or query in the Datasheet View .' },
+          { keys: 'Enter', desc: 'Open the selected form or report', usage: 'Open the selected form or report.' },
+          { keys: 'Enter', desc: 'Run the selected macro', usage: 'Run the selected macro.' },
+          { keys: 'Ctrl + Enter', desc: 'Open the selected table, query, form, report, macro, or module in the Design View ', usage: 'Open the selected table, query, form, report, macro, or module in the Design View .' },
+          { keys: 'Ctrl + G', desc: 'Display the Immediate window in the Visual Basic Editor ', usage: 'Display the Immediate window in the Visual Basic Editor .' },
+        ]
+      },
+      {
+        name: 'Common shortcuts for the Design, Layout, and Datasheet views',
+        shortcuts: [
+          { keys: 'F2', desc: 'Switch between Edit mode (with insertion point displayed) and Navigation mode in a datasheet', usage: 'Switch between Edit mode (with insertion point displayed) and Navigation mode in a datasheet.' },
+          { keys: 'Esc', desc: 'Exit Navigation mode and return to Edit mode in a form or report', usage: 'Exit Navigation mode and return to Edit mode in a form or report.' },
+          { keys: 'F4 or Alt + Enter', desc: 'Switch to the property sheet (in the Design View and Layout View for forms and reports)', usage: 'Switch to the property sheet (in the Design View and Layout View for forms and reports).' },
+          { keys: 'F5', desc: 'Switch to the Form View from the form in the Design view ', usage: 'Switch to the Form View from the form in the Design view .' },
+          { keys: 'F6', desc: 'Switch between the upper and lower portions of a window (in the Design View of queries, macros, and the Advanced Filter/Sort window)', usage: 'Switch between the upper and lower portions of a window (in the Design View of queries, macros, and the Advanced Filter/Sort window).' },
+          { keys: 'F6', desc: 'Cycle between the field grid, property sheet, field properties, the Navigation Pane , Quick Access Toolbar , and KeyTips on the ribbon (in the Design View for tables)', usage: 'Cycle between the field grid, property sheet, field properties, the Navigation Pane , Quick Access Toolbar , and KeyTips on the ribbon (in the Design View for tables).' },
+          { keys: 'Alt + F11', desc: 'Switch from the Visual Basic Editor back to the form or report in the Design View ', usage: 'Switch from the Visual Basic Editor back to the form or report in the Design View .' },
+          { keys: 'Ctrl + Right', desc: 'Toggle forward between views when in a table, query, form, or report. Note: If additional views are available, successive keystrokes move the focus to the next available view', usage: 'Toggle forward between views when in a table, query, form, or report. Note: If additional views are available, successive keystrokes move the focus to the next available view.' },
+        ]
+      },
+      {
+        name: 'Navigate between fields and records',
+        shortcuts: [
+          { keys: 'Tab or Right', desc: 'Move to the next field', usage: 'Move to the next field.' },
+          { keys: 'End', desc: 'Move to the last field in the current record', usage: 'Move to the last field in the current record.' },
+          { keys: 'Shift + Tab or Left', desc: 'Move to the previous field', usage: 'Move to the previous field.' },
+          { keys: 'Home', desc: 'Move to the first field in the current record', usage: 'Move to the first field in the current record.' },
+          { keys: 'Down', desc: 'Move to the current field in the next record', usage: 'Move to the current field in the next record.' },
+          { keys: 'Ctrl + Down', desc: 'Move to the current field in the last record', usage: 'Move to the current field in the last record.' },
+          { keys: 'Ctrl + End', desc: 'Move to the last field in the last record', usage: 'Move to the last field in the last record.' },
+          { keys: 'Up', desc: 'Move to the current field in the previous record', usage: 'Move to the current field in the previous record.' },
+          { keys: 'Ctrl + Up', desc: 'Move to the current field in the first record', usage: 'Move to the current field in the first record.' },
+          { keys: 'Ctrl + Home', desc: 'Move to the first field in the first record', usage: 'Move to the first field in the first record.' },
+        ]
+      },
+      {
+        name: 'Navigate to another screen of data',
+        shortcuts: [
+          { keys: 'Page Up', desc: 'Move up one screen', usage: 'Move up one screen.' },
+          { keys: 'Page Down', desc: 'Move down one screen', usage: 'Move down one screen.' },
+          { keys: 'Ctrl + Page Down', desc: 'Move right one screen', usage: 'Move right one screen.' },
+          { keys: 'Ctrl + Page Up', desc: 'Move left one screen', usage: 'Move left one screen.' },
+        ]
+      },
+      {
+        name: 'Select and move a column',
+        shortcuts: [
+          { keys: 'Ctrl + Space', desc: 'Select the current column or cancel the column selection, in Navigation mode only', usage: 'Select the current column or cancel the column selection, in Navigation mode only.' },
+          { keys: 'Shift + Right', desc: 'Extend the selection one column to the right, if the current column is selected', usage: 'Extend the selection one column to the right, if the current column is selected.' },
+          { keys: 'Shift + Left', desc: 'Extend the selection one column to the left, if the current column is selected', usage: 'Extend the selection one column to the left, if the current column is selected.' },
+        ]
+      },
+      {
+        name: 'Work with subdatasheets',
+        shortcuts: [
+          { keys: 'Tab', desc: 'Enter the subdatasheet from the last field of the previous record in the datasheet', usage: 'Enter the subdatasheet from the last field of the previous record in the datasheet.' },
+          { keys: 'Shift + Tab', desc: 'Enter the subdatasheet from the first field of the following record in the datasheet', usage: 'Enter the subdatasheet from the first field of the following record in the datasheet.' },
+          { keys: 'Ctrl + Tab', desc: 'Exit the subdatasheet and move to the first field of the next record in the datasheet', usage: 'Exit the subdatasheet and move to the first field of the next record in the datasheet.' },
+          { keys: 'Ctrl + Shift + Tab', desc: 'Exit the subdatasheet and move to the last field of the previous record in the datasheet', usage: 'Exit the subdatasheet and move to the last field of the previous record in the datasheet.' },
+          { keys: 'Tab', desc: 'From the last field in the subdatasheet, enter the next field in the datasheet', usage: 'From the last field in the subdatasheet, enter the next field in the datasheet.' },
+          { keys: 'Down', desc: 'From the datasheet, bypass the subdatasheet and move to the next record in the datasheet', usage: 'From the datasheet, bypass the subdatasheet and move to the next record in the datasheet.' },
+          { keys: 'Up', desc: 'From the datasheet, bypass the subdatasheet and move to the previous record in the datasheet', usage: 'From the datasheet, bypass the subdatasheet and move to the previous record in the datasheet.' },
+          { keys: 'Ctrl + Shift + Down', desc: 'Move from the datasheet to the record\'s subdatasheet', usage: 'Move from the datasheet to the record\'s subdatasheet.' },
+          { keys: 'Ctrl + Shift + Up', desc: 'Collapse the subdatasheet', usage: 'Collapse the subdatasheet.' },
+        ]
+      },
+      {
+        name: 'Navigate in the Design View',
+        shortcuts: [
+          { keys: 'F2', desc: 'Switch between Edit mode (with insertion point displayed) and Navigation mode', usage: 'Switch between Edit mode (with insertion point displayed) and Navigation mode.' },
+          { keys: 'F4 or Alt + Enter', desc: 'Open or close the property sheet', usage: 'Open or close the property sheet.' },
+          { keys: 'F5', desc: 'Switch to the Form View from a form in the Design View ', usage: 'Switch to the Form View from a form in the Design View .' },
+          { keys: 'F6', desc: 'Switch between the upper and lower portions of a window (in the Design View of queries, macros, and the Advanced Filter/Sort window). Note: Use F6 if the Tab key does not take you to the section of the screen you want', usage: 'Switch between the upper and lower portions of a window (in the Design View of queries, macros, and the Advanced Filter/Sort window). Note: Use F6 if the Tab key does not take you to the section of the screen you want.' },
+          { keys: 'F6', desc: 'Toggle forward between the design pane, properties, Navigation Pane , ribbon, and Zoom controls (in the Design View of tables, forms, and reports)', usage: 'Toggle forward between the design pane, properties, Navigation Pane , ribbon, and Zoom controls (in the Design View of tables, forms, and reports).' },
+          { keys: 'Alt + F8', desc: 'Show or hide the Field List pane', usage: 'Show or hide the Field List pane.' },
+          { keys: 'Shift + F7', desc: 'When you have a code module open, switch from the Visual Basic Editor to the form or report in the Design View ', usage: 'When you have a code module open, switch from the Visual Basic Editor to the form or report in the Design View .' },
+          { keys: 'Shift + F7', desc: 'Switch from a control\'s property sheet in a form or report in the Design View to the design surface without changing the control focus', usage: 'Switch from a control\'s property sheet in a form or report in the Design View to the design surface without changing the control focus.' },
+          { keys: 'Ctrl + C', desc: 'Copy the selected control to the clipboard', usage: 'Copy the selected control to the clipboard.' },
+          { keys: 'Ctrl + X', desc: 'Cut the selected control and copy it to the clipboard', usage: 'Cut the selected control and copy it to the clipboard.' },
+          { keys: 'Ctrl + V', desc: 'Paste the contents of the clipboard in the upper-left corner of the selected section', usage: 'Paste the contents of the clipboard in the upper-left corner of the selected section.' },
+          { keys: 'Right', desc: 'Move the selected control to the right by a pixel along the page\'s grid', usage: 'Move the selected control to the right by a pixel along the page\'s grid.' },
+          { keys: 'Left', desc: 'Move the selected control to the left by a pixel along the page\'s grid', usage: 'Move the selected control to the left by a pixel along the page\'s grid.' },
+          { keys: 'Up', desc: 'Move the selected control up by a pixel along the page\'s grid. Note: For controls in a stacked layout, this switches the position of the selected control with the control directly above it, unless it is already the uppermost control in the layout', usage: 'Move the selected control up by a pixel along the page\'s grid. Note: For controls in a stacked layout, this switches the position of the selected control with the control directly above it, unless it is already the uppermost control in the layout.' },
+          { keys: 'Down', desc: 'Move the selected control down by a pixel along the page\'s grid. Note: For controls in a stacked layout, this switches the position of the selected control with the control directly below it, unless it is already the lowermost control in the layout', usage: 'Move the selected control down by a pixel along the page\'s grid. Note: For controls in a stacked layout, this switches the position of the selected control with the control directly below it, unless it is already the lowermost control in the layout.' },
+          { keys: 'Ctrl + Right', desc: 'Move the selected control to the right by a pixel (irrespective of the page\'s grid)', usage: 'Move the selected control to the right by a pixel (irrespective of the page\'s grid).' },
+          { keys: 'Ctrl + Left', desc: 'Move the selected control to the left by a pixel (irrespective of the page\'s grid)', usage: 'Move the selected control to the left by a pixel (irrespective of the page\'s grid).' },
+          { keys: 'Ctrl + Up', desc: 'Move the selected control up by a pixel (irrespective of the page\'s grid). Note: For controls in a stacked layout, this switches the position of the selected control with the control directly above it, unless it is already the uppermost control in the layout', usage: 'Move the selected control up by a pixel (irrespective of the page\'s grid). Note: For controls in a stacked layout, this switches the position of the selected control with the control directly above it, unless it is already the uppermost control in the layout.' },
+          { keys: 'Ctrl + Down', desc: 'Move the selected control down by a pixel (irrespective of the page\'s grid). Note: For controls in a stacked layout, this switches the position of the selected control with the control directly below it, unless it is already the lowermost control in the layout', usage: 'Move the selected control down by a pixel (irrespective of the page\'s grid). Note: For controls in a stacked layout, this switches the position of the selected control with the control directly below it, unless it is already the lowermost control in the layout.' },
+          { keys: 'Shift + Right', desc: 'Increase the width of the selected control to the right by a pixel. Note: For controls in a stacked layout, this increases the width of the whole layout', usage: 'Increase the width of the selected control to the right by a pixel. Note: For controls in a stacked layout, this increases the width of the whole layout.' },
+          { keys: 'Shift + Left', desc: 'Decrease the width of the selected control to the left by a pixel. Note: For controls in a stacked layout, this decreases the width of the whole layout', usage: 'Decrease the width of the selected control to the left by a pixel. Note: For controls in a stacked layout, this decreases the width of the whole layout.' },
+          { keys: 'Shift + Up', desc: 'Decrease the height of the selected control from the bottom by a pixel', usage: 'Decrease the height of the selected control from the bottom by a pixel.' },
+          { keys: 'Shift + Down', desc: 'Increase the height of the selected control from the bottom by a pixel', usage: 'Increase the height of the selected control from the bottom by a pixel.' },
+        ]
+      },
+      {
+        name: 'Edit using controls in the form and report in the Design View',
+        shortcuts: [
+          { keys: 'Ctrl + C', desc: 'Copy the selected control to the clipboard', usage: 'Copy the selected control to the clipboard.' },
+          { keys: 'Ctrl + X', desc: 'Cut the selected control and copy it to the clipboard', usage: 'Cut the selected control and copy it to the clipboard.' },
+          { keys: 'Ctrl + V', desc: 'Paste the contents of the clipboard in the upper-left corner of the selected section', usage: 'Paste the contents of the clipboard in the upper-left corner of the selected section.' },
+          { keys: 'Shift + Down', desc: 'Increase the height of the selected control. Note: If used with a control that is in a layout, the entire row of the layout is resized', usage: 'Increase the height of the selected control. Note: If used with a control that is in a layout, the entire row of the layout is resized.' },
+          { keys: 'Shift + Right', desc: 'Increase the width of the selected control. Note: If used with a control that is in a layout, the entire column of the layout is resized', usage: 'Increase the width of the selected control. Note: If used with a control that is in a layout, the entire column of the layout is resized.' },
+          { keys: 'Shift + Up', desc: 'Reduce the height of the selected control. Note: If used with a control that is in a layout, the entire row of the layout is resized', usage: 'Reduce the height of the selected control. Note: If used with a control that is in a layout, the entire row of the layout is resized.' },
+          { keys: 'Shift + Left', desc: 'Reduce the width of the selected control. Note: If used with a control that is in a layout, the entire column of the layout is resized', usage: 'Reduce the width of the selected control. Note: If used with a control that is in a layout, the entire column of the layout is resized.' },
+        ]
+      },
+      {
+        name: 'Navigate between fields and records',
+        shortcuts: [
+          { keys: 'Tab', desc: 'Move to the next field', usage: 'Move to the next field.' },
+          { keys: 'Shift + Tab', desc: 'Move to the previous field', usage: 'Move to the previous field.' },
+          { keys: 'End', desc: 'Move to the last control on the form and remain in the current record', usage: 'Move to the last control on the form and remain in the current record.' },
+          { keys: 'Ctrl + End', desc: 'Move to the last control on the form and set focus in the last record', usage: 'Move to the last control on the form and set focus in the last record.' },
+          { keys: 'Home', desc: 'Move to the first control on the form and remain in the current record', usage: 'Move to the first control on the form and remain in the current record.' },
+          { keys: 'Ctrl + Home', desc: 'Move to the first control on the form and set focus in the first record', usage: 'Move to the first control on the form and set focus in the first record.' },
+          { keys: 'Ctrl + Page Down', desc: 'Move to the current field in the next record', usage: 'Move to the current field in the next record.' },
+          { keys: 'Ctrl + Page Up', desc: 'Move to the current field in the previous record', usage: 'Move to the current field in the previous record.' },
+        ]
+      },
+      {
+        name: 'Navigate in forms with more than one page',
+        shortcuts: [
+          { keys: 'Page Down', desc: 'Move down one page, or at the end of the record, move to the equivalent page on the next record', usage: 'Move down one page, or at the end of the record, move to the equivalent page on the next record.' },
+          { keys: 'Page Up', desc: 'Move up one page, or at the end of the record, move to the equivalent page on the previous record', usage: 'Move up one page, or at the end of the record, move to the equivalent page on the previous record.' },
+        ]
+      },
+      {
+        name: 'Navigate between a main form and a subform',
+        shortcuts: [
+          { keys: 'Tab', desc: 'Enter the subform from the preceding field in the main form', usage: 'Enter the subform from the preceding field in the main form.' },
+          { keys: 'Shift + Tab', desc: 'Enter the subform from the following field in the main form', usage: 'Enter the subform from the following field in the main form.' },
+          { keys: 'Ctrl + Tab', desc: 'Exit the subform and move to the next field in the master form or next record', usage: 'Exit the subform and move to the next field in the master form or next record.' },
+          { keys: 'Ctrl + Shift + Tab', desc: 'Exit the subform and move to the previous field in the main form or previous record', usage: 'Exit the subform and move to the previous field in the main form or previous record.' },
+        ]
+      },
+      {
+        name: 'Navigate in the Print Preview and Layout Preview',
+        shortcuts: [
+          { keys: 'Ctrl + P', desc: 'Open the Print dialog box (for datasheets, forms, and reports)', usage: 'Open the Print dialog box (for datasheets, forms, and reports).' },
+          { keys: 'S', desc: 'Open the Page Setup dialog box (for forms and reports)', usage: 'Open the Page Setup dialog box (for forms and reports).' },
+          { keys: 'Esc', desc: 'Cancel Print Preview or Layout Preview ', usage: 'Cancel Print Preview or Layout Preview .' },
+          { keys: 'Down', desc: 'Scroll down in small increments', usage: 'Scroll down in small increments.' },
+          { keys: 'Page Down', desc: 'Scroll down one full screen', usage: 'Scroll down one full screen.' },
+          { keys: 'Ctrl + Down', desc: 'Move to the bottom of the page', usage: 'Move to the bottom of the page.' },
+          { keys: 'Up', desc: 'Scroll up in small increments', usage: 'Scroll up in small increments.' },
+          { keys: 'Page Up', desc: 'Scroll up one full screen', usage: 'Scroll up one full screen.' },
+          { keys: 'Ctrl + Up', desc: 'Move to the top of the page', usage: 'Move to the top of the page.' },
+          { keys: 'Right', desc: 'Scroll to the right in small increments', usage: 'Scroll to the right in small increments.' },
+          { keys: 'End', desc: 'Move to the right edge of the page', usage: 'Move to the right edge of the page.' },
+          { keys: 'Ctrl + End', desc: 'Move to the lower-right corner of the page', usage: 'Move to the lower-right corner of the page.' },
+          { keys: 'Left', desc: 'Scroll to the left in small increments', usage: 'Scroll to the left in small increments.' },
+          { keys: 'Home', desc: 'Move to the left edge of the page', usage: 'Move to the left edge of the page.' },
+          { keys: 'Ctrl + Home', desc: 'Move to the upper-left corner of the page', usage: 'Move to the upper-left corner of the page.' },
+        ]
+      },
+      {
+        name: 'Use a diagram pane',
+        shortcuts: [
+          { keys: 'Tab or Shift + Tab', desc: 'Move among tables, views, and functions (and join lines, if available)', usage: 'Move among tables, views, and functions (and join lines, if available).' },
+          { keys: 'Arrow keys', desc: 'Move between columns in a table, view, or function', usage: 'Move between columns in a table, view, or function.' },
+          { keys: 'Space or +', desc: 'Choose the selected data column for output', usage: '+.' },
+          { keys: 'Space or -', desc: 'Remove the selected data column from the query output', usage: '-.' },
+          { keys: 'Delete', desc: 'Remove the selected table, view, or function, or join line from the query', usage: 'Remove the selected table, view, or function, or join line from the query.' },
+        ]
+      },
+      {
+        name: 'Use a grid pane',
+        shortcuts: [
+          { keys: 'Arrow keys, Tab, or Shift + Tab', desc: 'Move among cells', usage: 'Move among cells.' },
+          { keys: 'Ctrl + Down', desc: 'Move to the last row in the current column', usage: 'Move to the last row in the current column.' },
+          { keys: 'Ctrl + Up', desc: 'Move to the first row in the current column', usage: 'Move to the first row in the current column.' },
+          { keys: 'Ctrl + Home', desc: 'Move to the upper-left cell in the visible portion of grid', usage: 'Move to the upper-left cell in the visible portion of grid.' },
+          { keys: 'Ctrl + End', desc: 'Move to the lower-right cell', usage: 'Move to the lower-right cell.' },
+          { keys: 'Up or Down', desc: 'Move in a dropdown list', usage: 'Move in a dropdown list.' },
+          { keys: 'Ctrl + Space', desc: 'Select an entire grid column', usage: 'Select an entire grid column.' },
+          { keys: 'F2', desc: 'Toggle between Edit mode and cell selection mode', usage: 'Toggle between Edit mode and cell selection mode.' },
+          { keys: 'Ctrl + C', desc: 'Copy the selected text in a cell to the clipboard (in Edit mode)', usage: 'Copy the selected text in a cell to the clipboard (in Edit mode).' },
+          { keys: 'Ctrl + X', desc: 'Cut the selected text in a cell and place it on the clipboard (in Edit mode)', usage: 'Cut the selected text in a cell and place it on the clipboard (in Edit mode).' },
+          { keys: 'Ctrl + V', desc: 'Paste text from the clipboard (in Edit mode)', usage: 'Paste text from the clipboard (in Edit mode).' },
+          { keys: 'Insert', desc: 'Toggle between insert and overtype mode while editing in a cell', usage: 'Toggle between insert and overtype mode while editing in a cell.' },
+          { keys: 'Space', desc: 'Toggle the checkbox in the Output column. Note: If multiple items are selected, pressing this key affects all selected items', usage: 'Toggle the checkbox in the Output column. Note: If multiple items are selected, pressing this key affects all selected items.' },
+          { keys: 'Delete', desc: 'Clear the selected contents of a cell', usage: 'Clear the selected contents of a cell.' },
+          { keys: 'Delete', desc: 'Clear all values for a selected grid column', usage: 'Clear all values for a selected grid column.' },
+        ]
+      },
+      {
+        name: 'Use the Field List pane with a form or report in the Design View or Layout View',
+        shortcuts: [
+          { keys: 'Alt + F8', desc: 'Show or hide the Field List pane', usage: 'Show or hide the Field List pane.' },
+          { keys: 'Enter', desc: 'Add the selected field to the form or report detail section', usage: 'Add the selected field to the form or report detail section.' },
+          { keys: 'Up or Down', desc: 'Move up or down the Field List pane', usage: 'Move up or down the Field List pane.' },
+          { keys: 'Tab', desc: 'Move between the upper and lower panes of the Field List ', usage: 'Move between the upper and lower panes of the Field List .' },
+        ]
+      },
+      {
+        name: 'Select a field or record',
+        shortcuts: [
+          { keys: 'Tab', desc: 'Select the next field', usage: 'Select the next field.' },
+          { keys: 'F2', desc: 'Switch between Edit mode (with insertion point displayed) and Navigation mode in a datasheet', usage: 'Switch between Edit mode (with insertion point displayed) and Navigation mode in a datasheet.' },
+          { keys: 'Esc', desc: 'Exit Navigation mode in a form or report', usage: 'Exit Navigation mode in a form or report.' },
+          { keys: 'Shift + Space', desc: 'Switch between selecting the current record and the first field of the current record, in Navigation mode', usage: 'Switch between selecting the current record and the first field of the current record, in Navigation mode.' },
+          { keys: 'Shift + Up', desc: 'Extend the selection to the previous record, if the current record is selected', usage: 'Extend the selection to the previous record, if the current record is selected.' },
+          { keys: 'Ctrl + A', desc: 'Select all records', usage: 'Select all records.' },
+        ]
+      },
+      {
+        name: 'Select text in a field',
+        shortcuts: [
+          { keys: 'Shift + Right', desc: 'Change the size of the selection by one character to the right', usage: 'Change the size of the selection by one character to the right.' },
+          { keys: 'Ctrl + Shift + Right', desc: 'Change the size of the selection by one word to the right', usage: 'Change the size of the selection by one word to the right.' },
+          { keys: 'Shift + Left', desc: 'Change the size of the selection by one character to the left', usage: 'Change the size of the selection by one character to the left.' },
+          { keys: 'Ctrl + Shift + Left', desc: 'Change the size of the selection by one word to the left', usage: 'Change the size of the selection by one word to the left.' },
+        ]
+      },
+      {
+        name: 'Extend a selection',
+        shortcuts: [
+          { keys: 'Left or Right', desc: 'Extend a selection to adjacent fields in the same row in the Datasheet View ', usage: 'Extend a selection to adjacent fields in the same row in the Datasheet View .' },
+          { keys: 'Up or Down', desc: 'Extend a selection to adjacent rows in the Datasheet View ', usage: 'Extend a selection to adjacent rows in the Datasheet View .' },
+          { keys: 'Shift + F8', desc: 'Undo the previous extension', usage: 'Undo the previous extension.' },
+          { keys: 'Esc', desc: 'Cancel Extend mode', usage: 'Cancel Extend mode.' },
+        ]
+      },
+      {
+        name: 'Find and replace text or data',
+        shortcuts: [
+          { keys: 'Ctrl + F', desc: 'Open the Find tab in the Find and Replace dialog box', usage: 'Open the Find tab in the Find and Replace dialog box.' },
+          { keys: 'Shift + F4', desc: 'Find the next occurrence of the text specified in the Find and Replace dialog box when the dialog box is closed (in the Datasheet View and Form View only)', usage: 'Find the next occurrence of the text specified in the Find and Replace dialog box when the dialog box is closed (in the Datasheet View and Form View only).' },
+        ]
+      },
+      {
+        name: 'Move the insertion point in a field',
+        shortcuts: [
+          { keys: 'Right', desc: 'Move the insertion point one character to the right', usage: 'Move the insertion point one character to the right.' },
+          { keys: 'Ctrl + Right', desc: 'Move the insertion point one word to the right', usage: 'Move the insertion point one word to the right.' },
+          { keys: 'Left', desc: 'Move the insertion point one character to the left', usage: 'Move the insertion point one character to the left.' },
+          { keys: 'Ctrl + Left', desc: 'Move the insertion point one word to the left', usage: 'Move the insertion point one word to the left.' },
+          { keys: 'End', desc: 'Move the insertion point to the end of the field in single-line fields, or move it to the end of the line in multiline fields', usage: 'Move the insertion point to the end of the field in single-line fields, or move it to the end of the line in multiline fields.' },
+          { keys: 'Ctrl + End', desc: 'Move the insertion point to the end of the field, in multiline fields', usage: 'Move the insertion point to the end of the field, in multiline fields.' },
+          { keys: 'Home', desc: 'Move the insertion point to the beginning of the field in single-line fields, or move it to the beginning of the line in multiline fields', usage: 'Move the insertion point to the beginning of the field in single-line fields, or move it to the beginning of the line in multiline fields.' },
+          { keys: 'Ctrl + Home', desc: 'Move the insertion point to the beginning of the field, in multiline fields', usage: 'Move the insertion point to the beginning of the field, in multiline fields.' },
+        ]
+      },
+      {
+        name: 'Copy, move, or delete text',
+        shortcuts: [
+          { keys: 'Ctrl + C', desc: 'Copy the selection to the clipboard', usage: 'Copy the selection to the clipboard.' },
+          { keys: 'Ctrl + X', desc: 'Cut the selection and copy it to the clipboard', usage: 'Cut the selection and copy it to the clipboard.' },
+          { keys: 'Ctrl + V', desc: 'Paste the contents of the clipboard at the insertion point', usage: 'Paste the contents of the clipboard at the insertion point.' },
+          { keys: 'Backspace', desc: 'Delete the selection or the character to the left of the insertion point', usage: 'Delete the selection or the character to the left of the insertion point.' },
+          { keys: 'Delete', desc: 'Delete the selection or the character to the right of the insertion point', usage: 'Delete the selection or the character to the right of the insertion point.' },
+          { keys: 'Ctrl + Delete', desc: 'Delete all characters to the right of the insertion point', usage: 'Delete all characters to the right of the insertion point.' },
+        ]
+      },
+      {
+        name: 'Undo changes',
+        shortcuts: [
+          { keys: 'Ctrl + Z or Alt + Backspace', desc: 'Undo typing', usage: 'Undo typing.' },
+        ]
+      },
+      {
+        name: 'Enter data in the Datasheet View or Form View',
+        shortcuts: [
+          { keys: 'Ctrl + ;', desc: 'Insert the current date', usage: ';.' },
+          { keys: 'Ctrl + Shift + :', desc: 'Insert the current time', usage: ':.' },
+          { keys: 'Ctrl + Alt + Space', desc: 'Insert the default value for a field', usage: 'Insert the default value for a field.' },
+          { keys: 'Ctrl + \'', desc: 'Insert the value from the same field in the previous record', usage: '\'.' },
+          { keys: 'Ctrl + +', desc: 'Add a new record', usage: '+.' },
+          { keys: 'Ctrl + -', desc: 'In a datasheet, delete the current record', usage: '-.' },
+          { keys: 'Shift + Enter', desc: 'Save changes to the current record', usage: 'Save changes to the current record.' },
+          { keys: 'Space', desc: 'Switch between the values in a checkbox or option button', usage: 'Switch between the values in a checkbox or option button.' },
+          { keys: 'Ctrl + Enter', desc: 'Insert a new line in a Short Text or Long Text field', usage: 'Insert a new line in a Short Text or Long Text field.' },
+        ]
+      },
+      {
+        name: 'Refresh fields with current data',
+        shortcuts: [
+          { keys: 'Shift + F9 or F5', desc: 'Requery the underlying tables or in a subform, requery the underlying table only for the subform', usage: 'Requery the underlying tables or in a subform, requery the underlying table only for the subform.' },
+          { keys: 'F9', desc: 'Refresh the contents of a Lookup field list or combo box', usage: 'Refresh the contents of a Lookup field list or combo box.' },
+        ]
+      },
+      {
+        name: 'Work and move around in tables',
+        shortcuts: [
+          { keys: 'Tab', desc: 'Move to the next cell', usage: 'Move to the next cell.' },
+          { keys: 'Shift + Tab', desc: 'Move to the preceding cell', usage: 'Move to the preceding cell.' },
+          { keys: 'Down', desc: 'Move to the next row', usage: 'Move to the next row.' },
+          { keys: 'Up', desc: 'Move to the preceding row', usage: 'Move to the preceding row.' },
+          { keys: 'Ctrl + Tab', desc: 'Insert a tab in a cell', usage: 'Insert a tab in a cell.' },
+          { keys: 'Enter', desc: 'Start a new paragraph', usage: 'Start a new paragraph.' },
+          { keys: 'Tab at the end of the last row', desc: 'Add a new row at the bottom of the table', usage: 'Add a new row at the bottom of the table.' },
+        ]
+      },
+      {
+        name: 'Move around in tables or cells',
+        shortcuts: [
+          { keys: 'Left', desc: 'Move one character to the left', usage: 'Move one character to the left.' },
+          { keys: 'Right', desc: 'Move one character to the right', usage: 'Move one character to the right.' },
+          { keys: 'Up', desc: 'Move up one line', usage: 'Move up one line.' },
+          { keys: 'Down', desc: 'Move down one line', usage: 'Move down one line.' },
+          { keys: 'Ctrl + Left', desc: 'Move one word to the left', usage: 'Move one word to the left.' },
+          { keys: 'Ctrl + Right', desc: 'Move one word to the right', usage: 'Move one word to the right.' },
+          { keys: 'End', desc: 'Move to the end of a line', usage: 'Move to the end of a line.' },
+          { keys: 'Home', desc: 'Move to the beginning of a line', usage: 'Move to the beginning of a line.' },
+          { keys: 'Ctrl + Up', desc: 'Move up one paragraph', usage: 'Move up one paragraph.' },
+          { keys: 'Ctrl + Down', desc: 'Move down one paragraph', usage: 'Move down one paragraph.' },
+          { keys: 'Ctrl + End', desc: 'Move to the end of a text box', usage: 'Move to the end of a text box.' },
+          { keys: 'Ctrl + Home', desc: 'Move to the beginning of a text box', usage: 'Move to the beginning of a text box.' },
+          { keys: 'Shift + F4', desc: 'Repeat the last Find action', usage: 'Repeat the last Find action.' },
+        ]
+      },
+      {
+        name: 'Get help with Access',
+        shortcuts: [
+          { keys: 'F1', desc: 'Open the Help window', usage: 'Open the Help window.' },
+          { keys: 'Tab', desc: 'Select the next item in the Help window', usage: 'Select the next item in the Help window.' },
+          { keys: 'Shift + Tab', desc: 'Select the previous item in the Help window', usage: 'Select the previous item in the Help window.' },
+          { keys: 'Enter', desc: 'Perform the action for the selected item', usage: 'Perform the action for the selected item.' },
+          { keys: 'Tab', desc: 'Select the next hidden text or hyperlink', usage: 'Select the next hidden text or hyperlink.' },
+          { keys: 'Shift + Tab', desc: 'Select the previous hidden text or hyperlink', usage: 'Select the previous hidden text or hyperlink.' },
+          { keys: 'Enter', desc: 'Perform the action for the selected hidden text, or hyperlink', usage: 'Perform the action for the selected hidden text, or hyperlink.' },
+          { keys: 'Alt + Left or Backspace', desc: 'Move back to the previous Help topic ( Back button)', usage: 'Move back to the previous Help topic ( Back button).' },
+          { keys: 'Up or Down', desc: 'Scroll small amounts up or down within the currently displayed Help topic', usage: 'Scroll small amounts up or down within the currently displayed Help topic.' },
+          { keys: 'Page Up or Page Down', desc: 'Scroll larger amounts up or down, respectively, within the currently displayed Help topic', usage: 'Scroll larger amounts up or down, respectively, within the currently displayed Help topic.' },
+        ]
+      },
+      {
+        name: 'Miscellaneous keyboard shortcuts',
+        shortcuts: [
+          { keys: 'F2', desc: 'Display the complete hyperlink address (URL) for a selected hyperlink', usage: 'Display the complete hyperlink address (URL) for a selected hyperlink.' },
+          { keys: 'Shift + F2', desc: 'Open the Zoom box to conveniently enter expressions and other text in small input areas', usage: 'Open the Zoom box to conveniently enter expressions and other text in small input areas.' },
+          { keys: 'Print screen', desc: 'Copy a screenshot of the entire screen to the clipboard', usage: 'Copy a screenshot of the entire screen to the clipboard.' },
+          { keys: 'Alt + Print screen', desc: 'Copy a screenshot of the current window to the clipboard', usage: 'Copy a screenshot of the current window to the clipboard.' },
+          { keys: 'Ctrl + Down', desc: 'Display the full set of commands on the task pane menu', usage: 'Display the full set of commands on the task pane menu.' },
+          { keys: 'Alt + F4', desc: 'Exit Access', usage: 'Exit Access.' },
         ]
       },
     ]
@@ -19532,54 +21037,78 @@ const shortcutData = {
   salesforce: {
     name: 'Salesforce',
     icon: 'fas fa-cloud',
+    source: { name: 'Salesforce Help — Keyboard Shortcuts (Lightning Experience, console apps, Classic)', url: 'https://help.salesforce.com/s/articleView?id=xcloud.accessibility_keyboard_shortcuts.htm&type=5' },
     categories: [
       {
-        name: 'Console Navigation',
+        name: 'Lightning Experience: Global',
         shortcuts: [
-          { keys: 'V', desc: 'Navigation Tab', usage: 'Go to the navigation tab in Service Console.' },
-          { keys: 'P', desc: 'Primary Tabs', usage: 'Jump to the primary tabs area.' },
-          { keys: 'S', desc: 'Subtabs', usage: 'Go to the subtabs section.' },
-          { keys: 'N', desc: 'List View', usage: 'Navigate to the list view.' },
-          { keys: 'Shift + S', desc: 'Go to Field', usage: 'Jump to a specific field on the current tab.' },
-          { keys: 'Shift + F', desc: 'First List Item', usage: 'Go to the first item in list view.' },
-          { keys: 'R', desc: 'Header Search', usage: 'Jump to the header search box.' },
-          { keys: 'F', desc: 'Footer', usage: 'Navigate to the footer area.' },
+          { keys: 'Esc', desc: 'Close or deselect', usage: 'Close or deselect a window. Some windows and dialogs cannot be closed with this shortcut.' },
+          { keys: 'E', desc: 'Edit', usage: 'Edit a record. Does not work with Knowledge articles, reports, dashboards, feed items, approval requests, or email messages.' },
+          { keys: 'Ctrl + .', desc: 'Insert quick text', usage: 'Displays the quick text browser to find, preview, and insert quick text. Mac: Cmd + .' },
+          { keys: 'M', desc: 'Open or close Macros', usage: 'Opens or closes the Macros utility.' },
+          { keys: 'N', desc: 'Open or close Notes', usage: 'Opens or closes the Notes utility; open the utility first.' },
+          { keys: 'Ctrl + Enter', desc: 'Post to feed', usage: 'Submits a post or comment. Mac: Cmd + Enter.' },
+          { keys: 'Ctrl + S', desc: 'Save', usage: 'Save a record; focus must be on a field. Mac: Cmd + S.' },
+          { keys: '/', desc: 'Search', usage: 'Places your cursor in the search box.' },
+          { keys: 'Ctrl + /', desc: 'Show keyboard shortcut menu', usage: 'Displays the available keyboard shortcuts in a window. Mac: Cmd + /.' },
         ]
       },
       {
-        name: 'Tab Management',
+        name: 'Lightning Experience: Navigation',
         shortcuts: [
-          { keys: 'T', desc: 'Open Tab', usage: 'Open a new tab in the console.' },
-          { keys: 'C', desc: 'Close Tab', usage: 'Close the currently active tab.' },
-          { keys: 'Shift + C', desc: 'Reopen Closed Tab', usage: 'Reopen the last closed tab.' },
-          { keys: 'Shift + R', desc: 'Refresh Tab', usage: 'Refresh the current tab content.' },
-          { keys: 'D', desc: 'Tab Dropdown', usage: 'Open the dropdown menu on the current tab.' },
-          { keys: 'Z', desc: 'Zoom Primary Tab', usage: 'Zoom in or out on primary tabs.' },
+          { keys: 'C', desc: 'Focus notifications', usage: 'Focuses the notification panel; press again for the next notification.' },
+          { keys: 'Shift + C', desc: 'Focus notifications (reverse order)', usage: 'Press again for the previous notification.' },
+          { keys: 'G, D', desc: 'Go to composer window', usage: 'Goes to the docked composer window. Release G before pressing D.' },
+          { keys: 'G, P', desc: 'Go to publisher', usage: 'Takes you to the publisher; use Tab and arrow keys inside it.' },
+          { keys: 'Ctrl + F6', desc: 'Go to other region', usage: 'Moves among regions of the page, for example between a kanban card and the side panel. Mac: Cmd + F6.' },
+          { keys: 'G, U', desc: 'Go to utility bar', usage: 'Goes to the utility bar.' },
         ]
       },
       {
-        name: 'Views & Sidebars',
+        name: 'Composer Windows',
         shortcuts: [
-          { keys: 'Shift + N', desc: 'Toggle Pinned List', usage: 'Hide or show the pinned list panel.' },
-          { keys: 'Shift + Left', desc: 'Toggle Left Sidebar', usage: 'Hide or show the left sidebar.' },
-          { keys: 'Shift + Right', desc: 'Toggle Right Sidebar', usage: 'Hide or show the right sidebar.' },
-          { keys: 'Shift + Up', desc: 'Toggle Top Sidebar', usage: 'Hide or show the top sidebar panel.' },
-          { keys: 'Shift + Down', desc: 'Toggle Bottom Sidebar', usage: 'Hide or show the bottom sidebar panel.' },
+          { keys: 'G, D', desc: 'Open the overflow menu', usage: 'From anywhere on the page.' },
+          { keys: 'Up / Down', desc: 'Move through open composer windows', usage: 'In the overflow menu.' },
+          { keys: 'Left / Right', desc: 'Move between open composer windows', usage: 'Switches focus between docked composers.' },
+          { keys: 'Enter', desc: 'Focus inside the composer window', usage: 'From a composer window\'s header.' },
+          { keys: 'Tab', desc: 'Cycle through the fields', usage: 'Inside the composer window.' },
+          { keys: 'Esc', desc: 'Move focus to the window\'s header', usage: 'From inside a composer window.' },
         ]
       },
       {
-        name: 'General',
+        name: 'Console Apps: Global',
         shortcuts: [
-          { keys: 'Esc', desc: 'Shortcut Mode', usage: 'Enter keyboard shortcut mode in the console.' },
-          { keys: 'E', desc: 'Edit Record', usage: 'Edit the currently selected record.' },
-          { keys: 'Ctrl + S', desc: 'Save', usage: 'Save the current record or changes.' },
-          { keys: 'U', desc: 'Share Link', usage: 'Get a shareable link for the current record.' },
-          { keys: 'Shift + K', desc: 'Show Shortcuts', usage: 'Display all available keyboard shortcuts.' },
-          { keys: 'Left', desc: 'Move Left', usage: 'Navigate left in the console.' },
-          { keys: 'Right', desc: 'Move Right', usage: 'Navigate right in the console.' },
-          { keys: 'Up', desc: 'Move Up', usage: 'Navigate up in lists or menus.' },
-          { keys: 'Down', desc: 'Move Down', usage: 'Navigate down in lists or menus.' },
-          { keys: 'Enter', desc: 'Activate', usage: 'Activate or select the current item.' },
+          { keys: 'Ctrl + C, S', desc: 'Copy URL for active tab', usage: 'Copies the URL of the focused tab. Mac: Cmd + C, then S.' },
+          { keys: 'Ctrl + C, W', desc: 'Copy URL for active workspace tab and subtabs', usage: 'Mac: Cmd + C, then W.' },
+          { keys: 'H', desc: 'Open or close History', usage: 'Opens or closes the History utility.' },
+          { keys: 'O', desc: 'Open or close Omni-Channel', usage: 'Service Console app only.' },
+        ]
+      },
+      {
+        name: 'Console Apps: Navigation',
+        shortcuts: [
+          { keys: 'G, I', desc: 'Go to item menu', usage: 'Opens the item menu with the cursor on the first item.' },
+          { keys: 'G, L', desc: 'Go to selected navigation item', usage: 'Opens or moves focus to the selected navigation item.' },
+          { keys: 'G, S', desc: 'Go to subtab', usage: 'Moves focus to the active subtab.' },
+          { keys: 'G, W', desc: 'Go to workspace tab', usage: 'Moves focus to the active workspace tab.' },
+          { keys: 'Ctrl + Alt + G', desc: '"Go to" modifier in dialogs, forms and input fields', usage: 'Starts a go-to command instead of G while typing. Mac: Cmd + Option + G.' },
+          { keys: 'Ctrl + Click', desc: 'Open nav item in a new workspace tab', usage: 'Also opens a link in an inactive tab without shifting focus. Mac: Cmd + Click.' },
+          { keys: 'Left / Right', desc: 'Switch tabs', usage: 'Switch between workspace tabs and subtabs while focus is on the tab.' },
+        ]
+      },
+      {
+        name: 'Console Apps: Tabs',
+        shortcuts: [
+          { keys: 'Shift + X', desc: 'Close workspace tab', usage: 'Closes the current workspace tab, including its subtabs.' },
+          { keys: 'Shift + W', desc: 'Close all tabs', usage: 'Closes all unpinned tabs.' },
+          { keys: 'Shift + R', desc: 'Refresh tab', usage: 'Refreshes the current workspace tab, including its subtabs.' },
+        ]
+      },
+      {
+        name: 'Salesforce Classic',
+        shortcuts: [
+          { keys: 'Alt + 1-9', desc: 'Open Recent Items record', usage: 'Alt + number opens that item in the Recent Items list; Alt + 0 opens the 10th. Mac: Ctrl + Option + number.' },
+          { keys: 'Alt + S', desc: 'Show or hide sidebar', usage: 'Requires the collapsible sidebar to be enabled. Mac: Option + S.' },
         ]
       },
     ]
