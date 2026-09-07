@@ -3515,35 +3515,129 @@ const shortcutData = {
   zoom: {
     name: 'Zoom',
     icon: 'fas fa-video',
+    source: { name: 'Zoom Support — Using hot keys and keyboard shortcuts (Windows)', url: 'https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0067050' },
     categories: [
       {
-        name: 'Audio & Video',
+        name: 'Meeting: Video & Audio',
         shortcuts: [
-          { keys: 'Alt + A', desc: 'Mute/Unmute Microphone', usage: 'Toggle your microphone on or off.' },
-          { keys: 'Alt + V', desc: 'Start/Stop Camera', usage: 'Toggle your camera on or off.' },
-          { keys: 'Space (hold)', desc: 'Push to Talk', usage: 'Temporarily unmute while holding Spacebar.' },
-          { keys: 'Alt + M', desc: 'Mute All', usage: 'Host mutes all participants.' },
+          { keys: 'Alt + V', desc: 'Start/stop video', usage: 'Global shortcut available.' },
+          { keys: 'Alt + A', desc: 'Mute/unmute audio', usage: 'Global shortcut available.' },
+          { keys: 'Alt + M', desc: 'Mute/unmute audio for everyone except host', usage: 'Host only.' },
+          { keys: 'Alt + N', desc: 'Switch camera', usage: 'Cycles cameras when more than one is connected.' },
+          { keys: 'Ctrl + 2', desc: 'Read active speaker name', usage: 'Reads the name aloud for screen-reader users.' },
         ]
       },
       {
-        name: 'Meeting Controls',
+        name: 'Meeting: View & Layout',
         shortcuts: [
-          { keys: 'Alt + S', desc: 'Start/Stop Screen Share', usage: 'Start or stop sharing your screen.' },
-          { keys: 'Alt + T', desc: 'Pause Screen Share', usage: 'Pause or resume screen sharing.' },
-          { keys: 'Alt + F', desc: 'Full Screen', usage: 'Enter or exit full screen mode.' },
-          { keys: 'Alt + H', desc: 'Toggle Chat', usage: 'Open or close the chat panel.' },
-          { keys: 'Alt + U', desc: 'Participants List', usage: 'Show or hide the participants panel.' },
-          { keys: 'Alt + Y', desc: 'Raise/Lower Hand', usage: 'Raise or lower your hand.' },
-          { keys: 'Alt + I', desc: 'Invite', usage: 'Open the invite dialog.' },
-          { keys: 'Alt + R', desc: 'Start/Stop Recording', usage: 'Start or stop recording the meeting.' },
-          { keys: 'Alt + Q', desc: 'Leave Meeting', usage: 'Leave or end the meeting.' },
+          { keys: 'Alt + F1', desc: 'Switch to Speaker view |', usage: 'Switch to Speaker view |.' },
+          { keys: 'Alt + F2', desc: 'Switch to Gallery view |', usage: 'Switch to Gallery view |.' },
+          { keys: 'Page Up', desc: 'View the previous page of video participants in gallery view |', usage: 'View the previous page of video participants in gallery view |.' },
+          { keys: 'Page Down', desc: 'View the next page of video participants in gallery view |', usage: 'View the next page of video participants in gallery view |.' },
+          { keys: 'Alt + F', desc: 'Enter or exit full screen mode |', usage: 'Enter or exit full screen mode |.' },
+          { keys: 'Alt', desc: 'Toggle the option Always show meeting controls', usage: 'Changes the General setting.' },
+          { keys: 'Ctrl + Alt + Shift', desc: 'Change focus to Zoom Meeting controls', usage: 'On top when sharing screen.' },
+          { keys: 'Ctrl + Alt + Shift + H', desc: 'Show/hide floating meeting controls |', usage: 'Show/hide floating meeting controls |.' },
+          { keys: 'Alt + F4', desc: 'Close the current window |', usage: 'Close the current window |.' },
         ]
       },
       {
-        name: 'View',
+        name: 'Meeting: Screen Share',
         shortcuts: [
-          { keys: 'Alt + W', desc: 'Toggle Speaker/Gallery View', usage: 'Switch between speaker and gallery view.' },
-          { keys: 'Alt + N', desc: 'Switch Camera', usage: 'Switch to another camera device.' },
+          { keys: 'Alt + S', desc: 'Open share screen window or stop screen share', usage: 'Only when the meeting control toolbar has focus.' },
+          { keys: 'Alt + Shift + S', desc: 'Show/hide windows and applications available to share', usage: 'Only when the meeting control toolbar has focus.' },
+          { keys: 'Alt + T', desc: 'Pause or resume screen share', usage: 'Only when the meeting control toolbar has focus.' },
+          { keys: 'Alt + Shift + R', desc: 'Begin remote control |', usage: 'Begin remote control |.' },
+          { keys: 'Alt + Shift + G', desc: 'Revoke/give up remote control permission |', usage: 'Revoke/give up remote control permission |.' },
+        ]
+      },
+      {
+        name: 'Meeting: Recording',
+        shortcuts: [
+          { keys: 'Alt + R', desc: 'Start/stop computer recording |', usage: 'Start/stop computer recording |.' },
+          { keys: 'Alt + C', desc: 'Start/stop cloud recording |', usage: 'Start/stop cloud recording |.' },
+          { keys: 'Alt + P', desc: 'Pause/resume recording |', usage: 'Pause/resume recording |.' },
+        ]
+      },
+      {
+        name: 'Meeting: Panels & Participants',
+        shortcuts: [
+          { keys: 'Alt + H', desc: 'Show/hide in-meeting chat panel |', usage: 'Show/hide in-meeting chat panel |.' },
+          { keys: 'Alt + U', desc: 'Show/hide participants panel |', usage: 'Show/hide participants panel |.' },
+          { keys: 'Alt + I', desc: 'Open invite window |', usage: 'Open invite window |.' },
+          { keys: 'Alt + Shift + I', desc: 'Copy invitation link |', usage: 'Copy invitation link |.' },
+          { keys: 'Alt + Y', desc: 'Raise/lower hand |', usage: 'Raise/lower hand |.' },
+          { keys: 'Alt + Q', desc: 'Display prompt to end or leave meeting |', usage: 'Display prompt to end or leave meeting |.' },
+          { keys: 'Ctrl + Shift + O', desc: 'Open the AI chat panel in a meeting |', usage: 'Open the AI chat panel in a meeting |.' },
+          { keys: 'Ctrl + Shift + Y', desc: 'Open Reactions panel |', usage: 'Open Reactions panel |.' },
+        ]
+      },
+      {
+        name: 'Meeting: In-meeting Chat',
+        shortcuts: [
+          { keys: 'Ctrl + +', desc: 'Increase chat display size |', usage: 'Increase chat display size |.' },
+          { keys: 'Ctrl + -', desc: 'Decrease chat display size |', usage: 'Decrease chat display size |.' },
+          { keys: 'Alt + Shift + E', desc: 'Focus input field', usage: 'Only in the chat window.' },
+          { keys: 'Ctrl + Shift + U', desc: 'Focus last received parent message in the chat history', usage: 'Only in the chat window.' },
+          { keys: 'Ctrl + L', desc: 'Focus list of chats', usage: 'Only in the chat window.' },
+          { keys: 'Ctrl + Shift + N', desc: 'Jump to start of unread messages', usage: 'Only in the chat window.' },
+          { keys: 'Ctrl + N', desc: 'Start new chat with meeting participants', usage: 'Only in the chat window.' },
+        ]
+      },
+      {
+        name: 'Meeting: Reactions',
+        shortcuts: [
+          { keys: 'Alt + Shift + 4', desc: 'Send audible clap |', usage: 'Send audible clap |.' },
+          { keys: 'Alt + Shift + 5', desc: 'Send thumbs up |', usage: 'Send thumbs up |.' },
+          { keys: 'Alt + Shift + 6', desc: 'Send heart |', usage: 'Send heart |.' },
+          { keys: 'Alt + Shift + 7', desc: 'Send joy |', usage: 'Send joy |.' },
+          { keys: 'Alt + Shift + 8', desc: 'Send open mouth |', usage: 'Send open mouth |.' },
+          { keys: 'Alt + Shift + 9', desc: 'Send tada |', usage: 'Send tada |.' },
+        ]
+      },
+      {
+        name: 'Team Chat',
+        shortcuts: [
+          { keys: 'Alt + Shift + T', desc: 'Screenshot |', usage: 'Screenshot |.' },
+          { keys: 'Ctrl + W', desc: 'Hide current chat session |', usage: 'Hide current chat session |.' },
+          { keys: 'Ctrl + Up', desc: 'Go to previous chat |', usage: 'Go to previous chat |.' },
+          { keys: 'Ctrl + Down', desc: 'Go to next chat |', usage: 'Go to next chat |.' },
+          { keys: 'Alt + Left', desc: 'Back in chat history |', usage: 'Back in chat history |.' },
+          { keys: 'Alt + Right', desc: 'Forward in chat history |', usage: 'Forward in chat history |.' },
+          { keys: 'Ctrl + N', desc: 'Start a new chat |', usage: 'Start a new chat |.' },
+          { keys: 'Ctrl + L', desc: 'Focus to list of all chats and channels |', usage: 'Focus to list of all chats and channels |.' },
+          { keys: 'Ctrl + Shift + U', desc: 'Focus keyboard to latest message in current group chat or channel |', usage: 'Focus keyboard to latest message in current group chat or channel |.' },
+          { keys: 'Ctrl + Alt + I', desc: 'Add member to current group chat or channel |', usage: 'Add member to current group chat or channel |.' },
+          { keys: 'Alt + N', desc: 'Jump to start of new messages in the current group chat or channel |', usage: 'Jump to start of new messages in the current group chat or channel |.' },
+          { keys: 'Ctrl + K', desc: 'Insert a hyperlink |', usage: 'Insert a hyperlink |.' },
+        ]
+      },
+      {
+        name: 'Phone',
+        shortcuts: [
+          { keys: 'Ctrl + P', desc: 'Call highlighted phone number |', usage: 'Call highlighted phone number |.' },
+          { keys: 'Ctrl + Shift + A', desc: 'Accept inbound call |', usage: 'Accept inbound call |.' },
+          { keys: 'Ctrl + Shift + E', desc: 'End current call |', usage: 'End current call |.' },
+          { keys: 'Ctrl + Shift + D', desc: 'Decline inbound call |', usage: 'Decline inbound call |.' },
+          { keys: 'Ctrl + Shift + M', desc: 'Mute/unmute call |', usage: 'Mute/unmute call |.' },
+          { keys: 'Ctrl + Shift + H', desc: 'Hold/unhold call |', usage: 'Hold/unhold call |.' },
+          { keys: 'Ctrl + Shift + T', desc: 'Transfer call |', usage: 'Transfer call |.' },
+        ]
+      },
+      {
+        name: 'General',
+        shortcuts: [
+          { keys: 'Ctrl + Shift + O', desc: 'Open the AI chat panel (out of meeting) |', usage: 'Open the AI chat panel (out of meeting) |.' },
+          { keys: 'Ctrl + Shift + J', desc: 'Open the Calendar panel |', usage: 'Open the Calendar panel |.' },
+          { keys: 'Alt + F4', desc: 'Close current window |', usage: 'Close current window |.' },
+          { keys: 'Ctrl + F', desc: 'Search |', usage: 'Search |.' },
+          { keys: 'F6', desc: 'Navigate among Zoom popup windows |', usage: 'Navigate among Zoom popup windows |.' },
+          { keys: 'Ctrl + Tab', desc: 'Switch to next product tab |', usage: 'Switch to next product tab |.' },
+          { keys: 'Ctrl + Shift + Tab', desc: 'Switch to previous product tab |', usage: 'Switch to previous product tab |.' },
+          { keys: 'Ctrl + 1-8', desc: 'Switch to the specified product tab |', usage: 'Switch to the specified product tab |.' },
+          { keys: 'Ctrl + 9', desc: 'Switch to the last product tab |', usage: 'Switch to the last product tab |.' },
+          { keys: 'Alt + L', desc: 'Switch between Portrait and Landscape views |', usage: 'Switch between Portrait and Landscape views |.' },
+          { keys: 'Ctrl + Alt + Shift + D', desc: 'Start network diagnostic |', usage: 'Start network diagnostic |.' },
         ]
       },
     ]
@@ -5037,28 +5131,91 @@ const shortcutData = {
   safari: {
     name: 'Safari',
     icon: 'fab fa-safari',
+    source: { name: 'Apple — Safari User Guide: Keyboard shortcuts and gestures', url: 'https://support.apple.com/guide/safari/keyboard-shortcuts-and-gestures-cpsh003/mac' },
     categories: [
       {
-        name: 'Tabs & Windows',
+        name: 'Scroll',
         shortcuts: [
-          { keys: 'Cmd + T', desc: 'New Tab', usage: 'Open a new tab.' },
-          { keys: 'Cmd + W', desc: 'Close Tab', usage: 'Close current tab.' },
-          { keys: 'Cmd + Z', desc: 'Reopen Tab', usage: 'Reopen recently closed tab.' },
-          { keys: 'Ctrl + Tab', desc: 'Next Tab', usage: 'Switch to next tab.' },
-          { keys: 'Cmd + N', desc: 'New Window', usage: 'Open new browser window.' },
-          { keys: 'Cmd + Shift + N', desc: 'Private Window', usage: 'Open private browsing window.' },
+          { keys: 'Arrow Keys', desc: 'Scroll up, down, left, or right |', usage: 'Scroll up, down, left, or right |.' },
+          { keys: 'Option + Arrow Keys', desc: 'Scroll in larger increments |', usage: 'Scroll in larger increments |.' },
+          { keys: 'Page Down or Space', desc: 'Scroll down a screen |', usage: 'Scroll down a screen |.' },
+          { keys: 'Page Up or Shift + Space', desc: 'Scroll up a screen |', usage: 'Scroll up a screen |.' },
+          { keys: 'Cmd + Up or Cmd + Down', desc: 'Scroll to the top-left or bottom-left corner of the webpage |', usage: 'Scroll to the top-left or bottom-left corner of the webpage |.' },
         ]
       },
       {
-        name: 'Navigation',
+        name: 'Current webpage',
         shortcuts: [
-          { keys: 'Cmd + L', desc: 'Address Bar', usage: 'Focus the address bar.' },
-          { keys: 'Cmd + F', desc: 'Find on Page', usage: 'Search text on current page.' },
-          { keys: 'Cmd + D', desc: 'Bookmark', usage: 'Bookmark current page.' },
-          { keys: 'Cmd + Y', desc: 'History', usage: 'Show browsing history.' },
-          { keys: 'Cmd + R', desc: 'Refresh', usage: 'Refresh current page.' },
-          { keys: 'Cmd + Option + R', desc: 'Hard Refresh', usage: 'Refresh ignoring cache.' },
-          { keys: 'Cmd + ,', desc: 'Preferences', usage: 'Open Safari preferences.' },
+          { keys: 'Cmd + F', desc: 'Search the current webpage |', usage: 'Search the current webpage |.' },
+          { keys: 'Tab', desc: 'Highlight the next field or pop-up menu on a webpage', usage: 'Also highlights buttons and other controls if Keyboard Navigation is on in Keyboard settings.' },
+          { keys: 'Option + Tab', desc: 'Highlight the next field, pop-up menu, or clickable item', usage: 'Swap Tab and Option-Tab with "Press Tab to highlight each item on a webpage" in Safari\'s Advanced settings.' },
+          { keys: 'Esc', desc: 'Restore the current webpage address while typing in the Smart Search field |', usage: 'Restore the current webpage address while typing in the Smart Search field |.' },
+          { keys: 'Cmd + L', desc: 'Select the Smart Search field |', usage: 'Select the Smart Search field |.' },
+          { keys: 'Cmd + P', desc: 'Print the current webpage |', usage: 'Print the current webpage |.' },
+          { keys: 'Cmd + C', desc: 'Copy the selected item |', usage: 'Copy the selected item |.' },
+          { keys: 'Cmd + V', desc: 'Paste the most recently copied item |', usage: 'Paste the most recently copied item |.' },
+        ]
+      },
+      {
+        name: 'Tabs',
+        shortcuts: [
+          { keys: 'Shift + Cmd + \\', desc: 'Show tab overview |', usage: 'Show tab overview |.' },
+          { keys: 'Cmd + Return', desc: 'Open the typed address in a new tab', usage: 'After typing in the Smart Search field.' },
+          { keys: 'Shift + Cmd + Return', desc: 'Open the typed address in a new tab and make it active', usage: 'After typing in the Smart Search field.' },
+          { keys: 'Control + Tab or Shift + Cmd + ]', desc: 'Go to the next tab |', usage: 'Go to the next tab |.' },
+          { keys: 'Control + Shift + Tab or Shift + Cmd + [', desc: 'Go to the previous tab |', usage: 'Go to the previous tab |.' },
+          { keys: 'Cmd + 1-8', desc: 'Select one of your first eight tabs |', usage: 'Select one of your first eight tabs |.' },
+          { keys: 'Cmd + 9', desc: 'Select your last tab |', usage: 'Select your last tab |.' },
+          { keys: 'Cmd + W', desc: 'Close the active tab |', usage: 'Close the active tab |.' },
+          { keys: 'Shift + Cmd + T', desc: 'Reopen the last tab you closed', usage: 'Also reopens the last closed window.' },
+        ]
+      },
+      {
+        name: 'Settings',
+        shortcuts: [
+          { keys: 'Shift + Cmd + H', desc: 'Go to your homepage |', usage: 'Go to your homepage |.' },
+          { keys: 'Cmd + ,', desc: 'Change Safari settings |', usage: 'Change Safari settings |.' },
+        ]
+      },
+      {
+        name: 'History',
+        shortcuts: [
+          { keys: 'Cmd + [', desc: 'Go back to the previous webpage |', usage: 'Go back to the previous webpage |.' },
+          { keys: 'Cmd + ]', desc: 'Go forward to the next webpage |', usage: 'Go forward to the next webpage |.' },
+        ]
+      },
+      {
+        name: 'Zoom',
+        shortcuts: [
+          { keys: 'Esc', desc: 'Exit full-screen view |', usage: 'Exit full-screen view |.' },
+          { keys: 'Cmd + + or Cmd + -', desc: 'Zoom website content', usage: 'Hold Option and use View > Make Text Bigger / Smaller to zoom text only.' },
+        ]
+      },
+      {
+        name: 'Window',
+        shortcuts: [
+          { keys: 'Cmd + `', desc: 'Switch to another Safari window |', usage: 'Switch to another Safari window |.' },
+        ]
+      },
+      {
+        name: 'Reading List',
+        shortcuts: [
+          { keys: 'Control + Cmd + 2', desc: 'Show or hide the Reading List sidebar |', usage: 'Show or hide the Reading List sidebar |.' },
+          { keys: 'Shift + Cmd + D', desc: 'Add the current webpage to the Reading List |', usage: 'Add the current webpage to the Reading List |.' },
+          { keys: 'Shift + Cmd + R', desc: 'Open Reader |', usage: 'Open Reader |.' },
+          { keys: 'Esc', desc: 'Close Reader |', usage: 'Close Reader |.' },
+        ]
+      },
+      {
+        name: 'Bookmarks sidebar',
+        shortcuts: [
+          { keys: 'Control + Cmd + 1', desc: 'Show or hide the Bookmarks sidebar |', usage: 'Show or hide the Bookmarks sidebar |.' },
+          { keys: 'Up or Down', desc: 'Select the next bookmark or folder |', usage: 'Select the next bookmark or folder |.' },
+          { keys: 'Space', desc: 'Open the selected bookmark |', usage: 'Open the selected bookmark |.' },
+          { keys: 'Space or Right', desc: 'Open the selected folder |', usage: 'Open the selected folder |.' },
+          { keys: 'Space or Left', desc: 'Close the selected folder |', usage: 'Close the selected folder |.' },
+          { keys: 'Return', desc: 'Change the name or address of the selected bookmark', usage: 'Return again finishes editing.' },
+          { keys: 'Esc', desc: 'Cancel editing a bookmark name |', usage: 'Cancel editing a bookmark name |.' },
         ]
       },
     ]
@@ -5606,29 +5763,187 @@ const shortcutData = {
   gimp: {
     name: 'GIMP',
     icon: 'fas fa-paint-brush',
+    source: { name: 'GIMP 3.0 documentation — Keys and Mouse Reference', url: 'https://docs.gimp.org/3.0/en/key-reference.html' },
     categories: [
       {
-        name: 'Tools',
+        name: 'File',
         shortcuts: [
-          { keys: 'R', desc: 'Rectangle Select', usage: 'Select rectangular area.' },
-          { keys: 'E', desc: 'Ellipse Select', usage: 'Select elliptical area.' },
-          { keys: 'P', desc: 'Pencil', usage: 'Draw with pencil tool.' },
-          { keys: 'N', desc: 'Paintbrush', usage: 'Draw with paintbrush.' },
-          { keys: 'Shift + E', desc: 'Eraser', usage: 'Erase with eraser tool.' },
-          { keys: 'G', desc: 'Gradient', usage: 'Apply gradient fill.' },
-          { keys: 'Shift + B', desc: 'Bucket Fill', usage: 'Fill area with color.' },
-          { keys: 'T', desc: 'Text', usage: 'Add text.' },
-          { keys: 'M', desc: 'Move', usage: 'Move layers or objects.' },
-          { keys: '+/-', desc: 'Zoom', usage: 'Zoom in or out.' },
+          { keys: 'Ctrl + N', desc: 'New image', usage: 'New image.' },
+          { keys: 'Shift + Ctrl + V', desc: 'Create From Clipboard', usage: 'Create From Clipboard.' },
+          { keys: 'Ctrl + O', desc: 'Open image', usage: 'Open image.' },
+          { keys: 'Ctrl + Alt + O', desc: 'Open image as layers', usage: 'Open image as layers.' },
+          { keys: 'Ctrl + 1', desc: 'Open recent image #1', usage: 'Open recent image #1.' },
+          { keys: 'Ctrl + 2', desc: 'Open recent image #2', usage: 'Open recent image #2.' },
+          { keys: 'Ctrl + 3', desc: 'Open recent image #3', usage: 'Open recent image #3.' },
+          { keys: 'Ctrl + 4', desc: 'Open recent image #4', usage: 'Open recent image #4.' },
+          { keys: 'Ctrl + 5', desc: 'Open recent image #5', usage: 'Open recent image #5.' },
+          { keys: 'Ctrl + 6', desc: 'Open recent image #6', usage: 'Open recent image #6.' },
+          { keys: 'Ctrl + 7', desc: 'Open recent image #7', usage: 'Open recent image #7.' },
+          { keys: 'Ctrl + 8', desc: 'Open recent image #8', usage: 'Open recent image #8.' },
+          { keys: 'Ctrl + 9', desc: 'Open recent image #9', usage: 'Open recent image #9.' },
+          { keys: 'Ctrl + 0', desc: 'Open recent image #10', usage: 'Open recent image #10.' },
+          { keys: 'Ctrl + S', desc: 'Save the XCF image', usage: 'Save the XCF image.' },
+          { keys: 'Shift + Ctrl + S', desc: 'Save image with a different name', usage: 'Save image with a different name.' },
+          { keys: 'Ctrl + E', desc: 'Export', usage: 'Export.' },
+          { keys: 'Shift + Ctrl + E', desc: 'Export As…: save image to various file formats', usage: 'Export As…: save image to various file formats.' },
+          { keys: 'Ctrl + P', desc: 'Print…', usage: 'Print….' },
+          { keys: 'Ctrl + Alt + F', desc: 'Show image in file manager', usage: 'Show image in file manager.' },
+          { keys: 'Ctrl + W', desc: 'Close Window', usage: 'Close Window.' },
+          { keys: 'Shift + Ctrl + W', desc: 'Close All', usage: 'Close All.' },
+          { keys: 'Ctrl + Q', desc: 'Quit', usage: 'Quit.' },
         ]
       },
       {
-        name: 'Layers & Image',
+        name: 'Edit',
         shortcuts: [
-          { keys: 'Ctrl + Shift + N', desc: 'New Layer', usage: 'Add a new layer.' },
-          { keys: 'Ctrl + Shift + E', desc: 'Export', usage: 'Export image to file.' },
-          { keys: 'Ctrl + Shift + A', desc: 'Deselect', usage: 'Remove all selections.' },
-          { keys: 'Ctrl + I', desc: 'Invert Colors', usage: 'Invert image colors.' },
+          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Undo.' },
+          { keys: 'Ctrl + Y', desc: 'Redo', usage: 'Redo.' },
+          { keys: 'Ctrl + C', desc: 'Copy selection', usage: 'Copy selection.' },
+          { keys: 'Ctrl Shift + C', desc: 'Copy visible', usage: 'Copy visible.' },
+          { keys: 'Ctrl + X', desc: 'Cut selection', usage: 'Cut selection.' },
+          { keys: 'Ctrl + V', desc: 'Paste clipboard', usage: 'Paste clipboard.' },
+          { keys: 'Ctrl + Alt + V', desc: 'Paste in place', usage: 'Paste in place.' },
+          { keys: 'Ctrl + Shift + V', desc: 'Paste as new image', usage: 'Paste as new image.' },
+          { keys: 'Del', desc: 'Erase selection', usage: 'Erase selection.' },
+          { keys: 'Ctrl + ,', desc: 'Fill with FG Color', usage: 'Fill with FG Color.' },
+          { keys: 'Ctrl + .', desc: 'Fill with BG Color', usage: 'Fill with BG Color.' },
+          { keys: 'Ctrl + ;', desc: 'Fill with Pattern', usage: 'Fill with Pattern.' },
+        ]
+      },
+      {
+        name: 'Select',
+        shortcuts: [
+          { keys: 'Ctrl + T', desc: 'Toggle selections', usage: 'Toggle selections.' },
+          { keys: 'Ctrl + A', desc: 'Select all', usage: 'Select all.' },
+          { keys: 'Shift + Ctrl + A', desc: 'Select none', usage: 'Select none.' },
+          { keys: 'Ctrl + I', desc: 'Invert selection', usage: 'Invert selection.' },
+          { keys: 'Shift + Ctrl + L', desc: 'Float selection', usage: 'Float selection.' },
+          { keys: 'Shift + O', desc: 'Select by color', usage: 'Select by color.' },
+          { keys: 'Shift + V', desc: 'Path to selection', usage: 'Path to selection.' },
+          { keys: 'Shift + Q', desc: 'Toggle Quick Mask', usage: 'Toggle Quick Mask.' },
+        ]
+      },
+      {
+        name: 'View',
+        shortcuts: [
+          { keys: 'F10', desc: 'Main Menu', usage: 'Main Menu.' },
+          { keys: 'F11', desc: 'Toggle fullscreen', usage: 'Toggle fullscreen.' },
+          { keys: 'Tab', desc: 'Toggle the visibility of toolbox and dialogs docks', usage: 'Toggle the visibility of toolbox and dialogs docks.' },
+          { keys: 'Shift + Q', desc: 'Toggle quick Mask', usage: 'Toggle quick Mask.' },
+          { keys: 'Ctrl + T', desc: 'Toggle selection outline visibility', usage: 'Toggle selection outline visibility.' },
+          { keys: 'Ctrl + W', desc: 'Close document window', usage: 'Close document window.' },
+          { keys: 'Shift + J', desc: 'Center image in window', usage: 'Center image in window.' },
+          { keys: 'Shift + Ctrl + J', desc: 'Fit image in window', usage: 'Fit image in window.' },
+          { keys: '+', desc: 'Zoom in', usage: 'Zoom in.' },
+          { keys: '-', desc: 'Zoom out', usage: 'Zoom out.' },
+          { keys: '1', desc: 'Zoom 1:1', usage: 'Zoom 1:1.' },
+          { keys: 'Ctrl + J', desc: 'Shrink wrap', usage: 'Shrink wrap.' },
+          { keys: '!', desc: 'Reset Flip and Rotate', usage: 'Reset Flip and Rotate.' },
+          { keys: 'arrows', desc: 'Scroll canvas', usage: 'Scroll canvas.' },
+          { keys: 'Shift + Ctrl + R', desc: 'Toggle rulers', usage: 'Toggle rulers.' },
+          { keys: 'Shift + Ctrl + T', desc: 'Toggle guides', usage: 'Toggle guides.' },
+        ]
+      },
+      {
+        name: 'Image',
+        shortcuts: [
+          { keys: 'Ctrl + D', desc: 'Duplicate image', usage: 'Duplicate image.' },
+          { keys: 'Ctrl + M', desc: 'Merge visible layers', usage: 'Merge visible layers.' },
+          { keys: 'Alt + Return', desc: 'Image properties', usage: 'Image properties.' },
+        ]
+      },
+      {
+        name: 'Layer',
+        shortcuts: [
+          { keys: 'Shift + Ctrl + N', desc: 'New layer', usage: 'New layer.' },
+          { keys: 'Shift + Ctrl + D', desc: 'Duplicate layers', usage: 'Duplicate layers.' },
+          { keys: 'Page Up', desc: 'Select the layers above', usage: 'Select the layers above.' },
+          { keys: 'Page Down', desc: 'Select the layers below', usage: 'Select the layers below.' },
+          { keys: 'Home', desc: 'Select the first layer', usage: 'Select the first layer.' },
+          { keys: 'End', desc: 'Select the last layer', usage: 'Select the last layer.' },
+          { keys: 'Ctrl + M', desc: 'Merge visible layers', usage: 'Merge visible layers.' },
+          { keys: 'Ctrl + H', desc: 'Anchor layer', usage: 'Anchor layer.' },
+          { keys: 'Shift + Ctrl + O', desc: 'Transform, Offset: shift the pixels in the layer', usage: 'Transform, Offset: shift the pixels in the layer.' },
+        ]
+      },
+      {
+        name: 'Tools',
+        shortcuts: [
+          { keys: 'R', desc: 'Rectangle Select', usage: 'Rectangle Select.' },
+          { keys: 'E', desc: 'Ellipse Select', usage: 'Ellipse Select.' },
+          { keys: 'F', desc: 'Free Select', usage: 'Free Select.' },
+          { keys: 'U', desc: 'Fuzzy Select', usage: 'Fuzzy Select.' },
+          { keys: 'Shift + O', desc: 'Select By Color', usage: 'Select By Color.' },
+          { keys: 'I', desc: 'Scissors Select', usage: 'Scissors Select.' },
+          { keys: 'Shift + B', desc: 'Bucket Fill', usage: 'Bucket Fill.' },
+          { keys: 'G', desc: 'Gradient', usage: 'Gradient.' },
+          { keys: 'N', desc: 'Pencil', usage: 'Pencil.' },
+          { keys: 'P', desc: 'Paintbrush', usage: 'Paintbrush.' },
+          { keys: 'Shift + E', desc: 'Eraser', usage: 'Eraser.' },
+          { keys: 'A', desc: 'Airbrush', usage: 'Airbrush.' },
+          { keys: 'K', desc: 'Ink', usage: 'Ink.' },
+          { keys: 'Y', desc: 'MyPaint Brush', usage: 'MyPaint Brush.' },
+          { keys: 'C', desc: 'Clone', usage: 'Clone.' },
+          { keys: 'H', desc: 'Heal', usage: 'Heal.' },
+          { keys: 'Shift + U', desc: 'Blur/Sharpen', usage: 'Blur/Sharpen.' },
+          { keys: 'S', desc: 'Smudge', usage: 'Smudge.' },
+          { keys: 'Shift + D', desc: 'Dodge/Burn', usage: 'Dodge/Burn.' },
+          { keys: 'Q', desc: 'Alignment', usage: 'Alignment.' },
+          { keys: 'M', desc: 'Move', usage: 'Move.' },
+          { keys: 'Shift + C', desc: 'Crop', usage: 'Crop.' },
+          { keys: 'Shift + R', desc: 'Rotate', usage: 'Rotate.' },
+          { keys: 'Shift + S', desc: 'Scale', usage: 'Scale.' },
+          { keys: 'Shift + H', desc: 'Shear', usage: 'Shear.' },
+          { keys: 'Shift + P', desc: 'Perspective', usage: 'Perspective.' },
+          { keys: 'Shift + W', desc: '3D Transform', usage: '3D Transform.' },
+          { keys: 'Shift + T', desc: 'Unified Transform', usage: 'Unified Transform.' },
+          { keys: 'Shift + L', desc: 'Handle Transform', usage: 'Handle Transform.' },
+          { keys: 'Shift + F', desc: 'Flip', usage: 'Flip.' },
+          { keys: 'Shift + G', desc: 'Cage Transform', usage: 'Cage Transform.' },
+          { keys: 'W', desc: 'Warp Transform', usage: 'Warp Transform.' },
+          { keys: 'B', desc: 'Paths', usage: 'Paths.' },
+          { keys: 'T', desc: 'Text', usage: 'Text.' },
+          { keys: 'O', desc: 'Color Picker', usage: 'Color Picker.' },
+          { keys: 'Shift + M', desc: 'Measure', usage: 'Measure.' },
+          { keys: 'Z', desc: 'Zoom The Zoom tool has some specific reference keys: see Zoom tool .', usage: 'Zoom The Zoom tool has some specific reference keys: see Zoom tool ..' },
+          { keys: 'Ctrl + B', desc: 'Toolbox', usage: 'Toolbox.' },
+          { keys: 'D', desc: 'Default Colors', usage: 'Default Colors.' },
+          { keys: 'X', desc: 'Swap Colors', usage: 'Swap Colors.' },
+        ]
+      },
+      {
+        name: 'Filters',
+        shortcuts: [
+          { keys: 'Ctrl + F', desc: 'Repeat last filter', usage: 'Repeat last filter.' },
+          { keys: 'Shift + Ctrl + F', desc: 'Reshow last filter', usage: 'Reshow last filter.' },
+        ]
+      },
+      {
+        name: 'Dialogs & Windows',
+        shortcuts: [
+          { keys: 'Ctrl + L', desc: 'Layers', usage: 'Layers.' },
+          { keys: 'Shift + Ctrl + B', desc: 'Brushes', usage: 'Brushes.' },
+          { keys: 'Shift + Ctrl + P', desc: 'Patterns', usage: 'Patterns.' },
+          { keys: 'Ctrl + G', desc: 'Gradients', usage: 'Gradients.' },
+          { keys: 'Ctrl + Alt + E', desc: 'Error Console', usage: 'Error Console.' },
+          { keys: 'Enter', desc: 'Set the new value', usage: 'Set the new value.' },
+          { keys: 'Space, Enter', desc: 'Activate current button or list', usage: 'Activate current button or list.' },
+          { keys: 'Ctrl + Alt + Page Up', desc: 'Switch tabs up', usage: 'Switch tabs up.' },
+          { keys: 'Ctrl + Alt + Page Down', desc: 'Switch tabs down', usage: 'Switch tabs down.' },
+          { keys: 'Alt + Up', desc: 'Up-Folder', usage: 'Up-Folder.' },
+          { keys: 'Alt + Down', desc: 'Down-Folder', usage: 'Down-Folder.' },
+          { keys: 'Alt + Home', desc: 'Home-Folder', usage: 'Home-Folder.' },
+          { keys: 'Esc', desc: 'Close Dialog', usage: 'Close Dialog.' },
+          { keys: 'Ctrl + B', desc: 'Raise the Toolbox', usage: 'Raise the Toolbox.' },
+          { keys: 'Tab', desc: 'Toggle between showing and hiding Docks', usage: 'Toggle between showing and hiding Docks.' },
+        ]
+      },
+      {
+        name: 'Help',
+        shortcuts: [
+          { keys: 'F1', desc: 'Help', usage: 'Help.' },
+          { keys: 'Shift + F1', desc: 'Context Help', usage: 'Context Help.' },
+          { keys: '/', desc: 'Search and run a command', usage: 'Search and run a command.' },
         ]
       },
     ]
