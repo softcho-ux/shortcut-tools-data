@@ -3012,35 +3012,222 @@ const shortcutData = {
   jupyter: {
     name: 'Jupyter Notebook',
     icon: 'fas fa-book',
+    source: { name: 'JupyterLab source — default keyboard shortcuts in packages/*/schema/*.json (jupyter.lab.shortcuts)', url: 'https://github.com/jupyterlab/jupyterlab/tree/main/packages' },
     categories: [
       {
-        name: 'Cell Execution',
+        name: 'Notebook',
         shortcuts: [
-          { keys: 'Shift + Enter', desc: 'Run & Select Next', usage: 'Run cell and select next' },
-          { keys: 'Ctrl + Enter', desc: 'Run Cell', usage: 'Run current cell' },
-          { keys: 'Alt + Enter', desc: 'Run & Insert', usage: 'Run cell and insert new cell below' },
+          { keys: 'Tab', desc: 'Invoke notebook', usage: 'Command: completer:invoke-notebook.' },
+          { keys: 'Y', desc: 'Change cell to code', usage: 'Command: notebook:change-cell-to-code.' },
+          { keys: '1', desc: 'Change cell to heading 1', usage: 'Command: notebook:change-cell-to-heading-1.' },
+          { keys: '2', desc: 'Change cell to heading 2', usage: 'Command: notebook:change-cell-to-heading-2.' },
+          { keys: '3', desc: 'Change cell to heading 3', usage: 'Command: notebook:change-cell-to-heading-3.' },
+          { keys: '4', desc: 'Change cell to heading 4', usage: 'Command: notebook:change-cell-to-heading-4.' },
+          { keys: '5', desc: 'Change cell to heading 5', usage: 'Command: notebook:change-cell-to-heading-5.' },
+          { keys: '6', desc: 'Change cell to heading 6', usage: 'Command: notebook:change-cell-to-heading-6.' },
+          { keys: 'M', desc: 'Change cell to markdown', usage: 'Command: notebook:change-cell-to-markdown.' },
+          { keys: 'R', desc: 'Change cell to raw', usage: 'Command: notebook:change-cell-to-raw.' },
+          { keys: 'C', desc: 'Copy cell', usage: 'Command: notebook:copy-cell.' },
+          { keys: 'X', desc: 'Cut cell', usage: 'Command: notebook:cut-cell.' },
+          { keys: 'D, D', desc: 'Delete cell', usage: 'Command: notebook:delete-cell.' },
+          { keys: 'Esc', desc: 'Enter command mode (edit mode)', usage: 'Command: notebook:enter-command-mode.' },
+          { keys: 'Ctrl + M', desc: 'Enter command mode (edit mode)', usage: 'Command: notebook:enter-command-mode.' },
+          { keys: 'Alt + Up', desc: 'Access previous history entry (edit mode)', usage: 'Command: notebook:access-previous-history-entry.' },
+          { keys: 'Alt + Down', desc: 'Access next history entry (edit mode)', usage: 'Command: notebook:access-next-history-entry.' },
+          { keys: 'Enter', desc: 'Enter edit mode', usage: 'Command: notebook:enter-edit-mode.' },
+          { keys: 'Shift + Up', desc: 'Extend marked cells above', usage: 'Command: notebook:extend-marked-cells-above.' },
+          { keys: 'Shift + K', desc: 'Extend marked cells above', usage: 'Command: notebook:extend-marked-cells-above.' },
+          { keys: 'Shift + Home', desc: 'Extend marked cells top', usage: 'Command: notebook:extend-marked-cells-top.' },
+          { keys: 'Shift + Down', desc: 'Extend marked cells below', usage: 'Command: notebook:extend-marked-cells-below.' },
+          { keys: 'Shift + End', desc: 'Extend marked cells bottom', usage: 'Command: notebook:extend-marked-cells-bottom.' },
+          { keys: 'Shift + J', desc: 'Extend marked cells below', usage: 'Command: notebook:extend-marked-cells-below.' },
+          { keys: 'A', desc: 'Insert cell above', usage: 'Command: notebook:insert-cell-above.' },
+          { keys: 'B', desc: 'Insert cell below', usage: 'Command: notebook:insert-cell-below.' },
+          { keys: 'Shift + M', desc: 'Merge cells', usage: 'Command: notebook:merge-cells.' },
+          { keys: 'Ctrl + Backspace', desc: 'Merge cell above', usage: 'Command: notebook:merge-cell-above.' },
+          { keys: 'Ctrl + Shift + M', desc: 'Merge cell below', usage: 'Command: notebook:merge-cell-below.' },
+          { keys: 'Down', desc: 'Move cursor down', usage: 'Command: notebook:move-cursor-down.' },
+          { keys: 'J', desc: 'Move cursor down', usage: 'Command: notebook:move-cursor-down.' },
+          { keys: 'Up', desc: 'Move cursor up', usage: 'Command: notebook:move-cursor-up.' },
+          { keys: 'K', desc: 'Move cursor up', usage: 'Command: notebook:move-cursor-up.' },
+          { keys: 'Left', desc: 'Move cursor heading above or collapse', usage: 'Command: notebook:move-cursor-heading-above-or-collapse.' },
+          { keys: 'Right', desc: 'Move cursor heading below or expand', usage: 'Command: notebook:move-cursor-heading-below-or-expand.' },
+          { keys: 'Shift + A', desc: 'Insert heading above', usage: 'Command: notebook:insert-heading-above.' },
+          { keys: 'Shift + B', desc: 'Insert heading below', usage: 'Command: notebook:insert-heading-below.' },
+          { keys: 'Ctrl + Shift + Left', desc: 'Collapse all headings', usage: 'Command: notebook:collapse-all-headings.' },
+          { keys: 'Ctrl + Shift + Right', desc: 'Expand all headings', usage: 'Command: notebook:expand-all-headings.' },
+          { keys: 'V', desc: 'Paste cell below', usage: 'Command: notebook:paste-cell-below.' },
+          { keys: 'Shift + Z', desc: 'Redo cell action', usage: 'Command: notebook:redo-cell-action.' },
+          { keys: 'Ctrl + Enter', desc: 'Run cell', usage: 'Command: notebook:run-cell.' },
+          { keys: 'Alt + Enter', desc: 'Run cell and insert below', usage: 'Command: notebook:run-cell-and-insert-below.' },
+          { keys: 'Shift + Enter', desc: 'Run cell and select next (edit mode)', usage: 'Command: notebook:run-cell-and-select-next.' },
+          { keys: 'Shift + L', desc: 'Line numbering', usage: 'Command: viewmenu:line-numbering.' },
+          { keys: 'Ctrl + A', desc: 'Select all', usage: 'Command: notebook:select-all.' },
+          { keys: 'Ctrl + Shift + -', desc: 'Split cell at cursor (edit mode)', usage: 'Command: notebook:split-cell-at-cursor.' },
+          { keys: 'Z', desc: 'Undo cell action', usage: 'Command: notebook:undo-cell-action.' },
+          { keys: 'Shift + R', desc: 'Toggle render side by side current', usage: 'Command: notebook:toggle-render-side-by-side-current.' },
+          { keys: 'Ctrl + Shift + Up', desc: 'Move cell up', usage: 'Command: notebook:move-cell-up.' },
+          { keys: 'Ctrl + Shift + Down', desc: 'Move cell down', usage: 'Command: notebook:move-cell-down.' },
         ]
       },
       {
-        name: 'Cell Management',
+        name: 'Application & layout',
         shortcuts: [
-          { keys: 'A', desc: 'Insert Above', usage: 'Insert new cell above current' },
-          { keys: 'B', desc: 'Insert Below', usage: 'Insert new cell below current' },
-          { keys: 'DD', desc: 'Delete Cell', usage: 'Delete current cell' },
-          { keys: 'M', desc: 'Markdown Cell', usage: 'Convert to markdown cell' },
-          { keys: 'Y', desc: 'Code Cell', usage: 'Convert to code cell' },
-          { keys: 'C', desc: 'Copy Cell', usage: 'Copy current cell' },
-          { keys: 'X', desc: 'Cut Cell', usage: 'Cut current cell' },
-          { keys: 'V', desc: 'Paste Cell', usage: 'Paste copied cell' },
+          { keys: 'Ctrl + Shift + ]', desc: 'Activate next tab', usage: 'Command: application:activate-next-tab.' },
+          { keys: 'Ctrl + Shift + [', desc: 'Activate previous tab', usage: 'Command: application:activate-previous-tab.' },
+          { keys: 'Ctrl + Shift + .', desc: 'Activate next tab bar', usage: 'Command: application:activate-next-tab-bar.' },
+          { keys: 'Ctrl + Shift + ,', desc: 'Activate previous tab bar', usage: 'Command: application:activate-previous-tab-bar.' },
+          { keys: 'Alt + W', desc: 'Close', usage: 'Command: application:close.' },
+          { keys: 'Ctrl + Shift + D', desc: 'Toggle mode', usage: 'Command: application:toggle-mode.' },
+          { keys: 'Ctrl + B', desc: 'Toggle left area', usage: 'Command: application:toggle-left-area.' },
+          { keys: 'Ctrl + J', desc: 'Toggle right area', usage: 'Command: application:toggle-right-area.' },
+          { keys: 'F11', desc: 'Toggle fullscreen mode', usage: 'Command: application:toggle-fullscreen-mode.' },
+          { keys: 'Alt + 1', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + 2', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + 3', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + 4', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + 5', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + 6', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + 7', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + 8', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + 9', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + 0', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + Shift + 1', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + Shift + 2', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + Shift + 3', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + Shift + 4', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + Shift + 5', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + Shift + 6', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + Shift + 7', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + Shift + 8', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + Shift + 9', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Alt + Shift + 0', desc: 'Toggle sidebar widget', usage: 'Command: application:toggle-sidebar-widget.' },
+          { keys: 'Ctrl + Shift + U', desc: 'Show panel', usage: 'Command: property-inspector:show-panel.' },
         ]
       },
       {
-        name: 'Editing',
+        name: 'File browser',
         shortcuts: [
-          { keys: 'Enter', desc: 'Edit Mode', usage: 'Enter edit mode for cell' },
-          { keys: 'Esc', desc: 'Command Mode', usage: 'Enter command mode' },
-          { keys: 'Ctrl + /', desc: 'Toggle Comment', usage: 'Comment/uncomment selected lines' },
-          { keys: 'Tab', desc: 'Autocomplete', usage: 'Show code autocomplete' },
+          { keys: 'Backspace', desc: 'Go up', usage: 'Command: filebrowser:go-up.' },
+          { keys: 'Delete', desc: 'Delete', usage: 'Command: filebrowser:delete.' },
+          { keys: 'Ctrl + X', desc: 'Cut', usage: 'Command: filebrowser:cut.' },
+          { keys: 'Ctrl + C', desc: 'Copy', usage: 'Command: filebrowser:copy.' },
+          { keys: 'Ctrl + V', desc: 'Paste', usage: 'Command: filebrowser:paste.' },
+          { keys: 'F2', desc: 'Rename', usage: 'Command: filebrowser:rename.' },
+          { keys: 'Ctrl + D', desc: 'Duplicate', usage: 'Command: filebrowser:duplicate.' },
+          { keys: 'Ctrl + A', desc: 'Select all', usage: 'Command: filebrowser:select-all.' },
+          { keys: 'Ctrl + Shift + F', desc: 'Show panel', usage: 'Command: filebrowser:show-panel.' },
+        ]
+      },
+      {
+        name: 'Image viewer',
+        shortcuts: [
+          { keys: 'H', desc: 'Flip horizontal', usage: 'Command: imageviewer:flip-horizontal.' },
+          { keys: 'V', desc: 'Flip vertical', usage: 'Command: imageviewer:flip-vertical.' },
+          { keys: 'I', desc: 'Invert colors', usage: 'Command: imageviewer:invert-colors.' },
+          { keys: '0', desc: 'Reset image', usage: 'Command: imageviewer:reset-image.' },
+          { keys: ']', desc: 'Rotate clockwise', usage: 'Command: imageviewer:rotate-clockwise.' },
+          { keys: '[', desc: 'Rotate counterclockwise', usage: 'Command: imageviewer:rotate-counterclockwise.' },
+          { keys: '=', desc: 'Zoom in', usage: 'Command: imageviewer:zoom-in.' },
+          { keys: '-', desc: 'Zoom out', usage: 'Command: imageviewer:zoom-out.' },
+        ]
+      },
+      {
+        name: 'Mainmenu',
+        shortcuts: [
+          { keys: 'Ctrl + Shift + Z', desc: 'Redo', usage: 'Command: editmenu:redo.' },
+          { keys: 'Ctrl + Z', desc: 'Undo', usage: 'Command: editmenu:undo.' },
+          { keys: 'Ctrl + Shift + Q', desc: 'Close and cleanup', usage: 'Command: filemenu:close-and-cleanup.' },
+          { keys: 'I, I', desc: 'Interrupt', usage: 'Command: kernelmenu:interrupt.' },
+          { keys: '0, 0', desc: 'Restart', usage: 'Command: kernelmenu:restart.' },
+          { keys: 'Shift + Enter', desc: 'Run', usage: 'Command: runmenu:run.' },
+          { keys: 'Ctrl + Shift + \'', desc: 'Activate previously used tab', usage: 'Command: tabsmenu:activate-previously-used-tab.' },
+          { keys: 'Ctrl + Shift + T', desc: 'Reopen last', usage: 'Command: recentmenu:reopen-last.' },
+        ]
+      },
+      {
+        name: 'Code editor',
+        shortcuts: [
+          { keys: 'Ctrl + D', desc: 'Delete line', usage: 'Command: codemirror:delete-line.' },
+          { keys: 'Ctrl + Shift + K', desc: 'Delete line', usage: 'Command: codemirror:delete-line.' },
+          { keys: 'Alt + A', desc: 'Toggle block comment', usage: 'Command: codemirror:toggle-block-comment.' },
+          { keys: 'Ctrl + /', desc: 'Toggle comment', usage: 'Command: codemirror:toggle-comment.' },
+          { keys: 'Ctrl + Shift + D', desc: 'Select next occurrence', usage: 'Command: codemirror:select-next-occurrence.' },
+          { keys: 'Ctrl + B', desc: 'Markdown toggle bold', usage: 'Command: codemirror:markdown-toggle-bold.' },
+        ]
+      },
+      {
+        name: 'Debugger',
+        shortcuts: [
+          { keys: 'Ctrl + Shift + E', desc: 'Show panel', usage: 'Command: debugger:show-panel.' },
+          { keys: 'F9', desc: 'Continue', usage: 'Command: debugger:continue.' },
+          { keys: 'Shift + F9', desc: 'Terminate', usage: 'Command: debugger:terminate.' },
+          { keys: 'F10', desc: 'Next', usage: 'Command: debugger:next.' },
+          { keys: 'F11', desc: 'StepIn', usage: 'Command: debugger:stepIn.' },
+          { keys: 'Shift + F11', desc: 'StepOut', usage: 'Command: debugger:stepOut.' },
+        ]
+      },
+      {
+        name: 'Search',
+        shortcuts: [
+          { keys: 'Ctrl + F', desc: 'Start', usage: 'Command: documentsearch:start.' },
+          { keys: 'Ctrl + H', desc: 'StartWithReplace', usage: 'Command: documentsearch:startWithReplace.' },
+          { keys: 'Ctrl + G', desc: 'HighlightNext', usage: 'Command: documentsearch:highlightNext.' },
+          { keys: 'Ctrl + Shift + G', desc: 'HighlightPrevious', usage: 'Command: documentsearch:highlightPrevious.' },
+          { keys: 'Alt + L', desc: 'ToggleSearchInSelection', usage: 'Command: documentsearch:toggleSearchInSelection.' },
+          { keys: 'Esc', desc: 'End', usage: 'Command: documentsearch:end.' },
+        ]
+      },
+      {
+        name: 'Completer',
+        shortcuts: [
+          { keys: 'Alt + ]', desc: 'Next', usage: 'Command: inline-completer:next.' },
+          { keys: 'Alt + [', desc: 'Previous', usage: 'Command: inline-completer:previous.' },
+          { keys: 'Tab', desc: 'Accept', usage: 'Command: inline-completer:accept.' },
+          { keys: 'Alt + End', desc: 'Accept', usage: 'Command: inline-completer:accept.' },
+          { keys: 'Alt + \\', desc: 'Invoke', usage: 'Command: inline-completer:invoke.' },
+        ]
+      },
+      {
+        name: 'Console',
+        shortcuts: [
+          { keys: 'Tab', desc: 'Invoke console', usage: 'Command: completer:invoke-console.' },
+          { keys: 'Shift + Enter', desc: 'Run forced', usage: 'Command: console:run-forced.' },
+          { keys: 'Ctrl + Enter', desc: 'Linebreak', usage: 'Command: console:linebreak.' },
+          { keys: 'Enter', desc: 'Run unforced', usage: 'Command: console:run-unforced.' },
+        ]
+      },
+      {
+        name: 'Tooltip',
+        shortcuts: [
+          { keys: 'Esc', desc: 'Dismiss', usage: 'Command: tooltip:dismiss.' },
+          { keys: 'Shift + Tab', desc: 'Launch console', usage: 'Command: tooltip:launch-console.' },
+          { keys: 'Shift + Tab', desc: 'Launch file', usage: 'Command: tooltip:launch-file.' },
+          { keys: 'Shift + Tab', desc: 'Launch notebook', usage: 'Command: tooltip:launch-notebook.' },
+        ]
+      },
+      {
+        name: 'Command palette & settings',
+        shortcuts: [
+          { keys: 'Ctrl + Shift + C', desc: 'Activate command palette', usage: 'Command: apputils:activate-command-palette.' },
+          { keys: 'Ctrl + P', desc: 'Print', usage: 'Command: apputils:print.' },
+          { keys: 'Ctrl + Shift + H', desc: 'Display shortcuts', usage: 'Command: apputils:display-shortcuts.' },
+        ]
+      },
+      {
+        name: 'Other panels',
+        shortcuts: [
+          { keys: 'Ctrl + S', desc: 'Save', usage: 'Command: docmanager:save.' },
+          { keys: 'Ctrl + Shift + S', desc: 'Save as', usage: 'Command: docmanager:save-as.' },
+          { keys: 'Ctrl + Shift + B', desc: 'Show panel', usage: 'Command: running:show-panel.' },
+          { keys: 'Ctrl + Alt + A', desc: 'Show modal', usage: 'Command: running:show-modal.' },
+          { keys: 'Ctrl + ,', desc: 'Open', usage: 'Command: settingeditor:open.' },
+          { keys: 'Ctrl + S', desc: 'Save', usage: 'Command: settingeditor:save.' },
+          { keys: 'Ctrl + Shift + X', desc: 'Show panel', usage: 'Command: extensionmanager:show-panel.' },
+          { keys: 'Tab', desc: 'Invoke file', usage: 'Command: completer:invoke-file.' },
+          { keys: 'Ctrl + I', desc: 'Toggle', usage: 'Command: inspector:toggle.' },
+          { keys: 'Ctrl + Shift + L', desc: 'Create', usage: 'Command: launcher:create.' },
+          { keys: 'Ctrl + Shift + K', desc: 'Show panel', usage: 'Command: toc:show-panel.' },
         ]
       },
     ]
@@ -10795,20 +10982,336 @@ const shortcutData = {
   emacs: {
     name: 'Emacs',
     icon: 'fas fa-code',
+    source: { name: 'GNU Emacs Reference Card (version 31), gnu.org', url: 'https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf' },
     categories: [
       {
-        name: 'Basic Editing',
+        name: 'Leaving Emacs',
         shortcuts: [
-          { keys: 'C-x C-s', desc: 'Save', usage: 'Save the current file.' },
-          { keys: 'C-x C-f', desc: 'Open file', usage: 'Open or create a file.' },
-          { keys: 'C-x C-c', desc: 'Quit', usage: 'Quit Emacs.' },
-          { keys: 'C-g', desc: 'Cancel', usage: 'Cancel current command.' },
-          { keys: 'C-/', desc: 'Undo', usage: 'Undo last action.' },
-          { keys: 'C-w', desc: 'Cut', usage: 'Cut selected region.' },
-          { keys: 'M-w', desc: 'Copy', usage: 'Copy selected region.' },
-          { keys: 'C-y', desc: 'Paste', usage: 'Paste (yank) killed text.' },
-          { keys: 'C-s', desc: 'Search', usage: 'Start incremental search.' },
-          { keys: 'M-x', desc: 'Execute command', usage: 'Run a command by name.' },
+          { keys: 'Ctrl + z', desc: 'iconify Emacs (or suspend it in terminal)', usage: 'Iconify Emacs (or suspend it in terminal).' },
+          { keys: 'Ctrl + x or Ctrl + c', desc: 'exit Emacs permanently', usage: 'Exit Emacs permanently.' },
+        ]
+      },
+      {
+        name: 'Files',
+        shortcuts: [
+          { keys: 'Ctrl + x or Ctrl + f', desc: 'read a file into Emacs', usage: 'Read a file into Emacs.' },
+          { keys: 'Ctrl + x or Ctrl + s', desc: 'save a file back to disk', usage: 'Save a file back to disk.' },
+          { keys: 'Ctrl + x, s', desc: 'save all files', usage: 'Save all files.' },
+          { keys: 'Ctrl + x, i', desc: 'insert contents of another file into this buffer', usage: 'Insert contents of another file into this buffer.' },
+          { keys: 'Ctrl + x or Ctrl + v', desc: 'replace this file with the file you really want', usage: 'Replace this file with the file you really want.' },
+          { keys: 'Ctrl + x or Ctrl + w', desc: 'write buffer to a specified file', usage: 'Write buffer to a specified file.' },
+          { keys: 'Ctrl + x or Ctrl + q', desc: 'toggle read-only status of buffer', usage: 'Toggle read-only status of buffer.' },
+        ]
+      },
+      {
+        name: 'Getting Help',
+        shortcuts: [
+          { keys: 'Ctrl + x, 1', desc: 'remove help window', usage: 'Remove help window.' },
+          { keys: 'Ctrl + Alt + v', desc: 'scroll help window', usage: 'Scroll help window.' },
+          { keys: 'Ctrl + h, a', desc: 'apropos: show commands matching a string', usage: 'Apropos: show commands matching a string.' },
+          { keys: 'Ctrl + h, k', desc: 'describe the function a key runs', usage: 'Describe the function a key runs.' },
+          { keys: 'Ctrl + h, f', desc: 'describe a function', usage: 'Describe a function.' },
+          { keys: 'Ctrl + h, m', desc: 'get mode-specific information', usage: 'Get mode-specific information.' },
+        ]
+      },
+      {
+        name: 'Error Recovery',
+        shortcuts: [
+          { keys: 'Alt + x, recover-session', desc: 'recover files lost by a system crash', usage: 'Recover files lost by a system crash.' },
+          { keys: 'Ctrl + x, u or Ctrl + _', desc: 'undo an unwanted change', usage: 'Undo an unwanted change.' },
+          { keys: 'Alt + x, revert-buffer', desc: 'restore a buffer to its original contents', usage: 'Restore a buffer to its original contents.' },
+          { keys: 'Ctrl + l', desc: 'redraw garbaged screen', usage: 'Redraw garbaged screen.' },
+        ]
+      },
+      {
+        name: 'Incremental Search',
+        shortcuts: [
+          { keys: 'Ctrl + s', desc: 'search forward', usage: 'Search forward.' },
+          { keys: 'Ctrl + r', desc: 'search backward', usage: 'Search backward.' },
+          { keys: 'Ctrl + Alt + s', desc: 'regular expression search', usage: 'Regular expression search.' },
+          { keys: 'Ctrl + Alt + r', desc: 'reverse regular expression search', usage: 'Reverse regular expression search.' },
+          { keys: 'Alt + p', desc: 'select previous search string', usage: 'Select previous search string.' },
+          { keys: 'Alt + n', desc: 'select next search string', usage: 'Select next search string.' },
+          { keys: 'Enter', desc: 'exit incremental search', usage: 'Exit incremental search.' },
+          { keys: 'Backspace', desc: 'undo effect of last character', usage: 'Undo effect of last character.' },
+          { keys: 'Ctrl + g', desc: 'abort current search', usage: 'Abort current search.' },
+        ]
+      },
+      {
+        name: 'Motion',
+        shortcuts: [
+          { keys: 'Ctrl + b', desc: 'character (backward)', usage: 'Character (backward).' },
+          { keys: 'Ctrl + f', desc: 'character (forward)', usage: 'Character (forward).' },
+          { keys: 'Alt + b', desc: 'word (backward)', usage: 'Word (backward).' },
+          { keys: 'Alt + f', desc: 'word (forward)', usage: 'Word (forward).' },
+          { keys: 'Ctrl + p', desc: 'line (backward)', usage: 'Line (backward).' },
+          { keys: 'Ctrl + n', desc: 'line (forward)', usage: 'Line (forward).' },
+          { keys: 'Ctrl + a', desc: 'go to line beginning (or end) (backward)', usage: 'Go to line beginning (or end) (backward).' },
+          { keys: 'Ctrl + e', desc: 'go to line beginning (or end) (forward)', usage: 'Go to line beginning (or end) (forward).' },
+          { keys: 'Alt + a', desc: 'sentence (backward)', usage: 'Sentence (backward).' },
+          { keys: 'Alt + e', desc: 'sentence (forward)', usage: 'Sentence (forward).' },
+          { keys: 'Alt + {', desc: 'paragraph (backward)', usage: 'Paragraph (backward).' },
+          { keys: 'Alt + }', desc: 'paragraph (forward)', usage: 'Paragraph (forward).' },
+          { keys: 'Ctrl + x, [', desc: 'page (backward)', usage: 'Page (backward).' },
+          { keys: 'Ctrl + x, ]', desc: 'page (forward)', usage: 'Page (forward).' },
+          { keys: 'Ctrl + Alt + b', desc: 'sexp (backward)', usage: 'Sexp (backward).' },
+          { keys: 'Ctrl + Alt + f', desc: 'sexp (forward)', usage: 'Sexp (forward).' },
+          { keys: 'Ctrl + Alt + a', desc: 'function (backward)', usage: 'Function (backward).' },
+          { keys: 'Ctrl + Alt + e', desc: 'function (forward)', usage: 'Function (forward).' },
+          { keys: 'Alt + <', desc: 'go to buffer beginning (or end) (backward)', usage: 'Go to buffer beginning (or end) (backward).' },
+          { keys: 'Alt + >', desc: 'go to buffer beginning (or end) (forward)', usage: 'Go to buffer beginning (or end) (forward).' },
+          { keys: 'Ctrl + v', desc: 'scroll to next screen', usage: 'Scroll to next screen.' },
+          { keys: 'Alt + v', desc: 'scroll to previous screen', usage: 'Scroll to previous screen.' },
+          { keys: 'Ctrl + x, <', desc: 'scroll left', usage: 'Scroll left.' },
+          { keys: 'Ctrl + x, >', desc: 'scroll right', usage: 'Scroll right.' },
+          { keys: 'Ctrl + l', desc: 'scroll current line to center, top, bottom', usage: 'Scroll current line to center, top, bottom.' },
+          { keys: 'Alt + g, g', desc: 'goto line', usage: 'Goto line.' },
+          { keys: 'Alt + g, c', desc: 'goto char', usage: 'Goto char.' },
+          { keys: 'Alt + m', desc: 'back to indentation', usage: 'Back to indentation.' },
+        ]
+      },
+      {
+        name: 'Killing and Deleting',
+        shortcuts: [
+          { keys: 'Backspace', desc: 'character (delete, not kill) (backward)', usage: 'Character (delete, not kill) (backward).' },
+          { keys: 'Ctrl + d', desc: 'character (delete, not kill) (forward)', usage: 'Character (delete, not kill) (forward).' },
+          { keys: 'Alt + Backspace', desc: 'word (backward)', usage: 'Word (backward).' },
+          { keys: 'Alt + d', desc: 'word (forward)', usage: 'Word (forward).' },
+          { keys: 'Alt + 0 or Ctrl + k', desc: 'line (to end of) (backward)', usage: 'Line (to end of) (backward).' },
+          { keys: 'Ctrl + k', desc: 'line (to end of) (forward)', usage: 'Line (to end of) (forward).' },
+          { keys: 'Ctrl + x, Backspace', desc: 'sentence (backward)', usage: 'Sentence (backward).' },
+          { keys: 'Alt + k', desc: 'sentence (forward)', usage: 'Sentence (forward).' },
+          { keys: 'Alt + - or Ctrl + Alt + k', desc: 'sexp (backward)', usage: 'Sexp (backward).' },
+          { keys: 'Ctrl + Alt + k', desc: 'sexp (forward)', usage: 'Sexp (forward).' },
+          { keys: 'Ctrl + w', desc: 'kill region', usage: 'Kill region.' },
+          { keys: 'Alt + w', desc: 'copy region to kill ring', usage: 'Copy region to kill ring.' },
+          { keys: 'Alt + z, char', desc: 'kill through next occurrence of char', usage: 'Kill through next occurrence of char.' },
+          { keys: 'Ctrl + y', desc: 'yank back last thing killed', usage: 'Yank back last thing killed.' },
+          { keys: 'Alt + y', desc: 'replace last yank with previous kill', usage: 'Replace last yank with previous kill.' },
+        ]
+      },
+      {
+        name: 'Marking',
+        shortcuts: [
+          { keys: 'Ctrl + @ or Ctrl + Space', desc: 'set mark here', usage: 'Set mark here.' },
+          { keys: 'Ctrl + x or Ctrl + x', desc: 'exchange point and mark', usage: 'Exchange point and mark.' },
+          { keys: 'Alt + @', desc: 'set mark arg words away', usage: 'Set mark arg words away.' },
+          { keys: 'Alt + h', desc: 'mark paragraph', usage: 'Mark paragraph.' },
+          { keys: 'Ctrl + x or Ctrl + p', desc: 'mark page', usage: 'Mark page.' },
+          { keys: 'Ctrl + Alt + @', desc: 'mark sexp', usage: 'Mark sexp.' },
+          { keys: 'Ctrl + Alt + h', desc: 'mark function', usage: 'Mark function.' },
+          { keys: 'Ctrl + x, h', desc: 'mark entire buffer', usage: 'Mark entire buffer.' },
+        ]
+      },
+      {
+        name: 'Query Replace',
+        shortcuts: [
+          { keys: 'Alt + %', desc: 'interactively replace a text string', usage: 'Interactively replace a text string.' },
+          { keys: 'Alt + x, query-replace-regexp', desc: 'using regular expressions', usage: 'Using regular expressions.' },
+        ]
+      },
+      {
+        name: 'Query Replace responses',
+        shortcuts: [
+          { keys: 'Space or y', desc: 'replace this one, go on to next', usage: 'Replace this one, go on to next.' },
+          { keys: 'Backspace or n', desc: 'skip to next without replacing', usage: 'Skip to next without replacing.' },
+          { keys: 'Enter', desc: 'exit query-replace', usage: 'Exit query-replace.' },
+          { keys: 'Ctrl + r', desc: 'enter recursive edit (C-M-c to exit)', usage: 'Enter recursive edit (C-M-c to exit).' },
+        ]
+      },
+      {
+        name: 'Multiple Windows',
+        shortcuts: [
+          { keys: 'Ctrl + x, 1', desc: 'delete all other windows', usage: 'Delete all other windows.' },
+          { keys: 'Ctrl + x, 5, 1', desc: 'delete all other windows (frame)', usage: 'Delete all other windows (frame).' },
+          { keys: 'Ctrl + x, 2', desc: 'split window, above and below', usage: 'Split window, above and below.' },
+          { keys: 'Ctrl + x, 5, 2', desc: 'split window, above and below (frame)', usage: 'Split window, above and below (frame).' },
+          { keys: 'Ctrl + x, 0', desc: 'delete this window', usage: 'Delete this window.' },
+          { keys: 'Ctrl + x, 5, 0', desc: 'delete this window (frame)', usage: 'Delete this window (frame).' },
+          { keys: 'Ctrl + x, 3', desc: 'split window, side by side', usage: 'Split window, side by side.' },
+          { keys: 'Ctrl + Alt + v', desc: 'scroll other window', usage: 'Scroll other window.' },
+          { keys: 'Ctrl + x, o', desc: 'switch cursor to another window', usage: 'Switch cursor to another window.' },
+          { keys: 'Ctrl + x, 5, o', desc: 'switch cursor to another window (frame)', usage: 'Switch cursor to another window (frame).' },
+          { keys: 'Ctrl + x, 4, b', desc: 'select buffer in other window', usage: 'Select buffer in other window.' },
+          { keys: 'Ctrl + x, 5, b', desc: 'select buffer in other window (frame)', usage: 'Select buffer in other window (frame).' },
+          { keys: 'Ctrl + x, 4, f', desc: 'find file in other window', usage: 'Find file in other window.' },
+          { keys: 'Ctrl + x, 5, f', desc: 'find file in other window (frame)', usage: 'Find file in other window (frame).' },
+          { keys: 'Ctrl + x, 4, r', desc: 'find file read-only in other window', usage: 'Find file read-only in other window.' },
+          { keys: 'Ctrl + x, 5, r', desc: 'find file read-only in other window (frame)', usage: 'Find file read-only in other window (frame).' },
+          { keys: 'Ctrl + x, 4, d', desc: 'run Dired in other window', usage: 'Run Dired in other window.' },
+          { keys: 'Ctrl + x, 5, d', desc: 'run Dired in other window (frame)', usage: 'Run Dired in other window (frame).' },
+          { keys: 'Ctrl + x, 4, .', desc: 'find tag in other window', usage: 'Find tag in other window.' },
+          { keys: 'Ctrl + x, 5, .', desc: 'find tag in other window (frame)', usage: 'Find tag in other window (frame).' },
+          { keys: 'Ctrl + x, ^', desc: 'grow window taller', usage: 'Grow window taller.' },
+          { keys: 'Ctrl + x, {', desc: 'shrink window narrower', usage: 'Shrink window narrower.' },
+          { keys: 'Ctrl + x, }', desc: 'grow window wider', usage: 'Grow window wider.' },
+        ]
+      },
+      {
+        name: 'Formatting',
+        shortcuts: [
+          { keys: 'Tab', desc: 'indent current line (mode-dependent)', usage: 'Indent current line (mode-dependent).' },
+          { keys: 'Ctrl + Alt + \\', desc: 'indent region (mode-dependent)', usage: 'Indent region (mode-dependent).' },
+          { keys: 'Ctrl + Alt + q', desc: 'indent sexp (mode-dependent)', usage: 'Indent sexp (mode-dependent).' },
+          { keys: 'Ctrl + x, Tab', desc: 'indent region rigidly arg columns', usage: 'Indent region rigidly arg columns.' },
+          { keys: 'Alt + ;', desc: 'indent for comment', usage: 'Indent for comment.' },
+          { keys: 'Ctrl + o', desc: 'insert newline after point', usage: 'Insert newline after point.' },
+          { keys: 'Ctrl + Alt + o', desc: 'move rest of line vertically down', usage: 'Move rest of line vertically down.' },
+          { keys: 'Ctrl + x or Ctrl + o', desc: 'delete blank lines around point', usage: 'Delete blank lines around point.' },
+          { keys: 'Alt + ^', desc: 'join line with previous (with arg, next)', usage: 'Join line with previous (with arg, next).' },
+          { keys: 'Alt + \\', desc: 'delete all white space around point', usage: 'Delete all white space around point.' },
+          { keys: 'Alt + Space', desc: 'put exactly one space at point', usage: 'Put exactly one space at point.' },
+          { keys: 'Alt + q', desc: 'fill paragraph', usage: 'Fill paragraph.' },
+          { keys: 'Ctrl + x, f', desc: 'set fill column to arg', usage: 'Set fill column to arg.' },
+          { keys: 'Ctrl + x, .', desc: 'set prefix each line starts with', usage: 'Set prefix each line starts with.' },
+        ]
+      },
+      {
+        name: 'Case Change',
+        shortcuts: [
+          { keys: 'Alt + u', desc: 'uppercase word', usage: 'Uppercase word.' },
+          { keys: 'Alt + l', desc: 'lowercase word', usage: 'Lowercase word.' },
+          { keys: 'Alt + c', desc: 'capitalize word', usage: 'Capitalize word.' },
+          { keys: 'Ctrl + x or Ctrl + u', desc: 'uppercase region', usage: 'Uppercase region.' },
+          { keys: 'Ctrl + x or Ctrl + l', desc: 'lowercase region', usage: 'Lowercase region.' },
+        ]
+      },
+      {
+        name: 'The Minibuffer',
+        shortcuts: [
+          { keys: 'Tab', desc: 'complete as much as possible', usage: 'Complete as much as possible.' },
+          { keys: 'Space', desc: 'complete up to one word', usage: 'Complete up to one word.' },
+          { keys: 'Enter', desc: 'complete and execute', usage: 'Complete and execute.' },
+          { keys: 'Alt + p', desc: 'fetch previous minibuffer input', usage: 'Fetch previous minibuffer input.' },
+          { keys: 'Alt + n', desc: 'fetch later minibuffer input or default', usage: 'Fetch later minibuffer input or default.' },
+          { keys: 'Alt + r', desc: 'regexp search backward through history', usage: 'Regexp search backward through history.' },
+          { keys: 'Alt + s', desc: 'regexp search forward through history', usage: 'Regexp search forward through history.' },
+          { keys: 'Ctrl + g', desc: 'abort command', usage: 'Abort command.' },
+        ]
+      },
+      {
+        name: 'Buffers',
+        shortcuts: [
+          { keys: 'Ctrl + x, b', desc: 'select another buffer', usage: 'Select another buffer.' },
+          { keys: 'Ctrl + x or Ctrl + b', desc: 'list all buffers', usage: 'List all buffers.' },
+          { keys: 'Ctrl + x, k', desc: 'kill a buffer', usage: 'Kill a buffer.' },
+        ]
+      },
+      {
+        name: 'Transposing',
+        shortcuts: [
+          { keys: 'Ctrl + t', desc: 'transpose characters', usage: 'Transpose characters.' },
+          { keys: 'Alt + t', desc: 'transpose words', usage: 'Transpose words.' },
+          { keys: 'Ctrl + x or Ctrl + t', desc: 'transpose lines', usage: 'Transpose lines.' },
+          { keys: 'Ctrl + Alt + t', desc: 'transpose sexps', usage: 'Transpose sexps.' },
+        ]
+      },
+      {
+        name: 'Spelling Check',
+        shortcuts: [
+          { keys: 'Alt + $', desc: 'check spelling of current word', usage: 'Check spelling of current word.' },
+          { keys: 'Alt + x, ispell-region', desc: 'check spelling of all words in region', usage: 'Check spelling of all words in region.' },
+          { keys: 'Alt + x, ispell-buffer', desc: 'check spelling of entire buffer', usage: 'Check spelling of entire buffer.' },
+          { keys: 'Alt + x, flyspell-mode', desc: 'toggle on-the-fly spell checking', usage: 'Toggle on-the-fly spell checking.' },
+        ]
+      },
+      {
+        name: 'Tags',
+        shortcuts: [
+          { keys: 'Alt + .', desc: 'find a tag (a definition)', usage: 'Find a tag (a definition).' },
+          { keys: 'Alt + x, visit-tags-table', desc: 'specify a new tags file', usage: 'Specify a new tags file.' },
+          { keys: 'Alt + x, tags-search', desc: 'regexp search on all files in tags table', usage: 'Regexp search on all files in tags table.' },
+          { keys: 'Alt + x, tags-query-replace', desc: 'run query-replace on all the files', usage: 'Run query-replace on all the files.' },
+        ]
+      },
+      {
+        name: 'Shells',
+        shortcuts: [
+          { keys: 'Alt + !', desc: 'execute a shell command', usage: 'Execute a shell command.' },
+          { keys: 'Alt + &', desc: 'execute a shell command asynchronously', usage: 'Execute a shell command asynchronously.' },
+          { keys: 'Alt + |', desc: 'run a shell command on the region', usage: 'Run a shell command on the region.' },
+          { keys: 'Ctrl + u or Alt + |', desc: 'filter region through a shell command', usage: 'Filter region through a shell command.' },
+          { keys: 'Alt + x, shell', desc: 'start a shell in window *shell*', usage: 'Start a shell in window *shell*.' },
+        ]
+      },
+      {
+        name: 'Rectangles',
+        shortcuts: [
+          { keys: 'Ctrl + x, r, r', desc: 'copy rectangle to register', usage: 'Copy rectangle to register.' },
+          { keys: 'Ctrl + x, r, k', desc: 'kill rectangle', usage: 'Kill rectangle.' },
+          { keys: 'Ctrl + x, r, y', desc: 'yank rectangle', usage: 'Yank rectangle.' },
+          { keys: 'Ctrl + x, r, o', desc: 'open rectangle, shifting text right', usage: 'Open rectangle, shifting text right.' },
+          { keys: 'Ctrl + x, r, c', desc: 'blank out rectangle', usage: 'Blank out rectangle.' },
+          { keys: 'Ctrl + x, r, t', desc: 'prefix each line with a string', usage: 'Prefix each line with a string.' },
+        ]
+      },
+      {
+        name: 'Abbrevs',
+        shortcuts: [
+          { keys: 'Ctrl + x, a, g', desc: 'add global abbrev', usage: 'Add global abbrev.' },
+          { keys: 'Ctrl + x, a, l', desc: 'add mode-local abbrev', usage: 'Add mode-local abbrev.' },
+          { keys: 'Ctrl + x, a, i, g', desc: 'add global expansion for this abbrev', usage: 'Add global expansion for this abbrev.' },
+          { keys: 'Ctrl + x, a, i, l', desc: 'add mode-local expansion for this abbrev', usage: 'Add mode-local expansion for this abbrev.' },
+          { keys: 'Ctrl + x, a, e', desc: 'explicitly expand abbrev', usage: 'Explicitly expand abbrev.' },
+          { keys: 'Alt + /', desc: 'expand previous word dynamically', usage: 'Expand previous word dynamically.' },
+        ]
+      },
+      {
+        name: 'Miscellaneous',
+        shortcuts: [
+          { keys: 'Ctrl + u, num', desc: 'numeric argument', usage: 'Numeric argument.' },
+          { keys: 'Alt + -', desc: 'negative argument', usage: 'Negative argument.' },
+          { keys: 'Ctrl + q, char', desc: 'quoted insert', usage: 'Quoted insert.' },
+        ]
+      },
+      {
+        name: 'International Character Sets',
+        shortcuts: [
+          { keys: 'Ctrl + x, Enter, l', desc: 'specify principal language', usage: 'Specify principal language.' },
+          { keys: 'Alt + x, list-input-methods', desc: 'show all input methods', usage: 'Show all input methods.' },
+          { keys: 'Ctrl + \\', desc: 'enable or disable input method', usage: 'Enable or disable input method.' },
+          { keys: 'Ctrl + x, Enter, c', desc: 'set coding system for next command', usage: 'Set coding system for next command.' },
+          { keys: 'Alt + x, list-coding-systems', desc: 'show all coding systems', usage: 'Show all coding systems.' },
+          { keys: 'Alt + x, prefer-coding-system', desc: 'choose preferred coding system', usage: 'Choose preferred coding system.' },
+        ]
+      },
+      {
+        name: 'Info',
+        shortcuts: [
+          { keys: 'Ctrl + h, i', desc: 'enter the Info documentation reader', usage: 'Enter the Info documentation reader.' },
+          { keys: 'Ctrl + h, S', desc: 'find specified function or variable in Info', usage: 'Find specified function or variable in Info.' },
+          { keys: 'Space', desc: 'scroll forward', usage: 'Scroll forward.' },
+          { keys: 'Backspace', desc: 'scroll reverse', usage: 'Scroll reverse.' },
+        ]
+      },
+      {
+        name: 'Registers',
+        shortcuts: [
+          { keys: 'Ctrl + x, r, s', desc: 'save region in register', usage: 'Save region in register.' },
+          { keys: 'Ctrl + x, r, i', desc: 'insert register contents into buffer', usage: 'Insert register contents into buffer.' },
+          { keys: 'Ctrl + x, r, Space', desc: 'save value of point in register', usage: 'Save value of point in register.' },
+          { keys: 'Ctrl + x, r, j', desc: 'jump to point saved in register', usage: 'Jump to point saved in register.' },
+        ]
+      },
+      {
+        name: 'Keyboard Macros',
+        shortcuts: [
+          { keys: 'Ctrl + x, (', desc: 'start defining a keyboard macro', usage: 'Start defining a keyboard macro.' },
+          { keys: 'Ctrl + x, )', desc: 'end keyboard macro definition', usage: 'End keyboard macro definition.' },
+          { keys: 'Ctrl + x, e', desc: 'execute last-defined keyboard macro', usage: 'Execute last-defined keyboard macro.' },
+          { keys: 'Ctrl + u or Ctrl + x, (', desc: 'append to last keyboard macro', usage: 'Append to last keyboard macro.' },
+          { keys: 'Alt + x, name-last-kbd-macro', desc: 'name last keyboard macro', usage: 'Name last keyboard macro.' },
+          { keys: 'Alt + x, insert-kbd-macro', desc: 'insert Lisp definition in buffer', usage: 'Insert Lisp definition in buffer.' },
+        ]
+      },
+      {
+        name: 'Emacs Lisp',
+        shortcuts: [
+          { keys: 'Ctrl + x or Ctrl + e', desc: 'eval sexp before point', usage: 'Eval sexp before point.' },
+          { keys: 'Ctrl + Alt + x', desc: 'eval current defun', usage: 'Eval current defun.' },
+          { keys: 'Alt + x, eval-region', desc: 'eval region', usage: 'Eval region.' },
+          { keys: 'Alt + :', desc: 'read and eval minibuffer', usage: 'Read and eval minibuffer.' },
+          { keys: 'Alt + x, load-library', desc: 'load a Lisp library from load-path', usage: 'Load a Lisp library from load-path.' },
         ]
       },
     ]
